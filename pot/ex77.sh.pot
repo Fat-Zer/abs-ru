@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex77.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex77.sh:5
+msgid "# String expansion.  # Introduced with version 2 of Bash."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex77.sh:8
+msgid ""
+"# Strings of the form $'xxx' #+ have the standard escaped characters "
+"interpreted."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex77.sh:18
+#, no-wrap
+msgid ""
+"echo $'Ringing bell 3 times \\a \\a \\a'\n"
+"     # May only ring once with certain terminals.\n"
+"     # Or ...\n"
+"     # May not ring at all, depending on terminal settings.\n"
+"echo $'Three form feeds \\f \\f \\f'\n"
+"echo $'10 newlines \\n\\n\\n\\n\\n\\n\\n\\n\\n\\n'\n"
+"echo $'\\102\\141\\163\\150'\n"
+"     #   B   a   s   h\n"
+"     # Octal equivalent of characters.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex77.sh:19
+msgid "exit"
+msgstr ""

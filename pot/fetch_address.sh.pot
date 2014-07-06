@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:3
+msgid "#!/bin/bash4 # fetch_address.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:6
+#, no-wrap
+msgid ""
+"declare -A address\n"
+"#       -A option declares associative array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:10
+msgid ""
+"address[Charles]=\"414 W. 10th Ave., Baltimore, MD 21236\" "
+"address[John]=\"202 E. 3rd St., New York, NY 10009\" address[Wilma]=\"1854 "
+"Vermont Ave, Los Angeles, CA 90023\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:18
+msgid ""
+"echo \"Charles's address is ${address[Charles]}.\" # Charles's address is "
+"414 W. 10th Ave., Baltimore, MD 21236.  echo \"Wilma's address is "
+"${address[Wilma]}.\" # Wilma's address is 1854 Vermont Ave, Los Angeles, CA "
+"90023.  echo \"John's address is ${address[John]}.\" # John's address is 202 "
+"E. 3rd St., New York, NY 10009."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:20
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fetch_address.sh:22
+#, no-wrap
+msgid ""
+"echo \"${!address[*]}\"   # The array indices ...\n"
+"# Charles John Wilma\n"
+msgstr ""

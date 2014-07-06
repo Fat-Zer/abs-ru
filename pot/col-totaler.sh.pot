@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:5
+msgid ""
+"# Adds up a specified column (of numbers) in the target file.  # "
+"Floating-point (decimal) numbers okay, because awk can handle them."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:8
+msgid "ARGS=2 E_WRONGARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:14
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ] # Check for proper number of command-line args.\n"
+"then\n"
+"   echo \"Usage: `basename $0` filename column-number\"\n"
+"   exit $E_WRONGARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:17
+msgid "filename=$1 column_number=$2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:25
+#, no-wrap
+msgid ""
+"#  Passing shell variables to the awk part of the script is a bit tricky.\n"
+"#  One method is to strong-quote the Bash-script variable\n"
+"#+ within the awk script.\n"
+"#     $'$BASH_SCRIPT_VAR'\n"
+"#      ^                ^\n"
+"#  This is done in the embedded awk script below.\n"
+"#  See the awk documentation for more details.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:32
+#, no-wrap
+msgid ""
+"# A multi-line awk script is here invoked by\n"
+"#   awk '\n"
+"#   ...\n"
+"#   ...\n"
+"#   ...\n"
+"#   '\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:37
+msgid "# Begin awk script.  # ----------------------------- awk '"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:43
+#, no-wrap
+msgid ""
+"{ total += $'\"${column_number}\"'\n"
+"}\n"
+"END {\n"
+"     print total\n"
+"}     \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:47
+msgid "' \"$filename\" # ----------------------------- # End awk script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:59
+#, no-wrap
+msgid ""
+"#   It may not be safe to pass shell variables to an embedded awk script,\n"
+"#+  so Stephane Chazelas proposes the following alternative:\n"
+"#   ---------------------------------------\n"
+"#   awk -v column_number=\"$column_number\" '\n"
+"#   { total += $column_number\n"
+"#   }\n"
+"#   END {\n"
+"#       print total\n"
+"#   }' \"$filename\"\n"
+"#   ---------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler.sh:61
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:3
+msgid "#!/bin/bash # file-comparison.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:7
+msgid "ARGS=2 # Two args to script expected.  E_BADARGS=85 E_UNREADABLE=86"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:13
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` file1 file2\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:19
+#, no-wrap
+msgid ""
+"if [[ ! -r \"$1\" || ! -r \"$2\" ]]\n"
+"then\n"
+"  echo \"Both files to be compared must exist and be readable.\"\n"
+"  exit $E_UNREADABLE\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:27
+#, no-wrap
+msgid ""
+"cmp $1 $2 &amp;> /dev/null\n"
+"#   Redirection to /dev/null buries the output of the \"cmp\" command.\n"
+"#   cmp -s $1 $2  has same result (\"-s\" silent flag to \"cmp\")\n"
+"#   Thank you  Anders Gustavsson for pointing this out.\n"
+"#\n"
+"#  Also works with 'diff', i.e.,\n"
+"#+ diff $1 $2 &amp;> /dev/null\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:34
+#, no-wrap
+msgid ""
+"if [ $? -eq 0 ]         # Test exit status of \"cmp\" command.\n"
+"then\n"
+"  echo \"File \\\"$1\\\" is identical to file \\\"$2\\\".\"\n"
+"else  \n"
+"  echo \"File \\\"$1\\\" differs from file \\\"$2\\\".\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-comparison.sh:35
+msgid "exit 0"
+msgstr ""

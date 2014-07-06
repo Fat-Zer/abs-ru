@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:3
+msgid "# file: UseGetOpt-2 # UseGetOpt-2.sh parameter-completion"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:9
+#, no-wrap
+msgid ""
+"_UseGetOpt-2 ()   #  By convention, the function name\n"
+"{                 #+ starts with an underscore.\n"
+"  local cur\n"
+"  # Pointer to current completion word.\n"
+"  # By convention, it's named \"cur\" but this isn't strictly necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:12
+#, no-wrap
+msgid ""
+"  COMPREPLY=()   # Array variable storing the possible completions.\n"
+"  cur=${COMP_WORDS[COMP_CWORD]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:22
+#, no-wrap
+msgid ""
+"  case \"$cur\" in\n"
+"    -*)\n"
+"    COMPREPLY=( $( compgen -W '-a -d -f -l -t -h --aoption --debug \\\n"
+"                               --file --log --test --help --' -- $cur ) "
+");;\n"
+"#   Generate the completion matches and load them into $COMPREPLY array.\n"
+"#   xx) May add more cases here.\n"
+"#   yy)\n"
+"#   zz)\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:25
+#, no-wrap
+msgid ""
+"  return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt-2:27
+#, no-wrap
+msgid ""
+"complete -F _UseGetOpt-2 -o filenames ./UseGetOpt-2.sh\n"
+"#        ^^ ^^^^^^^^^^^^  Invokes the function _UseGetOpt-2.\n"
+msgstr ""

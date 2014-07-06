@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex73.sh:3
+msgid "#!/bin/bash # Creating a swap file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:6
+msgid ""
+"# A swap file provides a temporary storage cache #+ which helps speed up "
+"certain filesystem operations."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:9
+#, no-wrap
+msgid ""
+"ROOT_UID=0         # Root has $UID 0.\n"
+"E_WRONG_USER=85    # Not root?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:14
+msgid "FILE=/swap BLOCKSIZE=1024 MINBLOCKS=40 SUCCESS=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:22
+#, no-wrap
+msgid ""
+"# This script must be run as root.\n"
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo; echo \"You must be root to run this script.\"; echo\n"
+"  exit $E_WRONG_USER\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:35
+#, no-wrap
+msgid ""
+"blocks=${1:-$MINBLOCKS}          #  Set to default of 40 blocks,\n"
+"                                 #+ if nothing specified on command-line.\n"
+"# This is the equivalent of the command block below.\n"
+"# --------------------------------------------------\n"
+"# if [ -n \"$1\" ]\n"
+"# then\n"
+"#   blocks=$1\n"
+"# else\n"
+"#   blocks=$MINBLOCKS\n"
+"# fi\n"
+"# --------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:41
+#, no-wrap
+msgid ""
+"if [ \"$blocks\" -lt $MINBLOCKS ]\n"
+"then\n"
+"  blocks=$MINBLOCKS              # Must be at least 40 blocks long.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:52
+#, no-wrap
+msgid ""
+"######################################################################\n"
+"echo \"Creating swap file of size $blocks blocks (KB).\"\n"
+"dd if=/dev/zero of=$FILE bs=$BLOCKSIZE count=$blocks  # Zero out file.\n"
+"mkswap $FILE $blocks             # Designate it a swap file.\n"
+"swapon $FILE                     # Activate swap file.\n"
+"retcode=$?                       # Everything worked?\n"
+"#  Note that if one or more of these commands fails,\n"
+"#+ then it could cause nasty problems.\n"
+"######################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:60
+#, no-wrap
+msgid ""
+"#  Exercise:\n"
+"#  Rewrite the above block of code so that if it does not execute\n"
+"#+ successfully, then:\n"
+"#    1) an error message is echoed to stderr,\n"
+"#    2) all temporary files are cleaned up, and\n"
+"#    3) the script exits in an orderly fashion with an\n"
+"#+      appropriate error code.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:62
+msgid "echo \"Swap file created and activated.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex73.sh:63
+msgid "exit $retcode"
+msgstr ""

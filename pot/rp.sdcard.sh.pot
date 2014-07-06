@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:4
+msgid ""
+"#!/bin/bash # rp.sdcard.sh # Preparing an SD card with a bootable image for "
+"the Raspberry Pi."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:8
+msgid ""
+"# $1 = imagefile name # $2 = sdcard (device file)  # Otherwise defaults to "
+"the defaults, see below."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:15
+#, no-wrap
+msgid ""
+"DEFAULTbs=4M                                 # Block size, 4 mb default.\n"
+"DEFAULTif=\"2013-07-26-wheezy-raspbian.img\"   # Commonly used distro.\n"
+"DEFAULTsdcard=\"/dev/mmcblk0\"                 # May be different. Check!\n"
+"ROOTUSER_NAME=root                           # Must run as root!\n"
+"E_NOTROOT=81\n"
+"E_NOIMAGE=82\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:22
+#, no-wrap
+msgid ""
+"username=$(id -nu)                           # Who is running this script?\n"
+"if [ \"$username\" != \"$ROOTUSER_NAME\" ]\n"
+"then\n"
+"  echo \"This script must run as root or with root privileges.\"\n"
+"  exit $E_NOTROOT\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:29
+#, no-wrap
+msgid ""
+"if [ -n \"$1\" ]\n"
+"then\n"
+"  imagefile=\"$1\"\n"
+"else\n"
+"  imagefile=\"$DEFAULTif\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:36
+#, no-wrap
+msgid ""
+"if [ -n \"$2\" ]\n"
+"then\n"
+"  sdcard=\"$2\"\n"
+"else\n"
+"  sdcard=\"$DEFAULTsdcard\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:42
+#, no-wrap
+msgid ""
+"if [ ! -e $imagefile ]\n"
+"then\n"
+"  echo \"Image file \\\"$imagefile\\\" not found!\"\n"
+"  exit $E_NOIMAGE\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:46
+msgid ""
+"echo \"Last chance to change your mind!\"; echo read -s -n1 -p \"Hit a key "
+"to write $imagefile to $sdcard [Ctl-c to exit].\" echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:49
+msgid ""
+"echo \"Writing $imagefile to $sdcard ...\" dd bs=$DEFAULTbs if=$imagefile "
+"of=$sdcard"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:51
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rp.sdcard.sh:56
+msgid ""
+"# Exercises: # --------- # 1) Provide additional error checking.  # 2) Have "
+"script autodetect device file for SD card (difficult!).  # 3) Have script "
+"sutodetect image file (*img) in $PWD."
+msgstr ""

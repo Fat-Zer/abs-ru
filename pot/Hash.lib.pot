@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/Hash.lib:5
+msgid ""
+"# Hash: # Hash function library # Author: Mariusz Gniazdowski "
+"&lt;mariusz.gn-at-gmail.com&gt; # Date: 2005-04-07"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:7
+msgid "# Functions making emulating hashes in Bash a little less painful."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:23
+#, no-wrap
+msgid ""
+"#    Limitations:\n"
+"#  * Only global variables are supported.\n"
+"#  * Each hash instance generates one global variable per value.\n"
+"#  * Variable names collisions are possible\n"
+"#+   if you define variable like __hash__hashname_key\n"
+"#  * Keys must use chars that can be part of a Bash variable name\n"
+"#+   (no dashes, periods, etc.).\n"
+"#  * The hash is created as a variable:\n"
+"#    ... hashname_keyname\n"
+"#    So if somone will create hashes like:\n"
+"#      myhash_ + mykey = myhash__mykey\n"
+"#      myhash + _mykey = myhash__mykey\n"
+"#    Then there will be a collision.\n"
+"#    (This should not pose a major problem.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:26
+msgid "Hash_config_varname_prefix=__hash__"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:37
+#, no-wrap
+msgid ""
+"# Emulates:  hash[key]=value\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3 - value\n"
+"function hash_set {\n"
+"\teval \"${Hash_config_varname_prefix}${1}_${2}=\\\"${3}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:48
+#, no-wrap
+msgid ""
+"# Emulates:  value=hash[key]\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3 - value (name of global variable to set)\n"
+"function hash_get_into {\n"
+"\teval \"$3=\\\"\\$${Hash_config_varname_prefix}${1}_${2}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:59
+#, no-wrap
+msgid ""
+"# Emulates:  echo hash[key]\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3 - echo params (like -n, for example)\n"
+"function hash_echo {\n"
+"\teval \"echo $3 \\\"\\$${Hash_config_varname_prefix}${1}_${2}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:72
+msgid ""
+"# Emulates: hash1[key1]=hash2[key2] # # Params: # 1 - hash1 # 2 - key1 # 3 - "
+"hash2 # 4 - key2 function hash_copy { eval "
+"\"${Hash_config_varname_prefix}${1}_${2}\\ "
+"=\\\"\\$${Hash_config_varname_prefix}${3}_${4}\\\"\" }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:93
+#, no-wrap
+msgid ""
+"# Emulates:  hash[keyN-1]=hash[key2]=...hash[key1]\n"
+"#\n"
+"# Copies first key to rest of keys.\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash1\n"
+"# 2 - key1\n"
+"# 3 - key2\n"
+"# . . .\n"
+"# N - keyN\n"
+"function hash_dup {\n"
+"  local hashName=\"$1\" keyName=\"$2\"\n"
+"  shift 2\n"
+"  until [ ${#} -le 0 ]; do\n"
+"    eval \"${Hash_config_varname_prefix}${hashName}_${1}\\\n"
+"=\\\"\\$${Hash_config_varname_prefix}${hashName}_${keyName}\\\"\"\n"
+"  shift;\n"
+"  done;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:103
+#, no-wrap
+msgid ""
+"# Emulates:  unset hash[key]\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"function hash_unset {\n"
+"\teval \"unset ${Hash_config_varname_prefix}${1}_${2}\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:116
+#, no-wrap
+msgid ""
+"# Emulates something similar to:  ref=&amp;hash[key]\n"
+"#\n"
+"# The reference is name of the variable in which value is held.\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3 - ref - Name of global variable to set.\n"
+"function hash_get_ref_into {\n"
+"\teval \"$3=\\\"${Hash_config_varname_prefix}${1}_${2}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:129
+#, no-wrap
+msgid ""
+"# Emulates something similar to:  echo &amp;hash[key]\n"
+"#\n"
+"# That reference is name of variable in which value is held.\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3 - echo params (like -n for example)\n"
+"function hash_echo_ref {\n"
+"\teval \"echo $3 \\\"${Hash_config_varname_prefix}${1}_${2}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:145
+#, no-wrap
+msgid ""
+"# Emulates something similar to:  $$hash[key](param1, param2, ...)\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# 3,4, ... - Function parameters\n"
+"function hash_call {\n"
+"  local hash key\n"
+"  hash=$1\n"
+"  key=$2\n"
+"  shift 2\n"
+"  eval \"eval \\\"\\$${Hash_config_varname_prefix}${hash}_${key} "
+"\\\\\\\"\\\\\\$@\\\\\\\"\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:160
+#, no-wrap
+msgid ""
+"# Emulates something similar to:  isset(hash[key]) or hash[key]==NULL\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - key\n"
+"# Returns:\n"
+"# 0 - there is such key\n"
+"# 1 - there is no such key\n"
+"function hash_is_set {\n"
+"  eval \"if [[ \\\"\\${${Hash_config_varname_prefix}${1}_${2}-a}\\\" = "
+"\\\"a\\\" &amp;&amp; \n"
+"  \\\"\\${${Hash_config_varname_prefix}${1}_${2}-b}\\\" = \\\"b\\\" ]]\n"
+"    then return 1; else return 0; fi\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:180
+#, no-wrap
+msgid ""
+"# Emulates something similar to:\n"
+"#   foreach($hash as $key => $value) { fun($key,$value); }\n"
+"#\n"
+"# It is possible to write different variations of this function.\n"
+"# Here we use a function call to make it as \"generic\" as possible.\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash\n"
+"# 2 - function name\n"
+"function hash_foreach {\n"
+"  local keyname oldIFS=\"$IFS\"\n"
+"  IFS=' '\n"
+"  for i in $(eval \"echo \\${!${Hash_config_varname_prefix}${1}_*}\"); do\n"
+"    keyname=$(eval \"echo \\${i##${Hash_config_varname_prefix}${1}_}\")\n"
+"    eval \"$2 $keyname \\\"\\$$i\\\"\"\n"
+"  done\n"
+"IFS=\"$oldIFS\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Hash.lib:182
+msgid ""
+"# NOTE: In lines 103 and 116, ampersand changed.  # But, it doesn't matter, "
+"because these are comment lines anyhow."
+msgstr ""

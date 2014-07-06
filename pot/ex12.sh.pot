@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex12.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex12.sh:4
+msgid "filename=sys.log"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex12.sh:9
+#, no-wrap
+msgid ""
+"cat /dev/null > $filename; echo \"Creating / cleaning out file.\"\n"
+"#  Creates the file if it does not already exist,\n"
+"#+ and truncates it to zero length if it does.\n"
+"#  : > filename   and   > filename also work.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex12.sh:12
+msgid ""
+"tail /var/log/messages > $filename # /var/log/messages must have world read "
+"permission for this to work."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex12.sh:14
+msgid "echo \"$filename contains tail end of system log.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex12.sh:15
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex46.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:4
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:9
+#, no-wrap
+msgid ""
+"let a=11            # Same as 'a=11'\n"
+"let a=a+5           # Equivalent to  let \"a = a + 5\"\n"
+"                    # (Double quotes and spaces make it more readable.)\n"
+"echo \"11 + 5 = $a\"  # 16\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:13
+#, no-wrap
+msgid ""
+"let \"a &lt;&lt;= 3\"       # Equivalent to  let \"a = a &lt;&lt; 3\"\n"
+"echo \"\\\"\\$a\\\" (=16) left-shifted 3 places = $a\"\n"
+"                    # 128\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:16
+#, no-wrap
+msgid ""
+"let \"a /= 4\"        # Equivalent to  let \"a = a / 4\"\n"
+"echo \"128 / 4 = $a\" # 32\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:19
+#, no-wrap
+msgid ""
+"let \"a -= 5\"        # Equivalent to  let \"a = a - 5\"\n"
+"echo \"32 - 5 = $a\"  # 27\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:22
+#, no-wrap
+msgid ""
+"let \"a *=  10\"      # Equivalent to  let \"a = a * 10\"\n"
+"echo \"27 * 10 = $a\" # 270\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:26
+#, no-wrap
+msgid ""
+"let \"a %= 8\"        # Equivalent to  let \"a = a % 8\"\n"
+"echo \"270 modulo 8 = $a  (270 / 8 = 33, remainder $a)\"\n"
+"                    # 6\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:30
+msgid ""
+"# Does \"let\" permit C-style operators? # Yes, just as the (( ... )) "
+"double-parentheses construct does."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:37
+#, no-wrap
+msgid ""
+"let a++             # C-style (post) increment.\n"
+"echo \"6++ = $a\"     # 6++ = 7\n"
+"let a--             # C-style decrement.\n"
+"echo \"7-- = $a\"     # 7-- = 6\n"
+"# Of course, ++a, etc., also allowed . . .\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:40
+msgid "# Trinary operator."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:44
+#, no-wrap
+msgid ""
+"# Note that $a is 6, see above.\n"
+"let \"t = a&lt;7?7:11\"   # True\n"
+"echo $t  # 7\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:48
+#, no-wrap
+msgid ""
+"let a++\n"
+"let \"t = a&lt;7?7:11\"   # False\n"
+"echo $t  #     11\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex46.sh:49
+msgid "exit"
+msgstr ""

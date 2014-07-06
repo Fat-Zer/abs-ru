@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/timeout.sh:3
+msgid "#!/bin/bash # timeout.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:6
+msgid "# Written by Stephane Chazelas, #+ and modified by the document author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:8
+#, no-wrap
+msgid "INTERVAL=5                # timeout interval\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:18
+#, no-wrap
+msgid ""
+"timedout_read() {\n"
+"  timeout=$1\n"
+"  varname=$2\n"
+"  old_tty_settings=`stty -g`\n"
+"  stty -icanon min 0 time ${timeout}0\n"
+"  eval read $varname      # or just  read $varname\n"
+"  stty \"$old_tty_settings\"\n"
+"  # See man page for \"stty.\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:21
+msgid ""
+"echo; echo -n \"What's your name? Quick! \" timedout_read $INTERVAL "
+"your_name"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:25
+msgid ""
+"# This may not work on every terminal type.  # The maximum timeout depends "
+"on the terminal.  #+ (it is often 25.5 seconds)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:27 abs-guide/timeout.sh:36
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:34
+#, no-wrap
+msgid ""
+"if [ ! -z \"$your_name\" ]  # If name input before timeout ...\n"
+"then\n"
+"  echo \"Your name is $your_name.\"\n"
+"else\n"
+"  echo \"Timed out.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:39
+msgid ""
+"# The behavior of this script differs somewhat from \"timed-input.sh.\" # At "
+"each keystroke, the counter resets."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/timeout.sh:40
+msgid "exit 0"
+msgstr ""

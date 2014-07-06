@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:4
+msgid ""
+"#!/bin/bash # list-glob.sh: Generating [list] in a for-loop, using "
+"\"globbing\" ...  # Globbing = filename expansion."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:6 abs-guide/list-glob.sh:30
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:14
+#, no-wrap
+msgid ""
+"for file in *\n"
+"#           ^  Bash performs filename expansion\n"
+"#+             on expressions that globbing recognizes.\n"
+"do\n"
+"  ls -l \"$file\"  # Lists all files in $PWD (current directory).\n"
+"  #  Recall that the wild card character \"*\" matches every filename,\n"
+"  #+ however, in \"globbing,\" it doesn't match dot-files.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:20
+#, no-wrap
+msgid ""
+"  #  If the pattern matches no file, it is expanded to itself.\n"
+"  #  To prevent this, set the nullglob option\n"
+"  #+   (shopt -s nullglob).\n"
+"  #  Thanks, S.C.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:22
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:28
+#, no-wrap
+msgid ""
+"for file in [jx]*\n"
+"do\n"
+"  rm -f $file    # Removes only files beginning with \"j\" or \"x\" in "
+"$PWD.\n"
+"  echo \"Removed file \\\"$file\\\"\".\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/list-glob.sh:31
+msgid "exit 0"
+msgstr ""

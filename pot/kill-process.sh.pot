@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:3
+msgid "#!/bin/bash # kill-process.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:5
+msgid "NOPROCESS=2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:12
+#, no-wrap
+msgid ""
+"process=xxxyyyzzz  # Use nonexistent process.\n"
+"# For demo purposes only...\n"
+"# ... don't want to actually kill any actual process with this script.\n"
+"#\n"
+"# If, for example, you wanted to use this script to logoff the Internet,\n"
+"#     process=pppd\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:15
+#, no-wrap
+msgid ""
+"t=`pidof $process`       # Find pid (process id) of $process.\n"
+"# The pid is needed by 'kill' (can't 'kill' by program name).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:22
+#, no-wrap
+msgid ""
+"if [ -z \"$t\" ]           # If process not present, 'pidof' returns null.\n"
+"then\n"
+"  echo \"Process $process was not running.\"\n"
+"  echo \"Nothing killed.\"\n"
+"  exit $NOPROCESS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:24
+#, no-wrap
+msgid "kill $t                  # May need 'kill -9' for stubborn process.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:27
+msgid ""
+"# Need a check here to see if process allowed itself to be killed.  # "
+"Perhaps another \" t=`pidof $process` \" or ..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:34
+#, no-wrap
+msgid ""
+"# This entire script could be replaced by\n"
+"#        kill $(pidof -x process_name)\n"
+"# or\n"
+"#        killall process_name\n"
+"# but it would not be as instructive.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-process.sh:35
+msgid "exit 0"
+msgstr ""

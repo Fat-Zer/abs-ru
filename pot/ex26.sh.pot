@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex26.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex26.sh:14
+#, no-wrap
+msgid ""
+"echo\n"
+"                               # Equivalent to:\n"
+"while [ \"$var1\" != \"end\" ]     # while test \"$var1\" != \"end\"\n"
+"do\n"
+"  echo \"Input variable #1 (end to exit) \"\n"
+"  read var1                    # Not 'read $var1' (why?).\n"
+"  echo \"variable #1 = $var1\"   # Need quotes because of \"#\" . . .\n"
+"  # If input is 'end', echoes it here.\n"
+"  # Does not test for termination condition until top of loop.\n"
+"  echo\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex26.sh:15
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex37.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:5
+msgid "dir1=/usr/local dir2=/var/spool"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:9
+msgid ""
+"pushd $dir1 # Will do an automatic 'dirs' (list directory stack to stdout).  "
+"echo \"Now in directory `pwd`.\" # Uses back-quoted 'pwd'."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:13
+msgid ""
+"# Now, do some stuff in directory 'dir1'.  pushd $dir2 echo \"Now in "
+"directory `pwd`.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:18
+msgid ""
+"# Now, do some stuff in directory 'dir2'.  echo \"The top entry in the "
+"DIRSTACK array is $DIRSTACK.\" popd echo \"Now back in directory `pwd`.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:22
+msgid ""
+"# Now, do some more stuff in directory 'dir1'.  popd echo \"Now back in "
+"original working directory `pwd`.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:24
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex37.sh:26
+msgid ""
+"# What happens if you don't 'popd' -- then exit the script? # Which "
+"directory do you end up in? Why?"
+msgstr ""

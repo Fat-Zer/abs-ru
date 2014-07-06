@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:4
+msgid ""
+"#!/bin/bash # A version of \"rot13\" using 'eval'.  # Compare to "
+"\"rot13.sh\" example."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:10
+#, no-wrap
+msgid ""
+"setvar_rot_13()              # \"rot13\" scrambling\n"
+"{\n"
+"  local varname=$1 varvalue=$2\n"
+"  eval $varname='$(echo \"$varvalue\" | tr a-z n-za-m)'\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:14
+#, no-wrap
+msgid ""
+"setvar_rot_13 var \"foobar\"   # Run \"foobar\" through rot13.\n"
+"echo $var                    # sbbone\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:17
+#, no-wrap
+msgid ""
+"echo $var | tr a-z n-za-m    # foobar\n"
+"                             # Back to original variable.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:19
+msgid "# This example by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13_2.sh:20
+msgid "exit 0"
+msgstr ""

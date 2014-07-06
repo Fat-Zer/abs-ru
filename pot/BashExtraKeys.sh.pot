@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:5
+msgid ""
+"#!/bin/bash # Author: Sigurd Solaas, 20 Apr 2011 # Used in ABS Guide with "
+"permission.  # Requires version 4.2+ of Bash."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:20
+#, no-wrap
+msgid ""
+"key=\"no value yet\"\n"
+"while true; do\n"
+"  clear\n"
+"  echo \"Bash Extra Keys Demo. Keys to try:\"\n"
+"  echo\n"
+"  echo \"* Insert, Delete, Home, End, Page_Up and Page_Down\"\n"
+"  echo \"* The four arrow keys\"\n"
+"  echo \"* Tab, enter, escape, and space key\"\n"
+"  echo \"* The letter and number keys, etc.\"\n"
+"  echo\n"
+"  echo \"    d = show date/time\"\n"
+"  echo \"    q = quit\"\n"
+"  echo \"================================\"\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:26
+#, no-wrap
+msgid ""
+" # Convert the separate home-key to home-key_num_7:\n"
+" if [ \"$key\" = $'\\x1b\\x4f\\x48' ]; then\n"
+"  key=$'\\x1b\\x5b\\x31\\x7e'\n"
+"  #   Quoted string-expansion construct. \n"
+" fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:31
+#, no-wrap
+msgid ""
+" # Convert the separate end-key to end-key_num_1.\n"
+" if [ \"$key\" = $'\\x1b\\x4f\\x46' ]; then\n"
+"  key=$'\\x1b\\x5b\\x34\\x7e'\n"
+" fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:87
+#, no-wrap
+msgid ""
+" case \"$key\" in\n"
+"  $'\\x1b\\x5b\\x32\\x7e')  # Insert\n"
+"   echo Insert Key\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x33\\x7e')  # Delete\n"
+"   echo Delete Key\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x31\\x7e')  # Home_key_num_7\n"
+"   echo Home Key\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x34\\x7e')  # End_key_num_1\n"
+"   echo End Key\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x35\\x7e')  # Page_Up\n"
+"   echo Page_Up\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x36\\x7e')  # Page_Down\n"
+"   echo Page_Down\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x41')  # Up_arrow\n"
+"   echo Up arrow\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x42')  # Down_arrow\n"
+"   echo Down arrow\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x43')  # Right_arrow\n"
+"   echo Right arrow\n"
+"  ;;\n"
+"  $'\\x1b\\x5b\\x44')  # Left_arrow\n"
+"   echo Left arrow\n"
+"  ;;\n"
+"  $'\\x09')  # Tab\n"
+"   echo Tab Key\n"
+"  ;;\n"
+"  $'\\x0a')  # Enter\n"
+"   echo Enter Key\n"
+"  ;;\n"
+"  $'\\x1b')  # Escape\n"
+"   echo Escape Key\n"
+"  ;;\n"
+"  $'\\x20')  # Space\n"
+"   echo Space Key\n"
+"  ;;\n"
+"  d)\n"
+"   date\n"
+"  ;;\n"
+"  q)\n"
+"  echo Time to quit...\n"
+"  echo\n"
+"  exit 0\n"
+"  ;;\n"
+"  *)\n"
+"   echo You pressed: \\'\"$key\"\\'\n"
+"  ;;\n"
+" esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:90
+#, no-wrap
+msgid ""
+" echo\n"
+" echo \"================================\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:99
+#, no-wrap
+msgid ""
+" unset K1 K2 K3\n"
+" read -s -N1 -p \"Press a key: \"\n"
+" K1=\"$REPLY\"\n"
+" read -s -N2 -t 0.001\n"
+" K2=\"$REPLY\"\n"
+" read -s -N1 -t 0.001\n"
+" K3=\"$REPLY\"\n"
+" key=\"$K1$K2$K3\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:101
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/BashExtraKeys.sh:102
+msgid "exit $?"
+msgstr ""

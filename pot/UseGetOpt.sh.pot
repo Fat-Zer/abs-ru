@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:3
+msgid "#!/bin/bash # UseGetOpt.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:5
+msgid "# Author: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:12
+#, no-wrap
+msgid ""
+"UseGetOpt () {\n"
+"  declare inputOptions\n"
+"  declare -r E_OPTERR=85\n"
+"  declare -r ScriptName=${0##*/}\n"
+"  declare -r ShortOpts=\"adf:hlt\"\n"
+"  declare -r LongOpts=\"aoption,debug,file:,help,log,test\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:18
+#, no-wrap
+msgid ""
+"DoSomething () {\n"
+"    echo \"The function name is '${FUNCNAME}'\"\n"
+"    #  Recall that $FUNCNAME is an internal variable\n"
+"    #+ holding the name of the function it is in.\n"
+"  }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:21
+#, no-wrap
+msgid ""
+"  inputOptions=$(getopt -o \"${ShortOpts}\" --long \\\n"
+"              \"${LongOpts}\" --name \"${ScriptName}\" -- \"${@}\")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:26
+#, no-wrap
+msgid ""
+"  if [[ ($? -ne 0) || ($# -eq 0) ]]; then\n"
+"    echo \"Usage: ${ScriptName} [-dhlt] {OPTION...}\"\n"
+"    exit $E_OPTERR\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:28
+#, no-wrap
+msgid "  eval set -- \"${inputOptions}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:37
+#, no-wrap
+msgid ""
+"  # Only for educational purposes. Can be removed.\n"
+"  #-----------------------------------------------\n"
+"  echo \"++ Test: Number of arguments: [$#]\"\n"
+"  echo '++ Test: Looping through \"$@\"'\n"
+"  for a in \"$@\"; do\n"
+"    echo \"  ++ [$a]\"\n"
+"  done\n"
+"  #-----------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:43
+#, no-wrap
+msgid ""
+"  while true; do\n"
+"    case \"${1}\" in\n"
+"      --aoption | -a)  # Argument found.\n"
+"        echo \"Option [$1]\"\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:47
+#, no-wrap
+msgid ""
+"      --debug | -d)    # Enable informational messages.\n"
+"        echo \"Option [$1] Debugging enabled\"\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:54
+#, no-wrap
+msgid ""
+"      --file | -f)     #  Check for optional argument.\n"
+"        case \"$2\" in   #+ Double colon is optional argument.\n"
+"          \"\")          #  Not there.\n"
+"              echo \"Option [$1] Use default\"\n"
+"              shift\n"
+"              ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:59
+#, no-wrap
+msgid ""
+"          *) # Got it\n"
+"             echo \"Option [$1] Using input [$2]\"\n"
+"             shift\n"
+"             ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:63
+#, no-wrap
+msgid ""
+"        esac\n"
+"        DoSomething\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:67
+#, no-wrap
+msgid ""
+"      --log | -l) # Enable Logging.\n"
+"        echo \"Option [$1] Logging enabled\"\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:71
+#, no-wrap
+msgid ""
+"      --test | -t) # Enable testing.\n"
+"        echo \"Option [$1] Testing enabled\"\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:76
+#, no-wrap
+msgid ""
+"      --help | -h)\n"
+"        echo \"Option [$1] Display help\"\n"
+"        break\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:81
+#, no-wrap
+msgid ""
+"      --)   # Done! $# is argument number for \"--\", $@ is \"--\"\n"
+"        echo \"Option [$1] Dash Dash\"\n"
+"        break\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:86
+#, no-wrap
+msgid ""
+"       *)\n"
+"        echo \"Major internal error!\"\n"
+"        exit 8\n"
+"        ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:91
+#, no-wrap
+msgid ""
+"    esac\n"
+"    echo \"Number of arguments: [$#]\"\n"
+"    shift\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:101
+#, no-wrap
+msgid ""
+"  shift\n"
+"  # Only for educational purposes. Can be removed.\n"
+"  #----------------------------------------------------------------------\n"
+"  echo \"++ Test: Number of arguments after \\\"--\\\" is [$#] They are: "
+"[$@]\"\n"
+"  echo '++ Test: Looping through \"$@\"'\n"
+"  for a in \"$@\"; do\n"
+"    echo \"  ++ [$a]\"\n"
+"  done\n"
+"  #----------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:103
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:110
+msgid ""
+"################################### M A I N ######################## # If "
+"you remove \"function UseGetOpt () {\" and corresponding \"}\", #+ you can "
+"uncomment the \"exit 0\" line below, and invoke this script #+ with the "
+"various options from the command-line.  "
+"#------------------------------------------------------------------- # exit "
+"0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:113
+msgid "echo \"Test 1\" UseGetOpt -f myfile one \"two three\" four"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:116
+msgid "echo;echo \"Test 2\" UseGetOpt -h"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:119
+msgid "echo;echo \"Test 3 - Short Options\" UseGetOpt -adltf myfile anotherfile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:122
+msgid ""
+"echo;echo \"Test 4 - Long Options\" UseGetOpt --aoption --debug --log --test "
+"--file myfile anotherfile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/UseGetOpt.sh:123
+msgid "exit"
+msgstr ""

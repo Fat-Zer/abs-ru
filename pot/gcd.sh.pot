@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/gcd.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# gcd.sh: greatest common divisor\n"
+"#         Uses Euclid's algorithm\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:7
+msgid ""
+"# The \"greatest common divisor\" (gcd) of two integers #+ is the largest "
+"integer that will divide both, leaving no remainder."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:17
+#, no-wrap
+msgid ""
+"#  Euclid's algorithm uses successive division.\n"
+"#    In each pass,\n"
+"#+      dividend &lt;---  divisor\n"
+"#+      divisor  &lt;---  remainder\n"
+"#+   until remainder = 0.\n"
+"#    The gcd = dividend, on the final pass.\n"
+"#\n"
+"#  For an excellent discussion of Euclid's algorithm, see\n"
+"#+ Jim Loy's site, http://www.jimloy.com/number/euclids.htm.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:23
+msgid ""
+"# ------------------------------------------------------ # Argument check "
+"ARGS=2 E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:30
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` first-number second-number\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+"# ------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:34
+msgid "gcd ()  {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:38
+#, no-wrap
+msgid ""
+"  dividend=$1             #  Arbitrary assignment.\n"
+"  divisor=$2              #! It doesn't matter which of the two is larger.\n"
+"                          #  Why not?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:41
+#, no-wrap
+msgid ""
+"  remainder=1             #  If an uninitialized variable is used inside\n"
+"                          #+ test brackets, an error message results.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:48
+#, no-wrap
+msgid ""
+"  until [ \"$remainder\" -eq 0 ]\n"
+"  do    #  ^^^^^^^^^^  Must be previously initialized!\n"
+"    let \"remainder = $dividend % $divisor\"\n"
+"    dividend=$divisor     # Now repeat with 2 smallest numbers.\n"
+"    divisor=$remainder\n"
+"  done                    # Euclid's algorithm\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:50
+#, no-wrap
+msgid "}                         # Last $dividend is the gcd.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:53
+msgid "gcd $1 $2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:55
+msgid "echo; echo \"GCD of $1 and $2 = $dividend\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:62
+#, no-wrap
+msgid ""
+"# Exercises :\n"
+"# ---------\n"
+"# 1) Check command-line arguments to make sure they are integers,\n"
+"#+   and exit the script with an appropriate error message if not.\n"
+"# 2) Rewrite the gcd () function to use local variables.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gcd.sh:63
+msgid "exit 0"
+msgstr ""

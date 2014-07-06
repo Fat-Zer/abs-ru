@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:3
+msgid "#!/bin/bash # ramdisk.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:13
+#, no-wrap
+msgid ""
+"#  A \"ramdisk\" is a segment of system RAM memory\n"
+"#+ which acts as if it were a filesystem.\n"
+"#  Its advantage is very fast access (read/write time).\n"
+"#  Disadvantages: volatility, loss of data on reboot or powerdown,\n"
+"#+                less RAM available to system.\n"
+"#\n"
+"#  Of what use is a ramdisk?\n"
+"#  Keeping a large dataset, such as a table or dictionary on ramdisk,\n"
+"#+ speeds up data lookup, since memory access is much faster than disk "
+"access.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:17
+#, no-wrap
+msgid ""
+"E_NON_ROOT_USER=70             # Must run as root.\n"
+"ROOTUSER_NAME=root\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:22
+#, no-wrap
+msgid ""
+"MOUNTPT=/mnt/ramdisk           # Create with mkdir /mnt/ramdisk.\n"
+"SIZE=2000                      # 2K blocks (change as appropriate)\n"
+"BLOCKSIZE=1024                 # 1K (1024 byte) block size\n"
+"DEVICE=/dev/ram0               # First ram device\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:29
+#, no-wrap
+msgid ""
+"username=`id -nu`\n"
+"if [ \"$username\" != \"$ROOTUSER_NAME\" ]\n"
+"then\n"
+"  echo \"Must be root to run \\\"`basename $0`\\\".\"\n"
+"  exit $E_NON_ROOT_USER\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:34
+#, no-wrap
+msgid ""
+"if [ ! -d \"$MOUNTPT\" ]         #  Test whether mount point already "
+"there,\n"
+"then                           #+ so no error if this script is run\n"
+"  mkdir $MOUNTPT               #+ multiple times.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:45
+#, no-wrap
+msgid ""
+"##############################################################################\n"
+"dd if=/dev/zero of=$DEVICE count=$SIZE bs=$BLOCKSIZE  # Zero out RAM "
+"device.\n"
+"                                                      # Why is this "
+"necessary?\n"
+"mke2fs $DEVICE                 # Create an ext2 filesystem on it.\n"
+"mount $DEVICE $MOUNTPT         # Mount it.\n"
+"chmod 777 $MOUNTPT             # Enables ordinary user to access ramdisk.\n"
+"                               # However, must be root to unmount it.\n"
+"##############################################################################\n"
+"# Need to test whether above commands succeed. Could cause problems "
+"otherwise.\n"
+"# Exercise: modify this script to make it safer.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:48
+msgid ""
+"echo \"\\\"$MOUNTPT\\\" now available for use.\" # The ramdisk is now "
+"accessible for storing files, even by an ordinary user."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:52
+msgid ""
+"# Caution, the ramdisk is volatile, and its contents will disappear #+ on "
+"reboot or power loss.  # Copy anything you want saved to a regular "
+"directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:55
+msgid ""
+"# After reboot, run this script to again set up ramdisk.  # Remounting "
+"/mnt/ramdisk without the other steps will not work."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:59
+msgid ""
+"# Suitably modified, this script can by invoked in /etc/rc.d/rc.local, #+ to "
+"set up ramdisk automatically at bootup.  # That may be appropriate on, for "
+"example, a database server."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ramdisk.sh:60
+msgid "exit 0"
+msgstr ""

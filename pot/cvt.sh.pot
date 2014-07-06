@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/cvt.sh:4
+msgid ""
+"#!/bin/bash # cvt.sh: # Converts all the MacPaint image files in a directory "
+"to \"pbm\" format."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:8
+msgid ""
+"# Uses the \"macptopbm\" binary from the \"netpbm\" package, #+ which is "
+"maintained by Brian Henderson (bryanh@giraffe-data.com).  # Netpbm is a "
+"standard part of most Linux distros."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:11
+#, no-wrap
+msgid ""
+"OPERATION=macptopbm\n"
+"SUFFIX=pbm          # New filename suffix. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:18
+#, no-wrap
+msgid ""
+"if [ -n \"$1\" ]\n"
+"then\n"
+"  directory=$1      # If directory name given as a script argument...\n"
+"else\n"
+"  directory=$PWD    # Otherwise use current working directory.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:21
+msgid ""
+"# Assumes all files in the target directory are MacPaint image files, #+ "
+"with a \".mac\" filename suffix."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:32
+#, no-wrap
+msgid ""
+"for file in $directory/*    # Filename globbing.\n"
+"do\n"
+"  filename=${file%.*c}      #  Strip \".mac\" suffix off filename\n"
+"                            #+ ('.*c' matches everything\n"
+"\t\t\t    #+ between '.' and 'c', inclusive).\n"
+"  $OPERATION $file > \"$filename.$SUFFIX\"\n"
+"                            # Redirect conversion to new filename.\n"
+"  rm -f $file               # Delete original files after converting.   \n"
+"  echo \"$filename.$SUFFIX\"  # Log what is happening to stdout.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:34
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:40
+msgid ""
+"# Exercise: # -------- # As it stands, this script converts *all* the files "
+"in the current #+ working directory.  # Modify it to work *only* on files "
+"with a \".mac\" suffix."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:44
+msgid "# *** And here's another way to do it. *** #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:48
+msgid ""
+"#!/bin/bash # Batch convert into different graphic formats.  # Assumes "
+"imagemagick installed (standard in most Linux distros)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:51
+#, no-wrap
+msgid ""
+"INFMT=png   # Can be tif, jpg, gif, etc.\n"
+"OUTFMT=pdf  # Can be tif, jpg, gif, pdf, etc.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:58
+#, no-wrap
+msgid ""
+"for pic in *\"$INFMT\"\n"
+"do\n"
+"  p2=$(ls \"$pic\" | sed -e s/\\.$INFMT//)\n"
+"  # echo $p2\n"
+"    convert \"$pic\" $p2.$OUTFMT\n"
+"    done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cvt.sh:59
+msgid "exit $?"
+msgstr ""

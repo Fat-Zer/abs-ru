@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:4
+msgid ""
+"#!/bin/bash # usrmnt.sh, written by Anthony Richardson # Used in ABS Guide "
+"with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:8
+#, no-wrap
+msgid ""
+"# usage:       usrmnt.sh\n"
+"# description: mount device, invoking user must be listed in the\n"
+"#              MNTUSERS group in the /etc/sudoers file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:12
+msgid ""
+"# ---------------------------------------------------------- # This is a "
+"usermount script that reruns itself using sudo.  # A user with the proper "
+"permissions only has to type"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:14
+#, no-wrap
+msgid "#   usermount /dev/fd0 /mnt/floppy\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:16
+msgid "# instead of"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:18
+#, no-wrap
+msgid "#   sudo usermount /dev/fd0 /mnt/floppy\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:22
+msgid ""
+"# I use this same technique for all of my #+ sudo scripts, because I find it "
+"convenient.  # ----------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:25
+msgid ""
+"# If SUDO_COMMAND variable is not set we are not being run through #+ sudo, "
+"so rerun ourselves. Pass the user's real and group id . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:31
+#, no-wrap
+msgid ""
+"if [ -z \"$SUDO_COMMAND\" ]\n"
+"then\n"
+"   mntusr=$(id -u) grpusr=$(id -g) sudo $0 $*\n"
+"   exit 0\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:34
+msgid ""
+"# We will only get here if we are being run by sudo.  /bin/mount $* -o "
+"uid=$mntusr,gid=$grpusr"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:36
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:39
+msgid ""
+"# Additional notes (from the author of this script): # "
+"-------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:45
+#, no-wrap
+msgid ""
+"# 1) Linux allows the \"users\" option in the /etc/fstab\n"
+"#    file so that any user can mount removable media.\n"
+"#    But, on a server, I like to allow only a few\n"
+"#    individuals access to removable media.\n"
+"#    I find using sudo gives me more control.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:48
+#, no-wrap
+msgid ""
+"# 2) I also find sudo to be more convenient than\n"
+"#    accomplishing this task through groups.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/usrmnt.sh:54
+#, no-wrap
+msgid ""
+"# 3) This method gives anyone with proper permissions\n"
+"#    root access to the mount command, so be careful\n"
+"#    about who you allow access.\n"
+"#    You can get finer control over which access can be mounted\n"
+"#    by using this same technique in separate mntfloppy, mntcdrom,\n"
+"#    and mntsamba scripts.\n"
+msgstr ""

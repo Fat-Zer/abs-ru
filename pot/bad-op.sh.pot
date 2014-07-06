@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:3
+msgid "#!/bin/bash # bad-op.sh: Trying to use a string comparison on integers."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:6
+msgid "echo number=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:9
+msgid ""
+"# The following while-loop has two errors: #+ one blatant, and the other "
+"subtle."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:19
+#, no-wrap
+msgid ""
+"while [ \"$number\" &lt; 5 ]    # Wrong! Should be:  while [ \"$number\" -lt "
+"5 ]\n"
+"do\n"
+"  echo -n \"$number \"\n"
+"  let \"number += 1\"\n"
+"done  \n"
+"#  Attempt to run this bombs with the error message:\n"
+"#+ bad-op.sh: line 10: 5: No such file or directory\n"
+"#  Within single brackets, \"&lt;\" must be escaped,\n"
+"#+ and even then, it's still wrong for comparing integers.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:21
+msgid "echo \"---------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:27
+#, no-wrap
+msgid ""
+"while [ \"$number\" \\&lt; 5 ]    #  1 2 3 4\n"
+"do                          #\n"
+"  echo -n \"$number \"        #  It *seems* to work, but . . .\n"
+"  let \"number += 1\"         #+ it actually does an ASCII comparison,\n"
+"done                        #+ rather than a numerical one.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:29
+msgid "echo; echo \"---------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:31
+msgid "# This can cause problems. For example:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:34
+msgid "lesser=5 greater=105"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:41
+#, no-wrap
+msgid ""
+"if [ \"$greater\" \\&lt; \"$lesser\" ]\n"
+"then\n"
+"  echo \"$greater is less than $lesser\"\n"
+"fi                          # 105 is less than 5\n"
+"#  In fact, \"105\" actually is less than \"5\"\n"
+"#+ in a string comparison (ASCII sort order).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:43
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bad-op.sh:44
+msgid "exit 0"
+msgstr ""

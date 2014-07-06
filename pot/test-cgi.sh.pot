@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:5
+msgid "#!/bin/bash # test-cgi.sh # by Michael Zick # Used with permission"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:10
+msgid ""
+"# May have to change the location for your site.  # (At the ISP's servers, "
+"Bash may not be in the usual place.)  # Other places: /usr/bin or "
+"/usr/local/bin # Might even try it without any path in sha-bang."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:13
+msgid "# Disable filename globbing.  set -f"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:17
+msgid "# Header tells browser what to expect.  echo Content-type: text/plain echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:20
+msgid "echo CGI/1.0 test script report: echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:24
+msgid "echo environment settings: set echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:28
+msgid "echo whereis bash? whereis bash echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:33
+msgid "echo who are we? echo ${BASH_VERSINFO[*]} echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:36
+msgid "echo argc is $#. argv is \"$*\".  echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:38
+msgid "# CGI/1.0 expected environment variables."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:56
+msgid ""
+"echo SERVER_SOFTWARE = $SERVER_SOFTWARE echo SERVER_NAME = $SERVER_NAME echo "
+"GATEWAY_INTERFACE = $GATEWAY_INTERFACE echo SERVER_PROTOCOL = "
+"$SERVER_PROTOCOL echo SERVER_PORT = $SERVER_PORT echo REQUEST_METHOD = "
+"$REQUEST_METHOD echo HTTP_ACCEPT = \"$HTTP_ACCEPT\" echo PATH_INFO = "
+"\"$PATH_INFO\" echo PATH_TRANSLATED = \"$PATH_TRANSLATED\" echo SCRIPT_NAME "
+"= \"$SCRIPT_NAME\" echo QUERY_STRING = \"$QUERY_STRING\" echo REMOTE_HOST = "
+"$REMOTE_HOST echo REMOTE_ADDR = $REMOTE_ADDR echo REMOTE_USER = $REMOTE_USER "
+"echo AUTH_TYPE = $AUTH_TYPE echo CONTENT_TYPE = $CONTENT_TYPE echo "
+"CONTENT_LENGTH = $CONTENT_LENGTH"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:58
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:61
+msgid "# Here document to give short instructions.  :&lt;&lt;-'_test_CGI_'"
+msgstr ""
+
+#. type: Bullet: '1) '
+#: abs-guide/test-cgi.sh:64
+msgid "Drop this in your http://domain.name/cgi-bin directory."
+msgstr ""
+
+#. type: Bullet: '2) '
+#: abs-guide/test-cgi.sh:64
+msgid "Then, open http://domain.name/cgi-bin/test-cgi.sh."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-cgi.sh:65
+msgid "_test_CGI_"
+msgstr ""

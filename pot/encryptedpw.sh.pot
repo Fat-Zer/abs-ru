@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:4
+msgid "# Example \"ex72.sh\" modified to use encrypted password."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:8
+msgid ""
+"# Note that this is still rather insecure, #+ since the decrypted password "
+"is sent in the clear.  # Use something like \"ssh\" if this is a concern."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:10
+msgid "E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:16
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:20
+#, no-wrap
+msgid ""
+"Username=bozo           # Change to suit.\n"
+"pword=/home/bozo/secret/password_encrypted.file\n"
+"# File containing encrypted password.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:22
+msgid "Filename=`basename $1` # Strips pathname out of file name."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:25
+#, no-wrap
+msgid ""
+"Server=\"XXX\"\n"
+"Directory=\"YYY\"         # Change above to actual server name &amp; "
+"directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:33
+#, no-wrap
+msgid ""
+"Password=`cruft &lt;$pword`          # Decrypt password.\n"
+"#  Uses the author's own \"cruft\" file encryption package,\n"
+"#+ based on the classic \"onetime pad\" algorithm,\n"
+"#+ and obtainable from:\n"
+"#+ Primary-site:   ftp://ibiblio.org/pub/Linux/utils/file\n"
+"#+                 cruft-0.2.tar.gz [16k]\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:45
+msgid ""
+"ftp -n $Server &lt;&lt;End-Of-Session user $Username $Password binary bell "
+"cd $Directory put $Filename bye End-Of-Session # -n option to \"ftp\" "
+"disables auto-logon.  # Note that \"bell\" rings 'bell' after each file "
+"transfer."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/encryptedpw.sh:46
+msgid "exit 0"
+msgstr ""

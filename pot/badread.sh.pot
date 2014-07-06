@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/badread.sh:5
+msgid ""
+"#!/bin/bash # badread.sh: # Attempting to use 'echo and 'read' #+ to assign "
+"variables non-interactively."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:7
+#, no-wrap
+msgid "#   shopt -s lastpipe\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:11
+msgid "a=aaa b=bbb c=ccc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:14
+msgid "echo \"one two three\" | read a b c # Try to reassign a, b, and c."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:20
+msgid ""
+"echo echo \"a = $a\" # a = aaa echo \"b = $b\" # b = bbb echo \"c = $c\" # c "
+"= ccc # Reassignment failed."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:26
+#, no-wrap
+msgid ""
+"### However . . .\n"
+"##  Uncommenting line 6:\n"
+"#   shopt -s lastpipe\n"
+"##+ fixes the problem!\n"
+"### This is a new feature in Bash, version 4.2.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:28 abs-guide/badread.sh:42
+msgid "# ------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:30
+msgid "# Try the following alternative."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:34
+msgid "var=`echo \"one two three\"` set -- $var a=$1; b=$2; c=$3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:40
+msgid ""
+"echo \"-------\" echo \"a = $a\" # a = one echo \"b = $b\" # b = two echo "
+"\"c = $c\" # c = three # Reassignment succeeded."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:45
+msgid ""
+"# Note also that an echo to a 'read' works within a subshell.  # However, "
+"the value of the variable changes *only* within the subshell."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:49
+#, no-wrap
+msgid ""
+"a=aaa          # Starting all over again.\n"
+"b=bbb\n"
+"c=ccc\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:62
+msgid ""
+"echo; echo echo \"one two three\" | ( read a b c; echo \"Inside subshell: "
+"\"; echo \"a = $a\"; echo \"b = $b\"; echo \"c = $c\" )  # a = one # b = two "
+"# c = three echo \"-----------------\" echo \"Outside subshell: \" echo \"a "
+"= $a\" # a = aaa echo \"b = $b\" # b = bbb echo \"c = $c\" # c = ccc echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/badread.sh:63
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/sam.sh:8
+msgid ""
+"#!/bin/bash # sam.sh, v. .01a # Still Another Morse (code training script)  "
+"# With profuse apologies to Sam (F.B.) Morse.  # Author: Mendel Cooper # "
+"License: GPL3 # Reldate: 05/25/11"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:12
+msgid ""
+"# Morse code training script.  # Converts arguments to audible dots and "
+"dashes.  # Note: lowercase input only at this time."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:20
+msgid ""
+"# Get the wav files from the source tarball: # "
+"http://bash.deta.in/abs-guide-latest.tar.bz2 DOT='soundfiles/dot.wav' "
+"DASH='soundfiles/dash.wav' # Maybe move soundfiles to /usr/local/sounds?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:24
+msgid ""
+"LETTERSPACE=300000 # Microseconds.  WORDSPACE=980000 # Nice and slow, for "
+"beginners. Maybe 5 wpm?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:27
+#, no-wrap
+msgid ""
+"EXIT_MSG=\"May the Morse be with you!\"\n"
+"E_NOARGS=75         # No command-line args?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:75
+#, no-wrap
+msgid ""
+"declare -A morse    # Associative array!\n"
+"# ======================================= #\n"
+"morse[a]=\"dot; dash\"\n"
+"morse[b]=\"dash; dot; dot; dot\"\n"
+"morse[c]=\"dash; dot; dash; dot\"\n"
+"morse[d]=\"dash; dot; dot\"\n"
+"morse[e]=\"dot\"\n"
+"morse[f]=\"dot; dot; dash; dot\"\n"
+"morse[g]=\"dash; dash; dot\"\n"
+"morse[h]=\"dot; dot; dot; dot\"\n"
+"morse[i]=\"dot; dot;\"\n"
+"morse[j]=\"dot; dash; dash; dash\"\n"
+"morse[k]=\"dash; dot; dash\"\n"
+"morse[l]=\"dot; dash; dot; dot\"\n"
+"morse[m]=\"dash; dash\"\n"
+"morse[n]=\"dash; dot\"\n"
+"morse[o]=\"dash; dash; dash\"\n"
+"morse[p]=\"dot; dash; dash; dot\"\n"
+"morse[q]=\"dash; dash; dot; dash\"\n"
+"morse[r]=\"dot; dash; dot\"\n"
+"morse[s]=\"dot; dot; dot\"\n"
+"morse[t]=\"dash\"\n"
+"morse[u]=\"dot; dot; dash\"\n"
+"morse[v]=\"dot; dot; dot; dash\"\n"
+"morse[w]=\"dot; dash; dash\"\n"
+"morse[x]=\"dash; dot; dot; dash\"\n"
+"morse[y]=\"dash; dot; dash; dash\"\n"
+"morse[z]=\"dash; dash; dot; dot\"\n"
+"morse[0]=\"dash; dash; dash; dash; dash\"\n"
+"morse[1]=\"dot; dash; dash; dash; dash\"\n"
+"morse[2]=\"dot; dot; dash; dash; dash\"\n"
+"morse[3]=\"dot; dot; dot; dash; dash\"\n"
+"morse[4]=\"dot; dot; dot; dot; dash\"\n"
+"morse[5]=\"dot; dot; dot; dot; dot\"\n"
+"morse[6]=\"dash; dot; dot; dot; dot\"\n"
+"morse[7]=\"dash; dash; dot; dot; dot\"\n"
+"morse[8]=\"dash; dash; dash; dot; dot\"\n"
+"morse[9]=\"dash; dash; dash; dash; dot\"\n"
+"# The following must be escaped or quoted.\n"
+"morse[?]=\"dot; dot; dash; dash; dot; dot\"\n"
+"morse[.]=\"dot; dash; dot; dash; dot; dash\"\n"
+"morse[,]=\"dash; dash; dot; dot; dash; dash\"\n"
+"morse[/]=\"dash; dot; dot; dash; dot\"\n"
+"morse[\\@]=\"dot; dash; dash; dot; dash; dot\"\n"
+"# ======================================= #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:82
+#, no-wrap
+msgid ""
+"play_letter ()\n"
+"{\n"
+"  eval ${morse[$1]}   # Play dots, dashes from appropriate sound files.\n"
+"  # Why is 'eval' necessary here?\n"
+"  usleep $LETTERSPACE # Pause in between letters.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:88
+#, no-wrap
+msgid ""
+"extract_letters ()\n"
+"{                     # Slice string apart, letter by letter.\n"
+"  local pos=0         # Starting at left end of string.\n"
+"  local len=1         # One letter at a time.\n"
+"  strlen=${#1}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:98
+#, no-wrap
+msgid ""
+"  while [ $pos -lt $strlen ]\n"
+"  do\n"
+"    letter=${1:pos:len}\n"
+"    #      ^^^^^^^^^^^^    See Chapter 10.1.\n"
+"    play_letter $letter\n"
+"    echo -n \"*\"       #    Mark letter just played.\n"
+"    ((pos++))\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:103
+msgid ""
+"######### Play the sounds ############ dot()  { aplay \"$DOT\" "
+"2&amp;>/dev/null; } dash() { aplay \"$DASH\" 2&amp;>/dev/null; } "
+"######################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:108
+#, no-wrap
+msgid ""
+"no_args ()\n"
+"{\n"
+"    declare -a usage\n"
+"    usage=( $0 word1 word2 ... )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:120
+#, no-wrap
+msgid ""
+"    echo \"Usage:\"; echo\n"
+"    echo ${usage[*]}\n"
+"    for index in 0 1 2 3\n"
+"    do\n"
+"      extract_letters ${usage[index]}     \n"
+"      usleep $WORDSPACE\n"
+"      echo -n \" \"     # Print space between words.\n"
+"    done\n"
+"#   echo \"Usage: $0 word1 word2 ... \"\n"
+"    echo; echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:124
+msgid "# int main()  # {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:130
+#, no-wrap
+msgid ""
+"clear                 # Clear the terminal screen.\n"
+"echo \"            SAM\"\n"
+"echo \"Still Another Morse code trainer\"\n"
+"echo \"    Author: Mendel Cooper\"\n"
+"echo; echo;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:137
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  no_args\n"
+"  echo; echo; echo \"$EXIT_MSG\"; echo\n"
+"  exit $E_NOARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:139
+#, no-wrap
+msgid "echo; echo \"$*\"       # Print text that will be played.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:147
+#, no-wrap
+msgid ""
+"until [ -z \"$1\" ]\n"
+"do\n"
+"  extract_letters $1\n"
+"  shift           # On to next word.\n"
+"  usleep $WORDSPACE\n"
+"  echo -n \" \"     # Print space between words.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:149
+msgid "echo; echo; echo \"$EXIT_MSG\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:152
+msgid "exit 0 # }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sam.sh:157
+#, no-wrap
+msgid ""
+"#  Exercises:\n"
+"#  ---------\n"
+"#  1) Have the script accept either lowercase or uppercase words\n"
+"#+    as arguments. Hint: Use 'tr' . . .\n"
+"#  2) Have the script optionally accept input from a text file.\n"
+msgstr ""

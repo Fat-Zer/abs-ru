@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex38.sh:4
+msgid ""
+"#!/bin/bash # Note that this example must be invoked with bash, i.e., bash "
+"ex38.sh #+ not sh ex38.sh !"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:7
+#, no-wrap
+msgid ""
+". data-file    # Load a data file.\n"
+"# Same effect as \"source data-file\", but more portable.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:10
+msgid ""
+"# The file \"data-file\" must be present in current working directory, #+ "
+"since it is referred to by its basename."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:12
+msgid "# Now, let's reference some data from that file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:15
+msgid ""
+"echo \"variable1 (from data-file) = $variable1\" echo \"variable3 (from "
+"data-file) = $variable3\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:21
+#, no-wrap
+msgid ""
+"let \"sum = $variable2 + $variable4\"\n"
+"echo \"Sum of variable2 + variable4 (from data-file) = $sum\"\n"
+"echo \"message1 (from data-file) is \\\"$message1\\\"\"\n"
+"#                                  Escaped quotes\n"
+"echo \"message2 (from data-file) is \\\"$message2\\\"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:23
+msgid "print_message This is the message-print function in the data-file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex38.sh:25
+msgid "exit $?"
+msgstr ""

@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/manview.sh:3
+msgid "#!/bin/bash # manview.sh: Formats the source of a man page for viewing."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:7
+msgid ""
+"# This script is useful when writing man page source.  # It lets you look at "
+"the intermediate results on the fly #+ while working on it."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:9
+msgid "E_WRONGARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:15
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_WRONGARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:20
+msgid ""
+"# --------------------------- groff -Tascii -man $1 | less # From the man "
+"page for groff.  # ---------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:28
+#, no-wrap
+msgid ""
+"#  If the man page includes tables and/or equations,\n"
+"#+ then the above code will barf.\n"
+"#  The following line can handle such cases.\n"
+"#\n"
+"#   gtbl &lt; \"$1\" | geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man\n"
+"#\n"
+"#   Thanks, S.C.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/manview.sh:29
+#, no-wrap
+msgid "exit $?   # See also the \"maned.sh\" script.\n"
+msgstr ""

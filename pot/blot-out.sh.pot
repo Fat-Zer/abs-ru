@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:3
+msgid "#!/bin/bash # blot-out.sh: Erase \"all\" traces of a file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:8
+msgid ""
+"# This script overwrites a target file alternately #+ with random bytes, "
+"then zeros before finally deleting it.  # After that, even examining the raw "
+"disk sectors by conventional methods #+ will not reveal the original file "
+"data."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:17
+#, no-wrap
+msgid ""
+"PASSES=7         #  Number of file-shredding passes.\n"
+"                 #  Increasing this slows script execution,\n"
+"                 #+ especially on large target files.\n"
+"BLOCKSIZE=1      #  I/O with /dev/urandom requires unit block size,\n"
+"                 #+ otherwise you get weird results.\n"
+"E_BADARGS=70     #  Various error exit codes.\n"
+"E_NOT_FOUND=71\n"
+"E_CHANGED_MIND=72\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:23
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]   # No filename specified.\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:25
+msgid "file=$1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:31
+#, no-wrap
+msgid ""
+"if [ ! -e \"$file\" ]\n"
+"then\n"
+"  echo \"File \\\"$file\\\" not found.\"\n"
+"  exit $E_NOT_FOUND\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:40
+#, no-wrap
+msgid ""
+"echo; echo -n \"Are you absolutely sure you want to blot out \\\"$file\\\" "
+"(y/n)? \"\n"
+"read answer\n"
+"case \"$answer\" in\n"
+"[nN]) echo \"Changed your mind, huh?\"\n"
+"      exit $E_CHANGED_MIND\n"
+"      ;;\n"
+"*)    echo \"Blotting out file \\\"$file\\\".\";;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:44
+msgid ""
+"flength=$(ls -l \"$file\" | awk '{print $5}')  # Field 5 is file length.  "
+"pass_count=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:46
+#, no-wrap
+msgid "chmod u+w \"$file\"   # Allow overwriting/deleting the file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:48
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:62
+#, no-wrap
+msgid ""
+"while [ \"$pass_count\" -le \"$PASSES\" ]\n"
+"do\n"
+"  echo \"Pass #$pass_count\"\n"
+"  sync         # Flush buffers.\n"
+"  dd if=/dev/urandom of=$file bs=$BLOCKSIZE count=$flength\n"
+"               # Fill with random bytes.\n"
+"  sync         # Flush buffers again.\n"
+"  dd if=/dev/zero of=$file bs=$BLOCKSIZE count=$flength\n"
+"               # Fill with zeros.\n"
+"  sync         # Flush buffers yet again.\n"
+"  let \"pass_count += 1\"\n"
+"  echo\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:66
+#, no-wrap
+msgid ""
+"rm -f $file    # Finally, delete scrambled and shredded file.\n"
+"sync           # Flush buffers a final time.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:68
+msgid "echo \"File \\\"$file\\\" blotted out and deleted.\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:71
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:76
+msgid ""
+"# This is a fairly secure, if inefficient and slow method #+ of thoroughly "
+"\"shredding\" a file.  # The \"shred\" command, part of the GNU "
+"\"fileutils\" package, #+ does the same thing, although more efficiently."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:81
+msgid ""
+"# The file cannot not be \"undeleted\" or retrieved by normal methods.  # "
+"However . . .  #+ this simple method would *not* likely withstand #+ "
+"sophisticated forensic analysis."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:84
+msgid ""
+"# This script may not play well with a journaled file system.  # Exercise "
+"(difficult): Fix it so it does."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:90
+#, no-wrap
+msgid ""
+"#  Tom Vier's \"wipe\" file-deletion package does a much more thorough job\n"
+"#+ of file shredding than this simple script.\n"
+"#     http://www.ibiblio.org/pub/Linux/utils/file/wipe-2.0.0.tar.bz2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/blot-out.sh:94
+#, no-wrap
+msgid ""
+"#  For an in-depth analysis on the topic of file deletion and security,\n"
+"#+ see Peter Gutmann's paper,\n"
+"#+     \"Secure Deletion of Data From Magnetic and Solid-State Memory\".\n"
+"#       http://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html\n"
+msgstr ""

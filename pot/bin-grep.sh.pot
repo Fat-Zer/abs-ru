@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:3
+msgid "#!/bin/bash # bin-grep.sh: Locates matching strings in a binary file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:6
+msgid "# A \"grep\" replacement for binary files.  # Similar effect to \"grep -a\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:9
+msgid "E_BADARGS=65 E_NOFILE=66"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:15
+#, no-wrap
+msgid ""
+"if [ $# -ne 2 ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` search_string filename\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:21
+#, no-wrap
+msgid ""
+"if [ ! -f \"$2\" ]\n"
+"then\n"
+"  echo \"File \\\"$2\\\" does not exist.\"\n"
+"  exit $E_NOFILE\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:31
+#, no-wrap
+msgid ""
+"IFS=$'\\012'       # Per suggestion of Anton Filippov.\n"
+"                  # was:  IFS=\"\\n\"\n"
+"for word in $( strings \"$2\" | grep \"$1\" )\n"
+"# The \"strings\" command lists strings in binary files.\n"
+"# Output then piped to \"grep\", which tests for desired string.\n"
+"do\n"
+"  echo $word\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:34
+#, no-wrap
+msgid ""
+"# As S.C. points out, lines 23 - 30 could be replaced with the simpler\n"
+"#    strings \"$2\" | grep \"$1\" | tr -s \"$IFS\" '[\\n*]'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:38
+msgid ""
+"# Try something like \"./bin-grep.sh mem /bin/ls\" #+ to exercise this "
+"script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bin-grep.sh:39
+msgid "exit 0"
+msgstr ""

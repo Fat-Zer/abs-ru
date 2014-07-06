@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex44.sh:4
+msgid ""
+"#!/bin/bash # Killing ppp to force a log-off.  # For dialup connection, of "
+"course."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:6
+msgid "# Script should be run as root user."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:11
+msgid ""
+"SERPORT=ttyS3 # Depending on the hardware and even the kernel version, #+ "
+"the modem port on your machine may be different -- #+ /dev/ttyS1 or "
+"/dev/ttyS2."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:15
+#, no-wrap
+msgid ""
+"killppp=\"eval kill -9 `ps ax | awk '/ppp/ { print $1 }'`\"\n"
+"#                     -------- process ID of ppp -------  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:17
+#, no-wrap
+msgid "$killppp                     # This variable is now a command.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:20
+msgid "# The following operations must be done as root user."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:24
+#, no-wrap
+msgid ""
+"chmod 666 /dev/$SERPORT      # Restore r+w permissions, or else what?\n"
+"#  Since doing a SIGKILL on ppp changed the permissions on the serial "
+"port,\n"
+"#+ we restore permissions to previous state.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:26
+#, no-wrap
+msgid "rm /var/lock/LCK..$SERPORT   # Remove the serial port lock file. Why?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:28
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex44.sh:35
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Have script check whether root user is invoking it.\n"
+"# 2) Do a check on whether the process to be killed\n"
+"#+   is actually running before attempting to kill it.   \n"
+"# 3) Write an alternate version of this script based on 'fuser':\n"
+"#+      if [ fuser -s /dev/modem ]; then . . .\n"
+msgstr ""

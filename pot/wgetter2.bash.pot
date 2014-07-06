@@ -1,0 +1,712 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:3
+msgid "#!/bin/bash # wgetter2.bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:8
+msgid ""
+"# Author: Little Monster [monster@monstruum.co.uk] # ==> Used in ABS Guide "
+"with permission of script author.  # ==> This script still needs debugging "
+"and fixups (exercise for reader).  # ==> It could also use some additional "
+"editing in the comments."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:12
+msgid ""
+"# This is wgetter2 -- #+ a Bash script to make wget a bit more friendly, and "
+"save typing."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:22
+msgid ""
+"# Carefully crafted by Little Monster.  # More or less complete on "
+"02/02/2005.  # If you think this script can be improved, #+ email me at: "
+"monster@monstruum.co.uk # ==> and cc: to the author of the ABS Guide, "
+"please.  # This script is licenced under the GPL.  # You are free to copy, "
+"alter and re-use it, #+ but please don't try to claim you wrote it.  # Log "
+"your changes here instead."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:25
+msgid ""
+"# ======================================================================= # "
+"changelog:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:48
+#, no-wrap
+msgid ""
+"# 07/02/2005.  Fixups by Little Monster.\n"
+"# 02/02/2005.  Minor additions by Little Monster.\n"
+"#              (See after # +++++++++++ )\n"
+"# 29/01/2005.  Minor stylistic edits and cleanups by author of ABS Guide.\n"
+"#              Added exit error codes.\n"
+"# 22/11/2004.  Finished initial version of second version of wgetter:\n"
+"#              wgetter2 is born.\n"
+"# 01/12/2004.  Changed 'runn' function so it can be run 2 ways --\n"
+"#              either ask for a file name or have one input on the CL.\n"
+"# 01/12/2004.  Made sensible handling of no URL's given.\n"
+"# 01/12/2004.  Made loop of main options, so you don't\n"
+"#              have to keep calling wgetter 2 all the time.\n"
+"#              Runs as a session instead.\n"
+"# 01/12/2004.  Added looping to 'runn' function.\n"
+"#              Simplified and improved.\n"
+"# 01/12/2004.  Added state to recursion setting.\n"
+"#              Enables re-use of previous value.\n"
+"# 05/12/2004.  Modified the file detection routine in the 'runn' function\n"
+"#              so it's not fooled by empty values, and is cleaner.\n"
+"# 01/02/2004.  Added cookie finding routine from later version (which \n"
+"#              isn't ready yet), so as not to have hard-coded paths.\n"
+"# =======================================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:55
+#, no-wrap
+msgid ""
+"# Error codes for abnormal exit.\n"
+"E_USAGE=67        # Usage message, then quit.\n"
+"E_NO_OPTS=68      # No command-line args entered.\n"
+"E_NO_URLS=69      # No URLs passed to script.\n"
+"E_NO_SAVEFILE=70  # No save filename passed to script.\n"
+"E_USER_EXIT=71    # User decides to quit.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:64
+msgid ""
+"# Basic default wget command we want to use.  # This is the place to change "
+"it, if required.  # NB: if using a proxy, set http_proxy = yourproxy in "
+".wgetrc.  # Otherwise delete --proxy=on, below.  # "
+"==================================================================== "
+"CommandA=\"wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r\" # "
+"===================================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:69
+msgid ""
+"# -------------------------------------------------------------------- # Set "
+"some other variables and explain them."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:92
+#, no-wrap
+msgid ""
+"pattern=\" -A .jpg,.JPG,.jpeg,.JPEG,.gif,.GIF,.htm,.html,.shtml,.php\"\n"
+"                    # wget's option to only get certain types of file.\n"
+"                    # comment out if not using\n"
+"today=`date +%F`    # Used for a filename.\n"
+"home=$HOME          # Set HOME to an internal variable.\n"
+"                    # In case some other path is used, change it here.\n"
+"depthDefault=3      # Set a sensible default recursion.\n"
+"Depth=$depthDefault # Otherwise user feedback doesn't tie in properly.\n"
+"RefA=\"\"             # Set blank referring page.\n"
+"Flag=\"\"             #  Default to not saving anything,\n"
+"                    #+ or whatever else might be wanted in future.\n"
+"lister=\"\"           # Used for passing a list of urls directly to wget.\n"
+"Woptions=\"\"         # Used for passing wget some options for itself.\n"
+"inFile=\"\"           # Used for the run function.\n"
+"newFile=\"\"          # Used for the run function.\n"
+"savePath=\"$home/w-save\"\n"
+"Config=\"$home/.wgetter2rc\"\n"
+"                    #  This is where some variables can be stored, \n"
+"                    #+ if permanently changed from within the script.\n"
+"Cookie_List=\"$home/.cookielist\"\n"
+"                    # So we know where the cookies are kept . . .\n"
+"cFlag=\"\"            # Part of the cookie file selection routine.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:95
+msgid ""
+"# Define the options available. Easy to change letters here if needed.  # "
+"These are the optional options; you don't just wait to be asked."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:104
+#, no-wrap
+msgid ""
+"save=s   # Save command instead of executing it.\n"
+"cook=c   # Change cookie file for this session.\n"
+"help=h   # Usage guide.\n"
+"list=l   # Pass wget the -i option and URL list.\n"
+"runn=r   # Run saved commands as an argument to the option.\n"
+"inpu=i   # Run saved commands interactively.\n"
+"wopt=w   # Allow to enter options to pass directly to wget.\n"
+"# --------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:111
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]; then   # Make sure we get something for wget to eat.\n"
+"   echo \"You must at least enter a URL or option!\"\n"
+"   echo \"-$help for usage.\"\n"
+"   exit $E_NO_OPTS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:116
+msgid ""
+"# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ # "
+"added added added added added added added added added added added added"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:124
+#, no-wrap
+msgid ""
+"if [ ! -e \"$Config\" ]; then   # See if configuration file exists.\n"
+"   echo \"Creating configuration file, $Config\"\n"
+"   echo \"# This is the configuration file for wgetter2\" > \"$Config\"\n"
+"   echo \"# Your customised settings will be saved in this file\" >> "
+"\"$Config\"\n"
+"else\n"
+"   source $Config             # Import variables we set outside the "
+"script.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:131
+#, no-wrap
+msgid ""
+"if [ ! -e \"$Cookie_List\" ]; then\n"
+"   # Set up a list of cookie files, if there isn't one.\n"
+"   echo \"Hunting for cookies . . .\"\n"
+"   find -name cookies.txt >> $Cookie_List # Create the list of cookie "
+"files.\n"
+"fi #  Isolate this in its own 'if' statement,\n"
+"   #+ in case we got interrupted while searching.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:152
+#, no-wrap
+msgid ""
+"if [ -z \"$cFlag\" ]; then # If we haven't already done this . . .\n"
+"   echo                  # Make a nice space after the command prompt.\n"
+"   echo \"Looks like you haven't set up your source of cookies yet.\"\n"
+"   n=0                   #  Make sure the counter\n"
+"                         #+ doesn't contain random values.\n"
+"   while read; do\n"
+"      Cookies[$n]=$REPLY # Put the cookie files we found into an array.\n"
+"      echo \"$n) ${Cookies[$n]}\"  # Create a menu.\n"
+"      n=$(( n + 1 ))     # Increment the counter.\n"
+"   done &lt; $Cookie_List   # Feed the read statement.\n"
+"   echo \"Enter the number of the cookie file you want to use.\"\n"
+"   echo \"If you won't be using cookies, just press RETURN.\"\n"
+"   echo\n"
+"   echo \"I won't be asking this again. Edit $Config\"\n"
+"   echo \"If you decide to change at a later date\"\n"
+"   echo \"or use the -${cook} option for per session changes.\"\n"
+"   read\n"
+"   if [ ! -z $REPLY ]; then   # User didn't just press return.\n"
+"      Cookie=\" --load-cookies ${Cookies[$REPLY]}\"\n"
+"      # Set the variable here as well as in the config file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:157
+#, no-wrap
+msgid ""
+"      echo \"Cookie=\\\" --load-cookies ${Cookies[$REPLY]}\\\"\" >> "
+"$Config\n"
+"   fi\n"
+"   echo \"cFlag=1\" >> $Config  # So we know not to ask again.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:160
+msgid ""
+"# end added section end added section end added section end added section # "
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:170
+#, no-wrap
+msgid ""
+"# Another variable.\n"
+"# This one may or may not be subject to variation.\n"
+"# A bit like the small print.\n"
+"CookiesON=$Cookie\n"
+"# echo \"cookie file is $CookiesON\" # For debugging.\n"
+"# echo \"home is ${home}\"           # For debugging.\n"
+"                                   # Got caught with this one!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:179
+msgid ""
+"wopts()  { echo \"Enter options to pass to wget.\" echo \"It is assumed you "
+"know what you're doing.\" echo echo \"You can pass their arguments here "
+"too.\" # That is to say, everything passed here is passed to wget."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:182
+msgid "read Wopts # Read in the options to be passed to wget."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:187
+#, no-wrap
+msgid ""
+"Woptions=\" $Wopts\"\n"
+"#         ^  Why the leading space?\n"
+"# Assign to another variable.\n"
+"# Just for fun, or something . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:191
+msgid ""
+"echo \"passing options ${Wopts} to wget\" # Mainly for debugging.  # Is "
+"cute."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:194 abs-guide/wgetter2.bash:210
+msgid "return }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:203
+#, no-wrap
+msgid ""
+"save_func()\n"
+"{\n"
+"echo \"Settings will be saved.\"\n"
+"if [ ! -d $savePath ]; then  #  See if directory exists.\n"
+"   mkdir $savePath           #  Create the directory to save things in\n"
+"                             #+ if it isn't already there.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:207
+msgid ""
+"Flag=S # Tell the final bit of code what to do.  # Set a flag since stuff is "
+"done in main."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:238
+#, no-wrap
+msgid ""
+"usage() # Tell them how it works.\n"
+"{\n"
+"    echo \"Welcome to wgetter.  This is a front end to wget.\"\n"
+"    echo \"It will always run wget with these options:\"\n"
+"    echo \"$CommandA\"\n"
+"    echo \"and the pattern to match: $pattern \\\n"
+"(which you can change at the top of this script).\"\n"
+"    echo \"It will also ask you for recursion depth, \\\n"
+"and if you want to use a referring page.\"\n"
+"    echo \"Wgetter accepts the following options:\"\n"
+"    echo \"\"\n"
+"    echo \"-$help : Display this help.\"\n"
+"    echo \"-$save : Save the command to a file $savePath/wget-($today) \\\n"
+"instead of running it.\"\n"
+"    echo \"-$runn : Run saved wget commands instead of starting a new one "
+"-\"\n"
+"    echo \"Enter filename as argument to this option.\"\n"
+"    echo \"-$inpu : Run saved wget commands interactively --\"\n"
+"    echo \"The script will ask you for the filename.\"\n"
+"    echo \"-$cook : Change the cookies file for this session.\"\n"
+"    echo \"-$list : Tell wget to use URL's from a list instead of \\\n"
+"from the command-line.\"\n"
+"    echo \"-$wopt : Pass any other options direct to wget.\"\n"
+"    echo \"\"\n"
+"    echo \"See the wget man page for additional options \\\n"
+"you can pass to wget.\"\n"
+"    echo \"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:241
+#, no-wrap
+msgid ""
+"    exit $E_USAGE  # End here. Don't process anything else.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:266
+#, no-wrap
+msgid ""
+"list_func() #  Gives the user the option to use the -i option to wget,\n"
+"            #+ and a list of URLs.\n"
+"{\n"
+"while [ 1 ]; do\n"
+"   echo \"Enter the name of the file containing URL's (press q to change\n"
+"your mind).\"\n"
+"   read urlfile\n"
+"   if [ ! -e \"$urlfile\" ] &amp;&amp; [ \"$urlfile\" != q ]; then\n"
+"       # Look for a file, or the quit option.\n"
+"       echo \"That file does not exist!\"\n"
+"   elif [ \"$urlfile\" = q ]; then # Check quit option.\n"
+"       echo \"Not using a url list.\"\n"
+"       return\n"
+"   else\n"
+"      echo \"using $urlfile.\"\n"
+"      echo \"If you gave url's on the command-line, I'll use those "
+"first.\"\n"
+"                            # Report wget standard behaviour to the user.\n"
+"      lister=\" -i $urlfile\" # This is what we want to pass to wget.\n"
+"      return\n"
+"   fi\n"
+"done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:287
+#, no-wrap
+msgid ""
+"cookie_func() # Give the user the option to use a different cookie file.\n"
+"{\n"
+"while [ 1 ]; do\n"
+"   echo \"Change the cookies file. Press return if you don't want to change "
+"\n"
+"it.\"\n"
+"   read Cookies\n"
+"   # NB: this is not the same as Cookie, earlier.\n"
+"   # There is an 's' on the end.\n"
+"   # Bit like chocolate chips.\n"
+"   if [ -z \"$Cookies\" ]; then                 # Escape clause for "
+"wusses.\n"
+"      return\n"
+"   elif [ ! -e \"$Cookies\" ]; then\n"
+"      echo \"File does not exist.  Try again.\" # Keep em going . . .\n"
+"   else\n"
+"       CookiesON=\" --load-cookies $Cookies\"   # File is good -- use it!\n"
+"       return\n"
+"   fi\n"
+"done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:303
+#, no-wrap
+msgid ""
+"run_func()\n"
+"{\n"
+"if [ -z \"$OPTARG\" ]; then\n"
+"# Test to see if we used the in-line option or the query one.\n"
+"   if [ ! -d \"$savePath\" ]; then      # If directory doesn't exist . . .\n"
+"      echo \"$savePath does not appear to exist.\"\n"
+"      echo \"Please supply path and filename of saved wget commands:\"\n"
+"      read newFile\n"
+"         until [ -f \"$newFile\" ]; do  # Keep going till we get "
+"something.\n"
+"            echo \"Sorry, that file does not exist.  Please try again.\"\n"
+"            # Try really hard to get something.\n"
+"            read newFile\n"
+"         done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:316
+#, no-wrap
+msgid ""
+"# -----------------------------------------------------------------------\n"
+"#       if [ -z ( grep wget ${newfile} ) ]; then\n"
+"        # Assume they haven't got the right file and bail out.\n"
+"#       echo \"Sorry, that file does not contain wget commands.  "
+"Aborting.\"\n"
+"#       exit\n"
+"#       fi\n"
+"#\n"
+"# This is bogus code.\n"
+"# It doesn't actually work.\n"
+"# If anyone wants to fix it, feel free!\n"
+"# -----------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:337
+#, no-wrap
+msgid ""
+"      filePath=\"${newFile}\"\n"
+"   else\n"
+"   echo \"Save path is $savePath\"\n"
+"     echo \"Please enter name of the file which you want to use.\"\n"
+"     echo \"You have a choice of:\"\n"
+"     ls $savePath                                    # Give them a choice.\n"
+"     read inFile\n"
+"       until [ -f \"$savePath/$inFile\" ]; do         #  Keep going till\n"
+"                                                    #+ we get something.\n"
+"          if [ ! -f \"${savePath}/${inFile}\" ]; then # If file doesn't "
+"exist.\n"
+"             echo \"Sorry, that file does not exist.  Please choose "
+"from:\"\n"
+"             ls $savePath                           # If a mistake is "
+"made.\n"
+"             read inFile\n"
+"          fi\n"
+"         done\n"
+"      filePath=\"${savePath}/${inFile}\"  # Make one variable . . .\n"
+"   fi\n"
+"else filePath=\"${savePath}/${OPTARG}\"   # Which can be many things . . .\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:349
+#, no-wrap
+msgid ""
+"if [ ! -f \"$filePath\" ]; then           # If a bogus file got through.\n"
+"   echo \"You did not specify a suitable file.\"\n"
+"   echo \"Run this script with the -${save} option first.\"\n"
+"   echo \"Aborting.\"\n"
+"   exit $E_NO_SAVEFILE\n"
+"fi\n"
+"echo \"Using: $filePath\"\n"
+"while read; do\n"
+"    eval $REPLY\n"
+"    echo \"Completed: $REPLY\"\n"
+"done &lt; $filePath  # Feed the actual file we are using into a 'while' "
+"loop.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:352
+msgid "exit }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:374
+#, no-wrap
+msgid ""
+"# Fish out any options we are using for the script.\n"
+"# This is based on the demo in \"Learning The Bash Shell\" (O'Reilly).\n"
+"while getopts \":$save$cook$help$list$runn:$inpu$wopt\" opt\n"
+"do\n"
+"  case $opt in\n"
+"     $save) save_func;;   #  Save some wgetter sessions for later.\n"
+"     $cook) cookie_func;; #  Change cookie file.\n"
+"     $help) usage;;       #  Get help.\n"
+"     $list) list_func;;   #  Allow wget to use a list of URLs.\n"
+"     $runn) run_func;;    #  Useful if you are calling wgetter from,\n"
+"                          #+ for example, a cron script.\n"
+"     $inpu) run_func;;    #  When you don't know what your files are "
+"named.\n"
+"     $wopt) wopts;;       #  Pass options directly to wget.\n"
+"        \\?) echo \"Not a valid option.\"\n"
+"            echo \"Use -${wopt} to pass options directly to wget,\"\n"
+"            echo \"or -${help} for help\";;      # Catch anything else.\n"
+"  esac\n"
+"done\n"
+"shift $((OPTIND - 1))     # Do funky magic stuff with $#.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:385
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ] &amp;&amp; [ -z \"$lister\" ]; then\n"
+"                          #  We should be left with at least one URL\n"
+"                          #+ on the command-line, unless a list is \n"
+"\t\t\t  #+ being used -- catch empty CL's.\n"
+"   echo \"No URL's given! You must enter them on the same line as "
+"wgetter2.\"\n"
+"   echo \"E.g.,  wgetter2 http://somesite http://anothersite.\"\n"
+"   echo \"Use $help option for more information.\"\n"
+"   exit $E_NO_URLS        # Bail out, with appropriate error code.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:388
+msgid ""
+"URLS=\" $@\" # Use this so that URL list can be changed if we stay in the "
+"option loop."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:402
+#, no-wrap
+msgid ""
+"while [ 1 ]; do\n"
+"   # This is where we ask for the most used options.\n"
+"   # (Mostly unchanged from version 1 of wgetter)\n"
+"   if [ -z $curDepth ]; then\n"
+"      Current=\"\"\n"
+"   else Current=\" Current value is $curDepth\"\n"
+"   fi\n"
+"       echo \"How deep should I go? \\\n"
+"(integer: Default is $depthDefault.$Current)\"\n"
+"       read Depth   # Recursion -- how far should we go?\n"
+"       inputB=\"\"    # Reset this to blank on each pass of the loop.\n"
+"       echo \"Enter the name of the referring page (default is none).\"\n"
+"       read inputB  # Need this for some sites.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:406
+#, no-wrap
+msgid ""
+"       echo \"Do you want to have the output logged to the terminal\"\n"
+"       echo \"(y/n, default is yes)?\"\n"
+"       read noHide  # Otherwise wget will just log it to a file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:412
+#, no-wrap
+msgid ""
+"       case $noHide in    # Now you see me, now you don't.\n"
+"          y|Y ) hide=\"\";;\n"
+"          n|N ) hide=\" -b\";;\n"
+"            * ) hide=\"\";;\n"
+"       esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:426
+#, no-wrap
+msgid ""
+"       if [ -z ${Depth} ]; then\n"
+"       #  User accepted either default or current depth,\n"
+"       #+ in which case Depth is now empty.\n"
+"          if [ -z ${curDepth} ]; then\n"
+"          #  See if a depth was set on a previous iteration.\n"
+"             Depth=\"$depthDefault\"\n"
+"             #  Set the default recursion depth if nothing\n"
+"             #+ else to use.\n"
+"          else Depth=\"$curDepth\" #  Otherwise, set the one we used "
+"before.\n"
+"          fi\n"
+"       fi\n"
+"   Recurse=\" -l $Depth\"          # Set how deep we want to go.\n"
+"   curDepth=$Depth               # Remember setting for next time.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:430
+#, no-wrap
+msgid ""
+"       if [ ! -z $inputB ]; then\n"
+"          RefA=\" --referer=$inputB\"   # Option to use referring page.\n"
+"       fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:437
+#, no-wrap
+msgid ""
+"   WGETTER=\"${CommandA}${pattern}${hide}${RefA}${Recurse}\\\n"
+"${CookiesON}${lister}${Woptions}${URLS}\"\n"
+"   #  Just string the whole lot together . . .\n"
+"   #  NB: no embedded spaces.\n"
+"   #  They are in the individual elements so that if any are empty,\n"
+"   #+ we don't get an extra space.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:443
+#, no-wrap
+msgid ""
+"   if [ -z \"${CookiesON}\" ] &amp;&amp; [ \"$cFlag\" = \"1\" ] ; then\n"
+"       echo \"Warning -- can't find cookie file\"\n"
+"       #  This should be changed,\n"
+"       #+ in case the user has opted to not use cookies.\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:467
+#, no-wrap
+msgid ""
+"   if [ \"$Flag\" = \"S\" ]; then\n"
+"      echo \"$WGETTER\" >> $savePath/wget-${today}\n"
+"      #  Create a unique filename for today, or append to it if it exists.\n"
+"      echo \"$inputB\" >> $savePath/site-list-${today}\n"
+"      #  Make a list, so it's easy to refer back to,\n"
+"      #+ since the whole command is a bit confusing to look at.\n"
+"      echo \"Command saved to the file $savePath/wget-${today}\"\n"
+"           # Tell the user.\n"
+"      echo \"Referring page URL saved to the file$ \\\n"
+"savePath/site-list-${today}\"\n"
+"           # Tell the user.\n"
+"      Saver=\" with save option\"\n"
+"      # Stick this somewhere, so it appears in the loop if set.\n"
+"   else\n"
+"       echo \"*****************\"\n"
+"       echo \"*****Getting*****\"\n"
+"       echo \"*****************\"\n"
+"       echo \"\"\n"
+"       echo \"$WGETTER\"\n"
+"       echo \"\"\n"
+"       echo \"*****************\"\n"
+"       eval \"$WGETTER\"\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:473
+#, no-wrap
+msgid ""
+"       echo \"\"\n"
+"       echo \"Starting over$Saver.\"\n"
+"       echo \"If you want to stop, press q.\"\n"
+"       echo \"Otherwise, enter some URL's:\"\n"
+"       # Let them go again. Tell about save option being set.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:480
+#, no-wrap
+msgid ""
+"       read\n"
+"       case $REPLY in\n"
+"       # Need to change this to a 'trap' clause.\n"
+"          q|Q ) exit $E_USER_EXIT;;  # Exercise for the reader?\n"
+"            * ) URLS=\" $REPLY\";;\n"
+"       esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:483
+#, no-wrap
+msgid ""
+"       echo \"\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wgetter2.bash:485
+msgid "exit 0"
+msgstr ""

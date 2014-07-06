@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:3
+msgid "#!/bin/bash # substring-extraction.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:10
+#, no-wrap
+msgid ""
+"String=23skidoo1\n"
+"#      012345678    Bash\n"
+"#      123456789    awk\n"
+"# Note different string indexing system:\n"
+"# Bash numbers first character of string as 0.\n"
+"# Awk  numbers first character of string as 1.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:13
+#, no-wrap
+msgid ""
+"echo ${String:2:4} # position 3 (0-1-2), 4 characters long\n"
+"                                         # skid\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:21
+#, no-wrap
+msgid ""
+"# The awk equivalent of ${string:pos:length} is substr(string,pos,length).\n"
+"echo | awk '\n"
+"{ print substr(\"'\"${String}\"'\",3,4)      # skid\n"
+"}\n"
+"'\n"
+"#  Piping an empty \"echo\" to awk gives it dummy input,\n"
+"#+ and thus makes it unnecessary to supply a filename.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:23
+msgid "echo \"----\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:25
+msgid "# And likewise:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:30
+#, no-wrap
+msgid ""
+"echo | awk '\n"
+"{ print index(\"'\"${String}\"'\", \"skid\")      # 3\n"
+"}                                           # (skid starts at position 3)\n"
+"'   # The awk equivalent of \"expr index\" ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/substring-extraction.sh:31
+msgid "exit 0"
+msgstr ""

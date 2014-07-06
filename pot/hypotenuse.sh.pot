@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# hypotenuse.sh: Returns the \"hypotenuse\" of a right triangle.\n"
+"#                (square root of sum of squares of the \"legs\")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:7
+#, no-wrap
+msgid ""
+"ARGS=2                # Script needs sides of triangle passed.\n"
+"E_BADARGS=85          # Wrong number of arguments.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:13
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ] # Test number of arguments to script.\n"
+"then\n"
+"  echo \"Usage: `basename $0` side_1 side_2\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:17
+#, no-wrap
+msgid ""
+"AWKSCRIPT=' { printf( \"%3.7f\\n\", sqrt($1*$1 + $2*$2) ) } '\n"
+"#             command(s) / parameters passed to awk\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:24
+#, no-wrap
+msgid ""
+"# Now, pipe the parameters to awk.\n"
+"    echo -n \"Hypotenuse of $1 and $2 = \"\n"
+"    echo $1 $2 | awk \"$AWKSCRIPT\"\n"
+"#   ^^^^^^^^^^^^\n"
+"# An echo-and-pipe is an easy way of passing shell parameters to awk.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:26
+msgid "exit"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hypotenuse.sh:28
+#, no-wrap
+msgid ""
+"# Exercise: Rewrite this script using 'bc' rather than awk.\n"
+"#           Which method is more intuitive?\n"
+msgstr ""

@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:5
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"#  setnew-password.sh: For demonstration purposes only.\n"
+"#                      Not a good idea to actually run this script.\n"
+"#  This script must be run as root.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:8
+#, no-wrap
+msgid ""
+"ROOT_UID=0         # Root has $UID 0.\n"
+"E_WRONG_USER=65    # Not root?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:11
+msgid "E_NOSUCHUSER=70 SUCCESS=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:23
+#, no-wrap
+msgid ""
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo; echo \"Only root can run this script.\"; echo\n"
+"  exit $E_WRONG_USER\n"
+"else\n"
+"  echo\n"
+"  echo \"You should know better than to run this script, root.\"\n"
+"  echo \"Even root users get the blues... \"\n"
+"  echo\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:27
+msgid "username=bozo NEWPASSWORD=security_violation"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:36
+#, no-wrap
+msgid ""
+"# Check if bozo lives here.\n"
+"grep -q \"$username\" /etc/passwd\n"
+"if [ $? -ne $SUCCESS ]\n"
+"then\n"
+"  echo \"User $username does not exist.\"\n"
+"  echo \"No password changed.\"\n"
+"  exit $E_NOSUCHUSER\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:40
+msgid ""
+"echo \"$NEWPASSWORD\" | passwd --stdin \"$username\" # The '--stdin' option "
+"to 'passwd' permits #+ getting a new password from stdin (or a pipe)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:42
+msgid "echo; echo \"User $username's password changed!\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:44
+msgid "# Using the 'passwd' command in a script is dangerous."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/setnew-passwd.sh:45
+msgid "exit 0"
+msgstr ""

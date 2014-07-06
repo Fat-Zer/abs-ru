@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/match-string.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# match-string.sh: Simple string matching\n"
+"#                  using a 'case' construct.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:11
+#, no-wrap
+msgid ""
+"match_string ()\n"
+"{ # Exact string match.\n"
+"  MATCH=0\n"
+"  E_NOMATCH=90\n"
+"  PARAMS=2     # Function requires 2 arguments.\n"
+"  E_BAD_PARAMS=91\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:13
+#, no-wrap
+msgid "  [ $# -eq $PARAMS ] || return $E_BAD_PARAMS\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:18
+#, no-wrap
+msgid ""
+"  case \"$1\" in\n"
+"  \"$2\") return $MATCH;;\n"
+"  *   ) return $E_NOMATCH;;\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:20
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:26
+msgid "a=one b=two c=three d=two"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:30
+#, no-wrap
+msgid ""
+"match_string $a     # wrong number of parameters\n"
+"echo $?             # 91\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:33
+#, no-wrap
+msgid ""
+"match_string $a $b  # no match\n"
+"echo $?             # 90\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:36
+#, no-wrap
+msgid ""
+"match_string $b $d  # match\n"
+"echo $?             # 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/match-string.sh:38
+#, no-wrap
+msgid "exit 0\t\t    \n"
+msgstr ""

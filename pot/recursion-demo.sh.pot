@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:4
+msgid "#!/bin/bash # recursion-demo.sh # Demonstration of recursion."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:7
+#, no-wrap
+msgid ""
+"RECURSIONS=9   # How many times to recurse.\n"
+"r_count=0      # Must be global. Why?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:11
+#, no-wrap
+msgid ""
+"recurse ()\n"
+"{\n"
+"  var=\"$1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:19
+#, no-wrap
+msgid ""
+"  while [ \"$var\" -ge 0 ]\n"
+"  do\n"
+"    echo \"Recursion count = \"$r_count\"  +-+  \\$var = \"$var\"\"\n"
+"    (( var-- )); (( r_count++ ))\n"
+"    recurse \"$var\"  #  Function calls itself (recurses)\n"
+"  done              #+ until what condition is met?\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:21
+msgid "recurse $RECURSIONS"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/recursion-demo.sh:22
+msgid "exit $?"
+msgstr ""

@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/primes.sh:4
+msgid ""
+"#!/bin/bash # primes.sh: Generate prime numbers, without using arrays.  # "
+"Script contributed by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:8
+msgid ""
+"# This does *not* use the classic \"Sieve of Eratosthenes\" algorithm, #+ "
+"but instead the more intuitive method of testing each candidate number #+ "
+"for factors (divisors), using the \"%\" modulo operator."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:11
+#, no-wrap
+msgid "LIMIT=1000                    # Primes, 2 ... 1000.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:17
+#, no-wrap
+msgid ""
+"Primes()\n"
+"{\n"
+" (( n = $1 + 1 ))             # Bump to next integer.\n"
+" shift                        # Next parameter in list.\n"
+"#  echo \"_n=$n i=$i_\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:22
+#, no-wrap
+msgid ""
+" if (( n == LIMIT ))\n"
+" then echo $*\n"
+" return\n"
+" fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:30
+#, no-wrap
+msgid ""
+" for i; do                    # \"i\" set to \"@\", previous values of $n.\n"
+"#   echo \"-n=$n i=$i-\"\n"
+"   (( i * i > n )) &amp;&amp; break   # Optimization.\n"
+"   (( n % i )) &amp;&amp; continue    # Sift out non-primes using modulo "
+"operator.\n"
+"   Primes $n $@               # Recursion inside loop.\n"
+"   return\n"
+"   done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:36
+#, no-wrap
+msgid ""
+"   Primes $n $@ $n            #  Recursion outside loop.\n"
+"                              #  Successively accumulate\n"
+"\t\t\t      #+ positional parameters.\n"
+"                              #  \"$@\" is the accumulating list of "
+"primes.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:38
+msgid "Primes 1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:40
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:42
+msgid "# Pipe output of the script to 'fmt' for prettier printing."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:44
+msgid "# Uncomment lines 16 and 24 to help figure out what is going on."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:47
+msgid ""
+"# Compare the speed of this algorithm for generating primes #+ with the "
+"Sieve of Eratosthenes (ex68.sh)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/primes.sh:49
+msgid "# Exercise: Rewrite this script without recursion."
+msgstr ""

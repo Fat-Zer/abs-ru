@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <title>
+#: abs-guide/TABEXP.xml:1
+msgid "An Introduction to Programmable Completion"
+msgstr ""
+
+#. type: Content of: <para><footnote><para>
+#: abs-guide/TABEXP.xml:7
+msgid ""
+"This works only from the <firstterm>command line</firstterm>, of course, and "
+"not within a script."
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:3
+msgid ""
+"The <firstterm>programmable completion</firstterm> feature in Bash permits "
+"typing a partial command, then pressing the <keycap>[Tab]</keycap> key to "
+"auto-complete the command sequence.  <placeholder type=\"footnote\" "
+"id=\"0\"/> If multiple completions are possible, then <keycap>[Tab]</keycap> "
+"lists them all. Let's see how it works."
+msgstr ""
+
+#. type: Content of: <para><screen>
+#: abs-guide/TABEXP.xml:16
+#, no-wrap
+msgid ""
+"<prompt>bash$ </prompt><userinput>xtra[Tab]</userinput>\n"
+"<computeroutput>xtraceroute       xtrapin           xtrapproto\n"
+" xtraceroute.real  xtrapinfo         xtrapreset\n"
+" xtrapchar         xtrapout          xtrapstats</computeroutput>\n"
+"\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>xtrac[Tab]</userinput>\n"
+"<computeroutput>xtraceroute       xtraceroute.real</computeroutput>\n"
+"\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>xtraceroute.r[Tab]</userinput>\n"
+"<computeroutput>xtraceroute.real</computeroutput>\n"
+"      "
+msgstr ""
+
+#. type: Content of: outside any tag (error?)
+#: abs-guide/TABEXP.xml:15 abs-guide/TABEXP.xml:34 abs-guide/TABEXP.xml:61 abs-guide/TABEXP.xml:101
+msgid "<placeholder type=\"screen\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:31
+msgid "Tab completion also works for variables and path names."
+msgstr ""
+
+#. type: Content of: <para><screen>
+#: abs-guide/TABEXP.xml:35
+#, no-wrap
+msgid ""
+"<prompt>bash$ </prompt><userinput>echo $BASH[Tab]</userinput>\n"
+"<computeroutput>$BASH                 $BASH_COMPLETION      $BASH_SUBSHELL\n"
+" $BASH_ARGC            $BASH_COMPLETION_DIR  $BASH_VERSINFO\n"
+" $BASH_ARGV            $BASH_LINENO          $BASH_VERSION\n"
+" $BASH_COMMAND         $BASH_SOURCE</computeroutput>\n"
+"\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>echo /usr/local/[Tab]</userinput>\n"
+"<computeroutput>bin/     etc/     include/ libexec/ sbin/    src/     \n"
+" doc/     games/   lib/     man/     share/</computeroutput>\n"
+"      "
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:49
+msgid "<anchor id=\"completeref\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:51
+msgid ""
+"The Bash <command>complete</command> and <command>compgen</command> <link "
+"linkend=\"builtinref\">builtins</link> make it possible for <firstterm>tab "
+"completion</firstterm> to recognize partial "
+"<firstterm>parameters</firstterm> and <firstterm>options</firstterm> to "
+"commands. In a very simple case, we can use <command>complete</command> from "
+"the command-line to specify a short list of acceptable parameters."
+msgstr ""
+
+#. type: Content of: <screen>
+#: abs-guide/TABEXP.xml:62
+#, no-wrap
+msgid ""
+"<prompt>bash$ </prompt><userinput>touch sample_command</userinput>\n"
+"<prompt>bash$ </prompt><userinput>touch file1.txt file2.txt file2.doc "
+"file30.txt file4.zzz</userinput>\n"
+"<prompt>bash$ </prompt><userinput>chmod +x sample_command</userinput>\n"
+"<prompt>bash$ </prompt><userinput>complete -f -X '!*.txt' "
+"sample_command</userinput>\n"
+"\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>./sample[Tab][Tab]</userinput>\n"
+"<computeroutput>sample_command</computeroutput>\n"
+"<computeroutput>file1.txt   file2.txt   file30.txt</computeroutput>\n"
+"  "
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:73
+msgid ""
+"The <option>-f</option> option to <firstterm>complete</firstterm> specifies "
+"filenames, and <option>-X</option> the filter pattern."
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:77
+msgid "<anchor id=\"compgenref\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:79
+msgid ""
+"For anything more complex, we could write a script that specifies a list of "
+"acceptable command-line parameters.  The <command>compgen</command> builtin "
+"expands a list of <firstterm>arguments</firstterm> to "
+"<firstterm>generate</firstterm> completion matches."
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:85
+msgid ""
+"Let us take a <link linkend=\"usegetopt2\">modified version</link> of the "
+"<emphasis>UseGetOpt.sh</emphasis> script as an example command. This script "
+"accepts a number of command-line parameters, preceded by either a single or "
+"double dash. And here is the corresponding <firstterm>completion "
+"script</firstterm>, by convention given a filename corresponding to its "
+"associated command."
+msgstr ""
+
+#. type: Content of: <example><title>
+#: abs-guide/TABEXP.xml:94
+msgid "Completion script for <firstterm>UseGetOpt.sh</firstterm>"
+msgstr ""
+
+#. type: Content of: <example><programlisting>
+#: abs-guide/TABEXP.xml:96
+#, no-wrap
+msgid "&usegetoptex;"
+msgstr ""
+
+#. type: Content of: <example>
+#: abs-guide/TABEXP.xml:96
+msgid "<placeholder type=\"programlisting\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: outside any tag (error?)
+#: abs-guide/TABEXP.xml:93
+msgid "<placeholder type=\"example\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:99
+msgid "Now, let's try it."
+msgstr ""
+
+#. type: Content of: <screen>
+#: abs-guide/TABEXP.xml:102
+#, no-wrap
+msgid ""
+"<prompt>bash$ </prompt><userinput>source UseGetOpt-2</userinput>\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>./UseGetOpt-2.sh -[Tab]</userinput>\n"
+"<computeroutput>--         --aoption  --debug    --file     --help     --log     "
+"--test\n"
+" -a         -d         -f         -h         -l         "
+"-t</computeroutput>\n"
+"\n"
+"\n"
+"<prompt>bash$ </prompt><userinput>./UseGetOpt-2.sh --[Tab]</userinput>\n"
+"<computeroutput>--         --aoption  --debug    --file     --help     --log     "
+"--test</computeroutput>\n"
+"  "
+msgstr ""
+
+#. type: Content of: <para><footnote><para>
+#: abs-guide/TABEXP.xml:117
+msgid ""
+"Normally the default parameter completion files reside in either the "
+"<filename class=\"directory\">/etc/profile.d</filename> directory or in "
+"<filename class=\"directory\">/etc/bash_completion</filename>. These "
+"autoload on system startup. So, after writing a useful completion script, "
+"you might wish to move it (as <firstterm>root</firstterm>, of course)  to "
+"one of these directories."
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:115
+msgid ""
+"We begin by <link linkend=\"sourceref\">sourcing</link> the "
+"<quote>completion script.</quote> This sets the command-line parameters.  "
+"<placeholder type=\"footnote\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:126
+msgid ""
+"In the first instance, hitting <keycap>[Tab]</keycap> after a single dash, "
+"the output is all the possible parameters preceded by <emphasis>one or "
+"more</emphasis> dashes. Hitting <keycap>[Tab]</keycap> after "
+"<emphasis>two</emphasis> dashes gives the possible parameters preceded by "
+"<emphasis>two or more</emphasis> dashes."
+msgstr ""
+
+#. type: Content of: <para><footnote><para>
+#: abs-guide/TABEXP.xml:136
+msgid ""
+"It has been extensively documented that programmers are willing to put in "
+"long hours of effort in order to save ten minutes of "
+"<quote>unnecessary</quote> labor. This is known as "
+"<firstterm>optimization</firstterm>."
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:133
+msgid ""
+"Now, just what is the point of having to jump through flaming hoops to "
+"enable command-line tab completion? <emphasis>It saves "
+"keystrokes.</emphasis> <placeholder type=\"footnote\" id=\"0\"/>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:144
+msgid "--"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:146
+msgid "<emphasis>Resources:</emphasis>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:148
+msgid ""
+"Bash <ulink url=\"http://freshmeat.net/projects/bashcompletion\"> "
+"programmable completion</ulink> project"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:151
+msgid ""
+"Mitch Frazier's <ulink url=\"http://www.linuxjournal.com\"><citetitle "
+"pubwork=\"journal\">Linux Journal</citetitle></ulink> article, <ulink "
+"url=\"http://www.linuxjournal.com/content/more-using-bash-complete-command\"><emphasis>More "
+"on Using the Bash Complete Command</emphasis></ulink>"
+msgstr ""
+
+#. type: Content of: <para>
+#: abs-guide/TABEXP.xml:157
+msgid ""
+"Steve's excellent two-part article, <quote>An Introduction to Bash "
+"Completion</quote>: <ulink "
+"url=\"http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_1\">Part "
+"1</ulink> and <ulink "
+"url=\"http://www.debian-administration.org/article/An_introduction_to_bash_completion_part_2\">Part "
+"2</ulink>"
+msgstr ""

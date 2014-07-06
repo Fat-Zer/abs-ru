@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/return-test.sh:3
+msgid "#!/bin/bash # return-test.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:5
+msgid "# The largest positive value a function can return is 255."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:10
+#, no-wrap
+msgid ""
+"return_test ()         # Returns whatever passed to it.\n"
+"{\n"
+"  return $1\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:13
+#, no-wrap
+msgid ""
+"return_test 27         # o.k.\n"
+"echo $?                # Returns 27.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:16
+#, no-wrap
+msgid ""
+"return_test 255        # Still o.k.\n"
+"echo $?                # Returns 255.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:19
+#, no-wrap
+msgid ""
+"return_test 257        # Error!\n"
+"echo $?                # Returns 1 (return code for miscellaneous error).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:31
+#, no-wrap
+msgid ""
+"# =========================================================\n"
+"return_test -151896    # Do large negative numbers work?\n"
+"echo $?                # Will this return -151896?\n"
+"                       # No! It returns 168.\n"
+"#  Version of Bash before 2.05b permitted\n"
+"#+ large negative integer return values.\n"
+"#  It happened to be a useful feature.\n"
+"#  Newer versions of Bash unfortunately plug this loophole.\n"
+"#  This may break older scripts.\n"
+"#  Caution!\n"
+"# =========================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/return-test.sh:32
+msgid "exit 0"
+msgstr ""

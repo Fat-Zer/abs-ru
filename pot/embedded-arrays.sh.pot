@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:4
+msgid "#!/bin/bash # embedded-arrays.sh # Embedded arrays and indirect references."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:8
+msgid ""
+"# This script by Dennis Leeuw.  # Used with permission.  # Modified by "
+"document author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:15
+#, no-wrap
+msgid ""
+"ARRAY1=(\n"
+"        VAR1_1=value11\n"
+"        VAR1_2=value12\n"
+"        VAR1_3=value13\n"
+")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:21
+#, no-wrap
+msgid ""
+"ARRAY2=(\n"
+"        VARIABLE=\"test\"\n"
+"        STRING=\"VAR1=value1 VAR2=value2 VAR3=value3\"\n"
+"        ARRAY21=${ARRAY1[*]}\n"
+")       # Embed ARRAY1 within this second array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:31
+#, no-wrap
+msgid ""
+"function print () {\n"
+"        OLD_IFS=\"$IFS\"\n"
+"        IFS=$'\\n'       #  To print each array element\n"
+"                        #+ on a separate line.\n"
+"        TEST1=\"ARRAY2[*]\"\n"
+"        local ${!TEST1} # See what happens if you delete this line.\n"
+"        #  Indirect reference.\n"
+"\t#  This makes the components of $TEST1\n"
+"\t#+ accessible to this function.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:43
+#, no-wrap
+msgid ""
+"        #  Let's see what we've got so far.\n"
+"        echo\n"
+"        echo \"\\$TEST1 = $TEST1\"       #  Just the name of the variable.\n"
+"        echo; echo\n"
+"        echo \"{\\$TEST1} = ${!TEST1}\"  #  Contents of the variable.\n"
+"                                      #  That's what an indirect\n"
+"                                      #+ reference does.\n"
+"        echo\n"
+"        echo \"-------------------------------------------\"; echo\n"
+"        echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:47
+#, no-wrap
+msgid ""
+"        # Print variable\n"
+"        echo \"Variable VARIABLE: $VARIABLE\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:53
+#, no-wrap
+msgid ""
+"        # Print a string element\n"
+"        IFS=\"$OLD_IFS\"\n"
+"        TEST2=\"STRING[*]\"\n"
+"        local ${!TEST2}      # Indirect reference (as above).\n"
+"        echo \"String element VAR2: $VAR2 from STRING\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:59
+#, no-wrap
+msgid ""
+"        # Print an array element\n"
+"        TEST2=\"ARRAY21[*]\"\n"
+"        local ${!TEST2}      # Indirect reference (as above).\n"
+"        echo \"Array element VAR1_1: $VAR1_1 from ARRAY21\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:62
+msgid "print echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:64
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/embedded-arrays.sh:67
+#, no-wrap
+msgid ""
+"#   As the author of the script notes,\n"
+"#+ \"you can easily expand it to create named-hashes in bash.\"\n"
+"#   (Difficult) exercise for the reader: implement this.\n"
+msgstr ""

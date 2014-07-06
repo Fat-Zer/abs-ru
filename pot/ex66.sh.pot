@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex66.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:7
+msgid "area[11]=23 area[13]=37 area[51]=UFOs"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:9
+msgid "# Array members need not be consecutive or contiguous."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:14
+msgid ""
+"# Some members of the array can be left uninitialized.  # Gaps in the array "
+"are okay.  # In fact, arrays with sparse data (\"sparse arrays\")  #+ are "
+"useful in spreadsheet-processing software."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:18
+#, no-wrap
+msgid ""
+"echo -n \"area[11] = \"\n"
+"echo ${area[11]}    #  {curly brackets} needed.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:21
+msgid "echo -n \"area[13] = \" echo ${area[13]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:23
+msgid "echo \"Contents of area[51] are ${area[51]}.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:28
+msgid ""
+"# Contents of uninitialized array variable print blank (null variable).  "
+"echo -n \"area[43] = \" echo ${area[43]} echo \"(area[43] unassigned)\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:30
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:36
+msgid ""
+"# Sum of two array variables assigned to third area[5]=`expr ${area[11]} + "
+"${area[13]}` echo \"area[5] = area[11] + area[13]\" echo -n \"area[5] = \" "
+"echo ${area[5]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:42
+msgid ""
+"area[6]=`expr ${area[11]} + ${area[51]}` echo \"area[6] = area[11] + "
+"area[51]\" echo -n \"area[6] = \" echo ${area[6]} # This fails because "
+"adding an integer to a string is not permitted."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:44 abs-guide/ex66.sh:61
+msgid "echo; echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:49
+msgid ""
+"# ----------------------------------------------------------------- # "
+"Another array, \"area2\".  # Another way of assigning array variables...  # "
+"array_name=( XXX YYY ZZZ ... )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:51
+msgid "area2=( zero one two three four )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:55
+msgid ""
+"echo -n \"area2[0] = \" echo ${area2[0]} # Aha, zero-based indexing (first "
+"element of array is [0], not [1])."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:59
+#, no-wrap
+msgid ""
+"echo -n \"area2[1] = \"\n"
+"echo ${area2[1]}    # [1] is second element of array.\n"
+"# -----------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:66
+msgid ""
+"# ----------------------------------------------- # Yet another array, "
+"\"area3\".  # Yet another way of assigning array variables...  # "
+"array_name=([xx]=XXX [yy]=YYY ...)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:68
+msgid "area3=([17]=seventeen [24]=twenty-four)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:71
+msgid "echo -n \"area3[17] = \" echo ${area3[17]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:75
+msgid ""
+"echo -n \"area3[24] = \" echo ${area3[24]} # "
+"-----------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex66.sh:76
+msgid "exit 0"
+msgstr ""

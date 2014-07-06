@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/bubble.sh:3
+msgid "#!/bin/bash # bubble.sh: Bubble sort, of sorts."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:5
+msgid "# Recall the algorithm for a bubble sort. In this particular version..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:13
+msgid ""
+"# With each successive pass through the array to be sorted, #+ compare two "
+"adjacent elements, and swap them if out of order.  # At the end of the first "
+"pass, the \"heaviest\" element has sunk to bottom.  # At the end of the "
+"second pass, the next \"heaviest\" one has sunk next to bottom.  # And so "
+"forth.  # This means that each successive pass needs to traverse less of the "
+"array.  # You will therefore notice a speeding up in the printing of the "
+"later passes."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:22
+#, no-wrap
+msgid ""
+"exchange()\n"
+"{\n"
+"  # Swaps two members of the array.\n"
+"  local temp=${Countries[$1]} #  Temporary storage\n"
+"                              #+ for element getting swapped out.\n"
+"  Countries[$1]=${Countries[$2]}\n"
+"  Countries[$2]=$temp\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:25
+#, no-wrap
+msgid ""
+"  return\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:28
+#, no-wrap
+msgid ""
+"declare -a Countries  #  Declare array,\n"
+"                      #+ optional here since it's initialized below.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:32
+msgid ""
+"# Is it permissable to split an array variable over multiple lines #+ using "
+"an escape (\\)? # Yes."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:37
+msgid ""
+"Countries=(Netherlands Ukraine Zaire Turkey Russia Yemen Syria \\ Brazil "
+"Argentina Nicaragua Japan Mexico Venezuela Greece England \\ Israel Peru "
+"Canada Oman Denmark Wales France Kenya \\ Xanadu Qatar Liechtenstein "
+"Hungary)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:40
+msgid ""
+"# \"Xanadu\" is the mythical place where, according to Coleridge, #+ Kubla "
+"Khan did a pleasure dome decree."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:43
+#, no-wrap
+msgid "clear                      # Clear the screen to start with. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:45
+msgid "echo \"0: ${Countries[*]}\" # List entire array at pass 0."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:48
+msgid ""
+"number_of_elements=${#Countries[@]} let \"comparisons = $number_of_elements "
+"- 1\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:50
+msgid "count=1 # Pass number."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:53
+#, no-wrap
+msgid ""
+"while [ \"$comparisons\" -gt 0 ]          # Beginning of outer loop\n"
+"do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:55
+#, no-wrap
+msgid "  index=0  # Reset index to start of array after each pass.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:62
+#, no-wrap
+msgid ""
+"  while [ \"$index\" -lt \"$comparisons\" ] # Beginning of inner loop\n"
+"  do\n"
+"    if [ ${Countries[$index]} \\> ${Countries[`expr $index + 1`]} ]\n"
+"    #  If out of order...\n"
+"    #  Recalling that \\> is ASCII comparison operator\n"
+"    #+ within single brackets.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:70
+#, no-wrap
+msgid ""
+"    #  if [[ ${Countries[$index]} > ${Countries[`expr $index + 1`]} ]]\n"
+"    #+ also works.\n"
+"    then\n"
+"      exchange $index `expr $index + 1`  # Swap.\n"
+"    fi  \n"
+"    let \"index += 1\"  # Or,   index+=1   on Bash, ver. 3.1 or newer.\n"
+"  done # End of inner loop\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:84
+#, no-wrap
+msgid ""
+"# ----------------------------------------------------------------------\n"
+"# Paulo Marcel Coelho Aragao suggests for-loops as a simpler altenative.\n"
+"#\n"
+"# for (( last = $number_of_elements - 1 ; last > 0 ; last-- ))\n"
+"##                     Fix by C.Y. Hunt          ^   (Thanks!)\n"
+"# do\n"
+"#     for (( i = 0 ; i &lt; last ; i++ ))\n"
+"#     do\n"
+"#         [[ \"${Countries[$i]}\" > \"${Countries[$((i+1))]}\" ]] \\\n"
+"#             &amp;&amp; exchange $i $((i+1))\n"
+"#     done\n"
+"# done\n"
+"# ----------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:88
+#, no-wrap
+msgid ""
+"let \"comparisons -= 1\" #  Since \"heaviest\" element bubbles to bottom,\n"
+"                       #+ we need do one less comparison each pass.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:93
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"$count: ${Countries[@]}\"  # Print resultant array at end of each "
+"pass.\n"
+"echo\n"
+"let \"count += 1\"                # Increment pass count.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:96
+#, no-wrap
+msgid ""
+"done                            # End of outer loop\n"
+"                                # All done.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bubble.sh:97
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:3
+msgid "#!/bin/bash # multiplication.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:6
+#, no-wrap
+msgid ""
+"multiply ()                     # Multiplies params passed.\n"
+"{                               # Will accept a variable number of args.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:8
+#, no-wrap
+msgid "  local product=1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:14
+#, no-wrap
+msgid ""
+"  until [ -z \"$1\" ]             # Until uses up arguments passed...\n"
+"  do\n"
+"    let \"product *= $1\"\n"
+"    shift\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:17
+#, no-wrap
+msgid ""
+"  echo $product                 #  Will not echo to stdout,\n"
+"}                               #+ since this will be assigned to a "
+"variable.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:22
+#, no-wrap
+msgid ""
+"mult1=15383; mult2=25211\n"
+"val1=`multiply $mult1 $mult2`\n"
+"# Assigns stdout (echo) of function to the variable val1.\n"
+"echo \"$mult1 X $mult2 = $val1\"                   # 387820813\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:26
+#, no-wrap
+msgid ""
+"mult1=25; mult2=5; mult3=20\n"
+"val2=`multiply $mult1 $mult2 $mult3`\n"
+"echo \"$mult1 X $mult2 X $mult3 = $val2\"          # 2500\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:30
+msgid ""
+"mult1=188; mult2=37; mult3=25; mult4=47 val3=`multiply $mult1 $mult2 $mult3 "
+"$mult4` echo \"$mult1 X $mult2 X $mult3 X $mult4 = $val3\" # 8173300"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiplication.sh:31
+msgid "exit 0"
+msgstr ""

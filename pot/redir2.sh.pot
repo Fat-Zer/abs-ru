@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/redir2.sh:3
+msgid "#!/bin/bash # redir2.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:12
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  Filename=names.data       # Default, if no filename specified.\n"
+"else\n"
+"  Filename=$1\n"
+"fi  \n"
+"#+ Filename=${1:-names.data}\n"
+"#  can replace the above test (parameter substitution).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:14
+msgid "count=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:16
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:24
+#, no-wrap
+msgid ""
+"while [ \"$name\" != Smith ]  # Why is variable $name in quotes?\n"
+"do\n"
+"  read name                 # Reads from $Filename, rather than stdin.\n"
+"  echo $name\n"
+"  let \"count += 1\"\n"
+"done &lt;\"$Filename\"           # Redirects stdin to file $Filename. \n"
+"#    ^^^^^^^^^^^^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:26
+msgid "echo; echo \"$count names read\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:28
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:35
+msgid ""
+"# Note that in some older shell scripting languages, #+ the redirected loop "
+"would run as a subshell.  # Therefore, $count would return 0, the "
+"initialized value outside the loop.  # Bash and ksh avoid starting a "
+"subshell *whenever possible*, #+ so that this script, for example, runs "
+"correctly.  # (Thanks to Heiner Steven for pointing this out.)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:39
+msgid ""
+"# However . . .  # Bash *can* sometimes start a subshell in a PIPED "
+"\"while-read\" loop, #+ as distinct from a REDIRECTED \"while\" loop."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:46
+#, no-wrap
+msgid ""
+"abc=hi\n"
+"echo -e \"1\\n2\\n3\" | while read l\n"
+"     do abc=\"$l\"\n"
+"        echo $abc\n"
+"     done\n"
+"echo $abc\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2.sh:49
+msgid ""
+"# Thanks, Bruno de Oliveira Schneider, for demonstrating this #+ with the "
+"above snippet of code.  # And, thanks, Brian Onn, for correcting an "
+"annotation error."
+msgstr ""

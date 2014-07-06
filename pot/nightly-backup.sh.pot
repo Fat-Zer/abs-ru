@@ -1,0 +1,588 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:8
+msgid ""
+"#!/bin/bash # nightly-backup.sh # "
+"http://www.richardneill.org/source.php#nightly-backup-rsync # Copyright (c) "
+"2005 Richard Neill &lt;backup@richardneill.org&gt;.  # This is Free Software "
+"licensed under the GNU GPL.  # ==> Included in ABS Guide with script "
+"author's kind permission.  # ==> (Thanks!)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:19
+msgid ""
+"# This does a backup from the host computer to a locally connected #+ "
+"firewire HDD using rsync and ssh.  # (Script should work with USB-connected "
+"device (see lines 40-43).  # It then rotates the backups.  # Run it via cron "
+"every night at 5am.  # This only backs up the home directory.  # If "
+"ownerships (other than the user's) should be preserved, #+ then run the "
+"rsync process as root (and re-instate the -o).  # We save every day for 7 "
+"days, then every week for 4 weeks, #+ then every month for 3 months."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:23
+msgid ""
+"# See: http://www.mikerubel.org/computers/rsync_snapshots/ #+ for more "
+"explanation of the theory.  # Save as: "
+"$HOME/bin/nightly-backup_firewire-hdd.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:27
+msgid ""
+"# Known bugs: # ---------- # i)  Ideally, we want to exclude ~/.tmp and the "
+"browser caches."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:33
+#, no-wrap
+msgid ""
+"#  ii) If the user is sitting at the computer at 5am,\n"
+"#+     and files are modified while the rsync is occurring,\n"
+"#+     then the BACKUP_JUSTINCASE branch gets triggered.\n"
+"#      To some extent, this is a \n"
+"#+     feature, but it also causes a \"disk-space leak\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:53
+#, no-wrap
+msgid ""
+"##### BEGIN CONFIGURATION SECTION "
+"############################################\n"
+"LOCAL_USER=rjn                # User whose home directory should be backed "
+"up.\n"
+"MOUNT_POINT=/backup           # Mountpoint of backup drive.\n"
+"                              # NO trailing slash!\n"
+"                              # This must be unique (eg using a udev "
+"symlink)\n"
+"# MOUNT_POINT=/media/disk     # For USB-connected device.\n"
+"SOURCE_DIR=/home/$LOCAL_USER  # NO trailing slash - it DOES matter to "
+"rsync.\n"
+"BACKUP_DEST_DIR=$MOUNT_POINT/backup/`hostname "
+"-s`.${LOCAL_USER}.nightly_backup\n"
+"DRY_RUN=false                 #If true, invoke rsync with -n, to do a dry "
+"run.\n"
+"                              # Comment out or set to false for normal "
+"use.\n"
+"VERBOSE=false                 # If true, make rsync verbose.\n"
+"                              # Comment out or set to false otherwise.\n"
+"COMPRESS=false                # If true, compress.\n"
+"                              # Good for internet, bad on LAN.\n"
+"                              # Comment out or set to false otherwise.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:62
+msgid ""
+"### Exit Codes ### E_VARS_NOT_SET=64 E_COMMANDLINE=65 E_MOUNT_FAIL=70 "
+"E_NOSOURCEDIR=71 E_UNMOUNTED=72 E_BACKUP=73 ##### END CONFIGURATION SECTION "
+"##############################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:73
+#, no-wrap
+msgid ""
+"# Check that all the important variables have been set:\n"
+"if [ -z \"$LOCAL_USER\" ] ||\n"
+"   [ -z \"$SOURCE_DIR\" ] ||\n"
+"   [ -z \"$MOUNT_POINT\" ]  ||\n"
+"   [ -z \"$BACKUP_DEST_DIR\" ]\n"
+"then\n"
+"   echo 'One of the variables is not set! Edit the file: $0. BACKUP "
+"FAILED.'\n"
+"   exit $E_VARS_NOT_SET\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:81
+#, no-wrap
+msgid ""
+"if [ \"$#\" != 0 ]  # If command-line param(s) . . .\n"
+"then              # Here document(ation).\n"
+"  cat &lt;&lt;-ENDOFTEXT\n"
+"    Automatic Nightly backup run from cron.\n"
+"    Read the source for more details: $0\n"
+"    The backup directory is $BACKUP_DEST_DIR .\n"
+"    It will be created if necessary; initialisation is no longer required.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:87
+#, no-wrap
+msgid ""
+"    WARNING: Contents of $BACKUP_DEST_DIR are rotated.\n"
+"    Directories named 'backup.\\$i' will eventually be DELETED.\n"
+"    We keep backups from every day for 7 days (1-8),\n"
+"    then every week for 4 weeks (9-12),\n"
+"    then every month for 3 months (13-15).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:92
+#, no-wrap
+msgid ""
+"    You may wish to add this to your crontab using 'crontab -e'\n"
+"    #  Back up files: $SOURCE_DIR to $BACKUP_DEST_DIR\n"
+"    #+ every night at 3:15 am\n"
+"         15 03 * * * /home/$LOCAL_USER/bin/nightly-backup_firewire-hdd.sh\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:98
+#, no-wrap
+msgid ""
+"    Don't forget to verify the backups are working,\n"
+"    especially if you don't read cron's mail!\"\n"
+"\tENDOFTEXT\n"
+"   exit $E_COMMANDLINE\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:102
+msgid "# Parse the options.  # =================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:111
+#, no-wrap
+msgid ""
+"if [ \"$DRY_RUN\" == \"true\" ]; then\n"
+"  DRY_RUN=\"-n\"\n"
+"  echo \"WARNING:\"\n"
+"  echo \"THIS IS A 'DRY RUN'!\"\n"
+"  echo \"No data will actually be transferred!\"\n"
+"else\n"
+"  DRY_RUN=\"\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:117
+#, no-wrap
+msgid ""
+"if [ \"$VERBOSE\" == \"true\" ]; then\n"
+"  VERBOSE=\"-v\"\n"
+"else\n"
+"  VERBOSE=\"\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:123
+#, no-wrap
+msgid ""
+"if [ \"$COMPRESS\" == \"true\" ]; then\n"
+"  COMPRESS=\"-z\"\n"
+"else\n"
+"  COMPRESS=\"\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:136
+#, no-wrap
+msgid ""
+"#  Every week (actually of 8 days) and every month,\n"
+"#+ extra backups are preserved.\n"
+"DAY_OF_MONTH=`date +%d`            # Day of month (01..31).\n"
+"if [ $DAY_OF_MONTH = 01 ]; then    # First of month.\n"
+"  MONTHSTART=true\n"
+"elif [ $DAY_OF_MONTH = 08 \\\n"
+"    -o $DAY_OF_MONTH = 16 \\\n"
+"    -o $DAY_OF_MONTH = 24 ]; then\n"
+"    # Day 8,16,24  (use 8, not 7 to better handle 31-day months)\n"
+"      WEEKSTART=true\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:148
+#, no-wrap
+msgid ""
+"#  Check that the HDD is mounted.\n"
+"#  At least, check that *something* is mounted here!\n"
+"#  We can use something unique to the device, rather than just guessing\n"
+"#+ the scsi-id by having an appropriate udev rule in\n"
+"#+ /etc/udev/rules.d/10-rules.local\n"
+"#+ and by putting a relevant entry in /etc/fstab.\n"
+"#  Eg: this udev rule:\n"
+"# BUS=\"scsi\", KERNEL=\"sd*\", SYSFS{vendor}=\"WDC WD16\",\n"
+"# SYSFS{model}=\"00JB-00GVA0     \", NAME=\"%k\", "
+"SYMLINK=\"lacie_1394d%n\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:155
+#, no-wrap
+msgid ""
+"if mount | grep $MOUNT_POINT >/dev/null; then\n"
+"  echo \"Mount point $MOUNT_POINT is indeed mounted. OK\"\n"
+"else\n"
+"  echo -n \"Attempting to mount $MOUNT_POINT...\"\t\n"
+"           # If it isn't mounted, try to mount it.\n"
+"  sudo mount $MOUNT_POINT 2>/dev/null\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:167
+#, no-wrap
+msgid ""
+"  if mount | grep $MOUNT_POINT >/dev/null; then\n"
+"    UNMOUNT_LATER=TRUE\n"
+"    echo \"OK\"\n"
+"    #  Note: Ensure that this is also unmounted\n"
+"    #+ if we exit prematurely with failure.\n"
+"  else\n"
+"    echo \"FAILED\"\n"
+"    echo -e \"Nothing is mounted at $MOUNT_POINT. BACKUP FAILED!\"\n"
+"    exit $E_MOUNT_FAIL\n"
+"  fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:174
+#, no-wrap
+msgid ""
+"# Check that source dir exists and is readable.\n"
+"if [ ! -r  $SOURCE_DIR ] ; then\n"
+"  echo \"$SOURCE_DIR does not exist, or cannot be read. BACKUP FAILED.\"\n"
+"  exit $E_NOSOURCEDIR\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:180
+msgid ""
+"# Check that the backup directory structure is as it should be.  # If not, "
+"create it.  # Create the subdirectories.  # Note that backup.0 will be "
+"created as needed by rsync."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:200
+#, no-wrap
+msgid ""
+"for ((i=1;i&lt;=15;i++)); do\n"
+"  if [ ! -d $BACKUP_DEST_DIR/backup.$i ]; then\n"
+"    if /bin/mkdir -p $BACKUP_DEST_DIR/backup.$i ; then\n"
+"    #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  No [ ] test "
+"brackets. Why?\n"
+"      echo \"Warning: directory $BACKUP_DEST_DIR/backup.$i is missing,\"\n"
+"      echo \"or was not initialised. (Re-)creating it.\"\n"
+"    else\n"
+"      echo \"ERROR: directory $BACKUP_DEST_DIR/backup.$i\"\n"
+"      echo \"is missing and could not be created.\"\n"
+"    if  [ \"$UNMOUNT_LATER\" == \"TRUE\" ]; then\n"
+"        # Before we exit, unmount the mount point if necessary.\n"
+"        cd\n"
+"\tsudo umount $MOUNT_POINT &amp;&amp;\n"
+"\techo \"Unmounted $MOUNT_POINT again. Giving up.\"\n"
+"    fi\n"
+"      exit $E_UNMOUNTED\n"
+"  fi\n"
+"fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:206
+#, no-wrap
+msgid ""
+"#  Set the permission to 700 for security\n"
+"#+ on an otherwise permissive multi-user system.\n"
+"if ! /bin/chmod 700 $BACKUP_DEST_DIR ; then\n"
+"  echo \"ERROR: Could not set permissions on $BACKUP_DEST_DIR to 700.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:212
+#, no-wrap
+msgid ""
+"  if  [ \"$UNMOUNT_LATER\" == \"TRUE\" ]; then\n"
+"  # Before we exit, unmount the mount point if necessary.\n"
+"     cd ; sudo umount $MOUNT_POINT \\\n"
+"     &amp;&amp; echo \"Unmounted $MOUNT_POINT again. Giving up.\"\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:215
+#, no-wrap
+msgid ""
+"  exit $E_UNMOUNTED\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:224
+#, no-wrap
+msgid ""
+"# Create the symlink: current -> backup.1 if required.\n"
+"# A failure here is not critical.\n"
+"cd $BACKUP_DEST_DIR\n"
+"if [ ! -h current ] ; then\n"
+"  if ! /bin/ln -s backup.1 current ; then\n"
+"    echo \"WARNING: could not create symlink current -> backup.1\"\n"
+"  fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:230
+msgid ""
+"# Now, do the rsync.  echo \"Now doing backup with rsync...\" echo \"Source "
+"dir: $SOURCE_DIR\" echo -e \"Backup destination dir: $BACKUP_DEST_DIR\\n\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:234
+msgid ""
+"/usr/bin/rsync $DRY_RUN $VERBOSE -a -S --delete --modify-window=60 \\ "
+"--link-dest=../backup.1 $SOURCE_DIR $BACKUP_DEST_DIR/backup.0/"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:241
+msgid ""
+"# Only warn, rather than exit if the rsync failed, #+ since it may only be a "
+"minor problem.  # E.g., if one file is not readable, rsync will fail.  # "
+"This shouldn't prevent the rotation.  # Not using, e.g., `date +%a` since "
+"these directories #+ are just full of links and don't consume *that much* "
+"space."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:250
+#, no-wrap
+msgid ""
+"if [ $? != 0 ]; then\n"
+"  BACKUP_JUSTINCASE=backup.`date +%F_%T`.justincase\n"
+"  echo \"WARNING: the rsync process did not entirely succeed.\"\n"
+"  echo \"Something might be wrong.\"\n"
+"  echo \"Saving an extra copy at: $BACKUP_JUSTINCASE\"\n"
+"  echo \"WARNING: if this occurs regularly, a LOT of space will be "
+"consumed,\"\n"
+"  echo \"even though these are just hard-links!\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:257
+msgid ""
+"# Save a readme in the backup parent directory.  # Save another one in the "
+"recent subdirectory.  echo \"Backup of $SOURCE_DIR on `hostname` was last "
+"run on \\ `date`\" > $BACKUP_DEST_DIR/README.txt echo \"This backup of "
+"$SOURCE_DIR on `hostname` was created on \\ `date`\" > "
+"$BACKUP_DEST_DIR/backup.0/README.txt"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:260
+msgid ""
+"# If we are not in a dry run, rotate the backups.  [ -z \"$DRY_RUN\" ] "
+"&amp;&amp;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:282
+#, no-wrap
+msgid ""
+"  #  Check how full the backup disk is.\n"
+"  #  Warn if 90%. if 98% or more, we'll probably fail, so give up.\n"
+"  #  (Note: df can output to more than one line.)\n"
+"  #  We test this here, rather than before\n"
+"  #+ so that rsync may possibly have a chance.\n"
+"  DISK_FULL_PERCENT=`/bin/df $BACKUP_DEST_DIR |\n"
+"  tr \"\\n\" ' ' | awk '{print $12}' | grep -oE [0-9]+ `\n"
+"  echo \"Disk space check on backup partition \\\n"
+"  $MOUNT_POINT $DISK_FULL_PERCENT% full.\"\n"
+"  if [ $DISK_FULL_PERCENT -gt 90 ]; then\n"
+"    echo \"Warning: Disk is greater than 90% full.\"\n"
+"  fi\n"
+"  if [ $DISK_FULL_PERCENT -gt 98 ]; then\n"
+"    echo \"Error: Disk is full! Giving up.\"\n"
+"      if  [ \"$UNMOUNT_LATER\" == \"TRUE\" ]; then\n"
+"        # Before we exit, unmount the mount point if necessary.\n"
+"        cd; sudo umount $MOUNT_POINT &amp;&amp;\n"
+"        echo \"Unmounted $MOUNT_POINT again. Giving up.\"\n"
+"      fi\n"
+"    exit $E_UNMOUNTED\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:300
+#, no-wrap
+msgid ""
+" # Create an extra backup.\n"
+" # If this copy fails, give up.\n"
+" if [ -n \"$BACKUP_JUSTINCASE\" ]; then\n"
+"   if ! /bin/cp -al $BACKUP_DEST_DIR/backup.0 \\\n"
+"      $BACKUP_DEST_DIR/$BACKUP_JUSTINCASE\n"
+"   then\n"
+"     echo \"ERROR: Failed to create extra copy \\\n"
+"     $BACKUP_DEST_DIR/$BACKUP_JUSTINCASE\"\n"
+"     if  [ \"$UNMOUNT_LATER\" == \"TRUE\" ]; then\n"
+"       # Before we exit, unmount the mount point if necessary.\n"
+"       cd ;sudo umount $MOUNT_POINT &amp;&amp;\n"
+"       echo \"Unmounted $MOUNT_POINT again. Giving up.\"\n"
+"     fi\n"
+"     exit $E_UNMOUNTED\n"
+"   fi\n"
+" fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:316
+#, no-wrap
+msgid ""
+" # At start of month, rotate the oldest 8.\n"
+" if [ \"$MONTHSTART\" == \"true\" ]; then\n"
+"   echo -e \"\\nStart of month. \\\n"
+"   Removing oldest backup: $BACKUP_DEST_DIR/backup.15\"  &amp;&amp;\n"
+"   /bin/rm -rf  $BACKUP_DEST_DIR/backup.15  &amp;&amp;\n"
+"   echo \"Rotating monthly,weekly backups: \\\n"
+"   $BACKUP_DEST_DIR/backup.[8-14] -> $BACKUP_DEST_DIR/backup.[9-15]\"  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.14 $BACKUP_DEST_DIR/backup.15  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.13 $BACKUP_DEST_DIR/backup.14  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.12 $BACKUP_DEST_DIR/backup.13  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.8 $BACKUP_DEST_DIR/backup.9\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:322
+#, no-wrap
+msgid ""
+" # At start of week, rotate the second-oldest 4.\n"
+" elif [ \"$WEEKSTART\" == \"true\" ]; then\n"
+"   echo -e \"\\nStart of week. \\\n"
+"   Removing oldest weekly backup: $BACKUP_DEST_DIR/backup.12\"  &amp;&amp;\n"
+"   /bin/rm -rf  $BACKUP_DEST_DIR/backup.12  &amp;&amp;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:329
+#, no-wrap
+msgid ""
+"   echo \"Rotating weekly backups: \\\n"
+"   $BACKUP_DEST_DIR/backup.[8-11] -> $BACKUP_DEST_DIR/backup.[9-12]\"  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.8 $BACKUP_DEST_DIR/backup.9\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:333
+#, no-wrap
+msgid ""
+" else\n"
+"   echo -e \"\\nRemoving oldest daily backup: $BACKUP_DEST_DIR/backup.8\"  "
+"&amp;&amp;\n"
+"     /bin/rm -rf  $BACKUP_DEST_DIR/backup.8\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:335
+#, no-wrap
+msgid " fi  &amp;&amp;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:347
+#, no-wrap
+msgid ""
+" # Every day, rotate the newest 8.\n"
+" echo \"Rotating daily backups: \\\n"
+" $BACKUP_DEST_DIR/backup.[1-7] -> $BACKUP_DEST_DIR/backup.[2-8]\"  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.7 $BACKUP_DEST_DIR/backup.8  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.6 $BACKUP_DEST_DIR/backup.7  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.5 $BACKUP_DEST_DIR/backup.6  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.4 $BACKUP_DEST_DIR/backup.5  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.3 $BACKUP_DEST_DIR/backup.4  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.2 $BACKUP_DEST_DIR/backup.3  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.1 $BACKUP_DEST_DIR/backup.2  "
+"&amp;&amp;\n"
+"     /bin/mv $BACKUP_DEST_DIR/backup.0 $BACKUP_DEST_DIR/backup.1  "
+"&amp;&amp;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:349
+#, no-wrap
+msgid " SUCCESS=true\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:355
+#, no-wrap
+msgid ""
+"if  [ \"$UNMOUNT_LATER\" == \"TRUE\" ]; then\n"
+"  # Unmount the mount point if it wasn't mounted to begin with.\n"
+"  cd ; sudo umount $MOUNT_POINT &amp;&amp; echo \"Unmounted $MOUNT_POINT "
+"again.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:361
+#, no-wrap
+msgid ""
+"if [ \"$SUCCESS\" == \"true\" ]; then\n"
+"  echo 'SUCCESS!'\n"
+"  exit 0\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nightly-backup.sh:364
+msgid ""
+"# Should have already exited if backup worked.  echo 'BACKUP FAILED! Is this "
+"just a dry run? Is the disk full?) ' exit $E_BACKUP"
+msgstr ""

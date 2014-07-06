@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:4
+msgid "#!/bin/bash # viewdata.sh # Conversion of VIEWDATA.BAT to shell script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:7
+msgid "DATAFILE=/home/bozo/datafiles/book-collection.data ARGNO=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:9
+#, no-wrap
+msgid "# @ECHO OFF                 Command unnecessary here.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:16
+#, no-wrap
+msgid ""
+"if [ $# -lt \"$ARGNO\" ]    # IF !%1==! GOTO VIEWDATA\n"
+"then\n"
+"  less $DATAFILE          # TYPE C:\\MYDIR\\BOOKLIST.TXT | MORE\n"
+"else\n"
+"  grep \"$1\" $DATAFILE     # FIND \"%1\" C:\\MYDIR\\BOOKLIST.TXT\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:18
+#, no-wrap
+msgid "exit 0                    # :EXIT0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/viewdata.sh:21
+msgid ""
+"# GOTOs, labels, smoke-and-mirrors, and flimflam unnecessary.  # The "
+"converted script is short, sweet, and clean, #+ which is more than can be "
+"said for the original."
+msgstr ""

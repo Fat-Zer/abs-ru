@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rfe.sh:9
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# rfe.sh: Renaming file extensions.\n"
+"#\n"
+"#         rfe old_extension new_extension\n"
+"#\n"
+"# Example:\n"
+"# To rename all *.gif files in working directory to *.jpg,\n"
+"#          rfe gif jpg\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rfe.sh:12
+msgid "E_BADARGS=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rfe.sh:19
+#, no-wrap
+msgid ""
+"case $# in\n"
+"  0|1)             # The vertical bar means \"or\" in this context.\n"
+"  echo \"Usage: `basename $0` old_file_suffix new_file_suffix\"\n"
+"  exit $E_BADARGS  # If 0 or 1 arg, then bail out.\n"
+"  ;;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rfe.sh:28
+#, no-wrap
+msgid ""
+"for filename in *.$1\n"
+"# Traverse list of files ending with 1st argument.\n"
+"do\n"
+"  mv $filename ${filename%$1}$2\n"
+"  #  Strip off part of filename matching 1st argument,\n"
+"  #+ then append 2nd argument.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rfe.sh:29
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:3
+msgid "#!/bin/bash # mail-format.sh (ver. 1.1): Format e-mail messages."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:5
+msgid "# Gets rid of carets, tabs, and also folds excessively long lines."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:11
+#, no-wrap
+msgid ""
+"# =================================================================\n"
+"#                 Standard Check for Script Argument(s)\n"
+"ARGS=1\n"
+"E_BADARGS=85\n"
+"E_NOFILE=86\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:17
+#, no-wrap
+msgid ""
+"if [ $# -ne $ARGS ]  # Correct number of arguments passed to script?\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:26
+#, no-wrap
+msgid ""
+"if [ -f \"$1\" ]       # Check if file exists.\n"
+"then\n"
+"    file_name=$1\n"
+"else\n"
+"    echo \"File \\\"$1\\\" does not exist.\"\n"
+"    exit $E_NOFILE\n"
+"fi\n"
+"# -----------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:28
+#, no-wrap
+msgid "MAXWIDTH=70          # Width to fold excessively long lines to.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:37
+msgid ""
+"# ================================= # A variable can hold a sed script.  # "
+"It's a useful technique.  sedscript='s/^>// s/^ *>// s/^ *// s/\t\t*//' # "
+"================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:43
+#, no-wrap
+msgid ""
+"#  Delete carets and tabs at beginning of lines,\n"
+"#+ then fold lines to $MAXWIDTH characters.\n"
+"sed \"$sedscript\" $1 | fold -s --width=$MAXWIDTH\n"
+"                        #  -s option to \"fold\"\n"
+"                        #+ breaks lines at whitespace, if possible.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:51
+msgid ""
+"# This script was inspired by an article in a well-known trade journal #+ "
+"extolling a 164K MS Windows utility with similar functionality.  # # An nice "
+"set of text processing utilities and an efficient #+ scripting language "
+"provide an alternative to the bloated executables #+ of a clunky operating "
+"system."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/mail-format.sh:52
+msgid "exit $?"
+msgstr ""

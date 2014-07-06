@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:14
+msgid ""
+"#! /bin/bash # # The Towers Of Hanoi # Bash script # Copyright (C) 2000 Amit "
+"Singh. All Rights Reserved.  # http://hanoi.kernelthread.com # # Tested "
+"under Bash version 2.05b.0(13)-release.  # Also works under Bash version "
+"3.x.  # # Used in \"Advanced Bash Scripting Guide\" #+ with permission of "
+"script author.  # Slightly modified and commented by ABS author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:57
+#, no-wrap
+msgid ""
+"#=================================================================#\n"
+"#  The Tower of Hanoi is a mathematical puzzle attributed to\n"
+"#+ Edouard Lucas, a nineteenth-century French mathematician.\n"
+"#\n"
+"#  There are three vertical posts set in a base.\n"
+"#  The first post has a set of annular rings stacked on it.\n"
+"#  These rings are disks with a hole drilled out of the center,\n"
+"#+ so they can slip over the posts and rest flat.\n"
+"#  The rings have different diameters, and they stack in ascending\n"
+"#+ order, according to size.\n"
+"#  The smallest ring is on top, and the largest on the bottom.\n"
+"#\n"
+"#  The task is to transfer the stack of rings\n"
+"#+ to one of the other posts.\n"
+"#  You can move only one ring at a time to another post.\n"
+"#  You are permitted to move rings back to the original post.\n"
+"#  You may place a smaller ring atop a larger one,\n"
+"#+ but *not* vice versa.\n"
+"#  Again, it is forbidden to place a larger ring atop a smaller one.\n"
+"#\n"
+"#  For a small number of rings, only a few moves are required.\n"
+"#+ For each additional ring,\n"
+"#+ the required number of moves approximately doubles,\n"
+"#+ and the \"strategy\" becomes increasingly complicated.\n"
+"#\n"
+"#  For more information, see http://hanoi.kernelthread.com\n"
+"#+ or pp. 186-92 of _The Armchair Universe_ by A.K. Dewdney.\n"
+"#\n"
+"#\n"
+"#         ...                   ...                    ...\n"
+"#         | |                   | |                    | |\n"
+"#        _|_|_                  | |                    | |\n"
+"#       |_____|                 | |                    | |\n"
+"#      |_______|                | |                    | |\n"
+"#     |_________|               | |                    | |\n"
+"#    |___________|              | |                    | |\n"
+"#   |             |             | |                    | |\n"
+"# .--------------------------------------------------------------.\n"
+"# |**************************************************************|\n"
+"#          #1                   #2                      #3\n"
+"#\n"
+"#=================================================================#\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:63
+#, no-wrap
+msgid ""
+"E_NOPARAM=66  # No parameter passed to script.\n"
+"E_BADPARAM=67 # Illegal number of disks passed to script.\n"
+"Moves=        # Global variable holding number of moves.\n"
+"              # Modification to original script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:76
+#, no-wrap
+msgid ""
+"dohanoi() {   # Recursive function.\n"
+"    case $1 in\n"
+"    0)\n"
+"        ;;\n"
+"    *)\n"
+"        dohanoi \"$(($1-1))\" $2 $4 $3\n"
+"        echo move $2 \"-->\" $3\n"
+"        ((Moves++))          # Modification to original script.\n"
+"        dohanoi \"$(($1-1))\" $4 $3 $2\n"
+"        ;;\n"
+"    esac\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:96
+#, no-wrap
+msgid ""
+"case $# in\n"
+"    1) case $(($1>0)) in     # Must have at least one disk.\n"
+"       1)  # Nested case statement.\n"
+"           dohanoi $1 1 3 2\n"
+"           echo \"Total moves = $Moves\"   # 2^n - 1, where n = # of "
+"disks.\n"
+"           exit 0;\n"
+"           ;;\n"
+"       *)\n"
+"           echo \"$0: illegal value for number of disks\";\n"
+"           exit $E_BADPARAM;\n"
+"           ;;\n"
+"       esac\n"
+"    ;;\n"
+"    *)\n"
+"       echo \"usage: $0 N\"\n"
+"       echo \"       Where \\\"N\\\" is the number of disks.\"\n"
+"       exit $E_NOPARAM;\n"
+"       ;;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/hanoi.bash:102
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Would commands beyond this point ever be executed?\n"
+"#    Why not? (Easy)\n"
+"# 2) Explain the workings of the workings of the \"dohanoi\" function.\n"
+"#    (Difficult -- see the Dewdney reference, above.)\n"
+msgstr ""

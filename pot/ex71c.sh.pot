@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:3
+msgid ""
+"#!/bin/bash # A 'cat' here-document, but with parameter substitution "
+"disabled."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:6
+msgid "NAME=\"John Doe\" RESPONDENT=\"the author of this fine script\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:8
+msgid "cat &lt;&lt;'Endofmessage'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:11
+msgid "Hello, there, $NAME.  Greetings to you, $NAME, from $RESPONDENT."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:13
+msgid "Endofmessage"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:19
+#, no-wrap
+msgid ""
+"#   No parameter substitution when the \"limit string\" is quoted or "
+"escaped.\n"
+"#   Either of the following at the head of the here document would have\n"
+"#+  the same effect.\n"
+"#   cat &lt;&lt;\"Endofmessage\"\n"
+"#   cat &lt;&lt;\\Endofmessage\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:23
+#, no-wrap
+msgid "#   And, likewise:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:25
+msgid "cat &lt;&lt;\"SpecialCharTest\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:29
+msgid "Directory listing would follow if limit string were not quoted.  `ls -l`"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:33
+msgid ""
+"Arithmetic expansion would take place if limit string were not quoted.  $((5 "
+"+ 3))"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:37
+msgid "A a single backslash would echo if limit string were not quoted.  \\\\"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:39
+msgid "SpecialCharTest"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex71c.sh:41
+msgid "exit"
+msgstr ""

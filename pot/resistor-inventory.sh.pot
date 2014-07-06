@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:4
+msgid ""
+"#!/bin/bash # resistor-inventory.sh # Simple database / table-lookup "
+"application."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:7
+msgid "# ============================================================== # # Data"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:13
+#, no-wrap
+msgid ""
+"B1723_value=470                                   # Ohms\n"
+"B1723_powerdissip=.25                             # Watts\n"
+"B1723_colorcode=\"yellow-violet-brown\"             # Color bands\n"
+"B1723_loc=173                                     # Where they are\n"
+"B1723_inventory=78                                # How many\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:19
+msgid ""
+"B1724_value=1000 B1724_powerdissip=.25 B1724_colorcode=\"brown-black-red\" "
+"B1724_loc=24N B1724_inventory=243"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:25
+msgid ""
+"B1725_value=10000 B1725_powerdissip=.125 "
+"B1725_colorcode=\"brown-black-orange\" B1725_loc=24N B1725_inventory=89"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:27
+msgid "# ============================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:30 abs-guide/resistor-inventory.sh:34
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:32
+msgid "PS3='Enter catalog number: '"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:42
+#, no-wrap
+msgid ""
+"select catalog_number in \"B1723\" \"B1724\" \"B1725\"\n"
+"do\n"
+"  Inv=${catalog_number}_inventory\n"
+"  Val=${catalog_number}_value\n"
+"  Pdissip=${catalog_number}_powerdissip\n"
+"  Loc=${catalog_number}_loc\n"
+"  Ccode=${catalog_number}_colorcode\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:51
+#, no-wrap
+msgid ""
+"  echo\n"
+"  echo \"Catalog number $catalog_number:\"\n"
+"  # Now, retrieve value, using indirect referencing.\n"
+"  echo \"There are ${!Inv} of  [${!Val} ohm / ${!Pdissip} watt]\\\n"
+"  resistors in stock.\"  #        ^             ^\n"
+"  # As of Bash 4.2, you can replace \"ohm\" with \\u2126 (using echo -e).\n"
+"  echo \"These are located in bin # ${!Loc}.\"\n"
+"  echo \"Their color code is \\\"${!Ccode}\\\".\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:54
+#, no-wrap
+msgid ""
+"  break\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:56
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:64
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Rewrite this script to read its data from an external file.\n"
+"# 2) Rewrite this script to use arrays,\n"
+"#+   rather than indirect variable referencing.\n"
+"#    Which method is more straightforward and intuitive?\n"
+"#    Which method is easier to code?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:72
+msgid ""
+"# Notes: # ----- # Shell scripts are inappropriate for anything except the "
+"most simple #+ database applications, and even then it involves workarounds "
+"and kludges.  # Much better is to use a language with native support for "
+"data structures, #+ such as C++ or Java (or even Perl)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/resistor-inventory.sh:73
+msgid "exit 0"
+msgstr ""

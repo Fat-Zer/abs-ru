@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:4
+msgid ""
+"#!/bin/bash # stupid-script-tricks.sh: Don't try this at home, folks.  # "
+"From \"Stupid Script Tricks,\" Volume I."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:6
+msgid "exit 99 ### Comment out this line if you dare."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:8
+#, no-wrap
+msgid ""
+"dangerous_variable=`cat /boot/vmlinuz`   # The compressed Linux kernel "
+"itself.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:13
+msgid ""
+"echo \"string-length of \\$dangerous_variable = ${#dangerous_variable}\" # "
+"string-length of $dangerous_variable = 794151 # (Newer kernels are bigger.)  "
+"# Does not give same count as 'wc -c /boot/vmlinuz'."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:16
+msgid "# echo \"$dangerous_variable\" # Don't try this! It would hang the script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:20
+msgid ""
+"# The document author is aware of no useful applications for #+ setting a "
+"variable to the contents of a binary file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stupid-script-tricks.sh:21
+msgid "exit 0"
+msgstr ""

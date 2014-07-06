@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:3
+msgid "#!/bin/bash # archiveweblogs.sh v1.0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:16
+msgid ""
+"# Troy Engel &lt;tengel@fluid.com&gt; # Slightly modified by document "
+"author.  # Used with permission.  # # This script will preserve the normally "
+"rotated and #+ thrown away weblogs from a default RedHat/Apache "
+"installation.  # It will save the files with a date/time stamp in the "
+"filename, #+ bzipped, to a given directory.  # # Run this from crontab "
+"nightly at an off hour, #+ as bzip2 can suck up some serious CPU on huge "
+"logs: # 0 2 * * * /opt/sbin/archiveweblogs.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:19
+msgid "PROBLEM=66"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:22
+msgid "# Set this to your backup dir.  BKP_DIR=/opt/backups/weblogs"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:27
+msgid ""
+"# Default Apache/RedHat stuff LOG_DAYS=\"4 3 2 1\" LOG_DIR=/var/log/httpd "
+"LOG_FILES=\"access_log error_log\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:35
+msgid ""
+"# Default RedHat program locations LS=/bin/ls MV=/bin/mv ID=/usr/bin/id "
+"CUT=/bin/cut COL=/usr/bin/column BZ2=/usr/bin/bzip2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:42
+#, no-wrap
+msgid ""
+"# Are we root?\n"
+"USER=`$ID -u`\n"
+"if [ \"X$USER\" != \"X0\" ]; then\n"
+"  echo \"PANIC: Only root can run this script!\"\n"
+"  exit $PROBLEM\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:48
+#, no-wrap
+msgid ""
+"# Backup dir exists/writable?\n"
+"if [ ! -x $BKP_DIR ]; then\n"
+"  echo \"PANIC: $BKP_DIR doesn't exist or isn't writable!\"\n"
+"  exit $PROBLEM\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:65
+#, no-wrap
+msgid ""
+"# Move, rename and bzip2 the logs\n"
+"for logday in $LOG_DAYS; do\n"
+"  for logfile in $LOG_FILES; do\n"
+"    MYFILE=\"$LOG_DIR/$logfile.$logday\"\n"
+"    if [ -w $MYFILE ]; then\n"
+"      DTS=`$LS -lgo --time-style=+%Y%m%d $MYFILE | $COL -t | $CUT -d ' ' "
+"-f7`\n"
+"      $MV $MYFILE $BKP_DIR/$logfile.$DTS\n"
+"      $BZ2 $BKP_DIR/$logfile.$DTS\n"
+"    else\n"
+"      # Only spew an error if the file exits (ergo non-writable).\n"
+"      if [ -f $MYFILE ]; then\n"
+"        echo \"ERROR: $MYFILE not writable. Skipping.\"\n"
+"      fi\n"
+"    fi\n"
+"  done\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/archiveweblogs.sh:66
+msgid "exit 0"
+msgstr ""

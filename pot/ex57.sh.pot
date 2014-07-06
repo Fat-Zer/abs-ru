@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex57.sh:4
+msgid ""
+"#!/bin/bash # badname.sh # Delete filenames in current directory containing "
+"bad characters."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:14
+#, no-wrap
+msgid ""
+"for filename in *\n"
+"do\n"
+"  badname=`echo \"$filename\" | sed -n "
+"/[\\+\\{\\;\\\"\\\\\\=\\?~\\(\\)\\&lt;\\>\\&amp;\\*\\|\\$]/p`\n"
+"# badname=`echo \"$filename\" | sed -n '/[+{;\"\\=?~()&lt;&gt;&amp;*|$]/p'`  "
+"also works.\n"
+"# Deletes files containing these nasties:     + { ; \" \\ = ? ~ ( ) &lt; > "
+"&amp; * | $\n"
+"#\n"
+"  rm $badname 2>/dev/null\n"
+"#             ^^^^^^^^^^^ Error messages deep-sixed.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:19
+msgid ""
+"# Now, take care of files containing all manner of whitespace.  find . -name "
+"\"* *\" -exec rm -f {} \\; # The path name of the file that _find_ finds "
+"replaces the \"{}\".  # The '\\' ensures that the ';' is interpreted "
+"literally, as end of command."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:21
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:24
+msgid ""
+"#--------------------------------------------------------------------- # "
+"Commands below this line will not execute because of _exit_ command."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:30
+msgid ""
+"# An alternative to the above script: find . -name "
+"'*[+{;\"\\\\=?~()&lt;&gt;&amp;*|$ ]*' -maxdepth 0 \\ -exec rm -f '{}' \\; # "
+"The \"-maxdepth 0\" option ensures that _find_ will not search #+ "
+"subdirectories below $PWD."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex57.sh:31
+msgid "# (Thanks, S.C.)"
+msgstr ""

@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:3
+msgid "#!/bin/bash # echo-params.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:7
+#, no-wrap
+msgid ""
+"# Call this script with a few command-line parameters.\n"
+"# For example:\n"
+"#     sh echo-params.sh first second third fourth fifth\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:10
+#, no-wrap
+msgid ""
+"params=$#              # Number of command-line parameters.\n"
+"param=1                # Start at first command-line param.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:26
+#, no-wrap
+msgid ""
+"while [ \"$param\" -le \"$params\" ]\n"
+"do\n"
+"  echo -n \"Command-line parameter \"\n"
+"  echo -n \\$$param     #  Gives only the *name* of variable.\n"
+"#         ^^^          #  $1, $2, $3, etc.\n"
+"                       #  Why?\n"
+"                       #  \\$ escapes the first \"$\"\n"
+"                       #+ so it echoes literally,\n"
+"                       #+ and $param dereferences \"$param\" . . .\n"
+"                       #+ . . . as expected.\n"
+"  echo -n \" = \"\n"
+"  eval echo \\$$param   #  Gives the *value* of variable.\n"
+"# ^^^^      ^^^        #  The \"eval\" forces the *evaluation*\n"
+"                       #+ of \\$$\n"
+"                       #+ as an indirect variable reference.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:29
+#, no-wrap
+msgid ""
+"(( param ++ ))         # On to the next.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:31
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:33
+msgid "# ================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/echo-params.sh:39
+msgid ""
+"$ sh echo-params.sh first second third fourth fifth Command-line parameter "
+"$1 = first Command-line parameter $2 = second Command-line parameter $3 = "
+"third Command-line parameter $4 = fourth Command-line parameter $5 = fifth"
+msgstr ""

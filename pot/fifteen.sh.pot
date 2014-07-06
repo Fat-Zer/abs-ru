@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:3
+msgid "#!/bin/bash # fifteen.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:8
+msgid ""
+"# Classic \"Fifteen Puzzle\" # Author: Antonio Macchi # Lightly edited and "
+"commented by ABS Guide author.  # Used in ABS Guide with "
+"permission. (Thanks!)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:12
+msgid ""
+"# The invention of the Fifteen Puzzle is attributed to either #+ Sam Loyd or "
+"Noyes Palmer Chapman.  # The puzzle was wildly popular in the late "
+"19th-century."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:20
+#, no-wrap
+msgid ""
+"#  Object: Rearrange the numbers so they read in order,\n"
+"#+ from 1 - 15:   ________________\n"
+"#                |  1   2   3   4 |\n"
+"#                |  5   6   7   8 |\n"
+"#                |  9  10  11  12 |\n"
+"#                | 13  14  15     |\n"
+"#                 ----------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:28
+#, no-wrap
+msgid ""
+"#######################\n"
+"# Constants           #\n"
+"  SQUARES=16          #\n"
+"  FAIL=70             #\n"
+"  E_PREMATURE_EXIT=80 #\n"
+"#######################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:33
+msgid "######## # Data # ########"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:35
+msgid "Puzzle=( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 \" \" )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:40
+msgid "############# # Functions # #############"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:44
+#, no-wrap
+msgid ""
+"function swap\n"
+"{\n"
+"  local tmp\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:49
+#, no-wrap
+msgid ""
+"  tmp=${Puzzle[$1]}\n"
+"  Puzzle[$1]=${Puzzle[$2]}\n"
+"  Puzzle[$2]=$tmp\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:54
+#, no-wrap
+msgid ""
+"function Jumble\n"
+"{ # Scramble the pieces at beginning of round.\n"
+"  local i pos1 pos2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:62
+#, no-wrap
+msgid ""
+"  for i in {1..100}\n"
+"  do\n"
+"    pos1=$(( $RANDOM % $SQUARES))\n"
+"    pos2=$(( $RANDOM % $SQUARES ))\n"
+"    swap $pos1 $pos2\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:68
+#, no-wrap
+msgid ""
+"function PrintPuzzle\n"
+"{\n"
+"  local i1 i2 puzpos\n"
+"  puzpos=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:71
+#, no-wrap
+msgid ""
+"  clear\n"
+"  echo \"Enter  quit  to exit.\"; echo   # Better that than Ctl-C.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:85
+#, no-wrap
+msgid ""
+"  echo \",----.----.----.----.\"   # Top border.\n"
+"  for i1 in {1..4}\n"
+"  do\n"
+"    for i2 in {1..4} \n"
+"    do\n"
+"      printf \"| %2s \" \"${Puzzle[$puzpos]}\"\n"
+"      (( puzpos++ ))\n"
+"    done\n"
+"    echo \"|\"                     # Right-side border.\n"
+"    test $i1 = 4 || echo \"+----+----+----+----+\"\n"
+"  done\n"
+"  echo \"'----'----'----'----'\"   # Bottom border.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:90
+#, no-wrap
+msgid ""
+"function GetNum\n"
+"{ # Test for valid input.\n"
+"  local puznum garbage\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:101
+#, no-wrap
+msgid ""
+"  while true\n"
+"  do \n"
+"\t  echo \"Moves: $moves\" # Also counts invalid moves.\n"
+"    read -p \"Number to move: \" puznum garbage\n"
+"      if [ \"$puznum\" = \"quit\" ]; then echo; exit $E_PREMATURE_EXIT; fi\n"
+"    test -z \"$puznum\" -o -n \"${puznum//[0-9]/}\" &amp;&amp; continue\n"
+"    test $puznum -gt 0 -a $puznum -lt $SQUARES &amp;&amp; break\n"
+"  done\n"
+"  return $puznum\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:106
+#, no-wrap
+msgid ""
+"function GetPosFromNum\n"
+"{ # $1 = puzzle-number\n"
+"  local puzpos\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:113
+#, no-wrap
+msgid ""
+"  for puzpos in {0..15}\n"
+"  do\n"
+"    test \"${Puzzle[$puzpos]}\" = \"$1\" &amp;&amp; break\n"
+"  done\n"
+"  return $puzpos\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:127
+#, no-wrap
+msgid ""
+"function Move\n"
+"{ # $1=Puzzle-pos\n"
+"  test $1 -gt 3 &amp;&amp; test \"${Puzzle[$(( $1 - 4 ))]}\" = \" \"\\\n"
+"       &amp;&amp; swap $1 $(( $1 - 4 )) &amp;&amp; return 0\n"
+"  test $(( $1%4 )) -ne 3 &amp;&amp; test \"${Puzzle[$(( $1 + 1 ))]}\" = \" "
+"\"\\\n"
+"       &amp;&amp; swap $1 $(( $1 + 1 )) &amp;&amp; return 0\n"
+"  test $1 -lt 12 &amp;&amp; test \"${Puzzle[$(( $1 + 4 ))]}\" = \" \"\\\n"
+"       &amp;&amp; swap $1 $(( $1 + 4 )) &amp;&amp; return 0\n"
+"  test $(( $1%4 )) -ne 0 &amp;&amp; test \"${Puzzle[$(( $1 - 1 ))]}\" = \" "
+"\" &amp;&amp;\\\n"
+"       swap $1 $(( $1 - 1 )) &amp;&amp; return 0\n"
+"  return 1\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:132
+#, no-wrap
+msgid ""
+"function Solved\n"
+"{\n"
+"  local pos\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:140
+#, no-wrap
+msgid ""
+"  for pos in {0..14}\n"
+"  do\n"
+"    test \"${Puzzle[$pos]}\" = $(( $pos + 1 )) || return $FAIL\n"
+"    # Check whether number in each square = square number.\n"
+"  done\n"
+"  return 0   # Successful solution.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:145
+msgid "################### MAIN () #######################{ moves=0 Jumble"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:162
+#, no-wrap
+msgid ""
+"while true   # Loop continuously until puzzle solved.\n"
+"do\n"
+"  echo; echo\n"
+"  PrintPuzzle\n"
+"  echo\n"
+"  while true\n"
+"  do\n"
+"    GetNum\n"
+"    puznum=$?\n"
+"    GetPosFromNum $puznum\n"
+"    puzpos=$?\n"
+"    ((moves++))\n"
+"    Move $puzpos &amp;&amp; break\n"
+"  done\n"
+"  Solved &amp;&amp; break\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:166
+msgid "echo;echo PrintPuzzle echo; echo \"BRAVO!\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:169
+msgid "exit 0 ###################################################}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fifteen.sh:173
+msgid ""
+"# Exercise: # -------- # Rewrite the script to display the letters A - O, #+ "
+"rather than the numbers 1 - 15."
+msgstr ""

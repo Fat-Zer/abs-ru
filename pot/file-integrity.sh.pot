@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# file-integrity.sh: Checking whether files in a given directory\n"
+"#                    have been tampered with.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:7
+msgid "E_DIR_NOMATCH=80 E_BAD_DBFILE=81"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:10
+msgid "dbfile=File_record.md5 # Filename for storing records (database file)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:19
+#, no-wrap
+msgid ""
+"set_up_database ()\n"
+"{\n"
+"  echo \"\"$directory\"\" > \"$dbfile\"\n"
+"  # Write directory name to first line of file.\n"
+"  md5sum \"$directory\"/* >> \"$dbfile\"\n"
+"  # Append md5 checksums and filenames.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:25
+#, no-wrap
+msgid ""
+"check_database ()\n"
+"{\n"
+"  local n=0\n"
+"  local filename\n"
+"  local checksum\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:29
+#, no-wrap
+msgid ""
+"  # ------------------------------------------- #\n"
+"  #  This file check should be unnecessary,\n"
+"  #+ but better safe than sorry.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:36
+#, no-wrap
+msgid ""
+"  if [ ! -r \"$dbfile\" ]\n"
+"  then\n"
+"    echo \"Unable to read checksum database file!\"\n"
+"    exit $E_BAD_DBFILE\n"
+"  fi\n"
+"  # ------------------------------------------- #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:39
+#, no-wrap
+msgid ""
+"  while read record[n]\n"
+"  do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:47
+#, no-wrap
+msgid ""
+"    directory_checked=\"${record[0]}\"\n"
+"    if [ \"$directory_checked\" != \"$directory\" ]\n"
+"    then\n"
+"      echo \"Directories do not match up!\"\n"
+"      # Tried to use file for a different directory.\n"
+"      exit $E_DIR_NOMATCH\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:54
+#, no-wrap
+msgid ""
+"    if [ \"$n\" -gt 0 ]   # Not directory name.\n"
+"    then\n"
+"      filename[n]=$( echo ${record[$n]} | awk '{ print $2 }' )\n"
+"      #  md5sum writes records backwards,\n"
+"      #+ checksum first, then filename.\n"
+"      checksum[n]=$( md5sum \"${filename[n]}\" )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:59
+#, no-wrap
+msgid ""
+"      if [ \"${record[n]}\" = \"${checksum[n]}\" ]\n"
+"      then\n"
+"        echo \"${filename[n]} unchanged.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:72
+#, no-wrap
+msgid ""
+"        elif [ \"`basename ${filename[n]}`\" != \"$dbfile\" ]\n"
+"               #  Skip over checksum database file,\n"
+"               #+ as it will change with each invocation of script.\n"
+"               #  ---\n"
+"               #  This unfortunately means that when running\n"
+"               #+ this script on $PWD, tampering with the\n"
+"               #+ checksum database file will not be detected.\n"
+"               #  Exercise: Fix this.\n"
+"        then\n"
+"          echo \"${filename[n]} : CHECKSUM ERROR!\"\n"
+"        # File has been changed since last checked.\n"
+"        fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:74
+#, no-wrap
+msgid "      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:79
+#, no-wrap
+msgid ""
+"    let \"n+=1\"\n"
+"  done &lt;\"$dbfile\"       # Read from checksum database file. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:81
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:84
+msgid "# =================================================== # # main ()"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:91
+#, no-wrap
+msgid ""
+"if [ -z  \"$1\" ]\n"
+"then\n"
+"  directory=\"$PWD\"      #  If not specified,\n"
+"else                    #+ use current working directory.\n"
+"  directory=\"$1\"\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:95
+#, no-wrap
+msgid ""
+"clear                   # Clear screen.\n"
+"echo \" Running file integrity check on $directory\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:103
+#, no-wrap
+msgid ""
+"# ------------------------------------------------------------------ #\n"
+"  if [ ! -r \"$dbfile\" ] # Need to create database file?\n"
+"  then\n"
+"    echo \"Setting up database file, \\\"\"$directory\"/\"$dbfile\"\\\".\"; "
+"echo\n"
+"    set_up_database\n"
+"  fi  \n"
+"# ------------------------------------------------------------------ #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:105
+#, no-wrap
+msgid "check_database          # Do the actual work.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:107
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:110
+msgid ""
+"# You may wish to redirect the stdout of this script to a file, #+ "
+"especially if the directory checked has many files in it."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:112
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-integrity.sh:115
+msgid ""
+"# For a much more thorough file integrity check, #+ consider the "
+"\"Tripwire\" package, #+ http://sourceforge.net/projects/tripwire/."
+msgstr ""

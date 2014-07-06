@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:6
+msgid ""
+"#! /bin/bash # CopyArray.sh # # This script written by Michael Zick.  # Used "
+"here with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:9
+msgid ""
+"# How-To \"Pass by Name &amp; Return by Name\" #+ or \"Building your own "
+"assignment statement\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:12
+msgid "CpArray_Mac() {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:14
+msgid "# Assignment Command Statement Builder"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:20
+#, no-wrap
+msgid ""
+"    echo -n 'eval '\n"
+"    echo -n \"$2\"                    # Destination name\n"
+"    echo -n '=( ${'\n"
+"    echo -n \"$1\"                    # Source name\n"
+"    echo -n '[@]} )'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:24
+msgid "# That could all be a single command.  # Matter of style only.  }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:27
+#, no-wrap
+msgid ""
+"declare -f CopyArray                # Function \"Pointer\"\n"
+"CopyArray=CpArray_Mac               # Statement Builder\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:30
+msgid "Hype()  {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:34
+msgid ""
+"# Hype the array named $1.  # (Splice it together with array containing "
+"\"Really Rocks\".)  # Return in array named $2."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:37
+#, no-wrap
+msgid ""
+"    local -a TMP\n"
+"    local -a hype=( Really Rocks )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:42
+#, no-wrap
+msgid ""
+"    $($CopyArray $1 TMP)\n"
+"    TMP=( ${TMP[@]} ${hype[@]} )\n"
+"    $($CopyArray TMP $2)\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:45
+msgid "declare -a before=( Advanced Bash Scripting )  declare -a after"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:47 abs-guide/CopyArray.sh:64
+msgid "echo \"Array Before = ${before[@]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:49
+msgid "Hype before after"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:51
+msgid "echo \"Array After = ${after[@]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:53
+msgid "# Too much hype?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:55
+msgid "echo \"What ${after[@]:3:2}?\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:58
+#, no-wrap
+msgid ""
+"declare -a modest=( ${after[@]:2:1} ${after[@]:3:2} )\n"
+"#                    ---- substring extraction ----\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:60
+msgid "echo \"Array Modest = ${modest[@]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:62
+msgid "# What happened to 'before' ?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/CopyArray.sh:65
+msgid "exit 0"
+msgstr ""

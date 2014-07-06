@@ -1,0 +1,3276 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:5
+msgid "# $Id$ # Above line is RCS info."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:11
+msgid ""
+"# The latest version of this script is available from "
+"http://www.morethan.org.  # # Spammer-identification # by Michael S. Zick # "
+"Used in the ABS Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:18
+msgid ""
+"####################################################### # Documentation # "
+"See also \"Quickstart\" at end of script.  "
+"#######################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:20
+msgid ":&lt;&lt;-'__is_spammer_Doc_'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:24
+#, no-wrap
+msgid ""
+"    Copyright (c) Michael S. Zick, 2004\n"
+"    License: Unrestricted reuse in any form, for any purpose.\n"
+"    Warranty: None -{Its a script; the user is on their own.}-\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:30
+#, no-wrap
+msgid ""
+"Impatient?\n"
+"    Application code: goto \"# # # Hunt the Spammer' program code # # #\"\n"
+"    Example output: \":&lt;&lt;-'_is_spammer_outputs_'\"\n"
+"    How to use: Enter script name without arguments.\n"
+"                Or goto \"Quickstart\" at end of script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:33
+#, no-wrap
+msgid ""
+"Provides\n"
+"    Given a domain name or IP(v4) address as input:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:36
+#, no-wrap
+msgid ""
+"    Does an exhaustive set of queries to find the associated\n"
+"    network resources (short of recursing into TLDs).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:39
+#, no-wrap
+msgid ""
+"    Checks the IP(v4) addresses found against Blacklist\n"
+"    nameservers.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:43
+#, no-wrap
+msgid ""
+"    If found to be a blacklisted IP(v4) address,\n"
+"    reports the blacklist text records.\n"
+"    (Usually hyper-links to the specific report.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:48
+#, no-wrap
+msgid ""
+"Requires\n"
+"    A working Internet connection.\n"
+"    (Exercise: Add check and/or abort if not on-line when running script.)\n"
+"    Bash with arrays (2.05b+).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:53
+#, no-wrap
+msgid ""
+"    The external program 'dig' --\n"
+"    a utility program provided with the 'bind' set of programs.\n"
+"    Specifically, the version which is part of Bind series 9.x\n"
+"    See: http://www.isc.org\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:58
+#, no-wrap
+msgid ""
+"    All usages of 'dig' are limited to wrapper functions,\n"
+"    which may be rewritten as required.\n"
+"    See: dig_wrappers.bash for details.\n"
+"         (\"Additional documentation\" -- below)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:64
+#, no-wrap
+msgid ""
+"Usage\n"
+"    Script requires a single argument, which may be:\n"
+"    1) A domain name;\n"
+"    2) An IP(v4) address;\n"
+"    3) A filename, with one name or address per line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:68
+#, no-wrap
+msgid ""
+"    Script accepts an optional second argument, which may be:\n"
+"    1) A Blacklist server name;\n"
+"    2) A filename, with one Blacklist server name per line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:71
+#, no-wrap
+msgid ""
+"    If the second argument is not provided, the script uses\n"
+"    a built-in set of (free) Blacklist servers.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:73
+#, no-wrap
+msgid "    See also, the Quickstart at the end of this script (after 'exit').\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:78
+#, no-wrap
+msgid ""
+"Return Codes\n"
+"    0 - All OK\n"
+"    1 - Script failure\n"
+"    2 - Something is Blacklisted\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:83
+#, no-wrap
+msgid ""
+"Optional environment variables\n"
+"    SPAMMER_TRACE\n"
+"        If set to a writable file,\n"
+"        script will log an execution flow trace.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:88
+#, no-wrap
+msgid ""
+"    SPAMMER_DATA\n"
+"        If set to a writable file, script will dump its\n"
+"        discovered data in the form of GraphViz file.\n"
+"        See: http://www.research.att.com/sw/tools/graphviz\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:91
+#, no-wrap
+msgid ""
+"    SPAMMER_LIMIT\n"
+"        Limits the depth of resource tracing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:93
+#, no-wrap
+msgid "        Default is 2 levels.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:96
+#, no-wrap
+msgid ""
+"        A setting of 0 (zero) means 'unlimited' . . .\n"
+"          Caution: script might recurse the whole Internet!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:100
+#, no-wrap
+msgid ""
+"        A limit of 1 or 2 is most useful when processing\n"
+"        a file of domain names and addresses.\n"
+"        A higher limit can be useful when hunting spam gangs.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:106
+#, no-wrap
+msgid ""
+"Additional documentation\n"
+"    Download the archived set of scripts\n"
+"    explaining and illustrating the function contained within this script.\n"
+"    http://bash.deta.in/mszick_clf.tar.bz2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:112
+#, no-wrap
+msgid ""
+"Study notes\n"
+"    This script uses a large number of functions.\n"
+"    Nearly all general functions have their own example script.\n"
+"    Each of the example scripts have tutorial level comments.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:116
+#, no-wrap
+msgid ""
+"Scripting project\n"
+"    Add support for IP(v6) addresses.\n"
+"    IP(v6) addresses are recognized but not processed.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:119
+#, no-wrap
+msgid ""
+"Advanced project\n"
+"    Add the reverse lookup detail to the discovered information.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:121
+#, no-wrap
+msgid "    Report the delegation chain and abuse contacts.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:124
+#, no-wrap
+msgid ""
+"    Modify the GraphViz file output to include the\n"
+"    newly discovered information.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:126
+msgid "__is_spammer_Doc_"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:128
+msgid "#######################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:133
+msgid "#### Special IFS settings used for string parsing. ####"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:136
+msgid ""
+"# Whitespace == :Space:Tab:Line Feed:Carriage Return: "
+"WSP_IFS=$'\\x20'$'\\x09'$'\\x0A'$'\\x0D'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:139
+msgid "# No Whitespace == Line Feed:Carriage Return NO_WSP=$'\\x0A'$'\\x0D'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:142
+msgid "# Field separator for dotted decimal IP addresses ADR_IFS=${NO_WSP}'.'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:145
+msgid "# Array to dotted string conversions DOT_IFS='.'${WSP_IFS}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:150
+msgid ""
+"# # # Pending operations stack machine # # # # This set of functions "
+"described in func_stack.bash.  # (See \"Additional documentation\" above.)  "
+"# # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:157
+msgid ""
+"# Global stack of pending operations.  declare -f -a _pending_ # Global "
+"sentinel for stack runners declare -i _p_ctrl_ # Global holder for currently "
+"executing function declare -f _pend_current_"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:167
+msgid ""
+"# # # Debug version only - remove for regular use # # # # # The function "
+"stored in _pend_hook_ is called # immediately before each pending function "
+"is # evaluated.  Stack clean, _pend_current_ set.  # # This thingy "
+"demonstrated in pend_hook.bash.  declare -f _pend_hook_ # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:170
+msgid "# The do nothing function pend_dummy() { : ; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:177
+#, no-wrap
+msgid ""
+"# Clear and initialize the function stack.\n"
+"pend_init() {\n"
+"    unset _pending_[@]\n"
+"    pend_func pend_stop_mark\n"
+"    _pend_hook_='pend_dummy'  # Debug only.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:187
+#, no-wrap
+msgid ""
+"# Discard the top function on the stack.\n"
+"pend_pop() {\n"
+"    if [ ${#_pending_[@]} -gt 0 ]\n"
+"    then\n"
+"        local -i _top_\n"
+"        _top_=${#_pending_[@]}-1\n"
+"        unset _pending_[$_top_]\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:195
+#, no-wrap
+msgid ""
+"# pend_func function_name [$(printf '%q\\n' arguments)]\n"
+"pend_func() {\n"
+"    local IFS=${NO_WSP}\n"
+"    set -f\n"
+"    _pending_[${#_pending_[@]}]=$@\n"
+"    set +f\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:200
+#, no-wrap
+msgid ""
+"# The function which stops the release:\n"
+"pend_stop_mark() {\n"
+"    _p_ctrl_=0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:204
+#, no-wrap
+msgid ""
+"pend_mark() {\n"
+"    pend_func pend_stop_mark\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:218
+#, no-wrap
+msgid ""
+"# Execute functions until 'pend_stop_mark' . . .\n"
+"pend_release() {\n"
+"    local -i _top_             # Declare _top_ as integer.\n"
+"    _p_ctrl_=${#_pending_[@]}\n"
+"    while [ ${_p_ctrl_} -gt 0 ]\n"
+"    do\n"
+"       _top_=${#_pending_[@]}-1\n"
+"       _pend_current_=${_pending_[$_top_]}\n"
+"       unset _pending_[$_top_]\n"
+"       $_pend_hook_            # Debug only.\n"
+"       eval $_pend_current_\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:240
+#, no-wrap
+msgid ""
+"# Drop functions until 'pend_stop_mark' . . .\n"
+"pend_drop() {\n"
+"    local -i _top_\n"
+"    local _pd_ctrl_=${#_pending_[@]}\n"
+"    while [ ${_pd_ctrl_} -gt 0 ]\n"
+"    do\n"
+"       _top_=$_pd_ctrl_-1\n"
+"       if [ \"${_pending_[$_top_]}\" == 'pend_stop_mark' ]\n"
+"       then\n"
+"           unset _pending_[$_top_]\n"
+"           break\n"
+"       else\n"
+"           unset _pending_[$_top_]\n"
+"           _pd_ctrl_=$_top_\n"
+"       fi\n"
+"    done\n"
+"    if [ ${#_pending_[@]} -eq 0 ]\n"
+"    then\n"
+"        pend_func pend_stop_mark\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:242
+msgid "#### Array editors ####"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:278
+#, no-wrap
+msgid ""
+"# This function described in edit_exact.bash.\n"
+"# (See \"Additional documentation,\" above.)\n"
+"# edit_exact &lt;excludes_array_name&gt; &lt;target_array_name&gt;\n"
+"edit_exact() {\n"
+"    [ $# -eq 2 ] ||\n"
+"    [ $# -eq 3 ] || return 1\n"
+"    local -a _ee_Excludes\n"
+"    local -a _ee_Target\n"
+"    local _ee_x\n"
+"    local _ee_t\n"
+"    local IFS=${NO_WSP}\n"
+"    set -f\n"
+"    eval _ee_Excludes=\\( \\$\\{$1\\[@\\]\\} \\)\n"
+"    eval _ee_Target=\\( \\$\\{$2\\[@\\]\\} \\)\n"
+"    local _ee_len=${#_ee_Target[@]}     # Original length.\n"
+"    local _ee_cnt=${#_ee_Excludes[@]}   # Exclude list length.\n"
+"    [ ${_ee_len} -ne 0 ] || return 0    # Can't edit zero length.\n"
+"    [ ${_ee_cnt} -ne 0 ] || return 0    # Can't edit zero length.\n"
+"    for (( x = 0; x &lt; ${_ee_cnt} ; x++ ))\n"
+"    do\n"
+"        _ee_x=${_ee_Excludes[$x]}\n"
+"        for (( n = 0 ; n &lt; ${_ee_len} ; n++ ))\n"
+"        do\n"
+"            _ee_t=${_ee_Target[$n]}\n"
+"            if [ x\"${_ee_t}\" == x\"${_ee_x}\" ]\n"
+"            then\n"
+"                unset _ee_Target[$n]     # Discard match.\n"
+"                [ $# -eq 2 ] &amp;&amp; break    # If 2 arguments, then "
+"done.\n"
+"            fi\n"
+"        done\n"
+"    done\n"
+"    eval $2=\\( \\$\\{_ee_Target\\[@\\]\\} \\)\n"
+"    set +f\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:313
+#, no-wrap
+msgid ""
+"# This function described in edit_by_glob.bash.\n"
+"# edit_by_glob &lt;excludes_array_name&gt; &lt;target_array_name&gt;\n"
+"edit_by_glob() {\n"
+"    [ $# -eq 2 ] ||\n"
+"    [ $# -eq 3 ] || return 1\n"
+"    local -a _ebg_Excludes\n"
+"    local -a _ebg_Target\n"
+"    local _ebg_x\n"
+"    local _ebg_t\n"
+"    local IFS=${NO_WSP}\n"
+"    set -f\n"
+"    eval _ebg_Excludes=\\( \\$\\{$1\\[@\\]\\} \\)\n"
+"    eval _ebg_Target=\\( \\$\\{$2\\[@\\]\\} \\)\n"
+"    local _ebg_len=${#_ebg_Target[@]}\n"
+"    local _ebg_cnt=${#_ebg_Excludes[@]}\n"
+"    [ ${_ebg_len} -ne 0 ] || return 0\n"
+"    [ ${_ebg_cnt} -ne 0 ] || return 0\n"
+"    for (( x = 0; x &lt; ${_ebg_cnt} ; x++ ))\n"
+"    do\n"
+"        _ebg_x=${_ebg_Excludes[$x]}\n"
+"        for (( n = 0 ; n &lt; ${_ebg_len} ; n++ ))\n"
+"        do\n"
+"            [ $# -eq 3 ] &amp;&amp; _ebg_x=${_ebg_x}'*'  #  Do prefix edit\n"
+"            if [ ${_ebg_Target[$n]:=} ]          #+ if defined &amp; set.\n"
+"            then\n"
+"                _ebg_t=${_ebg_Target[$n]/#${_ebg_x}/}\n"
+"                [ ${#_ebg_t} -eq 0 ] &amp;&amp; unset _ebg_Target[$n]\n"
+"            fi\n"
+"        done\n"
+"    done\n"
+"    eval $2=\\( \\$\\{_ebg_Target\\[@\\]\\} \\)\n"
+"    set +f\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:345
+#, no-wrap
+msgid ""
+"# This function described in unique_lines.bash.\n"
+"# unique_lines &lt;in_name&gt; &lt;out_name&gt;\n"
+"unique_lines() {\n"
+"    [ $# -eq 2 ] || return 1\n"
+"    local -a _ul_in\n"
+"    local -a _ul_out\n"
+"    local -i _ul_cnt\n"
+"    local -i _ul_pos\n"
+"    local _ul_tmp\n"
+"    local IFS=${NO_WSP}\n"
+"    set -f\n"
+"    eval _ul_in=\\( \\$\\{$1\\[@\\]\\} \\)\n"
+"    _ul_cnt=${#_ul_in[@]}\n"
+"    for (( _ul_pos = 0 ; _ul_pos &lt; ${_ul_cnt} ; _ul_pos++ ))\n"
+"    do\n"
+"        if [ ${_ul_in[${_ul_pos}]:=} ]      # If defined &amp; not empty\n"
+"        then\n"
+"            _ul_tmp=${_ul_in[${_ul_pos}]}\n"
+"            _ul_out[${#_ul_out[@]}]=${_ul_tmp}\n"
+"            for (( zap = _ul_pos ; zap &lt; ${_ul_cnt} ; zap++ ))\n"
+"            do\n"
+"                [ ${_ul_in[${zap}]:=} ] &amp;&amp;\n"
+"                [ 'x'${_ul_in[${zap}]} == 'x'${_ul_tmp} ] &amp;&amp;\n"
+"                    unset _ul_in[${zap}]\n"
+"            done\n"
+"        fi\n"
+"    done\n"
+"    eval $2=\\( \\$\\{_ul_out\\[@\\]\\} \\)\n"
+"    set +f\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:380
+#, no-wrap
+msgid ""
+"# This function described in char_convert.bash.\n"
+"# to_lower &lt;string&gt;\n"
+"to_lower() {\n"
+"    [ $# -eq 1 ] || return 1\n"
+"    local _tl_out\n"
+"    _tl_out=${1//A/a}\n"
+"    _tl_out=${_tl_out//B/b}\n"
+"    _tl_out=${_tl_out//C/c}\n"
+"    _tl_out=${_tl_out//D/d}\n"
+"    _tl_out=${_tl_out//E/e}\n"
+"    _tl_out=${_tl_out//F/f}\n"
+"    _tl_out=${_tl_out//G/g}\n"
+"    _tl_out=${_tl_out//H/h}\n"
+"    _tl_out=${_tl_out//I/i}\n"
+"    _tl_out=${_tl_out//J/j}\n"
+"    _tl_out=${_tl_out//K/k}\n"
+"    _tl_out=${_tl_out//L/l}\n"
+"    _tl_out=${_tl_out//M/m}\n"
+"    _tl_out=${_tl_out//N/n}\n"
+"    _tl_out=${_tl_out//O/o}\n"
+"    _tl_out=${_tl_out//P/p}\n"
+"    _tl_out=${_tl_out//Q/q}\n"
+"    _tl_out=${_tl_out//R/r}\n"
+"    _tl_out=${_tl_out//S/s}\n"
+"    _tl_out=${_tl_out//T/t}\n"
+"    _tl_out=${_tl_out//U/u}\n"
+"    _tl_out=${_tl_out//V/v}\n"
+"    _tl_out=${_tl_out//W/w}\n"
+"    _tl_out=${_tl_out//X/x}\n"
+"    _tl_out=${_tl_out//Y/y}\n"
+"    _tl_out=${_tl_out//Z/z}\n"
+"    echo ${_tl_out}\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:382
+msgid "#### Application helper functions ####"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:391
+#, no-wrap
+msgid ""
+"# Not everybody uses dots as separators (APNIC, for example).\n"
+"# This function described in to_dot.bash\n"
+"# to_dot &lt;string&gt;\n"
+"to_dot() {\n"
+"    [ $# -eq 1 ] || return 1\n"
+"    echo ${1//[#|@|%]/.}\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:401
+#, no-wrap
+msgid ""
+"# This function described in is_number.bash.\n"
+"# is_number &lt;input&gt;\n"
+"is_number() {\n"
+"    [ \"$#\" -eq 1 ]    || return 1  # is blank?\n"
+"    [ x\"$1\" == 'x0' ] &amp;&amp; return 0  # is zero?\n"
+"    local -i tst\n"
+"    let tst=$1 2>/dev/null         # else is numeric!\n"
+"    return $?\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:424
+#, no-wrap
+msgid ""
+"# This function described in is_address.bash.\n"
+"# is_address &lt;input&gt;\n"
+"is_address() {\n"
+"    [ $# -eq 1 ] || return 1    # Blank ==> false\n"
+"    local -a _ia_input\n"
+"    local IFS=${ADR_IFS}\n"
+"    _ia_input=( $1 )\n"
+"    if  [ ${#_ia_input[@]} -eq 4 ]  &amp;&amp;\n"
+"        is_number ${_ia_input[0]}   &amp;&amp;\n"
+"        is_number ${_ia_input[1]}   &amp;&amp;\n"
+"        is_number ${_ia_input[2]}   &amp;&amp;\n"
+"        is_number ${_ia_input[3]}   &amp;&amp;\n"
+"        [ ${_ia_input[0]} -lt 256 ] &amp;&amp;\n"
+"        [ ${_ia_input[1]} -lt 256 ] &amp;&amp;\n"
+"        [ ${_ia_input[2]} -lt 256 ] &amp;&amp;\n"
+"        [ ${_ia_input[3]} -lt 256 ]\n"
+"    then\n"
+"        return 0\n"
+"    else\n"
+"        return 1\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:448
+#, no-wrap
+msgid ""
+"#  This function described in split_ip.bash.\n"
+"#  split_ip &lt;IP_address&gt;\n"
+"#+ &lt;array_name_norm&gt; [&lt;array_name_rev&gt;]\n"
+"split_ip() {\n"
+"    [ $# -eq 3 ] ||              #  Either three\n"
+"    [ $# -eq 2 ] || return 1     #+ or two arguments\n"
+"    local -a _si_input\n"
+"    local IFS=${ADR_IFS}\n"
+"    _si_input=( $1 )\n"
+"    IFS=${WSP_IFS}\n"
+"    eval $2=\\(\\ \\$\\{_si_input\\[@\\]\\}\\ \\)\n"
+"    if [ $# -eq 3 ]\n"
+"    then\n"
+"        # Build query order array.\n"
+"        local -a _dns_ip\n"
+"        _dns_ip[0]=${_si_input[3]}\n"
+"        _dns_ip[1]=${_si_input[2]}\n"
+"        _dns_ip[2]=${_si_input[1]}\n"
+"        _dns_ip[3]=${_si_input[0]}\n"
+"        eval $3=\\(\\ \\$\\{_dns_ip\\[@\\]\\}\\ \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:461
+#, no-wrap
+msgid ""
+"# This function described in dot_array.bash.\n"
+"# dot_array &lt;array_name&gt;\n"
+"dot_array() {\n"
+"    [ $# -eq 1 ] || return 1     # Single argument required.\n"
+"    local -a _da_input\n"
+"    eval _da_input=\\(\\ \\$\\{$1\\[@\\]\\}\\ \\)\n"
+"    local IFS=${DOT_IFS}\n"
+"    local _da_output=${_da_input[@]}\n"
+"    IFS=${WSP_IFS}\n"
+"    echo ${_da_output}\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:472
+#, no-wrap
+msgid ""
+"# This function described in file_to_array.bash\n"
+"# file_to_array &lt;file_name&gt; &lt;line_array_name&gt;\n"
+"file_to_array() {\n"
+"    [ $# -eq 2 ] || return 1  # Two arguments required.\n"
+"    local IFS=${NO_WSP}\n"
+"    local -a _fta_tmp_\n"
+"    _fta_tmp_=( $(cat $1) )\n"
+"    eval $2=\\( \\$\\{_fta_tmp_\\[@\\]\\} \\)\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:530
+#, no-wrap
+msgid ""
+"#  Columnized print of an array of multi-field strings.\n"
+"#  col_print &lt;array_name&gt; &lt;min_space&gt; &lt;\n"
+"#+ tab_stop [tab_stops]&gt;\n"
+"col_print() {\n"
+"    [ $# -gt 2 ] || return 0\n"
+"    local -a _cp_inp\n"
+"    local -a _cp_spc\n"
+"    local -a _cp_line\n"
+"    local _cp_min\n"
+"    local _cp_mcnt\n"
+"    local _cp_pos\n"
+"    local _cp_cnt\n"
+"    local _cp_tab\n"
+"    local -i _cp\n"
+"    local -i _cpf\n"
+"    local _cp_fld\n"
+"    # WARNING: FOLLOWING LINE NOT BLANK -- IT IS QUOTED SPACES.\n"
+"    local _cp_max='                                                            "
+"'\n"
+"    set -f\n"
+"    local IFS=${NO_WSP}\n"
+"    eval _cp_inp=\\(\\ \\$\\{$1\\[@\\]\\}\\ \\)\n"
+"    [ ${#_cp_inp[@]} -gt 0 ] || return 0 # Empty is easy.\n"
+"    _cp_mcnt=$2\n"
+"    _cp_min=${_cp_max:1:${_cp_mcnt}}\n"
+"    shift\n"
+"    shift\n"
+"    _cp_cnt=$#\n"
+"    for (( _cp = 0 ; _cp &lt; _cp_cnt ; _cp++ ))\n"
+"    do\n"
+"        _cp_spc[${#_cp_spc[@]}]=\"${_cp_max:2:$1}\" #\"\n"
+"        shift\n"
+"    done\n"
+"    _cp_cnt=${#_cp_inp[@]}\n"
+"    for (( _cp = 0 ; _cp &lt; _cp_cnt ; _cp++ ))\n"
+"    do\n"
+"        _cp_pos=1\n"
+"        IFS=${NO_WSP}$'\\x20'\n"
+"        _cp_line=( ${_cp_inp[${_cp}]} )\n"
+"        IFS=${NO_WSP}\n"
+"        for (( _cpf = 0 ; _cpf &lt; ${#_cp_line[@]} ; _cpf++ ))\n"
+"        do\n"
+"            _cp_tab=${_cp_spc[${_cpf}]:${_cp_pos}}\n"
+"            if [ ${#_cp_tab} -lt ${_cp_mcnt} ]\n"
+"            then\n"
+"                _cp_tab=\"${_cp_min}\"\n"
+"            fi\n"
+"            echo -n \"${_cp_tab}\"\n"
+"            (( _cp_pos = ${_cp_pos} + ${#_cp_tab} ))\n"
+"            _cp_fld=\"${_cp_line[${_cpf}]}\"\n"
+"            echo -n ${_cp_fld}\n"
+"            (( _cp_pos = ${_cp_pos} + ${#_cp_fld} ))\n"
+"        done\n"
+"        echo\n"
+"    done\n"
+"    set +f\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:532
+msgid "# # # # 'Hunt the Spammer' data flow # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:535
+msgid "# Application return code declare -i _hs_RC"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:539
+msgid ""
+"# Original input, from which IP addresses are removed # After which, domain "
+"names to check declare -a uc_name"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:543
+msgid ""
+"# Original input IP addresses are moved here # After which, IP addresses to "
+"check declare -a uc_address"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:547
+msgid ""
+"# Names against which address expansion run # Ready for name detail lookup "
+"declare -a chk_name"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:551
+msgid ""
+"# Addresses against which name expansion run # Ready for address detail "
+"lookup declare -a chk_address"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:558
+msgid ""
+"# Recursion is depth-first-by-name.  # The expand_input_address maintains "
+"this list #+ to prohibit looking up addresses twice during #+ domain name "
+"recursion.  declare -a been_there_addr been_there_addr=( '127.0.0.1' ) # "
+"Whitelist localhost"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:561
+msgid "# Names which we have checked (or given up on)  declare -a known_name"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:564
+msgid "# Addresses which we have checked (or given up on)  declare -a known_address"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:569
+msgid ""
+"# List of zero or more Blacklist servers to check.  # Each 'known_address' "
+"will be checked against each server, #+ with negative replies and failures "
+"suppressed.  declare -a list_server"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:572
+msgid "# Indirection limit - set to zero == no limit indirect=${SPAMMER_LIMIT:=2}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:574
+msgid "# # # # 'Hunt the Spammer' information output data # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:580
+msgid ""
+"# Any domain name may have multiple IP addresses.  # Any IP address may have "
+"multiple domain names.  # Therefore, track unique address-name pairs.  "
+"declare -a known_pair declare -a reverse_pair"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:584
+msgid ""
+"# In addition to the data flow variables; known_address #+ known_name and "
+"list_server, the following are output to the #+ external graphics interface "
+"file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:587
+msgid "# Authority chain, parent -> SOA fields.  declare -a auth_chain"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:590
+msgid "# Reference chain, parent name -> child name declare -a ref_chain"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:593
+msgid "# DNS chain - domain name -> address declare -a name_address"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:596
+msgid "# Name and service pairs - domain name -> service declare -a name_srvc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:599
+msgid ""
+"# Name and resource pairs - domain name -> Resource Record declare -a "
+"name_resource"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:603
+msgid ""
+"# Parent and Child pairs - parent name -> child name # This MAY NOT be the "
+"same as the ref_chain followed! declare -a parent_child"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:606
+msgid "# Address and Blacklist hit pairs - address->server declare -a address_hits"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:610
+#, no-wrap
+msgid ""
+"# Dump interface file data\n"
+"declare -f _dot_dump\n"
+"_dot_dump=pend_dummy   # Initially a no-op\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:614
+msgid ""
+"# Data dump is enabled by setting the environment variable SPAMMER_DATA #+ "
+"to the name of a writable file.  declare _dot_file"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:633
+#, no-wrap
+msgid ""
+"# Helper function for the dump-to-dot-file function\n"
+"# dump_to_dot &lt;array_name&gt; &lt;prefix&gt;\n"
+"dump_to_dot() {\n"
+"    local -a _dda_tmp\n"
+"    local -i _dda_cnt\n"
+"    local _dda_form='    '${2}'%04u %s\\n'\n"
+"    local IFS=${NO_WSP}\n"
+"    eval _dda_tmp=\\(\\ \\$\\{$1\\[@\\]\\}\\ \\)\n"
+"    _dda_cnt=${#_dda_tmp[@]}\n"
+"    if [ ${_dda_cnt} -gt 0 ]\n"
+"    then\n"
+"        for (( _dda = 0 ; _dda &lt; _dda_cnt ; _dda++ ))\n"
+"        do\n"
+"            printf \"${_dda_form}\" \\\n"
+"                   \"${_dda}\" \"${_dda_tmp[${_dda}]}\" >>${_dot_file}\n"
+"        done\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:641
+#, no-wrap
+msgid ""
+"# Which will also set _dot_dump to this function . . .\n"
+"dump_dot() {\n"
+"    local -i _dd_cnt\n"
+"    echo '# Data vintage: '$(date -R) >${_dot_file}\n"
+"    echo '# ABS Guide: is_spammer.bash; v2, 2004-msz' >>${_dot_file}\n"
+"    echo >>${_dot_file}\n"
+"    echo 'digraph G {' >>${_dot_file}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:653
+#, no-wrap
+msgid ""
+"    if [ ${#known_name[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known domain name nodes' >>${_dot_file}\n"
+"        _dd_cnt=${#known_name[@]}\n"
+"        for (( _dd = 0 ; _dd &lt; _dd_cnt ; _dd++ ))\n"
+"        do\n"
+"            printf '    N%04u [label=\"%s\"] ;\\n' \\\n"
+"                   \"${_dd}\" \"${known_name[${_dd}]}\" >>${_dot_file}\n"
+"        done\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:665
+#, no-wrap
+msgid ""
+"    if [ ${#known_address[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known address nodes' >>${_dot_file}\n"
+"        _dd_cnt=${#known_address[@]}\n"
+"        for (( _dd = 0 ; _dd &lt; _dd_cnt ; _dd++ ))\n"
+"        do\n"
+"            printf '    A%04u [label=\"%s\"] ;\\n' \\\n"
+"                   \"${_dd}\" \"${known_address[${_dd}]}\" >>${_dot_file}\n"
+"        done\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:671
+#, no-wrap
+msgid ""
+"    echo                                   >>${_dot_file}\n"
+"    echo '/*'                              >>${_dot_file}\n"
+"    echo ' * Known relationships :: User conversion to'  >>${_dot_file}\n"
+"    echo ' * graphic form by hand or program required.'  >>${_dot_file}\n"
+"    echo ' *'                              >>${_dot_file}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:678
+#, no-wrap
+msgid ""
+"    if [ ${#auth_chain[@]} -gt 0 ]\n"
+"    then\n"
+"      echo >>${_dot_file}\n"
+"      echo '# Authority ref. edges followed &amp; field source.' "
+">>${_dot_file}\n"
+"        dump_to_dot auth_chain AC\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:685
+#, no-wrap
+msgid ""
+"    if [ ${#ref_chain[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Name ref. edges followed and field source.' >>${_dot_file}\n"
+"        dump_to_dot ref_chain RC\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:692
+#, no-wrap
+msgid ""
+"    if [ ${#name_address[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known name->address edges' >>${_dot_file}\n"
+"        dump_to_dot name_address NA\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:699
+#, no-wrap
+msgid ""
+"    if [ ${#name_srvc[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known name->service edges' >>${_dot_file}\n"
+"        dump_to_dot name_srvc NS\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:706
+#, no-wrap
+msgid ""
+"    if [ ${#name_resource[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known name->resource edges' >>${_dot_file}\n"
+"        dump_to_dot name_resource NR\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:713
+#, no-wrap
+msgid ""
+"    if [ ${#parent_child[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known parent->child edges' >>${_dot_file}\n"
+"        dump_to_dot parent_child PC\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:725
+#, no-wrap
+msgid ""
+"    if [ ${#list_server[@]} -gt 0 ]\n"
+"    then\n"
+"        echo >>${_dot_file}\n"
+"        echo '# Known Blacklist nodes' >>${_dot_file}\n"
+"        _dd_cnt=${#list_server[@]}\n"
+"        for (( _dd = 0 ; _dd &lt; _dd_cnt ; _dd++ ))\n"
+"        do\n"
+"            printf '    LS%04u [label=\"%s\"] ;\\n' \\\n"
+"                   \"${_dd}\" \"${list_server[${_dd}]}\" >>${_dot_file}\n"
+"        done\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:741
+#, no-wrap
+msgid ""
+"    unique_lines address_hits address_hits\n"
+"    if [ ${#address_hits[@]} -gt 0 ]\n"
+"    then\n"
+"      echo >>${_dot_file}\n"
+"      echo '# Known address->Blacklist_hit edges' >>${_dot_file}\n"
+"      echo '# CAUTION: dig warnings can trigger false hits.' "
+">>${_dot_file}\n"
+"       dump_to_dot address_hits AH\n"
+"    fi\n"
+"    echo          >>${_dot_file}\n"
+"    echo ' *'     >>${_dot_file}\n"
+"    echo ' * That is a lot of relationships. Happy graphing.' "
+">>${_dot_file}\n"
+"    echo ' */'    >>${_dot_file}\n"
+"    echo '}'      >>${_dot_file}\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:743
+msgid "# # # # 'Hunt the Spammer' execution flow # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:748
+msgid ""
+"# Execution trace is enabled by setting the #+ environment variable "
+"SPAMMER_TRACE to the name of a writable file.  declare -a _trace_log declare "
+"_log_file"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:753
+#, no-wrap
+msgid ""
+"# Function to fill the trace log\n"
+"trace_logger() {\n"
+"    _trace_log[${#_trace_log[@]}]=${_pend_current_}\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:757
+#, no-wrap
+msgid ""
+"# Dump trace log to file function variable.\n"
+"declare -f _log_dump\n"
+"_log_dump=pend_dummy   # Initially a no-op.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:777
+#, no-wrap
+msgid ""
+"# Dump the trace log to a file.\n"
+"dump_log() {\n"
+"    local -i _dl_cnt\n"
+"    _dl_cnt=${#_trace_log[@]}\n"
+"    for (( _dl = 0 ; _dl &lt; _dl_cnt ; _dl++ ))\n"
+"    do\n"
+"        echo ${_trace_log[${_dl}]} >> ${_log_file}\n"
+"    done\n"
+"    _dl_cnt=${#_pending_[@]}\n"
+"    if [ ${_dl_cnt} -gt 0 ]\n"
+"    then\n"
+"        _dl_cnt=${_dl_cnt}-1\n"
+"        echo '# # # Operations stack not empty # # #' >> ${_log_file}\n"
+"        for (( _dl = ${_dl_cnt} ; _dl >= 0 ; _dl-- ))\n"
+"        do\n"
+"            echo ${_pending_[${_dl}]} >> ${_log_file}\n"
+"        done\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:790
+msgid ""
+"# # # Utility program 'dig' wrappers # # # # # These wrappers are derived "
+"from the #+ examples shown in dig_wrappers.bash.  # # The major difference "
+"is these return #+ their results as a list in an array.  # # See "
+"dig_wrappers.bash for details and #+ use that script to develop any "
+"changes.  # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:792
+msgid "# Short form answer: 'dig' parses answer."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:821
+#, no-wrap
+msgid ""
+"# Forward lookup :: Name -> Address\n"
+"# short_fwd &lt;domain_name&gt; &lt;array_name&gt;\n"
+"short_fwd() {\n"
+"    local -a _sf_reply\n"
+"    local -i _sf_rc\n"
+"    local -i _sf_cnt\n"
+"    IFS=${NO_WSP}\n"
+"echo -n '.'\n"
+"# echo 'sfwd: '${1}\n"
+"  _sf_reply=( $(dig +short ${1} -c in -t a 2>/dev/null) )\n"
+"  _sf_rc=$?\n"
+"  if [ ${_sf_rc} -ne 0 ]\n"
+"  then\n"
+"    _trace_log[${#_trace_log[@]}]='## Lookup error '${_sf_rc}' on '${1}' "
+"##'\n"
+"# [ ${_sf_rc} -ne 9 ] &amp;&amp; pend_drop\n"
+"        return ${_sf_rc}\n"
+"    else\n"
+"        # Some versions of 'dig' return warnings on stdout.\n"
+"        _sf_cnt=${#_sf_reply[@]}\n"
+"        for (( _sf = 0 ; _sf &lt; ${_sf_cnt} ; _sf++ ))\n"
+"        do\n"
+"            [ 'x'${_sf_reply[${_sf}]:0:2} == 'x;;' ] &amp;&amp;\n"
+"                unset _sf_reply[${_sf}]\n"
+"        done\n"
+"        eval $2=\\( \\$\\{_sf_reply\\[@\\]\\} \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:850
+#, no-wrap
+msgid ""
+"# Reverse lookup :: Address -> Name\n"
+"# short_rev &lt;ip_address&gt; &lt;array_name&gt;\n"
+"short_rev() {\n"
+"    local -a _sr_reply\n"
+"    local -i _sr_rc\n"
+"    local -i _sr_cnt\n"
+"    IFS=${NO_WSP}\n"
+"echo -n '.'\n"
+"# echo 'srev: '${1}\n"
+"  _sr_reply=( $(dig +short -x ${1} 2>/dev/null) )\n"
+"  _sr_rc=$?\n"
+"  if [ ${_sr_rc} -ne 0 ]\n"
+"  then\n"
+"    _trace_log[${#_trace_log[@]}]='## Lookup error '${_sr_rc}' on '${1}' "
+"##'\n"
+"# [ ${_sr_rc} -ne 9 ] &amp;&amp; pend_drop\n"
+"        return ${_sr_rc}\n"
+"    else\n"
+"        # Some versions of 'dig' return warnings on stdout.\n"
+"        _sr_cnt=${#_sr_reply[@]}\n"
+"        for (( _sr = 0 ; _sr &lt; ${_sr_cnt} ; _sr++ ))\n"
+"        do\n"
+"            [ 'x'${_sr_reply[${_sr}]:0:2} == 'x;;' ] &amp;&amp;\n"
+"                unset _sr_reply[${_sr}]\n"
+"        done\n"
+"        eval $2=\\( \\$\\{_sr_reply\\[@\\]\\} \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:878
+#, no-wrap
+msgid ""
+"# Special format lookup used to query blacklist servers.\n"
+"# short_text &lt;ip_address&gt; &lt;array_name&gt;\n"
+"short_text() {\n"
+"    local -a _st_reply\n"
+"    local -i _st_rc\n"
+"    local -i _st_cnt\n"
+"    IFS=${NO_WSP}\n"
+"# echo 'stxt: '${1}\n"
+"  _st_reply=( $(dig +short ${1} -c in -t txt 2>/dev/null) )\n"
+"  _st_rc=$?\n"
+"  if [ ${_st_rc} -ne 0 ]\n"
+"  then\n"
+"    _trace_log[${#_trace_log[@]}]='##Text lookup error '${_st_rc}' on "
+"'${1}'##'\n"
+"# [ ${_st_rc} -ne 9 ] &amp;&amp; pend_drop\n"
+"        return ${_st_rc}\n"
+"    else\n"
+"        # Some versions of 'dig' return warnings on stdout.\n"
+"        _st_cnt=${#_st_reply[@]}\n"
+"        for (( _st = 0 ; _st &lt; ${#_st_cnt} ; _st++ ))\n"
+"        do\n"
+"            [ 'x'${_st_reply[${_st}]:0:2} == 'x;;' ] &amp;&amp;\n"
+"                unset _st_reply[${_st}]\n"
+"        done\n"
+"        eval $2=\\( \\$\\{_st_reply\\[@\\]\\} \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:880
+msgid "# The long forms, a.k.a., the parse it yourself versions"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:886
+#, no-wrap
+msgid ""
+"# RFC 2782   Service lookups\n"
+"# dig +noall +nofail +answer _ldap._tcp.openldap.org -t srv\n"
+"# _&lt;service&gt;._&lt;protocol&gt;.&lt;domain_name&gt;\n"
+"# _ldap._tcp.openldap.org. 3600   IN     SRV    0 0 389 ldap.openldap.org.\n"
+"# domain TTL Class SRV Priority Weight Port Target\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:921
+#, no-wrap
+msgid ""
+"# Forward lookup :: Name -> poor man's zone transfer\n"
+"# long_fwd &lt;domain_name&gt; &lt;array_name&gt;\n"
+"long_fwd() {\n"
+"    local -a _lf_reply\n"
+"    local -i _lf_rc\n"
+"    local -i _lf_cnt\n"
+"    IFS=${NO_WSP}\n"
+"echo -n ':'\n"
+"# echo 'lfwd: '${1}\n"
+"  _lf_reply=( $(\n"
+"     dig +noall +nofail +answer +authority +additional \\\n"
+"         ${1} -t soa ${1} -t mx ${1} -t any 2>/dev/null) )\n"
+"  _lf_rc=$?\n"
+"  if [ ${_lf_rc} -ne 0 ]\n"
+"  then\n"
+"    _trace_log[${#_trace_log[@]}]='# Zone lookup err '${_lf_rc}' on '${1}' "
+"#'\n"
+"# [ ${_lf_rc} -ne 9 ] &amp;&amp; pend_drop\n"
+"        return ${_lf_rc}\n"
+"    else\n"
+"        # Some versions of 'dig' return warnings on stdout.\n"
+"        _lf_cnt=${#_lf_reply[@]}\n"
+"        for (( _lf = 0 ; _lf &lt; ${_lf_cnt} ; _lf++ ))\n"
+"        do\n"
+"            [ 'x'${_lf_reply[${_lf}]:0:2} == 'x;;' ] &amp;&amp;\n"
+"                unset _lf_reply[${_lf}]\n"
+"        done\n"
+"        eval $2=\\( \\$\\{_lf_reply\\[@\\]\\} \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+"#  The reverse lookup domain name corresponding to the IPv6 address:\n"
+"#      4321:0:1:2:3:4:567:89ab\n"
+"#  would be (nibble, I.E: Hexdigit) reversed:\n"
+"#  "
+"b.a.9.8.7.6.5.0.4.0.0.0.3.0.0.0.2.0.0.0.1.0.0.0.0.0.0.0.1.2.3.4.IP6.ARPA.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:954
+#, no-wrap
+msgid ""
+"# Reverse lookup :: Address -> poor man's delegation chain\n"
+"# long_rev &lt;rev_ip_address&gt; &lt;array_name&gt;\n"
+"long_rev() {\n"
+"    local -a _lr_reply\n"
+"    local -i _lr_rc\n"
+"    local -i _lr_cnt\n"
+"    local _lr_dns\n"
+"    _lr_dns=${1}'.in-addr.arpa.'\n"
+"    IFS=${NO_WSP}\n"
+"echo -n ':'\n"
+"# echo 'lrev: '${1}\n"
+"  _lr_reply=( $(\n"
+"       dig +noall +nofail +answer +authority +additional \\\n"
+"           ${_lr_dns} -t soa ${_lr_dns} -t any 2>/dev/null) )\n"
+"  _lr_rc=$?\n"
+"  if [ ${_lr_rc} -ne 0 ]\n"
+"  then\n"
+"    _trace_log[${#_trace_log[@]}]='# Deleg lkp error '${_lr_rc}' on '${1}' "
+"#'\n"
+"# [ ${_lr_rc} -ne 9 ] &amp;&amp; pend_drop\n"
+"        return ${_lr_rc}\n"
+"    else\n"
+"        # Some versions of 'dig' return warnings on stdout.\n"
+"        _lr_cnt=${#_lr_reply[@]}\n"
+"        for (( _lr = 0 ; _lr &lt; ${_lr_cnt} ; _lr++ ))\n"
+"        do\n"
+"            [ 'x'${_lr_reply[${_lr}]:0:2} == 'x;;' ] &amp;&amp;\n"
+"                unset _lr_reply[${_lr}]\n"
+"        done\n"
+"        eval $2=\\( \\$\\{_lr_reply\\[@\\]\\} \\)\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:956
+msgid "# # # Application specific functions # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:999
+#, no-wrap
+msgid ""
+"# Mung a possible name; suppresses root and TLDs.\n"
+"# name_fixup &lt;string&gt;\n"
+"name_fixup(){\n"
+"    local -a _nf_tmp\n"
+"    local -i _nf_end\n"
+"    local _nf_str\n"
+"    local IFS\n"
+"    _nf_str=$(to_lower ${1})\n"
+"    _nf_str=$(to_dot ${_nf_str})\n"
+"    _nf_end=${#_nf_str}-1\n"
+"    [ ${_nf_str:${_nf_end}} != '.' ] &amp;&amp;\n"
+"        _nf_str=${_nf_str}'.'\n"
+"    IFS=${ADR_IFS}\n"
+"    _nf_tmp=( ${_nf_str} )\n"
+"    IFS=${WSP_IFS}\n"
+"    _nf_end=${#_nf_tmp[@]}\n"
+"    case ${_nf_end} in\n"
+"    0) # No dots, only dots.\n"
+"        echo\n"
+"        return 1\n"
+"    ;;\n"
+"    1) # Only a TLD.\n"
+"        echo\n"
+"        return 1\n"
+"    ;;\n"
+"    2) # Maybe okay.\n"
+"       echo ${_nf_str}\n"
+"       return 0\n"
+"       # Needs a lookup table?\n"
+"       if [ ${#_nf_tmp[1]} -eq 2 ]\n"
+"       then # Country coded TLD.\n"
+"           echo\n"
+"           return 1\n"
+"       else\n"
+"           echo ${_nf_str}\n"
+"           return 0\n"
+"       fi\n"
+"    ;;\n"
+"    esac\n"
+"    echo ${_nf_str}\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1029
+#, no-wrap
+msgid ""
+"# Grope and mung original input(s).\n"
+"split_input() {\n"
+"    [ ${#uc_name[@]} -gt 0 ] || return 0\n"
+"    local -i _si_cnt\n"
+"    local -i _si_len\n"
+"    local _si_str\n"
+"    unique_lines uc_name uc_name\n"
+"    _si_cnt=${#uc_name[@]}\n"
+"    for (( _si = 0 ; _si &lt; _si_cnt ; _si++ ))\n"
+"    do\n"
+"        _si_str=${uc_name[$_si]}\n"
+"        if is_address ${_si_str}\n"
+"        then\n"
+"            uc_address[${#uc_address[@]}]=${_si_str}\n"
+"            unset uc_name[$_si]\n"
+"        else\n"
+"            if ! uc_name[$_si]=$(name_fixup ${_si_str})\n"
+"            then\n"
+"                unset ucname[$_si]\n"
+"            fi\n"
+"        fi\n"
+"    done\n"
+"  uc_name=( ${uc_name[@]} )\n"
+"  _si_cnt=${#uc_name[@]}\n"
+"  _trace_log[${#_trace_log[@]}]='#Input '${_si_cnt}' unchkd name "
+"input(s).#'\n"
+"  _si_cnt=${#uc_address[@]}\n"
+"  _trace_log[${#_trace_log[@]}]='#Input '${_si_cnt}' unchkd addr "
+"input(s).#'\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1032
+msgid ""
+"# # # Discovery functions -- recursively interlocked by external data # # # "
+"# # # The leading 'if list is empty; return 0' in each is required. # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1056
+#, no-wrap
+msgid ""
+"# Recursion limiter\n"
+"# limit_chk() &lt;next_level&gt;\n"
+"limit_chk() {\n"
+"    local -i _lc_lmt\n"
+"    # Check indirection limit.\n"
+"    if [ ${indirect} -eq 0 ] || [ $# -eq 0 ]\n"
+"    then\n"
+"        # The 'do-forever' choice\n"
+"        echo 1                 # Any value will do.\n"
+"        return 0               # OK to continue.\n"
+"    else\n"
+"        # Limiting is in effect.\n"
+"        if [ ${indirect} -lt ${1} ]\n"
+"        then\n"
+"            echo ${1}          # Whatever.\n"
+"            return 1           # Stop here.\n"
+"        else\n"
+"            _lc_lmt=${1}+1     # Bump the given limit.\n"
+"            echo ${_lc_lmt}    # Echo it.\n"
+"            return 0           # OK to continue.\n"
+"        fi\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1071
+#, no-wrap
+msgid ""
+"# For each name in uc_name:\n"
+"#     Move name to chk_name.\n"
+"#     Add addresses to uc_address.\n"
+"#     Pend expand_input_address.\n"
+"#     Repeat until nothing new found.\n"
+"# expand_input_name &lt;indirection_limit&gt;\n"
+"expand_input_name() {\n"
+"    [ ${#uc_name[@]} -gt 0 ] || return 0\n"
+"    local -a _ein_addr\n"
+"    local -a _ein_new\n"
+"    local -i _ucn_cnt\n"
+"    local -i _ein_cnt\n"
+"    local _ein_tst\n"
+"    _ucn_cnt=${#uc_name[@]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1076
+#, no-wrap
+msgid ""
+"    if  ! _ein_cnt=$(limit_chk ${1})\n"
+"    then\n"
+"        return 0\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1110
+#, no-wrap
+msgid ""
+"    for (( _ein = 0 ; _ein &lt; _ucn_cnt ; _ein++ ))\n"
+"    do\n"
+"        if short_fwd ${uc_name[${_ein}]} _ein_new\n"
+"        then\n"
+"          for (( _ein_cnt = 0 ; _ein_cnt &lt; ${#_ein_new[@]}; _ein_cnt++ "
+"))\n"
+"          do\n"
+"              _ein_tst=${_ein_new[${_ein_cnt}]}\n"
+"              if is_address ${_ein_tst}\n"
+"              then\n"
+"                  _ein_addr[${#_ein_addr[@]}]=${_ein_tst}\n"
+"              fi\n"
+"    done\n"
+"        fi\n"
+"    done\n"
+"    unique_lines _ein_addr _ein_addr     # Scrub duplicates.\n"
+"    edit_exact chk_address _ein_addr     # Scrub pending detail.\n"
+"    edit_exact known_address _ein_addr   # Scrub already detailed.\n"
+" if [ ${#_ein_addr[@]} -gt 0 ]        # Anything new?\n"
+" then\n"
+"   uc_address=( ${uc_address[@]} ${_ein_addr[@]} )\n"
+"   pend_func expand_input_address ${1}\n"
+"   _trace_log[${#_trace_log[@]}]='#Add '${#_ein_addr[@]}' unchkd addr "
+"inp.#'\n"
+"    fi\n"
+"    edit_exact chk_name uc_name          # Scrub pending detail.\n"
+"    edit_exact known_name uc_name        # Scrub already detailed.\n"
+"    if [ ${#uc_name[@]} -gt 0 ]\n"
+"    then\n"
+"        chk_name=( ${chk_name[@]} ${uc_name[@]}  )\n"
+"        pend_func detail_each_name ${1}\n"
+"    fi\n"
+"    unset uc_name[@]\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1131
+#, no-wrap
+msgid ""
+"# For each address in uc_address:\n"
+"#     Move address to chk_address.\n"
+"#     Add names to uc_name.\n"
+"#     Pend expand_input_name.\n"
+"#     Repeat until nothing new found.\n"
+"# expand_input_address &lt;indirection_limit&gt;\n"
+"expand_input_address() {\n"
+"    [ ${#uc_address[@]} -gt 0 ] || return 0\n"
+"    local -a _eia_addr\n"
+"    local -a _eia_name\n"
+"    local -a _eia_new\n"
+"    local -i _uca_cnt\n"
+"    local -i _eia_cnt\n"
+"    local _eia_tst\n"
+"    unique_lines uc_address _eia_addr\n"
+"    unset uc_address[@]\n"
+"    edit_exact been_there_addr _eia_addr\n"
+"    _uca_cnt=${#_eia_addr[@]}\n"
+"    [ ${_uca_cnt} -gt 0 ] &amp;&amp;\n"
+"        been_there_addr=( ${been_there_addr[@]} ${_eia_addr[@]} )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1164
+#, no-wrap
+msgid ""
+"    for (( _eia = 0 ; _eia &lt; _uca_cnt ; _eia++ ))\n"
+"     do\n"
+"       if short_rev ${_eia_addr[${_eia}]} _eia_new\n"
+"       then\n"
+"         for (( _eia_cnt = 0 ; _eia_cnt &lt; ${#_eia_new[@]} ; _eia_cnt++ "
+"))\n"
+"         do\n"
+"           _eia_tst=${_eia_new[${_eia_cnt}]}\n"
+"           if _eia_tst=$(name_fixup ${_eia_tst})\n"
+"           then\n"
+"             _eia_name[${#_eia_name[@]}]=${_eia_tst}\n"
+"       fi\n"
+"     done\n"
+"           fi\n"
+"    done\n"
+"    unique_lines _eia_name _eia_name     # Scrub duplicates.\n"
+"    edit_exact chk_name _eia_name        # Scrub pending detail.\n"
+"    edit_exact known_name _eia_name      # Scrub already detailed.\n"
+" if [ ${#_eia_name[@]} -gt 0 ]        # Anything new?\n"
+" then\n"
+"   uc_name=( ${uc_name[@]} ${_eia_name[@]} )\n"
+"   pend_func expand_input_name ${1}\n"
+"   _trace_log[${#_trace_log[@]}]='#Add '${#_eia_name[@]}' unchkd name "
+"inp.#'\n"
+"    fi\n"
+"    edit_exact chk_address _eia_addr     # Scrub pending detail.\n"
+"    edit_exact known_address _eia_addr   # Scrub already detailed.\n"
+"    if [ ${#_eia_addr[@]} -gt 0 ]        # Anything new?\n"
+"    then\n"
+"        chk_address=( ${chk_address[@]} ${_eia_addr[@]} )\n"
+"        pend_func detail_each_address ${1}\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1192
+#, no-wrap
+msgid ""
+"# The parse-it-yourself zone reply.\n"
+"# The input is the chk_name list.\n"
+"# detail_each_name &lt;indirection_limit&gt;\n"
+"detail_each_name() {\n"
+"    [ ${#chk_name[@]} -gt 0 ] || return 0\n"
+"    local -a _den_chk       # Names to check\n"
+"    local -a _den_name      # Names found here\n"
+"    local -a _den_address   # Addresses found here\n"
+"    local -a _den_pair      # Pairs found here\n"
+"    local -a _den_rev       # Reverse pairs found here\n"
+"    local -a _den_tmp       # Line being parsed\n"
+"    local -a _den_auth      # SOA contact being parsed\n"
+"    local -a _den_new       # The zone reply\n"
+"    local -a _den_pc        # Parent-Child gets big fast\n"
+"    local -a _den_ref       # So does reference chain\n"
+"    local -a _den_nr        # Name-Resource can be big\n"
+"    local -a _den_na        # Name-Address\n"
+"    local -a _den_ns        # Name-Service\n"
+"    local -a _den_achn      # Chain of Authority\n"
+"    local -i _den_cnt       # Count of names to detail\n"
+"    local -i _den_lmt       # Indirection limit\n"
+"    local _den_who          # Named being processed\n"
+"    local _den_rec          # Record type being processed\n"
+"    local _den_cont         # Contact domain\n"
+"    local _den_str          # Fixed up name string\n"
+"    local _den_str2         # Fixed up reverse\n"
+"    local IFS=${WSP_IFS}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1196
+#, no-wrap
+msgid ""
+"    # Local, unique copy of names to check\n"
+"    unique_lines chk_name _den_chk\n"
+"    unset chk_name[@]       # Done with globals.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1200
+#, no-wrap
+msgid ""
+"    # Less any names already known\n"
+"    edit_exact known_name _den_chk\n"
+"    _den_cnt=${#_den_chk[@]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1204
+#, no-wrap
+msgid ""
+"    # If anything left, add to known_name.\n"
+"    [ ${_den_cnt} -gt 0 ] &amp;&amp;\n"
+"        known_name=( ${known_name[@]} ${_den_chk[@]} )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1216
+#, no-wrap
+msgid ""
+"    # for the list of (previously) unknown names . . .\n"
+"    for (( _den = 0 ; _den &lt; _den_cnt ; _den++ ))\n"
+"    do\n"
+"        _den_who=${_den_chk[${_den}]}\n"
+"        if long_fwd ${_den_who} _den_new\n"
+"        then\n"
+"            unique_lines _den_new _den_new\n"
+"            if [ ${#_den_new[@]} -eq 0 ]\n"
+"            then\n"
+"                _den_pair[${#_den_pair[@]}]='0.0.0.0 '${_den_who}\n"
+"            fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1230
+#, no-wrap
+msgid ""
+"            # Parse each line in the reply.\n"
+"            for (( _line = 0 ; _line &lt; ${#_den_new[@]} ; _line++ ))\n"
+"            do\n"
+"                IFS=${NO_WSP}$'\\x09'$'\\x20'\n"
+"                _den_tmp=( ${_den_new[${_line}]} )\n"
+"                IFS=${WSP_IFS}\n"
+"              # If usable record and not a warning message . . .\n"
+"              if [ ${#_den_tmp[@]} -gt 4 ] &amp;&amp; [ 'x'${_den_tmp[0]} != "
+"'x;;' ]\n"
+"              then\n"
+"                    _den_rec=${_den_tmp[3]}\n"
+"                    _den_nr[${#_den_nr[@]}]=${_den_who}' '${_den_rec}\n"
+"                    # Begin at RFC1033 (+++)\n"
+"                    case ${_den_rec} in\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1265
+#, no-wrap
+msgid ""
+"#&lt;name&gt; [&lt;ttl&gt;]  [&lt;class&gt;] SOA &lt;origin&gt; "
+"&lt;person&gt;\n"
+"                    SOA) # Start Of Authority\n"
+"    if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"    then\n"
+"      _den_name[${#_den_name[@]}]=${_den_str}\n"
+"      _den_achn[${#_den_achn[@]}]=${_den_who}' '${_den_str}' SOA'\n"
+"      # SOA origin -- domain name of master zone record\n"
+"      if _den_str2=$(name_fixup ${_den_tmp[4]})\n"
+"      then\n"
+"        _den_name[${#_den_name[@]}]=${_den_str2}\n"
+"        _den_achn[${#_den_achn[@]}]=${_den_who}' '${_den_str2}' SOA.O'\n"
+"      fi\n"
+"      # Responsible party e-mail address (possibly bogus).\n"
+"      # Possibility of first.last@domain.name ignored.\n"
+"      set -f\n"
+"      if _den_str2=$(name_fixup ${_den_tmp[5]})\n"
+"      then\n"
+"        IFS=${ADR_IFS}\n"
+"        _den_auth=( ${_den_str2} )\n"
+"        IFS=${WSP_IFS}\n"
+"        if [ ${#_den_auth[@]} -gt 2 ]\n"
+"        then\n"
+"          _den_cont=${_den_auth[1]}\n"
+"          for (( _auth = 2 ; _auth &lt; ${#_den_auth[@]} ; _auth++ ))\n"
+"          do\n"
+"            _den_cont=${_den_cont}'.'${_den_auth[${_auth}]}\n"
+"          done\n"
+"          _den_name[${#_den_name[@]}]=${_den_cont}'.'\n"
+"          _den_achn[${#_den_achn[@]}]=${_den_who}' '${_den_cont}'. SOA.C'\n"
+"                                fi\n"
+"        fi\n"
+"        set +f\n"
+"                        fi\n"
+"                    ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1282
+#, no-wrap
+msgid ""
+"      A) # IP(v4) Address Record\n"
+"      if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"      then\n"
+"        _den_name[${#_den_name[@]}]=${_den_str}\n"
+"        _den_pair[${#_den_pair[@]}]=${_den_tmp[4]}' '${_den_str}\n"
+"        _den_na[${#_den_na[@]}]=${_den_str}' '${_den_tmp[4]}\n"
+"        _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' A'\n"
+"      else\n"
+"        _den_pair[${#_den_pair[@]}]=${_den_tmp[4]}' unknown.domain'\n"
+"        _den_na[${#_den_na[@]}]='unknown.domain '${_den_tmp[4]}\n"
+"        _den_ref[${#_den_ref[@]}]=${_den_who}' unknown.domain A'\n"
+"      fi\n"
+"      _den_address[${#_den_address[@]}]=${_den_tmp[4]}\n"
+"      _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_tmp[4]}\n"
+"             ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1289
+#, no-wrap
+msgid ""
+"             NS) # Name Server Record\n"
+"             # Domain name being serviced (may be other than current)\n"
+"               if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"                 then\n"
+"                   _den_name[${#_den_name[@]}]=${_den_str}\n"
+"                   _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' "
+"NS'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1300
+#, no-wrap
+msgid ""
+"             # Domain name of service provider\n"
+"             if _den_str2=$(name_fixup ${_den_tmp[4]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str2}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str2}' NSH'\n"
+"               _den_ns[${#_den_ns[@]}]=${_den_str2}' NS'\n"
+"               _den_pc[${#_den_pc[@]}]=${_den_str}' '${_den_str2}\n"
+"              fi\n"
+"               fi\n"
+"                    ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1317
+#, no-wrap
+msgid ""
+"             MX) # Mail Server Record\n"
+"                 # Domain name being serviced (wildcards not handled here)\n"
+"             if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' MX'\n"
+"             fi\n"
+"             # Domain name of service provider\n"
+"             if _den_str=$(name_fixup ${_den_tmp[5]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' MXH'\n"
+"               _den_ns[${#_den_ns[@]}]=${_den_str}' MX'\n"
+"               _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_str}\n"
+"             fi\n"
+"                    ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1332
+#, no-wrap
+msgid ""
+"             PTR) # Reverse address record\n"
+"                  # Special name\n"
+"             if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"             then\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' PTR'\n"
+"               # Host name (not a CNAME)\n"
+"               if _den_str2=$(name_fixup ${_den_tmp[4]})\n"
+"               then\n"
+"                 _den_rev[${#_den_rev[@]}]=${_den_str}' '${_den_str2}\n"
+"                 _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str2}' "
+"PTRH'\n"
+"                 _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_str}\n"
+"               fi\n"
+"             fi\n"
+"                    ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1348
+#, no-wrap
+msgid ""
+"             AAAA) # IP(v6) Address Record\n"
+"             if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str}\n"
+"               _den_pair[${#_den_pair[@]}]=${_den_tmp[4]}' '${_den_str}\n"
+"               _den_na[${#_den_na[@]}]=${_den_str}' '${_den_tmp[4]}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' AAAA'\n"
+"               else\n"
+"                 _den_pair[${#_den_pair[@]}]=${_den_tmp[4]}' "
+"unknown.domain'\n"
+"                 _den_na[${#_den_na[@]}]='unknown.domain '${_den_tmp[4]}\n"
+"                 _den_ref[${#_den_ref[@]}]=${_den_who}' unknown.domain'\n"
+"               fi\n"
+"               # No processing for IPv6 addresses\n"
+"               _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_tmp[4]}\n"
+"                    ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1374
+#, no-wrap
+msgid ""
+"             CNAME) # Alias name record\n"
+"                    # Nickname\n"
+"             if _den_str=$(name_fixup ${_den_tmp[0]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' CNAME'\n"
+"               _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_str}\n"
+"             fi\n"
+"                    # Hostname\n"
+"             if _den_str=$(name_fixup ${_den_tmp[4]})\n"
+"             then\n"
+"               _den_name[${#_den_name[@]}]=${_den_str}\n"
+"               _den_ref[${#_den_ref[@]}]=${_den_who}' '${_den_str}' CHOST'\n"
+"               _den_pc[${#_den_pc[@]}]=${_den_who}' '${_den_str}\n"
+"             fi\n"
+"                    ;;\n"
+"#            TXT)\n"
+"#            ;;\n"
+"                    esac\n"
+"                fi\n"
+"            done\n"
+"        else # Lookup error == 'A' record 'unknown address'\n"
+"            _den_pair[${#_den_pair[@]}]='0.0.0.0 '${_den_who}\n"
+"        fi\n"
+"    done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1384
+#, no-wrap
+msgid ""
+"    # Control dot array growth.\n"
+"    unique_lines _den_achn _den_achn      # Works best, all the same.\n"
+"    edit_exact auth_chain _den_achn       # Works best, unique items.\n"
+"    if [ ${#_den_achn[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        auth_chain=( ${auth_chain[@]} ${_den_achn[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1393
+#, no-wrap
+msgid ""
+"    unique_lines _den_ref _den_ref      # Works best, all the same.\n"
+"    edit_exact ref_chain _den_ref       # Works best, unique items.\n"
+"    if [ ${#_den_ref[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        ref_chain=( ${ref_chain[@]} ${_den_ref[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1402
+#, no-wrap
+msgid ""
+"    unique_lines _den_na _den_na\n"
+"    edit_exact name_address _den_na\n"
+"    if [ ${#_den_na[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        name_address=( ${name_address[@]} ${_den_na[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1411
+#, no-wrap
+msgid ""
+"    unique_lines _den_ns _den_ns\n"
+"    edit_exact name_srvc _den_ns\n"
+"    if [ ${#_den_ns[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        name_srvc=( ${name_srvc[@]} ${_den_ns[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1420
+#, no-wrap
+msgid ""
+"    unique_lines _den_nr _den_nr\n"
+"    edit_exact name_resource _den_nr\n"
+"    if [ ${#_den_nr[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        name_resource=( ${name_resource[@]} ${_den_nr[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1429
+#, no-wrap
+msgid ""
+"    unique_lines _den_pc _den_pc\n"
+"    edit_exact parent_child _den_pc\n"
+"    if [ ${#_den_pc[@]} -gt 0 ]\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        parent_child=( ${parent_child[@]} ${_den_pc[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1439
+#, no-wrap
+msgid ""
+"    # Update list known_pair (Address and Name).\n"
+"    unique_lines _den_pair _den_pair\n"
+"    edit_exact known_pair _den_pair\n"
+"    if [ ${#_den_pair[@]} -gt 0 ]  # Anything new?\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        known_pair=( ${known_pair[@]} ${_den_pair[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1449
+#, no-wrap
+msgid ""
+"    # Update list of reverse pairs.\n"
+"    unique_lines _den_rev _den_rev\n"
+"    edit_exact reverse_pair _den_rev\n"
+"    if [ ${#_den_rev[@]} -gt 0 ]   # Anything new?\n"
+"    then\n"
+"        IFS=${NO_WSP}\n"
+"        reverse_pair=( ${reverse_pair[@]} ${_den_rev[@]} )\n"
+"        IFS=${WSP_IFS}\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1455
+#, no-wrap
+msgid ""
+"    # Check indirection limit -- give up if reached.\n"
+"    if ! _den_lmt=$(limit_chk ${1})\n"
+"    then\n"
+"        return 0\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1467
+#, no-wrap
+msgid ""
+"# Execution engine is LIFO. Order of pend operations is important.\n"
+"# Did we define any new addresses?\n"
+"unique_lines _den_address _den_address    # Scrub duplicates.\n"
+"edit_exact known_address _den_address     # Scrub already processed.\n"
+"edit_exact un_address _den_address        # Scrub already waiting.\n"
+"if [ ${#_den_address[@]} -gt 0 ]          # Anything new?\n"
+"then\n"
+"  uc_address=( ${uc_address[@]} ${_den_address[@]} )\n"
+"  pend_func expand_input_address ${_den_lmt}\n"
+"  _trace_log[${#_trace_log[@]}]='# Add '${#_den_address[@]}' unchkd "
+"addr. #'\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1480
+#, no-wrap
+msgid ""
+"# Did we find any new names?\n"
+"unique_lines _den_name _den_name          # Scrub duplicates.\n"
+"edit_exact known_name _den_name           # Scrub already processed.\n"
+"edit_exact uc_name _den_name              # Scrub already waiting.\n"
+"if [ ${#_den_name[@]} -gt 0 ]             # Anything new?\n"
+"then\n"
+"  uc_name=( ${uc_name[@]} ${_den_name[@]} )\n"
+"  pend_func expand_input_name ${_den_lmt}\n"
+"  _trace_log[${#_trace_log[@]}]='#Added '${#_den_name[@]}' unchkd name#'\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1495
+#, no-wrap
+msgid ""
+"# The parse-it-yourself delegation reply\n"
+"# Input is the chk_address list.\n"
+"# detail_each_address &lt;indirection_limit&gt;\n"
+"detail_each_address() {\n"
+"    [ ${#chk_address[@]} -gt 0 ] || return 0\n"
+"    unique_lines chk_address chk_address\n"
+"    edit_exact known_address chk_address\n"
+"    if [ ${#chk_address[@]} -gt 0 ]\n"
+"    then\n"
+"        known_address=( ${known_address[@]} ${chk_address[@]} )\n"
+"        unset chk_address[@]\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1497
+msgid "# # # Application specific output functions # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1503
+#, no-wrap
+msgid ""
+"# Pretty print the known pairs.\n"
+"report_pairs() {\n"
+"    echo\n"
+"    echo 'Known network pairs.'\n"
+"    col_print known_pair 2 5 30\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1510
+#, no-wrap
+msgid ""
+"    if [ ${#auth_chain[@]} -gt 0 ]\n"
+"    then\n"
+"        echo\n"
+"        echo 'Known chain of authority.'\n"
+"        col_print auth_chain 2 5 30 55\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1519
+#, no-wrap
+msgid ""
+"    if [ ${#reverse_pair[@]} -gt 0 ]\n"
+"    then\n"
+"        echo\n"
+"        echo 'Known reverse pairs.'\n"
+"        col_print reverse_pair 2 5 55\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1532
+#, no-wrap
+msgid ""
+"# Check an address against the list of blacklist servers.\n"
+"# A good place to capture for GraphViz: "
+"address-&gt;status(server(reports))\n"
+"# check_lists &lt;ip_address&gt;\n"
+"check_lists() {\n"
+"    [ $# -eq 1 ] || return 1\n"
+"    local -a _cl_fwd_addr\n"
+"    local -a _cl_rev_addr\n"
+"    local -a _cl_reply\n"
+"    local -i _cl_rc\n"
+"    local -i _ls_cnt\n"
+"    local _cl_dns_addr\n"
+"    local _cl_lkup\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1556
+#, no-wrap
+msgid ""
+"    split_ip ${1} _cl_fwd_addr _cl_rev_addr\n"
+"    _cl_dns_addr=$(dot_array _cl_rev_addr)'.'\n"
+"    _ls_cnt=${#list_server[@]}\n"
+"    echo '    Checking address '${1}\n"
+"    for (( _cl = 0 ; _cl &lt; _ls_cnt ; _cl++ ))\n"
+"    do\n"
+"      _cl_lkup=${_cl_dns_addr}${list_server[${_cl}]}\n"
+"      if short_text ${_cl_lkup} _cl_reply\n"
+"      then\n"
+"        if [ ${#_cl_reply[@]} -gt 0 ]\n"
+"        then\n"
+"          echo '        Records from '${list_server[${_cl}]}\n"
+"          address_hits[${#address_hits[@]}]=${1}' '${list_server[${_cl}]}\n"
+"          _hs_RC=2\n"
+"          for (( _clr = 0 ; _clr &lt; ${#_cl_reply[@]} ; _clr++ ))\n"
+"          do\n"
+"            echo '            '${_cl_reply[${_clr}]}\n"
+"          done\n"
+"        fi\n"
+"      fi\n"
+"    done\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1558
+msgid "# # # The usual application glue # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1564
+#, no-wrap
+msgid ""
+"# Who did it?\n"
+"credits() {\n"
+"   echo\n"
+"   echo 'Advanced Bash Scripting Guide: is_spammer.bash, v2, 2004-msz'\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1570
+#, no-wrap
+msgid ""
+"# How to use it?\n"
+"# (See also, \"Quickstart\" at end of script.)\n"
+"usage() {\n"
+"    cat &lt;&lt;-'_usage_statement_'\n"
+"    The script is_spammer.bash requires either one or two arguments.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1576
+#, no-wrap
+msgid ""
+"    arg 1) May be one of:\n"
+"        a) A domain name\n"
+"        b) An IPv4 address\n"
+"        c) The name of a file with any mix of names\n"
+"           and addresses, one per line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1586
+#, no-wrap
+msgid ""
+"    arg 2) May be one of:\n"
+"        a) A Blacklist server domain name\n"
+"        b) The name of a file with Blacklist server\n"
+"           domain names, one per line.\n"
+"        c) If not present, a default list of (free)\n"
+"           Blacklist servers is used.\n"
+"        d) If a filename of an empty, readable, file\n"
+"           is given,\n"
+"           Blacklist server lookup is disabled.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1588
+#, no-wrap
+msgid "    All script output is written to stdout.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1591
+#, no-wrap
+msgid ""
+"    Return codes: 0 -> All OK, 1 -> Script failure,\n"
+"                  2 -> Something is Blacklisted.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1594
+#, no-wrap
+msgid ""
+"    Requires the external program 'dig' from the 'bind-9'\n"
+"    set of DNS programs.  See: http://www.isc.org\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1598
+#, no-wrap
+msgid ""
+"    The domain name lookup depth limit defaults to 2 levels.\n"
+"    Set the environment variable SPAMMER_LIMIT to change.\n"
+"    SPAMMER_LIMIT=0 means 'unlimited'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1602
+#, no-wrap
+msgid ""
+"    Limit may also be set on the command-line.\n"
+"    If arg#1 is an integer, the limit is set to that value\n"
+"    and then the above argument rules are applied.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1605
+#, no-wrap
+msgid ""
+"    Setting the environment variable 'SPAMMER_DATA' to a filename\n"
+"    will cause the script to write a GraphViz graphic file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1609
+#, no-wrap
+msgid ""
+"    For the development version;\n"
+"    Setting the environment variable 'SPAMMER_TRACE' to a filename\n"
+"    will cause the execution engine to log a function call trace.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1612
+msgid "_usage_statement_ }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1615
+msgid ""
+"# The default list of Blacklist servers: # Many choices, see: "
+"http://www.spews.org/lists.html"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1631
+msgid ""
+"declare -a default_servers # See: http://www.spamhaus.org (Conservative, "
+"well maintained)  default_servers[0]='sbl-xbl.spamhaus.org' # See: "
+"http://ordb.org (Open mail relays)  default_servers[1]='relays.ordb.org' # "
+"See: http://www.spamcop.net/ (You can report spammers here)  "
+"default_servers[2]='bl.spamcop.net' # See: http://www.spews.org (An 'early "
+"detect' system)  default_servers[3]='l2.spews.dnsbl.sorbs.net' # See: "
+"http://www.dnsbl.us.sorbs.net/using.shtml "
+"default_servers[4]='dnsbl.sorbs.net' # See: http://dsbl.org/usage (Various "
+"mail relay lists)  default_servers[5]='list.dsbl.org' "
+"default_servers[6]='multihop.dsbl.org' "
+"default_servers[7]='unconfirmed.dsbl.org'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1650
+#, no-wrap
+msgid ""
+"# User input argument #1\n"
+"setup_input() {\n"
+"    if [ -e ${1} ] &amp;&amp; [ -r ${1} ]  # Name of readable file\n"
+"    then\n"
+"        file_to_array ${1} uc_name\n"
+"        echo 'Using filename >'${1}'&lt; as input.'\n"
+"    else\n"
+"        if is_address ${1}          # IP address?\n"
+"        then\n"
+"            uc_address=( ${1} )\n"
+"            echo 'Starting with address >'${1}'&lt;'\n"
+"        else                       # Must be a name.\n"
+"            uc_name=( ${1} )\n"
+"            echo 'Starting with domain name >'${1}'&lt;'\n"
+"        fi\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1663
+#, no-wrap
+msgid ""
+"# User input argument #2\n"
+"setup_servers() {\n"
+"    if [ -e ${1} ] &amp;&amp; [ -r ${1} ]  # Name of a readable file\n"
+"    then\n"
+"        file_to_array ${1} list_server\n"
+"        echo 'Using filename >'${1}'&lt; as blacklist server list.'\n"
+"    else\n"
+"        list_server=( ${1} )\n"
+"        echo 'Using blacklist server >'${1}'&lt;'\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1696
+#, no-wrap
+msgid ""
+"# User environment variable SPAMMER_TRACE\n"
+"live_log_die() {\n"
+"    if [ ${SPAMMER_TRACE:=} ]    # Wants trace log?\n"
+"    then\n"
+"        if [ ! -e ${SPAMMER_TRACE} ]\n"
+"        then\n"
+"            if ! touch ${SPAMMER_TRACE} 2>/dev/null\n"
+"            then\n"
+"                pend_func echo $(printf '%q\\n' \\\n"
+"                'Unable to create log file >'${SPAMMER_TRACE}'&lt;')\n"
+"                pend_release\n"
+"                exit 1\n"
+"            fi\n"
+"            _log_file=${SPAMMER_TRACE}\n"
+"            _pend_hook_=trace_logger\n"
+"            _log_dump=dump_log\n"
+"        else\n"
+"            if [ ! -w ${SPAMMER_TRACE} ]\n"
+"            then\n"
+"                pend_func echo $(printf '%q\\n' \\\n"
+"                'Unable to write log file >'${SPAMMER_TRACE}'&lt;')\n"
+"                pend_release\n"
+"                exit 1\n"
+"            fi\n"
+"            _log_file=${SPAMMER_TRACE}\n"
+"            echo '' > ${_log_file}\n"
+"            _pend_hook_=trace_logger\n"
+"            _log_dump=dump_log\n"
+"        fi\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1726
+#, no-wrap
+msgid ""
+"# User environment variable SPAMMER_DATA\n"
+"data_capture() {\n"
+"    if [ ${SPAMMER_DATA:=} ]    # Wants a data dump?\n"
+"    then\n"
+"        if [ ! -e ${SPAMMER_DATA} ]\n"
+"        then\n"
+"            if ! touch ${SPAMMER_DATA} 2>/dev/null\n"
+"            then\n"
+"                pend_func echo $(printf '%q]n' \\\n"
+"                'Unable to create data output file "
+">'${SPAMMER_DATA}'&lt;')\n"
+"                pend_release\n"
+"                exit 1\n"
+"            fi\n"
+"            _dot_file=${SPAMMER_DATA}\n"
+"            _dot_dump=dump_dot\n"
+"        else\n"
+"            if [ ! -w ${SPAMMER_DATA} ]\n"
+"            then\n"
+"                pend_func echo $(printf '%q\\n' \\\n"
+"                'Unable to write data output file >'${SPAMMER_DATA}'&lt;')\n"
+"                pend_release\n"
+"                exit 1\n"
+"            fi\n"
+"            _dot_file=${SPAMMER_DATA}\n"
+"            _dot_dump=dump_dot\n"
+"        fi\n"
+"    fi\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1734
+#, no-wrap
+msgid ""
+"# Grope user specified arguments.\n"
+"do_user_args() {\n"
+"    if [ $# -gt 0 ] &amp;&amp; is_number $1\n"
+"    then\n"
+"        indirect=$1\n"
+"        shift\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1772
+#, no-wrap
+msgid ""
+"    case $# in                     # Did user treat us well?\n"
+"        1)\n"
+"            if ! setup_input $1    # Needs error checking.\n"
+"            then\n"
+"                pend_release\n"
+"                $_log_dump\n"
+"                exit 1\n"
+"            fi\n"
+"            list_server=( ${default_servers[@]} )\n"
+"            _list_cnt=${#list_server[@]}\n"
+"            echo 'Using default blacklist server list.'\n"
+"            echo 'Search depth limit: '${indirect}\n"
+"            ;;\n"
+"        2)\n"
+"            if ! setup_input $1    # Needs error checking.\n"
+"            then\n"
+"                pend_release\n"
+"                $_log_dump\n"
+"                exit 1\n"
+"            fi\n"
+"            if ! setup_servers $2  # Needs error checking.\n"
+"            then\n"
+"                pend_release\n"
+"                $_log_dump\n"
+"                exit 1\n"
+"            fi\n"
+"            echo 'Search depth limit: '${indirect}\n"
+"            ;;\n"
+"        *)\n"
+"            pend_func usage\n"
+"            pend_release\n"
+"            $_log_dump\n"
+"            exit 1\n"
+"            ;;\n"
+"    esac\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1777
+#, no-wrap
+msgid ""
+"# A general purpose debug tool.\n"
+"# list_array &lt;array_name&gt;\n"
+"list_array() {\n"
+"    [ $# -eq 1 ] || return 1  # One argument required.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1785
+#, no-wrap
+msgid ""
+"    local -a _la_lines\n"
+"    set -f\n"
+"    local IFS=${NO_WSP}\n"
+"    eval _la_lines=\\(\\ \\$\\{$1\\[@\\]\\}\\ \\)\n"
+"    echo\n"
+"    echo \"Element count \"${#_la_lines[@]}\" array \"${1}\n"
+"    local _ln_cnt=${#_la_lines[@]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1793
+#, no-wrap
+msgid ""
+"    for (( _i = 0; _i &lt; ${_ln_cnt}; _i++ ))\n"
+"    do\n"
+"        echo 'Element '$_i' >'${_la_lines[$_i]}'&lt;'\n"
+"    done\n"
+"    set +f\n"
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1797
+#, no-wrap
+msgid ""
+"# # # 'Hunt the Spammer' program code # # #\n"
+"pend_init                               # Ready stack engine.\n"
+"pend_func credits                       # Last thing to print.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1803
+#, no-wrap
+msgid ""
+"# # # Deal with user # # #\n"
+"live_log_die                            # Setup debug trace log.\n"
+"data_capture                            # Setup data capture file.\n"
+"echo\n"
+"do_user_args $@\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1810
+#, no-wrap
+msgid ""
+"# # # Haven't exited yet - There is some hope # # #\n"
+"# Discovery group - Execution engine is LIFO - pend\n"
+"# in reverse order of execution.\n"
+"_hs_RC=0                                # Hunt the Spammer return code\n"
+"pend_mark\n"
+"    pend_func report_pairs              # Report name-address pairs.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1816
+#, no-wrap
+msgid ""
+"    # The two detail_* are mutually recursive functions.\n"
+"    # They also pend expand_* functions as required.\n"
+"    # These two (the last of ???) exit the recursion.\n"
+"    pend_func detail_each_address       # Get all resources of addresses.\n"
+"    pend_func detail_each_name          # Get all resources of names.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1821
+#, no-wrap
+msgid ""
+"    #  The two expand_* are mutually recursive functions,\n"
+"    #+ which pend additional detail_* functions as required.\n"
+"    pend_func expand_input_address 1    # Expand input names by address.\n"
+"    pend_func expand_input_name 1       # #xpand input addresses by name.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1825
+#, no-wrap
+msgid ""
+"    # Start with a unique set of names and addresses.\n"
+"    pend_func unique_lines uc_address uc_address\n"
+"    pend_func unique_lines uc_name uc_name\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1829
+#, no-wrap
+msgid ""
+"    # Separate mixed input of names and addresses.\n"
+"    pend_func split_input\n"
+"pend_release\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1853
+#, no-wrap
+msgid ""
+"# # # Pairs reported -- Unique list of IP addresses found\n"
+"echo\n"
+"_ip_cnt=${#known_address[@]}\n"
+"if [ ${#list_server[@]} -eq 0 ]\n"
+"then\n"
+"    echo 'Blacklist server list empty, none checked.'\n"
+"else\n"
+"    if [ ${_ip_cnt} -eq 0 ]\n"
+"    then\n"
+"        echo 'Known address list empty, none checked.'\n"
+"    else\n"
+"        _ip_cnt=${_ip_cnt}-1   # Start at top.\n"
+"        echo 'Checking Blacklist servers.'\n"
+"        for (( _ip = _ip_cnt ; _ip >= 0 ; _ip-- ))\n"
+"        do\n"
+"          pend_func check_lists $( printf '%q\\n' ${known_address[$_ip]} )\n"
+"        done\n"
+"    fi\n"
+"fi\n"
+"pend_release\n"
+"$_dot_dump                   # Graphics file dump\n"
+"$_log_dump                   # Execution trace\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1859
+msgid ""
+"############################## # Example output from script # "
+"############################## :&lt;&lt;-'_is_spammer_outputs_'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1861
+msgid "./is_spammer.bash 0 web4.alojamentos7.com"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1885
+#, no-wrap
+msgid ""
+"Starting with domain name >web4.alojamentos7.com&lt;\n"
+"Using default blacklist server list.\n"
+"Search depth limit: 0\n"
+".:....::::...:::...:::.......::..::...:::.......::\n"
+"Known network pairs.\n"
+"    66.98.208.97             web4.alojamentos7.com.\n"
+"    66.98.208.97             ns1.alojamentos7.com.\n"
+"    69.56.202.147            ns2.alojamentos.ws.\n"
+"    66.98.208.97             alojamentos7.com.\n"
+"    66.98.208.97             web.alojamentos7.com.\n"
+"    69.56.202.146            ns1.alojamentos.ws.\n"
+"    69.56.202.146            alojamentos.ws.\n"
+"    66.235.180.113           ns1.alojamentos.org.\n"
+"    66.235.181.192           ns2.alojamentos.org.\n"
+"    66.235.180.113           alojamentos.org.\n"
+"    66.235.180.113           web6.alojamentos.org.\n"
+"    216.234.234.30           ns1.theplanet.com.\n"
+"    12.96.160.115            ns2.theplanet.com.\n"
+"    216.185.111.52           mail1.theplanet.com.\n"
+"    69.56.141.4              spooling.theplanet.com.\n"
+"    216.185.111.40           theplanet.com.\n"
+"    216.185.111.40           www.theplanet.com.\n"
+"    216.185.111.52           mail.theplanet.com.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1899
+#, no-wrap
+msgid ""
+"Checking Blacklist servers.\n"
+"  Checking address 66.98.208.97\n"
+"      Records from dnsbl.sorbs.net\n"
+"  \"Spam Received See: "
+"http://www.dnsbl.sorbs.net/lookup.shtml?66.98.208.97\"\n"
+"    Checking address 69.56.202.147\n"
+"    Checking address 69.56.202.146\n"
+"    Checking address 66.235.180.113\n"
+"    Checking address 66.235.181.192\n"
+"    Checking address 216.185.111.40\n"
+"    Checking address 216.234.234.30\n"
+"    Checking address 12.96.160.115\n"
+"    Checking address 216.185.111.52\n"
+"    Checking address 69.56.141.4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1901
+msgid "Advanced Bash Scripting Guide: is_spammer.bash, v2, 2004-msz"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1903
+msgid "_is_spammer_outputs_"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1905
+msgid "exit ${_hs_RC}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1910
+#, no-wrap
+msgid ""
+"####################################################\n"
+"#  The script ignores everything from here on down #\n"
+"#+ because of the 'exit' command, just above.      #\n"
+"####################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1914
+#, no-wrap
+msgid ""
+"Quickstart\n"
+"==========\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1917
+#, no-wrap
+msgid " Prerequisites\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1921
+#, no-wrap
+msgid ""
+"  Bash version 2.05b or 3.00 (bash --version)\n"
+"  A version of Bash which supports arrays. Array \n"
+"  support is included by default Bash configurations.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1925
+#, no-wrap
+msgid ""
+"  'dig,' version 9.x.x (dig $HOSTNAME, see first line of output)\n"
+"  A version of dig which supports the +short options. \n"
+"  See: dig_wrappers.bash for details.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1928
+#, no-wrap
+msgid " Optional Prerequisites\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1933
+#, no-wrap
+msgid ""
+"  'named,' a local DNS caching program. Any flavor will do.\n"
+"  Do twice: dig $HOSTNAME \n"
+"  Check near bottom of output for: SERVER: 127.0.0.1#53\n"
+"  That means you have one running.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1936
+#, no-wrap
+msgid " Optional Graphics Support\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1938
+#, no-wrap
+msgid "  'date,' a standard *nix thing. (date -R)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1943
+#, no-wrap
+msgid ""
+"  dot Program to convert graphic description file to a \n"
+"  diagram. (dot -V)\n"
+"  A part of the Graph-Viz set of programs.\n"
+"  See: [http://www.research.att.com/sw/tools/graphviz||GraphViz]\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1946
+#, no-wrap
+msgid ""
+"  'dotty,' a visual editor for graphic description files.\n"
+"  Also a part of the Graph-Viz set of programs.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1951
+#, no-wrap
+msgid " Quick Start\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1954
+msgid "In the same directory as the is_spammer.bash script; Do: ./is_spammer.bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1956
+#, no-wrap
+msgid " Usage Details\n"
+msgstr ""
+
+#. type: Bullet: '1. '
+#: abs-guide/is_spammer.bash:1958
+msgid "Blacklist server choices."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1960
+#, no-wrap
+msgid "  (a) To use default, built-in list: Do nothing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1962
+#, no-wrap
+msgid "  (b) To use your own list: \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1965
+#, no-wrap
+msgid ""
+"    i. Create a file with a single Blacklist server \n"
+"       domain name per line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1968
+#, no-wrap
+msgid ""
+"    ii. Provide that filename as the last argument to \n"
+"        the script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1971
+#, no-wrap
+msgid ""
+"  (c) To use a single Blacklist server: Last argument \n"
+"      to the script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1973
+#, no-wrap
+msgid "  (d) To disable Blacklist lookups:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1976
+#, no-wrap
+msgid ""
+"    i. Create an empty file (touch spammer.nul)\n"
+"       Your choice of filename.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1979
+#, no-wrap
+msgid ""
+"    ii. Provide the filename of that empty file as the \n"
+"        last argument to the script.\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: abs-guide/is_spammer.bash:1981
+msgid "Search depth limit."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1983
+#, no-wrap
+msgid "  (a) To use the default value of 2: Do nothing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1986
+#, no-wrap
+msgid ""
+"  (b) To set a different limit: \n"
+"      A limit of 0 means: no limit.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1989
+#, no-wrap
+msgid ""
+"    i. export SPAMMER_LIMIT=1\n"
+"       or whatever limit you want.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1992
+#, no-wrap
+msgid ""
+"    ii. OR provide the desired limit as the first \n"
+"       argument to the script.\n"
+msgstr ""
+
+#. type: Bullet: '3. '
+#: abs-guide/is_spammer.bash:1994
+msgid "Optional execution trace log."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:1996
+#, no-wrap
+msgid "  (a) To use the default setting of no log output: Do nothing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2000
+#, no-wrap
+msgid ""
+"  (b) To write an execution trace log:\n"
+"      export SPAMMER_TRACE=spammer.log\n"
+"      or whatever filename you want.\n"
+msgstr ""
+
+#. type: Bullet: '4. '
+#: abs-guide/is_spammer.bash:2002
+msgid "Optional graphic description file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2004
+#, no-wrap
+msgid "  (a) To use the default setting of no graphic file: Do nothing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2008
+#, no-wrap
+msgid ""
+"  (b) To write a Graph-Viz graphic description file:\n"
+"      export SPAMMER_DATA=spammer.dot\n"
+"      or whatever filename you want.\n"
+msgstr ""
+
+#. type: Bullet: '5. '
+#: abs-guide/is_spammer.bash:2010
+msgid "Where to start the search."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2012
+#, no-wrap
+msgid "  (a) Starting with a single domain name:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2015 abs-guide/is_spammer.bash:2023
+#, no-wrap
+msgid ""
+"    i. Without a command-line search limit: First \n"
+"       argument to script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2018 abs-guide/is_spammer.bash:2026
+#, no-wrap
+msgid ""
+"    ii. With a command-line search limit: Second \n"
+"        argument to script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2020
+#, no-wrap
+msgid "  (b) Starting with a single IP address:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2030
+#, no-wrap
+msgid ""
+"  (c) Starting with (mixed) multiple name(s) and/or address(es):\n"
+"      Create a file with one name or address per line.\n"
+"      Your choice of filename.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2033
+#, no-wrap
+msgid ""
+"    i. Without a command-line search limit: Filename as \n"
+"       first argument to script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2036
+#, no-wrap
+msgid ""
+"    ii. With a command-line search limit: Filename as \n"
+"        second argument to script.\n"
+msgstr ""
+
+#. type: Bullet: '6. '
+#: abs-guide/is_spammer.bash:2038
+msgid "What to do with the display output."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2040
+#, no-wrap
+msgid "  (a) To view display output on screen: Do nothing.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2042
+#, no-wrap
+msgid "  (b) To save display output to a file: Redirect stdout to a filename.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2044
+#, no-wrap
+msgid "  (c) To discard display output: Redirect stdout to /dev/null.\n"
+msgstr ""
+
+#. type: Bullet: '7. '
+#: abs-guide/is_spammer.bash:2048
+msgid ""
+"Temporary end of decision making.  press RETURN wait (optionally, watch the "
+"dots and colons)."
+msgstr ""
+
+#. type: Bullet: '8. '
+#: abs-guide/is_spammer.bash:2050
+msgid "Optionally check the return code."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2052
+#, no-wrap
+msgid "  (a) Return code 0: All OK\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2054
+#, no-wrap
+msgid "  (b) Return code 1: Script setup failure\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2056
+#, no-wrap
+msgid "  (c) Return code 2: Something was blacklisted.\n"
+msgstr ""
+
+#. type: Bullet: '9. '
+#: abs-guide/is_spammer.bash:2058
+msgid "Where is my graph (diagram)?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2063
+msgid ""
+"The script does not directly produce a graph (diagram).  It only produces a "
+"graphic description file. You can process the graphic descriptor file that "
+"was output with the 'dot' program."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2067
+msgid ""
+"Until you edit that descriptor file, to describe the relationships you want "
+"shown, all that you will get is a bunch of labeled name and address nodes."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2071
+msgid ""
+"All of the script's discovered relationships are within a comment block in "
+"the graphic descriptor file, each with a descriptive heading."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2075
+msgid ""
+"The editing required to draw a line between a pair of nodes from the "
+"information in the descriptor file may be done with a text editor."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2077
+msgid "Given these lines somewhere in the descriptor file:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2079 abs-guide/is_spammer.bash:2110
+msgid "# Known domain name nodes"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2081 abs-guide/is_spammer.bash:2112
+msgid "N0000 [label=\"guardproof.info.\"] ;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2083 abs-guide/is_spammer.bash:2114
+msgid "N0002 [label=\"third.guardproof.info.\"] ;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2087 abs-guide/is_spammer.bash:2118
+msgid "# Known address nodes"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2089 abs-guide/is_spammer.bash:2120
+msgid "A0000 [label=\"61.141.32.197\"] ;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2093 abs-guide/is_spammer.bash:2136
+msgid "/*"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2095 abs-guide/is_spammer.bash:2138
+msgid "# Known name->address edges"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2097 abs-guide/is_spammer.bash:2140
+msgid "NA0000 third.guardproof.info. 61.141.32.197"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2101 abs-guide/is_spammer.bash:2144
+msgid "# Known parent->child edges"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2103 abs-guide/is_spammer.bash:2146
+msgid "PC0000 guardproof.info. third.guardproof.info."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2105 abs-guide/is_spammer.bash:2148
+#, no-wrap
+msgid " */\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2108
+msgid ""
+"Turn that into the following lines by substituting node identifiers into the "
+"relationships:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2124
+msgid "# PC0000 guardproof.info. third.guardproof.info."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2126
+msgid "N0000->N0002 ;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2130
+msgid "# NA0000 third.guardproof.info. 61.141.32.197"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2132
+msgid "N0002->A0000 ;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2151
+msgid ""
+"Process that with the 'dot' program, and you have your first network "
+"diagram."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2159
+msgid ""
+"In addition to the conventional graphic edges, the descriptor file includes "
+"similar format pair-data that describes services, zone records "
+"(sub-graphs?), blacklisted addresses, and other things which might be "
+"interesting to include in your graph. This additional information could be "
+"displayed as different node shapes, colors, line sizes, etc."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2164
+msgid ""
+"The descriptor file can also be read and edited by a Bash script (of "
+"course). You should be able to find most of the functions required within "
+"the \"is_spammer.bash\" script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2166
+msgid "# End Quickstart."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2171
+msgid "Additional Note ========== ===="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is_spammer.bash:2174
+msgid ""
+"Michael Zick points out that there is a \"makeviz.bash\" interactive Web "
+"site at rediris.es. Can't give the full URL, since this is not a publically "
+"accessible site."
+msgstr ""

@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/escaped.sh:3
+msgid "#!/bin/bash # escaped.sh: escaped characters"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:7
+msgid ""
+"############################################################# ### First, "
+"let's show some basic escaped-character usage. ### "
+"#############################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:10
+msgid "# Escaping a newline.  # ------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:12
+msgid "echo \"\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:17
+msgid "echo \"This will print as two lines.\" # This will print # as two lines."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:21
+msgid "echo \"This will print \\ as one line.\" # This will print as one line."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:23
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:25
+msgid "echo \"=============\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:33
+#, no-wrap
+msgid ""
+"echo \"\\v\\v\\v\\v\"      # Prints \\v\\v\\v\\v literally.\n"
+"# Use the -e option with 'echo' to print escaped characters.\n"
+"echo \"=============\"\n"
+"echo \"VERTICAL TABS\"\n"
+"echo -e \"\\v\\v\\v\\v\"   # Prints 4 vertical tabs.\n"
+"echo \"==============\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:37
+#, no-wrap
+msgid ""
+"echo \"QUOTATION MARK\"\n"
+"echo -e \"\\042\"       # Prints \" (quote, octal ASCII character 42).\n"
+"echo \"==============\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:41
+msgid "# The $'\\X' construct makes the -e option unnecessary."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:46
+#, no-wrap
+msgid ""
+"echo; echo \"NEWLINE and (maybe) BEEP\"\n"
+"echo $'\\n'           # Newline.\n"
+"echo $'\\a'           # Alert (beep).\n"
+"                     # May only flash, not beep, depending on terminal.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:48
+msgid "# We have seen $'\\nnn\" string expansion, and now . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:52
+msgid ""
+"# =================================================================== # # "
+"Version 2 of Bash introduced the $'\\nnn' string expansion construct.  # "
+"=================================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:55
+msgid ""
+"echo \"Introducing the \\$\\' ... \\' string-expansion construct . . . \" "
+"echo \". . . featuring more quotation marks.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:58
+#, no-wrap
+msgid ""
+"echo $'\\t \\042 \\t'   # Quote (\") framed by tabs.\n"
+"# Note that  '\\nnn' is an octal value.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:63
+msgid ""
+"# It also works with hexadecimal values, in an $'\\xhhh' construct.  echo "
+"$'\\t \\x22 \\t' # Quote (\") framed by tabs.  # Thank you, Greg Keraunen, "
+"for pointing this out.  # Earlier Bash versions allowed '\\x022'."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:65 abs-guide/escaped.sh:73 abs-guide/escaped.sh:79 abs-guide/escaped.sh:84 abs-guide/escaped.sh:90
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:71
+#, no-wrap
+msgid ""
+"# Assigning ASCII characters to a variable.\n"
+"# ----------------------------------------\n"
+"quote=$'\\042'        # \" assigned to a variable.\n"
+"echo \"$quote Quoted string $quote and this lies outside the quotes.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:77
+msgid ""
+"# Concatenating ASCII chars in a variable.  "
+"triple_underline=$'\\137\\137\\137' # 137 is octal ASCII code for '_'.  echo "
+"\"$triple_underline UNDERLINE $triple_underline\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:82
+#, no-wrap
+msgid ""
+"ABC=$'\\101\\102\\103\\010'           # 101, 102, 103 are octal A, B, C.\n"
+"echo $ABC\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:88
+#, no-wrap
+msgid ""
+"escape=$'\\033'                    # 033 is octal for escape.\n"
+"echo \"\\\"escape\\\" echoes as $escape\"\n"
+"#                                   no visible output.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/escaped.sh:91
+msgid "exit 0"
+msgstr ""

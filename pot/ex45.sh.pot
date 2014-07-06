@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex45.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:5
+msgid ""
+"# Demonstrating some of the uses of 'expr' # "
+"======================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:7 abs-guide/ex45.sh:103
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:10
+msgid "# Arithmetic Operators # ---------- ---------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:15
+msgid "echo \"Arithmetic Operators\" echo a=`expr 5 + 3` echo \"5 + 3 = $a\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:20
+msgid "a=`expr $a + 1` echo echo \"a + 1 = $a\" echo \"(incrementing a variable)\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:25
+msgid "a=`expr 5 % 3` # modulo echo echo \"5 mod 3 = $a\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:28 abs-guide/ex45.sh:65
+msgid "echo echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:31
+msgid "# Logical Operators # ------- ---------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:34
+msgid "# Returns 1 if true, 0 if false, #+ opposite of normal Bash convention."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:37
+msgid "echo \"Logical Operators\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:43
+#, no-wrap
+msgid ""
+"x=24\n"
+"y=25\n"
+"b=`expr $x = $y`         # Test equality.\n"
+"echo \"b = $b\"            # 0  ( $x -ne $y )\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:50
+#, no-wrap
+msgid ""
+"a=3\n"
+"b=`expr $a \\> 10`\n"
+"echo 'b=`expr $a \\> 10`, therefore...'\n"
+"echo \"If a > 10, b = 0 (false)\"\n"
+"echo \"b = $b\"            # 0  ( 3 ! -gt 10 )\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:56
+#, no-wrap
+msgid ""
+"b=`expr $a \\&lt; 10`\n"
+"echo \"If a &lt; 10, b = 1 (true)\"\n"
+"echo \"b = $b\"            # 1  ( 3 -lt 10 )\n"
+"echo\n"
+"# Note escaping of operators.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:61
+#, no-wrap
+msgid ""
+"b=`expr $a \\&lt;= 3`\n"
+"echo \"If a &lt;= 3, b = 1 (true)\"\n"
+"echo \"b = $b\"            # 1  ( 3 -le 3 )\n"
+"# There is also a \"\\>=\" operator (greater than or equal to).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:70
+msgid "# String Operators # ------ ---------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:73
+msgid "echo \"String Operators\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:76
+msgid "a=1234zipper43231 echo \"The string being operated upon is \\\"$a\\\".\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:80
+msgid ""
+"# length: length of string b=`expr length $a` echo \"Length of \\\"$a\\\" is "
+"$b.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:85
+#, no-wrap
+msgid ""
+"# index: position of first character in substring\n"
+"#        that matches a character in string\n"
+"b=`expr index $a 23`\n"
+"echo \"Numerical position of first \\\"2\\\" in \\\"$a\\\" is "
+"\\\"$b\\\".\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:90
+msgid ""
+"# substr: extract substring, starting position &amp; length specified "
+"b=`expr substr $a 2 6` echo \"Substring of \\\"$a\\\", starting at position "
+"2,\\ and 6 chars long is \\\"$b\\\".\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:101
+#, no-wrap
+msgid ""
+"#  The default behavior of the 'match' operations is to\n"
+"#+ search for the specified match at the BEGINNING of the string.\n"
+"#\n"
+"#       Using Regular Expressions ...\n"
+"b=`expr match \"$a\" '[0-9]*'`               #  Numerical count.\n"
+"echo Number of digits at the beginning of \\\"$a\\\" is $b.\n"
+"b=`expr match \"$a\" '\\([0-9]*\\)'`           #  Note that escaped "
+"parentheses\n"
+"#                   ==      ==             #+ trigger substring match.\n"
+"echo \"The digits at the beginning of \\\"$a\\\" are \\\"$b\\\".\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex45.sh:104
+msgid "exit 0"
+msgstr ""

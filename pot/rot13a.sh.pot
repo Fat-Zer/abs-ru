@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:3
+msgid ""
+"#!/bin/bash # rot13a.sh: Same as \"rot13.sh\" script, but writes output to "
+"\"secure\" file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:7
+#, no-wrap
+msgid ""
+"# Usage: ./rot13a.sh filename\n"
+"# or     ./rot13a.sh &lt;filename\n"
+"# or     ./rot13a.sh and supply keyboard input (stdin)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:11
+#, no-wrap
+msgid ""
+"umask 177               #  File creation mask.\n"
+"                        #  Files created by this script\n"
+"                        #+ will have 600 permissions.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:15
+#, no-wrap
+msgid ""
+"OUTFILE=decrypted.txt   #  Results output to file \"decrypted.txt\"\n"
+"                        #+ which can only be read/written\n"
+"                        #  by invoker of script (or root).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:18
+#, no-wrap
+msgid ""
+"cat \"$@\" | tr 'a-zA-Z' 'n-za-mN-ZA-M' > $OUTFILE \n"
+"#    ^^ Input from stdin or a file.   ^^^^^^^^^^ Output redirected to "
+"file. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rot13a.sh:19
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:5
+msgid ""
+"#!/bin/bash # getopt-simple.sh # Author: Chris Morgan # Used in the ABS "
+"Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:25
+#, no-wrap
+msgid ""
+"getopt_simple()\n"
+"{\n"
+"    echo \"getopt_simple()\"\n"
+"    echo \"Parameters are '$*'\"\n"
+"    until [ -z \"$1\" ]\n"
+"    do\n"
+"      echo \"Processing parameter of: '$1'\"\n"
+"      if [ ${1:0:1} = '/' ]\n"
+"      then\n"
+"          tmp=${1:1}               # Strip off leading '/' . . .\n"
+"          parameter=${tmp%%=*}     # Extract name.\n"
+"          value=${tmp##*=}         # Extract value.\n"
+"          echo \"Parameter: '$parameter', value: '$value'\"\n"
+"          eval $parameter=$value\n"
+"      fi\n"
+"      shift\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:28
+msgid "# Pass all options to getopt_simple().  getopt_simple $*"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:31
+msgid "echo \"test is '$test'\" echo \"test2 is '$test2'\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:33
+msgid "exit 0 # See also, UseGetOpt.sh, a modified version of this script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:34
+#, no-wrap
+msgid "---\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:37
+msgid "sh getopt_example.sh /test=value1 /test2=value2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/getopt-simple.sh:45
+msgid ""
+"Parameters are '/test=value1 /test2=value2' Processing parameter of: "
+"'/test=value1' Parameter: 'test', value: 'value1' Processing parameter of: "
+"'/test2=value2' Parameter: 'test2', value: 'value2' test is 'value1' test2 "
+"is 'value2'"
+msgstr ""

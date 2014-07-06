@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:3
+msgid "#!/bin/bash # color-echo.sh: Echoing text messages in color."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:6
+msgid ""
+"# Modify this script for your own purposes.  # It's easier than hand-coding "
+"color."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:15
+msgid ""
+"black='\\E[30;47m' red='\\E[31;47m' green='\\E[32;47m' yellow='\\E[33;47m' "
+"blue='\\E[34;47m' magenta='\\E[35;47m' cyan='\\E[36;47m' white='\\E[37;47m'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:19
+#, no-wrap
+msgid ""
+"alias Reset=\"tput sgr0\"      #  Reset text attributes to normal\n"
+"                             #+ without clearing screen.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:27
+#, no-wrap
+msgid ""
+"cecho ()                     # Color-echo.\n"
+"                             # Argument $1 = message\n"
+"                             # Argument $2 = color\n"
+"{\n"
+"local default_msg=\"No message passed.\"\n"
+"                             # Doesn't really need to be a local variable.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:30
+#, no-wrap
+msgid ""
+"message=${1:-$default_msg}   # Defaults to default message.\n"
+"color=${2:-$black}           # Defaults to black, if not specified.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:34
+#, no-wrap
+msgid ""
+"  echo -e \"$color\"\n"
+"  echo \"$message\"\n"
+"  Reset                      # Reset to normal.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:37
+#, no-wrap
+msgid ""
+"  return\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:55
+#, no-wrap
+msgid ""
+"# Now, let's try it out.\n"
+"# ----------------------------------------------------\n"
+"cecho \"Feeling blue...\" $blue\n"
+"cecho \"Magenta looks more like purple.\" $magenta\n"
+"cecho \"Green with envy.\" $green\n"
+"cecho \"Seeing red?\" $red\n"
+"cecho \"Cyan, more familiarly known as aqua.\" $cyan\n"
+"cecho \"No color passed (defaults to black).\"\n"
+"       # Missing $color argument.\n"
+"cecho \"\\\"Empty\\\" color passed (defaults to black).\" \"\"\n"
+"       # Empty $color argument.\n"
+"cecho\n"
+"       # Missing $message and $color arguments.\n"
+"cecho \"\" \"\"\n"
+"       # Empty $message and $color arguments.\n"
+"# ----------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:57
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:59
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/color-echo.sh:63
+msgid ""
+"# Exercises: # --------- # 1) Add the \"bold\" attribute to the 'cecho ()' "
+"function.  # 2) Add options for colored backgrounds."
+msgstr ""

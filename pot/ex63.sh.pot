@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex63.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:5
+#, no-wrap
+msgid ""
+"#               factorial\n"
+"#               ---------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:10
+msgid ""
+"# Does bash permit recursion? # Well, yes, but...  # It's so slow that you "
+"gotta have rocks in your head to try it."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:15
+msgid "MAX_ARG=5 E_WRONG_ARGS=85 E_RANGE_ERR=86"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:22
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` number\"\n"
+"  exit $E_WRONG_ARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:31
+#, no-wrap
+msgid ""
+"if [ \"$1\" -gt $MAX_ARG ]\n"
+"then\n"
+"  echo \"Out of range ($MAX_ARG is maximum).\"\n"
+"  #  Let's get real now.\n"
+"  #  If you want greater range than this,\n"
+"  #+ rewrite it in a Real Programming Language.\n"
+"  exit $E_RANGE_ERR\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:45
+#, no-wrap
+msgid ""
+"fact ()\n"
+"{\n"
+"  local number=$1\n"
+"  #  Variable \"number\" must be declared as local,\n"
+"  #+ otherwise this doesn't work.\n"
+"  if [ \"$number\" -eq 0 ]\n"
+"  then\n"
+"    factorial=1    # Factorial of 0 = 1.\n"
+"  else\n"
+"    let \"decrnum = number - 1\"\n"
+"    fact $decrnum  # Recursive function call (the function calls itself).\n"
+"    let \"factorial = $number * $?\"\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:48
+#, no-wrap
+msgid ""
+"  return $factorial\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:51
+msgid "fact $1 echo \"Factorial of $1 is $?.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex63.sh:52
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/erase.sh:3
+msgid ""
+"#!/bin/bash # erase.sh: Using \"stty\" to set an erase character when "
+"reading input."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/erase.sh:9
+#, no-wrap
+msgid ""
+"echo -n \"What is your name? \"\n"
+"read name                      #  Try to backspace\n"
+"                               #+ to erase characters of input.\n"
+"                               #  Problems?\n"
+"echo \"Your name is $name.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/erase.sh:14
+#, no-wrap
+msgid ""
+"stty erase '#'                 #  Set \"hashmark\" (#) as erase character.\n"
+"echo -n \"What is your name? \"\n"
+"read name                      #  Use # to erase last character typed.\n"
+"echo \"Your name is $name.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/erase.sh:16
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/erase.sh:18
+msgid ""
+"# Even after the script exits, the new key value remains set.  # Exercise: "
+"How would you reset the erase character to the default value?"
+msgstr ""

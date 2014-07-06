@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex65.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:5
+msgid ""
+"# delete.sh, a not-so-cunning file deletion utility.  # Usage: delete "
+"filename"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:7
+msgid "E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:15
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS  # No arg? Bail out.\n"
+"else  \n"
+"  file=$1          # Set filename.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:21
+msgid ""
+"[ ! -f \"$file\" ] &amp;&amp; echo \"File \\\"$file\\\" not found. \\ "
+"Cowardly refusing to delete a nonexistent file.\" # AND LIST, to give error "
+"message if file not present.  # Note echo message continuing on to a second "
+"line after an escape."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:24
+msgid ""
+"[ ! -f \"$file\" ] || (rm -f $file; echo \"File \\\"$file\\\" deleted.\")  # "
+"OR LIST, to delete file if present."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:27
+msgid ""
+"# Note logic inversion above.  # AND LIST executes on true, OR LIST on "
+"false."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex65.sh:28
+msgid "exit $?"
+msgstr ""

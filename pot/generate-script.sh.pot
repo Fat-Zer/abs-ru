@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:4
+msgid "#!/bin/bash # generate-script.sh # Based on an idea by Albert Reiner."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:6
+#, no-wrap
+msgid "OUTFILE=generated.sh         # Name of the file to generate.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:13
+msgid ""
+"# ----------------------------------------------------------- # 'Here "
+"document containing the body of the generated script.  ( cat &lt;&lt;'EOF' "
+"#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:17
+msgid ""
+"echo \"This is a generated shell script.\" # Note that since we are inside a "
+"subshell, #+ we can't access variables in the \"outside\" script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:22
+msgid ""
+"echo \"Generated file will be named: $OUTFILE\" # Above line will not work "
+"as normally expected #+ because parameter expansion has been disabled.  # "
+"Instead, the result is literal output."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:25
+msgid "a=7 b=3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:28
+msgid "let \"c = $a * $b\" echo \"c = $c\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:33
+msgid ""
+"exit 0 EOF ) > $OUTFILE # "
+"-----------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:37
+msgid ""
+"# Quoting the 'limit string' prevents variable expansion #+ within the body "
+"of the above 'here document.' # This permits outputting literal strings in "
+"the output file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:45
+#, no-wrap
+msgid ""
+"if [ -f \"$OUTFILE\" ]\n"
+"then\n"
+"  chmod 755 $OUTFILE\n"
+"  # Make the generated file executable.\n"
+"else\n"
+"  echo \"Problem in creating file: \\\"$OUTFILE\\\"\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:49
+msgid ""
+"# This method also works for generating #+ C programs, Perl programs, Python "
+"programs, Makefiles, #+ and the like."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/generate-script.sh:50
+msgid "exit 0"
+msgstr ""

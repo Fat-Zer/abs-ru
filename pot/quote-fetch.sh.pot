@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:3
+msgid "#!/bin/bash # quote-fetch.sh: Download a stock quote."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:6
+msgid "E_NOPARAMS=86"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:11
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]  # Must specify a stock (symbol) to fetch.\n"
+"  then echo \"Usage: `basename $0` stock-symbol\"\n"
+"  exit $E_NOPARAMS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:13
+msgid "stock_symbol=$1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:18
+msgid ""
+"file_suffix=.html # Fetches an HTML file, so name it appropriately.  "
+"URL='http://finance.yahoo.com/q?s=' # Yahoo finance board, with stock query "
+"suffix."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:22
+msgid ""
+"# ----------------------------------------------------------- wget -O "
+"${stock_symbol}${file_suffix} \"${URL}${stock_symbol}\" # "
+"-----------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:30
+msgid ""
+"# To look up stuff on http://search.yahoo.com: # "
+"----------------------------------------------------------- # "
+"URL=\"http://search.yahoo.com/search?fr=ush-news&amp;p=${query}\" # wget -O "
+"\"$savefilename\" \"${URL}\" # "
+"----------------------------------------------------------- # Saves a list "
+"of relevant URLs."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:32
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/quote-fetch.sh:40
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"#\n"
+"# 1) Add a test to ensure the user running the script is on-line.\n"
+"#    (Hint: parse the output of 'ps -ax' for \"ppp\" or \"connect.\"\n"
+"#\n"
+"# 2) Modify this script to fetch the local weather report,\n"
+"#+   taking the user's zip code as an argument.\n"
+msgstr ""

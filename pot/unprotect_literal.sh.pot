@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:3
+msgid "#! /bin/bash # unprotect_literal.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:5 abs-guide/unprotect_literal.sh:72
+msgid "# set -vx"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:7
+msgid ":&lt;&lt;-'_UnProtect_Literal_String_Doc'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:12
+#, no-wrap
+msgid ""
+"    Copyright (c) Michael S. Zick, 2003; All Rights Reserved\n"
+"    License: Unrestricted reuse in any form, for any purpose.\n"
+"    Warranty: None\n"
+"    Revision: $ID$\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:16
+#, no-wrap
+msgid ""
+"    Documentation redirected to the Bash no-operation. Bash will\n"
+"    '/dev/null' this block when the script is first read.\n"
+"    (Uncomment the above set command to see this action.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:20
+#, no-wrap
+msgid ""
+"    Remove the first (Sha-Bang) line when sourcing this as a library\n"
+"    procedure.  Also comment out the example use code in the two\n"
+"    places where shown.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:25
+#, no-wrap
+msgid ""
+"    Usage:\n"
+"        Complement of the \"$(_pls 'Literal String')\" function.\n"
+"        (See the protect_literal.sh example.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:27
+#, no-wrap
+msgid "        StringVar=$(_upls ProtectedSringVariable)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:31
+#, no-wrap
+msgid ""
+"    Does:\n"
+"        When used on the right-hand-side of an assignment statement;\n"
+"        makes the substitions embedded in the protected string.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:36
+#, no-wrap
+msgid ""
+"    Notes:\n"
+"        The strange names (_*) are used to avoid trampling on\n"
+"        the user's chosen names when this is sourced as a\n"
+"        library.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:39
+msgid "_UnProtect_Literal_String_Doc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:44
+#, no-wrap
+msgid ""
+"_upls() {\n"
+"    local IFS=$'x1B'                # \\ESC character (not required)\n"
+"    eval echo $@                    # Substitution on the glob.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:47
+msgid ""
+"# :&lt;&lt;-'_UnProtect_Literal_String_Test' # # # Remove the above \"# \" "
+"to disable this code. # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:53
+#, no-wrap
+msgid ""
+"_pls() {\n"
+"    local IFS=$'x1B'                # \\ESC character (not required)\n"
+"    echo $'\\x27'$@$'\\x27'           # Hard quoted parameter glob\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:56
+msgid "# Declare an array for test values.  declare -a arrayZ"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:59
+msgid ""
+"# Assign elements with various types of quotes and escapes.  arrayZ=( zero "
+"\"$(_pls 'Hello ${Me}')\" 'Hello ${You}' \"\\'Pass: ${pw}\\'\" )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:62
+msgid ""
+"# Now make an assignment with that result.  declare -a array2=( ${arrayZ[@]} "
+")"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:70
+#, no-wrap
+msgid ""
+"# Which yielded:\n"
+"# - - Test Three - -\n"
+"# Element 0: zero is: 4 long            # Our marker element.\n"
+"# Element 1: Hello ${Me} is: 11 long    # Intended result.\n"
+"# Element 2: Hello is: 5 long           # ${You} expanded to nothing.\n"
+"# Element 3: 'Pass: is: 6 long          # Split on the whitespace.\n"
+"# Element 4: ' is: 1 long               # The end quote is here now.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:77
+msgid ""
+"# Initialize 'Me' to something for the embedded ${Me} substitution.  # This "
+"needs to be done ONLY just prior to evaluating the #+ protected string.  # "
+"(This is why it was protected to begin with.)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:79
+msgid "Me=\"to the array guy.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:82
+msgid ""
+"# Set a string variable destination to the result.  newVar=$(_upls "
+"${array2[1]})"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:85
+msgid "# Show what the contents are.  echo $newVar"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:89
+msgid ""
+"# Do we really need a function to do this? newerVar=$(eval echo "
+"${array2[1]})  echo $newerVar"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:94
+msgid ""
+"# I guess not, but the _upls function gives us a place to hang #+ the "
+"documentation on.  # This helps when we forget what a # construction like: "
+"#+ $(eval echo ... ) means."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:99
+msgid ""
+"# What if Me isn't set when the protected string is evaluated? unset Me "
+"newestVar=$(_upls ${array2[1]})  echo $newestVar"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:101
+msgid "# Just gone, no hints, no runs, no errors."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:109
+msgid ""
+"# Why in the world? # Setting the contents of a string variable containing "
+"character #+ sequences that have a meaning in Bash is a general problem in "
+"#+ script programming.  # # This problem is now solved in eight lines of "
+"code #+ (and four pages of description)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:119
+msgid ""
+"# Where is all this going? # Dynamic content Web pages as an array of Bash "
+"strings.  # Content set per request by a Bash 'eval' command #+ on the "
+"stored page template.  # Not intended to replace PHP, just an interesting "
+"thing to do.  ### # Don't have a webserver application? # No problem, check "
+"the example directory of the Bash source; #+ there is a Bash script for that "
+"also."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:122
+msgid ""
+"# _UnProtect_Literal_String_Test # # # Remove the above \"# \" to disable "
+"this code. # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/unprotect_literal.sh:123
+msgid "exit 0"
+msgstr ""

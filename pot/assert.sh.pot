@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/assert.sh:3
+msgid "#!/bin/bash # assert.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:10
+#, no-wrap
+msgid ""
+"#######################################################################\n"
+"assert ()                 #  If condition false,\n"
+"{                         #+ exit from script\n"
+"                          #+ with appropriate error message.\n"
+"  E_PARAM_ERR=98\n"
+"  E_ASSERT_FAILED=99\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:16
+#, no-wrap
+msgid ""
+"  if [ -z \"$2\" ]          #  Not enough parameters passed\n"
+"  then                    #+ to assert() function.\n"
+"    return $E_PARAM_ERR   #  No damage done.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:18
+#, no-wrap
+msgid "  lineno=$2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:30
+#, no-wrap
+msgid ""
+"  if [ ! $1 ] \n"
+"  then\n"
+"    echo \"Assertion failed:  \\\"$1\\\"\"\n"
+"    echo \"File \\\"$0\\\", line $lineno\"    # Give name of file and line "
+"number.\n"
+"    exit $E_ASSERT_FAILED\n"
+"  # else\n"
+"  #   return\n"
+"  #   and continue executing the script.\n"
+"  fi  \n"
+"} # Insert a similar assert() function into a script you need to debug.    "
+"\n"
+"#######################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:37
+#, no-wrap
+msgid ""
+"a=5\n"
+"b=4\n"
+"condition=\"$a -lt $b\"     #  Error message and exit from script.\n"
+"                          #  Try setting \"condition\" to something else\n"
+"                          #+ and see what happens.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:40
+msgid ""
+"assert \"$condition\" $LINENO # The remainder of the script executes only if "
+"the \"assert\" does not fail."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:47
+msgid ""
+"# Some commands.  # Some more commands . . .  echo \"This statement echoes "
+"only if the \\\"assert\\\" does not fail.\" # . . .  # More commands . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/assert.sh:48
+msgid "exit $?"
+msgstr ""

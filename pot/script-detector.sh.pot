@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/script-detector.sh:3
+msgid "#!/bin/bash # script-detector.sh: Detects scripts within a directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-detector.sh:6
+#, no-wrap
+msgid ""
+"TESTCHARS=2    # Test first 2 characters.\n"
+"SHABANG='#!'   # Scripts begin with a \"sha-bang.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-detector.sh:19
+#, no-wrap
+msgid ""
+"for file in *  # Traverse all the files in current directory.\n"
+"do\n"
+"  if [[ `head -c$TESTCHARS \"$file\"` = \"$SHABANG\" ]]\n"
+"  #      head -c2                      #!\n"
+"  #  The '-c' option to \"head\" outputs a specified\n"
+"  #+ number of characters, rather than lines (the default).\n"
+"  then\n"
+"    echo \"File \\\"$file\\\" is a script.\"\n"
+"  else\n"
+"    echo \"File \\\"$file\\\" is *not* a script.\"\n"
+"  fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-detector.sh:21
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-detector.sh:30
+#, no-wrap
+msgid ""
+"#  Exercises:\n"
+"#  ---------\n"
+"#  1) Modify this script to take as an optional argument\n"
+"#+    the directory to scan for scripts\n"
+"#+    (rather than just the current working directory).\n"
+"#\n"
+"#  2) As it stands, this script gives \"false positives\" for\n"
+"#+    Perl, awk, and other scripting language scripts.\n"
+"#     Correct this.\n"
+msgstr ""

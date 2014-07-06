@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:3
+msgid "#!/bin/bash # Using getopt"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:16
+#, no-wrap
+msgid ""
+"# Try the following when invoking this script:\n"
+"#   sh ex33a.sh -a\n"
+"#   sh ex33a.sh -abc\n"
+"#   sh ex33a.sh -a -b -c\n"
+"#   sh ex33a.sh -d\n"
+"#   sh ex33a.sh -dXYZ\n"
+"#   sh ex33a.sh -d XYZ\n"
+"#   sh ex33a.sh -abcd\n"
+"#   sh ex33a.sh -abcdZ\n"
+"#   sh ex33a.sh -z\n"
+"#   sh ex33a.sh a\n"
+"# Explain the results of each of the above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:18
+msgid "E_OPTERR=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:24
+#, no-wrap
+msgid ""
+"if [ \"$#\" -eq 0 ]\n"
+"then   # Script needs at least one command-line argument.\n"
+"  echo \"Usage $0 -[options a,b,c]\"\n"
+"  exit $E_OPTERR\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:28
+msgid ""
+"set -- `getopt \"abcd:\" \"$@\"` # Sets positional parameters to "
+"command-line arguments.  # What happens if you use \"$*\" instead of \"$@\"?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:38
+#, no-wrap
+msgid ""
+"while [ ! -z \"$1\" ]\n"
+"do\n"
+"  case \"$1\" in\n"
+"    -a) echo \"Option \\\"a\\\"\";;\n"
+"    -b) echo \"Option \\\"b\\\"\";;\n"
+"    -c) echo \"Option \\\"c\\\"\";;\n"
+"    -d) echo \"Option \\\"d\\\" $2\";;\n"
+"     *) break;;\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:41
+#, no-wrap
+msgid ""
+"  shift\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:44
+msgid ""
+"# It is usually better to use the 'getopts' builtin in a script.  # See "
+"\"ex33.sh.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33a.sh:45
+msgid "exit 0"
+msgstr ""

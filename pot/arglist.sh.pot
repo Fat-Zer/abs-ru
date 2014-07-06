@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/arglist.sh:4
+msgid ""
+"#!/bin/bash # arglist.sh # Invoke this script with several arguments, such "
+"as \"one two three\" ..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:6
+msgid "E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:12
+#, no-wrap
+msgid ""
+"if [ ! -n \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` argument1 argument2 etc.\"\n"
+"  exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:14 abs-guide/arglist.sh:26 abs-guide/arglist.sh:39
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:16
+#, no-wrap
+msgid "index=1          # Initialize count.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:24
+#, no-wrap
+msgid ""
+"echo \"Listing args with \\\"\\$*\\\":\"\n"
+"for arg in \"$*\"  # Doesn't work properly if \"$*\" isn't quoted.\n"
+"do\n"
+"  echo \"Arg #$index = $arg\"\n"
+"  let \"index+=1\"\n"
+"done             # $* sees all arguments as single word. \n"
+"echo \"Entire arg list seen as single word.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:29
+#, no-wrap
+msgid ""
+"index=1          # Reset count.\n"
+"                 # What happens if you forget to do this?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:37
+#, no-wrap
+msgid ""
+"echo \"Listing args with \\\"\\$@\\\":\"\n"
+"for arg in \"$@\"\n"
+"do\n"
+"  echo \"Arg #$index = $arg\"\n"
+"  let \"index+=1\"\n"
+"done             # $@ sees arguments as separate words. \n"
+"echo \"Arg list seen as separate words.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:41
+#, no-wrap
+msgid "index=1          # Reset count.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:49
+#, no-wrap
+msgid ""
+"echo \"Listing args with \\$* (unquoted):\"\n"
+"for arg in $*\n"
+"do\n"
+"  echo \"Arg #$index = $arg\"\n"
+"  let \"index+=1\"\n"
+"done             # Unquoted $* sees arguments as separate words. \n"
+"echo \"Arg list seen as separate words.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arglist.sh:50
+msgid "exit 0"
+msgstr ""

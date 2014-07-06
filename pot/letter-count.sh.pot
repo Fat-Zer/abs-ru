@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:6
+msgid ""
+"#!/bin/bash # letter-count.sh: Counting letter occurrences in a text file.  "
+"# Written by Stefano Palmeri.  # Used in ABS Guide with permission.  # "
+"Slightly modified by document author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:10
+#, no-wrap
+msgid ""
+"MINARGS=2          # Script requires at least two arguments.\n"
+"E_BADARGS=65\n"
+"FILE=$1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:13
+#, no-wrap
+msgid ""
+"let LETTERS=$#-1   # How many letters specified (as command-line args).\n"
+"                   # (Subtract 1 from number of command-line args.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:22
+#, no-wrap
+msgid ""
+"show_help(){\n"
+"\t   echo\n"
+"           echo Usage: `basename $0` file letters  \n"
+"           echo Note: `basename $0` arguments are case sensitive.\n"
+"           echo Example: `basename $0` foobar.txt G n U L i N U x.\n"
+"\t   echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:31
+#, no-wrap
+msgid ""
+"# Checks number of arguments.\n"
+"if [ $# -lt $MINARGS ]; then\n"
+"   echo\n"
+"   echo \"Not enough arguments.\"\n"
+"   echo\n"
+"   show_help\n"
+"   exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:38
+#, no-wrap
+msgid ""
+"# Checks if file exists.\n"
+"if [ ! -f $FILE ]; then\n"
+"    echo \"File \\\"$FILE\\\" does not exist.\"\n"
+"    exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:50
+#, no-wrap
+msgid ""
+"# Counts letter occurrences .\n"
+"for n in `seq $LETTERS`; do\n"
+"      shift\n"
+"      if [[ `echo -n \"$1\" | wc -c` -eq 1 ]]; then             #  Checks "
+"arg.\n"
+"             echo \"$1\" -\\> `cat $FILE | tr -cd  \"$1\" | wc -c` #  "
+"Counting.\n"
+"      else\n"
+"             echo \"$1 is not a  single char.\"\n"
+"      fi  \n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:52
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count.sh:55
+msgid ""
+"# This script has exactly the same functionality as letter-count2.sh, #+ but "
+"executes faster.  # Why?"
+msgstr ""

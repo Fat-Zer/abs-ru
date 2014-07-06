@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/makedict.sh:3
+msgid "#!/bin/bash # makedict.sh [make dictionary]"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:10
+msgid ""
+"# Modification of /usr/sbin/mkdict (/usr/sbin/cracklib-forman) script.  # "
+"Original script copyright 1993, by Alec Muffett.  # # This modified script "
+"included in this document in a manner #+ consistent with the \"LICENSE\" "
+"document of the \"Crack\" package #+ that the original script is a part of."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:15
+msgid ""
+"# This script processes text files to produce a sorted list #+ of words "
+"found in the files.  # This may be useful for compiling dictionaries #+ and "
+"for other lexicographic purposes."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:18
+msgid "E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:24
+#, no-wrap
+msgid ""
+"if [ ! -r \"$1\" ]                    #  Need at least one\n"
+"then                                #+ valid file argument.\n"
+"  echo \"Usage: $0 files-to-process\"\n"
+"  exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:29
+#, no-wrap
+msgid ""
+"# SORT=\"sort\"                       #  No longer necessary to define\n"
+"                                    #+ options to sort. Changed from\n"
+"                                    #+ original script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:41
+#, no-wrap
+msgid ""
+"cat $* |                            #  Dump specified files to stdout.\n"
+"        tr A-Z a-z |                #  Convert to lowercase.\n"
+"        tr ' ' '\\012' |             #  New: change spaces to newlines.\n"
+"#       tr -cd '\\012[a-z][0-9]' |   #  Get rid of everything\n"
+"                                    #+ non-alphanumeric (in orig. script).\n"
+"        tr -c '\\012a-z'  '\\012' |   #  Rather than deleting non-alpha\n"
+"                                    #+ chars, change them to newlines.\n"
+"        sort |                      #  $SORT options unnecessary now.\n"
+"        uniq |                      #  Remove duplicates.\n"
+"        grep -v '^#' |              #  Delete lines starting with #.\n"
+"        grep -v '^$'                #  Delete blank lines.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/makedict.sh:42
+msgid "exit $?"
+msgstr ""

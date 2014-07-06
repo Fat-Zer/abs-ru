@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:4
+msgid ""
+"#!/bin/bash # seeding-random.sh: Seeding the RANDOM variable.  # v 1.1, "
+"reldate 09 Feb 2013"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:7
+#, no-wrap
+msgid ""
+"MAXCOUNT=25       # How many numbers to generate.\n"
+"SEED=\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:12
+msgid "random_numbers ()  { local count=0 local number"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:20
+#, no-wrap
+msgid ""
+"while [ \"$count\" -lt \"$MAXCOUNT\" ]\n"
+"do\n"
+"  number=$RANDOM\n"
+"  echo -n \"$number \"\n"
+"  let \"count++\"\n"
+"done  \n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:22 abs-guide/seeding-random.sh:37 abs-guide/seeding-random.sh:44 abs-guide/seeding-random.sh:60
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:27
+#, no-wrap
+msgid ""
+"SEED=1\n"
+"RANDOM=$SEED      # Setting RANDOM seeds the random number generator.\n"
+"echo \"Random seed = $SEED\"\n"
+"random_numbers\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:35
+#, no-wrap
+msgid ""
+"RANDOM=$SEED      # Same seed for RANDOM . . .\n"
+"echo; echo \"Again, with same random seed ...\"\n"
+"echo \"Random seed = $SEED\"\n"
+"random_numbers    # . . . reproduces the exact same number series.\n"
+"                  #\n"
+"                  # When is it useful to duplicate a \"random\" series?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:42
+#, no-wrap
+msgid ""
+"SEED=2\n"
+"RANDOM=$SEED      # Trying again, but with a different seed . . .\n"
+"echo \"Random seed = $SEED\"\n"
+"random_numbers    # . . . gives a different number series.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:47
+msgid ""
+"# RANDOM=$$ seeds RANDOM from process id of script.  # It is also possible "
+"to seed RANDOM from 'time' or 'date' commands."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:58
+msgid ""
+"# Getting fancy...  SEED=$(head -1 /dev/urandom | od -N 1 | awk '{ print $2 "
+"}'| sed s/^0*//)  # Pseudo-random output fetched #+ from /dev/urandom "
+"(system pseudo-random device-file), #+ then converted to line of printable "
+"(octal) numbers by \"od\", #+ then \"awk\" retrieves just one number for "
+"SEED, #+ finally \"sed\" removes any leading zeros.  RANDOM=$SEED echo "
+"\"Random seed = $SEED\" random_numbers"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/seeding-random.sh:61
+msgid "exit 0"
+msgstr ""

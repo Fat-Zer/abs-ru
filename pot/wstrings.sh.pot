@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:8
+msgid ""
+"#!/bin/bash # wstrings.sh: \"word-strings\" (enhanced \"strings\" command)  "
+"# # This script filters the output of \"strings\" by checking it #+ against "
+"a standard word list file.  # This effectively eliminates gibberish and "
+"noise, #+ and outputs only recognized words."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:14
+#, no-wrap
+msgid ""
+"# ===========================================================\n"
+"#                 Standard Check for Script Argument(s)\n"
+"ARGS=1\n"
+"E_BADARGS=85\n"
+"E_NOFILE=86\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:20
+#, no-wrap
+msgid ""
+"if [ $# -ne $ARGS ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:27
+#, no-wrap
+msgid ""
+"if [ ! -f \"$1\" ]                      # Check if file exists.\n"
+"then\n"
+"    echo \"File \\\"$1\\\" does not exist.\"\n"
+"    exit $E_NOFILE\n"
+"fi\n"
+"# ===========================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:35
+#, no-wrap
+msgid ""
+"MINSTRLEN=3                           #  Minimum string length.\n"
+"WORDFILE=/usr/share/dict/linux.words  #  Dictionary file.\n"
+"#  May specify a different word list file\n"
+"#+ of one-word-per-line format.\n"
+"#  For example, the \"yawl\" word-list package,\n"
+"#  http://bash.deta.in/yawl-0.3.2.tar.gz\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:39
+#, no-wrap
+msgid ""
+"wlist=`strings \"$1\" | tr A-Z a-z | tr '[:space:]' Z | \\\n"
+"       tr -cs '[:alpha:]' Z | tr -s '\\173-\\377' Z | tr Z ' '`\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:51
+msgid ""
+"# Translate output of 'strings' command with multiple passes of 'tr'.  # "
+"\"tr A-Z a-z\" converts to lowercase.  # \"tr '[:space:]'\" converts "
+"whitespace characters to Z's.  # \"tr -cs '[:alpha:]' Z\" converts "
+"non-alphabetic characters to Z's, #+ and squeezes multiple consecutive Z's.  "
+"# \"tr -s '\\173-\\377' Z\" converts all characters past 'z' to Z's #+ and "
+"squeezes multiple consecutive Z's, #+ which gets rid of all the weird "
+"characters that the previous #+ translation failed to deal with.  # Finally, "
+"\"tr Z ' '\" converts all those Z's to whitespace, #+ which will be seen as "
+"word separators in the loop below."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:56
+msgid ""
+"# *********************************************************************** # "
+"Note the technique of feeding/piping the output of 'tr' back to itself, #+ "
+"but with different arguments and/or options on each successive pass.  # "
+"***********************************************************************"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:68
+#, no-wrap
+msgid ""
+"for word in $wlist                    #  Important:\n"
+"                                      #  $wlist must not be quoted here.\n"
+"                                      # \"$wlist\" does not work.\n"
+"                                      #  Why not?\n"
+"do\n"
+"  strlen=${#word}                     #  String length.\n"
+"  if [ \"$strlen\" -lt \"$MINSTRLEN\" ]   #  Skip over short strings.\n"
+"  then\n"
+"    continue\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:73
+#, no-wrap
+msgid ""
+"  grep -Fw $word \"$WORDFILE\"          #   Match whole words only.\n"
+"#      ^^^                            #  \"Fixed strings\" and\n"
+"                                      #+ \"whole words\" options. \n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wstrings.sh:74
+msgid "exit $?"
+msgstr ""

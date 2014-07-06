@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:5
+msgid ""
+"#!/bin/bash # logging-wrapper.sh # Generic shell wrapper that performs an "
+"operation #+ and logs it."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:7
+msgid "DEFAULT_LOGFILE=logfile.txt"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:12
+#, no-wrap
+msgid ""
+"# Set the following two variables.\n"
+"OPERATION=\n"
+"#         Can be a complex chain of commands,\n"
+"#+        for example an awk script or a pipe . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:18
+#, no-wrap
+msgid ""
+"LOGFILE=\n"
+"if [ -z \"$LOGFILE\" ]\n"
+"then     # If not set, default to ...\n"
+"  LOGFILE=\"$DEFAULT_LOGFILE\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:21
+#, no-wrap
+msgid ""
+"#         Command-line arguments, if any, for the operation.\n"
+"OPTIONS=\"$@\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:27
+msgid ""
+"# Log it.  echo \"`date` + `whoami` + $OPERATION \"$@\"\" >> $LOGFILE # Now, "
+"do it.  exec $OPERATION \"$@\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logging-wrapper.sh:29
+msgid "# It's necessary to do the logging before the operation.  # Why?"
+msgstr ""

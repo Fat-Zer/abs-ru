@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:3
+msgid "#!/bin/bash # The \"continue N\" command, continuing at the Nth level loop."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:7
+#, no-wrap
+msgid ""
+"for outer in I II III IV V           # outer loop\n"
+"do\n"
+"  echo; echo -n \"Group $outer: \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:11
+#, no-wrap
+msgid ""
+"  # --------------------------------------------------------------------\n"
+"  for inner in 1 2 3 4 5 6 7 8 9 10  # inner loop\n"
+"  do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:18
+#, no-wrap
+msgid ""
+"    if [[ \"$inner\" -eq 7 &amp;&amp; \"$outer\" = \"III\" ]]\n"
+"    then\n"
+"      continue 2  # Continue at loop on 2nd level, that is \"outer loop\".\n"
+"                  # Replace above line with a simple \"continue\"\n"
+"                  # to see normal loop behavior.\n"
+"    fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:22
+#, no-wrap
+msgid ""
+"    echo -n \"$inner \"  # 7 8 9 10 will not echo on \"Group III.\"\n"
+"  done  \n"
+"  # --------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:24
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:26
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:29
+msgid "# Exercise: # Come up with a meaningful use for \"continue N\" in a script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-nlevel.sh:30
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rn.sh:3
+msgid "#! /bin/bash # rn.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:8
+msgid ""
+"# Very simpleminded filename \"rename\" utility (based on "
+"\"lowercase.sh\").  # # The \"ren\" utility, by Vladimir Lanin "
+"(lanin@csd2.nyu.edu), #+ does a much better job of this."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:13
+#, no-wrap
+msgid ""
+"ARGS=2\n"
+"E_BADARGS=85\n"
+"ONE=1                     # For getting singular/plural right (see below).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:20
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` old-pattern new-pattern\"\n"
+"  # As in \"rn gif jpg\", which renames all gif files in working directory "
+"to jpg.\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:22
+#, no-wrap
+msgid ""
+"number=0                  # Keeps track of how many files actually "
+"renamed.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:34
+#, no-wrap
+msgid ""
+"for filename in *$1*      #Traverse all matching files in directory.\n"
+"do\n"
+"   if [ -f \"$filename\" ]  # If finds match...\n"
+"   then\n"
+"     fname=`basename $filename`            # Strip off path.\n"
+"     n=`echo $fname | sed -e \"s/$1/$2/\"`   # Substitute new for old in "
+"filename.\n"
+"     mv $fname $n                          # Rename.\n"
+"     let \"number += 1\"\n"
+"   fi\n"
+"done   \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:41
+#, no-wrap
+msgid ""
+"if [ \"$number\" -eq \"$ONE\" ]                # For correct grammar.\n"
+"then\n"
+" echo \"$number file renamed.\"\n"
+"else \n"
+" echo \"$number files renamed.\"\n"
+"fi \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:43
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rn.sh:48
+msgid ""
+"# Exercises: # --------- # What types of files will this not work on? # How "
+"can this be fixed?"
+msgstr ""

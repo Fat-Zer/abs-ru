@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:4
+msgid "#!/bin/bash # paragraph-space.sh # Ver. 2.1, Reldate 29Jul12 [fixup]"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:7
+msgid ""
+"# Inserts a blank line between paragraphs of a single-spaced text file.  # "
+"Usage: $0 &lt;FILENAME"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:11
+#, no-wrap
+msgid ""
+"MINLEN=60        # Change this value? It's a judgment call.\n"
+"#  Assume lines shorter than $MINLEN characters ending in a period\n"
+"#+ terminate a paragraph. See exercises below.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:15
+#, no-wrap
+msgid ""
+"while read line  # For as many lines as the input file has ...\n"
+"do\n"
+"  echo \"$line\"   # Output the line itself.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:24
+#, no-wrap
+msgid ""
+"  len=${#line}\n"
+"  if [[ \"$len\" -lt \"$MINLEN\" &amp;&amp; \"$line\" =~ [*{\\.}]$ ]]\n"
+"# if [[ \"$len\" -lt \"$MINLEN\" &amp;&amp; \"$line\" =~ \\[*\\.\\] ]]\n"
+"# An update to Bash broke the previous version of this script. Ouch!\n"
+"# Thank you, Halim Srama, for pointing this out and suggesting a fix.\n"
+"    then echo    #  Add a blank line immediately\n"
+"  fi             #+ after a short line terminated by a period.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:26
+msgid "exit"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/paragraph-space.sh:33
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"#  1) The script usually inserts a blank line at the end\n"
+"#+    of the target file. Fix this.\n"
+"#  2) Line 17 only considers periods as sentence terminators.\n"
+"#     Modify this to include other common end-of-sentence characters,\n"
+"#+    such as ?, !, and \".\n"
+msgstr ""

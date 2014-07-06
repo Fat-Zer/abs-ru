@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:4
+msgid ""
+"#!/bin/bash # ip-addresses.sh # List the IP addresses your computer is "
+"connected to."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:11
+#, no-wrap
+msgid ""
+"#  Inspired by Greg Bledsoe's ddos.sh script,\n"
+"#  Linux Journal, 09 March 2011.\n"
+"#    URL:\n"
+"#  http://www.linuxjournal.com/content/back-dead-simple-bash-complex-ddos\n"
+"#  Greg licensed his script under the GPL2,\n"
+"#+ and as a derivative, this script is likewise GPL2.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:20
+#, no-wrap
+msgid ""
+"connection_type=TCP      # Also try UDP.\n"
+"field=2           # Which field of the output we're interested in.\n"
+"no_match=LISTEN   # Filter out records containing this. Why?\n"
+"lsof_args=-ni     # -i lists Internet-associated files.\n"
+"                  # -n preserves numerical IP addresses.\n"
+"\t\t  # What happens without the -n option? Try it.\n"
+"router=\"[0-9][0-9][0-9][0-9][0-9]->\"\n"
+"#       Delete the router info.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:24
+#, no-wrap
+msgid ""
+"lsof \"$lsof_args\" | grep $connection_type | grep -v \"$no_match\" |\n"
+"      awk '{print $9}' | cut -d : -f $field | sort | uniq |\n"
+"      sed s/\"^$router\"//\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:33
+#, no-wrap
+msgid ""
+"#  Bledsoe's script assigns the output of a filtered IP list,\n"
+"#  (similar to lines 19-22, above) to a variable.\n"
+"#  He checks for multiple connections to a single IP address,\n"
+"#  then uses:\n"
+"#\n"
+"#    iptables -I INPUT -s $ip -p tcp -j REJECT --reject-with tcp-reset\n"
+"#\n"
+"#  ... within a 60-second delay loop to bounce packets from DDOS attacks.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ip-addresses.sh:38
+msgid ""
+"# Exercise: # -------- # Use the 'iptables' command to extend this script #+ "
+"to reject connection attempts from well-known spammer IP domains."
+msgstr ""

@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:3
+msgid "#!/bin/bash # param-sub.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:7
+msgid ""
+"# Whether a variable has been declared #+ affects triggering of the default "
+"option #+ even if the variable is null."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:12
+msgid ""
+"username0= echo \"username0 has been declared, but is set to null.\" echo "
+"\"username0 = ${username0-`whoami`}\" # Will not echo."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:14
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:18
+msgid ""
+"echo username1 has not been declared.  echo \"username1 = "
+"${username1-`whoami`}\" # Will echo."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:25
+#, no-wrap
+msgid ""
+"username2=\n"
+"echo \"username2 has been declared, but is set to null.\"\n"
+"echo \"username2 = ${username2:-`whoami`}\"\n"
+"#                            ^\n"
+"# Will echo because of :- rather than just - in condition test.\n"
+"# Compare to first instance, above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:28
+msgid "#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:30
+msgid "# Once again:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:33
+msgid "variable= # variable has been declared, but is set to null."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:37
+#, no-wrap
+msgid ""
+"echo \"${variable-0}\"    # (no output)\n"
+"echo \"${variable:-1}\"   # 1\n"
+"#               ^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:39
+msgid "unset variable"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:42
+#, no-wrap
+msgid ""
+"echo \"${variable-2}\"    # 2\n"
+"echo \"${variable:-3}\"   # 3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/param-sub.sh:43
+msgid "exit 0"
+msgstr ""

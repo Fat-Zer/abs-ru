@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex15.sh:3
+msgid "#!/bin/bash # Naked variables"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:5 abs-guide/ex15.sh:18 abs-guide/ex15.sh:35
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:8
+msgid ""
+"# When is a variable \"naked\", i.e., lacking the '$' in front? # When it is "
+"being assigned, rather than referenced."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:12
+msgid "# Assignment a=879 echo \"The value of \\\"a\\\" is $a.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:16
+msgid ""
+"# Assignment using 'let' let a=16+5 echo \"The value of \\\"a\\\" is now "
+"$a.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:25
+#, no-wrap
+msgid ""
+"# In a 'for' loop (really, a type of disguised assignment):\n"
+"echo -n \"Values of \\\"a\\\" in the loop are: \"\n"
+"for a in 7 8 9 11\n"
+"do\n"
+"  echo -n \"$a \"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:28
+msgid "echo echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:33
+msgid ""
+"# In a 'read' statement (also a type of assignment): echo -n \"Enter "
+"\\\"a\\\" \" read a echo \"The value of \\\"a\\\" is now $a.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex15.sh:36
+msgid "exit 0"
+msgstr ""

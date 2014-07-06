@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:7
+msgid ""
+"# Adding a second hard drive to system.  # Software configuration. Assumes "
+"hardware already mounted.  # From an article by the author of the ABS "
+"Guide.  # In issue #38 of _Linux Gazette_, http://www.linuxgazette.com."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:10
+#, no-wrap
+msgid ""
+"ROOT_UID=0     # This script must be run as root.\n"
+"E_NOTROOT=67   # Non-root exit error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:16
+#, no-wrap
+msgid ""
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo \"Must be root to run this script.\"\n"
+"  exit $E_NOTROOT\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:19
+msgid ""
+"# Use with extreme caution! # If something goes wrong, you may wipe out your "
+"current filesystem."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:23
+#, no-wrap
+msgid ""
+"NEWDISK=/dev/hdb         # Assumes /dev/hdb vacant. Check!\n"
+"MOUNTPOINT=/mnt/newdisk  # Or choose another mount point.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:30
+#, no-wrap
+msgid ""
+"fdisk $NEWDISK\n"
+"mke2fs -cv $NEWDISK1   # Check for bad blocks (verbose output).\n"
+"#  Note:           ^     /dev/hdb1, *not* /dev/hdb!\n"
+"mkdir $MOUNTPOINT\n"
+"chmod 777 $MOUNTPOINT  # Makes new drive accessible to all users.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:36
+msgid ""
+"# Now, test ...  # mount -t ext2 /dev/hdb1 /mnt/newdisk # Try creating a "
+"directory.  # If it works, umount it, and proceed."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:40
+msgid ""
+"# Final step: # Add the following line to /etc/fstab.  # /dev/hdb1 "
+"/mnt/newdisk ext2 defaults 1 1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/add-drive.sh:41
+msgid "exit"
+msgstr ""

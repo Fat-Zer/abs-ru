@@ -1,0 +1,964 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ktour.sh:3
+msgid "#!/bin/bash # ktour.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:9
+msgid ""
+"# author: mendel cooper # reldate: 12 Jan 2009 # license: public domain # "
+"(Not much sense GPLing something that's pretty much in the common #+ domain "
+"anyhow.)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:41
+#, no-wrap
+msgid ""
+"###################################################################\n"
+"#             The Knight's Tour, a classic problem.               #\n"
+"#             =====================================               #\n"
+"#  The knight must move onto every square of the chess board,     #\n"
+"#  but cannot revisit any square he has already visited.          #\n"
+"#                                                                 #\n"
+"#  And just why is Sir Knight unwelcome for a return visit?       #\n"
+"#  Could it be that he has a habit of partying into the wee hours #\n"
+"#+ of the morning?                                                #\n"
+"#  Possibly he leaves pizza crusts in the bed, empty beer bottles #\n"
+"#+ all over the floor, and clogs the plumbing. . . .              #\n"
+"#                                                                 #\n"
+"#  -------------------------------------------------------------  #\n"
+"#                                                                 #\n"
+"#  Usage: ktour.sh [start-square] [stupid]                        #\n"
+"#                                                                 #\n"
+"#  Note that start-square can be a square number                  #\n"
+"#+ in the range 0 - 63 ... or                                     #\n"
+"#  a square designator in conventional chess notation,            #\n"
+"#  such as a1, f5, h3, etc.                                       #\n"
+"#                                                                 #\n"
+"#  If start-square-number not supplied,                           #\n"
+"#+ then starts on a random square somewhere on the board.         #\n"
+"#                                                                 #\n"
+"# \"stupid\" as second parameter sets the stupid strategy.          #\n"
+"#                                                                 #\n"
+"#  Examples:                                                      #\n"
+"#  ktour.sh 23          starts on square #23 (h3)                 #\n"
+"#  ktour.sh g6 stupid   starts on square #46,                     #\n"
+"#                       using \"stupid\" (non-Warnsdorff) strategy. #\n"
+"###################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:56
+#, no-wrap
+msgid ""
+"DEBUG=      # Set this to echo debugging info to stdout.\n"
+"SUCCESS=0\n"
+"FAIL=99\n"
+"BADMOVE=-999\n"
+"FAILURE=1\n"
+"LINELEN=21  # How many moves to display per line.\n"
+"# ---------------------------------------- #\n"
+"# Board array params\n"
+"ROWS=8   # 8 x 8 board.\n"
+"COLS=8\n"
+"let \"SQUARES = $ROWS * $COLS\"\n"
+"let \"MAX = $SQUARES - 1\"\n"
+"MIN=0\n"
+"# 64 squares on board, indexed from 0 to 63.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:66
+#, no-wrap
+msgid ""
+"VISITED=1\n"
+"UNVISITED=-1\n"
+"UNVSYM=\"##\"\n"
+"# ---------------------------------------- #\n"
+"# Global variables.\n"
+"startpos=    # Starting position (square #, 0 - 63).\n"
+"currpos=     # Current position.\n"
+"movenum=     # Move number.\n"
+"CRITPOS=37   # Have to patch for f5 starting position!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:71
+msgid ""
+"declare -i board # Use a one-dimensional array to simulate a two-dimensional "
+"one.  # This can make life difficult and result in ugly kludges; see below.  "
+"declare -i moves # Offsets from current knight position."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:76
+#, no-wrap
+msgid ""
+"initialize_board ()\n"
+"{\n"
+"  local idx\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:82
+#, no-wrap
+msgid ""
+"  for idx in {0..63}\n"
+"  do\n"
+"    board[$idx]=$UNVISITED\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:88
+#, no-wrap
+msgid ""
+"print_board ()\n"
+"{\n"
+"  local idx\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:107
+#, no-wrap
+msgid ""
+"  echo \"    _____________________________________\"\n"
+"  for row in {7..0}               #  Reverse order of rows ...\n"
+"  do                              #+ so it prints in chessboard order.\n"
+"    let \"rownum = $row + 1\"       #  Start numbering rows at 1.\n"
+"    echo -n \"$rownum  |\"          #  Mark board edge with border and\n"
+"    for column in {0..7}          #+ \"algebraic notation.\"\n"
+"    do\n"
+"      let \"idx = $ROWS*$row + $column\"\n"
+"      if [ ${board[idx]} -eq $UNVISITED ]\n"
+"      then\n"
+"        echo -n \"$UNVSYM   \"      ##\n"
+"      else                        # Mark square with move number.\n"
+"        printf \"%02d \" \"${board[idx]}\"; echo -n \"  \"\n"
+"      fi\n"
+"    done\n"
+"    echo -e -n \"\\b\\b\\b|\"  # \\b is a backspace.\n"
+"    echo                  # -e enables echoing escaped chars.\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:111
+#, no-wrap
+msgid ""
+"  echo \"    -------------------------------------\"\n"
+"  echo \"     a    b    c    d    e    f    g    h\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:126
+#, no-wrap
+msgid ""
+"failure()\n"
+"{ # Whine, then bail out.\n"
+"  echo\n"
+"  print_board\n"
+"  echo\n"
+"  echo    \"   Waah!!! Ran out of squares to move to!\"\n"
+"  echo -n \"   Knight's Tour attempt ended\"\n"
+"  echo    \" on $(to_algebraic $currpos) [square #$currpos]\"\n"
+"  echo    \"   after just $movenum moves!\"\n"
+"  echo\n"
+"  exit $FAIL\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:139
+#, no-wrap
+msgid ""
+"xlat_coords ()   #  Translate x/y coordinates to board position\n"
+"{                #+ (board-array element #).\n"
+"  #  For user input of starting board position as x/y coords.\n"
+"  #  This function not used in initial release of ktour.sh.\n"
+"  #  May be used in an updated version, for compatibility with\n"
+"  #+ standard implementation of the Knight's Tour in C, Python, etc.\n"
+"  if [ -z \"$1\" -o -z \"$2\" ]\n"
+"  then\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:142
+#, no-wrap
+msgid ""
+"  local xc=$1\n"
+"  local yc=$2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:144
+#, no-wrap
+msgid "  let \"board_index = $xc * $ROWS + yc\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:152
+#, no-wrap
+msgid ""
+"  if [ $board_index -lt $MIN -o $board_index -gt $MAX ]\n"
+"  then\n"
+"    return $FAIL    # Strayed off the board!\n"
+"  else\n"
+"    return $board_index\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:161
+#, no-wrap
+msgid ""
+"to_algebraic ()   #  Translate board position (board-array element #)\n"
+"{                 #+ to standard algebraic notation used by chess players.\n"
+"  if [ -z \"$1\" ]\n"
+"  then\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:165
+#, no-wrap
+msgid ""
+"  local element_no=$1   # Numerical board position.\n"
+"  local col_arr=( a b c d e f g h )\n"
+"  local row_arr=( 1 2 3 4 5 6 7 8 )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:172
+#, no-wrap
+msgid ""
+"  let \"row_no = $element_no / $ROWS\"\n"
+"  let \"col_no = $element_no % $ROWS\"\n"
+"  t1=${col_arr[col_no]}; t2=${row_arr[row_no]}\n"
+"  local apos=$t1$t2   # Concatenate.\n"
+"  echo $apos\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:182
+#, no-wrap
+msgid ""
+"from_algebraic ()   #  Translate standard algebraic chess notation\n"
+"{                   #+ to numerical board position (board-array element "
+"#).\n"
+"                    #  Or recognize numerical input &amp; return it "
+"unchanged.\n"
+"  if [ -z \"$1\" ]\n"
+"  then\n"
+"    return $FAIL\n"
+"  fi   # If no command-line arg, then will default to random start pos.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:187
+#, no-wrap
+msgid ""
+"  local ix\n"
+"  local ix_count=0\n"
+"  local b_index     # Board index [0-63]\n"
+"  local alpos=\"$1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:190
+#, no-wrap
+msgid ""
+"  arow=${alpos:0:1} # position = 0, length = 1\n"
+"  acol=${alpos:1:1}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:201
+#, no-wrap
+msgid ""
+"  if [[ $arow =~ [[:digit:]] ]]   #  Numerical input?\n"
+"  then       #  POSIX char class\n"
+"    if [[ $acol =~ [[:alpha:]] ]] # Number followed by a letter? Illegal!\n"
+"      then return $FAIL\n"
+"    else if [ $alpos -gt $MAX ]   # Off board?\n"
+"      then return $FAIL\n"
+"    else return $alpos            #  Return digit(s) unchanged . . .\n"
+"      fi                          #+ if within range.\n"
+"    fi\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:206
+#, no-wrap
+msgid ""
+"  if [[ $acol -eq $MIN || $acol -gt $ROWS ]]\n"
+"  then        # Outside of range 1 - 8?\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:215
+#, no-wrap
+msgid ""
+"  for ix in a b c d e f g h\n"
+"  do  # Convert column letter to column number.\n"
+"   if [ \"$arow\" = \"$ix\" ]\n"
+"   then\n"
+"     break\n"
+"   fi\n"
+"  ((ix_count++))    # Find index count.\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:218
+#, no-wrap
+msgid ""
+"  ((acol--))        # Decrementing converts to zero-based array.\n"
+"  let \"b_index = $ix_count + $acol * $ROWS\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:223
+#, no-wrap
+msgid ""
+"  if [ $b_index -gt $MAX ]   # Off board?\n"
+"  then\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:225
+#, no-wrap
+msgid "  return $b_index\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:227 abs-guide/ktour.sh:301
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:236
+#, no-wrap
+msgid ""
+"generate_moves ()   #  Calculate all valid knight moves,\n"
+"{                   #+ relative to current position ($1),\n"
+"                    #+ and store in ${moves} array.\n"
+"  local kt_hop=1    #  One square  :: short leg of knight move.\n"
+"  local kt_skip=2   #  Two squares :: long leg  of knight move.\n"
+"  local valmov=0    #  Valid moves.\n"
+"  local row_pos; let \"row_pos = $1 % $COLS\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:294
+#, no-wrap
+msgid ""
+"  let \"move1 = -$kt_skip + $ROWS\"           # 2 sideways to-the-left,  1 "
+"up\n"
+"    if [[ `expr $row_pos - $kt_skip` -lt $MIN ]]   # An ugly, ugly kludge!\n"
+"    then                                           # Can't move off board.\n"
+"      move1=$BADMOVE                               # Not even temporarily.\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move2 = -$kt_hop + $kt_skip * $ROWS\" # 1 sideways to-the-left,  2 "
+"up\n"
+"    if [[ `expr $row_pos - $kt_hop` -lt $MIN ]]    # Kludge continued ...\n"
+"    then\n"
+"      move2=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move3 =  $kt_hop + $kt_skip * $ROWS\" # 1 sideways to-the-right, 2 "
+"up\n"
+"    if [[ `expr $row_pos + $kt_hop` -ge $COLS ]]\n"
+"    then\n"
+"      move3=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move4 =  $kt_skip + $ROWS\"           # 2 sideways to-the-right, 1 "
+"up\n"
+"    if [[ `expr $row_pos + $kt_skip` -ge $COLS ]]\n"
+"    then\n"
+"      move4=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move5 =  $kt_skip - $ROWS\"           # 2 sideways to-the-right, 1 "
+"dn\n"
+"    if [[ `expr $row_pos + $kt_skip` -ge $COLS ]]\n"
+"    then\n"
+"      move5=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move6 =  $kt_hop - $kt_skip * $ROWS\" # 1 sideways to-the-right, 2 "
+"dn\n"
+"    if [[ `expr $row_pos + $kt_hop` -ge $COLS ]]\n"
+"    then\n"
+"      move6=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move7 = -$kt_hop - $kt_skip * $ROWS\" # 1 sideways to-the-left,  2 "
+"dn\n"
+"    if [[ `expr $row_pos - $kt_hop` -lt $MIN ]]\n"
+"    then\n"
+"      move7=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi\n"
+"  let \"move8 = -$kt_skip - $ROWS\"           # 2 sideways to-the-left,  1 "
+"dn\n"
+"    if [[ `expr $row_pos - $kt_skip` -lt $MIN ]]\n"
+"    then\n"
+"      move8=$BADMOVE\n"
+"    else\n"
+"      ((valmov++))\n"
+"    fi   # There must be a better way to do this.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:299
+#, no-wrap
+msgid ""
+"  local m=( $valmov $move1 $move2 $move3 $move4 $move5 $move6 $move7 $move8 "
+")\n"
+"  # ${moves[0]} = number of valid moves.\n"
+"  # ${moves[1]} ... ${moves[8]} = possible moves.\n"
+"  echo \"${m[*]}\"    # Elements of array to stdout for capture in a var.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:313
+#, no-wrap
+msgid ""
+"is_on_board ()  # Is position actually on the board?\n"
+"{\n"
+"  if [[ \"$1\" -lt \"$MIN\" || \"$1\" -gt \"$MAX\" ]]\n"
+"  then\n"
+"    return $FAILURE\n"
+"  else\n"
+"    return $SUCCESS\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:327
+#, no-wrap
+msgid ""
+"do_move ()      # Move the knight!\n"
+"{\n"
+"  local valid_moves=0\n"
+"  local aapos\n"
+"  currposl=\"$1\"\n"
+"  lmin=$ROWS\n"
+"  iex=0\n"
+"  squarel=\n"
+"  mpm=\n"
+"  mov=\n"
+"  declare -a p_moves\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:336
+#, no-wrap
+msgid ""
+"  ########################## DECIDE-MOVE #############################\n"
+"  if [ $startpos -ne $CRITPOS ]\n"
+"  then   # CRITPOS = square #37\n"
+"    decide_move\n"
+"  else                     # Needs a special patch for startpos=37 !!!\n"
+"    decide_move_patched    # Why this particular move and no other ???\n"
+"  fi\n"
+"  ####################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:339
+#, no-wrap
+msgid ""
+"  (( ++movenum ))          # Increment move count.\n"
+"  let \"square = $currposl + ${moves[iex]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:345
+#, no-wrap
+msgid ""
+"  ##################    DEBUG    ###############\n"
+"  if [ \"$DEBUG\" ]\n"
+"    then debug   # Echo debugging information.\n"
+"  fi\n"
+"  ##############################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:353
+#, no-wrap
+msgid ""
+"  if [[ \"$square\" -gt $MAX || \"$square\" -lt $MIN ||\n"
+"        ${board[square]} -ne $UNVISITED ]]\n"
+"  then\n"
+"    (( --movenum ))              #  Decrement move count,\n"
+"    echo \"RAN OUT OF SQUARES!!!\" #+ since previous one was invalid.\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:363
+#, no-wrap
+msgid ""
+"  board[square]=$movenum\n"
+"  currpos=$square       # Update current position.\n"
+"  ((valid_moves++));    # moves[0]=$valid_moves\n"
+"  aapos=$(to_algebraic $square)\n"
+"  echo -n \"$aapos \"\n"
+"  test $(( $Moves % $LINELEN )) -eq 0 &amp;&amp; echo\n"
+"  # Print LINELEN=21 moves per line. A valid tour shows 3 complete lines.\n"
+"  return $valid_moves   # Found a square to move to!\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:373
+#, no-wrap
+msgid ""
+"do_move_stupid()   #  Dingbat algorithm,\n"
+"{                  #+ courtesy of script author, *not* Warnsdorff.\n"
+"  local valid_moves=0\n"
+"  local movloc\n"
+"  local squareloc\n"
+"  local aapos\n"
+"  local cposloc=\"$1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:390
+#, no-wrap
+msgid ""
+"  for movloc in {1..8}\n"
+"  do       # Move to first-found unvisited square.\n"
+"    let \"squareloc = $cposloc + ${moves[movloc]}\"\n"
+"    is_on_board $squareloc\n"
+"    if [ $? -eq $SUCCESS ] &amp;&amp; [ ${board[squareloc]} -eq $UNVISITED "
+"]\n"
+"    then   # Add conditions to above if-test to improve algorithm.\n"
+"      (( ++movenum ))\n"
+"      board[squareloc]=$movenum\n"
+"      currpos=$squareloc     # Update current position.\n"
+"      ((valid_moves++));     # moves[0]=$valid_moves\n"
+"      aapos=$(to_algebraic $squareloc)\n"
+"      echo -n \"$aapos \"\n"
+"      test $(( $Moves % $LINELEN )) -eq 0 &amp;&amp; echo   # Print 21 "
+"moves/line.\n"
+"      return $valid_moves    # Found a square to move to!\n"
+"    fi\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:394
+#, no-wrap
+msgid ""
+"  return $FAIL\n"
+"  #  If no square found in all 8 loop iterations,\n"
+"  #+ then Knight's Tour attempt ends in failure.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:398
+#, no-wrap
+msgid ""
+"  #  Dingbat algorithm will typically fail after about 30 - 40 moves,\n"
+"  #+ but executes _much_ faster than Warnsdorff's in do_move() function.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:417
+#, no-wrap
+msgid ""
+"decide_move ()         #  Which move will we make?\n"
+"{                      #  But, fails on startpos=37 !!!\n"
+"  for mov in {1..8}\n"
+"  do\n"
+"    let \"squarel = $currposl + ${moves[mov]}\"\n"
+"    is_on_board $squarel\n"
+"    if [[ $? -eq $SUCCESS &amp;&amp; ${board[squarel]} -eq $UNVISITED ]]\n"
+"    then   #  Find accessible square with least possible future moves.\n"
+"           #  This is Warnsdorff's algorithm.\n"
+"           #  What happens is that the knight wanders toward the outer "
+"edge\n"
+"           #+ of the board, then pretty much spirals inward.\n"
+"           #  Given two or more possible moves with same value of\n"
+"           #+ least-possible-future-moves, this implementation chooses\n"
+"           #+ the _first_ of those moves.\n"
+"           #  This means that there is not necessarily a unique solution\n"
+"           #+ for any given starting position.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:421
+#, no-wrap
+msgid ""
+"      possible_moves $squarel\n"
+"      mpm=$?\n"
+"      p_moves[mov]=$mpm\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:427
+#, no-wrap
+msgid ""
+"      if [ $mpm -lt $lmin ]  # If less than previous minimum ...\n"
+"      then #     ^^\n"
+"        lmin=$mpm            # Update minimum.\n"
+"        iex=$mov             # Save index.\n"
+"      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:431
+#, no-wrap
+msgid ""
+"    fi\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:445
+#, no-wrap
+msgid ""
+"decide_move_patched ()         #  Decide which move to make,\n"
+"{  #        ^^^^^^^            #+ but only if startpos=37 !!!\n"
+"  for mov in {1..8}\n"
+"  do\n"
+"    let \"squarel = $currposl + ${moves[mov]}\"\n"
+"    is_on_board $squarel\n"
+"    if [[ $? -eq $SUCCESS &amp;&amp; ${board[squarel]} -eq $UNVISITED ]]\n"
+"    then\n"
+"      possible_moves $squarel\n"
+"      mpm=$?\n"
+"      p_moves[mov]=$mpm\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:451
+#, no-wrap
+msgid ""
+"      if [ $mpm -le $lmin ]  # If less-than-or equal to prev. minimum!\n"
+"      then #     ^^\n"
+"        lmin=$mpm\n"
+"        iex=$mov\n"
+"      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:455
+#, no-wrap
+msgid ""
+"    fi\n"
+"  done                       # There has to be a better way to do this.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:460
+#, no-wrap
+msgid ""
+"possible_moves ()            #  Calculate number of possible moves,\n"
+"{                            #+ given the current position.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:465
+#, no-wrap
+msgid ""
+"  if [ -z \"$1\" ]\n"
+"  then\n"
+"    return $FAIL\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:472
+#, no-wrap
+msgid ""
+"  local curr_pos=$1\n"
+"  local valid_movl=0\n"
+"  local icx=0\n"
+"  local movl\n"
+"  local sq\n"
+"  declare -a movesloc\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:474
+#, no-wrap
+msgid "  movesloc=( $(generate_moves $curr_pos) )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:484
+#, no-wrap
+msgid ""
+"  for movl in {1..8}\n"
+"  do\n"
+"    let \"sq = $curr_pos + ${movesloc[movl]}\"\n"
+"    is_on_board $sq\n"
+"    if [ $? -eq $SUCCESS ] &amp;&amp; [ ${board[sq]} -eq $UNVISITED ]\n"
+"    then\n"
+"      ((valid_movl++));\n"
+"    fi\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:487
+#, no-wrap
+msgid ""
+"  return $valid_movl         # Found a square to move to!\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:492
+#, no-wrap
+msgid ""
+"strategy ()\n"
+"{\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:506
+#, no-wrap
+msgid ""
+"  if [ -n \"$STUPID\" ]\n"
+"  then\n"
+"    for Moves in {1..63}\n"
+"    do\n"
+"      cposl=$1\n"
+"      moves=( $(generate_moves $currpos) )\n"
+"      do_move_stupid \"$currpos\"\n"
+"      if [ $? -eq $FAIL ]\n"
+"      then\n"
+"        failure\n"
+"      fi\n"
+"      done\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:518
+#, no-wrap
+msgid ""
+"  #  Don't need an \"else\" clause here,\n"
+"  #+ because Stupid Strategy will always fail and exit!\n"
+"  for Moves in {1..63}\n"
+"  do\n"
+"    cposl=$1\n"
+"    moves=( $(generate_moves $currpos) )\n"
+"    do_move \"$currpos\"\n"
+"    if [ $? -eq $FAIL ]\n"
+"    then\n"
+"      failure\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:522
+#, no-wrap
+msgid ""
+"  done\n"
+"        #  Could have condensed above two do-loops into a single one,\n"
+"  echo  #+ but this would have slowed execution.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:528
+#, no-wrap
+msgid ""
+"  print_board\n"
+"  echo\n"
+"  echo \"Knight's Tour ends on $(to_algebraic $currpos) [square "
+"#$currpos].\"\n"
+"  return $SUCCESS\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:532
+#, no-wrap
+msgid ""
+"debug ()\n"
+"{       # Enable this by setting DEBUG=1 near beginning of script.\n"
+"  local n\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:539
+#, no-wrap
+msgid ""
+"  echo \"=================================\"\n"
+"  echo \"  At move number  $movenum:\"\n"
+"  echo \" *** possible moves = $mpm ***\"\n"
+"# echo \"### square = $square ###\"\n"
+"  echo \"lmin = $lmin\"\n"
+"  echo \"${moves[@]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:544
+#, no-wrap
+msgid ""
+"  for n in {1..8}\n"
+"  do\n"
+"    echo -n \"($n):${p_moves[n]} \"\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:551
+#, no-wrap
+msgid ""
+"  echo\n"
+"  echo \"iex = $iex :: moves[iex] = ${moves[iex]}\"\n"
+"  echo \"square = $square\"\n"
+"  echo \"=================================\"\n"
+"  echo\n"
+"} # Gives pretty complete status after ea. move.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:563
+#, no-wrap
+msgid ""
+"# =============================================================== #\n"
+"# int main () {\n"
+"from_algebraic \"$1\"\n"
+"startpos=$?\n"
+"if [ \"$startpos\" -eq \"$FAIL\" ]          # Okay even if no $1.\n"
+"then   #         ^^^^^^^^^^^              Okay even if input -lt 0.\n"
+"  echo \"No starting square specified (or illegal input).\"\n"
+"  let \"startpos = $RANDOM % $SQUARES\"   # 0 - 63 permissable range.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:573
+#, no-wrap
+msgid ""
+"if [ \"$2\" = \"stupid\" ]\n"
+"then\n"
+"  STUPID=1\n"
+"  echo -n \"     ### Stupid Strategy ###\"\n"
+"else\n"
+"  STUPID=''\n"
+"  echo -n \"  *** Warnsdorff's Algorithm ***\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:576
+msgid "initialize_board"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:581
+#, no-wrap
+msgid ""
+"movenum=0\n"
+"board[startpos]=$movenum   # Mark each board square with move number.\n"
+"currpos=$startpos\n"
+"algpos=$(to_algebraic $startpos)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:584
+msgid ""
+"echo; echo \"Starting from $algpos [square #$startpos] ...\"; echo echo -n "
+"\"Moves:\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:586
+msgid "strategy \"$currpos\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:588
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:590
+#, no-wrap
+msgid "exit 0   # return 0;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:593
+#, no-wrap
+msgid ""
+"# }      # End of main() pseudo-function.\n"
+"# =============================================================== #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ktour.sh:610
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"#\n"
+"# 1) Extend this example to a 10 x 10 board or larger.\n"
+"# 2) Improve the \"stupid strategy\" by modifying the\n"
+"#    do_move_stupid function.\n"
+"#    Hint: Prevent straying into corner squares in early moves\n"
+"#          (the exact opposite of Warnsdorff's algorithm!).\n"
+"# 3) This script could stand considerable improvement and\n"
+"#    streamlining, especially in the poorly-written\n"
+"#    generate_moves() function\n"
+"#    and in the DECIDE-MOVE patch in the do_move() function.\n"
+"#    Must figure out why standard algorithm fails for startpos=37 ...\n"
+"#+   but _not_ on any other, including symmetrical startpos=26.\n"
+"#    Possibly, when calculating possible moves, counts the move back\n"
+"#+   to the originating square. If so, it might be a relatively easy fix.\n"
+msgstr ""

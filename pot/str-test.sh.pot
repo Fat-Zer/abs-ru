@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/str-test.sh:4
+msgid ""
+"#!/bin/bash # str-test.sh: Testing null strings and unquoted strings, #+ but "
+"not strings and sealing wax, not to mention cabbages and kings . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:6
+#, no-wrap
+msgid "# Using   if [ ... ]\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:9
+msgid ""
+"# If a string has not been initialized, it has no defined value.  # This "
+"state is called \"null\" (not the same as zero!)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:17
+#, no-wrap
+msgid ""
+"if [ -n $string1 ]    # string1 has not been declared or initialized.\n"
+"then\n"
+"  echo \"String \\\"string1\\\" is not null.\"\n"
+"else  \n"
+"  echo \"String \\\"string1\\\" is null.\"\n"
+"fi                    # Wrong result.\n"
+"# Shows $string1 as not null, although it was not initialized.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:19 abs-guide/str-test.sh:30 abs-guide/str-test.sh:46
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:21
+msgid "# Let's try it again."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:28
+#, no-wrap
+msgid ""
+"if [ -n \"$string1\" ]  # This time, $string1 is quoted.\n"
+"then\n"
+"  echo \"String \\\"string1\\\" is not null.\"\n"
+"else  \n"
+"  echo \"String \\\"string1\\\" is null.\"\n"
+"fi                    # Quote strings within test brackets!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:43
+#, no-wrap
+msgid ""
+"if [ $string1 ]       # This time, $string1 stands naked.\n"
+"then\n"
+"  echo \"String \\\"string1\\\" is not null.\"\n"
+"else  \n"
+"  echo \"String \\\"string1\\\" is null.\"\n"
+"fi                    # This works fine.\n"
+"# The [ ... ] test operator alone detects whether the string is null.\n"
+"# However it is good practice to quote it (if [ \"$string1\" ]).\n"
+"#\n"
+"# As Stephane Chazelas points out,\n"
+"#    if [ $string1 ]    has one argument, \"]\"\n"
+"#    if [ \"$string1\" ]  has two arguments, the empty \"$string1\" and "
+"\"]\" \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:49
+msgid "string1=initialized"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:57
+#, no-wrap
+msgid ""
+"if [ $string1 ]       # Again, $string1 stands unquoted.\n"
+"then\n"
+"  echo \"String \\\"string1\\\" is not null.\"\n"
+"else  \n"
+"  echo \"String \\\"string1\\\" is null.\"\n"
+"fi                    # Again, gives correct result.\n"
+"# Still, it is better to quote it (\"$string1\"), because . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:60
+msgid "string1=\"a = b\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:67
+#, no-wrap
+msgid ""
+"if [ $string1 ]       # Again, $string1 stands unquoted.\n"
+"then\n"
+"  echo \"String \\\"string1\\\" is not null.\"\n"
+"else  \n"
+"  echo \"String \\\"string1\\\" is null.\"\n"
+"fi                    # Not quoting \"$string1\" now gives wrong result!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/str-test.sh:68
+#, no-wrap
+msgid "exit 0   # Thank you, also, Florian Wisser, for the \"heads-up\".\n"
+msgstr ""

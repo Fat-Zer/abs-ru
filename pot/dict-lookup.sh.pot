@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:3
+msgid "#!/bin/bash # dict-lookup.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:13
+msgid ""
+"# This script looks up definitions in the 1913 Webster's Dictionary.  # This "
+"Public Domain dictionary is available for download #+ from various sites, "
+"including #+ Project Gutenberg (http://www.gutenberg.org/etext/247).  # # "
+"Convert it from DOS to UNIX format (with only LF at end of line)  #+ before "
+"using it with this script.  # Store the file in plain, uncompressed ASCII "
+"text.  # Set DEFAULT_DICTFILE variable below to path/filename."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:27
+#, no-wrap
+msgid ""
+"E_BADARGS=85\n"
+"MAXCONTEXTLINES=50                        # Maximum number of lines to "
+"show.\n"
+"DEFAULT_DICTFILE=\"/usr/share/dict/webster1913-dict.txt\"\n"
+"                                          # Default dictionary file "
+"pathname.\n"
+"                                          # Change this as necessary.\n"
+"#  Note:\n"
+"#  ----\n"
+"#  This particular edition of the 1913 Webster's\n"
+"#+ begins each entry with an uppercase letter\n"
+"#+ (lowercase for the remaining characters).\n"
+"#  Only the *very first line* of an entry begins this way,\n"
+"#+ and that's why the search algorithm below works.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:42
+#, no-wrap
+msgid ""
+"if [[ -z $(echo \"$1\" | sed -n '/^[A-Z]/p') ]]\n"
+"#  Must at least specify word to look up, and\n"
+"#+ it must start with an uppercase letter.\n"
+"then\n"
+"  echo \"Usage: `basename $0` Word-to-define [dictionary-file]\"\n"
+"  echo\n"
+"  echo \"Note: Word to look up must start with capital letter,\"\n"
+"  echo \"with the rest of the word in lowercase.\"\n"
+"  echo \"--------------------------------------------\"\n"
+"  echo \"Examples: Abandon, Dictionary, Marking, etc.\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:51
+#, no-wrap
+msgid ""
+"if [ -z \"$2\" ]                            #  May specify different "
+"dictionary\n"
+"                                          #+ as an argument to this "
+"script.\n"
+"then\n"
+"  dictfile=$DEFAULT_DICTFILE\n"
+"else\n"
+"  dictfile=\"$2\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:58
+#, no-wrap
+msgid ""
+"# ---------------------------------------------------------\n"
+"Definition=$(fgrep -A $MAXCONTEXTLINES \"$1 \\\\\" \"$dictfile\")\n"
+"#                  Definitions in form \"Word \\...\"\n"
+"#\n"
+"#  And, yes, \"fgrep\" is fast enough\n"
+"#+ to search even a very large text file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:61
+msgid "# Now, snip out just the definition block."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:70
+msgid ""
+"echo \"$Definition\" | sed -n '1,/^[A-Z]/p' | # Print from first line of "
+"output #+ to the first line of the next entry.  sed '$d' | sed '$d' # Delete "
+"last two lines of output #+ (blank line and first line of next entry).  # "
+"---------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:72
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dict-lookup.sh:85
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1)  Modify the script to accept any type of alphabetic input\n"
+"#   + (uppercase, lowercase, mixed case), and convert it\n"
+"#   + to an acceptable format for processing.\n"
+"#\n"
+"# 2)  Convert the script to a GUI application,\n"
+"#   + using something like 'gdialog' or 'zenity' . . .\n"
+"#     The script will then no longer take its argument(s)\n"
+"#   + from the command-line.\n"
+"#\n"
+"# 3)  Modify the script to parse one of the other available\n"
+"#   + Public Domain Dictionaries, such as the U.S. Census Bureau "
+"Gazetteer.\n"
+msgstr ""

@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:3
+msgid "#!/bin/bash # copy-cd.sh: copying a data CD"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:11
+#, no-wrap
+msgid ""
+"CDROM=/dev/cdrom                           # CD ROM device\n"
+"OF=/home/bozo/projects/cdimage.iso         # output file\n"
+"#       /xxxx/xxxxxxxx/                      Change to suit your system.\n"
+"BLOCKSIZE=2048\n"
+"# SPEED=10                                 # If unspecified, uses max spd.\n"
+"# DEVICE=/dev/cdrom                          older version.\n"
+"DEVICE=\"1,0,0\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:15
+#, no-wrap
+msgid ""
+"echo; echo \"Insert source CD, but do *not* mount it.\"\n"
+"echo \"Press ENTER when ready. \"\n"
+"read ready                                 # Wait for input, $ready not "
+"used.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:18
+msgid ""
+"echo; echo \"Copying the source CD to $OF.\" echo \"This may take a "
+"while. Please be patient.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:20
+#, no-wrap
+msgid "dd if=$CDROM of=$OF bs=$BLOCKSIZE          # Raw device copy.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:26
+#, no-wrap
+msgid ""
+"echo; echo \"Remove data CD.\"\n"
+"echo \"Insert blank CDR.\"\n"
+"echo \"Press ENTER when ready. \"\n"
+"read ready                                 # Wait for input, $ready not "
+"used.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:28
+msgid "echo \"Copying $OF to CDR.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:34
+#, no-wrap
+msgid ""
+"# cdrecord -v -isosize speed=$SPEED dev=$DEVICE $OF   # Old version.\n"
+"wodim -v -isosize dev=$DEVICE $OF\n"
+"# Uses Joerg Schilling's \"cdrecord\" package (see its docs).\n"
+"# http://www.fokus.gmd.de/nthp/employees/schilling/cdrecord.html\n"
+"# Newer Linux distros may use \"wodim\" rather than \"cdrecord\" ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:37
+msgid "echo; echo \"Done copying $OF to CDR on device $CDROM.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:40
+msgid ""
+"echo \"Do you want to erase the image file (y/n)? \" # Probably a huge "
+"file.  read answer"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:47
+#, no-wrap
+msgid ""
+"case \"$answer\" in\n"
+"[yY]) rm -f $OF\n"
+"      echo \"$OF erased.\"\n"
+"      ;;\n"
+"*)    echo \"$OF not erased.\";;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:49
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:52
+msgid ""
+"# Exercise: # Change the above \"case\" statement to also accept \"yes\" and "
+"\"Yes\" as input."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/copy-cd.sh:53
+msgid "exit 0"
+msgstr ""

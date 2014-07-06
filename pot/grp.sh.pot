@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/grp.sh:3
+msgid "#!/bin/bash # grp.sh: Rudimentary reimplementation of grep."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:5
+msgid "E_BADARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:11
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]    # Check for argument to script.\n"
+"then\n"
+"  echo \"Usage: `basename $0` pattern\"\n"
+"  exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:13 abs-guide/grp.sh:28
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:17
+#, no-wrap
+msgid ""
+"for file in *     # Traverse all files in $PWD.\n"
+"do\n"
+"  output=$(sed -n /\"$1\"/p $file)  # Command substitution.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:23
+#, no-wrap
+msgid ""
+"  if [ ! -z \"$output\" ]           # What happens if \"$output\" is not "
+"quoted?\n"
+"  then\n"
+"    echo -n \"$file: \"\n"
+"    echo \"$output\"\n"
+"  fi              #  sed -ne \"/$1/s|^|${file}: |p\"  is equivalent to "
+"above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:26
+#, no-wrap
+msgid ""
+"  echo\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:30
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/grp.sh:34
+msgid ""
+"# Exercises: # --------- # 1) Add newlines to output, if more than one match "
+"in any given file.  # 2) Add features."
+msgstr ""

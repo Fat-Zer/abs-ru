@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/self-source.sh:4
+msgid ""
+"#!/bin/bash # self-source.sh: a script sourcing itself \"recursively.\" # "
+"From \"Stupid Script Tricks,\" Volume II."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:6
+#, no-wrap
+msgid "MAXPASSCNT=100    # Maximum number of execution passes.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:10
+msgid ""
+"echo -n \"$pass_count \" # At first execution pass, this just echoes two "
+"blank spaces, #+ since $pass_count still uninitialized."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:17
+msgid ""
+"let \"pass_count += 1\" # Assumes the uninitialized variable $pass_count #+ "
+"can be incremented the first time around.  # This works with Bash and pdksh, "
+"but #+ it relies on non-portable (and possibly dangerous) behavior.  # "
+"Better would be to initialize $pass_count to 0 before incrementing."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:23
+#, no-wrap
+msgid ""
+"while [ \"$pass_count\" -le $MAXPASSCNT ]\n"
+"do\n"
+"  . $0   # Script \"sources\" itself, rather than calling itself.\n"
+"         # ./$0 (which would be true recursion) doesn't work here. Why?\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:32
+msgid ""
+"# What occurs here is not actually recursion, #+ since the script "
+"effectively \"expands\" itself, i.e., #+ generates a new section of code #+ "
+"with each pass through the 'while' loop', # with each 'source' in line 20.  "
+"# # Of course, the script interprets each newly 'sourced' \"#!\" line #+ as "
+"a comment, and not as the start of a new script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:34
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:37
+#, no-wrap
+msgid ""
+"exit 0   # The net effect is counting from 1 to 100.\n"
+"         # Very impressive.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/self-source.sh:40
+msgid ""
+"# Exercise: # -------- # Write a script that uses this trick to actually do "
+"something useful."
+msgstr ""

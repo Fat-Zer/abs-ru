@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/sw.sh:4
+msgid "#!/bin/sh # sw.sh # A command-line Stopwatch"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:37
+#, no-wrap
+msgid ""
+"# Author: P&aacute;draig Brady\n"
+"#    http://www.pixelbeat.org/scripts/sw\n"
+"#    (Minor reformatting by ABS Guide author.)\n"
+"#    Used in ABS Guide with script author's permission.\n"
+"# Notes:\n"
+"#    This script starts a few processes per lap, in addition to\n"
+"#    the shell loop processing, so the assumption is made that\n"
+"#    this takes an insignificant amount of time compared to\n"
+"#    the response time of humans (~.1s) (or the keyboard\n"
+"#    interrupt rate (~.05s)).\n"
+"#    '?' for splits must be entered twice if characters\n"
+"#    (erroneously) entered before it (on the same line).\n"
+"#    '?' since not generating a signal may be slightly delayed\n"
+"#    on heavily loaded systems.\n"
+"#    Lap timings on ubuntu may be slightly delayed due to:\n"
+"#    https://bugs.launchpad.net/bugs/62511\n"
+"# Changes:\n"
+"#    V1.0, 23 Aug 2005, Initial release\n"
+"#    V1.1, 26 Jul 2007, Allow both splits and laps from single invocation.\n"
+"#                       Only start timer after a key is pressed.\n"
+"#                       Indicate lap number\n"
+"#                       Cache programs at startup so there is less error\n"
+"#                       due to startup delays.\n"
+"#    V1.2, 01 Aug 2007, Work around `date` commands that don't have\n"
+"#                       nanoseconds.\n"
+"#                       Use stty to change interrupt keys to space for\n"
+"#                       laps etc.\n"
+"#                       Ignore other input as it causes problems.\n"
+"#    V1.3, 01 Aug 2007, Testing release.\n"
+"#    V1.4, 02 Aug 2007, Various tweaks to get working under ubuntu\n"
+"#                       and Mac OS X.\n"
+"#    V1.5, 27 Jun 2008, set LANG=C as got vague bug report about it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:39
+msgid "export LANG=C"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:46
+#, no-wrap
+msgid ""
+"ulimit -c 0   # No coredumps from SIGQUIT.\n"
+"trap '' TSTP  # Ignore Ctrl-Z just in case.\n"
+"save_tty=`stty -g` &amp;&amp; trap \"stty $save_tty\" EXIT  # Restore tty on "
+"exit.\n"
+"stty quit ' ' # Space for laps rather than Ctrl-\\.\n"
+"stty eof  '?' # ? for splits rather than Ctrl-D.\n"
+"stty -echo    # Don't echo input.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:59
+#, no-wrap
+msgid ""
+"cache_progs() {\n"
+"    stty > /dev/null\n"
+"    date > /dev/null\n"
+"    grep . &lt; /dev/null\n"
+"    (echo \"import time\" | python) 2> /dev/null\n"
+"    bc &lt; /dev/null\n"
+"    sed '' &lt; /dev/null\n"
+"    printf '1' > /dev/null\n"
+"    /usr/bin/time false 2> /dev/null\n"
+"    cat &lt; /dev/null\n"
+"}\n"
+"cache_progs   # To minimise startup delay.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:68
+#, no-wrap
+msgid ""
+"date +%s.%N | grep -qF 'N' &amp;&amp; use_python=1 # If `date` lacks "
+"nanoseconds.\n"
+"now() {\n"
+"    if [ \"$use_python\" ]; then\n"
+"        echo \"import time; print time.time()\" 2>/dev/null | python\n"
+"    else\n"
+"        printf \"%.2f\" `date +%s.%N`\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:79
+#, no-wrap
+msgid ""
+"fmt_seconds() {\n"
+"    seconds=$1\n"
+"    mins=`echo $seconds/60 | bc`\n"
+"    if [ \"$mins\" != \"0\" ]; then\n"
+"        seconds=`echo \"$seconds - ($mins*60)\" | bc`\n"
+"        echo \"$mins:$seconds\"\n"
+"    else\n"
+"        echo \"$seconds\"\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:85
+#, no-wrap
+msgid ""
+"total() {\n"
+"    end=`now`\n"
+"    total=`echo \"$end - $start\" | bc`\n"
+"    fmt_seconds $total\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:91
+#, no-wrap
+msgid ""
+"stop() {\n"
+"    [ \"$lapped\" ] &amp;&amp; lap \"$laptime\" \"display\"\n"
+"    total\n"
+"    exit\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:105
+#, no-wrap
+msgid ""
+"lap() {\n"
+"    laptime=`echo \"$1\" | sed -n 's/.*real[^0-9.]*\\(.*\\)/\\1/p'`\n"
+"    [ ! \"$laptime\" -o \"$laptime\" = \"0.00\" ] &amp;&amp; return\n"
+"    # Signals too frequent.\n"
+"    laptotal=`echo $laptime+0$laptotal | bc`\n"
+"    if [ \"$2\" = \"display\" ]; then\n"
+"        lapcount=`echo 0$lapcount+1 | bc`\n"
+"        laptime=`fmt_seconds $laptotal`\n"
+"        echo $laptime \"($lapcount)\"\n"
+"        lapped=\"true\"\n"
+"        laptotal=\"0\"\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:107
+msgid ""
+"echo -n \"Space for lap | ? for split | Ctrl-C to stop | Space to "
+"start...\">&amp;2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:129
+#, no-wrap
+msgid ""
+"while true; do\n"
+"    trap true INT QUIT  # Set signal handlers.\n"
+"    laptime=`/usr/bin/time -p 2>&amp;1 cat >/dev/null`\n"
+"    ret=$?\n"
+"    trap '' INT QUIT    # Ignore signals within this script.\n"
+"    if [ $ret -eq 1 -o $ret -eq 2 -o $ret -eq 130 ]; then # SIGINT = stop\n"
+"        [ ! \"$start\" ] &amp;&amp; { echo >&amp;2; exit; }\n"
+"        stop\n"
+"    elif [ $ret -eq 3 -o $ret -eq 131 ]; then             # SIGQUIT = lap\n"
+"        if [ ! \"$start\" ]; then\n"
+"            start=`now` || exit 1\n"
+"            echo >&amp;2\n"
+"            continue\n"
+"        fi\n"
+"        lap \"$laptime\" \"display\"\n"
+"    else                # eof = split\n"
+"        [ ! \"$start\" ] &amp;&amp; continue\n"
+"        total\n"
+"        lap \"$laptime\"  # Update laptotal.\n"
+"    fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sw.sh:130
+msgid "exit $?"
+msgstr ""

@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pb.sh:3
+msgid "#!/bin/bash # pb.sh: phone book"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:6
+msgid ""
+"# Written by Rick Boivie, and used with permission.  # Modifications by ABS "
+"Guide author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:13
+#, no-wrap
+msgid ""
+"MINARGS=1     #  Script needs at least one argument.\n"
+"DATAFILE=./phonebook\n"
+"              #  A data file in current working directory\n"
+"              #+ named \"phonebook\" must exist.\n"
+"PROGNAME=$0\n"
+"E_NOARGS=70   #  No arguments error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:18
+#, no-wrap
+msgid ""
+"if [ $# -lt $MINARGS ]; then\n"
+"      echo \"Usage: \"$PROGNAME\" data-to-look-up\"\n"
+"      exit $E_NOARGS\n"
+"fi      \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:27
+#, no-wrap
+msgid ""
+"if [ $# -eq $MINARGS ]; then\n"
+"      grep $1 \"$DATAFILE\"\n"
+"      # 'grep' prints an error message if $DATAFILE not present.\n"
+"else\n"
+"      ( shift; \"$PROGNAME\" $* ) | grep $1\n"
+"      # Script recursively calls itself.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:31
+#, no-wrap
+msgid ""
+"exit 0        #  Script exits here.\n"
+"              #  Therefore, it's o.k. to put\n"
+"              #+ non-hashmarked comments and data after this point.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:34
+msgid ""
+"# ------------------------------------------------------------------------ "
+"Sample \"phonebook\" datafile:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:41
+#, no-wrap
+msgid ""
+"John Doe        1555 Main St., Baltimore, MD 21228          (410) 222-3333\n"
+"Mary Moe        9899 Jones Blvd., Warren, NH 03787          (603) 898-3232\n"
+"Richard Roe     856 E. 7th St., New York, NY 10009          (212) 333-4567\n"
+"Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678\n"
+"Zoe Zenobia     4481 N. Baker St., San Francisco, SF 94338  (415) 501-1631\n"
+"# ------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:45
+#, no-wrap
+msgid ""
+"$bash pb.sh Roe\n"
+"Richard Roe     856 E. 7th St., New York, NY 10009          (212) 333-4567\n"
+"Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:48
+#, no-wrap
+msgid ""
+"$bash pb.sh Roe Sam\n"
+"Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pb.sh:50
+msgid ""
+"# When more than one argument is passed to this script, #+ it prints *only* "
+"the line(s) containing all the arguments."
+msgstr ""

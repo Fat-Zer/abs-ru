@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/msquare.sh:4
+msgid "#!/bin/bash # msquare.sh # Magic Square generator (odd-order squares only!)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:10
+#, no-wrap
+msgid ""
+"# Author: mendel cooper\n"
+"# reldate: 19 Jan. 2009\n"
+"# License: Public Domain\n"
+"# A C-program by the very talented Kwon Young Shin inspired this script.\n"
+"#     http://user.chollian.net/~brainstm/MagicSquare.htm\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:21
+#, no-wrap
+msgid ""
+"# Definition: A \"magic square\" is a two-dimensional array\n"
+"#             of integers in which all the rows, columns,\n"
+"#             and *long* diagonals add up to the same number.\n"
+"#             Being \"square,\" the array has the same number\n"
+"#             of rows and columns. That number is the \"order.\"\n"
+"# An example of a magic square of order 3 is:\n"
+"#   8  1  6   \n"
+"#   3  5  7   \n"
+"#   4  9  2   \n"
+"# All the rows, columns, and the two long diagonals add up to 15.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:29
+#, no-wrap
+msgid ""
+"# Globals\n"
+"EVEN=2\n"
+"MAXSIZE=31   # 31 rows x 31 cols.\n"
+"E_usage=90   # Invocation error.\n"
+"dimension=\n"
+"declare -i square\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:40
+#, no-wrap
+msgid ""
+"usage_message ()\n"
+"{\n"
+"  echo \"Usage: $0 order\"\n"
+"  echo \"   ... where \\\"order\\\" (square size) is an ODD integer\"\n"
+"  echo \"       in the range 3 - 31.\"\n"
+"  #  Actually works for squares up to order 159,\n"
+"  #+ but large squares will not display pretty-printed in a term window.\n"
+"  #  Try increasing MAXSIZE, above.\n"
+"  exit $E_usage\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:46
+#, no-wrap
+msgid ""
+"calculate ()       # Here's where the actual work gets done.\n"
+"{\n"
+"  local row col index dimadj j k cell_val=1\n"
+"  dimension=$1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:48
+#, no-wrap
+msgid ""
+"  let \"dimadj = $dimension * 3\"; let \"dimadj /= 2\"   # x 1.5, then "
+"truncate.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:61
+#, no-wrap
+msgid ""
+"  for ((j=0; j &lt; dimension; j++))\n"
+"  do\n"
+"    for ((k=0; k &lt; dimension; k++))\n"
+"    do  # Calculate indices, then convert to 1-dim. array index.\n"
+"        # Bash doesn't support multidimensional arrays. Pity.\n"
+"      let \"col = $k - $j + $dimadj\"; let \"col %= $dimension\"\n"
+"      let \"row = $j * 2 - $k + $dimension\"; let \"row %= $dimension\"\n"
+"      let \"index = $row*($dimension) + $col\"\n"
+"      square[$index]=cell_val; ((cell_val++))\n"
+"    done\n"
+"  done\n"
+"}     # Plain math, visualization not required.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:67
+#, no-wrap
+msgid ""
+"print_square ()               # Output square, one row at a time.\n"
+"{\n"
+"  local row col idx d1\n"
+"  let \"d1 = $dimension - 1\"   # Adjust for zero-indexed array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:70
+#, no-wrap
+msgid ""
+"  for row in $(seq 0 $d1)\n"
+"  do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:76
+#, no-wrap
+msgid ""
+"    for col in $(seq 0 $d1)\n"
+"    do\n"
+"      let \"idx = $row * $dimension + $col\"\n"
+"      printf \"%3d \" \"${square[idx]}\"; echo -n \"  \"\n"
+"    done   # Displays up to 13th order neatly in 80-column term window.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:80
+#, no-wrap
+msgid ""
+"    echo   # Newline after each row.\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:87
+#, no-wrap
+msgid ""
+"#################################################\n"
+"if [[ -z \"$1\" ]] || [[ \"$1\" -gt $MAXSIZE ]]\n"
+"then\n"
+"  usage_message\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:93
+#, no-wrap
+msgid ""
+"let \"test_even = $1 % $EVEN\"\n"
+"if [ $test_even -eq 0 ]\n"
+"then           # Can't handle even-order squares.\n"
+"  usage_message\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:96
+#, no-wrap
+msgid ""
+"calculate $1\n"
+"print_square   # echo \"${square[@]}\"   # DEBUG\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:99
+msgid "exit $? #################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/msquare.sh:112
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Add a function to calculate the sum of each row, column,\n"
+"#    and *long* diagonal. The sums must match.\n"
+"#    This is the \"magic constant\" of that particular order square.\n"
+"# 2) Have the print_square function auto-calculate how much space\n"
+"#    to allot between square elements for optimized display.\n"
+"#    This might require parameterizing the \"printf\" line.\n"
+"# 3) Add appropriate functions for generating magic squares\n"
+"#    with an *even* number of rows/columns.\n"
+"#    This is non-trivial(!).\n"
+"#    See the URL for Kwon Young Shin, above, for help.\n"
+msgstr ""

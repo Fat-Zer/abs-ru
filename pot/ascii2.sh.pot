@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:5
+msgid ""
+"#!/bin/bash # Script author: Joseph Steinhauser # Lightly edited by ABS "
+"Guide author, but not commented.  # Used in ABS Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:17
+#, no-wrap
+msgid ""
+"#-------------------------------------------------------------------------\n"
+"#-- File:  ascii.sh    Print ASCII chart, base 10/8/16         (JETS-2012)\n"
+"#-------------------------------------------------------------------------\n"
+"#-- Usage: ascii [oct|dec|hex|help|8|10|16]\n"
+"#--\n"
+"#-- This script prints out a summary of ASCII char codes from Zero to 127.\n"
+"#-- Numeric values may be printed in Base10, Octal, or Hex.\n"
+"#--\n"
+"#-- Format Based on: /usr/share/lib/pub/ascii with base-10 as default.\n"
+"#-- For more detail, man ascii . . .\n"
+"#-------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:19
+msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:27
+#, no-wrap
+msgid ""
+"case \"$1\" in\n"
+"   oct|[Oo]?([Cc][Tt])|8)       Obase=Octal;  Numy=3o;;\n"
+"   hex|[Hh]?([Ee][Xx])|16|[Xx]) Obase=Hex;    Numy=2X;;\n"
+"   help|?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;\n"
+"   code|[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;\n"
+"   *) Obase=Decimal\n"
+"esac # CODE is actually shorter than the chart!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:29
+msgid ""
+"printf \"\\t\\t## $Obase ASCII Chart ##\\n\\n\"; FM1=\"|%0${Numy:-3d}\"; "
+"LD=-1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:32
+msgid ""
+"AB=\"nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle\" AD=\"dc1 "
+"dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:35
+msgid "for TOK in $AB $AD; do ABR[$((LD+=1))]=$TOK; done; ABR[127]=del"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:41
+#, no-wrap
+msgid ""
+"IDX=0\n"
+"while [ $IDX -le 127 ] &amp;&amp; CHR=\"${ABR[$IDX]}\"\n"
+"   do ((${#CHR}))&amp;&amp; FM2='%-3s'|| FM2=`printf '\\\\\\\\%o  ' $IDX`\n"
+"      printf \"$FM1 $FM2\" \"$IDX\" $CHR; (( (IDX+=1)%8))||echo '|'\n"
+"   done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii2.sh:42
+msgid "exit $?"
+msgstr ""

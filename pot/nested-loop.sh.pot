@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:3
+msgid "#!/bin/bash # nested-loop.sh: Nested \"for\" loops."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:5
+#, no-wrap
+msgid "outer=1             # Set outer loop counter.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:12
+#, no-wrap
+msgid ""
+"# Beginning of outer loop.\n"
+"for a in 1 2 3 4 5\n"
+"do\n"
+"  echo \"Pass $outer in outer loop.\"\n"
+"  echo \"---------------------\"\n"
+"  inner=1           # Reset inner loop counter.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:22
+#, no-wrap
+msgid ""
+"  # ===============================================\n"
+"  # Beginning of inner loop.\n"
+"  for b in 1 2 3 4 5\n"
+"  do\n"
+"    echo \"Pass $inner in inner loop.\"\n"
+"    let \"inner+=1\"  # Increment inner loop counter.\n"
+"  done\n"
+"  # End of inner loop.\n"
+"  # ===============================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:27
+#, no-wrap
+msgid ""
+"  let \"outer+=1\"    # Increment outer loop counter. \n"
+"  echo              # Space between output blocks in pass of outer loop.\n"
+"done               \n"
+"# End of outer loop.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/nested-loop.sh:28
+msgid "exit 0"
+msgstr ""

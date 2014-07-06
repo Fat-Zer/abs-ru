@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex79.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:5
+msgid "# Cards: # Deals four random hands from a deck of cards."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:8
+msgid "UNPICKED=0 PICKED=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:10
+msgid "DUPE_CARD=99"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:15
+msgid "LOWER_LIMIT=0 UPPER_LIMIT=51 CARDS_IN_SUIT=13 CARDS=52"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:22
+msgid ""
+"declare -a Deck declare -a Suits declare -a Cards # It would have been "
+"easier to implement and more intuitive #+ with a single, 3-dimensional "
+"array.  # Perhaps a future version of Bash will support multidimensional "
+"arrays."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:34
+#, no-wrap
+msgid ""
+"initialize_Deck ()\n"
+"{\n"
+"i=$LOWER_LIMIT\n"
+"until [ \"$i\" -gt $UPPER_LIMIT ]\n"
+"do\n"
+"  Deck[i]=$UNPICKED   # Set each card of \"Deck\" as unpicked.\n"
+"  let \"i += 1\"\n"
+"done\n"
+"echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:42
+msgid ""
+"initialize_Suits ()  { Suits[0]=C #Clubs Suits[1]=D #Diamonds Suits[2]=H "
+"#Hearts Suits[3]=S #Spades }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:48
+msgid ""
+"initialize_Cards ()  { Cards=(2 3 4 5 6 7 8 9 10 J Q K A)  # Alternate "
+"method of initializing an array.  }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:61
+#, no-wrap
+msgid ""
+"pick_a_card ()\n"
+"{\n"
+"card_number=$RANDOM\n"
+"let \"card_number %= $CARDS\"\n"
+"if [ \"${Deck[card_number]}\" -eq $UNPICKED ]\n"
+"then\n"
+"  Deck[card_number]=$PICKED\n"
+"  return $card_number\n"
+"else  \n"
+"  return $DUPE_CARD\n"
+"fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:73
+msgid ""
+"parse_card ()  { number=$1 let \"suit_number = number / CARDS_IN_SUIT\" "
+"suit=${Suits[suit_number]} echo -n \"$suit-\" let \"card_no = number % "
+"CARDS_IN_SUIT\" Card=${Cards[card_no]} printf %-4s $Card # Print cards in "
+"neat columns.  }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:82
+#, no-wrap
+msgid ""
+"seed_random ()  # Seed random number generator.\n"
+"{               # What happens if you don't do this?\n"
+"seed=`eval date +%s`\n"
+"let \"seed %= 32766\"\n"
+"RANDOM=$seed\n"
+"#  What are some other methods\n"
+"#+ of seeding the random number generator?\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:86
+msgid "deal_cards ()  { echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:92
+#, no-wrap
+msgid ""
+"cards_picked=0\n"
+"while [ \"$cards_picked\" -le $UPPER_LIMIT ]\n"
+"do\n"
+"  pick_a_card\n"
+"  t=$?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:96
+#, no-wrap
+msgid ""
+"  if [ \"$t\" -ne $DUPE_CARD ]\n"
+"  then\n"
+"    parse_card $t\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:106
+#, no-wrap
+msgid ""
+"    u=$cards_picked+1\n"
+"    # Change back to 1-based indexing (temporarily). Why?\n"
+"    let \"u %= $CARDS_IN_SUIT\"\n"
+"    if [ \"$u\" -eq 0 ]   # Nested if/then condition test.\n"
+"    then\n"
+"     echo\n"
+"     echo\n"
+"    fi\n"
+"    # Separate hands.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:110
+#, no-wrap
+msgid ""
+"    let \"cards_picked += 1\"\n"
+"  fi  \n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:112
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:115
+msgid "return 0 }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:119
+msgid "# Structured programming: # Entire program logic modularized in functions."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:127
+msgid ""
+"#================ seed_random initialize_Deck initialize_Suits "
+"initialize_Cards deal_cards #================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:129
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:134
+msgid "# Exercise 1: # Add comments to thoroughly document this script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:138
+msgid ""
+"# Exercise 2: # Add a routine (function) to print out each hand sorted in "
+"suits.  # You may add other bells and whistles if you like."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex79.sh:140
+msgid "# Exercise 3: # Simplify and streamline the logic of the script."
+msgstr ""

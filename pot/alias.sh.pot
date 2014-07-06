@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/alias.sh:3
+msgid "#!/bin/bash # alias.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:6
+msgid ""
+"shopt -s expand_aliases # Must set this option, else script will not expand "
+"aliases."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:11
+msgid ""
+"# First, some fun.  alias Jesse_James='echo \"\\\"Alias Jesse James\\\" was "
+"a 1959 comedy starring Bob Hope.\"' Jesse_James"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:13
+msgid "echo; echo; echo;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:16
+msgid ""
+"alias ll=\"ls -l\" # May use either single (') or double (\") quotes to "
+"define an alias."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:19
+#, no-wrap
+msgid ""
+"echo \"Trying aliased \\\"ll\\\":\"\n"
+"ll /usr/X11R6/bin/mk*   #* Alias works.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:21 abs-guide/alias.sh:39 abs-guide/alias.sh:51
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:26
+msgid ""
+"directory=/usr/X11R6/bin/ prefix=mk* # See if wild card causes problems.  "
+"echo \"Variables \\\"directory\\\" + \\\"prefix\\\" = $directory$prefix\" "
+"echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:28
+msgid "alias lll=\"ls -l $directory$prefix\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:32
+#, no-wrap
+msgid ""
+"echo \"Trying aliased \\\"lll\\\":\"\n"
+"lll         # Long listing of all files in /usr/X11R6/bin stating with mk.\n"
+"# An alias can handle concatenated variables -- including wild card -- "
+"o.k.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:37
+msgid "TRUE=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:49
+#, no-wrap
+msgid ""
+"if [ TRUE ]\n"
+"then\n"
+"  alias rr=\"ls -l\"\n"
+"  echo \"Trying aliased \\\"rr\\\" within if/then statement:\"\n"
+"  rr /usr/X11R6/bin/mk*   #* Error message results!\n"
+"  # Aliases not expanded within compound statements.\n"
+"  echo \"However, previously expanded alias still recognized:\"\n"
+"  ll /usr/X11R6/bin/mk*\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:61
+#, no-wrap
+msgid ""
+"count=0\n"
+"while [ $count -lt 3 ]\n"
+"do\n"
+"  alias rrr=\"ls -l\"\n"
+"  echo \"Trying aliased \\\"rrr\\\" within \\\"while\\\" loop:\"\n"
+"  rrr /usr/X11R6/bin/mk*   #* Alias will not expand here either.\n"
+"                           #  alias.sh: line 57: rrr: command not found\n"
+"  let count+=1\n"
+"done \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:63
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:72
+#, no-wrap
+msgid ""
+"alias xyz='cat $0'   # Script lists itself.\n"
+"                     # Note strong quotes.\n"
+"xyz\n"
+"#  This seems to work,\n"
+"#+ although the Bash documentation suggests that it shouldn't.\n"
+"#\n"
+"#  However, as Steve Jacobson points out,\n"
+"#+ the \"$0\" parameter expands immediately upon declaration of the alias.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/alias.sh:73
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/logevents.sh:5
+msgid ""
+"#!/bin/bash # logevents.sh # Author: Stephane Chazelas.  # Used in ABS Guide "
+"with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:8
+msgid ""
+"# Event logging to a file.  # Must be run as root (for write access in "
+"/var/log)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:11
+#, no-wrap
+msgid ""
+"ROOT_UID=0     # Only users with $UID 0 have root privileges.\n"
+"E_NOTROOT=67   # Non-root exit error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:18
+#, no-wrap
+msgid ""
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo \"Must be root to run this script.\"\n"
+"  exit $E_NOTROOT\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:23
+msgid "FD_DEBUG1=3 FD_DEBUG2=4 FD_DEBUG3=5"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:27
+msgid ""
+"# === Uncomment one of the two lines below to activate script. === # "
+"LOG_EVENTS=1 # LOG_VARS=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:35
+#, no-wrap
+msgid ""
+"log()  # Writes time and date to log file.\n"
+"{\n"
+"echo \"$(date)  $*\" &gt;&amp;7     # This *appends* the date to the file.\n"
+"#     ^^^^^^^  command substitution\n"
+"                           # See below.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:44
+#, no-wrap
+msgid ""
+"case $LOG_LEVEL in\n"
+" 1) exec 3&gt;&amp;2         4&gt; /dev/null 5&gt; /dev/null;;\n"
+" 2) exec 3&gt;&amp;2         4&gt;&amp;2         5&gt; /dev/null;;\n"
+" 3) exec 3&gt;&amp;2         4&gt;&amp;2         5&gt;&amp;2;;\n"
+" *) exec 3&gt; /dev/null 4&gt; /dev/null 5&gt; /dev/null;;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:50
+#, no-wrap
+msgid ""
+"FD_LOGVARS=6\n"
+"if [[ $LOG_VARS ]]\n"
+"then exec 6&gt;&gt; /var/log/vars.log\n"
+"else exec 6&gt; /dev/null                     # Bury output.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:60
+#, no-wrap
+msgid ""
+"FD_LOGEVENTS=7\n"
+"if [[ $LOG_EVENTS ]]\n"
+"then\n"
+"  # exec 7 &gt;(exec gawk '{print strftime(), $0}' &gt;&gt; "
+"/var/log/event.log)\n"
+"  # Above line fails in versions of Bash more recent than 2.04. Why?\n"
+"  exec 7&gt;&gt; /var/log/event.log              # Append to "
+"\"event.log\".\n"
+"  log                                      # Write time and date.\n"
+"else exec 7&gt; /dev/null                     # Bury output.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:62
+msgid "echo \"DEBUG3: beginning\" &gt;&amp;${FD_DEBUG3}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:64
+#, no-wrap
+msgid ""
+"ls -l &gt;&amp;5 2&gt;&amp;4                             # command1 "
+"&gt;&amp;5 2&gt;&amp;4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:66
+#, no-wrap
+msgid "echo \"Done\"                                # command2 \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:69
+msgid ""
+"echo \"sending mail\" &gt;&amp;${FD_LOGEVENTS} # Writes \"sending mail\" to "
+"file descriptor #7."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/logevents.sh:71
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/twodim.sh:3
+msgid "#!/bin/bash # twodim.sh: Simulating a two-dimensional array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:6
+msgid ""
+"# A one-dimensional array consists of a single row.  # A two-dimensional "
+"array stores rows sequentially."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:10
+msgid "Rows=5 Columns=5 # 5 X 5 Array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:13
+#, no-wrap
+msgid ""
+"declare -a alpha     # char alpha [Rows] [Columns];\n"
+"                     # Unnecessary declaration. Why?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:18
+msgid "load_alpha ()  { local rc=0 local index"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:28
+#, no-wrap
+msgid ""
+"for i in A B C D E F G H I J K L M N O P Q R S T U V W X Y\n"
+"do     # Use different symbols if you like.\n"
+"  local row=`expr $rc / $Columns`\n"
+"  local column=`expr $rc % $Rows`\n"
+"  let \"index = $row * $Rows + $column\"\n"
+"  alpha[$index]=$i\n"
+"# alpha[$row][$column]\n"
+"  let \"rc += 1\"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:33
+#, no-wrap
+msgid ""
+"#  Simpler would be\n"
+"#+   declare -a alpha=( A B C D E F G H I J K L M N O P Q R S T U V W X Y "
+")\n"
+"#+ but this somehow lacks the \"flavor\" of a two-dimensional array.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:38
+msgid "print_alpha ()  { local row=0 local index"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:40
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:45
+#, no-wrap
+msgid ""
+"while [ \"$row\" -lt \"$Rows\" ]   #  Print out in \"row major\" order:\n"
+"do                             #+ columns vary,\n"
+"                               #+ while row (outer loop) remains the same.\n"
+"  local column=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:47
+#, no-wrap
+msgid ""
+"  echo -n \"       \"            #  Lines up \"square\" array with rotated "
+"one.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:54
+#, no-wrap
+msgid ""
+"  while [ \"$column\" -lt \"$Columns\" ]\n"
+"  do\n"
+"    let \"index = $row * $Rows + $column\"\n"
+"    echo -n \"${alpha[index]} \"  # alpha[$row][$column]\n"
+"    let \"column += 1\"\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:57
+#, no-wrap
+msgid ""
+"  let \"row += 1\"\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:59 abs-guide/twodim.sh:112
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:62
+#, no-wrap
+msgid ""
+"# The simpler equivalent is\n"
+"#     echo ${alpha[*]} | xargs -n $Columns\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:65
+msgid "echo }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:68
+#, no-wrap
+msgid ""
+"filter ()     # Filter out negative array indices.\n"
+"{\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:71
+#, no-wrap
+msgid ""
+"echo -n \"  \"  # Provides the tilt.\n"
+"              # Explain how.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:79
+#, no-wrap
+msgid ""
+"if [[ \"$1\" -ge 0 &amp;&amp;  \"$1\" -lt \"$Rows\" &amp;&amp; \"$2\" -ge 0 "
+"&amp;&amp; \"$2\" -lt \"$Columns\" ]]\n"
+"then\n"
+"    let \"index = $1 * $Rows + $2\"\n"
+"    # Now, print it rotated.\n"
+"    echo -n \" ${alpha[index]}\"\n"
+"    #           alpha[$row][$column]\n"
+"fi    \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:81 abs-guide/twodim.sh:120
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:89
+#, no-wrap
+msgid ""
+"rotate ()  #  Rotate the array 45 degrees --\n"
+"{          #+ \"balance\" it on its lower lefthand corner.\n"
+"local row\n"
+"local column\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:92
+#, no-wrap
+msgid ""
+"for (( row = Rows; row > -Rows; row-- ))\n"
+"  do       # Step through the array backwards. Why?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:95
+#, no-wrap
+msgid ""
+"  for (( column = 0; column &lt; Columns; column++ ))\n"
+"  do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:104
+#, no-wrap
+msgid ""
+"    if [ \"$row\" -ge 0 ]\n"
+"    then\n"
+"      let \"t1 = $column - $row\"\n"
+"      let \"t2 = $column\"\n"
+"    else\n"
+"      let \"t1 = $column\"\n"
+"      let \"t2 = $column + $row\"\n"
+"    fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:108
+#, no-wrap
+msgid ""
+"    filter $t1 $t2   # Filter out negative array indices.\n"
+"                     # What happens if you don't do this?\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:110
+#, no-wrap
+msgid "  echo; echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:118
+msgid ""
+"# Array rotation inspired by examples (pp. 143-146) in #+ \"Advanced C "
+"Programming on the IBM PC,\" by Herbert Mayer #+ (see bibliography).  # This "
+"just goes to show that much of what can be done in C #+ can also be done in "
+"shell scripting."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:127
+#, no-wrap
+msgid ""
+"#--------------- Now, let the show begin. ------------#\n"
+"load_alpha     # Load the array.\n"
+"print_alpha    # Print it out.  \n"
+"rotate         # Rotate it 45 degrees counterclockwise.\n"
+"#-----------------------------------------------------#\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:129
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:131
+msgid "# This is a rather contrived, not to mention inelegant simulation."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/twodim.sh:142
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1)  Rewrite the array loading and printing functions\n"
+"#     in a more intuitive and less kludgy fashion.\n"
+"#\n"
+"# 2)  Figure out how the array rotation functions work.\n"
+"#     Hint: think about the implications of backwards-indexing an array.\n"
+"#\n"
+"# 3)  Rewrite this script to handle a non-square array,\n"
+"#     such as a 6 X 4 one.\n"
+"#     Try to minimize \"distortion\" when the array is rotated.\n"
+msgstr ""

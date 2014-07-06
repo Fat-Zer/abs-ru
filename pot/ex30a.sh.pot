@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex30a.sh: \"Colorized\" version of ex30.sh.\n"
+"#            Crude address database\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:7
+#, no-wrap
+msgid "clear                                   # Clear the screen.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:30
+#, no-wrap
+msgid ""
+"echo -n \"          \"\n"
+"echo -e '\\E[37;44m'\"\\033[1mContact List\\033[0m\"\n"
+"                                        # White on blue background\n"
+"echo; echo\n"
+"echo -e \"\\033[1mChoose one of the following persons:\\033[0m\"\n"
+"                                        # Bold\n"
+"tput sgr0                               # Reset attributes.\n"
+"echo \"(Enter only the first letter of name.)\"\n"
+"echo\n"
+"echo -en '\\E[47;34m'\"\\033[1mE\\033[0m\"   # Blue\n"
+"tput sgr0                               # Reset colors to \"normal.\"\n"
+"echo \"vans, Roland\"                     # \"[E]vans, Roland\"\n"
+"echo -en '\\E[47;35m'\"\\033[1mJ\\033[0m\"   # Magenta\n"
+"tput sgr0\n"
+"echo \"ambalaya, Mildred\"\n"
+"echo -en '\\E[47;32m'\"\\033[1mS\\033[0m\"   # Green\n"
+"tput sgr0\n"
+"echo \"mith, Julie\"\n"
+"echo -en '\\E[47;31m'\"\\033[1mZ\\033[0m\"   # Red\n"
+"tput sgr0\n"
+"echo \"ane, Morris\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:32
+msgid "read person"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:35
+msgid "case \"$person\" in # Note variable is quoted."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:47
+#, no-wrap
+msgid ""
+"  \"E\" | \"e\" )\n"
+"  # Accept upper or lowercase input.\n"
+"  echo\n"
+"  echo \"Roland Evans\"\n"
+"  echo \"4321 Flash Dr.\"\n"
+"  echo \"Hardscrabble, CO 80753\"\n"
+"  echo \"(303) 734-9874\"\n"
+"  echo \"(303) 734-9892 fax\"\n"
+"  echo \"revans@zzy.net\"\n"
+"  echo \"Business partner &amp; old friend\"\n"
+"  ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:59
+#, no-wrap
+msgid ""
+"  \"J\" | \"j\" )\n"
+"  echo\n"
+"  echo \"Mildred Jambalaya\"\n"
+"  echo \"249 E. 7th St., Apt. 19\"\n"
+"  echo \"New York, NY 10009\"\n"
+"  echo \"(212) 533-2814\"\n"
+"  echo \"(212) 533-9972 fax\"\n"
+"  echo \"milliej@loisaida.com\"\n"
+"  echo \"Girlfriend\"\n"
+"  echo \"Birthday: Feb. 11\"\n"
+"  ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:61
+msgid "# Add info for Smith &amp; Zane later."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:68
+#, no-wrap
+msgid ""
+"          * )\n"
+"   # Default option.\t  \n"
+"   # Empty input (hitting RETURN) fits here, too.\n"
+"   echo\n"
+"   echo \"Not yet in database.\"\n"
+"  ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:70
+msgid "esac"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:72
+#, no-wrap
+msgid "tput sgr0                               # Reset colors to \"normal.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:74
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex30a.sh:75
+msgid "exit 0"
+msgstr ""

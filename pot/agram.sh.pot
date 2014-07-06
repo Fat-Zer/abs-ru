@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/agram.sh:3
+msgid "#!/bin/bash # agram.sh: Playing games with anagrams."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:8
+#, no-wrap
+msgid ""
+"# Find anagrams of...\n"
+"LETTERSET=etaoinshrdlu\n"
+"FILTER='.......'       # How many letters minimum?\n"
+"#       1234567\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:15
+#, no-wrap
+msgid ""
+"anagram \"$LETTERSET\" | # Find all anagrams of the letterset...\n"
+"grep \"$FILTER\" |       # With at least 7 letters,\n"
+"grep '^is' |           # starting with 'is'\n"
+"grep -v 's$' |         # no plurals\n"
+"grep -v 'ed$'          # no past tense verbs\n"
+"# Possible to add many combinations of conditions and filters.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:20
+msgid ""
+"# Uses \"anagram\" utility #+ that is part of the author's \"yawl\" word "
+"list package.  # http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz # "
+"http://bash.deta.in/yawl-0.3.2.tar.gz"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:22
+#, no-wrap
+msgid "exit 0                 # End of code.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:29
+msgid "bash$ sh agram.sh islander isolate isolead isotheral"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:37
+msgid ""
+"# Exercises: # --------- # Modify this script to take the LETTERSET as a "
+"command-line parameter.  # Parameterize the filters in lines 11 - 13 (as "
+"with $FILTER), #+ so that they can be specified by passing arguments to a "
+"function."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/agram.sh:39
+msgid ""
+"# For a slightly different approach to anagramming, #+ see the agram2.sh "
+"script."
+msgstr ""

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/script-array.sh:4
+msgid ""
+"#!/bin/bash # script-array.sh: Loads this script into an array.  # Inspired "
+"by an e-mail from Chris Martin (thanks!)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-array.sh:7
+#, no-wrap
+msgid ""
+"script_contents=( $(cat \"$0\") )  #  Stores contents of this script ($0)\n"
+"                                 #+ in an array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-array.sh:20
+#, no-wrap
+msgid ""
+"for element in $(seq 0 $((${#script_contents[@]} - 1)))\n"
+"  do                #  ${#script_contents[@]}\n"
+"                    #+ gives number of elements in the array.\n"
+"                    #\n"
+"                    #  Question:\n"
+"                    #  Why is  seq 0  necessary?\n"
+"                    #  Try changing it to seq 1.\n"
+"  echo -n \"${script_contents[$element]}\"\n"
+"                    # List each field of this script on a single line.\n"
+"# echo -n \"${script_contents[element]}\" also works because of ${ ... }.\n"
+"  echo -n \" -- \"    # Use \" -- \" as a field separator.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-array.sh:22
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-array.sh:24
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/script-array.sh:29
+msgid ""
+"# Exercise: # -------- # Modify this script so it lists itself #+ in its "
+"original format, #+ complete with whitespace, line breaks, etc."
+msgstr ""

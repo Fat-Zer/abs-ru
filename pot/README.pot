@@ -1,0 +1,387 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/README:2
+#, no-wrap
+msgid "                        SOME SCRIPTS WILL NOT RUN AS IS\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:10
+msgid ""
+"Note that the source code for certain of the example shell scripts have the "
+"\"&lt;\" and \"&gt;\" in place of angle brackets (< and >), or &amp; in "
+"place of the ampersand (&). This is necessary for the Docbook SGML "
+"conversion. If you plan to run these scripts from the enclosed source files, "
+"then it will, of course, be necessary to restore the angle brackets or "
+"ampersand."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:17
+#, no-wrap
+msgid ""
+"                     &lt;           becomes  <\n"
+"                     &gt;           becomes  >\n"
+"                     &lt;&lt;       becomes  <<\n"
+"                     &lt;&lt;&lt;   becomes  <<<\n"
+"                     &gt;&gt;       becomes  >>\n"
+"                     &amp;          becomes  &\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:20
+msgid ""
+"In some of the below cases, only the comments are affected, and these "
+"scripts require no fixups to execute as expected."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:23
+msgid "The following sed scriptlet will accomplish the fixup:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:25
+#, no-wrap
+msgid "   sed -e 's/&lt;/</g' -e 's/&gt;/>/g' SCRIPT.sh > FIXED_SCRIPT.sh\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:27
+msgid "A followup double-check is advisable, of course."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:28
+#, no-wrap
+msgid "=======================================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:32
+#, no-wrap
+msgid ""
+"Scripts needing to be altered:\n"
+"-----------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:84
+#, no-wrap
+msgid ""
+"Du.sh (line 19)\n"
+"encryptedpw.sh (lines 27 and 35)\n"
+"ex57.sh (comment in line 8)\n"
+"ex70.sh (line 3)\n"
+"ex71.sh (line 7)\n"
+"ex71a.sh (line 8)\n"
+"ex71b.sh (line 22)\n"
+"logevents.sh (lines 31, 39-42, 47-8, 54, 56, 58, 61, 63, 67)\n"
+"m4.sh (line 8: \"\\&amp;\" --> \\&)\n"
+"pw.sh (comment in line 4)\n"
+"read-r.sh (lines 5, 6, 20, 27)\n"
+"rnd.sh (comments in lines 38, 55, 64)\n"
+"rot13.sh (comment, line 6)\n"
+"rot13a.sh (comment, line 5)\n"
+"here-function.sh (line 16)\n"
+"avoid-subshell.sh (lines 24, 25, and 33)\n"
+"usb.sh (line 28)\n"
+"prepend.sh (lines 18 and 28)\n"
+"array-assign.bash ( comments on lines 18-19)\n"
+"cdll (lines 51-53, 59, 63-69, 82-83, 85, 463, 521, 567-568, 570,\n"
+"            580-586, 637, 656-658)\n"
+"directory-info.sh (lines 36, 166, 273 and 353)\n"
+"is-spammer.sh (comments on lines 4, 35, and 51)\n"
+"bashrc (comment on line 4)\n"
+"commentblock.sh (lines 4 and 23)\n"
+"self-document.sh (line 14)\n"
+"self-document2.sh (line 8)\n"
+"dev-tcp.sh (line 14)\n"
+"archiveweblogs.sh (comment in line 4)\n"
+"multiple-processes.sh (line 143)\n"
+"catscripts.sh (lines 12 and 21)\n"
+"is_spammer.bash (comments on various lines)\n"
+"iscan.sh (comment in line 10)\n"
+"Hash.lib, (comments in lines lines 103 and 116: & --> &amp;)\n"
+"          (comment in line 3: < --> &lt;, > --> &gt;)\n"
+"hash-example.sh (comment in line 3: < --> &lt;, > --> &gt;)\n"
+"quote-fetch.sh (comment in line 26: &amp; --> &)\n"
+"ftpget.sh (comment in line 28)\n"
+"whx.sh (comment in line 259)\n"
+"pad.sh, (comments in line 6, lines 26, 27, 28, 29, 30, 33, 34).\n"
+"nightly-backup.sh (comment in line 4)\n"
+"tohtml.sh: lines 22-33\n"
+"           lines 35-36\n"
+"           lines 38-41\n"
+"           line 74\n"
+"           line 83\n"
+"           lines 100-101\n"
+"In-line code block at beginning of \"I/O Redirection\" chapter, line 41.\n"
+"In-line code block at \"mkfifo\" entro in \"Miscellaneous Commands\" section "
+"of\n"
+"\"External Filters, Programs and Commands\" chapter.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:90
+#, no-wrap
+msgid ""
+"insertion-sort.sh:\n"
+"                  line 8 (comment)\n"
+"                  line 44\n"
+"                  line 45\n"
+"                  line 57 (two instances)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:94
+#, no-wrap
+msgid ""
+"tree2.sh:\n"
+"         line 38 (comment)\n"
+"         line 88\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:97
+#, no-wrap
+msgid ""
+"petals.sh\n"
+"         line 56\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:100
+#, no-wrap
+msgid ""
+"realname.sh\n"
+"         line 26\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:108
+#, no-wrap
+msgid ""
+"qky.sh\n"
+"         line 7\n"
+"\t line 63\n"
+"\t line 87\n"
+"\t line 113\n"
+"(The unaltered, executable script can be downloaded.\n"
+" See:  http://bash.deta.in/qky.README.html)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:111
+#, no-wrap
+msgid ""
+"maned.sh\n"
+"         line 6 (comment)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:117
+#, no-wrap
+msgid ""
+"progress-bar.sh\n"
+"         line 26\n"
+"\t line 30\n"
+"nim.sh\n"
+"         line 27\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:120
+#, no-wrap
+msgid ""
+"paragraph-spac3.sh\n"
+"         line 6\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:123
+#, no-wrap
+msgid ""
+"sw.sh\n"
+"         line 5 (comment)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:126
+#, no-wrap
+msgid ""
+"here-commsub.sh\n"
+"         line 5\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:129
+msgid "UseGetOpt.sh: line 4 (comment)  UseGetOpt-2.sh: line 11 (comment)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:131
+msgid "bash64.sh: line 4 (comment)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:133
+msgid "speech.sh: line 14"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:137
+msgid ""
+"Convertion Docbook/SGML V3 -> Docbook/XML V4.5 also required lots more "
+"renaming due to more strict xml syntax check:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/README:262
+#, no-wrap
+msgid ""
+"allprofs.sh            (line 13)\n"
+"alt-bc.sh              (lines 19, 29, 42, 6)\n"
+"and-list2.sh           (lines 6, 8)\n"
+"and-or.sh              (lines 6, 13, 17, 20, 55)\n"
+"arith-tests.sh         (lines 30)\n"
+"array-append.bash      (lines 102, 28, 52, 67, 80)\n"
+"ascii2.sh              (lines 18, 37, 38, 19, 35)\n"
+"ascii.sh               (lines 36, 37)\n"
+"assoc-arr-test.sh      (lines 19, 26, 33, 40, 47, 54, 61, 68, 75, 89, 25, "
+"33)\n"
+"background-loop.sh     (lines 7)\n"
+"bad-op.sh              (lines 10, 17, 22, 35)\n"
+"base64.sh              (lines 13, 15, 40, 56, 60, 61, 62, 80, 92, 96, 97, "
+"98, 99)\n"
+"base.sh                (lines 32, 38, 71)\n"
+"bashpodder.sh          (lines 62)\n"
+"bashrc                 (lots of replaces)\n"
+"basics-reviewed.bash   (lines 43, 685)\n"
+"bingo.sh               (lines 64)\n"
+"broken-link.sh         (lines 27, 38, 39)\n"
+"bubble.sh              (lines 77, 80)\n"
+"cannon.sh              (lines 64)\n"
+"case4.sh               (lines 10, 11, 12, 39, 40, 6, 7, 8, 9)\n"
+"cdll                   (lines 143, 145, 173, 247, 279, 469, 742, 744, 746)\n"
+"collatz.sh             (lines 35)\n"
+"commentblock.sh        (lines 52, 9)\n"
+"continue-n.example     (lines 15, 17, 18, 24, 39, 12)\n"
+"CopyArray.sh           (lines 7)\n"
+"c-vars.sh              (lines 31, 32, 39, 41)\n"
+"days-between.sh        (lines 50)\n"
+"de-rpm.sh              (lines 11)\n"
+"directory-info.sh      (lines 511, 540, 541)\n"
+"Draw-box.sh            (lines 103, 109, 116, 21, 23, 62, 96)\n"
+"encryptedpw.sh         (lines 24)\n"
+"ex2.sh                 (lines 64)\n"
+"ex8.sh                 (lines 9)\n"
+"ex14.sh                (lines 13, 23)\n"
+"ex30a.sh               (lines 45, 60)\n"
+"ex30.sh                (lines 31, 47, 23)\n"
+"ex43.sh                (lines 21)\n"
+"ex45.sh                (lines 51, 52, 57, 58, 86, 10, 42, 46)\n"
+"ex49.sh                (lines 12, 15)\n"
+"ex55.sh                (lines 18)\n"
+"ex57.sh                (lines 26, 7, 8, 9)\n"
+"ex59.sh                (lines 26, 27)\n"
+"ex64.sh                (lines 4)\n"
+"ex65.sh                (lines 17)\n"
+"ex68a.sh               (lines 13)\n"
+"ex71a.sh               (lines 19, 4)\n"
+"factr.sh               (lines 25)\n"
+"fc4upd.sh              (lines 167, 81)\n"
+"fifo.sh                (lines 18)\n"
+"fifteen.sh             (lots of replaces)\n"
+"file-comparison.sh     (lines 20, 26)\n"
+"file-integrity.sh      (lines 78)\n"
+"find-splitpara.sh      (lines 27, 44)\n"
+"for-loopc.sh           (lines 41, 52)\n"
+"ftpget.sh              (lines 108, 98)\n"
+"generate-script.sh     (lines 11)\n"
+"gronsfeld.bash         (lines 117, 53, 65)\n"
+"hanoi2a.bash           (lines 104, 46, 61, 78, 80)\n"
+"hanoi2.bash            (lines 105, 16, 48, 63, 80, 82)\n"
+"ha.sh                  (lines 99)\n"
+"Hash.lib               (lines 156)\n"
+"horserace.sh           (lines 200, 287, 297, 298, 34, 39)\n"
+"insertion-sort.bash    (lines 28, 49, 51)\n"
+"iscan.sh               (lines 42)\n"
+"is_spammer.bash        (lots of reaplaces)\n"
+"kill-byname.sh         (lines 25, 32)\n"
+"ktour.sh               (lines 177, 359, 378, 386, 407, 440, 479)\n"
+"letter-count2.sh       (lines 20, 26, 31)\n"
+"life.sh                (lines 106, 215, 347)\n"
+"logevents.sh           (lines 31, 39, 40, 41, 61, 63, 67)\n"
+"lookup.sh              (lines 25, 37, 42)\n"
+"mailbox_grep.sh        (lines 25, 42, 46, 48, 51, 58, 67)\n"
+"manview.sh             (lines 25)\n"
+"monthlypmt.sh          (lines 54, 65)\n"
+"msquare.sh             (lines 49, 51)\n"
+"multiple-processes.sh  (lines 131, 19)\n"
+"music.sh               (lines 21)\n"
+"nightly-backup.sh      (lots of replaces)\n"
+"online.sh              (lines 65)\n"
+"pad.sh                 (lots of replaces)\n"
+"paragraph-space.sh     (lines 17, 18)\n"
+"petals.sh              (lines 160)\n"
+"pid-identifier.sh      (lines 14, 33, 50, 53)\n"
+"pr-asc.sh              (lines 10)\n"
+"primes.sh              (lines 25, 26)\n"
+"progress-bar2.sh       (lines 18)\n"
+"progress-bar.sh        (lines 41)\n"
+"protect_literal.sh     (lines 110, 6, 64, 92)\n"
+"psub.bash              (lines 10)\n"
+"q-function.sh          (lines 28)\n"
+"random-between.sh      (lines 104, 157, 166, 175, 177, 187, 189, 49)\n"
+"read-novar.sh          (lines 42)\n"
+"read-N.sh              (lines 6)\n"
+"reassign-stdout.sh     (lines 29, 6)\n"
+"redir1.sh              (lines 21, 23, 25, 5, 8)\n"
+"redir2a.sh             (lines 19, 20, 35, 40, 41)\n"
+"redir2.sh              (lines 22)\n"
+"redir3.sh              (lines 16)\n"
+"redir4a.sh             (lines 24)\n"
+"redir4.sh              (lines 17, 29)\n"
+"redir5.sh              (lines 16)\n"
+"ref-params.sh          (lines 20)\n"
+"restricted.sh          (lines 20)\n"
+"sam.sh                 (lines 100, 101)\n"
+"soundcard-on.sh        (lines 29, 30, 77, 97)\n"
+"stack.sh               (lines 19, 23)\n"
+"string.sh              (lines 180, 88, 90)\n"
+"strip-comments.sh      (lines 10, 56)\n"
+"sw.sh                  (lots of replaces)\n"
+"test-cgi.sh            (lines 60)\n"
+"test-execution-time.sh (lines 10, 16, 22, 31, 40, 50, 60)\n"
+"timed-input.sh         (lines 27)\n"
+"tohtml.sh              (lines 7)\n"
+"t-out.sh               (lines 10, 8)\n"
+"tree2.sh               (lines 48, 57, 72, 76, 88, 28)\n"
+"twodim.sh              (lines 72, 93)\n"
+"unprotect_literal.sh   (lines 45, 6)\n"
+"upperconv.sh           (lines 24, 25, 27, 39, 40)\n"
+"usb.sh                 (lines 57)\n"
+"userlist.sh            (lines 7)\n"
+"wgetter2.bash          (lines 141, 251, 348, 376, 438)\n"
+"wh-loopc.sh            (lines 22)\n"
+"whx.sh                 (lines 233, 239, 240, 241, 242, 31)\n"
+"wr-ps.bash             (lines 25, 61)\n"
+msgstr ""

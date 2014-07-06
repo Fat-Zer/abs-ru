@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:4
+msgid "#!/bin/bash # upperconv.sh # Converts a specified input file to uppercase."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:7
+msgid "E_FILE_ACCESS=70 E_WRONG_ARGS=71"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:15
+#, no-wrap
+msgid ""
+"if [ ! -r \"$1\" ]     # Is specified input file readable?\n"
+"then\n"
+"  echo \"Can't read from input file!\"\n"
+"  echo \"Usage: $0 input-file output-file\"\n"
+"  exit $E_FILE_ACCESS\n"
+"fi                   #  Will exit with same error\n"
+"                     #+ even if input file ($1) not specified (why?).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:22
+#, no-wrap
+msgid ""
+"if [ -z \"$2\" ]\n"
+"then\n"
+"  echo \"Need to specify output file.\"\n"
+"  echo \"Usage: $0 input-file output-file\"\n"
+"  exit $E_WRONG_ARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:26
+#, no-wrap
+msgid ""
+"exec 4&lt;&amp;0\n"
+"exec &lt; $1            # Will read from input file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:30
+#, no-wrap
+msgid ""
+"exec 7>&amp;1\n"
+"exec > $2            # Will write to output file.\n"
+"                     # Assumes output file writable (add check?).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:38
+#, no-wrap
+msgid ""
+"# -----------------------------------------------\n"
+"    cat - | tr a-z A-Z   # Uppercase conversion.\n"
+"#   ^^^^^                # Reads from stdin.\n"
+"#           ^^^^^^^^^^   # Writes to stdout.\n"
+"# However, both stdin and stdout were redirected.\n"
+"# Note that the 'cat' can be omitted.\n"
+"# -----------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:41
+#, no-wrap
+msgid ""
+"exec 1>&amp;7 7>&amp;-       # Restore stout.\n"
+"exec 0&lt;&amp;4 4&lt;&amp;-       # Restore stdin.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:44
+msgid ""
+"# After restoration, the following line prints to stdout as expected.  echo "
+"\"File \\\"$1\\\" written to \\\"$2\\\" as uppercase conversion.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/upperconv.sh:45
+msgid "exit 0"
+msgstr ""

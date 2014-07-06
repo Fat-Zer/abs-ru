@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/Du.sh:3
+msgid "#!/bin/bash # Du.sh: DOS to UNIX text file converter."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:5
+msgid "E_WRONGARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:11
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename-to-convert\"\n"
+"  exit $E_WRONGARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:13
+msgid "NEWFILENAME=$1.unx"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:18
+#, no-wrap
+msgid ""
+"CR='\\015'  # Carriage return.\n"
+"           # 015 is octal ASCII code for CR.\n"
+"           # Lines in a DOS text file end in CR-LF.\n"
+"           # Lines in a UNIX text file end in LF only.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:21
+msgid "tr -d $CR &lt; $1 &gt; $NEWFILENAME # Delete CR's and write to new file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:24
+msgid ""
+"echo \"Original DOS text file is \\\"$1\\\".\" echo \"Converted UNIX text "
+"file is \\\"$NEWFILENAME\\\".\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:26
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Du.sh:29
+msgid ""
+"# Exercise: # -------- # Change the above script to convert from UNIX to "
+"DOS."
+msgstr ""

@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/file-info.sh:3
+msgid "#!/bin/bash # fileinfo.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:11
+#, no-wrap
+msgid ""
+"FILES=\"/usr/sbin/accept\n"
+"/usr/sbin/pwck\n"
+"/usr/sbin/chroot\n"
+"/usr/bin/fakefile\n"
+"/sbin/badblocks\n"
+"/sbin/ypbind\"     # List of files you are curious about.\n"
+"                  # Threw in a dummy file, /usr/bin/fakefile.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:13
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:16
+msgid "for file in $FILES do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:22
+#, no-wrap
+msgid ""
+"  if [ ! -e \"$file\" ]       # Check if file exists.\n"
+"  then\n"
+"    echo \"$file does not exist.\"; echo\n"
+"    continue                # On to next.\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:29
+#, no-wrap
+msgid ""
+"  ls -l $file | awk '{ print $8 \"         file size: \" $5 }'  # Print 2 "
+"fields.\n"
+"  whatis `basename $file`   # File info.\n"
+"  # Note that the whatis database needs to have been set up for this to "
+"work.\n"
+"  # To do this, as root run /usr/bin/makewhatis.\n"
+"  echo\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/file-info.sh:30
+msgid "exit 0"
+msgstr ""

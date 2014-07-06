@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/realname.sh:5
+msgid ""
+"#!/bin/bash # realname.sh # # From username, gets \"real name\" from "
+"/etc/passwd."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:9
+#, no-wrap
+msgid ""
+"ARGCOUNT=1       # Expect one arg.\n"
+"E_WRONGARGS=85\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:12
+msgid "file=/etc/passwd pattern=$1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:18
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGCOUNT\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` USERNAME\"\n"
+"  exit $E_WRONGARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:27
+#, no-wrap
+msgid ""
+"file_excerpt ()    #  Scan file for pattern,\n"
+"{                  #+ then print relevant portion of line.\n"
+"  while read line  # \"while\" does not necessarily need [ condition ]\n"
+"  do\n"
+"    echo \"$line\" | grep $1 | awk -F\":\" '{ print $5 }'\n"
+"    # Have awk use \":\" delimiter.\n"
+"  done\n"
+"} &lt;$file  # Redirect into function's stdin.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:29
+msgid "file_excerpt $pattern"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:37
+#, no-wrap
+msgid ""
+"# Yes, this entire script could be reduced to\n"
+"#       grep PATTERN /etc/passwd | awk -F\":\" '{ print $5 }'\n"
+"# or\n"
+"#       awk -F: '/PATTERN/ {print $5}'\n"
+"# or\n"
+"#       awk -F: '($1 == \"username\") { print $5 }' # real name from "
+"username\n"
+"# However, it might not be as instructive.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/realname.sh:38
+msgid "exit 0"
+msgstr ""

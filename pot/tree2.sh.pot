@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/tree2.sh:3
+msgid "#!/bin/bash # tree2.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:6
+msgid ""
+"# Lightly modified/reformatted by ABS Guide author.  # Included in ABS Guide "
+"with permission of script author (thanks!)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:15
+msgid ""
+"## Recursive file/dirsize checking script, by Patsie ## ## This script "
+"builds a list of files/directories and their size (du -akx)  ## and "
+"processes this list to a human readable tree shape ## The 'du -akx' is only "
+"as good as the permissions the owner has.  ## So preferably run as root* to "
+"get the best results, or use only on ## directories for which you have read "
+"permissions. Anything you can't ## read is not in the list."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:17
+msgid "#* ABS Guide author advises caution when running scripts as root!"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:20
+msgid "########## THIS IS CONFIGURABLE ##########"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:25
+#, no-wrap
+msgid ""
+"TOP=5                   # Top 5 biggest (sub)directories.\n"
+"MAXRECURS=5             # Max 5 subdirectories/recursions deep.\n"
+"E_BL=80                 # Blank line already returned.\n"
+"E_DIR=81                # Directory not specified.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:28
+msgid "########## DON'T CHANGE ANYTHING BELOW THIS LINE ##########"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:32
+#, no-wrap
+msgid ""
+"PID=$$                            # Our own process ID.\n"
+"SELF=`basename $0`                # Our own program name.\n"
+"TMP=\"/tmp/${SELF}.${PID}.tmp\"     # Temporary 'du' result.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:37
+#, no-wrap
+msgid ""
+"# Convert number to dotted thousand.\n"
+"function dot { echo \"            $*\" |\n"
+"               sed -e :a -e 's/\\(.*[0-9]\\)\\([0-9]\\{3\\}\\)/\\1,\\2/;ta' "
+"|\n"
+"               tail -c 12; }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:44
+#, no-wrap
+msgid ""
+"# Usage: tree &lt;recursion&gt; &lt;indent prefix&gt; &lt;min size&gt; "
+"&lt;directory&gt;\n"
+"function tree {\n"
+"  recurs=\"$1\"           # How deep nested are we?\n"
+"  prefix=\"$2\"           # What do we display before file/dirname?\n"
+"  minsize=\"$3\"          # What is the minumum file/dirsize?\n"
+"  dirname=\"$4\"          # Which directory are we checking?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:49
+#, no-wrap
+msgid ""
+"# Get ($TOP) biggest subdirs/subfiles from TMP file.\n"
+"  LIST=`egrep \"[[:space:]]${dirname}/[^/]*$\" \"$TMP\" |\n"
+"        awk '{if($1>'$minsize') print;}' | sort -nr | head -$TOP`\n"
+"  [ -z \"$LIST\" ] &amp;&amp; return        # Empty list, then go back.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:52
+#, no-wrap
+msgid ""
+"  cnt=0\n"
+"  num=`echo \"$LIST\" | wc -l`      # How many entries in the list.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:75
+#, no-wrap
+msgid ""
+"  ## Main loop\n"
+"  echo \"$LIST\" | while read size name; do\n"
+"    ((cnt+=1))\t\t          # Count entry number.\n"
+"    bname=`basename \"$name\"`      # We only need a basename of the "
+"entry.\n"
+"    [ -d \"$name\" ] &amp;&amp; bname=\"$bname/\"\n"
+"                                  # If it's a directory, append a slash.\n"
+"    echo \"`dot $size`$prefix +-$bname\"\n"
+"                                  # Display the result.\n"
+"    #  Call ourself recursively if it's a directory\n"
+"    #+ and we're not nested too deep ($MAXRECURS).\n"
+"    #  The recursion goes up: $((recurs+1))\n"
+"    #  The prefix gets a space if it's the last entry,\n"
+"    #+ or a pipe if there are more entries.\n"
+"    #  The minimum file/dirsize becomes\n"
+"    #+ a tenth of his parent: $((size/10)).\n"
+"    # Last argument is the full directory name to check.\n"
+"    if [ -d \"$name\" -a $recurs -lt $MAXRECURS ]; then\n"
+"      [ $cnt -lt $num ] \\\n"
+"        || (tree $((recurs+1)) \"$prefix  \" $((size/10)) \"$name\") \\\n"
+"        &amp;&amp; (tree $((recurs+1)) \"$prefix |\" $((size/10)) "
+"\"$name\")\n"
+"    fi\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:81
+#, no-wrap
+msgid ""
+"  [ $? -eq 0 ] &amp;&amp; echo \"           $prefix\"\n"
+"  # Every time we jump back add a 'blank' line.\n"
+"  return $E_BL\n"
+"  # We return 80 to tell we added a blank line already.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:85
+#, no-wrap
+msgid ""
+"###                ###\n"
+"###  main program  ###\n"
+"###                ###\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:90
+#, no-wrap
+msgid ""
+"rootdir=\"$@\"\n"
+"[ -d \"$rootdir\" ] ||\n"
+"  { echo \"$SELF: Usage: $SELF &lt;directory&gt;\" &gt;&amp;2; exit $E_DIR; "
+"}\n"
+"  # We should be called with a directory name.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:101
+#, no-wrap
+msgid ""
+"echo \"Building inventory list, please wait ...\"\n"
+"     # Show \"please wait\" message.\n"
+"du -akx \"$rootdir\" 1>\"$TMP\" 2>/dev/null\n"
+"     # Build a temporary list of all files/dirs and their size.\n"
+"size=`tail -1 \"$TMP\" | awk '{print $1}'`\n"
+"     # What is our rootdirectory's size?\n"
+"echo \"`dot $size` $rootdir\"\n"
+"     # Display rootdirectory's entry.\n"
+"tree 0 \"\" 0 \"$rootdir\"\n"
+"     # Display the tree below our rootdirectory.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:104
+#, no-wrap
+msgid ""
+"rm \"$TMP\" 2>/dev/null\n"
+"     # Clean up TMP file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree2.sh:105
+msgid "exit $?"
+msgstr ""

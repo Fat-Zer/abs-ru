@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/music.sh:3
+msgid "#!/bin/bash # music.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:5
+msgid "# Music without external files"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:8
+msgid "# Author: Antonio Macchi # Used in ABS Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:12
+msgid ""
+"# /dev/dsp default = 8000 frames per second, 8 bits per frame (1 byte), #+ 1 "
+"channel (mono)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:16
+#, no-wrap
+msgid ""
+"duration=2000       # If 8000 bytes = 1 second, then 2000 = 1/4 second.\n"
+"volume=$'\\xc0'      # Max volume = \\xff (or \\x00).\n"
+"mute=$'\\x80'        # No volume = \\x80 (the middle).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:24
+#, no-wrap
+msgid ""
+"function mknote ()  # $1=Note Hz in bytes (e.g. A = 440Hz ::\n"
+"{                   #+ 8000 fps / 440 = 16 :: A = 16 bytes per second)\n"
+"  for t in `seq 0 $duration`\n"
+"  do\n"
+"    test $(( $t % $1 )) = 0 &amp;&amp; echo -n $volume || echo -n $mute\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:35
+msgid ""
+"e=`mknote 49` g=`mknote 41` a=`mknote 36` b=`mknote 32` c=`mknote 30` "
+"cis=`mknote 29` d=`mknote 27` e2=`mknote 24` n=`mknote 32767` # European "
+"notation."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:39
+msgid ""
+"echo -n \"$g$e2$d$c$d$c$a$g$n$g$e$n$g$e2$d$c$c$b$c$cis$n$cis$d \\ "
+"$n$g$e2$d$c$d$c$a$g$n$g$e$n$g$a$d$c$b$a$b$c\" > /dev/dsp # dsp = Digital "
+"Signal Processor"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/music.sh:40
+#, no-wrap
+msgid "exit      # A \"bonny\" example of an elegant shell script!\n"
+msgstr ""

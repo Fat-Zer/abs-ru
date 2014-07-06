@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:5
+msgid ""
+"#!/bin/bash # Bash, version -ge 4.2 # Negative length-index in substring "
+"extraction.  # Important: It changes the interpretation of this construct!"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:7
+msgid "stringZ=abcABC123ABCabc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:13
+#, no-wrap
+msgid ""
+"echo ${stringZ}                              # abcABC123ABCabc\n"
+"#                   Position within string:    0123456789.....\n"
+"echo ${stringZ:2:3}                          #   cAB\n"
+"#  Count 2 chars forward from string beginning, and extract 3 chars.\n"
+"#  ${string:position:length}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:15
+msgid "# So far, nothing new, but now ..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:25
+#, no-wrap
+msgid ""
+"                                             # abcABC123ABCabc\n"
+"#                   Position within string:    0123....6543210\n"
+"echo ${stringZ:3:-6}                         #    ABC123\n"
+"#                ^\n"
+"#  Index 3 chars forward from beginning and 6 chars backward from end,\n"
+"#+ and extract everything in between.\n"
+"#  ${string:offset-from-front:offset-from-end}\n"
+"#  When the \"length\" parameter is negative, \n"
+"#+ it serves as an offset-from-end parameter.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/neg-offset.sh:26
+msgid "# See also neg-array.sh."
+msgstr ""
