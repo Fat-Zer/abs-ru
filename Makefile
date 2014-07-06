@@ -89,6 +89,9 @@ TRANSLATIONS = $(foreach lang, $(LANGS), $(TRANSLATIONS_$(lang)))
 
 all: update-po translate update-pot
 
+# toplevel PHONY targets
+.PHONY: update-pot update-po translate html
+
 # html targets
 html: $(foreach lang, $(LANGS), build-html-$(lang))
 
@@ -96,6 +99,8 @@ html-chunk: $(foreach lang, $(LANGS), build-html-chunk-$(lang))
 
 define rule_html_lang =
 build-html-$(1) : abs-guide-$(1).html
+
+.PHONY: build-html-$(1) build-html-chunk-$(1)
 
 abs-guide-$(1).html :  ${TRANSLATIONS_${1}}
 	$(XSLTPROC) -o $$@ $(DOCBOOK_HTML_XSL) $(1)/abs-guide.xml
@@ -105,6 +110,7 @@ build-html-chunk-$(1) : html-$(1)/.builded
 html-$(1)/.builded : ${TRANSLATIONS_${1}} html-$(1)/ 
 	$(XSLTPROC) -o html-$(1)/ $(DOCBOOK_HTML_CHUNK_XSL) $(1)/abs-guide.xml
 	touch html-$(1)/.builded
+
 html-$(1)/ :
 	mkdir -p html-$(1)
 endef
@@ -117,6 +123,7 @@ translate:  $(foreach lang, $(LANGS), translate-$(lang))
 
 define rule_translate_lang =
 translate-$(1) : ${TRANSLATIONS_${1}}
+.PHONY: translate-$(1)
 
 $(1)/%.xml : $(SOURCEDIR)/%.xml $(PODIR)/$(1)/%.xml.po
 	$(PO4A_TRANSLATE) -f docbook -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.xml.po
