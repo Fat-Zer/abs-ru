@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex68.sh:3
+msgid "#!/bin/bash # sieve.sh (ex68.sh)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:6
+msgid "# Sieve of Eratosthenes # Ancient algorithm for finding prime numbers."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:9
+msgid ""
+"# This runs a couple of orders of magnitude slower #+ than the equivalent "
+"program written in C."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:13
+#, no-wrap
+msgid ""
+"LOWER_LIMIT=1       # Starting with 1.\n"
+"UPPER_LIMIT=1000    # Up to 1000.\n"
+"# (You may set this higher . . . if you have time on your hands.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:16
+msgid "PRIME=1 NON_PRIME=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:20
+msgid ""
+"let SPLIT=UPPER_LIMIT/2 # Optimization: # Need to test numbers only halfway "
+"to upper limit. Why?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:24
+msgid "declare -a Primes # Primes[] is an array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:29
+msgid "initialize ()  { # Initialize the array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:39
+#, no-wrap
+msgid ""
+"i=$LOWER_LIMIT\n"
+"until [ \"$i\" -gt \"$UPPER_LIMIT\" ]\n"
+"do\n"
+"  Primes[i]=$PRIME\n"
+"  let \"i += 1\"\n"
+"done\n"
+"#  Assume all array members guilty (prime)\n"
+"#+ until proven innocent.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:43
+msgid ""
+"print_primes ()  { # Print out the members of the Primes[] array tagged as "
+"prime."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:45
+msgid "i=$LOWER_LIMIT"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:48 abs-guide/ex68.sh:69
+msgid "until [ \"$i\" -gt \"$UPPER_LIMIT\" ] do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:54
+#, no-wrap
+msgid ""
+"  if [ \"${Primes[i]}\" -eq \"$PRIME\" ]\n"
+"  then\n"
+"    printf \"%8d\" $i\n"
+"    # 8 spaces per number gives nice, even columns.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:56
+#, no-wrap
+msgid "  let \"i += 1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:58
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:60 abs-guide/ex68.sh:90
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:63
+msgid "sift () # Sift out the non-primes.  {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:66
+msgid "let i=$LOWER_LIMIT+1 # Let's start with 2."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:73
+msgid ""
+"if [ \"${Primes[i]}\" -eq \"$PRIME\" ] # Don't bother sieving numbers "
+"already sieved (tagged as non-prime).  then"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:75
+#, no-wrap
+msgid "  t=$i\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:82
+#, no-wrap
+msgid ""
+"  while [ \"$t\" -le \"$UPPER_LIMIT\" ]\n"
+"  do\n"
+"    let \"t += $i \"\n"
+"    Primes[t]=$NON_PRIME\n"
+"    # Tag as non-prime all multiples.\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:84
+msgid "fi"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:87
+#, no-wrap
+msgid ""
+"  let \"i += 1\"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:100
+msgid ""
+"# ============================================== # main ()  # Invoke the "
+"functions sequentially.  initialize sift print_primes # This is what they "
+"call structured programming.  # "
+"=============================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:102
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:104
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:109
+msgid ""
+"# -------------------------------------------------------- # # Code below "
+"line will not execute, because of 'exit.'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:112
+msgid ""
+"# This improved version of the Sieve, by Stephane Chazelas, #+ executes "
+"somewhat faster."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:114
+msgid "# Must invoke with command-line argument (limit of primes)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:117
+#, no-wrap
+msgid ""
+"UPPER_LIMIT=$1                  # From command-line.\n"
+"let SPLIT=UPPER_LIMIT/2         # Halfway to max number.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:119
+msgid "Primes=( '' $(seq $UPPER_LIMIT) )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:133
+#, no-wrap
+msgid ""
+"i=1\n"
+"until (( ( i += 1 ) > SPLIT ))  # Need check only halfway.\n"
+"do\n"
+"  if [[ -n ${Primes[i]} ]]\n"
+"  then\n"
+"    t=$i\n"
+"    until (( ( t += i ) > UPPER_LIMIT ))\n"
+"    do\n"
+"      Primes[t]=\n"
+"    done\n"
+"  fi  \n"
+"done  \n"
+"echo ${Primes[*]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex68.sh:134
+msgid "exit $?"
+msgstr ""

@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex70.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex70.sh:9
+#, no-wrap
+msgid ""
+"wall &lt;&lt;zzz23EndOfMessagezzz23\n"
+"E-mail your noontime orders for pizza to the system administrator.\n"
+"    (Add an extra dollar for anchovy or mushroom topping.)\n"
+"# Additional message text goes here.\n"
+"# Note: 'wall' prints comment lines.\n"
+"zzz23EndOfMessagezzz23\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex70.sh:14
+#, no-wrap
+msgid ""
+"# Could have been done more efficiently by\n"
+"#         wall &lt;message-file\n"
+"#  However, embedding the message template in a script\n"
+"#+ is a quick-and-dirty one-off solution.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex70.sh:15
+msgid "exit"
+msgstr ""

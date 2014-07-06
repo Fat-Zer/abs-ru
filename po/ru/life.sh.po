@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/life.sh:5
+msgid ""
+"#!/bin/bash # life.sh: \"Life in the Slow Lane\" # Author: Mendel Cooper # "
+"License: GPL3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:9
+#, no-wrap
+msgid ""
+"# Version 0.2:   Patched by Daniel Albers\n"
+"#+               to allow non-square grids as input.\n"
+"# Version 0.2.1: Added 2-second delay between generations.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:32
+#, no-wrap
+msgid ""
+"# ##################################################################### #\n"
+"# This is the Bash script version of John Conway's \"Game of Life\".      "
+"#\n"
+"# \"Life\" is a simple implementation of cellular automata.               "
+"#\n"
+"# --------------------------------------------------------------------- #\n"
+"# On a rectangular grid, let each \"cell\" be either \"living\" or \"dead.\"  "
+"#\n"
+"# Designate a living cell with a dot, and a dead one with a blank space.#\n"
+"#      Begin with an arbitrarily drawn dot-and-blank grid,              #\n"
+"#+     and let this be the starting generation: generation 0.           #\n"
+"# Determine each successive generation by the following rules:          #\n"
+"#   1) Each cell has 8 neighbors, the adjoining cells                   #\n"
+"#+     left, right, top, bottom, and the 4 diagonals.                   #\n"
+"#                                                                       #\n"
+"#                       123                                             #\n"
+"#                       4*5     The * is the cell under consideration.  #\n"
+"#                       678                                             #\n"
+"#                                                                       #\n"
+"# 2) A living cell with either 2 or 3 living neighbors remains alive.   #\n"
+"SURVIVE=2                                                               #\n"
+"# 3) A dead cell with 3 living neighbors comes alive, a \"birth.\"        "
+"#\n"
+"BIRTH=3                                                                 #\n"
+"# 4) All other cases result in a dead cell for the next generation.     #\n"
+"# ##################################################################### #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:41
+#, no-wrap
+msgid ""
+"startfile=gen0   # Read the starting generation from the file \"gen0\" ...\n"
+"                 # Default, if no other file specified when invoking "
+"script.\n"
+"                 #\n"
+"if [ -n \"$1\" ]   # Specify another \"generation 0\" file.\n"
+"then\n"
+"    startfile=\"$1\"\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:46
+msgid ""
+"############################################ # Abort script if \"startfile\" "
+"not specified #+ and #+ default file \"gen0\" not present."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:48
+msgid "E_NOSTARTFILE=86"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:55
+#, no-wrap
+msgid ""
+"if [ ! -e \"$startfile\" ]\n"
+"then\n"
+"  echo \"Startfile \\\"\"$startfile\"\\\" missing!\"\n"
+"  exit $E_NOSTARTFILE\n"
+"fi\n"
+"############################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:60
+#, no-wrap
+msgid ""
+"ALIVE1=.\n"
+"DEAD1=_\n"
+"                 # Represent living and dead cells in the start-up file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:68
+msgid ""
+"# -----------------------------------------------------# # This script uses "
+"a 10 x 10 grid (may be increased, #+ but a large grid will slow down "
+"execution).  ROWS=10 COLS=10 # Change above two variables to match desired "
+"grid size.  # -----------------------------------------------------#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:72
+#, no-wrap
+msgid ""
+"GENERATIONS=10          #  How many generations to cycle through.\n"
+"                        #  Adjust this upwards\n"
+"                        #+ if you have time on your hands.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:80
+#, no-wrap
+msgid ""
+"NONE_ALIVE=85           #  Exit status on premature bailout,\n"
+"                        #+ if no cells left alive.\n"
+"DELAY=2                 #  Pause between generations.\n"
+"TRUE=0\n"
+"FALSE=1\n"
+"ALIVE=0\n"
+"DEAD=1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:83
+#, no-wrap
+msgid ""
+"avar=                   # Global; holds current generation.\n"
+"generation=0            # Initialize generation count.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:85
+msgid "# ================================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:87
+#, no-wrap
+msgid "let \"cells = $ROWS * $COLS\"   # How many cells.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:91
+msgid "# Arrays containing \"cells.\" declare -a initial declare -a current"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:94
+msgid "display ()  {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:97
+#, no-wrap
+msgid ""
+"alive=0                 # How many cells alive at any given time.\n"
+"                        # Initially zero.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:100
+#, no-wrap
+msgid ""
+"declare -a arr\n"
+"arr=( `echo \"$1\"` )     # Convert passed arg to array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:102
+msgid "element_count=${#arr[*]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:105
+msgid "local i local rowcheck"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:108
+msgid "for ((i=0; i&lt;$element_count; i++))  do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:116
+#, no-wrap
+msgid ""
+"  # Insert newline at end of each row.\n"
+"  let \"rowcheck = $i % COLS\"\n"
+"  if [ \"$rowcheck\" -eq 0 ]\n"
+"  then\n"
+"    echo                # Newline.\n"
+"    echo -n \"      \"    # Indent.\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:118
+#, no-wrap
+msgid "  cell=${arr[i]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:123
+#, no-wrap
+msgid ""
+"  if [ \"$cell\" = . ]\n"
+"  then\n"
+"    let \"alive += 1\"\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:127
+#, no-wrap
+msgid ""
+"  echo -n \"$cell\" | sed -e 's/_/ /g'\n"
+"  # Print out array, changing underscores to spaces.\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:129
+msgid "return"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:131 abs-guide/life.sh:166 abs-guide/life.sh:187 abs-guide/life.sh:264 abs-guide/life.sh:304
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:134
+#, no-wrap
+msgid ""
+"IsValid ()                            # Test if cell coordinate valid.\n"
+"{\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:139
+#, no-wrap
+msgid ""
+"  if [ -z \"$1\"  -o -z \"$2\" ]          # Mandatory arguments missing?\n"
+"  then\n"
+"    return $FALSE\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:145
+#, no-wrap
+msgid ""
+"local row\n"
+"local lower_limit=0                   # Disallow negative coordinate.\n"
+"local upper_limit\n"
+"local left\n"
+"local right\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:147
+msgid "let \"upper_limit = $ROWS * $COLS - 1\" # Total number of cells."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:153
+#, no-wrap
+msgid ""
+"if [ \"$1\" -lt \"$lower_limit\" -o \"$1\" -gt \"$upper_limit\" ]\n"
+"then\n"
+"  return $FALSE                       # Out of array bounds.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:157
+#, no-wrap
+msgid ""
+"row=$2\n"
+"let \"left = $row * $COLS\"             # Left limit.\n"
+"let \"right = $left + $COLS - 1\"       # Right limit.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:162
+#, no-wrap
+msgid ""
+"if [ \"$1\" -lt \"$left\" -o \"$1\" -gt \"$right\" ]\n"
+"then\n"
+"  return $FALSE                       # Beyond row boundary.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:164
+#, no-wrap
+msgid "return $TRUE                          # Valid coordinate.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:173
+#, no-wrap
+msgid ""
+"IsAlive ()              #  Test whether cell is alive.\n"
+"                        #  Takes array, cell number, and\n"
+"{                       #+ state of cell as arguments.\n"
+"  GetCount \"$1\" $2      #  Get alive cell count in neighborhood.\n"
+"  local nhbd=$?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:178
+#, no-wrap
+msgid ""
+"  if [ \"$nhbd\" -eq \"$BIRTH\" ]  # Alive in any case.\n"
+"  then\n"
+"    return $ALIVE\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:183
+#, no-wrap
+msgid ""
+"  if [ \"$3\" = \".\" -a \"$nhbd\" -eq \"$SURVIVE\" ]\n"
+"  then                  # Alive only if previously alive.\n"
+"    return $ALIVE\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:185
+#, no-wrap
+msgid "  return $DEAD          # Defaults to dead.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:207
+#, no-wrap
+msgid ""
+"GetCount ()             # Count live cells in passed cell's neighborhood.\n"
+"                        # Two arguments needed:\n"
+"\t\t\t# $1) variable holding array\n"
+"\t\t\t# $2) cell number\n"
+"{\n"
+"  local cell_number=$2\n"
+"  local array\n"
+"  local top\n"
+"  local center\n"
+"  local bottom\n"
+"  local r\n"
+"  local row\n"
+"  local i\n"
+"  local t_top\n"
+"  local t_cen\n"
+"  local t_bot\n"
+"  local count=0\n"
+"  local ROW_NHBD=3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:209
+#, no-wrap
+msgid "  array=( `echo \"$1\"` )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:214
+#, no-wrap
+msgid ""
+"  let \"top = $cell_number - $COLS - 1\"    # Set up cell neighborhood.\n"
+"  let \"center = $cell_number - 1\"\n"
+"  let \"bottom = $cell_number + $COLS - 1\"\n"
+"  let \"r = $cell_number / $COLS\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:220
+#, no-wrap
+msgid ""
+"  for ((i=0; i&lt;$ROW_NHBD; i++))           # Traverse from left to "
+"right. \n"
+"  do\n"
+"    let \"t_top = $top + $i\"\n"
+"    let \"t_cen = $center + $i\"\n"
+"    let \"t_bot = $bottom + $i\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:231
+#, no-wrap
+msgid ""
+"    let \"row = $r\"                        # Count center row.\n"
+"    IsValid $t_cen $row                   # Valid cell position?\n"
+"    if [ $? -eq \"$TRUE\" ]\n"
+"    then\n"
+"      if [ ${array[$t_cen]} = \"$ALIVE1\" ] # Is it alive?\n"
+"      then                                # If yes, then ...\n"
+"        let \"count += 1\"                  # Increment count.\n"
+"      fi\t\n"
+"    fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:241
+#, no-wrap
+msgid ""
+"    let \"row = $r - 1\"                    # Count top row.          \n"
+"    IsValid $t_top $row\n"
+"    if [ $? -eq \"$TRUE\" ]\n"
+"    then\n"
+"      if [ ${array[$t_top]} = \"$ALIVE1\" ] # Redundancy here.\n"
+"      then                                # Can it be optimized?\n"
+"        let \"count += 1\"\n"
+"      fi\t\n"
+"    fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:251
+#, no-wrap
+msgid ""
+"    let \"row = $r + 1\"                    # Count bottom row.\n"
+"    IsValid $t_bot $row\n"
+"    if [ $? -eq \"$TRUE\" ]\n"
+"    then\n"
+"      if [ ${array[$t_bot]} = \"$ALIVE1\" ] \n"
+"      then\n"
+"        let \"count += 1\"\n"
+"      fi\t\n"
+"    fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:253
+#, no-wrap
+msgid "  done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:259
+#, no-wrap
+msgid ""
+"  if [ ${array[$cell_number]} = \"$ALIVE1\" ]\n"
+"  then\n"
+"    let \"count -= 1\"        #  Make sure value of tested cell itself\n"
+"  fi                        #+ is not counted.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:262
+#, no-wrap
+msgid "  return $count\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:267
+#, no-wrap
+msgid ""
+"next_gen ()               # Update generation array.\n"
+"{\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:270
+msgid "local array local i=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:272
+#, no-wrap
+msgid "array=( `echo \"$1\"` )     # Convert passed arg to array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:284
+#, no-wrap
+msgid ""
+"while [ \"$i\" -lt \"$cells\" ]\n"
+"do\n"
+"  IsAlive \"$1\" $i ${array[$i]}   # Is the cell alive?\n"
+"  if [ $? -eq \"$ALIVE\" ]\n"
+"  then                           #  If alive, then\n"
+"    array[$i]=.                  #+ represent the cell as a period.\n"
+"  else  \n"
+"    array[$i]=\"_\"                #  Otherwise underscore\n"
+"   fi                            #+ (will later be converted to space).\n"
+"  let \"i += 1\" \n"
+"done   \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:288
+#, no-wrap
+msgid ""
+"#    let \"generation += 1\"       # Increment generation count.\n"
+"###  Why was the above line commented out?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:295
+#, no-wrap
+msgid ""
+"# Set variable to pass as parameter to \"display\" function.\n"
+"avar=`echo ${array[@]}`   # Convert array back to string variable.\n"
+"display \"$avar\"           # Display it.\n"
+"echo; echo\n"
+"echo \"Generation $generation  -  $alive alive\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:302
+#, no-wrap
+msgid ""
+"if [ \"$alive\" -eq 0 ]\n"
+"then\n"
+"  echo\n"
+"  echo \"Premature exit: no more cells alive!\"\n"
+"  exit $NONE_ALIVE        #  No point in continuing\n"
+"fi                        #+ if no live cells.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:307
+msgid "# ========================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:310
+msgid "# main ()  # {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:316
+#, no-wrap
+msgid ""
+"# Load initial array with contents of startup file.\n"
+"initial=( `cat \"$startfile\" | sed -e '/#/d' | tr -d '\\n' |\\\n"
+"# Delete lines containing '#' comment character.\n"
+"           sed -e 's/\\./\\. /g' -e 's/_/_ /g'` )\n"
+"# Remove linefeeds and insert space between elements.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:318
+#, no-wrap
+msgid "clear          # Clear screen.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:329
+#, no-wrap
+msgid ""
+"echo #         Title\n"
+"setterm -reverse on\n"
+"echo \"=======================\"\n"
+"setterm -reverse off\n"
+"echo \"    $GENERATIONS generations\"\n"
+"echo \"           of\"\n"
+"echo \"\\\"Life in the Slow Lane\\\"\"\n"
+"setterm -reverse on\n"
+"echo \"=======================\"\n"
+"setterm -reverse off\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:331
+#, no-wrap
+msgid "sleep $DELAY   # Display \"splash screen\" for 2 seconds.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:340
+#, no-wrap
+msgid ""
+"# -------- Display first generation. --------\n"
+"Gen0=`echo ${initial[@]}`\n"
+"display \"$Gen0\"           # Display only.\n"
+"echo; echo\n"
+"echo \"Generation $generation  -  $alive alive\"\n"
+"sleep $DELAY\n"
+"# -------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:344
+#, no-wrap
+msgid ""
+"let \"generation += 1\"     # Bump generation count.\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:350
+#, no-wrap
+msgid ""
+"# ------- Display second generation. -------\n"
+"Cur=`echo ${initial[@]}`\n"
+"next_gen \"$Cur\"          # Update &amp; display.\n"
+"sleep $DELAY\n"
+"# ------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:352
+#, no-wrap
+msgid "let \"generation += 1\"     # Increment generation count.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:362
+#, no-wrap
+msgid ""
+"# ------ Main loop for displaying subsequent generations ------\n"
+"while [ \"$generation\" -le \"$GENERATIONS\" ]\n"
+"do\n"
+"  Cur=\"$avar\"\n"
+"  next_gen \"$Cur\"\n"
+"  let \"generation += 1\"\n"
+"  sleep $DELAY\n"
+"done\n"
+"# ==============================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:365
+msgid "echo # }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:367
+#, no-wrap
+msgid "exit 0   # CEOF:EOF\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:388
+#, no-wrap
+msgid ""
+"# The grid in this script has a \"boundary problem.\"\n"
+"# The the top, bottom, and sides border on a void of dead cells.\n"
+"# Exercise: Change the script to have the grid wrap around,\n"
+"# +         so that the left and right sides will \"touch,\"      \n"
+"# +         as will the top and bottom.\n"
+"#\n"
+"# Exercise: Create a new \"gen0\" file to seed this script.\n"
+"#           Use a 12 x 16 grid, instead of the original 10 x 10 one.\n"
+"#           Make the necessary changes to the script,\n"
+"#+          so it will run with the altered file.\n"
+"#\n"
+"# Exercise: Modify this script so that it can determine the grid size\n"
+"#+          from the \"gen0\" file, and set any variables necessary\n"
+"#+          for the script to run.\n"
+"#           This would make unnecessary any changes to variables\n"
+"#+          in the script for an altered grid size.\n"
+"#\n"
+"# Exercise: Optimize this script.\n"
+"#           It has redundant code.\n"
+msgstr ""

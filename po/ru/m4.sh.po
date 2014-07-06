@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/m4.sh:3
+msgid "#!/bin/bash # m4.sh: Using the m4 macro processor"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/m4.sh:9
+#, no-wrap
+msgid ""
+"# Strings\n"
+"string=abcdA01\n"
+"echo \"len($string)\" | m4                            #   7\n"
+"echo \"substr($string,4)\" | m4                       # A01\n"
+"echo \"regexp($string,[0-1][0-1],\\&amp;Z)\" | m4      # 01Z\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/m4.sh:14
+#, no-wrap
+msgid ""
+"# Arithmetic\n"
+"var=99\n"
+"echo \"incr($var)\" | m4                              #  100\n"
+"echo \"eval($var / 3)\" | m4                          #   33\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/m4.sh:15
+msgid "exit"
+msgstr ""

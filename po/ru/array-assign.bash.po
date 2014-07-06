@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:3
+msgid "#! /bin/bash # array-assign.bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:6
+msgid ""
+"# Array operations are Bash-specific, #+ hence the \".bash\" in the script "
+"name."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:12
+msgid ""
+"# Copyright (c) Michael S. Zick, 2003, All rights reserved.  # License: "
+"Unrestricted reuse in any form, for any purpose.  # Version: $ID$ # # "
+"Clarification and additional comments by William Park."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:16
+msgid ""
+"# Based on an example provided by Stephane Chazelas #+ which appeared in an "
+"earlier version of the #+ Advanced Bash Scripting Guide."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:20
+msgid ""
+"# Output format of the 'times' command: # User CPU &lt;space&gt; System CPU "
+"# User CPU of dead children &lt;space&gt; System CPU of dead children"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:27
+msgid ""
+"# Bash has two versions of assigning all elements of an array #+ to a new "
+"array variable.  # Both drop 'null reference' elements #+ in Bash versions "
+"2.04 and later.  # An additional array assignment that maintains the "
+"relationship of #+ [subscript]=value for arrays may be added to newer "
+"versions."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:31
+msgid ""
+"# Constructs a large array using an internal command, #+ but anything "
+"creating an array of several thousand elements #+ will do just fine."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:36
+msgid ""
+"declare -a bigOne=( /dev/* )  # All the files in /dev . . .  echo echo "
+"'Conditions: Unquoted, default IFS, All-Elements-Of' echo \"Number of "
+"elements in array is ${#bigOne[@]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:38
+msgid "# set -vx"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:47
+#, no-wrap
+msgid ""
+"echo\n"
+"echo '- - testing: =( ${array[@]} ) - -'\n"
+"times\n"
+"declare -a bigTwo=( ${bigOne[@]} )\n"
+"# Note parens:    ^              ^\n"
+"times\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:55
+msgid ""
+"echo echo '- - testing: =${array[@]} - -' times declare -a "
+"bigThree=${bigOne[@]} # No parentheses this time.  times"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:68
+#, no-wrap
+msgid ""
+"#  Comparing the numbers shows that the second form, pointed out\n"
+"#+ by Stephane Chazelas, is faster.\n"
+"#\n"
+"#  As William Park explains:\n"
+"#+ The bigTwo array assigned element by element (because of parentheses),\n"
+"#+ whereas bigThree assigned as a single string.\n"
+"#  So, in essence, you have:\n"
+"#                   bigTwo=( [0]=\"...\" [1]=\"...\" [2]=\"...\" ... )\n"
+"#                   bigThree=( [0]=\"... ... ...\" )\n"
+"#\n"
+"#  Verify this by:  echo ${bigTwo[0]}\n"
+"#                   echo ${bigThree[0]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:72
+msgid ""
+"# I will continue to use the first form in my example descriptions #+ "
+"because I think it is a better illustration of what is happening."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:75
+msgid ""
+"# The reusable portions of my examples will actual contain #+ the second "
+"form where appropriate because of the speedup."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:77
+msgid "# MSZ: Sorry about that earlier oversight folks."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:87
+msgid ""
+"# Note: # ---- # The \"declare -a\" statements in lines 32 and 44 #+ are not "
+"strictly necessary, since it is implicit #+ in the Array=( ... )  assignment "
+"form.  # However, eliminating these declarations slows down #+ the execution "
+"of the following sections of the script.  # Try it, and see."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-assign.bash:88
+msgid "exit 0"
+msgstr ""

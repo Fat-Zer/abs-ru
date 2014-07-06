@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex52.sh:3
+msgid "#!/bin/bash # Uudecodes all uuencoded files in current working directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex52.sh:5
+#, no-wrap
+msgid "lines=35        # Allow 35 lines for the header (very generous).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex52.sh:21
+#, no-wrap
+msgid ""
+"for File in *   # Test all the files in $PWD.\n"
+"do\n"
+"  search1=`head -n $lines $File | grep begin | wc -w`\n"
+"  search2=`tail -n $lines $File | grep end | wc -w`\n"
+"  #  Uuencoded files have a \"begin\" near the beginning,\n"
+"  #+ and an \"end\" near the end.\n"
+"  if [ \"$search1\" -gt 0 ]\n"
+"  then\n"
+"    if [ \"$search2\" -gt 0 ]\n"
+"    then\n"
+"      echo \"uudecoding - $File -\"\n"
+"      uudecode $File\n"
+"    fi  \n"
+"  fi\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex52.sh:25
+msgid ""
+"# Note that running this script upon itself fools it #+ into thinking it is "
+"a uuencoded file, #+ because it contains both \"begin\" and \"end\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex52.sh:30
+msgid ""
+"# Exercise: # -------- # Modify this script to check each file for a "
+"newsgroup header, #+ and skip to next if not found."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex52.sh:31
+msgid "exit 0"
+msgstr ""

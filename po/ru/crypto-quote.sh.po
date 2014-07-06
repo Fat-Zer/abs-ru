@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:3
+msgid "#!/bin/bash # crypto-quote.sh: Encrypt quotes"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:7
+msgid ""
+"# Will encrypt famous quotes in a simple monoalphabetic substitution.  # The "
+"result is similar to the \"Crypto Quote\" puzzles #+ seen in the Op Ed pages "
+"of the Sunday paper."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:12
+msgid ""
+"key=ETAOINSHRDLUBCFGJMQPVWZYXK # The \"key\" is nothing more than a "
+"scrambled alphabet.  # Changing the \"key\" changes the encryption."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:16
+msgid ""
+"# The 'cat \"$@\"' construction gets input either from stdin or from files.  "
+"# If using stdin, terminate input with a Control-D.  # Otherwise, specify "
+"filename as command-line parameter."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:21
+#, no-wrap
+msgid ""
+"cat \"$@\" | tr \"a-z\" \"A-Z\" | tr \"A-Z\" \"$key\"\n"
+"#        |  to uppercase  |     encrypt       \n"
+"# Will work on lowercase, uppercase, or mixed-case quotes.\n"
+"# Passes non-alphabetic characters through unchanged.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:30
+msgid ""
+"# Try this script with something like: # \"Nothing so needs reforming as "
+"other people's habits.\" # --Mark Twain # # Output is: # \"CFPHRCS QF CIIOQ "
+"MINFMBRCS EQ FPHIM GIFGUI'Q HETRPQ.\" # --BEML PZERC"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:33
+msgid "# To reverse the encryption: # cat \"$@\" | tr \"$key\" \"A-Z\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:37
+msgid ""
+"# This simple-minded cipher can be broken by an average 12-year old #+ using "
+"only pencil and paper."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:39
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/crypto-quote.sh:43
+msgid ""
+"# Exercise: # -------- # Modify the script so that it will either encrypt or "
+"decrypt, #+ depending on command-line argument(s)."
+msgstr ""

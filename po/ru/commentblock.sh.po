@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:3
+msgid "#!/bin/bash # commentblock.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:8
+msgid ""
+": &lt;&lt;COMMENTBLOCK echo \"This line will not echo.\" This is a comment "
+"line missing the \"#\" prefix.  This is another comment line missing the "
+"\"#\" prefix."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:13
+msgid ""
+"&amp;*@!!++= The above line will cause no error message, because the Bash "
+"interpreter will ignore it.  COMMENTBLOCK"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:17
+#, no-wrap
+msgid ""
+"echo \"Exit value of above \\\"COMMENTBLOCK\\\" is $?.\"   # 0\n"
+"# No error shown.\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:24
+msgid ""
+"# The above technique also comes in useful for commenting out #+ a block of "
+"working code for debugging purposes.  # This saves having to put a \"#\" at "
+"the beginning of each line, #+ then having to go back and delete each \"#\" "
+"later.  # Note that the use of of colon, above, is optional."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:36
+#, no-wrap
+msgid ""
+"echo \"Just before commented-out code block.\"\n"
+"#  The lines of code between the double-dashed lines will not execute.\n"
+"#  ===================================================================\n"
+": &lt;&lt;DEBUGXXX\n"
+"for file in *\n"
+"do\n"
+" cat \"$file\"\n"
+"done\n"
+"DEBUGXXX\n"
+"#  ===================================================================\n"
+"echo \"Just after commented-out code block.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:38
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:46
+msgid ""
+"###################################################################### # "
+"Note, however, that if a bracketed variable is contained within #+ the "
+"commented-out code block, #+ then this could cause problems.  # for example:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:49
+msgid "#/!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:57
+#, no-wrap
+msgid ""
+"  : &lt;&lt;COMMENTBLOCK\n"
+"  echo \"This line will not echo.\"\n"
+"  &amp;*@!!++=\n"
+"  ${foo_bar_bazz?}\n"
+"  $(rm -rf /tmp/foobar/)\n"
+"  $(touch my_build_directory/cups/Makefile)\n"
+"COMMENTBLOCK\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:61
+msgid ""
+"$ sh commented-bad.sh commented-bad.sh: line 3: foo_bar_bazz: parameter null "
+"or not set"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:63
+msgid ""
+"# The remedy for this is to strong-quote the 'COMMENTBLOCK' in line 49, "
+"above."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:65
+#, no-wrap
+msgid "  : &lt;&lt;'COMMENTBLOCK'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/commentblock.sh:66
+msgid "# Thank you, Kurt Pfeifle, for pointing this out."
+msgstr ""

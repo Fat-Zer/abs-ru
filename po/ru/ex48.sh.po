@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex48.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:4
+msgid "# Copying a directory tree using cpio."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:9
+#, no-wrap
+msgid ""
+"# Advantages of using 'cpio':\n"
+"#   Speed of copying. It's faster than 'tar' with pipes.\n"
+"#   Well suited for copying special files (named pipes, etc.)\n"
+"#+  that 'cp' may choke on.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:12
+msgid "ARGS=2 E_BADARGS=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:18
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` source destination\"\n"
+"  exit $E_BADARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:21
+msgid "source=\"$1\" destination=\"$2\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:29
+#, no-wrap
+msgid ""
+"###################################################################\n"
+"find \"$source\" -depth | cpio -admvp \"$destination\"\n"
+"#               ^^^^^         ^^^^^\n"
+"#  Read the 'find' and 'cpio' info pages to decipher these options.\n"
+"#  The above works only relative to $PWD (current directory) . . .\n"
+"#+ full pathnames are specified.\n"
+"###################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:33
+msgid "# Exercise: # --------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:36
+msgid ""
+"# Add code to check the exit status ($?) of the 'find | cpio' pipe #+ and "
+"output appropriate error messages if anything went wrong."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex48.sh:37
+msgid "exit $?"
+msgstr ""

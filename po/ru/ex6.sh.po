@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex6.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:7
+msgid ""
+"# Check some of the system's environmental variables.  # This is good "
+"preventative maintenance.  # If, for example, $USER, the name of the person "
+"at the console, is not set, #+ the machine will not recognize you."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:19
+#, no-wrap
+msgid ""
+": ${HOSTNAME?} ${USER?} ${HOME?} ${MAIL?}\n"
+"  echo\n"
+"  echo \"Name of the machine is $HOSTNAME.\"\n"
+"  echo \"You are $USER.\"\n"
+"  echo \"Your home directory is $HOME.\"\n"
+"  echo \"Your mail INBOX is located in $MAIL.\"\n"
+"  echo\n"
+"  echo \"If you are reading this message,\"\n"
+"  echo \"critical environmental variables have been set.\"\n"
+"  echo\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:21
+msgid "# ------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:24
+msgid ""
+"# The ${variablename?} construction can also check #+ for variables set "
+"within the script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:30
+msgid ""
+"ThisVariable=Value-of-ThisVariable # Note, by the way, that string variables "
+"may be set #+ to characters disallowed in their names.  : ${ThisVariable?} "
+"echo \"Value of ThisVariable is $ThisVariable\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:32
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:37
+msgid ""
+": ${ZZXy23AB?\"ZZXy23AB has not been set.\"} # Since ZZXy23AB has not been "
+"set, #+ then the script terminates with an error message."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:40
+msgid "# You can specify the error message.  # : ${variablename?\"ERROR MESSAGE\"}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:46
+#, no-wrap
+msgid ""
+"# Same result with:   dummy_variable=${ZZXy23AB?}\n"
+"#                     dummy_variable=${ZZXy23AB?\"ZXy23AB has not been "
+"set.\"}\n"
+"#\n"
+"#                     echo ${ZZXy23AB?} >/dev/null\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:49
+msgid ""
+"# Compare these methods of checking whether a variable has been set #+ with "
+"\"set -u\" . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:53
+msgid "echo \"You will not see this message, because script already terminated.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:56
+#, no-wrap
+msgid ""
+"HERE=0\n"
+"exit $HERE   # Will NOT exit here.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex6.sh:57
+msgid "# In fact, this script will return an exit status (echo $?) of 1."
+msgstr ""

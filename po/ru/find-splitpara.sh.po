@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:5
+msgid ""
+"#!/bin/bash # find-splitpara.sh # Finds split paragraphs in a text file, #+ "
+"and tags the line numbers."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:11
+#, no-wrap
+msgid ""
+"ARGCOUNT=1       # Expect one arg.\n"
+"OFF=0            # Flag states.\n"
+"ON=1\n"
+"E_WRONGARGS=85\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:15
+#, no-wrap
+msgid ""
+"file=\"$1\"        # Target filename.\n"
+"lineno=1         # Line number. Start at 1.\n"
+"Flag=$OFF        # Blank line flag.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:21
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGCOUNT\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` FILENAME\"\n"
+"  exit $E_WRONGARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:26
+#, no-wrap
+msgid ""
+"file_read ()     # Scan file for pattern, then print line.\n"
+"{\n"
+"while read line\n"
+"do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:32
+#, no-wrap
+msgid ""
+"  if [[ \"$line\" =~ ^[a-z] &amp;&amp; $Flag -eq $ON ]]\n"
+"     then  # Line begins with lowercase character, following blank line.\n"
+"     echo -n \"$lineno::   \"\n"
+"     echo \"$line\"\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:40
+#, no-wrap
+msgid ""
+"  if [[ \"$line\" =~ ^$ ]]\n"
+"     then       #  If blank line,\n"
+"     Flag=$ON   #+ set flag.\n"
+"  else\n"
+"     Flag=$OFF\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:42
+#, no-wrap
+msgid "  ((lineno++))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:45
+msgid "done } &lt; $file # Redirect file into function's stdin."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:47
+msgid "file_read"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:50
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:55
+msgid ""
+"# ---------------------------------------------------------------- This is "
+"line one of an example paragraph, bla, bla, bla.  This is line two, and line "
+"three should follow on next line, but"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:58
+msgid ""
+"there is a blank line separating the two parts of the paragraph.  # "
+"----------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:61
+msgid "Running this script on a file containing the above paragraph yields:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:63
+#, no-wrap
+msgid "4::   there is a blank line separating the two parts of the paragraph.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/find-splitpara.sh:66
+msgid ""
+"There will be additional output for all the other split paragraphs in the "
+"target file."
+msgstr ""

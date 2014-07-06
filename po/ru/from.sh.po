@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/from.sh:3
+msgid "#!/bin/bash # from.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/from.sh:7
+msgid ""
+"# Emulates the useful 'from' utility in Solaris, BSD, etc.  # Echoes the "
+"\"From\" header line in all messages #+ in your e-mail directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/from.sh:14
+#, no-wrap
+msgid ""
+"MAILDIR=~/mail/*               #  No quoting of variable. Why?\n"
+"# Maybe check if-exists $MAILDIR:   if [ -d $MAILDIR ] . . .\n"
+"GREP_OPTS=\"-H -A 5 --color\"    #  Show file, plus extra context lines\n"
+"                               #+ and display \"From\" in color.\n"
+"TARGETSTR=\"^From\"              # \"From\" at beginning of line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/from.sh:21
+#, no-wrap
+msgid ""
+"for file in $MAILDIR           #  No quoting of variable.\n"
+"do\n"
+"  grep $GREP_OPTS \"$TARGETSTR\" \"$file\"\n"
+"  #    ^^^^^^^^^^              #  Again, do not quote this variable.\n"
+"  echo\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/from.sh:23
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/from.sh:25
+msgid ""
+"# You might wish to pipe the output of this script to 'more' #+ or redirect "
+"it to a file . . ."
+msgstr ""

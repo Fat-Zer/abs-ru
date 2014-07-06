@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:3
+msgid "#!/bin/bash # pr-ascii.sh: Prints a table of ASCII characters."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:6
+#, no-wrap
+msgid ""
+"START=33   # Range of printable ASCII characters (decimal).\n"
+"END=127    # Will not work for unprintable characters (> 127).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:9
+#, no-wrap
+msgid ""
+"echo \" Decimal   Hex     Character\"   # Header.\n"
+"echo \" -------   ---     ---------\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:16
+#, no-wrap
+msgid ""
+"for ((i=START; i&lt;=END; i++))\n"
+"do\n"
+"  echo $i | awk '{printf(\"  %3d       %2x         %c\\n\", $1, $1, $1)}'\n"
+"# The Bash printf builtin will not work in this context:\n"
+"#     printf \"%c\" \"$i\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:18
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:33
+#, no-wrap
+msgid ""
+"#  Decimal   Hex     Character\n"
+"#  -------   ---     ---------\n"
+"#    33       21         !\n"
+"#    34       22         \"\n"
+"#    35       23         #\n"
+"#    36       24         $\n"
+"#\n"
+"#    . . .\n"
+"#\n"
+"#   122       7a         z\n"
+"#   123       7b         {\n"
+"#   124       7c         |\n"
+"#   125       7d         }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pr-asc.sh:36
+msgid ""
+"# Redirect the output of this script to a file #+ or pipe it to \"more\": sh "
+"pr-asc.sh | more"
+msgstr ""

@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/tree.sh:3
+msgid "#!/bin/bash # tree.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:11
+msgid ""
+"# Written by Rick Boivie.  # Used with permission.  # This is a revised and "
+"simplified version of a script #+ by Jordi Sanfeliu (the original author), "
+"and patched by Ian Kjos.  # This script replaces the earlier version used in "
+"#+ previous releases of the Advanced Bash Scripting Guide.  # Copyright (c) "
+"2002, by Jordi Sanfeliu, Rick Boivie, and Ian Kjos."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:13
+msgid "# ==> Comments added by the author of this document."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:32
+#, no-wrap
+msgid ""
+"search () {\n"
+"for dir in `echo *`\n"
+"#  ==> `echo *` lists all the files in current working directory,\n"
+"#+ ==> without line breaks.\n"
+"#  ==> Similar effect to for dir in *\n"
+"#  ==> but \"dir in `echo *`\" will not handle filenames with blanks.\n"
+"do\n"
+"  if [ -d \"$dir\" ] ; then # ==> If it is a directory (-d)...\n"
+"  zz=0                    # ==> Temp variable, keeping track of\n"
+"                          #     directory level.\n"
+"  while [ $zz != $1 ]     # Keep track of inner nested loop.\n"
+"    do\n"
+"      echo -n \"| \"        # ==> Display vertical connector symbol,\n"
+"                          # ==> with 2 spaces &amp; no line feed\n"
+"                          #     in order to indent.\n"
+"      zz=`expr $zz + 1`   # ==> Increment zz.\n"
+"    done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:50
+#, no-wrap
+msgid ""
+"    if [ -L \"$dir\" ] ; then # ==> If directory is a symbolic link...\n"
+"      echo \"+---$dir\" `ls -l $dir | sed 's/^.*'$dir' //'`\n"
+"      # ==> Display horiz. connector and list directory name, but...\n"
+"      # ==> delete date/time part of long listing.\n"
+"    else\n"
+"      echo \"+---$dir\"       # ==> Display horizontal connector symbol...\n"
+"      # ==> and print directory name.\n"
+"      numdirs=`expr $numdirs + 1` # ==> Increment directory count.\n"
+"      if cd \"$dir\" ; then         # ==> If can move to subdirectory...\n"
+"        search `expr $1 + 1`      # with recursion ;-)\n"
+"        # ==> Function calls itself.\n"
+"        cd ..\n"
+"      fi\n"
+"    fi\n"
+"  fi\n"
+"done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:55
+#, no-wrap
+msgid ""
+"if [ $# != 0 ] ; then\n"
+"  cd $1   # Move to indicated directory.\n"
+"  #else   # stay in current directory\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:58
+msgid "echo \"Initial directory = `pwd`\" numdirs=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:61
+msgid "search 0 echo \"Total directories = $numdirs\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tree.sh:62
+msgid "exit 0"
+msgstr ""

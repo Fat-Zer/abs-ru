@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/poem.sh:3
+msgid ""
+"#!/bin/bash # poem.sh: Pretty-prints one of the ABS Guide author's favorite "
+"poems."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:11
+msgid ""
+"# Lines of the poem (single stanza).  Line[1]=\"I do not know which to "
+"prefer,\" Line[2]=\"The beauty of inflections\" Line[3]=\"Or the beauty of "
+"innuendoes,\" Line[4]=\"The blackbird whistling\" Line[5]=\"Or just after.\" "
+"# Note that quoting permits embedding whitespace."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:16
+msgid ""
+"# Attribution.  Attrib[1]=\" Wallace Stevens\" Attrib[2]=\"\\\"Thirteen Ways "
+"of Looking at a Blackbird\\\"\" # This poem is in the Public Domain "
+"(copyright expired)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:18 abs-guide/poem.sh:35
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:20
+#, no-wrap
+msgid "tput bold   # Bold print.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:25
+#, no-wrap
+msgid ""
+"for index in 1 2 3 4 5    # Five lines.\n"
+"do\n"
+"  printf \"     %s\\n\" \"${Line[index]}\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:30
+#, no-wrap
+msgid ""
+"for index in 1 2          # Two attribution lines.\n"
+"do\n"
+"  printf \"          %s\\n\" \"${Attrib[index]}\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:33
+#, no-wrap
+msgid ""
+"tput sgr0   # Reset terminal.\n"
+"            # See 'tput' docs.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:37
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/poem.sh:40
+msgid ""
+"# Exercise: # -------- # Modify this script to pretty-print a poem from a "
+"text data file."
+msgstr ""

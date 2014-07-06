@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/restricted.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:5
+msgid ""
+"# Starting the script with \"#!/bin/bash -r\" #+ runs entire script in "
+"restricted mode."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:7 abs-guide/restricted.sh:46
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:15
+msgid ""
+"echo \"Changing directory.\" cd /usr/local echo \"Now in `pwd`\" echo "
+"\"Coming back home.\" cd echo \"Now in `pwd`\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:17
+msgid "# Everything up to here in normal, unrestricted mode."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:21
+#, no-wrap
+msgid ""
+"set -r\n"
+"# set --restricted    has same effect.\n"
+"echo \"==> Now in restricted mode. &lt;==\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:24 abs-guide/restricted.sh:31 abs-guide/restricted.sh:40
+msgid "echo echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:28
+msgid ""
+"echo \"Attempting directory change in restricted mode.\" cd ..  echo \"Still "
+"in `pwd`\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:37
+msgid ""
+"echo \"\\$SHELL = $SHELL\" echo \"Attempting to change shell in restricted "
+"mode.\" SHELL=\"/bin/ash\" echo echo \"\\$SHELL= $SHELL\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:44
+#, no-wrap
+msgid ""
+"echo \"Attempting to redirect output in restricted mode.\"\n"
+"ls -l /usr/bin > bin.files\n"
+"ls -l bin.files    # Try to list attempted file creation effort.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/restricted.sh:47
+msgid "exit 0"
+msgstr ""

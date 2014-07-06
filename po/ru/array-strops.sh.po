@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:3
+msgid "#!/bin/bash # array-strops.sh: String operations on arrays."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:7
+msgid ""
+"# Script by Michael Zick.  # Used in ABS Guide with permission.  # Fixups: "
+"05 May 08, 04 Aug 08."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:11
+msgid ""
+"# In general, any string operation using the ${name ... } notation #+ can be "
+"applied to all string elements in an array, #+ with the ${name[@] ... } or "
+"${name[*] ...} notation."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:14
+msgid "arrayZ=( one two three four five five )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:16 abs-guide/array-strops.sh:106
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:20
+#, no-wrap
+msgid ""
+"# Trailing Substring Extraction\n"
+"echo ${arrayZ[@]:0}     # one two three four five five\n"
+"#                ^        All elements.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:23
+#, no-wrap
+msgid ""
+"echo ${arrayZ[@]:1}     # two three four five five\n"
+"#                ^        All elements following element[0].\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:26
+#, no-wrap
+msgid ""
+"echo ${arrayZ[@]:1:2}   # two three\n"
+"#                  ^      Only the two elements after element[0].\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:28
+msgid "echo \"---------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:31
+msgid "# Substring Removal"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:33
+msgid "# Removes shortest match from front of string(s)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:37
+#, no-wrap
+msgid ""
+"echo ${arrayZ[@]#f*r}   # one two three five five\n"
+"#               ^       # Applied to all elements of the array.\n"
+"                        # Matches \"four\" and removes it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:42
+#, no-wrap
+msgid ""
+"# Longest match from front of string(s)\n"
+"echo ${arrayZ[@]##t*e}  # one two four five five\n"
+"#               ^^      # Applied to all elements of the array.\n"
+"                        # Matches \"three\" and removes it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:47
+#, no-wrap
+msgid ""
+"# Shortest match from back of string(s)\n"
+"echo ${arrayZ[@]%h*e}   # one two t four five five\n"
+"#               ^       # Applied to all elements of the array.\n"
+"                        # Matches \"hree\" and removes it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:52
+#, no-wrap
+msgid ""
+"# Longest match from back of string(s)\n"
+"echo ${arrayZ[@]%%t*e}  # one two four five five\n"
+"#               ^^      # Applied to all elements of the array.\n"
+"                        # Matches \"three\" and removes it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:54
+msgid "echo \"----------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:57
+msgid "# Substring Replacement"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:61
+#, no-wrap
+msgid ""
+"# Replace first occurrence of substring with replacement.\n"
+"echo ${arrayZ[@]/fiv/XYZ}   # one two three four XYZe XYZe\n"
+"#               ^           # Applied to all elements of the array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:65
+#, no-wrap
+msgid ""
+"# Replace all occurrences of substring.\n"
+"echo ${arrayZ[@]//iv/YY}    # one two three four fYYe fYYe\n"
+"                            # Applied to all elements of the array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:70
+#, no-wrap
+msgid ""
+"# Delete all occurrences of substring.\n"
+"# Not specifing a replacement defaults to 'delete' ...\n"
+"echo ${arrayZ[@]//fi/}      # one two three four ve ve\n"
+"#               ^^          # Applied to all elements of the array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:74
+#, no-wrap
+msgid ""
+"# Replace front-end occurrences of substring.\n"
+"echo ${arrayZ[@]/#fi/XY}    # one two three four XYve XYve\n"
+"#                ^          # Applied to all elements of the array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:78
+#, no-wrap
+msgid ""
+"# Replace back-end occurrences of substring.\n"
+"echo ${arrayZ[@]/%ve/ZZ}    # one two three four fiZZ fiZZ\n"
+"#                ^          # Applied to all elements of the array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:81
+#, no-wrap
+msgid ""
+"echo ${arrayZ[@]/%o/XX}     # one twXX three four five five\n"
+"#                ^          # Why?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:83
+msgid "echo \"-----------------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:88
+#, no-wrap
+msgid ""
+"replacement() {\n"
+"    echo -n \"!!!\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:94
+#, no-wrap
+msgid ""
+"echo ${arrayZ[@]/%e/$(replacement)}\n"
+"#                ^  ^^^^^^^^^^^^^^\n"
+"# on!!! two thre!!! four fiv!!! fiv!!!\n"
+"# The stdout of replacement() is the replacement string.\n"
+"# Q.E.D: The replacement action is, in effect, an 'assignment.'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:96
+msgid "echo \"------------------------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:101
+#, no-wrap
+msgid ""
+"#  Accessing the \"for-each\":\n"
+"echo ${arrayZ[@]//*/$(replacement optional_arguments)}\n"
+"#                ^^ ^^^^^^^^^^^^^\n"
+"# !!! !!! !!! !!! !!! !!!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:104
+msgid ""
+"# Now, if Bash would only pass the matched string #+ to the function being "
+"called . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:108
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/array-strops.sh:118
+#, no-wrap
+msgid ""
+"#  Before reaching for a Big Hammer -- Perl, Python, or all the rest --\n"
+"#  recall:\n"
+"#    $( ... ) is command substitution.\n"
+"#    A function runs as a sub-process.\n"
+"#    A function writes its output (if echo-ed) to stdout.\n"
+"#    Assignment, in conjunction with \"echo\" and command substitution,\n"
+"#+   can read a function's stdout.\n"
+"#    The name[@] notation specifies (the equivalent of) a \"for-each\"\n"
+"#+   operation.\n"
+"#  Bash is more powerful than you think!\n"
+msgstr ""

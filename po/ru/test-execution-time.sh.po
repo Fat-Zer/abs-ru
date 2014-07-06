@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:6
+msgid ""
+"#!/bin/bash # test-execution-time.sh # Example by Erik Brandsberg, for "
+"testing execution time #+ of certain operations.  # Referenced in the "
+"\"Optimizations\" section of \"Miscellany\" chapter."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:14
+#, no-wrap
+msgid ""
+"count=50000\n"
+"echo \"Math tests\"\n"
+"echo \"Math via \\$(( ))\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  result=$(( $i%2 ))\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:20
+#, no-wrap
+msgid ""
+"echo \"Math via *expr*:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  result=`expr \"$i%2\"`\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:26
+#, no-wrap
+msgid ""
+"echo \"Math via *let*:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  let result=$i%2\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:29
+msgid "echo echo \"Conditional testing tests\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:38
+#, no-wrap
+msgid ""
+"echo \"Test via case:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  case $(( $i%2 )) in\n"
+"    0) : ;;\n"
+"    1) : ;;\n"
+"  esac\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:48
+#, no-wrap
+msgid ""
+"echo \"Test with if [], no quotes:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  if [ $(( $i%2 )) = 0 ]; then\n"
+"     :\n"
+"  else\n"
+"     :\n"
+"  fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:58
+#, no-wrap
+msgid ""
+"echo \"Test with if [], quotes:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  if [ \"$(( $i%2 ))\" = \"0\" ]; then\n"
+"     :\n"
+"  else\n"
+"     :\n"
+"  fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:68
+#, no-wrap
+msgid ""
+"echo \"Test with if [], using -eq:\"\n"
+"time for (( i=0; i&lt; $count; i++))\n"
+"do\n"
+"  if [ $(( $i%2 )) -eq 0 ]; then\n"
+"     :\n"
+"  else\n"
+"     :\n"
+"  fi\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/test-execution-time.sh:69
+msgid "exit $?"
+msgstr ""

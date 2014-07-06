@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex50.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex50.sh:4
+#, no-wrap
+msgid "WIDTH=40                    # 40 columns wide.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex50.sh:6
+#, no-wrap
+msgid "b=`ls /usr/local/bin`       # Get a file listing...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex50.sh:8
+msgid "echo $b | fmt -w $WIDTH"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex50.sh:11
+#, no-wrap
+msgid ""
+"# Could also have been done by\n"
+"#    echo $b | fold - -s -w $WIDTH\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex50.sh:12
+msgid "exit 0"
+msgstr ""

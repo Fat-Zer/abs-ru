@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:3
+msgid "#!/bin/bash # ind-func.sh: Passing an indirect reference to a function."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:8
+msgid "echo_var ()  { echo \"$1\" }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:11
+msgid "message=Hello Hello=Goodbye"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:15
+#, no-wrap
+msgid ""
+"echo_var \"$message\"        # Hello\n"
+"# Now, let's pass an indirect reference to the function.\n"
+"echo_var \"${!message}\"     # Goodbye\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:17
+msgid "echo \"-------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:22
+#, no-wrap
+msgid ""
+"# What happens if we change the contents of \"hello\" variable?\n"
+"Hello=\"Hello, again!\"\n"
+"echo_var \"$message\"        # Hello\n"
+"echo_var \"${!message}\"     # Hello, again!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-func.sh:23
+msgid "exit 0"
+msgstr ""

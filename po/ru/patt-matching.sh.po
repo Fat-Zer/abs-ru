@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:3
+msgid "#!/bin/bash # patt-matching.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:5
+msgid "# Pattern matching using the # ## % %% parameter substitution operators."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:8
+msgid ""
+"var1=abcd12345abc6789 pattern1=a*c # * (wild card) matches everything "
+"between a - c."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:15
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"var1 = $var1\"           # abcd12345abc6789\n"
+"echo \"var1 = ${var1}\"         # abcd12345abc6789\n"
+"                              # (alternate form)\n"
+"echo \"Number of characters in ${var1} = ${#var1}\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:24
+#, no-wrap
+msgid ""
+"echo \"pattern1 = $pattern1\"   # a*c  (everything between 'a' and 'c')\n"
+"echo \"--------------\"\n"
+"echo '${var1#$pattern1}  =' \"${var1#$pattern1}\"    #         "
+"d12345abc6789\n"
+"# Shortest possible match, strips out first 3 characters  abcd12345abc6789\n"
+"#                                     ^^^^^               |-|\n"
+"echo '${var1##$pattern1} =' \"${var1##$pattern1}\"   #                  6789      "
+"\n"
+"# Longest possible match, strips out first 12 characters  abcd12345abc6789\n"
+"#                                    ^^^^^                |----------|\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:26
+msgid "echo; echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:38
+#, no-wrap
+msgid ""
+"pattern2=b*9            # everything between 'b' and '9'\n"
+"echo \"var1 = $var1\"     # Still  abcd12345abc6789\n"
+"echo\n"
+"echo \"pattern2 = $pattern2\"\n"
+"echo \"--------------\"\n"
+"echo '${var1%pattern2}  =' \"${var1%$pattern2}\"     #     abcd12345a\n"
+"# Shortest possible match, strips out last 6 characters  abcd12345abc6789\n"
+"#                                     ^^^^                         |----|\n"
+"echo '${var1%%pattern2} =' \"${var1%%$pattern2}\"    #     a\n"
+"# Longest possible match, strips out last 12 characters  abcd12345abc6789\n"
+"#                                    ^^^^                 |-------------|\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:41
+#, no-wrap
+msgid ""
+"# Remember, # and ## work from the left end (beginning) of string,\n"
+"#           % and %% work from the right end.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:43
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/patt-matching.sh:44
+msgid "exit 0"
+msgstr ""

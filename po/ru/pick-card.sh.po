@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:3
+msgid "#!/bin/bash # pick-card.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:5
+msgid "# This is an example of choosing random elements of an array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:8
+msgid "# Pick a card, any card."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:13
+msgid "Suites=\"Clubs Diamonds Hearts Spades\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:27
+msgid "Denominations=\"2 3 4 5 6 7 8 9 10 Jack Queen King Ace\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:29
+msgid "# Note variables spread over multiple lines."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:33
+#, no-wrap
+msgid ""
+"suite=($Suites)                # Read into array variable.\n"
+"denomination=($Denominations)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:36
+#, no-wrap
+msgid ""
+"num_suites=${#suite[*]}        # Count how many elements.\n"
+"num_denominations=${#denomination[*]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:39
+msgid ""
+"echo -n \"${denomination[$((RANDOM%num_denominations))]} of \" echo "
+"${suite[$((RANDOM%num_suites))]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:43
+msgid "# $bozo sh pick-cards.sh # Jack of Clubs"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pick-card.sh:46
+msgid "# Thank you, \"jipe,\" for pointing out this use of $RANDOM.  exit 0"
+msgstr ""

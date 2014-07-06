@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex24.sh:3
+msgid "#!/bin/bash # Faxing (must have 'efax' package installed)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:8
+#, no-wrap
+msgid ""
+"EXPECTED_ARGS=2\n"
+"E_BADARGS=85\n"
+"MODEM_PORT=\"/dev/ttyS2\"   # May be different on your machine.\n"
+"#                ^^^^^      PCMCIA modem card default port.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:15
+#, no-wrap
+msgid ""
+"if [ $# -ne $EXPECTED_ARGS ]\n"
+"# Check for proper number of command-line args.\n"
+"then\n"
+"   echo \"Usage: `basename $0` phone# text-file\"\n"
+"   exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:23
+#, no-wrap
+msgid ""
+"if [ ! -f \"$2\" ]\n"
+"then\n"
+"  echo \"File $2 is not a text file.\"\n"
+"  #     File is not a regular file, or does not exist.\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:26
+#, no-wrap
+msgid "fax make $2              #  Create fax-formatted files from text files.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:33
+#, no-wrap
+msgid ""
+"for file in $(ls $2.0*)  #  Concatenate the converted files.\n"
+"                         #  Uses wild card (filename \"globbing\")\n"
+"\t\t\t #+ in variable list.\n"
+"do\n"
+"  fil=\"$fil $file\"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:36
+#, no-wrap
+msgid ""
+"efax -d \"$MODEM_PORT\"  -t \"T$1\" $fil   # Finally, do the work.\n"
+"# Trying adding  -o1  if above line fails.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:41
+#, no-wrap
+msgid ""
+"#  As S.C. points out, the for-loop can be eliminated with\n"
+"#     efax -d /dev/ttyS2 -o1 -t \"T$1\" $2.0*\n"
+"#+ but it's not quite as instructive [grin].\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex24.sh:42
+#, no-wrap
+msgid "exit $?   # Also, efax sends diagnostic messages to stdout.\n"
+msgstr ""

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:4
+msgid ""
+"#!/bin/bash # arrow-detect.sh: Detects the arrow keys, and a few more.  # "
+"Thank you, Sandro Magi, for showing me how."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:14
+msgid ""
+"# -------------------------------------------- # Character codes generated "
+"by the keypresses.  arrowup='\\[A' arrowdown='\\[B' arrowrt='\\[C' "
+"arrowleft='\\[D' insert='\\[2' delete='\\[3' # "
+"--------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:17
+msgid "SUCCESS=0 OTHER=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:21
+#, no-wrap
+msgid ""
+"echo -n \"Press a key...  \"\n"
+"# May need to also press ENTER if a key not listed above pressed.\n"
+"read -n3 key                      # Read 3 characters.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:28
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$arrowup\"  #Check if character code detected.\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"Up-arrow key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:35
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$arrowdown\"\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"Down-arrow key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:42
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$arrowrt\"\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"Right-arrow key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:49
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$arrowleft\"\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"Left-arrow key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:56
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$insert\"\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"\\\"Insert\\\" key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:63
+#, no-wrap
+msgid ""
+"echo -n \"$key\" | grep \"$delete\"\n"
+"if [ \"$?\" -eq $SUCCESS ]\n"
+"then\n"
+"  echo \"\\\"Delete\\\" key pressed.\"\n"
+"  exit $SUCCESS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:66
+msgid "echo \" Some other key pressed.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:68
+msgid "exit $OTHER"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:70 abs-guide/arrow-detect.sh:102 abs-guide/arrow-detect.sh:123
+msgid "# ========================================= #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:74
+msgid ""
+"# Mark Alexander came up with a simplified #+ version of the above script "
+"(Thank you!).  # It eliminates the need for grep."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:76 abs-guide/arrow-detect.sh:106
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:81
+#, no-wrap
+msgid ""
+"  uparrow=$'\\x1b[A'\n"
+"  downarrow=$'\\x1b[B'\n"
+"  leftarrow=$'\\x1b[D'\n"
+"  rightarrow=$'\\x1b[C'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:83
+#, no-wrap
+msgid "  read -s -n3 -p \"Hit an arrow key: \" x\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:98
+#, no-wrap
+msgid ""
+"  case \"$x\" in\n"
+"  $uparrow)\n"
+"     echo \"You pressed up-arrow\"\n"
+"     ;;\n"
+"  $downarrow)\n"
+"     echo \"You pressed down-arrow\"\n"
+"     ;;\n"
+"  $leftarrow)\n"
+"     echo \"You pressed left-arrow\"\n"
+"     ;;\n"
+"  $rightarrow)\n"
+"     echo \"You pressed right-arrow\"\n"
+"     ;;\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:100
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:104
+msgid "# Antonio Macchi has a simpler alternative."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:121
+#, no-wrap
+msgid ""
+"while true\n"
+"do\n"
+"  read -sn1 a\n"
+"  test \"$a\" == `echo -en \"\\e\"` || continue\n"
+"  read -sn1 a\n"
+"  test \"$a\" == \"[\" || continue\n"
+"  read -sn1 a\n"
+"  case \"$a\" in\n"
+"    A)  echo \"up\";;\n"
+"    B)  echo \"down\";;\n"
+"    C)  echo \"right\";;\n"
+"    D)  echo \"left\";;\n"
+"  esac\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arrow-detect.sh:126
+msgid ""
+"# Exercise: # -------- # 1) Add detection of the \"Home,\" \"End,\" "
+"\"PgUp,\" and \"PgDn\" keys."
+msgstr ""

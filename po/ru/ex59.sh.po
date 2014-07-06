@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex59.sh:3
+msgid "#!/bin/bash # ex59.sh: Exercising functions (simple)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:5
+msgid "JUST_A_SECOND=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:11
+#, no-wrap
+msgid ""
+"funky ()\n"
+"{ # This is about as simple as functions get.\n"
+"  echo \"This is a funky function.\"\n"
+"  echo \"Now exiting funky function.\"\n"
+"} # Function declaration must precede call.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:17
+#, no-wrap
+msgid ""
+"fun ()\n"
+"{ # A somewhat more complex function.\n"
+"  i=0\n"
+"  REPEATS=30\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:21
+#, no-wrap
+msgid ""
+"  echo\n"
+"  echo \"And now the fun really begins.\"\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:32
+#, no-wrap
+msgid ""
+"  sleep $JUST_A_SECOND    # Hey, wait a second!\n"
+"  while [ $i -lt $REPEATS ]\n"
+"  do\n"
+"    echo \"----------FUNCTIONS---------->\"\n"
+"    echo \"&lt;------------ARE-------------\"\n"
+"    echo \"&lt;------------FUN------------>\"\n"
+"    echo\n"
+"    let \"i+=1\"\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:34
+#, no-wrap
+msgid "  # Now, call the functions.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:37
+msgid "funky fun"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex59.sh:38
+msgid "exit $?"
+msgstr ""

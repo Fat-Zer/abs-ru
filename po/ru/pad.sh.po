@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pad.sh:3
+msgid "#!/bin/bash # pad.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:14
+#, no-wrap
+msgid ""
+"#######################################################\n"
+"#               PAD (xml) file creator\n"
+"#+ Written by Mendel Cooper &lt;thegrendel.abs@gmail.com&gt;.\n"
+"#+ Released to the Public Domain.\n"
+"#\n"
+"#  Generates a \"PAD\" descriptor file for shareware\n"
+"#+ packages, according to the specifications\n"
+"#+ of the ASP.\n"
+"#  http://www.asp-shareware.org/pad\n"
+"#######################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:23
+#, no-wrap
+msgid ""
+"# Accepts (optional) save filename as a command-line argument.\n"
+"if [ -n \"$1\" ]\n"
+"then\n"
+"  savefile=$1\n"
+"else\n"
+"  savefile=save_file.xml               # Default save_file name.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:36
+msgid ""
+"# ===== PAD file headers ===== HDR1=\"&lt;?xml version=\\\"1.0\\\" "
+"encoding=\\\"Windows-1252\\\" ?&gt;\" HDR2=\"&lt;XML_DIZ_INFO&gt;\" "
+"HDR3=\"&lt;MASTER_PAD_VERSION_INFO&gt;\" "
+"HDR4=\"\\t&lt;MASTER_PAD_VERSION&gt;1.15&lt;/MASTER_PAD_VERSION&gt;\" "
+"HDR5=\"\\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD "
+"for short, is a data set that is used by shareware authors to disseminate "
+"information to anyone interested in their software products.  To find out "
+"more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;\" "
+"HDR6=\"&lt;/MASTER_PAD_VERSION_INFO&gt;\" # ============================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:46
+#, no-wrap
+msgid ""
+"fill_in ()\n"
+"{\n"
+"  if [ -z \"$2\" ]\n"
+"  then\n"
+"    echo -n \"$1? \"     # Get user input.\n"
+"  else\n"
+"    echo -n \"$1 $2? \"  # Additional query?\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:49
+#, no-wrap
+msgid ""
+"  read var             # May paste to fill in field.\n"
+"                       # This shows how flexible \"read\" can be.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:59
+#, no-wrap
+msgid ""
+"  if [ -z \"$var\" ]\n"
+"  then\n"
+"    echo -e \"\\t\\t&lt;$1 />\" >>$savefile    # Indent with 2 tabs.\n"
+"    return\n"
+"  else\n"
+"    echo -e \"\\t\\t&lt;$1>$var&lt;/$1>\" >>$savefile\n"
+"    return ${#var}     # Return length of input string.\n"
+"  fi\n"
+"}    \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:69
+#, no-wrap
+msgid ""
+"check_field_length ()  # Check length of program description fields.\n"
+"{\n"
+"  # $1 = maximum field length\n"
+"  # $2 = actual field length\n"
+"  if [ \"$2\" -gt \"$1\" ]\n"
+"  then\n"
+"    echo \"Warning: Maximum field length of $1 characters exceeded!\"\n"
+"  fi\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:74
+#, no-wrap
+msgid ""
+"clear                  # Clear screen.\n"
+"echo \"PAD File Creator\"\n"
+"echo \"--- ---- -------\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:82
+msgid ""
+"# Write File Headers to file.  echo $HDR1 >$savefile echo $HDR2 >>$savefile "
+"echo $HDR3 >>$savefile echo -e $HDR4 >>$savefile echo -e $HDR5 >>$savefile "
+"echo $HDR6 >>$savefile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:88
+msgid ""
+"# Company_Info echo \"COMPANY INFO\" CO_HDR=\"Company_Info\" echo "
+"\"&lt;$CO_HDR>\" >>$savefile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:96
+msgid ""
+"fill_in Company_Name fill_in Address_1 fill_in Address_2 fill_in City_Town "
+"fill_in State_Province fill_in Zip_Postal_Code fill_in Country"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:101
+msgid ""
+"# If applicable: # fill_in ASP_Member \"[Y/N]\" # fill_in ASP_Member_Number "
+"# fill_in ESC_Member \"[Y/N]\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:103
+msgid "fill_in Company_WebSite_URL"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:105
+#, no-wrap
+msgid "clear   # Clear screen between sections.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:118
+#, no-wrap
+msgid ""
+"   # Contact_Info\n"
+"echo \"CONTACT INFO\"\n"
+"CONTACT_HDR=\"Contact_Info\"\n"
+"echo \"&lt;$CONTACT_HDR>\" >>$savefile\n"
+"fill_in Author_First_Name\n"
+"fill_in Author_Last_Name\n"
+"fill_in Author_Email\n"
+"fill_in Contact_First_Name\n"
+"fill_in Contact_Last_Name\n"
+"fill_in Contact_Email\n"
+"echo -e \"\\t&lt;/$CONTACT_HDR>\" >>$savefile\n"
+"   # END Contact_Info\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:120 abs-guide/pad.sh:139 abs-guide/pad.sh:174 abs-guide/pad.sh:190 abs-guide/pad.sh:205
+msgid "clear"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:134
+#, no-wrap
+msgid ""
+"   # Support_Info\n"
+"echo \"SUPPORT INFO\"\n"
+"SUPPORT_HDR=\"Support_Info\"\n"
+"echo \"&lt;$SUPPORT_HDR>\" >>$savefile\n"
+"fill_in Sales_Email\n"
+"fill_in Support_Email\n"
+"fill_in General_Email\n"
+"fill_in Sales_Phone\n"
+"fill_in Support_Phone\n"
+"fill_in General_Phone\n"
+"fill_in Fax_Phone\n"
+"echo -e \"\\t&lt;/$SUPPORT_HDR>\" >>$savefile\n"
+"   # END Support_Info\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:137
+msgid "echo \"&lt;/$CO_HDR>\" >>$savefile # END Company_Info"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:156
+msgid ""
+"# Program_Info echo \"PROGRAM INFO\" PROGRAM_HDR=\"Program_Info\" echo "
+"\"&lt;$PROGRAM_HDR>\" >>$savefile fill_in Program_Name fill_in "
+"Program_Version fill_in Program_Release_Month fill_in Program_Release_Day "
+"fill_in Program_Release_Year fill_in Program_Cost_Dollars fill_in "
+"Program_Cost_Other fill_in Program_Type \"[Shareware/Freeware/GPL]\" fill_in "
+"Program_Release_Status \"[Beta, Major Upgrade, etc.]\" fill_in "
+"Program_Install_Support fill_in Program_OS_Support "
+"\"[Win9x/Win2k/Linux/etc.]\" fill_in Program_Language "
+"\"[English/Spanish/etc.]\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:158
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:172
+#, no-wrap
+msgid ""
+"  # File_Info \n"
+"echo \"FILE INFO\"\n"
+"FILEINFO_HDR=\"File_Info\"\n"
+"echo \"&lt;$FILEINFO_HDR>\" >>$savefile\n"
+"fill_in Filename_Versioned\n"
+"fill_in Filename_Previous\n"
+"fill_in Filename_Generic\n"
+"fill_in Filename_Long\n"
+"fill_in File_Size_Bytes\n"
+"fill_in File_Size_K\n"
+"fill_in File_Size_MB\n"
+"echo -e \"\\t&lt;/$FILEINFO_HDR>\" >>$savefile\n"
+"  # END File_Info \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:188
+#, no-wrap
+msgid ""
+"  # Expire_Info \n"
+"echo \"EXPIRE INFO\"\n"
+"EXPIRE_HDR=\"Expire_Info\"\n"
+"echo \"&lt;$EXPIRE_HDR>\" >>$savefile\n"
+"fill_in Has_Expire_Info \"Y/N\"\n"
+"fill_in Expire_Count\n"
+"fill_in Expire_Based_On\n"
+"fill_in Expire_Other_Info\n"
+"fill_in Expire_Month\n"
+"fill_in Expire_Day\n"
+"fill_in Expire_Year\n"
+"echo -e \"\\t&lt;/$EXPIRE_HDR>\" >>$savefile\n"
+"  # END Expire_Info \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:200
+#, no-wrap
+msgid ""
+"  # More Program_Info\n"
+"echo \"ADDITIONAL PROGRAM INFO\"\n"
+"fill_in Program_Change_Info\n"
+"fill_in Program_Specific_Category\n"
+"fill_in Program_Categories\n"
+"fill_in Includes_JAVA_VM \"[Y/N]\"\n"
+"fill_in Includes_VB_Runtime \"[Y/N]\"\n"
+"fill_in Includes_DirectX \"[Y/N]\"\n"
+"  # END More Program_Info\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:203
+msgid "echo \"&lt;/$PROGRAM_HDR>\" >>$savefile # END Program_Info"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:210
+msgid ""
+"# Program Description echo \"PROGRAM DESCRIPTIONS\" "
+"PROGDESC_HDR=\"Program_Descriptions\" echo \"&lt;$PROGDESC_HDR>\" "
+">>$savefile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:213
+msgid "LANG=\"English\" echo \"&lt;$LANG>\" >>$savefile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:228
+#, no-wrap
+msgid ""
+"fill_in Keywords \"[comma + space separated]\"\n"
+"echo\n"
+"echo \"45, 80, 250, 450, 2000 word program descriptions\"\n"
+"echo \"(may cut and paste into field)\"\n"
+"#  It would be highly appropriate to compose the following\n"
+"#+ \"Char_Desc\" fields with a text editor,\n"
+"#+ then cut-and-paste the text into the answer fields.\n"
+"echo\n"
+"echo \"              |---------------45 characters---------------|\"\n"
+"fill_in Char_Desc_45\n"
+"check_field_length 45 \"$?\"\n"
+"echo\n"
+"fill_in Char_Desc_80\n"
+"check_field_length 80 \"$?\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:231
+msgid "fill_in Char_Desc_250 check_field_length 250 \"$?\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:234
+msgid "fill_in Char_Desc_450 fill_in Char_Desc_2000"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:238
+msgid ""
+"echo \"&lt;/$LANG>\" >>$savefile echo \"&lt;/$PROGDESC_HDR>\" >>$savefile # "
+"END Program Description"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:242
+msgid ""
+"clear echo \"Done.\"; echo; echo echo \"Save file is: "
+"\\\"\"$savefile\"\\\"\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pad.sh:243
+msgid "exit 0"
+msgstr ""

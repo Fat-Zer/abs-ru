@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/here-function.sh:3
+msgid "#!/bin/bash # here-function.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/here-function.sh:13
+#, no-wrap
+msgid ""
+"GetPersonalData ()\n"
+"{\n"
+"  read firstname\n"
+"  read lastname\n"
+"  read address\n"
+"  read city \n"
+"  read state \n"
+"  read zipcode\n"
+"} # This certainly appears to be an interactive function, but . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/here-function.sh:24
+msgid ""
+"# Supply input to the above function.  GetPersonalData &lt;&lt;RECORD001 "
+"Bozo Bozeman 2726 Nondescript Dr.  Bozeman MT 21226 RECORD001"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/here-function.sh:31
+msgid ""
+"echo echo \"$firstname $lastname\" echo \"$address\" echo \"$city, $state "
+"$zipcode\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/here-function.sh:32
+msgid "exit 0"
+msgstr ""

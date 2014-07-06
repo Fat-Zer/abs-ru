@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/read-N.sh:3 abs-guide/read-N.sh:14
+msgid "#!/bin/bash # Requires Bash version -ge 4.1 ..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-N.sh:5 abs-guide/read-N.sh:15
+msgid "num_chars=61"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-N.sh:9
+#, no-wrap
+msgid ""
+"read -N $num_chars var &lt; $0   # Read first 61 characters of script!\n"
+"echo \"$var\"\n"
+"exit\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-N.sh:11
+msgid "####### Output of Script #######"
+msgstr ""

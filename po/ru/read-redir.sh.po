@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:6
+msgid ""
+"read var1 &lt;data-file echo \"var1 = $var1\" # var1 set to the entire first "
+"line of the input file \"data-file\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:16
+#, no-wrap
+msgid ""
+"read var2 var3 &lt;data-file\n"
+"echo \"var2 = $var2   var3 = $var3\"\n"
+"# Note non-intuitive behavior of \"read\" here.\n"
+"# 1) Rewinds back to the beginning of input file.\n"
+"# 2) Each variable is now set to a corresponding string,\n"
+"#    separated by whitespace, rather than to an entire line of text.\n"
+"# 3) The final variable gets the remainder of the line.\n"
+"# 4) If there are more variables to be set than whitespace-terminated "
+"strings\n"
+"#    on the first line of the file, then the excess variables remain "
+"empty.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:18 abs-guide/read-redir.sh:27
+msgid "echo \"------------------------------------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:25
+#, no-wrap
+msgid ""
+"# How to resolve the above problem with a loop:\n"
+"while read line\n"
+"do\n"
+"  echo \"$line\"\n"
+"done &lt;data-file\n"
+"# Thanks, Heiner Steven for pointing this out.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:30
+msgid ""
+"# Use $IFS (Internal Field Separator variable) to split a line of input to # "
+"\"read\", if you do not want the default to be whitespace."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:39
+#, no-wrap
+msgid ""
+"echo \"List of all users:\"\n"
+"OIFS=$IFS; IFS=:       # /etc/passwd uses \":\" for field separator.\n"
+"while read name passwd uid gid fullname ignore\n"
+"do\n"
+"  echo \"$name ($fullname)\"\n"
+"done &lt;/etc/passwd   # I/O redirection.\n"
+"IFS=$OIFS              # Restore original $IFS.\n"
+"# This code snippet also by Heiner Steven.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:48
+msgid ""
+"# Setting the $IFS variable within the loop itself #+ eliminates the need "
+"for storing the original $IFS #+ in a temporary variable.  # Thanks, Dim "
+"Segebart, for pointing this out.  echo "
+"\"------------------------------------------------\" echo \"List of all "
+"users:\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:53
+#, no-wrap
+msgid ""
+"while IFS=: read name passwd uid gid fullname ignore\n"
+"do\n"
+"  echo \"$name ($fullname)\"\n"
+"done &lt;/etc/passwd   # I/O redirection.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:56
+msgid "echo echo \"\\$IFS still $IFS\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-redir.sh:57
+msgid "exit 0"
+msgstr ""

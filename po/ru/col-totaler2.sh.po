@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:6
+msgid ""
+"# Another version of the \"column totaler\" script #+ that adds up a "
+"specified column (of numbers) in the target file.  # This one uses indirect "
+"references."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:9
+msgid "ARGS=2 E_WRONGARGS=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:15
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ] # Check for proper number of command-line args.\n"
+"then\n"
+"   echo \"Usage: `basename $0` filename column-number\"\n"
+"   exit $E_WRONGARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:18
+#, no-wrap
+msgid ""
+"filename=$1         # Name of file to operate on.\n"
+"column_number=$2    # Which column to total up.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:20
+msgid "#===== Same as original script, up to this point =====#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:28
+#, no-wrap
+msgid ""
+"# A multi-line awk script is invoked by\n"
+"#   awk \"\n"
+"#   ...\n"
+"#   ...\n"
+"#   ...\n"
+"#   \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:33
+msgid ""
+"# Begin awk script.  # ------------------------------------------------- awk "
+"\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:39
+#, no-wrap
+msgid ""
+"{ total += \\$${column_number} # Indirect reference\n"
+"}\n"
+"END {\n"
+"     print total\n"
+"     }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:44
+#, no-wrap
+msgid ""
+"     \" \"$filename\"\n"
+"# Note that awk doesn't need an eval preceding \\$$.\n"
+"# -------------------------------------------------\n"
+"# End awk script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:48
+msgid ""
+"# Indirect variable reference avoids the hassles #+ of referencing a shell "
+"variable within the embedded awk script.  # Thanks, Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col-totaler2.sh:50
+msgid "exit $?"
+msgstr ""

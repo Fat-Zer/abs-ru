@@ -1,0 +1,1383 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/bashrc:7
+msgid ""
+"# =============================================================== # # # "
+"PERSONAL $HOME/.bashrc FILE for bash-3.0 (or later)  # By Emmanuel Rouat "
+"[no-email] # # Last modified: Tue Nov 20 22:04:47 CET 2012"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:32
+msgid ""
+"# This file is normally read by interactive shells only.  #+ Here is the "
+"place to define your aliases, functions and #+ other interactive features "
+"like your prompt.  # # The majority of the code here assumes you are on a "
+"GNU #+ system (most likely a Linux box) and is often based on code #+ found "
+"on Usenet or Internet.  # # See for instance: # "
+"http://tldp.org/LDP/abs/html/index.html # http://www.caliban.org/bash # "
+"http://www.shelldorado.com/scripts/categories.html # http://www.dotfiles.org "
+"# # The choice of colors was done for a shell with a dark background #+ "
+"(white on black), and this is usually also suited for pure text-mode #+ "
+"consoles (no X server available). If you use a white background, #+ you'll "
+"have to do some other choices for readability.  # # This bashrc file is a "
+"bit overcrowded.  # Remember, it is just just an example.  # Tailor it to "
+"your needs.  # # "
+"=============================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:34
+msgid "# --> Comments added by HOWTO author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:37
+msgid ""
+"# If not running interactively, don't do anything [ -z \"$PS1\" ] &amp;&amp; "
+"return"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:42
+msgid ""
+"#------------------------------------------------------------- # Source "
+"global definitions (if any)  "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:47
+#, no-wrap
+msgid ""
+"if [ -f /etc/bashrc ]; then\n"
+"      . /etc/bashrc   # --> Read /etc/bashrc, if present.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:57
+msgid ""
+"#-------------------------------------------------------------- # Automatic "
+"setting of $DISPLAY (if not set already).  # This works for me - your "
+"mileage may vary. . . .  # The problem is that different types of terminals "
+"give #+ different answers to 'who am i' (rxvt in particular can be #+ "
+"troublesome) - however this code seems to work in a majority #+ of cases.  "
+"#--------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:74
+#, no-wrap
+msgid ""
+"function get_xserver ()\n"
+"{\n"
+"    case $TERM in\n"
+"        xterm )\n"
+"            XSERVER=$(who am i | awk '{print $NF}' | tr -d ')''(' )\n"
+"            # Ane-Pieter Wieringa suggests the following alternative:\n"
+"            #  I_AM=$(who am i)\n"
+"            #  SERVER=${I_AM#*(}\n"
+"            #  SERVER=${SERVER%*)}\n"
+"            XSERVER=${XSERVER%%:*}\n"
+"            ;;\n"
+"            aterm | rxvt)\n"
+"            # Find some code that works here. ...\n"
+"            ;;\n"
+"    esac\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:84
+#, no-wrap
+msgid ""
+"if [ -z ${DISPLAY:=\"\"} ]; then\n"
+"    get_xserver\n"
+"    if [[ -z ${XSERVER}  || ${XSERVER} == $(hostname) ||\n"
+"       ${XSERVER} == \"unix\" ]]; then\n"
+"          DISPLAY=\":0.0\"          # Display on local host.\n"
+"    else\n"
+"       DISPLAY=${XSERVER}:0.0     # Display on remote host.\n"
+"    fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:86
+msgid "export DISPLAY"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:90
+msgid ""
+"#------------------------------------------------------------- # Some "
+"settings #-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:94
+#, no-wrap
+msgid ""
+"#set -o nounset     # These  two options are useful for debugging.\n"
+"#set -o xtrace\n"
+"alias debug=\"set -o nounset; set -o xtrace\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:99
+#, no-wrap
+msgid ""
+"ulimit -S -c 0      # Don't want coredumps.\n"
+"set -o notify\n"
+"set -o noclobber\n"
+"set -o ignoreeof\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:111
+#, no-wrap
+msgid ""
+"# Enable options:\n"
+"shopt -s cdspell\n"
+"shopt -s cdable_vars\n"
+"shopt -s checkhash\n"
+"shopt -s checkwinsize\n"
+"shopt -s sourcepath\n"
+"shopt -s no_empty_cmd_completion\n"
+"shopt -s cmdhist\n"
+"shopt -s histappend histreedit histverify\n"
+"shopt -s extglob       # Necessary for programmable completion.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:115
+#, no-wrap
+msgid ""
+"# Disable options:\n"
+"shopt -u mailwarn\n"
+"unset MAILCHECK        # Don't want my shell to warn me of incoming mail.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:120
+msgid ""
+"#------------------------------------------------------------- # Greeting, "
+"motd etc. ...  "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:125
+msgid ""
+"# Color definitions (taken from Color Bash Prompt HowTo).  # Some colors "
+"might look different of some terminals.  # For example, I see 'Bold Red' as "
+"'orange' on my screen, # hence the 'Green' 'BRed' 'Red' sequence I often use "
+"in my prompt."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:136
+#, no-wrap
+msgid ""
+"# Normal Colors\n"
+"Black='\\e[0;30m'        # Black\n"
+"Red='\\e[0;31m'          # Red\n"
+"Green='\\e[0;32m'        # Green\n"
+"Yellow='\\e[0;33m'       # Yellow\n"
+"Blue='\\e[0;34m'         # Blue\n"
+"Purple='\\e[0;35m'       # Purple\n"
+"Cyan='\\e[0;36m'         # Cyan\n"
+"White='\\e[0;37m'        # White\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:146
+#, no-wrap
+msgid ""
+"# Bold\n"
+"BBlack='\\e[1;30m'       # Black\n"
+"BRed='\\e[1;31m'         # Red\n"
+"BGreen='\\e[1;32m'       # Green\n"
+"BYellow='\\e[1;33m'      # Yellow\n"
+"BBlue='\\e[1;34m'        # Blue\n"
+"BPurple='\\e[1;35m'      # Purple\n"
+"BCyan='\\e[1;36m'        # Cyan\n"
+"BWhite='\\e[1;37m'       # White\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:156
+#, no-wrap
+msgid ""
+"# Background\n"
+"On_Black='\\e[40m'       # Black\n"
+"On_Red='\\e[41m'         # Red\n"
+"On_Green='\\e[42m'       # Green\n"
+"On_Yellow='\\e[43m'      # Yellow\n"
+"On_Blue='\\e[44m'        # Blue\n"
+"On_Purple='\\e[45m'      # Purple\n"
+"On_Cyan='\\e[46m'        # Cyan\n"
+"On_White='\\e[47m'       # White\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:158
+#, no-wrap
+msgid "NC=\"\\e[m\"               # Color Reset\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:161
+msgid "ALERT=${BWhite}${On_Red} # Bold White on red background"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:170
+#, no-wrap
+msgid ""
+"echo -e \"${BCyan}This is BASH ${BRed}${BASH_VERSION%.*}${BCyan}\\\n"
+"- DISPLAY on ${BRed}$DISPLAY${NC}\\n\"\n"
+"date\n"
+"if [ -x /usr/games/fortune ]; then\n"
+"    /usr/games/fortune -s     # Makes our day a bit more fun.... :-)\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:176
+#, no-wrap
+msgid ""
+"function _exit()              # Function to run upon exit of shell.\n"
+"{\n"
+"    echo -e \"${BRed}Hasta la vista, baby${NC}\"\n"
+"}\n"
+"trap _exit EXIT\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:211
+#, no-wrap
+msgid ""
+"#-------------------------------------------------------------\n"
+"# Shell Prompt - for many examples, see:\n"
+"#       http://www.debian-administration.org/articles/205\n"
+"#       http://www.askapache.com/linux/bash-power-prompt.html\n"
+"#       http://tldp.org/HOWTO/Bash-Prompt-HOWTO\n"
+"#       https://github.com/nojhan/liquidprompt\n"
+"#-------------------------------------------------------------\n"
+"# Current Format: [TIME USER@HOST PWD] >\n"
+"# TIME:\n"
+"#    Green     == machine load is low\n"
+"#    Orange    == machine load is medium\n"
+"#    Red       == machine load is high\n"
+"#    ALERT     == machine load is very high\n"
+"# USER:\n"
+"#    Cyan      == normal user\n"
+"#    Orange    == SU to user\n"
+"#    Red       == root\n"
+"# HOST:\n"
+"#    Cyan      == local session\n"
+"#    Green     == secured remote connection (via ssh)\n"
+"#    Red       == unsecured remote connection\n"
+"# PWD:\n"
+"#    Green     == more than 10% free disk space\n"
+"#    Orange    == less than 10% free disk space\n"
+"#    ALERT     == less than 5% free disk space\n"
+"#    Red       == current user does not have write privileges\n"
+"#    Cyan      == current filesystem is size zero (like /proc)\n"
+"# >:\n"
+"#    White     == no background or suspended jobs in this shell\n"
+"#    Cyan      == at least one background job in this shell\n"
+"#    Orange    == at least one suspended job in this shell\n"
+"#\n"
+"#    Command is added to the history file each time you hit enter,\n"
+"#    so it's available to all shells (using 'history -a').\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:221
+#, no-wrap
+msgid ""
+"# Test connection type:\n"
+"if [ -n \"${SSH_CONNECTION}\" ]; then\n"
+"    CNX=${Green}        # Connected on remote machine, via ssh (good).\n"
+"elif [[ \"${DISPLAY%%:0*}\" != \"\" ]]; then\n"
+"    CNX=${ALERT}        # Connected on remote machine, not via ssh (bad).\n"
+"else\n"
+"    CNX=${BCyan}        # Connected on local machine.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:230
+#, no-wrap
+msgid ""
+"# Test user type:\n"
+"if [[ ${USER} == \"root\" ]]; then\n"
+"    SU=${Red}           # User is root.\n"
+"elif [[ ${USER} != $(logname) ]]; then\n"
+"    SU=${BRed}          # User is not login user.\n"
+"else\n"
+"    SU=${BCyan}         # User is normal (well ... most of us are).\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:237
+#, no-wrap
+msgid ""
+"NCPU=$(grep -c 'processor' /proc/cpuinfo)    # Number of CPUs\n"
+"SLOAD=$(( 100*${NCPU} ))        # Small load\n"
+"MLOAD=$(( 200*${NCPU} ))        # Medium load\n"
+"XLOAD=$(( 400*${NCPU} ))        # Xlarge load\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:245
+#, no-wrap
+msgid ""
+"# Returns system load as percentage, i.e., '40' rather than '0.40)'.\n"
+"function load()\n"
+"{\n"
+"    local SYSLOAD=$(cut -d \" \" -f1 /proc/loadavg | tr -d '.')\n"
+"    # System load of the current host.\n"
+"    echo $((10#$SYSLOAD))       # Convert to decimal.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:260
+#, no-wrap
+msgid ""
+"# Returns a color indicating system load.\n"
+"function load_color()\n"
+"{\n"
+"    local SYSLOAD=$(load)\n"
+"    if [ ${SYSLOAD} -gt ${XLOAD} ]; then\n"
+"        echo -en ${ALERT}\n"
+"    elif [ ${SYSLOAD} -gt ${MLOAD} ]; then\n"
+"        echo -en ${Red}\n"
+"    elif [ ${SYSLOAD} -gt ${SLOAD} ]; then\n"
+"        echo -en ${BRed}\n"
+"    else\n"
+"        echo -en ${Green}\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:282
+#, no-wrap
+msgid ""
+"# Returns a color according to free disk space in $PWD.\n"
+"function disk_color()\n"
+"{\n"
+"    if [ ! -w \"${PWD}\" ] ; then\n"
+"        echo -en ${Red}\n"
+"        # No 'write' privilege in the current directory.\n"
+"    elif [ -s \"${PWD}\" ] ; then\n"
+"        local used=$(command df -P \"$PWD\" |\n"
+"                   awk 'END {print $5} {sub(/%/,\"\")}')\n"
+"        if [ ${used} -gt 95 ]; then\n"
+"            echo -en ${ALERT}           # Disk almost full (>95%).\n"
+"        elif [ ${used} -gt 90 ]; then\n"
+"            echo -en ${BRed}            # Free disk space almost gone.\n"
+"        else\n"
+"            echo -en ${Green}           # Free disk space is ok.\n"
+"        fi\n"
+"    else\n"
+"        echo -en ${Cyan}\n"
+"        # Current directory is size '0' (like /proc, /sys etc).\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:292
+#, no-wrap
+msgid ""
+"# Returns a color according to running/suspended jobs.\n"
+"function job_color()\n"
+"{\n"
+"    if [ $(jobs -s | wc -l) -gt \"0\" ]; then\n"
+"        echo -en ${BRed}\n"
+"    elif [ $(jobs -r | wc -l) -gt \"0\" ] ; then\n"
+"        echo -en ${BCyan}\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:294 abs-guide/bashrc:417
+msgid "# Adds some text in the terminal frame (if applicable)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:317
+#, no-wrap
+msgid ""
+"# Now we construct the prompt.\n"
+"PROMPT_COMMAND=\"history -a\"\n"
+"case ${TERM} in\n"
+"  *term | rxvt | linux)\n"
+"        PS1=\"\\[\\$(load_color)\\][\\A\\[${NC}\\] \"\n"
+"        # Time of day (with load info):\n"
+"        PS1=\"\\[\\$(load_color)\\][\\A\\[${NC}\\] \"\n"
+"        # User@Host (with connection type info):\n"
+"        PS1=${PS1}\"\\[${SU}\\]\\u\\[${NC}\\]@\\[${CNX}\\]\\h\\[${NC}\\] "
+"\"\n"
+"        # PWD (with 'disk space' info):\n"
+"        PS1=${PS1}\"\\[\\$(disk_color)\\]\\W]\\[${NC}\\] \"\n"
+"        # Prompt (with 'job' info):\n"
+"        PS1=${PS1}\"\\[\\$(job_color)\\]>\\[${NC}\\] \"\n"
+"        # Set title of current xterm:\n"
+"        PS1=${PS1}\"\\[\\e]0;[\\u@\\h] \\w\\a\\]\"\n"
+"        ;;\n"
+"    *)\n"
+"        PS1=\"(\\A \\u@\\h \\W) > \" # --> PS1=\"(\\A \\u@\\h \\w) > \"\n"
+"                               # --> Shows full pathname of current dir.\n"
+"        ;;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:325
+#, no-wrap
+msgid ""
+"export TIMEFORMAT=$'\\nreal %3R\\tuser %3U\\tsys %3S\\tpcpu %P\\n'\n"
+"export HISTIGNORE=\"&amp;:bg:fg:ll:h\"\n"
+"export HISTTIMEFORMAT=\"$(echo -e ${BCyan})[%d/%m %H:%M:%S]$(echo -e ${NC}) "
+"\"\n"
+"export HISTCONTROL=ignoredups\n"
+"export HOSTFILE=$HOME/.hosts    # Put a list of remote hosts in ~/.hosts\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:336
+msgid ""
+"#============================================================ # # ALIASES "
+"AND FUNCTIONS # # Arguably, some functions defined here are quite big.  # If "
+"you want to make this file smaller, these functions can #+ be converted into "
+"scripts and removed from here.  # "
+"#============================================================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:340
+msgid "#------------------- # Personnal Aliases #-------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:346
+msgid ""
+"alias rm='rm -i' alias cp='cp -i' alias mv='mv -i' # -> Prevents "
+"accidentally clobbering files.  alias mkdir='mkdir -p'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:351
+msgid "alias h='history' alias j='jobs -l' alias which='type -a' alias ..='cd ..'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:355
+msgid ""
+"# Pretty-print of some PATH variables: alias path='echo -e ${PATH//:/\\\\n}' "
+"alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\\\n}'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:359
+#, no-wrap
+msgid ""
+"alias du='du -kh'    # Makes a more readable output.\n"
+"alias df='df -kTh'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:370
+#, no-wrap
+msgid ""
+"#-------------------------------------------------------------\n"
+"# The 'ls' family (this assumes you use a recent GNU ls).\n"
+"#-------------------------------------------------------------\n"
+"# Add colors for filetype and  human-readable sizes by default on 'ls':\n"
+"alias ls='ls -h --color'\n"
+"alias lx='ls -lXB'         #  Sort by extension.\n"
+"alias lk='ls -lSr'         #  Sort by size, biggest last.\n"
+"alias lt='ls -ltr'         #  Sort by date, most recent last.\n"
+"alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.\n"
+"alias lu='ls -ltur'        #  Sort by/show access time,most recent last.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:377
+#, no-wrap
+msgid ""
+"# The ubiquitous 'll': directories first, with alphanumeric sorting:\n"
+"alias ll=\"ls -lv --group-directories-first\"\n"
+"alias lm='ll |more'        #  Pipe through 'more'\n"
+"alias lr='ll -R'           #  Recursive ls.\n"
+"alias la='ll -A'           #  Show hidden files.\n"
+"alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:382
+msgid ""
+"#------------------------------------------------------------- # Tailoring "
+"'less' #-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:390
+#, no-wrap
+msgid ""
+"alias more='less'\n"
+"export PAGER=less\n"
+"export LESSCHARSET='latin1'\n"
+"export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&amp;-'\n"
+"                # Use this if lesspipe.sh exists.\n"
+"export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \\\n"
+":stdin .?pb%pb\\%:?lbLine %lb:?bbByte %bb:-...'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:399
+msgid ""
+"# LESS man page colors (makes Man pages more readable).  export "
+"LESS_TERMCAP_mb=$'\\E[01;31m' export LESS_TERMCAP_md=$'\\E[01;31m' export "
+"LESS_TERMCAP_me=$'\\E[0m' export LESS_TERMCAP_se=$'\\E[0m' export "
+"LESS_TERMCAP_so=$'\\E[01;44;33m' export LESS_TERMCAP_ue=$'\\E[0m' export "
+"LESS_TERMCAP_us=$'\\E[01;32m'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:404
+msgid ""
+"#------------------------------------------------------------- # Spelling "
+"typos - highly personnal and keyboard-dependent :-)  "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:410
+msgid ""
+"alias xs='cd' alias vf='cd' alias moer='more' alias moew='more' alias "
+"kk='ll'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:415
+msgid ""
+"#------------------------------------------------------------- # A few fun "
+"ones #-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:426
+#, no-wrap
+msgid ""
+"function xtitle()\n"
+"{\n"
+"    case \"$TERM\" in\n"
+"    *term* | rxvt)\n"
+"        echo -en  \"\\e]0;$*\\a\" ;;\n"
+"    *)  ;;\n"
+"    esac\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:431
+msgid ""
+"# Aliases that use xtitle alias top='xtitle Processes on $HOST &amp;&amp; "
+"top' alias make='xtitle Making $(basename $PWD) ; make'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:440
+#, no-wrap
+msgid ""
+"# .. and functions\n"
+"function man()\n"
+"{\n"
+"    for i ; do\n"
+"        xtitle The $(basename $1|tr -d .[:digit:]) manual\n"
+"        command man -a \"$i\"\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:445
+msgid ""
+"#------------------------------------------------------------- # Make the "
+"following commands run in background automatically: "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:454
+#, no-wrap
+msgid ""
+"function te()  # wrapper around xemacs/gnuserv\n"
+"{\n"
+"    if [ \"$(gnuclient -batch -eval t 2>&amp;-)\" == \"t\" ]; then\n"
+"       gnuclient -q \"$@\";\n"
+"    else\n"
+"       ( xemacs \"$@\" &amp;);\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:458
+msgid ""
+"function soffice() { command soffice \"$@\" &amp; } function firefox() { "
+"command firefox \"$@\" &amp; } function xpdf() { command xpdf \"$@\" &amp; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:463
+msgid ""
+"#------------------------------------------------------------- # File &amp; "
+"strings related functions: "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:467
+msgid ""
+"# Find a file with a pattern in name: function ff() { find . -type f -iname "
+"'*'\"$*\"'*' -ls ; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:471
+msgid ""
+"# Find a file with pattern $1 in name and Execute $2 on it: function fe() { "
+"find . -type f -iname '*'\"${1:-}\"'*' \\ -exec ${2:-file} {} \\; ; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:494
+#, no-wrap
+msgid ""
+"#  Find a pattern in a set of files and highlight them:\n"
+"#+ (needs a recent version of egrep).\n"
+"function fstr()\n"
+"{\n"
+"    OPTIND=1\n"
+"    local mycase=\"\"\n"
+"    local usage=\"fstr: find string in files.\n"
+"Usage: fstr [-i] \\\"pattern\\\" [\\\"filename pattern\\\"] \"\n"
+"    while getopts :it opt\n"
+"    do\n"
+"        case \"$opt\" in\n"
+"           i) mycase=\"-i \" ;;\n"
+"           *) echo \"$usage\"; return ;;\n"
+"        esac\n"
+"    done\n"
+"    shift $(( $OPTIND - 1 ))\n"
+"    if [ \"$#\" -lt 1 ]; then\n"
+"        echo \"$usage\"\n"
+"        return;\n"
+"    fi\n"
+"    find . -type f -name \"${2:-*}\" -print0 | \\\n"
+"xargs -0 egrep --color=always -sn ${case} \"$1\" 2>&amp;- | more\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:496 abs-guide/bashrc:828 abs-guide/bashrc:893
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:501
+#, no-wrap
+msgid ""
+"function swap()\n"
+"{ # Swap 2 filenames around, if they exist (from Uzi's bashrc).\n"
+"    local TMPFILE=tmp.$$\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:505
+#, no-wrap
+msgid ""
+"    [ $# -ne 2 ] &amp;&amp; echo \"swap: 2 arguments needed\" &amp;&amp; "
+"return 1\n"
+"    [ ! -e $1 ] &amp;&amp; echo \"swap: $1 does not exist\" &amp;&amp; "
+"return 1\n"
+"    [ ! -e $2 ] &amp;&amp; echo \"swap: $2 does not exist\" &amp;&amp; "
+"return 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:510
+#, no-wrap
+msgid ""
+"    mv \"$1\" $TMPFILE\n"
+"    mv \"$2\" \"$1\"\n"
+"    mv $TMPFILE \"$2\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:532
+#, no-wrap
+msgid ""
+"function extract()      # Handy Extract Program\n"
+"{\n"
+"    if [ -f $1 ] ; then\n"
+"        case $1 in\n"
+"            *.tar.bz2)   tar xvjf $1     ;;\n"
+"            *.tar.gz)    tar xvzf $1     ;;\n"
+"            *.bz2)       bunzip2 $1      ;;\n"
+"            *.rar)       unrar x $1      ;;\n"
+"            *.gz)        gunzip $1       ;;\n"
+"            *.tar)       tar xvf $1      ;;\n"
+"            *.tbz2)      tar xvjf $1     ;;\n"
+"            *.tgz)       tar xvzf $1     ;;\n"
+"            *.zip)       unzip $1        ;;\n"
+"            *.Z)         uncompress $1   ;;\n"
+"            *.7z)        7z x $1         ;;\n"
+"            *)           echo \"'$1' cannot be extracted via >extract&lt;\" "
+";;\n"
+"        esac\n"
+"    else\n"
+"        echo \"'$1' is not a valid file!\"\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:536
+msgid ""
+"# Creates an archive (*.tar.gz) from given directory.  function maketar() { "
+"tar cvzf \"${1%%/}.tar.gz\" \"${1%%/}/\"; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:539
+msgid ""
+"# Create a ZIP archive of a file or folder.  function makezip() { zip -r "
+"\"${1%%/}.zip\" \"$1\" ; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:542
+msgid ""
+"# Make your directories and files access rights sane.  function sanitize() { "
+"chmod -R u=rwX,g=rX,o= \"$@\" ;}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:546
+msgid ""
+"#------------------------------------------------------------- # "
+"Process/system related functions: "
+"#-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:550
+msgid ""
+"function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; } "
+"function pp() { my_ps f | awk '!/awk/ &amp;&amp; $0~var' var=${1:-\".*\"} ; "
+"}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:568
+#, no-wrap
+msgid ""
+"function killps()   # kill by process name\n"
+"{\n"
+"    local pid pname sig=\"-TERM\"   # default signal\n"
+"    if [ \"$#\" -lt 1 ] || [ \"$#\" -gt 2 ]; then\n"
+"        echo \"Usage: killps [-SIGNAL] pattern\"\n"
+"        return;\n"
+"    fi\n"
+"    if [ $# = 2 ]; then sig=$1 ; fi\n"
+"    for pid in $(my_ps| awk '!/awk/ &amp;&amp; $0~pat { print $1 }' "
+"pat=${!#} )\n"
+"    do\n"
+"        pname=$(my_ps | awk '$1~var { print $5 }' var=$pid )\n"
+"        if ask \"Kill process $pid &lt;$pname> with signal $sig?\"\n"
+"            then kill $sig $pid\n"
+"        fi\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:572
+#, no-wrap
+msgid ""
+"function mydf()         # Pretty-print of 'df' output.\n"
+"{                       # Inspired by 'dfc' utility.\n"
+"    for fs ; do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:577
+#, no-wrap
+msgid ""
+"        if [ ! -d $fs ]\n"
+"        then\n"
+"          echo -e $fs\" :No such file or directory\" ; continue\n"
+"        fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:593
+#, no-wrap
+msgid ""
+"        local info=( $(command df -P $fs | awk 'END{ print $2,$3,$5 }') )\n"
+"        local free=( $(command df -Pkh $fs | awk 'END{ print $4 }') )\n"
+"        local nbstars=$(( 20 * ${info[1]} / ${info[0]} ))\n"
+"        local out=\"[\"\n"
+"        for ((j=0;j&lt;20;j++)); do\n"
+"            if [ ${j} -lt ${nbstars} ]; then\n"
+"               out=$out\"*\"\n"
+"            else\n"
+"               out=$out\"-\"\n"
+"            fi\n"
+"        done\n"
+"        out=${info[2]}\" \"$out\"] (\"$free\" free on \"$fs\")\"\n"
+"        echo -e $out\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:601
+#, no-wrap
+msgid ""
+"function my_ip() # Get IP adress on ethernet.\n"
+"{\n"
+"    MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' |\n"
+"      sed -e s/addr://)\n"
+"    echo ${MY_IP:-\"Not connected\"}\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:616
+#, no-wrap
+msgid ""
+"function ii()   # Get current host related info.\n"
+"{\n"
+"    echo -e \"\\nYou are logged on ${BRed}$HOST\"\n"
+"    echo -e \"\\n${BRed}Additionnal information:$NC \" ; uname -a\n"
+"    echo -e \"\\n${BRed}Users logged on:$NC \" ; w -hs |\n"
+"             cut -d \" \" -f1 | sort | uniq\n"
+"    echo -e \"\\n${BRed}Current date :$NC \" ; date\n"
+"    echo -e \"\\n${BRed}Machine stats :$NC \" ; uptime\n"
+"    echo -e \"\\n${BRed}Memory stats :$NC \" ; free\n"
+"    echo -e \"\\n${BRed}Diskspace :$NC \" ; mydf / $HOME\n"
+"    echo -e \"\\n${BRed}Local IP Address :$NC\" ; my_ip\n"
+"    echo -e \"\\n${BRed}Open connections :$NC \"; netstat -pan --inet;\n"
+"    echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:620
+msgid ""
+"#------------------------------------------------------------- # Misc "
+"utilities: #-------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:629
+#, no-wrap
+msgid ""
+"function repeat()       # Repeat n times command.\n"
+"{\n"
+"    local i max\n"
+"    max=$1; shift;\n"
+"    for ((i=1; i &lt;= max ; i++)); do  # --> C-like syntax\n"
+"        eval \"$@\";\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:639
+#, no-wrap
+msgid ""
+"function ask()          # See 'killps' for example of use.\n"
+"{\n"
+"    echo -n \"$@\" '[y/n] ' ; read ans\n"
+"    case \"$ans\" in\n"
+"        y*|Y*) return 0 ;;\n"
+"        *) return 1 ;;\n"
+"    esac\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:646
+#, no-wrap
+msgid ""
+"function corename()   # Get name of app that created a corefile.\n"
+"{\n"
+"    for file ; do\n"
+"        echo -n $file : ; gdb --core=$file --batch | head -1\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:660
+msgid ""
+"#========================================================================= # "
+"# PROGRAMMABLE COMPLETION SECTION # Most are taken from the bash 2.05 "
+"documentation and from Ian McDonald's # 'Bash completion' package "
+"(http://www.caliban.org/bash/#completion)  # You will in fact need bash more "
+"recent then 3.0 for some features.  # # Note that most linux distributions "
+"now provide many completions # 'out of the box' - however, you might need to "
+"make your own one day, # so I kept those here as examples.  "
+"#========================================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:666
+#, no-wrap
+msgid ""
+"if [ \"${BASH_VERSION%.*}\" \\&lt; \"3.0\" ]; then\n"
+"    echo \"You will need to upgrade to version 3.0 for full \\\n"
+"          programmable completion features\"\n"
+"    return\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:668
+#, no-wrap
+msgid "shopt -s extglob        # Necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:676
+#, no-wrap
+msgid ""
+"complete -A hostname   rsh rcp telnet rlogin ftp ping disk\n"
+"complete -A export     printenv\n"
+"complete -A variable   export local readonly unset\n"
+"complete -A enabled    builtin\n"
+"complete -A alias      alias unalias\n"
+"complete -A function   function\n"
+"complete -A user       su mail finger\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:681
+#, no-wrap
+msgid ""
+"complete -A helptopic  help     # Currently same as builtins.\n"
+"complete -A shopt      shopt\n"
+"complete -A stopped -P '%' bg\n"
+"complete -A job -P '%'     fg jobs disown\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:684
+#, no-wrap
+msgid ""
+"complete -A directory  mkdir rmdir\n"
+"complete -A directory   -o default cd\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:695
+#, no-wrap
+msgid ""
+"# Compression\n"
+"complete -f -o default -X '*.+(zip|ZIP)'  zip\n"
+"complete -f -o default -X '!*.+(zip|ZIP)' unzip\n"
+"complete -f -o default -X '*.+(z|Z)'      compress\n"
+"complete -f -o default -X '!*.+(z|Z)'     uncompress\n"
+"complete -f -o default -X '*.+(gz|GZ)'    gzip\n"
+"complete -f -o default -X '!*.+(gz|GZ)'   gunzip\n"
+"complete -f -o default -X '*.+(bz2|BZ2)'  bzip2\n"
+"complete -f -o default -X '!*.+(bz2|BZ2)' bunzip2\n"
+"complete -f -o default -X '!*.+(zip|ZIP|z|Z|gz|GZ|bz2|BZ2)' extract\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:710
+msgid ""
+"# Documents - Postscript,pdf,dvi.....  complete -f -o default -X "
+"'!*.+(ps|PS)' gs ghostview ps2pdf ps2ascii complete -f -o default -X \\ "
+"'!*.+(dvi|DVI)' dvips dvipdf xdvi dviselect dvitype complete -f -o default "
+"-X '!*.+(pdf|PDF)' acroread pdf2ps complete -f -o default -X "
+"'!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?\\ (.gz|.GZ|.bz2|.BZ2|.Z))' gv ggv complete "
+"-f -o default -X '!*.texi*' makeinfo texi2dvi texi2html texi2pdf complete -f "
+"-o default -X '!*.tex' tex latex slitex complete -f -o default -X '!*.lyx' "
+"lyx complete -f -o default -X '!*.+(htm*|HTM*)' lynx html2ps complete -f -o "
+"default -X \\ "
+"'!*.+(doc|DOC|xls|XLS|ppt|PPT|sx?|SX?|csv|CSV|od?|OD?|ott|OTT)' soffice"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:722
+msgid ""
+"# Multimedia complete -f -o default -X \\ "
+"'!*.+(gif|GIF|jp*g|JP*G|bmp|BMP|xpm|XPM|png|PNG)' xv gimp ee gqview complete "
+"-f -o default -X '!*.+(mp3|MP3)' mpg123 mpg321 complete -f -o default -X "
+"'!*.+(ogg|OGG)' ogg123 complete -f -o default -X \\ "
+"'!*.@(mp[23]|MP[23]|ogg|OGG|wav|WAV|pls|\\ "
+"m3u|xm|mod|s[3t]m|it|mtm|ult|flac)' xmms complete -f -o default -X "
+"'!*.@(mp?(e)g|MP?(E)G|wma|avi|AVI|\\ "
+"asf|vob|VOB|bin|dat|vcd|ps|pes|fli|viv|rm|ram|yuv|mov|MOV|qt|\\ "
+"QT|wmv|mp3|MP3|ogg|OGG|ogm|OGM|mp4|MP4|wav|WAV|asx|ASX)' xine"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:726
+msgid "complete -f -o default -X '!*.pl' perl perl5"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:732
+msgid ""
+"# This is a 'universal' completion function - it works when commands have #+ "
+"a so-called 'long options' mode , ie: 'ls --all' instead of 'ls -a' # Needs "
+"the '-o' option of grep #+ (try the commented-out version if not available)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:735
+msgid ""
+"# First, remove '=' from completion word separators #+ (this will allow "
+"completions like 'ls --color=auto' to work correctly)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:737
+msgid "COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:745
+#, no-wrap
+msgid ""
+"_get_longopts()\n"
+"{\n"
+"  #$1 --help | sed  -e '/--/!d' -e 's/.*--\\([^[:space:].,]*\\).*/--\\1/'| "
+"\\\n"
+"  #grep ^\"$2\" |sort -u ;\n"
+"    $1 --help | grep -o -e \"--[^[:space:].,]*\" | grep -e \"$2\" |sort -u\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:750
+#, no-wrap
+msgid ""
+"_longopts()\n"
+"{\n"
+"    local cur\n"
+"    cur=${COMP_WORDS[COMP_CWORD]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:755
+#, no-wrap
+msgid ""
+"    case \"${cur:-*}\" in\n"
+"       -*)      ;;\n"
+"        *)      return ;;\n"
+"    esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:764
+#, no-wrap
+msgid ""
+"    case \"$1\" in\n"
+"       \\~*)     eval cmd=\"$1\" ;;\n"
+"         *)     cmd=\"$1\" ;;\n"
+"    esac\n"
+"    COMPREPLY=( $(_get_longopts ${1} ${cur} ) )\n"
+"}\n"
+"complete  -o default -F _longopts configure bash\n"
+"complete  -o default -F _longopts wget id info a2ps ls recode\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:768
+#, no-wrap
+msgid ""
+"_tar()\n"
+"{\n"
+"    local cur ext regex tar untar\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:771
+#, no-wrap
+msgid ""
+"    COMPREPLY=()\n"
+"    cur=${COMP_WORDS[COMP_CWORD]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:776
+#, no-wrap
+msgid ""
+"    # If we want an option, return the possible long options.\n"
+"    case \"$cur\" in\n"
+"        -*)     COMPREPLY=( $(_get_longopts $1 $cur ) ); return 0;;\n"
+"    esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:781
+#, no-wrap
+msgid ""
+"    if [ $COMP_CWORD -eq 1 ]; then\n"
+"        COMPREPLY=( $( compgen -W 'c t x u r d A' -- $cur ) )\n"
+"        return 0\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:803
+#, no-wrap
+msgid ""
+"    case \"${COMP_WORDS[1]}\" in\n"
+"        ?(-)c*f)\n"
+"            COMPREPLY=( $( compgen -f $cur ) )\n"
+"            return 0\n"
+"            ;;\n"
+"        +([^Izjy])f)\n"
+"            ext='tar'\n"
+"            regex=$ext\n"
+"            ;;\n"
+"        *z*f)\n"
+"            ext='tar.gz'\n"
+"            regex='t\\(ar\\.\\)\\(gz\\|Z\\)'\n"
+"            ;;\n"
+"        *[Ijy]*f)\n"
+"            ext='t?(ar.)bz?(2)'\n"
+"            regex='t\\(ar\\.\\)bz2\\?'\n"
+"            ;;\n"
+"        *)\n"
+"            COMPREPLY=( $( compgen -f $cur ) )\n"
+"            return 0\n"
+"            ;;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:805
+#, no-wrap
+msgid "    esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:814
+#, no-wrap
+msgid ""
+"    if [[ \"$COMP_LINE\" == tar*.$ext' '* ]]; then\n"
+"        # Complete on files in tar file.\n"
+"        #\n"
+"        # Get name of tar file from command line.\n"
+"        tar=$( echo \"$COMP_LINE\" | \\\n"
+"                        sed -e 's|^.* \\([^ ]*'$regex'\\) .*$|\\1|' )\n"
+"        # Devise how to untar and list it.\n"
+"        untar=t${COMP_WORDS[1]//[^Izjyf]/}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:818
+#, no-wrap
+msgid ""
+"        COMPREPLY=( $( compgen -W \"$( echo $( tar $untar $tar \\\n"
+"                                2>/dev/null ) )\" -- \"$cur\" ) )\n"
+"        return 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:822
+#, no-wrap
+msgid ""
+"    else\n"
+"        # File completion on relevant files.\n"
+"        COMPREPLY=( $( compgen -G $cur\\*.$ext ) )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:824
+#, no-wrap
+msgid "    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:826
+#, no-wrap
+msgid "    return 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:830
+msgid "complete -F _tar -o default tar"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:849
+#, no-wrap
+msgid ""
+"_make()\n"
+"{\n"
+"    local mdef makef makef_dir=\".\" makef_inc gcmd cur prev i;\n"
+"    COMPREPLY=();\n"
+"    cur=${COMP_WORDS[COMP_CWORD]};\n"
+"    prev=${COMP_WORDS[COMP_CWORD-1]};\n"
+"    case \"$prev\" in\n"
+"        -*f)\n"
+"            COMPREPLY=($(compgen -f $cur ));\n"
+"            return 0\n"
+"            ;;\n"
+"    esac;\n"
+"    case \"$cur\" in\n"
+"        -*)\n"
+"            COMPREPLY=($(_get_longopts $1 $cur ));\n"
+"            return 0\n"
+"            ;;\n"
+"    esac;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:863
+#, no-wrap
+msgid ""
+"    # ... make reads\n"
+"    #          GNUmakefile,\n"
+"    #     then makefile\n"
+"    #     then Makefile ...\n"
+"    if [ -f ${makef_dir}/GNUmakefile ]; then\n"
+"        makef=${makef_dir}/GNUmakefile\n"
+"    elif [ -f ${makef_dir}/makefile ]; then\n"
+"        makef=${makef_dir}/makefile\n"
+"    elif [ -f ${makef_dir}/Makefile ]; then\n"
+"        makef=${makef_dir}/Makefile\n"
+"    else\n"
+"       makef=${makef_dir}/*.mk         # Local convention.\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:875
+#, no-wrap
+msgid ""
+"    #  Before we scan for targets, see if a Makefile name was\n"
+"    #+ specified with -f.\n"
+"    for (( i=0; i &lt; ${#COMP_WORDS[@]}; i++ )); do\n"
+"        if [[ ${COMP_WORDS[i]} == -f ]]; then\n"
+"            # eval for tilde expansion\n"
+"            eval makef=${COMP_WORDS[i+1]}\n"
+"            break\n"
+"        fi\n"
+"    done\n"
+"    [ ! -f $makef ] &amp;&amp; return 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:882
+#, no-wrap
+msgid ""
+"    # Deal with included Makefiles.\n"
+"    makef_inc=$( grep -E '^-?include' $makef |\n"
+"                 sed -e \"s,^.* ,\"$makef_dir\"/,\" )\n"
+"    for file in $makef_inc; do\n"
+"        [ -f $file ] &amp;&amp; makef=\"$makef $file\"\n"
+"    done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:887
+#, no-wrap
+msgid ""
+"    #  If we have a partial word to complete, restrict completions\n"
+"    #+ to matches of that word.\n"
+"    if [ -n \"$cur\" ]; then gcmd='grep \"^$cur\"' ; else gcmd=cat ; fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:891
+#, no-wrap
+msgid ""
+"    COMPREPLY=( $( awk -F':' '/^[a-zA-Z0-9][^$#\\/\\t=]*:([^=]|$)/ \\\n"
+"                               {split($1,A,/ /);for(i in A)print A[i]}' \\\n"
+"                                $makef 2>/dev/null | eval $gcmd  ))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:895
+msgid "complete -F _make -X '+($*|*.[cho])' make gmake pmake"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:904
+#, no-wrap
+msgid ""
+"_killall()\n"
+"{\n"
+"    local cur prev\n"
+"    COMPREPLY=()\n"
+"    cur=${COMP_WORDS[COMP_CWORD]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:912
+#, no-wrap
+msgid ""
+"    #  Get a list of processes\n"
+"    #+ (the first sed evaluation\n"
+"    #+ takes care of swapped out processes, the second\n"
+"    #+ takes care of getting the basename of the process).\n"
+"    COMPREPLY=( $( ps -u $USER -o comm  | \\\n"
+"        sed -e '1,1d' -e 's#[]\\[]##g' -e 's#^.*/##'| \\\n"
+"        awk '{if ($0 ~ /^'$cur'/) print $0}' ))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:915
+#, no-wrap
+msgid ""
+"    return 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:917
+msgid "complete -F _killall killall killps"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/bashrc:923
+msgid "# Local Variables: # mode:shell-script # sh-shell:bash # End:"
+msgstr ""

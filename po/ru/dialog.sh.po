@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/dialog.sh:3
+msgid "#!/bin/bash # dialog.sh: Using 'gdialog' widgets."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:7
+msgid ""
+"# Must have 'gdialog' installed on your system to run this script.  # Or, "
+"you can replace all instance of 'gdialog' below with 'kdialog' ...  # "
+"Version 1.1 (corrected 04/05/05)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:12
+#, no-wrap
+msgid ""
+"# This script was inspired by the following article.\n"
+"#     \"Scripting for X Productivity,\" by Marco Fioretti,\n"
+"#      LINUX JOURNAL, Issue 113, September 2003, pp. 86-9.\n"
+"# Thank you, all you good people at LJ.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:19
+msgid ""
+"# Input error in dialog box.  E_INPUT=85 # Dimensions of display, input "
+"widgets.  HEIGHT=50 WIDTH=60"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:22
+msgid "# Output file name (constructed out of script name).  OUTFILE=$0.output"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:25
+msgid ""
+"# Display this script in a text widget.  gdialog --title \"Displaying: $0\" "
+"--textbox $0 $HEIGHT $WIDTH"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:32
+msgid ""
+"# Now, we'll try saving input in a file.  echo -n \"VARIABLE=\" > $OUTFILE "
+"gdialog --title \"User Input\" --inputbox \"Enter variable, please:\" \\ "
+"$HEIGHT $WIDTH 2>> $OUTFILE"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:44
+#, no-wrap
+msgid ""
+"if [ \"$?\" -eq 0 ]\n"
+"# It's good practice to check exit status.\n"
+"then\n"
+"  echo \"Executed \\\"dialog box\\\" without errors.\"\n"
+"else\n"
+"  echo \"Error(s) in \\\"dialog box\\\" execution.\"\n"
+"        # Or, clicked on \"Cancel\", instead of \"OK\" button.\n"
+"  rm $OUTFILE\n"
+"  exit $E_INPUT\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:50
+#, no-wrap
+msgid ""
+"# Now, we'll retrieve and display the saved variable.\n"
+". $OUTFILE   # 'Source' the saved file.\n"
+"echo \"The variable input in the \\\"input box\\\" was: \"$VARIABLE\"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:54
+#, no-wrap
+msgid ""
+"rm $OUTFILE  # Clean up by removing the temp file.\n"
+"             # Some applications may need to retain this file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:56
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dialog.sh:57
+msgid "# Exercise: Rewrite this script using the 'zenity' widget set."
+msgstr ""

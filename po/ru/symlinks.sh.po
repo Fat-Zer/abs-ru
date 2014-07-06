@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:3
+msgid "#!/bin/bash # symlinks.sh: Lists symbolic links in a directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:19
+#, no-wrap
+msgid ""
+"directory=${1-`pwd`}\n"
+"#  Defaults to current working directory,\n"
+"#+ if not otherwise specified.\n"
+"#  Equivalent to code block below.\n"
+"# ----------------------------------------------------------\n"
+"# ARGS=1                 # Expect one command-line argument.\n"
+"#\n"
+"# if [ $# -ne \"$ARGS\" ]  # If not 1 arg...\n"
+"# then\n"
+"#   directory=`pwd`      # current working directory\n"
+"# else\n"
+"#   directory=$1\n"
+"# fi\n"
+"# ----------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:21
+msgid "echo \"symbolic links in directory \\\"$directory\\\"\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:29
+#, no-wrap
+msgid ""
+"for file in \"$( find $directory -type l )\"   # -type l = symbolic links\n"
+"do\n"
+"  echo \"$file\"\n"
+"done | sort                                  # Otherwise file list is "
+"unsorted.\n"
+"#  Strictly speaking, a loop isn't really necessary here,\n"
+"#+ since the output of the \"find\" command is expanded into a single "
+"word.\n"
+"#  However, it's easy to understand and illustrative this way.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:34
+msgid ""
+"# As Dominik 'Aeneas' Schnitzer points out, #+ failing to quote $( find "
+"$directory -type l )  #+ will choke on filenames with embedded whitespace.  "
+"# containing whitespace."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:36
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:40
+msgid ""
+"# -------------------------------------------------------- # Jean Helou "
+"proposes the following alternative:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:45
+msgid ""
+"echo \"symbolic links in directory \\\"$directory\\\"\" # Backup of the "
+"current IFS. One can never be too cautious.  OLDIFS=$IFS IFS=:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:50
+#, no-wrap
+msgid ""
+"for file in $(find $directory -type l -printf \"%p$IFS\")\n"
+"do     #                              ^^^^^^^^^^^^^^^^\n"
+"       echo \"$file\"\n"
+"       done|sort\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:52
+msgid "# And, James \"Mike\" Conley suggests modifying Helou's code thusly:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:59
+#, no-wrap
+msgid ""
+"OLDIFS=$IFS\n"
+"IFS='' # Null IFS means no word breaks\n"
+"for file in $( find $directory -type l )\n"
+"do\n"
+"  echo $file\n"
+"  done | sort\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/symlinks.sh:64
+msgid ""
+"# This works in the \"pathological\" case of a directory name having #+ an "
+"embedded colon.  # \"This also fixes the pathological case of the directory "
+"name having #+ a colon (or space in earlier example) as well.\""
+msgstr ""

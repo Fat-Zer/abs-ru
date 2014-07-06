@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/backlight.sh:4
+msgid "#!/bin/bash # backlight.sh # reldate 02dec2011"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:8
+msgid ""
+"# A bug in Fedora Core 16/17 messes up the keyboard backlight controls.  # "
+"This script is a quick-n-dirty workaround, essentially a shell wrapper #+ "
+"for xrandr. It gives more control than on-screen sliders and widgets."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:11
+#, no-wrap
+msgid ""
+"OUTPUT=$(xrandr | grep LV | awk '{print $1}')   # Get display name!\n"
+"INCR=.05      # For finer-grained control, set INCR to .03 or .02.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:13
+msgid "old_brightness=$(xrandr --verbose | grep rightness | awk '{ print $2 }')"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:18
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  bright=1    # If no command-line arg, set brightness to 1.0 (default).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:23
+#, no-wrap
+msgid ""
+"  else\n"
+"    if [ \"$1\" = \"+\" ]\n"
+"    then\n"
+"      bright=$(echo \"scale=2; $old_brightness + $INCR\" | bc)   # +.05\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:28
+#, no-wrap
+msgid ""
+"  else\n"
+"    if [ \"$1\" = \"-\" ]\n"
+"    then\n"
+"      bright=$(echo \"scale=2; $old_brightness - $INCR\" | bc)   # -.05\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:33
+#, no-wrap
+msgid ""
+"  else\n"
+"    if [ \"$1\" = \"#\" ]   # Echoes current brightness; does not change "
+"it.\n"
+"    then\n"
+"      bright=$old_brightness\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:46
+#, no-wrap
+msgid ""
+"  else\n"
+"    if [[ \"$1\" = \"h\" || \"$1\" = \"H\" ]]\n"
+"    then\n"
+"      echo\n"
+"      echo \"Usage:\"\n"
+"      echo \"$0 [No args]    Sets/resets brightness to default (1.0).\"\n"
+"      echo \"$0 +            Increments brightness by 0.5.\"\n"
+"      echo \"$0 -            Decrements brightness by 0.5.\"\n"
+"      echo \"$0 #            Echoes current brightness without changing "
+"it.\"\n"
+"      echo \"$0 N (number)   Sets brightness to N (useful range .7 - "
+"1.2).\"\n"
+"      echo \"$0 h [H]        Echoes this help message.\"\n"
+"      echo \"$0 any-other    Gives xrandr usage message.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:48
+#, no-wrap
+msgid "      bright=$old_brightness\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:51
+#, no-wrap
+msgid ""
+"  else\n"
+"    bright=\"$1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:57
+#, no-wrap
+msgid ""
+"      fi\n"
+"     fi\n"
+"    fi\n"
+"  fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:63
+#, no-wrap
+msgid ""
+"xrandr --output \"$OUTPUT\" --brightness \"$bright\"   # See xrandr "
+"manpage.\n"
+"                                                   # As root!\n"
+"E_CHANGE0=$?\n"
+"echo \"Current brightness = $bright\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:65
+msgid "exit $E_CHANGE0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:68
+msgid "# =========== Or, alternately . . . ==================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:72
+msgid "#!/bin/bash # backlight2.sh # reldate 20jun2012"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:75
+msgid ""
+"# A bug in Fedora Core 16/17 messes up the keyboard backlight controls.  # "
+"This is a quick-n-dirty workaround, an alternate to backlight.sh."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:79
+msgid ""
+"target_dir=\\ "
+"/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/backlight/acpi_video0 # "
+"Hardware directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:83
+msgid ""
+"actual_brightness=$(cat $target_dir/actual_brightness)  max_brightness=$(cat "
+"$target_dir/max_brightness)  Brightness=$target_dir/brightness"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:85
+#, no-wrap
+msgid "let \"req_brightness = actual_brightness\"   # Requested brightness.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:95
+#, no-wrap
+msgid ""
+"if [ \"$1\" = \"-\" ]\n"
+"then     # Decrement brightness 1 notch.\n"
+"  let \"req_brightness = $actual_brightness - 1\"\n"
+"else\n"
+"  if [ \"$1\" = \"+\" ]\n"
+"  then   # Increment brightness 1 notch.\n"
+"    let \"req_brightness = $actual_brightness + 1\"\n"
+"   fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:100
+#, no-wrap
+msgid ""
+"if [ $req_brightness -gt $max_brightness ]\n"
+"then\n"
+"  req_brightness=$max_brightness\n"
+"fi   # Do not exceed max. hardware design brightness.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:102
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:107
+msgid ""
+"echo \"Old brightness = $actual_brightness\" echo \"Max brightness = "
+"$max_brightness\" echo \"Requested brightness = $req_brightness\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:113
+#, no-wrap
+msgid ""
+"# =====================================\n"
+"echo $req_brightness > $Brightness\n"
+"# Must be root for this to take effect.\n"
+"E_CHANGE1=$?   # Successful?\n"
+"# =====================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:120
+#, no-wrap
+msgid ""
+"if [ \"$?\" -eq 0 ]\n"
+"then\n"
+"  echo \"Changed brightness!\"\n"
+"else\n"
+"  echo \"Failed to change brightness!\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:123
+msgid ""
+"act_brightness=$(cat $Brightness)  echo \"Actual brightness = "
+"$act_brightness\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:128
+msgid ""
+"scale0=2 sf=100 # Scale factor.  pct=$(echo \"scale=$scale0; $act_brightness "
+"/ $max_brightness * $sf\" | bc)  echo \"Percentage brightness = $pct%\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/backlight.sh:129
+msgid "exit $E_CHANGE1"
+msgstr ""

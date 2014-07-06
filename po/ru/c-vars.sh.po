@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:4
+msgid ""
+"#!/bin/bash # c-vars.sh # Manipulating a variable, C-style, using the (( "
+"... )) construct."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:7 abs-guide/c-vars.sh:26 abs-guide/c-vars.sh:38 abs-guide/c-vars.sh:45
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:11
+#, no-wrap
+msgid ""
+"(( a = 23 ))  #  Setting a value, C-style,\n"
+"              #+ with spaces on both sides of the \"=\".\n"
+"echo \"a (initial value) = $a\"   # 23\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:14
+#, no-wrap
+msgid ""
+"(( a++ ))     #  Post-increment 'a', C-style.\n"
+"echo \"a (after a++) = $a\"       # 24\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:17
+#, no-wrap
+msgid ""
+"(( a-- ))     #  Post-decrement 'a', C-style.\n"
+"echo \"a (after a--) = $a\"       # 23\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:21
+#, no-wrap
+msgid ""
+"(( ++a ))     #  Pre-increment 'a', C-style.\n"
+"echo \"a (after ++a) = $a\"       # 24\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:24
+#, no-wrap
+msgid ""
+"(( --a ))     #  Pre-decrement 'a', C-style.\n"
+"echo \"a (after --a) = $a\"       # 23\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:30
+msgid ""
+"######################################################## # Note that, as in "
+"C, pre- and post-decrement operators #+ have different side-effects."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:33
+msgid ""
+"n=1; let --n &amp;&amp; echo \"True\" || echo \"False\" # False n=1; let n-- "
+"&amp;&amp; echo \"True\" || echo \"False\" # True"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:36
+msgid ""
+"# Thanks, Jeroen Domburg.  "
+"########################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:43
+#, no-wrap
+msgid ""
+"(( t = a&lt;45?7:11 ))   # C-style trinary operator.\n"
+"#       ^  ^ ^\n"
+"echo \"If a &lt; 45, then t = 7, else t = 11.\"  # a = 23\n"
+"echo \"t = $t \"                              # t = 7\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:55
+msgid ""
+"# ----------------- # Easter Egg alert! # ----------------- # Chet Ramey "
+"seems to have snuck a bunch of undocumented C-style #+ constructs into Bash "
+"(actually adapted from ksh, pretty much).  # In the Bash docs, Ramey calls "
+"(( ... )) shell arithmetic, #+ but it goes far beyond that.  # Sorry, Chet, "
+"the secret is out."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:57
+msgid "# See also \"for\" and \"while\" loops using the (( ... )) construct."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:59
+msgid "# These work only with version 2.04 or later of Bash."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/c-vars.sh:60
+msgid "exit"
+msgstr ""

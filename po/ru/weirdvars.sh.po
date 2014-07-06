@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:3
+msgid "#!/bin/bash # weirdvars.sh: Echoing weird variables."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:5 abs-guide/weirdvars.sh:11 abs-guide/weirdvars.sh:19
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:9
+#, no-wrap
+msgid ""
+"var=\"'(]\\\\{}\\$\\\"\"\n"
+"echo $var        # '(]\\{}$\"\n"
+"echo \"$var\"      # '(]\\{}$\"     Doesn't make a difference.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:15
+#, no-wrap
+msgid ""
+"IFS='\\'\n"
+"echo $var        # '(] {}$\"     \\ converted to space. Why?\n"
+"echo \"$var\"      # '(]\\{}$\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:17
+msgid "# Examples above supplied by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:28
+#, no-wrap
+msgid ""
+"var2=\"\\\\\\\\\\\"\"\n"
+"echo $var2       #   \"\n"
+"echo \"$var2\"     # \\\\\"\n"
+"echo\n"
+"# But ... var2=\"\\\\\\\\\"\" is illegal. Why?\n"
+"var3='\\\\\\\\'\n"
+"echo \"$var3\"     # \\\\\\\\\n"
+"# Strong quoting works, though.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:32
+msgid ""
+"# ************************************************************ # # As the "
+"first example above shows, nesting quotes is permitted."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:35
+#, no-wrap
+msgid ""
+"echo \"$(echo '\"')\"           # \"\n"
+"#    ^           ^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:38
+msgid "# At times this comes in useful."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:42
+#, no-wrap
+msgid ""
+"var1=\"Two bits\"\n"
+"echo \"\\$var1 = \"$var1\"\"      # $var1 = Two bits\n"
+"#    ^                ^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:44
+msgid "# Or, as Chris Hiestand points out ..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/weirdvars.sh:50
+#, no-wrap
+msgid ""
+"if [[ \"$(du \"$My_File1\")\" -gt \"$(du \"$My_File2\")\" ]]\n"
+"#     ^     ^         ^ ^     ^     ^         ^ ^\n"
+"then\n"
+"  ...\n"
+"fi\n"
+"# ************************************************************ #\n"
+msgstr ""

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex9.sh:3
+msgid "#!/bin/bash # ex9.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:5
+msgid "# Variables: assignment and substitution"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:9
+#, no-wrap
+msgid ""
+"a=375\n"
+"hello=$a\n"
+"#   ^ ^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:13
+msgid ""
+"#------------------------------------------------------------------------- # "
+"No space permitted on either side of = sign when initializing variables.  # "
+"What happens if there is a space?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:17
+#, no-wrap
+msgid ""
+"#  \"VARIABLE =value\"\n"
+"#           ^\n"
+"#% Script tries to run \"VARIABLE\" command with one argument, \"=value\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:23
+#, no-wrap
+msgid ""
+"#  \"VARIABLE= value\"\n"
+"#            ^\n"
+"#% Script tries to run \"value\" command with\n"
+"#+ the environmental variable \"VARIABLE\" set to \"\".\n"
+"#-------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:27
+#, no-wrap
+msgid ""
+"echo hello    # hello\n"
+"# Not a variable reference, just the string \"hello\" ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:32
+#, no-wrap
+msgid ""
+"echo $hello   # 375\n"
+"#    ^          This *is* a variable reference.\n"
+"echo ${hello} # 375\n"
+"#               Likewise a variable reference, as above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:36
+#, no-wrap
+msgid ""
+"# Quoting . . .\n"
+"echo \"$hello\"    # 375\n"
+"echo \"${hello}\"  # 375\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:38 abs-guide/ex9.sh:48
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:46
+#, no-wrap
+msgid ""
+"hello=\"A B  C   D\"\n"
+"echo $hello   # A B C D\n"
+"echo \"$hello\" # A B  C   D\n"
+"# As we see, echo $hello   and   echo \"$hello\"   give different results.\n"
+"# =======================================\n"
+"# Quoting a variable preserves whitespace.\n"
+"# =======================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:53
+#, no-wrap
+msgid ""
+"echo '$hello'  # $hello\n"
+"#    ^      ^\n"
+"#  Variable referencing disabled (escaped) by single quotes,\n"
+"#+ which causes the \"$\" to be interpreted literally.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:55
+msgid "# Notice the effect of different types of quoting."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:61
+#, no-wrap
+msgid ""
+"hello=    # Setting it to a null value.\n"
+"echo \"\\$hello (null value) = $hello\"      # $hello (null value) =\n"
+"#  Note that setting a variable to a null value is not the same as\n"
+"#+ unsetting it, although the end result is the same (see below).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:63 abs-guide/ex9.sh:75
+msgid "# --------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:67
+msgid ""
+"# It is permissible to set multiple variables on the same line, #+ if "
+"separated by white space.  # Caution, this may reduce legibility, and may "
+"not be portable."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:71
+#, no-wrap
+msgid ""
+"var1=21  var2=22  var3=$V3\n"
+"echo\n"
+"echo \"var1=$var1   var2=$var2   var3=$var3\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:73
+msgid "# May cause problems with legacy versions of \"sh\" . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:77 abs-guide/ex9.sh:94
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:90
+#, no-wrap
+msgid ""
+"numbers=\"one two three\"\n"
+"#           ^   ^\n"
+"other_numbers=\"1 2 3\"\n"
+"#               ^ ^\n"
+"#  If there is whitespace embedded within a variable,\n"
+"#+ then quotes are necessary.\n"
+"#  other_numbers=1 2 3                  # Gives an error message.\n"
+"echo \"numbers = $numbers\"\n"
+"echo \"other_numbers = $other_numbers\"   # other_numbers = 1 2 3\n"
+"#  Escaping the whitespace also works.\n"
+"mixed_bag=2\\ ---\\ Whatever\n"
+"#           ^    ^ Space after escape (\\).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:92
+#, no-wrap
+msgid "echo \"$mixed_bag\"         # 2 --- Whatever\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:101
+#, no-wrap
+msgid ""
+"echo \"uninitialized_variable = $uninitialized_variable\"\n"
+"# Uninitialized variable has null value (no value at all!).\n"
+"uninitialized_variable=   #  Declaring, but not initializing it --\n"
+"                          #+ same as setting it to a null value, as above.\n"
+"echo \"uninitialized_variable = $uninitialized_variable\"\n"
+"                          # It still has a null value.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:108
+#, no-wrap
+msgid ""
+"uninitialized_variable=23       # Set it.\n"
+"unset uninitialized_variable    # Unset it.\n"
+"echo \"uninitialized_variable = $uninitialized_variable\"\n"
+"                                # uninitialized_variable =\n"
+"                                # It still has a null value.\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex9.sh:109
+msgid "exit 0"
+msgstr ""

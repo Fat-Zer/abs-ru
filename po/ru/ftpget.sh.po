@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:30
+msgid ""
+"#! /bin/sh # $Id$ # Script to perform batch anonymous ftp. Essentially "
+"converts a list of # of command-line arguments into input to ftp.  # ==> "
+"This script is nothing but a shell wrapper around \"ftp\" . . .  # Simple, "
+"and quick - written as a companion to ftplist # -h specifies the remote host "
+"(default prep.ai.mit.edu)  # -d specifies the remote directory to cd to - "
+"you can provide a sequence # of -d options - they will be cd'ed to in "
+"turn. If the paths are relative, # make sure you get the sequence right. Be "
+"careful with relative paths - # there are far too many symlinks nowadays.  # "
+"(default is the ftp login directory)  # -v turns on the verbose option of "
+"ftp, and shows all responses from the # ftp server.  # -f "
+"remotefile[:localfile] gets the remote file into localfile # -m pattern does "
+"an mget with the specified pattern. Remember to quote # shell characters.  # "
+"-c does a local cd to the specified directory # For example, # \tftpget -h "
+"expo.lcs.mit.edu -d contrib -f xplaces.shar:xplaces.sh \\ #\t\t-d "
+"../pub/R3/fixes -c ~/fixes -m 'fix*' # will get xplaces.shar from "
+"~ftp/contrib on expo.lcs.mit.edu, and put it # in xplaces.sh in the current "
+"working directory, and get all fixes from # ~ftp/pub/R3/fixes and put them "
+"in the ~/fixes directory.  # Obviously, the sequence of the options is "
+"important, since the equivalent # commands are executed by ftp in "
+"corresponding order # # Mark Moraes &lt;moraes@csri.toronto.edu&gt;, Feb 1, "
+"1989 #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:33
+msgid "# ==> These comments added by author of this document."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:37
+msgid ""
+"# PATH=/local/bin:/usr/ucb:/usr/bin:/bin # export PATH # ==> Above 2 lines "
+"from original script probably superfluous."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:39
+msgid "E_BADARGS=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:43
+msgid ""
+"TMPFILE=/tmp/ftp.$$ # ==> Creates temp file, using process id of script ($$)  "
+"# ==> to construct filename."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:47
+msgid ""
+"SITE=`domainname`.toronto.edu # ==> 'domainname' similar to 'hostname' # ==> "
+"May rewrite this to parameterize this for general use."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:97
+#, no-wrap
+msgid ""
+"usage=\"Usage: $0 [-h remotehost] [-d remotedirectory]... \\ \n"
+"[-f remfile:localfile]...  [-c localdirectory] [-m filepattern] [-v]\"\n"
+"ftpflags=\"-i -n\"\n"
+"verbflag=\n"
+"set -f \t\t# So we can use globbing in -m\n"
+"set x `getopt vh:d:c:m:f: $*`\n"
+"if [ $? != 0 ]; then\n"
+"\techo $usage\n"
+"\texit $E_BADARGS\n"
+"fi\n"
+"shift\n"
+"trap 'rm -f ${TMPFILE} ; exit' 0   1     2              3        15\n"
+"# ==>                   Signals:   HUP   INT (Ctl-C)    QUIT     TERM\n"
+"# ==> Delete tempfile in case of abnormal exit from script.\n"
+"echo \"user anonymous ${USER-gnu}@${SITE} > ${TMPFILE}\"\n"
+"# ==> Added quotes (recommended in complex echoes).\n"
+"echo binary >> ${TMPFILE}\n"
+"for i in $*   # ==> Parse command-line args.\n"
+"do\n"
+"\tcase $i in\n"
+"\t-v) verbflag=-v; echo hash >> ${TMPFILE}; shift;;\n"
+"\t-h) remhost=$2; shift 2;;\n"
+"\t-d) echo cd $2 >> ${TMPFILE}; \n"
+"\t    if [ x${verbflag} != x ]; then\n"
+"\t        echo pwd >> ${TMPFILE};\n"
+"\t    fi;\n"
+"\t    shift 2;;\n"
+"\t-c) echo lcd $2 >> ${TMPFILE}; shift 2;;\n"
+"\t-m) echo mget \"$2\" >> ${TMPFILE}; shift 2;;\n"
+"\t-f) f1=`expr \"$2\" : \"\\([^:]*\\).*\"`; f2=`expr \"$2\" : "
+"\"[^:]*:\\(.*\\)\"`;\n"
+"\t    echo get ${f1} ${f2} >> ${TMPFILE}; shift 2;;\n"
+"\t--) shift; break;;\n"
+"\tesac\n"
+"        # ==> 'lcd' and 'mget' are ftp commands. See \"man ftp\" . . .\n"
+"done\n"
+"if [ $# -ne 0 ]; then\n"
+"\techo $usage\n"
+"\texit $E_BADARGS\n"
+"        # ==> Changed from \"exit 2\" to conform with style standard.\n"
+"fi\n"
+"if [ x${verbflag} != x ]; then\n"
+"\tftpflags=\"${ftpflags} -v\"\n"
+"fi\n"
+"if [ x${remhost} = x ]; then\n"
+"\tremhost=prep.ai.mit.edu\n"
+"\t# ==> Change to match appropriate ftp site.\n"
+"fi\n"
+"echo quit >> ${TMPFILE}\n"
+"# ==> All commands saved in tempfile.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:100
+msgid ""
+"ftp ${ftpflags} ${remhost} &lt; ${TMPFILE} # ==> Now, tempfile batch "
+"processed by ftp."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:103
+msgid ""
+"rm -f ${TMPFILE} # ==> Finally, tempfile deleted (you may wish to copy it to "
+"a logfile)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:109
+msgid ""
+"# ==> Exercises: # ==> --------- # ==> 1) Add error checking.  # ==> 2) Add "
+"bells &amp; whistles."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ftpget.sh:111
+msgid ""
+"# See the included file \"Moraes-COPYRIGHT\" for copyright info.  #+ on this "
+"script."
+msgstr ""

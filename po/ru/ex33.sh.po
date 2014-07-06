@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex33.sh:4
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex33.sh: Exercising getopts and OPTIND\n"
+"#          Script modified 10/09/03 at the suggestion of Bill Gradwohl.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:8
+msgid ""
+"# Here we observe how 'getopts' processes command-line arguments to script.  "
+"# The arguments are parsed as \"options\" (flags) and associated arguments."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:23
+#, no-wrap
+msgid ""
+"# Try invoking this script with:\n"
+"#   'scriptname -mn'\n"
+"#   'scriptname -oq qOption' (qOption can be some arbitrary string.)\n"
+"#   'scriptname -qXXX -r'\n"
+"#\n"
+"#   'scriptname -qr'\n"
+"#+      - Unexpected result, takes \"r\" as the argument to option \"q\"\n"
+"#   'scriptname -q -r' \n"
+"#+      - Unexpected result, same as above\n"
+"#   'scriptname -mnop -mnop'  - Unexpected result\n"
+"#   (OPTIND is unreliable at stating where an option came from.)\n"
+"#\n"
+"#  If an option expects an argument (\"flag:\"), then it will grab\n"
+"#+ whatever is next on the command-line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:26
+msgid "NO_ARGS=0 E_OPTERROR=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:34
+#, no-wrap
+msgid ""
+"if [ $# -eq \"$NO_ARGS\" ]    # Script invoked with no command-line args?\n"
+"then\n"
+"  echo \"Usage: `basename $0` options (-mnopqrs)\"\n"
+"  exit $E_OPTERROR          # Exit and explain usage.\n"
+"                            # Usage: scriptname -options\n"
+"                            # Note: dash (-) necessary\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:50
+#, no-wrap
+msgid ""
+"while getopts \":mnopq:rs\" Option\n"
+"do\n"
+"  case $Option in\n"
+"    m     ) echo \"Scenario #1: option -m-   [OPTIND=${OPTIND}]\";;\n"
+"    n | o ) echo \"Scenario #2: option -$Option-   [OPTIND=${OPTIND}]\";;\n"
+"    p     ) echo \"Scenario #3: option -p-   [OPTIND=${OPTIND}]\";;\n"
+"    q     ) echo \"Scenario #4: option -q-\\\n"
+"                  with argument \\\"$OPTARG\\\"   [OPTIND=${OPTIND}]\";;\n"
+"    #  Note that option 'q' must have an associated argument,\n"
+"    #+ otherwise it falls through to the default.\n"
+"    r | s ) echo \"Scenario #5: option -$Option-\";;\n"
+"    *     ) echo \"Unimplemented option chosen.\";;   # Default.\n"
+"  esac\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:55
+msgid ""
+"shift $(($OPTIND - 1))  # Decrements the argument pointer so it points to "
+"next argument.  # $1 now references the first non-option item supplied on "
+"the command-line #+ if one exists."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:57
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex33.sh:62
+#, no-wrap
+msgid ""
+"#   As Bill Gradwohl states,\n"
+"#  \"The getopts mechanism allows one to specify:  scriptname -mnop -mnop\n"
+"#+  but there is no reliable way to differentiate what came\n"
+"#+ from where by using OPTIND.\"\n"
+"#  There are, however, workarounds.\n"
+msgstr ""

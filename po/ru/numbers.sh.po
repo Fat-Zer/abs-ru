@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/numbers.sh:3
+msgid "#!/bin/bash # numbers.sh: Representation of numbers in different bases."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:8
+#, no-wrap
+msgid ""
+"# Decimal: the default\n"
+"let \"dec = 32\"\n"
+"echo \"decimal number = $dec\"             # 32\n"
+"# Nothing out of the ordinary here.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:15
+#, no-wrap
+msgid ""
+"# Octal: numbers preceded by '0' (zero)\n"
+"let \"oct = 032\"\n"
+"echo \"octal number = $oct\"               # 26\n"
+"# Expresses result in decimal.\n"
+"# --------- ------ -- -------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:20
+#, no-wrap
+msgid ""
+"# Hexadecimal: numbers preceded by '0x' or '0X'\n"
+"let \"hex = 0x32\"\n"
+"echo \"hexadecimal number = $hex\"         # 50\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:24
+#, no-wrap
+msgid ""
+"echo $((0x9abc))                         # 39612\n"
+"#     ^^      ^^   double-parentheses arithmetic expansion/evaluation\n"
+"# Expresses result in decimal.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:30
+msgid ""
+"# Other bases: BASE#NUMBER # BASE between 2 and 64.  # NUMBER must use "
+"symbols within the BASE range, see below."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:34
+#, no-wrap
+msgid ""
+"let \"bin = 2#111100111001101\"\n"
+"echo \"binary number = $bin\"              # 31181\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:37
+#, no-wrap
+msgid ""
+"let \"b32 = 32#77\"\n"
+"echo \"base-32 number = $b32\"             # 231\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:42
+#, no-wrap
+msgid ""
+"let \"b64 = 64#@_\"\n"
+"echo \"base-64 number = $b64\"             # 4031\n"
+"# This notation only works for a limited range (2 - 64) of ASCII "
+"characters.\n"
+"# 10 digits + 26 lowercase characters + 26 uppercase characters + @ + _\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:45
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:48
+#, no-wrap
+msgid ""
+"echo $((36#zz)) $((2#10101010)) $((16#AF16)) $((53#1aA))\n"
+"                                         # 1295 170 44822 3375\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:54
+msgid ""
+"# Important note: # -------------- # Using a digit out of range of the "
+"specified base notation #+ gives an error message."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:59
+#, no-wrap
+msgid ""
+"let \"bad_oct = 081\"\n"
+"# (Partial) error message output:\n"
+"#  bad_oct = 081: value too great for base (error token is \"081\")\n"
+"#              Octal numbers use only digits in the range 0 - 7.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:61
+#, no-wrap
+msgid "exit $?   # Exit value = 1 (error)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/numbers.sh:62
+msgid "# Thanks, Rich Bartell and Stephane Chazelas, for clarification."
+msgstr ""

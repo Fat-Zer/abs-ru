@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:3
+msgid "#! /bin/bash # is-spammer.sh: Identifying spam domains"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:9
+msgid ""
+"# $Id$ # Above line is RCS ID info.  # # This is a simplified version of the "
+"\"is_spammer.bash #+ script in the Contributed Scripts appendix."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:11
+msgid "# is-spammer &lt;domain.name&gt;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:14
+msgid "# Uses an external program: 'dig' # Tested with version: 9.2.4rc5"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:18
+msgid ""
+"# Uses functions.  # Uses IFS to parse strings by assignment into arrays.  # "
+"And even does something useful: checks e-mail blacklists."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:30
+#, no-wrap
+msgid ""
+"# Use the domain.name(s) from the text body:\n"
+"# http://www.good_stuff.spammer.biz/just_ignore_everything_else\n"
+"#                       ^^^^^^^^^^^\n"
+"# Or the domain.name(s) from any e-mail address:\n"
+"# Really_Good_Offer@spammer.biz\n"
+"#\n"
+"# as the only argument to this script.\n"
+"#(PS: have your Inet connection running)\n"
+"#\n"
+"# So, to invoke this script in the above two instances:\n"
+"#       is-spammer.sh spammer.biz\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:34
+msgid ""
+"# Whitespace == :Space:Tab:Line Feed:Carriage Return: "
+"WSP_IFS=$'\\x20'$'\\x09'$'\\x0A'$'\\x0D'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:37
+msgid "# No Whitespace == Line Feed:Carriage Return No_WSP=$'\\x0A'$'\\x0D'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:40
+msgid "# Field separator for dotted decimal ip addresses ADR_IFS=${No_WSP}'.'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:44
+msgid ""
+"# Get the dns text resource record.  # get_txt &lt;error_code&gt; "
+"&lt;list_query&gt; get_txt() {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:56
+#, no-wrap
+msgid ""
+"    # Parse $1 by assignment at the dots.\n"
+"    local -a dns\n"
+"    IFS=$ADR_IFS\n"
+"    dns=( $1 )\n"
+"    IFS=$WSP_IFS\n"
+"    if [ \"${dns[0]}\" == '127' ]\n"
+"    then\n"
+"        # See if there is a reason.\n"
+"        echo $(dig +short $2 -t txt)\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:63
+#, no-wrap
+msgid ""
+"# Get the dns address resource record.\n"
+"# chk_adr &lt;rev_dns&gt; &lt;list_server&gt;\n"
+"chk_adr() {\n"
+"    local reply\n"
+"    local server\n"
+"    local reason\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:66
+#, no-wrap
+msgid ""
+"    server=${1}${2}\n"
+"    reply=$( dig +short ${server} )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:75
+#, no-wrap
+msgid ""
+"    # If reply might be an error code . . .\n"
+"    if [ ${#reply} -gt 6 ]\n"
+"    then\n"
+"        reason=$(get_txt ${reply} ${server} )\n"
+"        reason=${reason:-${reply}}\n"
+"    fi\n"
+"    echo ${reason:-' not blacklisted.'}\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:81
+msgid ""
+"# Need to get the IP address from the name.  echo 'Get address of: '$1 "
+"ip_adr=$(dig +short $1)  dns_reply=${ip_adr:-' no answer '} echo ' Found "
+"address: '${dns_reply}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:87
+#, no-wrap
+msgid ""
+"# A valid reply is at least 4 digits plus 3 dots.\n"
+"if [ ${#ip_adr} -gt 6 ]\n"
+"then\n"
+"    echo\n"
+"    declare query\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:93
+#, no-wrap
+msgid ""
+"    # Parse by assignment at the dots.\n"
+"    declare -a dns\n"
+"    IFS=$ADR_IFS\n"
+"    dns=( ${ip_adr} )\n"
+"    IFS=$WSP_IFS\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:96
+#, no-wrap
+msgid ""
+"    # Reorder octets into dns query order.\n"
+"    "
+"rev_dns=\"${dns[3]}\"'.'\"${dns[2]}\"'.'\"${dns[1]}\"'.'\"${dns[0]}\"'.'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:100
+#, no-wrap
+msgid ""
+"# See: http://www.spamhaus.org (Conservative, well maintained)\n"
+"    echo -n 'spamhaus.org says: '\n"
+"    echo $(chk_adr ${rev_dns} 'sbl-xbl.spamhaus.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:104
+#, no-wrap
+msgid ""
+"# See: http://ordb.org (Open mail relays)\n"
+"    echo -n '   ordb.org  says: '\n"
+"    echo $(chk_adr ${rev_dns} 'relays.ordb.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:108
+#, no-wrap
+msgid ""
+"# See: http://www.spamcop.net/ (You can report spammers here)\n"
+"    echo -n ' spamcop.net says: '\n"
+"    echo $(chk_adr ${rev_dns} 'bl.spamcop.net')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:110
+msgid "# # # other blacklist operations # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:114
+#, no-wrap
+msgid ""
+"# See: http://cbl.abuseat.org.\n"
+"    echo -n ' abuseat.org says: '\n"
+"    echo $(chk_adr ${rev_dns} 'cbl.abuseat.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:120
+#, no-wrap
+msgid ""
+"# See: http://dsbl.org/usage (Various mail relays)\n"
+"    echo\n"
+"    echo 'Distributed Server Listings'\n"
+"    echo -n '       list.dsbl.org says: '\n"
+"    echo $(chk_adr ${rev_dns} 'list.dsbl.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:123
+#, no-wrap
+msgid ""
+"    echo -n '   multihop.dsbl.org says: '\n"
+"    echo $(chk_adr ${rev_dns} 'multihop.dsbl.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:126
+#, no-wrap
+msgid ""
+"    echo -n 'unconfirmed.dsbl.org says: '\n"
+"    echo $(chk_adr ${rev_dns} 'unconfirmed.dsbl.org')\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:131
+#, no-wrap
+msgid ""
+"else\n"
+"    echo\n"
+"    echo 'Could not use that address.'\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:133
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:136
+msgid "# Exercises: # --------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:139
+#, no-wrap
+msgid ""
+"# 1) Check arguments to script,\n"
+"#    and exit with appropriate error message if necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:142
+#, no-wrap
+msgid ""
+"# 2) Check if on-line at invocation of script,\n"
+"#    and exit with appropriate error message if necessary.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:144
+msgid "# 3) Substitute generic variables for \"hard-coded\" BHL domains."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/is-spammer.sh:146
+#, no-wrap
+msgid ""
+"# 4) Set a time-out for the script using the \"+time=\" option\n"
+"     to the 'dig' command.\n"
+msgstr ""

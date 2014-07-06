@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/factr.sh:3
+msgid "#!/bin/bash # factr.sh: Factor a number"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:7
+#, no-wrap
+msgid ""
+"MIN=2       # Will not work for number smaller than this.\n"
+"E_NOARGS=85\n"
+"E_TOOSMALL=86\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:13
+#, no-wrap
+msgid ""
+"if [ -z $1 ]\n"
+"then\n"
+"  echo \"Usage: $0 number\"\n"
+"  exit $E_NOARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:19
+#, no-wrap
+msgid ""
+"if [ \"$1\" -lt \"$MIN\" ]\n"
+"then\n"
+"  echo \"Number to factor must be $MIN or greater.\"\n"
+"  exit $E_TOOSMALL\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:21
+msgid "# Exercise: Add type checking (to reject non-integer arg)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:30
+msgid ""
+"echo \"Factors of $1:\" # "
+"------------------------------------------------------- echo "
+"\"$1[p]s2[lip/dli%0=1dvsr]s12sid2%0=13sidvsr[dli%0=\\ "
+"1lrli2+dsi!>.]ds.xd1&lt;2\" | dc # "
+"------------------------------------------------------- # Above code written "
+"by Michel Charpentier &lt;charpov@cs.unh.edu&gt; # (as a one-liner, here "
+"broken into two lines for display purposes).  # Used in ABS Guide with "
+"permission (thanks!)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:32
+#, no-wrap
+msgid " exit\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/factr.sh:37
+#, no-wrap
+msgid ""
+" # $ sh factr.sh 270138\n"
+" # 2\n"
+" # 3\n"
+" # 11\n"
+" # 4093\n"
+msgstr ""

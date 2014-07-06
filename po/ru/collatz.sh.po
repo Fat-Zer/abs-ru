@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/collatz.sh:3
+msgid "#!/bin/bash # collatz.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:22
+msgid ""
+"# The notorious \"hailstone\" or Collatz series.  # "
+"------------------------------------------- # 1) Get the integer \"seed\" "
+"from the command-line.  # 2) NUMBER &lt;-- seed # 3) Print NUMBER.  # 4)  If "
+"NUMBER is even, divide by 2, or # 5)+ if odd, multiply by 3 and add 1.  # 6) "
+"NUMBER &lt;-- result # 7) Loop back to step 3 (for specified number of "
+"iterations).  # # The theory is that every such sequence, #+ no matter how "
+"large the initial value, #+ eventually settles down to repeating "
+"\"4,2,1...\" cycles, #+ even after fluctuating through a wide range of "
+"values.  # # This is an instance of an \"iterate,\" #+ an operation that "
+"feeds its output back into its input.  # Sometimes the result is a "
+"\"chaotic\" series."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:26
+msgid ""
+"MAX_ITERATIONS=200 # For large seed numbers (&gt;32000), try increasing "
+"MAX_ITERATIONS."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:30
+#, no-wrap
+msgid ""
+"h=${1:-$$}                      #  Seed.\n"
+"                                #  Use $PID as seed,\n"
+"                                #+ if not specified as command-line arg.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:34
+msgid "echo echo \"C($h) -*- $MAX_ITERATIONS Iterations\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:37
+msgid "for ((i=1; i&lt;=MAX_ITERATIONS; i++))  do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:44
+#, no-wrap
+msgid ""
+"# echo -n \"$h\t\"\n"
+"#            ^^^ \n"
+"#            tab\n"
+"# printf does it better ...\n"
+"COLWIDTH=%7d\n"
+"printf $COLWIDTH $h\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:52
+#, no-wrap
+msgid ""
+"  let \"remainder = h % 2\"\n"
+"  if [ \"$remainder\" -eq 0 ]   # Even?\n"
+"  then\n"
+"    let \"h /= 2\"              # Divide by 2.\n"
+"  else\n"
+"    let \"h = h*3 + 1\"         # Multiply by 3 and add 1.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:60
+#, no-wrap
+msgid ""
+"COLUMNS=10                    # Output 10 values per line.\n"
+"let \"line_break = i % $COLUMNS\"\n"
+"if [ \"$line_break\" -eq 0 ]\n"
+"then\n"
+"  echo\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:62
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:64
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:68
+msgid ""
+"# For more information on this strange mathematical function, #+ see "
+"_Computers, Pattern, Chaos, and Beauty_, by Pickover, p. 185 ff., #+ as "
+"listed in the bibliography."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/collatz.sh:69
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex3.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:14
+msgid ""
+"# This simple script removes blank lines from a file.  # No argument "
+"checking.  # # You might wish to add something like: # # E_NOARGS=85 # if [ "
+"-z \"$1\" ] # then # echo \"Usage: `basename $0` target-file\" # exit "
+"$E_NOARGS # fi"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:21
+#, no-wrap
+msgid ""
+"sed -e /^$/d \"$1\"\n"
+"# Same as\n"
+"#    sed -e '/^$/d' filename\n"
+"# invoked from the command-line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:27
+msgid ""
+"# The '-e' means an \"editing\" command follows (optional here).  # '^' "
+"indicates the beginning of line, '$' the end.  # This matches lines with "
+"nothing between the beginning and the end -- #+ blank lines.  # The 'd' is "
+"the delete command."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:30
+msgid ""
+"# Quoting the command-line arg permits #+ whitespace and special characters "
+"in the filename."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:33
+msgid ""
+"# Note that this script doesn't actually change the target file.  # If you "
+"need to do that, redirect its output."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex3.sh:34
+msgid "exit"
+msgstr ""

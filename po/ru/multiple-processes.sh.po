@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:5
+msgid ""
+"#!/bin/bash # parent.sh # Running multiple processes on an SMP box.  # "
+"Author: Tedman Eng"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:8
+msgid ""
+"# This is the first of two scripts, #+ both of which must be present in the "
+"current working directory."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:16
+#, no-wrap
+msgid ""
+"LIMIT=$1         # Total number of process to start\n"
+"NUMPROC=4        # Number of concurrent threads (forks?)\n"
+"PROCID=1         # Starting Process ID\n"
+"echo \"My PID is $$\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:27
+#, no-wrap
+msgid ""
+"function start_thread() {\n"
+"        if [ $PROCID -le $LIMIT ] ; then\n"
+"                ./child.sh $PROCID&amp;\n"
+"                let \"PROCID++\"\n"
+"        else\n"
+"           echo \"Limit reached.\"\n"
+"           wait\n"
+"           exit\n"
+"        fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:32
+#, no-wrap
+msgid ""
+"while [ \"$NUMPROC\" -gt 0 ]; do\n"
+"        start_thread;\n"
+"        let \"NUMPROC--\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:36
+msgid "while true do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:38
+msgid "trap \"start_thread\" SIGRTMIN"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:40
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:42 abs-guide/multiple-processes.sh:65
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:46
+msgid "# ======== Second script follows ========"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:53
+msgid ""
+"#!/bin/bash # child.sh # Running multiple processes on an SMP box.  # This "
+"script is called by parent.sh.  # Author: Tedman Eng"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:63
+msgid ""
+"temp=$RANDOM index=$1 shift let \"temp %= 5\" let \"temp += 4\" echo "
+"\"Starting $index Time:$temp\" \"$@\" sleep ${temp} echo \"Ending $index\" "
+"kill -s SIGRTMIN $PPID"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:75
+msgid ""
+"# ======================= SCRIPT AUTHOR'S NOTES ======================= # # "
+"It's not completely bug free.  # I ran it with limit = 500 and after the "
+"first few hundred iterations, #+ one of the concurrent threads disappeared! "
+"# Not sure if this is collisions from trap signals or something else.  # "
+"Once the trap is received, there's a brief moment while executing the #+ "
+"trap handler but before the next trap is set.  During this time, it may #+ "
+"be possible to miss a trap signal, thus miss spawning a child process."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:78
+msgid ""
+"# No doubt someone may spot the bug and will be writing #+ . . . in the "
+"future."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:82
+msgid "# ===================================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:86
+msgid "# ----------------------------------------------------------------------#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:93
+msgid ""
+"################################################################# # The "
+"following is the original script written by Vernia Damiano.  # "
+"Unfortunately, it doesn't work properly.  "
+"#################################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:95
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:99
+msgid ""
+"# Must call script with at least one integer parameter #+ (number of "
+"concurrent processes).  # All other parameters are passed through to the "
+"processes started."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:104
+#, no-wrap
+msgid ""
+"INDICE=8        # Total number of process to start\n"
+"TEMPO=5         # Maximum sleep time per process\n"
+"E_BADARGS=65    # No arg(s) passed to script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:110
+#, no-wrap
+msgid ""
+"if [ $# -eq 0 ] # Check for at least one argument passed to script.\n"
+"then\n"
+"  echo \"Usage: `basename $0` number_of_processes [passed params]\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:114
+#, no-wrap
+msgid ""
+"NUMPROC=$1              # Number of concurrent process\n"
+"shift\n"
+"PARAMETRI=( \"$@\" )      # Parameters of each process\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:128
+#, no-wrap
+msgid ""
+"function avvia() {\n"
+"         local temp\n"
+"         local index\n"
+"         temp=$RANDOM\n"
+"         index=$1\n"
+"         shift\n"
+"         let \"temp %= $TEMPO\"\n"
+"         let \"temp += 1\"\n"
+"         echo \"Starting $index Time:$temp\" \"$@\"\n"
+"         sleep ${temp}\n"
+"         echo \"Ending $index\"\n"
+"         kill -s SIGRTMIN $$\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:137
+#, no-wrap
+msgid ""
+"function parti() {\n"
+"         if [ $INDICE -gt 0 ] ; then\n"
+"              avvia $INDICE \"${PARAMETRI[@]}\" &amp;\n"
+"                let \"INDICE--\"\n"
+"         else\n"
+"                trap : SIGRTMIN\n"
+"         fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:139
+msgid "trap parti SIGRTMIN"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:144
+#, no-wrap
+msgid ""
+"while [ \"$NUMPROC\" -gt 0 ]; do\n"
+"         parti;\n"
+"         let \"NUMPROC--\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:147
+msgid "wait trap - SIGRTMIN"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:149
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:155
+msgid ""
+": &lt;&lt;SCRIPT_AUTHOR_COMMENTS I had the need to run a program, with "
+"specified options, on a number of different files, using a SMP machine. So I "
+"thought [I'd] keep running a specified number of processes and start a new "
+"one each time . . . one of these terminates."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/multiple-processes.sh:160
+#, no-wrap
+msgid ""
+"The \"wait\" instruction does not help, since it waits for a given process\n"
+"or *all* process started in background. So I wrote [this] bash script\n"
+"that can do the job, using the \"trap\" instruction.\n"
+"  --Vernia Damiano\n"
+"SCRIPT_AUTHOR_COMMENTS\n"
+msgstr ""

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex20.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:7
+#, no-wrap
+msgid ""
+"func1 ()\n"
+"{\n"
+"  echo This is a function.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:9
+#, no-wrap
+msgid "declare -f        # Lists the function above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:11 abs-guide/ex20.sh:23
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:21
+#, no-wrap
+msgid ""
+"declare -i var1   # var1 is an integer.\n"
+"var1=2367\n"
+"echo \"var1 declared as $var1\"\n"
+"var1=var1+1       # Integer declaration eliminates the need for 'let'.\n"
+"echo \"var1 incremented by 1 is $var1.\"\n"
+"# Attempt to change variable declared as integer.\n"
+"echo \"Attempting to change var1 to floating point value, 2367.1.\"\n"
+"var1=2367.1       # Results in error message, with no change to variable.\n"
+"echo \"var1 is still $var1\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:28
+#, no-wrap
+msgid ""
+"declare -r var2=13.36         # 'declare' permits setting a variable "
+"property\n"
+"                              #+ and simultaneously assigning it a value.\n"
+"echo \"var2 declared as $var2\" # Attempt to change readonly variable.\n"
+"var2=13.37                    # Generates error message, and exit from "
+"script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:30
+#, no-wrap
+msgid "echo \"var2 is still $var2\"    # This line will not execute.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex20.sh:31
+#, no-wrap
+msgid "exit 0                        # Script will not exit here.\n"
+msgstr ""

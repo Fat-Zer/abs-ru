@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:8
+msgid ""
+"#!/bin/bash # # Changes every filename in working directory to all "
+"lowercase.  # # Inspired by a script of John Dubois, #+ which was translated "
+"into Bash by Chet Ramey, #+ and considerably simplified by the author of the "
+"ABS Guide."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:19
+#, no-wrap
+msgid ""
+"for filename in *                # Traverse all files in directory.\n"
+"do\n"
+"   fname=`basename $filename`\n"
+"   n=`echo $fname | tr A-Z a-z`  # Change name to lowercase.\n"
+"   if [ \"$fname\" != \"$n\" ]       # Rename only files not already "
+"lowercase.\n"
+"   then\n"
+"     mv $fname $n\n"
+"   fi  \n"
+"done   \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:21 abs-guide/lowercase.sh:43
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:26
+msgid ""
+"# Code below this line will not execute because of \"exit\".  "
+"#--------------------------------------------------------# # To run it, "
+"delete script above line."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:29
+msgid ""
+"# The above script will not work on filenames containing blanks or "
+"newlines.  # Stephane Chazelas therefore suggests the following alternative:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lowercase.sh:42
+#, no-wrap
+msgid ""
+"for filename in *    # Not necessary to use basename,\n"
+"                     # since \"*\" won't return any file containing \"/\".\n"
+"do n=`echo \"$filename/\" | tr '[:upper:]' '[:lower:]'`\n"
+"#                             POSIX char set notation.\n"
+"#                    Slash added so that trailing newlines are not\n"
+"#                    removed by command substitution.\n"
+"   # Variable substitution:\n"
+"   n=${n%/}          # Removes trailing slash, added above, from filename.\n"
+"   [[ $filename == $n ]] || mv \"$filename\" \"$n\"\n"
+"                     # Checks if filename already lowercase.\n"
+"done\n"
+msgstr ""

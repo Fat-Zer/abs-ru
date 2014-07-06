@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:9
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  Filename=names.data          # Default, if no filename specified.\n"
+"else\n"
+"  Filename=$1\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:12
+#, no-wrap
+msgid ""
+"Savefile=$Filename.new         # Filename to save results in.\n"
+"FinalName=Jonah                # Name to terminate \"read\" on.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:14
+msgid ""
+"line_count=`wc $Filename | awk '{ print $1 }'` # Number of lines in target "
+"file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:26
+#, no-wrap
+msgid ""
+"for name in `seq $line_count`\n"
+"do\n"
+"  read name\n"
+"  echo \"$name\"\n"
+"  if [ \"$name\" = \"$FinalName\" ]\n"
+"  then\n"
+"    break\n"
+"  fi  \n"
+"done &lt; \"$Filename\" > \"$Savefile\"     # Redirects stdin to file "
+"$Filename,\n"
+"#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^       and saves it to backup file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir4a.sh:27
+msgid "exit 0"
+msgstr ""

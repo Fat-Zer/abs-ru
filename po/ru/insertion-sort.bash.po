@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:22
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# insertion-sort.bash: Insertion sort implementation in Bash\n"
+"#                      Heavy use of Bash array features:\n"
+"#+                     (string) slicing, merging, etc\n"
+"# URL: http://www.lugmen.org.ar/~jjo/jjotip/insertion-sort.bash.d\n"
+"#+          /insertion-sort.bash.sh\n"
+"#\n"
+"# Author: JuanJo Ciarlante &lt;jjo@irrigacion.gov.ar&gt;\n"
+"# Lightly reformatted by ABS Guide author.\n"
+"# License: GPLv2\n"
+"# Used in ABS Guide with author's permission (thanks!).\n"
+"#\n"
+"# Test with:   ./insertion-sort.bash -t\n"
+"# Or:          bash insertion-sort.bash -t\n"
+"# The following *doesn't* work:\n"
+"#              sh insertion-sort.bash -t\n"
+"#  Why not? Hint: which Bash-specific features are disabled\n"
+"#+ when running a script by 'sh script.sh'?\n"
+"#\n"
+": ${DEBUG:=0}  # Debug, override with:  DEBUG=1 ./scriptname . . .\n"
+"# Parameter substitution -- set DEBUG to 0 if not previously set.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:34
+#, no-wrap
+msgid ""
+"# Global array: \"list\"\n"
+"typeset -a list\n"
+"# Load whitespace-separated numbers from stdin.\n"
+"if [ \"$1\" = \"-t\" ]; then\n"
+"DEBUG=1\n"
+"        read -a list &lt; &lt;( od -Ad -w24 -t u2 /dev/urandom ) # Random "
+"list.\n"
+"#                    ^ ^  process substition\n"
+"else\n"
+"        read -a list\n"
+"fi\n"
+"numelem=${#list[*]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:42
+#, no-wrap
+msgid ""
+"#  Shows the list, marking the element whose index is $1\n"
+"#+ by surrounding it with the two chars passed as $2.\n"
+"#  Whole line prefixed with $3.\n"
+"showlist()\n"
+"  {\n"
+"  echo \"$3\"${list[@]:0:$1} ${2:0:1}${list[$1]}${2:1:1} ${list[@]:$1+1};\n"
+"  }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:59
+#, no-wrap
+msgid ""
+"# Loop _pivot_ -- from second element to end of list.\n"
+"for(( i=1; i&lt;numelem; i++ )) do\n"
+"        ((DEBUG))&amp;&amp;showlist i \"[]\" \" \"\n"
+"        # From current _pivot_, back to first element.\n"
+"        for(( j=i; j; j-- )) do\n"
+"                # Search for the 1st elem. less than current \"pivot\" "
+". . .\n"
+"                [[ \"${list[j-1]}\" -le \"${list[i]}\" ]] &amp;&amp; break\n"
+"        done\n"
+"\t(( i==j )) &amp;&amp; continue ## No insertion was needed for this "
+"element.\n"
+"\t# . . . Move list[i] (pivot) to the left of list[j]:\n"
+"        list=(${list[@]:0:j} ${list[i]} ${list[j]}\\\n"
+"\t#         {0,j-1}        {i}       {j}\n"
+"              ${list[@]:j+1:i-(j+1)} ${list[@]:i+1})\n"
+"\t#         {j+1,i-1}              {i+1,last}\n"
+"\t((DEBUG))&amp;&amp;showlist j \"&lt;&gt;\" \"*\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:64
+msgid "echo echo \"------\" echo $'Result:\\n'${list[@]}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/insertion-sort.bash:65
+msgid "exit $?"
+msgstr ""

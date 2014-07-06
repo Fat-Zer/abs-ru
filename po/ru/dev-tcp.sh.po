@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:3
+msgid "#!/bin/bash # dev-tcp.sh: /dev/tcp redirection to check Internet connection."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:6
+msgid "# Script by Troy Engel.  # Used with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:9
+#, no-wrap
+msgid ""
+"TCP_HOST=news-15.net       # A known spam-friendly ISP.\n"
+"TCP_PORT=80                # Port 80 is http.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:13
+msgid ""
+"# Try to connect. (Somewhat similar to a 'ping' . . .)  echo \"HEAD / "
+"HTTP/1.0\" >/dev/tcp/${TCP_HOST}/${TCP_PORT} MYEXIT=$?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:19
+msgid ""
+": &lt;&lt;EXPLANATION If bash was compiled with --enable-net-redirections, "
+"it has the capability of using a special character device for both TCP and "
+"UDP redirections. These redirections are used identically as "
+"STDIN/STDOUT/STDERR. The device entries are 30,36 for /dev/tcp:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:21
+#, no-wrap
+msgid "  mknod /dev/tcp c 30 36\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:28
+#, no-wrap
+msgid ""
+">From the bash reference:\n"
+"/dev/tcp/host/port\n"
+"    If host is a valid hostname or Internet address, and port is an "
+"integer\n"
+"port number or service name, Bash attempts to open a TCP connection to the\n"
+"corresponding socket.\n"
+"EXPLANATION\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:35
+#, no-wrap
+msgid ""
+"if [ \"X$MYEXIT\" = \"X0\" ]; then\n"
+"  echo \"Connection successful. Exit code: $MYEXIT\"\n"
+"else\n"
+"  echo \"Connection unsuccessful. Exit code: $MYEXIT\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/dev-tcp.sh:36
+msgid "exit $MYEXIT"
+msgstr ""

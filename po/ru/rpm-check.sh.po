@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:3
+msgid "#!/bin/bash # rpm-check.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:9
+msgid ""
+"# Queries an rpm file for description, listing, #+ and whether it can be "
+"installed.  # Saves output to a file.  # # This script illustrates using a "
+"code block."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:12
+msgid "SUCCESS=0 E_NOARGS=65"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:18
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` rpm-file\"\n"
+"  exit $E_NOARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:36
+#, no-wrap
+msgid ""
+"{ # Begin code block.\n"
+"  echo\n"
+"  echo \"Archive Description:\"\n"
+"  rpm -qpi $1       # Query description.\n"
+"  echo\n"
+"  echo \"Archive Listing:\"\n"
+"  rpm -qpl $1       # Query listing.\n"
+"  echo\n"
+"  rpm -i --test $1  # Query whether rpm file can be installed.\n"
+"  if [ \"$?\" -eq $SUCCESS ]\n"
+"  then\n"
+"    echo \"$1 can be installed.\"\n"
+"  else\n"
+"    echo \"$1 cannot be installed.\"\n"
+"  fi  \n"
+"  echo              # End code block.\n"
+"} > \"$1.test\"       # Redirects output of everything in block to file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:38
+msgid "echo \"Results of rpm test in file $1.test\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:40
+msgid "# See rpm man page for explanation of options."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rpm-check.sh:41
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/data-file:4
+msgid ""
+"# This is a data file loaded by a script.  # Files of this type may contain "
+"variables, functions, etc.  # It loads with a 'source' or '.' command from a "
+"shell script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:6
+msgid "# Let's initialize some variables."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:11
+msgid "variable1=23 variable2=474 variable3=5 variable4=97"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:14
+msgid ""
+"message1=\"Greetings from *** line $LINENO *** of the data file!\" "
+"message2=\"Enough for now. Goodbye.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:17
+#, no-wrap
+msgid ""
+"print_message ()\n"
+"{   # Echoes any message passed to it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:22
+#, no-wrap
+msgid ""
+"  if [ -z \"$1\" ]\n"
+"  then\n"
+"    return 1 # Error, if argument missing.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:24 abs-guide/data-file:33
+#, no-wrap
+msgid "  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:31
+#, no-wrap
+msgid ""
+"  until [ -z \"$1\" ]\n"
+"  do             # Step through arguments passed to function.\n"
+"    echo -n \"$1\" # Echo args one at a time, suppressing line feeds.\n"
+"    echo -n \" \"  # Insert spaces between words.\n"
+"    shift        # Next one.\n"
+"  done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/data-file:35
+#, no-wrap
+msgid ""
+"  return 0\n"
+"}\n"
+msgstr ""

@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/col.sh:3
+msgid ""
+"#!/bin/bash # This is a slight modification of the example file in the "
+"\"column\" man page."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col.sh:7
+msgid ""
+"(printf \"PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\\n\" "
+"\\ ; ls -l | sed 1d) | column -t"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col.sh:11
+#, no-wrap
+msgid ""
+"#  The \"sed 1d\" in the pipe deletes the first line of output,\n"
+"#+ which would be \"total        N\",\n"
+"#+ where \"N\" is the total number of files found by \"ls -l\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col.sh:13
+msgid "# The -t option to \"column\" pretty-prints a table."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/col.sh:14
+msgid "exit 0"
+msgstr ""

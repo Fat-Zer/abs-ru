@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex2.sh:3
+msgid "#!/bin/bash # Cleanup, version 3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:10
+msgid ""
+"# Warning: # ------- # This script uses quite a number of features that will "
+"be explained #+ later on.  # By the time you've finished the first half of "
+"the book, #+ there should be nothing mysterious about it."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:18
+#, no-wrap
+msgid ""
+"LOG_DIR=/var/log\n"
+"ROOT_UID=0     # Only users with $UID 0 have root privileges.\n"
+"LINES=50       # Default number of lines saved.\n"
+"E_XCD=86       # Can't change directory?\n"
+"E_NOTROOT=87   # Non-root exit error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:26
+#, no-wrap
+msgid ""
+"# Run as root, of course.\n"
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo \"Must be root to run this script.\"\n"
+"  exit $E_NOTROOT\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:34
+#, no-wrap
+msgid ""
+"if [ -n \"$1\" ]\n"
+"# Test whether command-line argument is present (non-empty).\n"
+"then\n"
+"  lines=$1\n"
+"else  \n"
+"  lines=$LINES # Default, if not specified on command-line.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:50
+#, no-wrap
+msgid ""
+"#  Stephane Chazelas suggests the following,\n"
+"#+ as a better way of checking command-line arguments,\n"
+"#+ but this is still a bit advanced for this stage of the tutorial.\n"
+"#\n"
+"#    E_WRONGARGS=85  # Non-numerical argument (bad argument format).\n"
+"#\n"
+"#    case \"$1\" in\n"
+"#    \"\"      ) lines=50;;\n"
+"#    *[!0-9]*) echo \"Usage: `basename $0` lines-to-cleanup\";\n"
+"#     exit $E_WRONGARGS;;\n"
+"#    *       ) lines=$1;;\n"
+"#    esac\n"
+"#\n"
+"#* Skip ahead to \"Loops\" chapter to decipher all this.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:53
+msgid "cd $LOG_DIR"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:60
+#, no-wrap
+msgid ""
+"if [ `pwd` != \"$LOG_DIR\" ]  # or   if [ \"$PWD\" != \"$LOG_DIR\" ]\n"
+"                            # Not in /var/log?\n"
+"then\n"
+"  echo \"Can't change to $LOG_DIR.\"\n"
+"  exit $E_XCD\n"
+"fi  # Doublecheck if in right directory before messing with log file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:67
+#, no-wrap
+msgid ""
+"# Far more efficient is:\n"
+"#\n"
+"# cd /var/log || {\n"
+"#   echo \"Cannot change to necessary directory.\" >&amp;2\n"
+"#   exit $E_XCD;\n"
+"# }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:73
+#, no-wrap
+msgid ""
+"tail -n $lines messages > mesg.temp # Save last section of message log "
+"file.\n"
+"mv mesg.temp messages               # Rename it as system log file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:77
+msgid ""
+"# cat /dev/null > messages #* No longer needed, as the above method is "
+"safer."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:82
+msgid ""
+"cat /dev/null > wtmp # ': > wtmp' and '> wtmp' have the same effect.  echo "
+"\"Log files cleaned up.\" # Note that there are other log files in /var/log "
+"not affected #+ by this script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex2.sh:85
+msgid ""
+"exit 0 # A zero return value from the script upon exit indicates success #+ "
+"to the shell."
+msgstr ""

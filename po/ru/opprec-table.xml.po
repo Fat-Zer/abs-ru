@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <table><title>
+#: abs-guide/opprec-table.xml:2
+msgid "Operator Precedence"
+msgstr ""
+
+#. type: Content of: <table><tgroup><thead><row><entry>
+#: abs-guide/opprec-table.xml:6
+msgid "Operator"
+msgstr ""
+
+#. type: Content of: <table><tgroup><thead><row><entry>
+#: abs-guide/opprec-table.xml:7
+msgid "Meaning"
+msgstr ""
+
+#. type: Content of: <table><tgroup><thead><row><entry>
+#: abs-guide/opprec-table.xml:8
+msgid "Comments"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:13 abs-guide/opprec-table.xml:174
+msgid "<option></option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:15
+msgid "<command>HIGHEST PRECEDENCE</command>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:18
+msgid "<option>var++ var--</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:19
+msgid "post-increment, post-decrement"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:20
+msgid "<link linkend=\"cstyle\">C-style</link> operators"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:23
+msgid "<option>++var --var</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:24
+msgid "pre-increment, pre-decrement"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:33
+msgid "<option>! ~</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:34
+msgid "<link linkend=\"notref\">negation</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:35
+msgid "logical / bitwise, inverts sense of following operator"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:44
+msgid "<option>**</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:45
+msgid "<link linkend=\"exponentiationref\">exponentiation</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:47
+msgid "<link linkend=\"arops1\">arithmetic operation</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:51
+msgid "<option>* / %</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:52
+msgid "multiplication, division, modulo"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:53 abs-guide/opprec-table.xml:58
+msgid "arithmetic operation"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:56
+msgid "<option>+ -</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:57
+msgid "addition, subtraction"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:66
+msgid "<option>&lt;&lt; &gt;&gt;</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:67
+msgid "left, right shift"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:68
+msgid "<link linkend=\"bitwsops1\">bitwise</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:76
+msgid "<option>-z -n</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:77 abs-guide/opprec-table.xml:83
+msgid "<firstterm>unary</firstterm> comparison"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:78
+msgid "string is/is-not <link linkend=\"stringnull\">null</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:82
+msgid "<option>-e -f -t -x, etc.</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:84
+msgid "<link linkend=\"fto\">file-test</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:87
+msgid "<option>&lt; -lt &gt; -gt &lt;= -le &gt;= -ge</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:88 abs-guide/opprec-table.xml:93
+msgid "<firstterm>compound</firstterm> comparison"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:89
+msgid "string and integer"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:92
+msgid "<option>-nt -ot -ef</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:94
+msgid "file-test"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:97
+msgid "<option>== -eq <link linkend=\"notequal\">!=</link> -ne</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:99
+msgid "equality / inequality"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:100
+msgid "test operators, string and integer"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:108
+msgid "<option>&amp;</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:109 abs-guide/opprec-table.xml:129
+msgid "AND"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:110 abs-guide/opprec-table.xml:120
+msgid "bitwise"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:113
+msgid "<option>^</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:114
+msgid "XOR"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:115
+msgid "<firstterm>exclusive</firstterm> OR, bitwise"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:118
+msgid "<option>|</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:119 abs-guide/opprec-table.xml:136
+msgid "OR"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:128
+msgid "<option>&amp;&amp; -a</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:130
+msgid ""
+"<link linkend=\"logops1\">logical</link>, <firstterm>compound</firstterm> "
+"comparison"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:135
+msgid "<option>|| -o</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:137
+msgid "logical, <firstterm>compound</firstterm> comparison"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:146
+msgid "<option>?:</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:147
+msgid "<link linkend=\"cstrinary\">trinary operator</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:149
+msgid "C-style"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:152
+msgid "<option>=</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:153
+msgid "<link linkend=\"eqref\">assignment</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:154
+msgid "(do not confuse with equality <firstterm>test</firstterm>)"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:158
+msgid "<option>*= /= %= += -= &lt;&lt;= &gt;&gt;= &amp;=</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:159
+msgid "<link linkend=\"arithopscomb\">combination assignment</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:161
+msgid "times-equal, divide-equal, mod-equal, etc."
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:169
+msgid "<option>,</option>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:170
+msgid "<link linkend=\"commaop\">comma</link>"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:171
+msgid "links a sequence of operations"
+msgstr ""
+
+#. type: Content of: <table><tgroup><tbody><row><entry>
+#: abs-guide/opprec-table.xml:176
+msgid "<command>LOWEST PRECEDENCE</command>"
+msgstr ""
+
+#. type: Content of: outside any tag (error?)
+#: abs-guide/opprec-table.xml:1
+msgid "<placeholder type=\"table\" id=\"0\"/>"
+msgstr ""

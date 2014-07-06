@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/rnd.sh:3
+msgid "#!/bin/bash # rnd.sh: Outputs a 10-digit random number"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:5
+msgid "# Script by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:7
+msgid "head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:10 abs-guide/rnd.sh:78
+msgid "# =================================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:13
+msgid "# Analysis # --------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:16
+msgid "# head: # -c4 option takes first 4 bytes."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:20
+msgid ""
+"# od: # -N4 option limits output to 4 bytes.  # -tu4 option selects unsigned "
+"decimal format for output."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:24
+msgid ""
+"# sed: # -n option, in combination with \"p\" flag to the \"s\" command, # "
+"outputs only matched lines."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:28
+msgid "# The author of this script explains the action of 'sed', as follows."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:31
+msgid ""
+"# head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p' # "
+"----------------------------------> |"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:34
+msgid "# Assume output up to \"sed\" --------> | # is 0000000 1198195154\\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:39
+msgid ""
+"# sed begins reading characters: 0000000 1198195154\\n.  # Here it finds a "
+"newline character, #+ so it is ready to process the first line (0000000 "
+"1198195154).  # It looks at its &lt;range&gt;&lt;action&gt;s. The first and "
+"only one is"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:42
+#, no-wrap
+msgid ""
+"#   range     action\n"
+"#   1         s/.* //p\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:48
+msgid ""
+"# The line number is in the range, so it executes the action: #+ tries to "
+"substitute the longest string ending with a space in the line # (\"0000000 "
+"\") with nothing (//), and if it succeeds, prints the result # (\"p\" is a "
+"flag to the \"s\" command here, this is different #+ from the \"p\" "
+"command)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:52
+msgid ""
+"# sed is now ready to continue reading its input. (Note that before #+ "
+"continuing, if -n option had not been passed, sed would have printed #+ the "
+"line once again)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:58
+msgid ""
+"# Now, sed reads the remainder of the characters, and finds the #+ end of "
+"the file.  # It is now ready to process its 2nd line (which is also numbered "
+"'$' as #+ it's the last one).  # It sees it is not matched by any "
+"&lt;range&gt;, so its job is done."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:62
+msgid ""
+"# In few word this sed commmand means: # \"On the first line only, remove "
+"any character up to the right-most space, #+ then print it.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:65
+#, no-wrap
+msgid ""
+"# A better way to do this would have been:\n"
+"#           sed -e 's/.* //;q'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:68
+#, no-wrap
+msgid ""
+"# Here, two &lt;range&gt;&lt;action&gt;s (could have been written\n"
+"#           sed -e 's/.* //' -e q):\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:72
+#, no-wrap
+msgid ""
+"#   range                    action\n"
+"#   nothing (matches line)   s/.* //\n"
+"#   nothing (matches line)   q (quit)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:76
+msgid ""
+"# Here, sed only reads its first line of input.  # It performs both actions, "
+"and prints the line (substituted) before #+ quitting (because of the \"q\" "
+"action) since the \"-n\" option is not passed."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:81
+#, no-wrap
+msgid ""
+"# An even simpler altenative to the above one-line script would be:\n"
+"#           head -c4 /dev/urandom| od -An -tu4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/rnd.sh:82
+msgid "exit"
+msgstr ""

@@ -1,0 +1,792 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/qky.sh:3
+msgid "#!/bin/bash # qky.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:11
+#, no-wrap
+msgid ""
+"##############################################################\n"
+"# QUACKEY: a somewhat simplified version of Perquackey [TM]. #\n"
+"#                                                            #\n"
+"# Author: Mendel Cooper  &lt;thegrendel.abs@gmail.com&gt;          #\n"
+"# version 0.1.02      03 May, 2008                           #\n"
+"# License: GPL3                                              #\n"
+"##############################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:19
+#, no-wrap
+msgid ""
+"WLIST=/usr/share/dict/word.lst\n"
+"#                     ^^^^^^^^  Word list file found here.\n"
+"#  ASCII word list, one word per line, UNIX format.\n"
+"#  A suggested list is the script author's \"yawl\" word list package.\n"
+"#  http://bash.deta.in/yawl-0.3.2.tar.gz\n"
+"#    or\n"
+"#  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:31
+#, no-wrap
+msgid ""
+"NONCONS=0     # Word not constructable from letter set.\n"
+"CONS=1        # Constructable.\n"
+"SUCCESS=0\n"
+"NG=1\n"
+"FAILURE=''\n"
+"NULL=0        # Zero out value of letter (if found).\n"
+"MINWLEN=3     # Minimum word length.\n"
+"MAXCAT=5      # Maximum number of words in a given category.\n"
+"PENALTY=200   # General-purpose penalty for unacceptable words.\n"
+"total=\n"
+"E_DUP=70      # Duplicate word error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:33
+#, no-wrap
+msgid "TIMEOUT=10    # Time for word input.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:36
+#, no-wrap
+msgid ""
+"NVLET=10      # 10 letters for non-vulnerable.\n"
+"VULET=13      # 13 letters for vulnerable (not yet implemented!).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:40
+msgid ""
+"declare -a Words declare -a Status declare -a Score=( 0 0 0 0 0 0 0 0 0 0 0 "
+")"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:48
+msgid ""
+"letters=( a n s r t m l k p r b c i d s i d z e w u e t f e y e r e f e g t "
+"g h h i t r s c i t i d i j a t a o l a m n a n o v n w o s e l n o s p a q "
+"e e r a b r s a o d s t g t i t l u e u v n e o x y m r k )  # Letter "
+"distribution table shamelessly borrowed from \"Wordy\" game, #+ ca. 1992, "
+"written by a certain fine fellow named Mendel Cooper."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:50
+msgid "declare -a LS"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:53
+msgid "numelements=${#letters[@]} randseed=\"$1\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:59
+#, no-wrap
+msgid ""
+"instructions ()\n"
+"{\n"
+"  clear\n"
+"  echo \"Welcome to QUACKEY, the anagramming word construction game.\"; "
+"echo\n"
+"  echo -n \"Do you need instructions? (y/n) \"; read ans\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:64
+#, no-wrap
+msgid ""
+"   if [ \"$ans\" = \"y\" -o \"$ans\" = \"Y\" ]; then\n"
+"     clear\n"
+"     echo -e '\\E[31;47m'  # Red foreground. '\\E[34;47m' for blue.\n"
+"     cat &lt;&lt;INSTRUCTION1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:70
+msgid ""
+"QUACKEY is a variant of Perquackey [TM].  The rules are the same, but the "
+"scoring is simplified and plurals of previously played words are allowed.  "
+"\"Vulnerable\" play is not yet implemented, but it is otherwise "
+"feature-complete."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:78
+msgid ""
+"As the game begins, the player gets 10 letters.  The object is to construct "
+"valid dictionary words of at least 3-letter length from the letterset.  Each "
+"word-length category -- 3-letter, 4-letter, 5-letter, ... -- fills up with "
+"the fifth word entered, and no further words in that category are accepted."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:82
+msgid ""
+"The penalty for too-short (two-letter), duplicate, unconstructable, and "
+"invalid (not in dictionary) words is -200. The same penalty applies to "
+"attempts to enter a word in a filled-up category."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:84
+msgid "INSTRUCTION1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:86
+#, no-wrap
+msgid "  echo -n \"Hit ENTER for next page of instructions. \"; read az1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:88
+#, no-wrap
+msgid "     cat &lt;&lt;INSTRUCTION2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:98
+#, no-wrap
+msgid ""
+"The scoring mostly corresponds to classic Perquackey:\n"
+"The first 3-letter word scores    60, plus   10 for each additional one.\n"
+"The first 4-letter word scores   120, plus   20 for each additional one.\n"
+"The first 5-letter word scores   200, plus   50 for each additional one.\n"
+"The first 6-letter word scores   300, plus  100 for each additional one.\n"
+"The first 7-letter word scores   500, plus  150 for each additional one.\n"
+"The first 8-letter word scores   750, plus  250 for each additional one.\n"
+"The first 9-letter word scores  1000, plus  500 for each additional one.\n"
+"The first 10-letter word scores 2000, plus 2000 for each additional one.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:108
+#, no-wrap
+msgid ""
+"Category completion bonuses are:\n"
+"3-letter words   100\n"
+"4-letter words   200\n"
+"5-letter words   400\n"
+"6-letter words   800\n"
+"7-letter words  2000\n"
+"8-letter words 10000\n"
+"This is a simplification of the absurdly baroque Perquackey bonus\n"
+"scoring system.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:110
+msgid "INSTRUCTION2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:112
+#, no-wrap
+msgid "  echo -n \"Hit ENTER for final page of instructions. \"; read az1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:114
+#, no-wrap
+msgid "     cat &lt;&lt;INSTRUCTION3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:117
+msgid "Hitting just ENTER for a word entry ends the game."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:121
+msgid ""
+"Individual word entry is timed to a maximum of 10 seconds.  *** Timing out "
+"on an entry ends the game. *** Aside from that, the game is untimed."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:122
+#, no-wrap
+msgid "--------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:124
+#, no-wrap
+msgid ""
+"Game statistics are automatically saved to a file.\n"
+"--------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:132
+msgid ""
+"For competitive (\"duplicate\") play, a previous letterset may be duplicated "
+"by repeating the script's random seed, command-line parameter \\$1.  For "
+"example, \"qky 7633\" specifies the letterset c a d i f r h u s k ...  "
+"INSTRUCTION3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:134
+#, no-wrap
+msgid "  echo; echo -n \"Hit ENTER to begin game. \"; read az1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:138
+#, no-wrap
+msgid ""
+"       echo -e \"\\033[0m\"    # Turn off red.\n"
+"     else clear\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:140
+#, no-wrap
+msgid "  clear\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:142 abs-guide/qky.sh:177 abs-guide/qky.sh:205 abs-guide/qky.sh:269 abs-guide/qky.sh:360
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:155
+#, no-wrap
+msgid ""
+"seed_random ()\n"
+"{                         #  Seed random number generator.\n"
+"  if [ -n \"$randseed\" ]   #  Can specify random seed.\n"
+"  then                    #+ for play in competitive mode.\n"
+"#   RANDOM=\"$randseed\"\n"
+"    echo \"RANDOM seed set to \"$randseed\"\"\n"
+"  else\n"
+"    randseed=\"$$\"         # Or get random seed from process ID.\n"
+"    echo \"RANDOM seed not specified, set to Process ID of script ($$).\"\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:157
+#, no-wrap
+msgid "  RANDOM=\"$randseed\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:160
+#, no-wrap
+msgid ""
+"  echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:166
+#, no-wrap
+msgid ""
+"get_letset ()\n"
+"{\n"
+"  element=0\n"
+"  echo -n \"Letterset:\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:172
+#, no-wrap
+msgid ""
+"  for lset in $(seq $NVLET)\n"
+"  do  # Pick random letters to fill out letterset.\n"
+"    LS[element]=\"${letters[$((RANDOM%numelements))]}\"\n"
+"    ((element++))\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:175
+#, no-wrap
+msgid ""
+"  echo\n"
+"  echo \"${LS[@]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:183
+#, no-wrap
+msgid ""
+"add_word ()\n"
+"{\n"
+"  wrd=\"$1\"\n"
+"  local idx=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:187
+#, no-wrap
+msgid ""
+"  Status[0]=\"\"\n"
+"  Status[3]=\"\"\n"
+"  Status[4]=\"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:197
+#, no-wrap
+msgid ""
+"  while [ \"${Words[idx]}\" != '' ]\n"
+"  do\n"
+"    if [ \"${Words[idx]}\" = \"$wrd\" ]\n"
+"    then\n"
+"      Status[3]=\"Duplicate-word-PENALTY\"\n"
+"      let \"Score[0]= 0 - $PENALTY\"\n"
+"      let \"Score[1]-=$PENALTY\"\n"
+"      return $E_DUP\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:200
+#, no-wrap
+msgid ""
+"    ((idx++))\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:203
+#, no-wrap
+msgid ""
+"  Words[idx]=\"$wrd\"\n"
+"  get_score\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:214
+#, no-wrap
+msgid ""
+"get_score()\n"
+"{\n"
+"  local wlen=0\n"
+"  local score=0\n"
+"  local bonus=0\n"
+"  local first_word=0\n"
+"  local add_word=0\n"
+"  local numwords=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:219
+#, no-wrap
+msgid ""
+"  wlen=${#wrd}\n"
+"  numwords=${Score[wlen]}\n"
+"  Score[2]=0\n"
+"  Status[4]=\"\"   # Initialize \"bonus\" to 0.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:238
+#, no-wrap
+msgid ""
+"  case \"$wlen\" in\n"
+"    3) first_word=60\n"
+"       add_word=10;;\n"
+"    4) first_word=120\n"
+"       add_word=20;;\n"
+"    5) first_word=200\n"
+"       add_word=50;;\n"
+"    6) first_word=300\n"
+"       add_word=100;;\n"
+"    7) first_word=500\n"
+"       add_word=150;;\n"
+"    8) first_word=750\n"
+"       add_word=250;;\n"
+"    9) first_word=1000\n"
+"       add_word=500;;\n"
+"   10) first_word=2000\n"
+"       add_word=2000;;   # This category modified from original rules!\n"
+"      esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:255
+#, no-wrap
+msgid ""
+"  ((Score[wlen]++))\n"
+"  if [ ${Score[wlen]} -eq $MAXCAT ]\n"
+"  then   # Category completion bonus scoring simplified!\n"
+"    case $wlen in\n"
+"      3 ) bonus=100;;\n"
+"      4 ) bonus=200;;\n"
+"      5 ) bonus=400;;\n"
+"      6 ) bonus=800;;\n"
+"      7 ) bonus=2000;;\n"
+"      8 ) bonus=10000;;\n"
+"    esac  # Needn't worry about 9's and 10's.\n"
+"    Status[4]=\"Category-$wlen-completion***BONUS***\"\n"
+"    Score[2]=$bonus\n"
+"  else\n"
+"    Status[4]=\"\"   # Erase it.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:267
+#, no-wrap
+msgid ""
+"    let \"score =  $first_word +   $add_word * $numwords\"\n"
+"    if [ \"$numwords\" -eq 0 ]\n"
+"    then\n"
+"      Score[0]=$score\n"
+"    else\n"
+"      Score[0]=$add_word\n"
+"    fi   #  All this to distinguish last-word score\n"
+"         #+ from total running score.\n"
+"  let \"Score[1] += ${Score[0]}\"\n"
+"  let \"Score[1] += ${Score[2]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:278
+#, no-wrap
+msgid ""
+"get_word ()\n"
+"{\n"
+"  local wrd=''\n"
+"  read -t $TIMEOUT wrd   # Timed read.\n"
+"  echo $wrd\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:288
+#, no-wrap
+msgid ""
+"is_constructable ()\n"
+"{ # This is the most complex and difficult-to-write function.\n"
+"  local -a local_LS=( \"${LS[@]}\" )  # Local copy of letter set.\n"
+"  local is_found=0\n"
+"  local idx=0\n"
+"  local pos\n"
+"  local strlen\n"
+"  local local_word=( \"$1\" )\n"
+"  strlen=${#local_word}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:301
+#, no-wrap
+msgid ""
+"  while [ \"$idx\" -lt \"$strlen\" ]\n"
+"  do\n"
+"    is_found=$(expr index \"${local_LS[*]}\" \"${local_word:idx:1}\")\n"
+"    if [ \"$is_found\" -eq \"$NONCONS\" ] # Not constructable!\n"
+"    then\n"
+"      echo \"$FAILURE\"; return\n"
+"    else\n"
+"      ((pos = ($is_found - 1) / 2))   # Compensate for spaces "
+"betw. letters!\n"
+"      local_LS[pos]=$NULL             # Zero out used letters.\n"
+"      ((idx++))                       # Bump index.\n"
+"    fi\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:305
+#, no-wrap
+msgid ""
+"  echo \"$SUCCESS\"\n"
+"  return\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:311
+#, no-wrap
+msgid ""
+"is_valid ()\n"
+"{ # Surprisingly easy to check if word in dictionary ...\n"
+"  fgrep -qw \"$1\" \"$WLIST\"   # ... courtesy of 'grep' ...\n"
+"  echo $?\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:318
+#, no-wrap
+msgid ""
+"check_word ()\n"
+"{\n"
+"  if [ -z \"$1\" ]\n"
+"  then\n"
+"    return\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:323
+#, no-wrap
+msgid ""
+"  Status[1]=\"\"\n"
+"  Status[2]=\"\"\n"
+"  Status[3]=\"\"\n"
+"  Status[4]=\"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:333
+#, no-wrap
+msgid ""
+"  iscons=$(is_constructable \"$1\")\n"
+"  if [ \"$iscons\" ]\n"
+"  then\n"
+"    Status[1]=\"constructable\" \n"
+"    v=$(is_valid \"$1\")\n"
+"    if [ \"$v\" -eq \"$SUCCESS\" ]\n"
+"    then\n"
+"      Status[2]=\"valid\" \n"
+"      strlen=${#1}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:339
+#, no-wrap
+msgid ""
+"      if [ ${Score[strlen]} -eq \"$MAXCAT\" ]   # Category full!\n"
+"      then\n"
+"        Status[3]=\"Category-$strlen-overflow-PENALTY\"\n"
+"        return $NG\n"
+"      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:356
+#, no-wrap
+msgid ""
+"      case \"$strlen\" in\n"
+"        1 | 2 )\n"
+"        Status[3]=\"Two-letter-word-PENALTY\"\n"
+"        return $NG;;\n"
+"        * ) \n"
+"\tStatus[3]=\"\"\n"
+"\treturn $SUCCESS;;\n"
+"      esac\n"
+"    else\n"
+"      Status[3]=\"Not-valid-PENALTY\"\n"
+"      return $NG\n"
+"    fi\n"
+"  else\n"
+"    Status[3]=\"Not-constructable-PENALTY\" \n"
+"      return $NG\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:358
+#, no-wrap
+msgid "  ### FIXME: Streamline the above code block.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:366
+#, no-wrap
+msgid ""
+"display_words ()\n"
+"{\n"
+"  local idx=0\n"
+"  local wlen0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:371
+#, no-wrap
+msgid ""
+"  clear\n"
+"  echo \"Letterset:   ${LS[@]}\"\n"
+"  echo \"Threes:    Fours:    Fives:     Sixes:    Sevens:    Eights:\"\n"
+"  echo \"------------------------------------------------------------\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:388
+#, no-wrap
+msgid ""
+"  while [ \"${Words[idx]}\" != '' ]\n"
+"  do\n"
+"   wlen0=${#Words[idx]}\n"
+"   case \"$wlen0\" in\n"
+"     3) ;;\n"
+"     4) echo -n \"           \" ;;\n"
+"     5) echo -n \"                     \" ;;\n"
+"     6) echo -n \"                                \" ;;\n"
+"     7) echo -n \"                                          \" ;;\n"
+"     8) echo -n \"                                                     \" "
+";;\n"
+"   esac\n"
+"   echo \"${Words[idx]}\"\n"
+"   ((idx++))\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:391
+#, no-wrap
+msgid ""
+"  ### FIXME: The word display is pretty crude.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:396
+#, no-wrap
+msgid ""
+"play ()\n"
+"{\n"
+"  word=\"Start game\"   # Dummy word, to start ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:404
+#, no-wrap
+msgid ""
+"  while [ \"$word\" ]   #  If player just hits return (null word),\n"
+"  do                  #+ then game ends.\n"
+"    echo \"$word: \"${Status[@]}\"\"\n"
+"    echo -n \"Last score: [${Score[0]}]   TOTAL score: [${Score[1]}]:     "
+"Next word: \"\n"
+"    total=${Score[1]}\n"
+"    word=$(get_word)\n"
+"    check_word \"$word\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:412
+#, no-wrap
+msgid ""
+"    if [ \"$?\" -eq \"$SUCCESS\" ]\n"
+"    then\n"
+"      add_word \"$word\"\n"
+"    else\n"
+"      let \"Score[0]= 0 - $PENALTY\"\n"
+"      let \"Score[1]-=$PENALTY\"\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:415
+#, no-wrap
+msgid ""
+"  display_words\n"
+"  done   # Exit game.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:419
+#, no-wrap
+msgid ""
+"  ### FIXME: The play () function calls too many other functions.\n"
+"  ### This verges on \"spaghetti code\" !!!\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:422
+msgid "end_of_game ()  { # Save and display stats."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:435
+#, no-wrap
+msgid ""
+"  #######################Autosave##########################\n"
+"  savefile=qky.save.$$\n"
+"  #                 ^^ PID of script\n"
+"  echo `date` >> $savefile\n"
+"  echo \"Letterset # $randseed  (random seed) \">> $savefile\n"
+"  echo -n \"Letterset: \" >> $savefile\n"
+"  echo \"${LS[@]}\" >> $savefile\n"
+"  echo \"---------\" >> $savefile\n"
+"  echo \"Words constructed:\" >> $savefile\n"
+"  echo \"${Words[@]}\" >> $savefile\n"
+"  echo >> $savefile\n"
+"  echo \"Score: $total\" >> $savefile\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:438
+#, no-wrap
+msgid ""
+"  echo \"Statistics for this round saved in \\\"\"$savefile\"\\\"\"\n"
+"  #########################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:442
+#, no-wrap
+msgid ""
+"  echo \"Score for this round: $total\"\n"
+"  echo \"Words:  ${Words[@]}\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:450
+msgid ""
+"# ---------# instructions seed_random get_letset play end_of_game # "
+"---------#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:452
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:464
+#, no-wrap
+msgid ""
+"# TODO:\n"
+"#\n"
+"# 1) Clean up code!\n"
+"# 2) Prettify the display_words () function (maybe with widgets?).\n"
+"# 3) Improve the time-out ... maybe change to untimed entry,\n"
+"#+   but with a time limit for the overall round.   \n"
+"# 4) An on-screen countdown timer would be nice.\n"
+"# 5) Implement \"vulnerable\" mode of play for compatibility with classic\n"
+"#+   version of the game.\n"
+"# 6) Improve save-to-file capability (and maybe make it optional).\n"
+"# 7) Fix bugs!!!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/qky.sh:466
+msgid "# For more info, reference: # http://bash.deta.in/qky.README.html"
+msgstr ""

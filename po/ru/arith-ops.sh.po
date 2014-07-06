@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:3
+msgid "#!/bin/bash # Counting to 11 in 10 different ways."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:5
+msgid "n=1; echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:8
+#, no-wrap
+msgid ""
+"let \"n = $n + 1\"   # let \"n = n + 1\"  also works.\n"
+"echo -n \"$n \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:14
+msgid ""
+": $((n = $n + 1))  # \":\" necessary because otherwise Bash attempts #+ to "
+"interpret \"$((n = $n + 1))\" as a command.  echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:19
+msgid ""
+"(( n = n + 1 ))  # A simpler alternative to the method above.  # Thanks, "
+"David Lombard, for pointing this out.  echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:22
+msgid "n=$(($n + 1))  echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:28
+msgid ""
+": $[ n = $n + 1 ] # \":\" necessary because otherwise Bash attempts #+ to "
+"interpret \"$[ n = $n + 1 ]\" as a command.  # Works even if \"n\" was "
+"initialized as a string.  echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:34
+msgid ""
+"n=$[ $n + 1 ] # Works even if \"n\" was initialized as a string.  #* Avoid "
+"this type of construct, since it is obsolete and nonportable.  # Thanks, "
+"Stephane Chazelas.  echo -n \"$n \""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:37
+msgid ""
+"# Now for C-style increment operators.  # Thanks, Frank Wang, for pointing "
+"this out."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:40
+#, no-wrap
+msgid ""
+"let \"n++\"          # let \"++n\"  also works.\n"
+"echo -n \"$n \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:43
+#, no-wrap
+msgid ""
+"(( n++ ))          # (( ++n ))  also works.\n"
+"echo -n \"$n \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:46
+#, no-wrap
+msgid ""
+": $(( n++ ))       # : $(( ++n )) also works.\n"
+"echo -n \"$n \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:49
+#, no-wrap
+msgid ""
+": $[ n++ ]         # : $[ ++n ] also works\n"
+"echo -n \"$n \"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:51
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-ops.sh:52
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex67.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:6
+msgid ""
+"declare -a colors # All subsequent commands in this script will treat #+ the "
+"variable \"colors\" as an array."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:8
+msgid "echo \"Enter your favorite colors (separated from each other by a space).\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:12
+#, no-wrap
+msgid ""
+"read -a colors    # Enter at least 3 colors to demonstrate features below.\n"
+"#  Special option to 'read' command,\n"
+"#+ allowing assignment of elements in an array.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:14 abs-guide/ex67.sh:46 abs-guide/ex67.sh:51
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:24
+#, no-wrap
+msgid ""
+"element_count=${#colors[@]}\n"
+"# Special syntax to extract number of elements in array.\n"
+"#     element_count=${#colors[*]} works also.\n"
+"#\n"
+"#  The \"@\" variable allows word splitting within quotes\n"
+"#+ (extracts variables separated by whitespace).\n"
+"#\n"
+"#  This corresponds to the behavior of \"$@\" and \"$*\"\n"
+"#+ in positional parameters. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:26
+msgid "index=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:44
+#, no-wrap
+msgid ""
+"while [ \"$index\" -lt \"$element_count\" ]\n"
+"do    # List all the elements in the array.\n"
+"  echo ${colors[$index]}\n"
+"  #    ${colors[index]} also works because it's within ${ ... } brackets.\n"
+"  let \"index = $index + 1\"\n"
+"  # Or:\n"
+"  #    ((index++))\n"
+"done\n"
+"# Each array element listed on a separate line.\n"
+"# If this is not desired, use  echo -n \"${colors[$index]} \"\n"
+"#\n"
+"# Doing it with a \"for\" loop instead:\n"
+"#   for i in \"${colors[@]}\"\n"
+"#   do\n"
+"#     echo \"$i\"\n"
+"#   done\n"
+"# (Thanks, S.C.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:49
+#, no-wrap
+msgid ""
+"# Again, list all the elements in the array, but using a more elegant "
+"method.\n"
+"  echo ${colors[@]}          # echo ${colors[*]} also works.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:56
+#, no-wrap
+msgid ""
+"# The \"unset\" command deletes elements of an array, or entire array.\n"
+"unset colors[1]              # Remove 2nd element of array.\n"
+"                             # Same effect as   colors[1]=\n"
+"echo  ${colors[@]}           # List array again, missing 2nd element.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:62
+#, no-wrap
+msgid ""
+"unset colors                 # Delete entire array.\n"
+"                             #  unset colors[*] and\n"
+"                             #+ unset colors[@] also work.\n"
+"echo; echo -n \"Colors gone.\"\t\t\t   \n"
+"echo ${colors[@]}            # List array again, now empty.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex67.sh:63
+msgid "exit 0"
+msgstr ""

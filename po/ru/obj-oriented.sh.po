@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:4
+msgid ""
+"#!/bin/bash # obj-oriented.sh: Object-oriented programming in a shell "
+"script.  # Script by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:10
+msgid ""
+"# Important Note: # --------- ---- # If running this script under version 3 "
+"or later of Bash, #+ replace all periods in function names with a \"legal\" "
+"character, #+ for example, an underscore."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:15
+#, no-wrap
+msgid ""
+"person.new()        # Looks almost like a class declaration in C++.\n"
+"{\n"
+"  local obj_name=$1 name=$2 firstname=$3 birthdate=$4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:21
+#, no-wrap
+msgid ""
+"  eval \"$obj_name.set_name() {\n"
+"          eval \\\"$obj_name.get_name() {\n"
+"                   echo \\$1\n"
+"                 }\\\"\n"
+"        }\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:27
+#, no-wrap
+msgid ""
+"  eval \"$obj_name.set_firstname() {\n"
+"          eval \\\"$obj_name.get_firstname() {\n"
+"                   echo \\$1\n"
+"                 }\\\"\n"
+"        }\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:39
+#, no-wrap
+msgid ""
+"  eval \"$obj_name.set_birthdate() {\n"
+"          eval \\\"$obj_name.get_birthdate() {\n"
+"            echo \\$1\n"
+"          }\\\"\n"
+"          eval \\\"$obj_name.show_birthdate() {\n"
+"            echo \\$(date -d \\\"1/1/1970 0:0:\\$1 GMT\\\")\n"
+"          }\\\"\n"
+"          eval \\\"$obj_name.get_age() {\n"
+"            echo \\$(( (\\$(date +%s) - \\$1) / 3600 / 24 / 365 ))\n"
+"          }\\\"\n"
+"        }\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:44
+#, no-wrap
+msgid ""
+"  $obj_name.set_name $name\n"
+"  $obj_name.set_firstname $firstname\n"
+"  $obj_name.set_birthdate $birthdate\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:46 abs-guide/obj-oriented.sh:57
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:49
+msgid ""
+"person.new self Bozeman Bozo 101272413 # Create an instance of "
+"\"person.new\" (actually passing args to the function)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:55
+#, no-wrap
+msgid ""
+"self.get_firstname       #   Bozo\n"
+"self.get_name            #   Bozeman\n"
+"self.get_age             #   28\n"
+"self.get_birthdate       #   101272413\n"
+"self.show_birthdate      #   Sat Mar 17 20:13:33 MST 1973\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:60
+msgid ""
+"# typeset -f #+ to see the created functions (careful, it scrolls off the "
+"page)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/obj-oriented.sh:61
+msgid "exit 0"
+msgstr ""

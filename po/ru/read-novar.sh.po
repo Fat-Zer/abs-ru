@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:3
+msgid "#!/bin/bash # read-novar.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:5 abs-guide/read-novar.sh:14
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:12
+msgid ""
+"# -------------------------- # echo -n \"Enter a value: \" read var echo "
+"\"\\\"var\\\" = \"$var\"\" # Everything as expected here.  # "
+"-------------------------- #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:23
+#, no-wrap
+msgid ""
+"# ------------------------------------------------------------------- #\n"
+"echo -n \"Enter another value: \"\n"
+"read           #  No variable supplied for 'read', therefore...\n"
+"               #+ Input to 'read' assigned to default variable, $REPLY.\n"
+"var=\"$REPLY\"\n"
+"echo \"\\\"var\\\" = \"$var\"\"\n"
+"# This is equivalent to the first code block.\n"
+"# ------------------------------------------------------------------- #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:27
+msgid "echo echo \"=========================\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:32
+msgid ""
+"# This example is similar to the \"reply.sh\" script.  # However, this one "
+"shows that $REPLY is available #+ even after a 'read' to a variable in the "
+"conventional way."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:35
+msgid "# ================================================================= #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:38
+msgid ""
+"# In some instances, you might wish to discard the first value read.  # In "
+"such cases, simply ignore the $REPLY variable."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:46
+#, no-wrap
+msgid ""
+"{ # Code block.\n"
+"read            # Line 1, to be discarded.\n"
+"read line2      # Line 2, saved in variable.\n"
+"  } &lt;$0\n"
+"echo \"Line 2 of this script is:\"\n"
+"echo \"$line2\"   #   # read-novar.sh\n"
+"echo            #   #!/bin/bash  line discarded.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:48
+msgid "# See also the soundcard-on.sh script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-novar.sh:49
+msgid "exit 0"
+msgstr ""

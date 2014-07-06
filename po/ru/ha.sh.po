@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ha.sh:7
+msgid ""
+"#!/bin/bash # $Id$ # Copyright 2005 Oliver Beckstein # Released under the "
+"GNU Public License # Author of script granted permission for inclusion in "
+"ABS Guide.  # (Thank you!)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:39
+#, no-wrap
+msgid ""
+"#----------------------------------------------------------------\n"
+"# pseudo hash based on indirect parameter expansion\n"
+"# API: access through functions:\n"
+"# \n"
+"# create the hash:\n"
+"#  \n"
+"#      newhash Lovers\n"
+"#\n"
+"# add entries (note single quotes for spaces)\n"
+"#    \n"
+"#      addhash Lovers Tristan Isolde\n"
+"#      addhash Lovers 'Romeo Montague' 'Juliet Capulet'\n"
+"#\n"
+"# access value by key\n"
+"#\n"
+"#      gethash Lovers Tristan   ---->  Isolde\n"
+"#\n"
+"# show all keys\n"
+"#\n"
+"#      keyshash Lovers         ----> 'Tristan'  'Romeo Montague'\n"
+"#\n"
+"#\n"
+"# Convention: instead of perls' foo{bar} = boing' syntax,\n"
+"# use\n"
+"#       '_foo_bar=boing' (two underscores, no spaces)\n"
+"#\n"
+"# 1) store key   in _NAME_keys[]\n"
+"# 2) store value in _NAME_values[] using the same integer index\n"
+"# The integer index for the last entry is _NAME_ptr\n"
+"#\n"
+"# NOTE: No error or sanity checks, just bare bones.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:52
+#, no-wrap
+msgid ""
+"function _inihash () {\n"
+"    # private function\n"
+"    # call at the beginning of each procedure\n"
+"    # defines: _keys _values _ptr\n"
+"    #\n"
+"    # Usage: _inihash NAME\n"
+"    local name=$1\n"
+"    _keys=_${name}_keys\n"
+"    _values=_${name}_values\n"
+"    _ptr=_${name}_ptr\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:63
+#, no-wrap
+msgid ""
+"function newhash () {\n"
+"    # Usage: newhash NAME\n"
+"    #        NAME should not contain spaces or dots.\n"
+"    #        Actually: it must be a legal name for a Bash variable.\n"
+"    # We rely on Bash automatically recognising arrays.\n"
+"    local name=$1 \n"
+"    local _keys _values _ptr\n"
+"    _inihash ${name}\n"
+"    eval ${_ptr}=0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:71
+#, no-wrap
+msgid ""
+"function addhash () {\n"
+"    # Usage: addhash NAME KEY 'VALUE with spaces'\n"
+"    #        arguments with spaces need to be quoted with single quotes ''\n"
+"    local name=$1 k=\"$2\" v=\"$3\" \n"
+"    local _keys _values _ptr\n"
+"    _inihash ${name}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:73
+#, no-wrap
+msgid "    #echo \"DEBUG(addhash): ${_ptr}=${!_ptr}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:78
+#, no-wrap
+msgid ""
+"    eval let ${_ptr}=${_ptr}+1\n"
+"    eval \"$_keys[${!_ptr}]=\\\"${k}\\\"\"\n"
+"    eval \"$_values[${!_ptr}]=\\\"${v}\\\"\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:89
+#, no-wrap
+msgid ""
+"function gethash () {\n"
+"    #  Usage: gethash NAME KEY\n"
+"    #         Returns boing\n"
+"    #         ERR=0 if entry found, 1 otherwise\n"
+"    #  That's not a proper hash --\n"
+"    #+ we simply linearly search through the keys.\n"
+"    local name=$1 key=\"$2\" \n"
+"    local _keys _values _ptr \n"
+"    local k v i found h\n"
+"    _inihash ${name}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:92
+#, no-wrap
+msgid ""
+"    # _ptr holds the highest index in the hash\n"
+"    found=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:98
+#, no-wrap
+msgid ""
+"    for i in $(seq 1 ${!_ptr}); do\n"
+"\th=\"\\${${_keys}[${i}]}\"  #  Safer to do it in two steps,\n"
+"\teval k=${h}             #+ especially when quoting for spaces.\n"
+"\tif [ \"${k}\" = \"${key}\" ]; then found=1; break; fi\n"
+"    done;\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:105
+#, no-wrap
+msgid ""
+"    [ ${found} = 0 ] &amp;&amp; return 1;\n"
+"    # else: i is the index that matches the key\n"
+"    h=\"\\${${_values}[${i}]}\"\n"
+"    eval echo \"${h}\"\n"
+"    return 0;\t\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:113
+#, no-wrap
+msgid ""
+"function keyshash () {\n"
+"    # Usage: keyshash NAME\n"
+"    # Returns list of all keys defined for hash name.\n"
+"    local name=$1 key=\"$2\" \n"
+"    local _keys _values _ptr \n"
+"    local k i h\n"
+"    _inihash ${name}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:121
+#, no-wrap
+msgid ""
+"    # _ptr holds the highest index in the hash\n"
+"    for i in $(seq 1 ${!_ptr}); do\n"
+"\th=\"\\${${_keys}[${i}]}\"   #  Safer to do it in two steps,\n"
+"\teval k=${h}              #+ especially when quoting for spaces.\n"
+"\techo -n \"'${k}' \"\n"
+"    done;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:124
+msgid "# -----------------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:130
+msgid ""
+"# Now, let's test it.  # (Per comments at the beginning of the script.)  "
+"newhash Lovers addhash Lovers Tristan Isolde addhash Lovers 'Romeo Montague' "
+"'Juliet Capulet'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:137
+#, no-wrap
+msgid ""
+"# Output results.\n"
+"echo\n"
+"gethash Lovers Tristan      # Isolde\n"
+"echo\n"
+"keyshash Lovers             # 'Tristan' 'Romeo Montague'\n"
+"echo; echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:140
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:143
+msgid "# Exercise: # --------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ha.sh:144
+msgid "# Add error checks to the functions."
+msgstr ""

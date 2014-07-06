@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex40.sh:4
+msgid "#!/bin/bash # ex40.sh (burn-cd.sh)  # Script to automate burning a CDR."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:14
+#, no-wrap
+msgid ""
+"SPEED=10         # May use higher speed if your hardware supports it.\n"
+"IMAGEFILE=cdimage.iso\n"
+"CONTENTSFILE=contents\n"
+"# DEVICE=/dev/cdrom     For older versions of cdrecord\n"
+"DEVICE=\"1,0,0\"\n"
+"DEFAULTDIR=/opt  # This is the directory containing the data to be burned.\n"
+"                 # Make sure it exists.\n"
+"                 # Exercise: Add a test for this.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:17
+msgid ""
+"# Uses Joerg Schilling's \"cdrecord\" package: # "
+"http://www.fokus.fhg.de/usr/schilling/cdrecord.html"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:21
+msgid ""
+"# If this script invoked as an ordinary user, may need to suid cdrecord #+ "
+"chmod u+s /usr/bin/cdrecord, as root.  # Of course, this creates a security "
+"hole, though a relatively minor one."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:29
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  IMAGE_DIRECTORY=$DEFAULTDIR\n"
+"  # Default directory, if not specified on command-line.\n"
+"else\n"
+"    IMAGE_DIRECTORY=$1\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:36
+msgid ""
+"# Create a \"table of contents\" file.  ls -lRF $IMAGE_DIRECTORY > "
+"$IMAGE_DIRECTORY/$CONTENTSFILE # The \"l\" option gives a \"long\" file "
+"listing.  # The \"R\" option makes the listing recursive.  # The \"F\" "
+"option marks the file types (directories get a trailing /).  echo \"Creating "
+"table of contents.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:40
+msgid ""
+"# Create an image file preparatory to burning it onto the CDR.  mkisofs -r "
+"-o $IMAGEFILE $IMAGE_DIRECTORY echo \"Creating ISO9660 file system image "
+"($IMAGEFILE).\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:49
+msgid ""
+"# Burn the CDR.  echo \"Burning the disk.\" echo \"Please be patient, this "
+"will take a while.\" wodim -v -isosize dev=$DEVICE $IMAGEFILE # In newer "
+"Linux distros, the \"wodim\" utility assumes the #+ functionality of "
+"\"cdrecord.\" exitcode=$? echo \"Exit code = $exitcode\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex40.sh:50
+msgid "exit $exitcode"
+msgstr ""

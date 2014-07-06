@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex16.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex16.sh:7
+#, no-wrap
+msgid ""
+"a=23              # Simple case\n"
+"echo $a\n"
+"b=$a\n"
+"echo $b\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex16.sh:9
+msgid "# Now, getting a little bit fancier (command substitution)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex16.sh:16
+#, no-wrap
+msgid ""
+"a=`echo Hello!`   # Assigns result of 'echo' command to 'a' ...\n"
+"echo $a\n"
+"#  Note that including an exclamation mark (!) within a\n"
+"#+ command substitution construct will not work from the command-line,\n"
+"#+ since this triggers the Bash \"history mechanism.\"\n"
+"#  Inside a script, however, the history functions are disabled by "
+"default.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex16.sh:22
+#, no-wrap
+msgid ""
+"a=`ls -l`         # Assigns result of 'ls -l' command to 'a'\n"
+"echo $a           # Unquoted, however, it removes tabs and newlines.\n"
+"echo\n"
+"echo \"$a\"         # The quoted variable preserves whitespace.\n"
+"                  # (See the chapter on \"Quoting.\")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex16.sh:23
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/online.sh:3
+msgid ""
+"#!/bin/bash # logon.sh: A quick 'n dirty script to check whether you are "
+"on-line yet."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:5
+msgid "umask 177 # Make sure temp files are not world readable."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:23
+#, no-wrap
+msgid ""
+"TRUE=1\n"
+"LOGFILE=/var/log/messages\n"
+"#  Note that $LOGFILE must be readable\n"
+"#+ (as root, chmod 644 /var/log/messages).\n"
+"TEMPFILE=temp.$$\n"
+"#  Create a \"unique\" temp file name, using process id of the script.\n"
+"#     Using 'mktemp' is an alternative.\n"
+"#     For example:\n"
+"#     TEMPFILE=`mktemp temp.XXXXXX`\n"
+"KEYWORD=address\n"
+"#  At logon, the line \"remote IP address xxx.xxx.xxx.xxx\"\n"
+"#                      appended to /var/log/messages.\n"
+"ONLINE=22\n"
+"USER_INTERRUPT=13\n"
+"CHECK_LINES=100\n"
+"#  How many lines in log file to check.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:26
+msgid ""
+"trap 'rm -f $TEMPFILE; exit $USER_INTERRUPT' TERM INT # Cleans up the temp "
+"file if script interrupted by control-c."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:28
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:37
+#, no-wrap
+msgid ""
+"while [ $TRUE ]  #Endless loop.\n"
+"do\n"
+"  tail -n $CHECK_LINES $LOGFILE> $TEMPFILE\n"
+"  #  Saves last 100 lines of system log file as temp file.\n"
+"  #  Necessary, since newer kernels generate many log messages at log on.\n"
+"  search=`grep $KEYWORD $TEMPFILE`\n"
+"  #  Checks for presence of the \"IP address\" phrase,\n"
+"  #+ indicating a successful logon.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:47
+#, no-wrap
+msgid ""
+"  if [ ! -z \"$search\" ] #  Quotes necessary because of possible spaces.\n"
+"  then\n"
+"     echo \"On-line\"\n"
+"     rm -f $TEMPFILE    #  Clean up temp file.\n"
+"     exit $ONLINE\n"
+"  else\n"
+"     echo -n \".\"        #  The -n option to echo suppresses newline,\n"
+"                        #+ so you get continuous rows of dots.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:50
+#, no-wrap
+msgid ""
+"  sleep 1  \n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:55
+msgid ""
+"# Note: if you change the KEYWORD variable to \"Exit\", #+ this script can "
+"be used while on-line #+ to check for an unexpected logoff."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:58
+#, no-wrap
+msgid ""
+"# Exercise: Change the script, per the above note,\n"
+"#           and prettify it.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:60
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:63
+msgid "# Nick Drage suggests an alternate method:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:69
+#, no-wrap
+msgid ""
+"while true\n"
+"  do ifconfig ppp0 | grep UP 1> /dev/null &amp;&amp; echo \"connected\" "
+"&amp;&amp; exit 0\n"
+"  echo -n \".\"   # Prints dots (.....) until connected.\n"
+"  sleep 2\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:73
+#, no-wrap
+msgid ""
+"# Problem: Hitting Control-C to terminate this process may be "
+"insufficient.\n"
+"#+         (Dots may keep on echoing.)\n"
+"# Exercise: Fix this.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:77
+msgid "# Stephane Chazelas has yet another alternative:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:79
+msgid "CHECK_INTERVAL=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:85
+#, no-wrap
+msgid ""
+"while ! tail -n 1 \"$LOGFILE\" | grep -q \"$KEYWORD\"\n"
+"do echo -n .\n"
+"   sleep $CHECK_INTERVAL\n"
+"done\n"
+"echo \"On-line\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/online.sh:87
+#, no-wrap
+msgid ""
+"# Exercise: Discuss the relative strengths and weaknesses\n"
+"#           of each of these various approaches.\n"
+msgstr ""

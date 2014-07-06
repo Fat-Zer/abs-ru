@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:4
+msgid ""
+"#!/bin/bash # pid-identifier.sh: # Gives complete path name to process "
+"associated with pid."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:11
+msgid ""
+"ARGNO=1 # Number of arguments the script expects.  E_WRONGARGS=65 "
+"E_BADPID=66 E_NOSUCHPROCESS=67 E_NOPERMISSION=68 PROCFILE=exe"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:17
+#, no-wrap
+msgid ""
+"if [ $# -ne $ARGNO ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` PID-number\" >&amp;2  # Error message "
+">stderr.\n"
+"  exit $E_WRONGARGS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:25
+#, no-wrap
+msgid ""
+"pidno=$( ps ax | grep $1 | awk '{ print $1 }' | grep $1 )\n"
+"# Checks for pid in \"ps\" listing, field #1.\n"
+"# Then makes sure it is the actual process, not the process invoked by this "
+"script.\n"
+"# The last \"grep $1\" filters out this possibility.\n"
+"#\n"
+"#    pidno=$( ps ax | awk '{ print $1 }' | grep $1 )\n"
+"#    also works, as Teemu Huovila, points out.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:31
+#, no-wrap
+msgid ""
+"if [ -z \"$pidno\" ]  #  If, after all the filtering, the result is a "
+"zero-length string,\n"
+"then                #+ no running process corresponds to the pid given.\n"
+"  echo \"No such process running.\"\n"
+"  exit $E_NOSUCHPROCESS\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:38
+#, no-wrap
+msgid ""
+"# Alternatively:\n"
+"#   if ! ps $1 > /dev/null 2>&amp;1\n"
+"#   then                # no running process corresponds to the pid given.\n"
+"#     echo \"No such process running.\"\n"
+"#     exit $E_NOSUCHPROCESS\n"
+"#    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:40
+msgid "# To simplify the entire process, use \"pidof\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:48
+#, no-wrap
+msgid ""
+"if [ ! -r \"/proc/$1/$PROCFILE\" ]  # Check for read permission.\n"
+"then\n"
+"  echo \"Process $1 running, but...\"\n"
+"  echo \"Can't get read permission on /proc/$1/$PROCFILE.\"\n"
+"  exit $E_NOPERMISSION  # Ordinary user can't access some files in /proc.\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:56
+#, no-wrap
+msgid ""
+"# The last two tests may be replaced by:\n"
+"#    if ! kill -0 $1 > /dev/null 2>&amp;1 # '0' is not a signal, but\n"
+"                                      # this will test whether it is "
+"possible\n"
+"                                      # to send a signal to the process.\n"
+"#    then echo \"PID doesn't exist or you're not its owner\" >&amp;2\n"
+"#    exit $E_BADPID\n"
+"#    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:64
+#, no-wrap
+msgid ""
+"exe_file=$( ls -l /proc/$1 | grep \"exe\" | awk '{ print $11 }' )\n"
+"# Or       exe_file=$( ls -l /proc/$1/exe | awk '{print $11}' )\n"
+"#\n"
+"#  /proc/pid-number/exe is a symbolic link\n"
+"#+ to the complete path name of the invoking process.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:71
+#, no-wrap
+msgid ""
+"if [ -e \"$exe_file\" ]  #  If /proc/pid-number/exe exists,\n"
+"then                   #+ then the corresponding process exists.\n"
+"  echo \"Process #$1 invoked by $exe_file.\"\n"
+"else\n"
+"  echo \"No such process running.\"\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:82
+#, no-wrap
+msgid ""
+"#  This elaborate script can *almost* be replaced by\n"
+"#       ps ax | grep $1 | awk '{ print $5 }'\n"
+"#  However, this will not work...\n"
+"#+ because the fifth field of 'ps' is argv[0] of the process,\n"
+"#+ not the executable file path.\n"
+"#\n"
+"# However, either of the following would work.\n"
+"#       find /proc/$1/exe -printf '%l\\n'\n"
+"#       lsof -aFn -p $1 -d txt | sed -ne 's/^n//p'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:84
+msgid "# Additional commentary by Stephane Chazelas."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pid-identifier.sh:85
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:4
+msgid ""
+"#!/bin/bash # spam-lookup.sh: Look up abuse contact to report a spammer.  # "
+"Thanks, Michael Zick."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:13
+#, no-wrap
+msgid ""
+"# Check for command-line arg.\n"
+"ARGCOUNT=1\n"
+"E_WRONGARGS=85\n"
+"if [ $# -ne \"$ARGCOUNT\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` domain-name\"\n"
+"  exit $E_WRONGARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:19
+#, no-wrap
+msgid ""
+"dig +short $1.contacts.abuse.net -c in -t txt\n"
+"# Also try:\n"
+"#     dig +nssearch $1\n"
+"#     Tries to find \"authoritative name servers\" and display SOA "
+"records.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:25
+#, no-wrap
+msgid ""
+"# The following also works:\n"
+"#     whois -h whois.abuse.net $1\n"
+"#           ^^ ^^^^^^^^^^^^^^^  Specify host.  \n"
+"#     Can even lookup multiple spammers with this, i.e.\"\n"
+"#     whois -h whois.abuse.net $spamdomain1 $spamdomain2 . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:33
+msgid ""
+"# Exercise: # -------- # Expand the functionality of this script #+ so that "
+"it automatically e-mails a notification #+ to the responsible ISP's contact "
+"address(es).  # Hint: use the \"mail\" command."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:35
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:38
+#, no-wrap
+msgid ""
+"# spam-lookup.sh chinatietong.com\n"
+"#                A known spam domain.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:42
+msgid ""
+"# \"crnet_mgr@chinatietong.com\" # \"crnet_tec@chinatietong.com\" # "
+"\"postmaster@chinatietong.com\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/spam-lookup.sh:45
+msgid ""
+"# For a more elaborate version of this script, #+ see the SpamViz home page, "
+"http://www.spamviz.net/index.html."
+msgstr ""

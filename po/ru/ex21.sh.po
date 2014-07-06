@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex21.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:5
+msgid ""
+"# $RANDOM returns a different random integer at each invocation.  # Nominal "
+"range: 0 - 32767 (signed 16-bit integer)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:8
+msgid "MAXCOUNT=10 count=1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:19
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"$MAXCOUNT random numbers:\"\n"
+"echo \"-----------------\"\n"
+"while [ \"$count\" -le $MAXCOUNT ]      # Generate 10 ($MAXCOUNT) random "
+"integers.\n"
+"do\n"
+"  number=$RANDOM\n"
+"  echo $number\n"
+"  let \"count += 1\"  # Increment count.\n"
+"done\n"
+"echo \"-----------------\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:22
+msgid ""
+"# If you need a random int within a certain range, use the 'modulo' "
+"operator.  # This returns the remainder of a division operation."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:24
+msgid "RANGE=500"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:26 abs-guide/ex21.sh:33 abs-guide/ex21.sh:84
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:31
+#, no-wrap
+msgid ""
+"number=$RANDOM\n"
+"let \"number %= $RANGE\"\n"
+"#           ^^\n"
+"echo \"Random number less than $RANGE  ---  $number\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:38
+msgid ""
+"# If you need a random integer greater than a lower bound, #+ then set up a "
+"test to discard all numbers below that."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:40
+msgid "FLOOR=200"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:48
+#, no-wrap
+msgid ""
+"number=0   #initialize\n"
+"while [ \"$number\" -le $FLOOR ]\n"
+"do\n"
+"  number=$RANDOM\n"
+"done\n"
+"echo \"Random number greater than $FLOOR ---  $number\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:53
+#, no-wrap
+msgid ""
+"   # Let's examine a simple alternative to the above loop, namely\n"
+"   #       let \"number = $RANDOM + $FLOOR\"\n"
+"   # That would eliminate the while-loop and run faster.\n"
+"   # But, there might be a problem with that. What is it?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:65
+#, no-wrap
+msgid ""
+"# Combine above two techniques to retrieve random number between two "
+"limits.\n"
+"number=0   #initialize\n"
+"while [ \"$number\" -le $FLOOR ]\n"
+"do\n"
+"  number=$RANDOM\n"
+"  let \"number %= $RANGE\"  # Scales $number down within $RANGE.\n"
+"done\n"
+"echo \"Random number between $FLOOR and $RANGE ---  $number\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:72
+msgid ""
+"# Generate binary choice, that is, \"true\" or \"false\" value.  BINARY=2 "
+"T=1 number=$RANDOM"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:82
+#, no-wrap
+msgid ""
+"let \"number %= $BINARY\"\n"
+"#  Note that    let \"number >>= 14\"    gives a better random "
+"distribution\n"
+"#+ (right shifts out everything except last binary digit).\n"
+"if [ \"$number\" -eq $T ]\n"
+"then\n"
+"  echo \"TRUE\"\n"
+"else\n"
+"  echo \"FALSE\"\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:93
+#, no-wrap
+msgid ""
+"# Generate a toss of the dice.\n"
+"SPOTS=6   # Modulo 6 gives range 0 - 5.\n"
+"          # Incrementing by 1 gives desired range of 1 - 6.\n"
+"          # Thanks, Paulo Marcel Coelho Aragao, for the simplification.\n"
+"die1=0\n"
+"die2=0\n"
+"# Would it be better to just set SPOTS=7 and not add 1? Why or why not?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:95
+msgid "# Tosses each die separately, and so gives correct odds."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:100
+#, no-wrap
+msgid ""
+"    let \"die1 = $RANDOM % $SPOTS +1\" # Roll first one.\n"
+"    let \"die2 = $RANDOM % $SPOTS +1\" # Roll second one.\n"
+"    #  Which arithmetic operation, above, has greater precedence --\n"
+"    #+ modulo (%) or addition (+)?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:105
+msgid "let \"throw = $die1 + $die2\" echo \"Throw of the dice = $throw\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex21.sh:107
+msgid "exit 0"
+msgstr ""

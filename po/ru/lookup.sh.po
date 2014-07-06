@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/lookup.sh:3
+msgid "#!/bin/bash # lookup: Does a dictionary lookup on each word in a data file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:5
+msgid "file=words.data # Data file from which to read words to test."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:9
+msgid "echo echo \"Testing file $file\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:17
+#, no-wrap
+msgid ""
+"while [ \"$word\" != end ]  # Last word in data file.\n"
+"do               # ^^^\n"
+"  read word      # From data file, because of redirection at end of loop.\n"
+"  look $word > /dev/null  # Don't want to display lines in dictionary "
+"file.\n"
+"  #  Searches for words in the file /usr/share/dict/words\n"
+"  #+ (usually a link to linux.words).\n"
+"  lookup=$?      # Exit status of 'look' command.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:24
+#, no-wrap
+msgid ""
+"  if [ \"$lookup\" -eq 0 ]\n"
+"  then\n"
+"    echo \"\\\"$word\\\" is valid.\"\n"
+"  else\n"
+"    echo \"\\\"$word\\\" is invalid.\"\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:26
+#, no-wrap
+msgid ""
+"done &lt;\"$file\"    # Redirects stdin to $file, so \"reads\" come from "
+"there.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:28
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:30 abs-guide/lookup.sh:44
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:33
+msgid ""
+"# ---------------------------------------------------------------- # Code "
+"below line will not execute because of \"exit\" command above."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:36
+msgid "# Stephane Chazelas proposes the following, more concise alternative:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/lookup.sh:43
+#, no-wrap
+msgid ""
+"while read word &amp;&amp; [[ $word != end ]]\n"
+"do if look \"$word\" > /dev/null\n"
+"   then echo \"\\\"$word\\\" is valid.\"\n"
+"   else echo \"\\\"$word\\\" is invalid.\"\n"
+"   fi\n"
+"done &lt;\"$file\"\n"
+msgstr ""

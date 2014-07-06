@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:3
+msgid "#! /bin/bash # protect_literal.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:5
+msgid "# set -vx"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:7
+msgid ":&lt;&lt;-'_Protect_Literal_String_Doc'"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:12
+#, no-wrap
+msgid ""
+"    Copyright (c) Michael S. Zick, 2003; All Rights Reserved\n"
+"    License: Unrestricted reuse in any form, for any purpose.\n"
+"    Warranty: None\n"
+"    Revision: $ID$\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:16
+#, no-wrap
+msgid ""
+"    Documentation redirected to the Bash no-operation.\n"
+"    Bash will '/dev/null' this block when the script is first read.\n"
+"    (Uncomment the above set command to see this action.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:20
+#, no-wrap
+msgid ""
+"    Remove the first (Sha-Bang) line when sourcing this as a library\n"
+"    procedure.  Also comment out the example use code in the two\n"
+"    places where shown.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:26
+#, no-wrap
+msgid ""
+"    Usage:\n"
+"        _protect_literal_str 'Whatever string meets your ${fancy}'\n"
+"        Just echos the argument to standard out, hard quotes\n"
+"        restored.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:29
+#, no-wrap
+msgid ""
+"        $(_protect_literal_str 'Whatever string meets your ${fancy}')\n"
+"        as the right-hand-side of an assignment statement.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:34
+#, no-wrap
+msgid ""
+"    Does:\n"
+"        As the right-hand-side of an assignment, preserves the\n"
+"        hard quotes protecting the contents of the literal during\n"
+"        assignment.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:39
+#, no-wrap
+msgid ""
+"    Notes:\n"
+"        The strange names (_*) are used to avoid trampling on\n"
+"        the user's chosen names when this is sourced as a\n"
+"        library.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:41
+msgid "_Protect_Literal_String_Doc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:43
+msgid "# The 'for illustration' function form"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:45
+msgid "_protect_literal_str() {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:49
+#, no-wrap
+msgid ""
+"# Pick an un-used, non-printing character as local IFS.\n"
+"# Not required, but shows that we are ignoring it.\n"
+"    local IFS=$'\\x1B'               # \\ESC character\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:53
+#, no-wrap
+msgid ""
+"# Enclose the All-Elements-Of in hard quotes during assignment.\n"
+"    local tmp=$'\\x27'$@$'\\x27'\n"
+"#    local tmp=$'\\''$@$'\\''         # Even uglier.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:57
+#, no-wrap
+msgid ""
+"    local len=${#tmp}               # Info only.\n"
+"    echo $tmp is $len long.         # Output AND information.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:63
+#, no-wrap
+msgid ""
+"# This is the short-named version.\n"
+"_pls() {\n"
+"    local IFS=$'x1B'                # \\ESC character (not required)\n"
+"    echo $'\\x27'$@$'\\x27'           # Hard quoted parameter glob\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:66
+msgid ""
+"# :&lt;&lt;-'_Protect_Literal_String_Test' # # # Remove the above \"# \" to "
+"disable this code. # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:73
+msgid ""
+"# See how that looks when printed.  echo echo \"- - Test One - -\" "
+"_protect_literal_str 'Hello $user' _protect_literal_str 'Hello "
+"\"${username}\"' echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:78
+msgid ""
+"# Which yields: # - - Test One - - # 'Hello $user' is 13 long.  # 'Hello "
+"\"${username}\"' is 21 long."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:83
+msgid ""
+"# Looks as expected, but why all of the trouble? # The difference is hidden "
+"inside the Bash internal order #+ of operations.  # Which shows when you use "
+"it on the RHS of an assignment."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:86
+msgid "# Declare an array for test values.  declare -a arrayZ"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:89
+msgid ""
+"# Assign elements with various types of quotes and escapes.  arrayZ=( zero "
+"\"$(_pls 'Hello ${Me}')\" 'Hello ${You}' \"\\'Pass: ${pw}\\'\" )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:97
+#, no-wrap
+msgid ""
+"# Now list that array and see what is there.\n"
+"echo \"- - Test Two - -\"\n"
+"for (( i=0 ; i&lt;${#arrayZ[*]} ; i++ ))\n"
+"do\n"
+"    echo  Element $i: ${arrayZ[$i]} is: ${#arrayZ[$i]} long.\n"
+"done\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:104
+#, no-wrap
+msgid ""
+"# Which yields:\n"
+"# - - Test Two - -\n"
+"# Element 0: zero is: 4 long.           # Our marker element\n"
+"# Element 1: 'Hello ${Me}' is: 13 long. # Our \"$(_pls '...' )\"\n"
+"# Element 2: Hello ${You} is: 12 long.  # Quotes are missing\n"
+"# Element 3: \\'Pass: \\' is: 10 long.    # ${pw} expanded to nothing\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:107
+msgid ""
+"# Now make an assignment with that result.  declare -a array2=( ${arrayZ[@]} "
+")"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:115
+#, no-wrap
+msgid ""
+"# And print what happened.\n"
+"echo \"- - Test Three - -\"\n"
+"for (( i=0 ; i&lt;${#array2[*]} ; i++ ))\n"
+"do\n"
+"    echo  Element $i: ${array2[$i]} is: ${#array2[$i]} long.\n"
+"done\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:123
+#, no-wrap
+msgid ""
+"# Which yields:\n"
+"# - - Test Three - -\n"
+"# Element 0: zero is: 4 long.           # Our marker element.\n"
+"# Element 1: Hello ${Me} is: 11 long.   # Intended result.\n"
+"# Element 2: Hello is: 5 long.          # ${You} expanded to nothing.\n"
+"# Element 3: 'Pass: is: 6 long.         # Split on the whitespace.\n"
+"# Element 4: ' is: 1 long.              # The end quote is here now.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:128
+msgid ""
+"# Our Element 1 has had its leading and trailing hard quotes stripped.  # "
+"Although not shown, leading and trailing whitespace is also stripped.  # Now "
+"that the string contents are set, Bash will always, internally, #+ hard "
+"quote the contents as required during its operations."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:140
+msgid ""
+"# Why? # Considering our \"$(_pls 'Hello ${Me}')\" construction: # \" ... \" "
+"-> Expansion required, strip the quotes.  # $( ... ) -> Replace with the "
+"result of..., strip this.  # _pls ' ... ' -> called with literal arguments, "
+"strip the quotes.  # The result returned includes hard quotes; BUT the above "
+"processing #+ has already been done, so they become part of the value "
+"assigned.  # # Similarly, during further usage of the string variable, the "
+"${Me} #+ is part of the contents (result) and survives any operations # "
+"(Until explicitly told to evaluate the string)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:144
+msgid ""
+"# Hint: See what happens when the hard quotes ($'\\x27') are replaced #+ "
+"with soft quotes ($'\\x22') in the above procedures.  # Interesting also is "
+"to remove the addition of any quoting."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:147
+msgid ""
+"# _Protect_Literal_String_Test # # # Remove the above \"# \" to disable this "
+"code. # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/protect_literal.sh:148
+msgid "exit 0"
+msgstr ""

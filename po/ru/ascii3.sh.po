@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:5
+msgid ""
+"#!/bin/bash # ASCII table script, using awk.  # Author: Joseph Steinhauser # "
+"Used in ABS Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:18
+#, no-wrap
+msgid ""
+"#-------------------------------------------------------------------------\n"
+"#-- File:  ascii     Print ASCII chart, base 10/8/16         (JETS-2010)\n"
+"#-------------------------------------------------------------------------\n"
+"#-- Usage: ascii [oct|dec|hex|help|8|10|16]\n"
+"#--\n"
+"#-- This script prints a summary of ASCII char codes from Zero to 127.\n"
+"#-- Numeric values may be printed in Base10, Octal, or Hex (Base16).\n"
+"#--\n"
+"#-- Format Based on: /usr/share/lib/pub/ascii with base-10 as default.\n"
+"#-- For more detail, man ascii\n"
+"#-------------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:20
+msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:29
+#, no-wrap
+msgid ""
+"case \"$1\" in\n"
+"   oct|[Oo]?([Cc][Tt])|8)       Obase=Octal;  Numy=3o;;\n"
+"   hex|[Hh]?([Ee][Xx])|16|[Xx]) Obase=Hex;    Numy=2X;;\n"
+"   help|?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;\n"
+"   code|[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;\n"
+"   *) Obase=Decimal\n"
+"esac\n"
+"export Obase   # CODE is actually shorter than the chart!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:37
+#, no-wrap
+msgid ""
+"awk 'BEGIN{print \"\\n\\t\\t## \"ENVIRON[\"Obase\"]\" ASCII Chart ##\\n\"\n"
+"           "
+"ab=\"soh,stx,etx,eot,enq,ack,bel,bs,tab,nl,vt,np,cr,so,si,dle,\"\n"
+"           "
+"ad=\"dc1,dc2,dc3,dc4,nak,syn,etb,can,em,sub,esc,fs,gs,rs,us,sp\"\n"
+"           split(ab ad,abr,\",\");abr[0]=\"nul\";abr[127]=\"del\";\n"
+"           fm1=\"|%0'\"${Numy:- 4d}\"' %-3s\"\n"
+"           for(idx=0;idx&lt;128;idx++){fmt=fm1 (++colz%8?\"\":\"|\\n\")\n"
+"           printf(fmt,idx,(idx in abr)?abr[idx]:sprintf(\"%c\",idx))} }'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ascii3.sh:38
+msgid "exit $?"
+msgstr ""

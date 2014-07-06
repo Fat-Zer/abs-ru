@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/fibo.sh:5
+msgid ""
+"#!/bin/bash # fibo.sh : Fibonacci sequence (recursive)  # Author: M. Cooper "
+"# License: GPL3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:12
+#, no-wrap
+msgid ""
+"# ----------algorithm--------------\n"
+"# Fibo(0) = 0\n"
+"# Fibo(1) = 1\n"
+"# else\n"
+"#   Fibo(j) = Fibo(j-1) + Fibo(j-2)\n"
+"# ---------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:15
+#, no-wrap
+msgid ""
+"MAXTERM=15       # Number of terms (+1) to generate.\n"
+"MINIDX=2         # If idx is less than 2, then Fibo(idx) = idx.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:25
+#, no-wrap
+msgid ""
+"Fibonacci ()\n"
+"{\n"
+"  idx=$1   # Doesn't need to be local. Why not?\n"
+"  if [ \"$idx\" -lt \"$MINIDX\" ]\n"
+"  then\n"
+"    echo \"$idx\"  # First two terms are 0 1 ... see above.\n"
+"  else\n"
+"    (( --idx ))  # j-1\n"
+"    term1=$( Fibonacci $idx )   #  Fibo(j-1)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:28
+#, no-wrap
+msgid ""
+"    (( --idx ))  # j-2\n"
+"    term2=$( Fibonacci $idx )   #  Fibo(j-2)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:35
+#, no-wrap
+msgid ""
+"    echo $(( term1 + term2 ))\n"
+"  fi\n"
+"  #  An ugly, ugly kludge.\n"
+"  #  The more elegant implementation of recursive fibo in C\n"
+"  #+ is a straightforward translation of the algorithm in lines 7 - 10.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:43
+#, no-wrap
+msgid ""
+"for i in $(seq 0 $MAXTERM)\n"
+"do  # Calculate $MAXTERM+1 terms.\n"
+"  FIBO=$(Fibonacci $i)\n"
+"  echo -n \"$FIBO \"\n"
+"done\n"
+"# 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610\n"
+"# Takes a while, doesn't it? Recursion in a script is slow.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:45
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/fibo.sh:46
+msgid "exit 0"
+msgstr ""

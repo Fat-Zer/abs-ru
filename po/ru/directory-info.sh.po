@@ -1,0 +1,811 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:4
+msgid "#! /bin/bash # directory-info.sh # Parses and lists directory information."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:6
+msgid "# NOTE: Change lines 273 and 353 per \"README\" file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:9
+msgid ""
+"# Michael Zick is the author of this script.  # Used here with his "
+"permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:18
+#, no-wrap
+msgid ""
+"# Controls\n"
+"# If overridden by command arguments, they must be in the order:\n"
+"#   Arg1: \"Descriptor Directory\"\n"
+"#   Arg2: \"Exclude Paths\"\n"
+"#   Arg3: \"Exclude Directories\"\n"
+"#\n"
+"# Environment Settings override Defaults.\n"
+"# Command arguments override Environment Settings.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:21
+msgid ""
+"# Default location for content addressed file descriptors.  "
+"MD5UCFS=${1:-${MD5UCFS:-'/tmpfs/ucfs'}}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:25
+#, no-wrap
+msgid ""
+"# Directory paths never to list or enter\n"
+"declare -a \\\n"
+"  EXCLUDE_PATHS=${2:-${EXCLUDE_PATHS:-'(/proc /dev /devfs /tmpfs)'}}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:29
+#, no-wrap
+msgid ""
+"# Directories never to list or enter\n"
+"declare -a \\\n"
+"  EXCLUDE_DIRS=${3:-${EXCLUDE_DIRS:-'(ucfs lost+found tmp wtmp)'}}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:33
+#, no-wrap
+msgid ""
+"# Files never to list or enter\n"
+"declare -a \\\n"
+"  EXCLUDE_FILES=${3:-${EXCLUDE_FILES:-'(core \"Name with Spaces\")'}}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:44
+msgid ""
+"# Here document used as a comment block.  : &lt;&lt;LSfieldsDoc # # # # # "
+"List Filesystem Directory Information # # # # # # #\tListDirectory "
+"\"FileGlob\" \"Field-Array-Name\" # or #\tListDirectory -of \"FileGlob\" "
+"\"Field-Array-Filename\" #\t'-of' meaning 'output to filename' # # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:46
+msgid "String format description based on: ls (GNU fileutils) version 4.0.36"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:50
+#, no-wrap
+msgid ""
+"Produces a line (or more) formatted:\n"
+"inode permissions hard-links owner group ...\n"
+"32736 -rw-------    1 mszick   mszick\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:53
+#, no-wrap
+msgid ""
+"size    day month date hh:mm:ss year path\n"
+"2756608 Sun Apr 20 08:53:06 2003 /home/mszick/core\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:57
+#, no-wrap
+msgid ""
+"Unless it is formatted:\n"
+"inode permissions hard-links owner group ...\n"
+"266705 crw-rw----    1    root  uucp\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:61
+msgid ""
+"major minor day month date hh:mm:ss year path 4, 68 Sun Apr 20 09:27:33 2003 "
+"/dev/ttyS4 NOTE: that pesky comma after the major number"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:70
+msgid ""
+"NOTE: the 'path' may be multiple fields: /home/mszick/core /proc/982/fd/0 -> "
+"/dev/null /proc/982/fd/1 -> /home/mszick/.xsession-errors /proc/982/fd/13 -> "
+"/tmp/tmpfZVVOCs (deleted)  /proc/982/fd/7 -> /tmp/kde-mszick/ksycoca "
+"/proc/982/fd/8 -> socket:[11586] /proc/982/fd/9 -> pipe:[11588]"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:75
+msgid ""
+"If that isn't enough to keep your parser guessing, either or both of the "
+"path components may be relative: ../Built-Shared -> Built-Static "
+"../linux-2.4.20.tar.bz2 -> ../../../SRCS/linux-2.4.20.tar.bz2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:88
+msgid ""
+"The first character of the 11 (10?) character permissions field: 's' Socket "
+"'d' Directory 'b' Block device 'c' Character device 'l' Symbolic link NOTE: "
+"Hard links not marked - test for identical inode numbers on identical "
+"filesystems.  All information about hard linked files are shared, except for "
+"the names and the name's location in the directory system.  NOTE: A \"Hard "
+"link\" is known as a \"File Alias\" on some systems.  '-' An undistingushed "
+"file"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:102
+msgid ""
+"Followed by three groups of letters for: User, Group, Others Character 1: "
+"'-' Not readable; 'r' Readable Character 2: '-' Not writable; 'w' Writable "
+"Character 3, User and Group: Combined execute and special '-' Not "
+"Executable, Not Special 'x' Executable, Not Special 's' Executable, Special "
+"'S' Not Executable, Special Character 3, Others: Combined execute and sticky "
+"(tacky?)  '-' Not Executable, Not Tacky 'x' Executable, Not Tacky 't' "
+"Executable, Tacky 'T' Not Executable, Tacky"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:109
+msgid ""
+"Followed by an access indicator Haven't tested this one, it may be the "
+"eleventh character or it may generate another field ' ' No alternate access "
+"'+' Alternate access LSfieldsDoc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:116
+#, no-wrap
+msgid ""
+"ListDirectory()\n"
+"{\n"
+"\tlocal -a T\n"
+"\tlocal -i of=0\t\t# Default return in variable\n"
+"#\tOLD_IFS=$IFS\t\t# Using BASH default ' \\t\\n'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:125
+#, no-wrap
+msgid ""
+"\tcase \"$#\" in\n"
+"\t3)\tcase \"$1\" in\n"
+"\t\t-of)\tof=1 ; shift ;;\n"
+"\t\t * )\treturn 1 ;;\n"
+"\t\tesac ;;\n"
+"\t2)\t: ;;\t\t# Poor man's \"continue\"\n"
+"\t*)\treturn 1 ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:130
+#, no-wrap
+msgid ""
+"\t# NOTE: the (ls) command is NOT quoted (\")\n"
+"\tT=( $(ls --inode --ignore-backups --almost-all --directory \\\n"
+"\t--full-time --color=none --time=status --sort=none \\\n"
+"\t--format=long $1) )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:139
+#, no-wrap
+msgid ""
+"\tcase $of in\n"
+"\t# Assign T back to the array whose name was passed as $2\n"
+"\t\t0) eval $2=\\( \\\"\\$\\{T\\[@\\]\\}\\\" \\) ;;\n"
+"\t# Write T into filename passed as $2\n"
+"\t\t1) echo \"${T[@]}\" > \"$2\" ;;\n"
+"\tesac\n"
+"\treturn 0\n"
+"   }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:144
+msgid ""
+"# # # # # Is that string a legal number? # # # # # # #\tIsNumber \"Var\" # # "
+"# # # There has to be a better way, sigh..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:156
+#, no-wrap
+msgid ""
+"IsNumber()\n"
+"{\n"
+"\tlocal -i int\n"
+"\tif [ $# -eq 0 ]\n"
+"\tthen\n"
+"\t\treturn 1\n"
+"\telse\n"
+"\t\t(let int=$1)  2>/dev/null\n"
+"\t\treturn $?\t# Exit status of the let thread\n"
+"\tfi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:165
+msgid ""
+"# # # # # Index Filesystem Directory Information # # # # # # #\tIndexList "
+"\"Field-Array-Name\" \"Index-Array-Name\" # or #\tIndexList -if "
+"Field-Array-Filename Index-Array-Name #\tIndexList -of Field-Array-Name "
+"Index-Array-Filename #\tIndexList -if -of Field-Array-Filename "
+"Index-Array-Filename # # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:168
+msgid ""
+": &lt;&lt;IndexListDoc Walk an array of directory fields produced by "
+"ListDirectory"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:171
+msgid ""
+"Having suppressed the line breaks in an otherwise line oriented report, "
+"build an index to the array element which starts each line."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:174
+msgid ""
+"Each line gets two index entries, the first element of each line (inode) and "
+"the element that holds the pathname of the file."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:178
+msgid ""
+"The first index entry pair (Line-Number==0) are informational: "
+"Index-Array-Name[0] : Number of \"Lines\" indexed Index-Array-Name[1] : "
+"\"Current Line\" pointer into Index-Array-Name"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:187
+msgid ""
+"The following index pairs (if any) hold element indexes into the "
+"Field-Array-Name per: Index-Array-Name[Line-Number * 2] : The \"inode\" "
+"field element.  NOTE: This distance may be either +11 or +12 elements.  "
+"Index-Array-Name[(Line-Number * 2) + 1] : The \"pathname\" element.  NOTE: "
+"This distance may be a variable number of elements.  Next line index pair "
+"for Line-Number+1.  IndexListDoc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:196
+#, no-wrap
+msgid ""
+"IndexList()\n"
+"{\n"
+"\tlocal -a LIST\t\t\t# Local of listname passed\n"
+"\tlocal -a -i INDEX=( 0 0 )\t# Local of index to return\n"
+"\tlocal -i Lidx Lcnt\n"
+"\tlocal -i if=0 of=0\t\t# Default to variable names\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:209
+#, no-wrap
+msgid ""
+"\tcase \"$#\" in\t\t\t# Simplistic option testing\n"
+"\t\t0) return 1 ;;\n"
+"\t\t1) return 1 ;;\n"
+"\t\t2) : ;;\t\t\t# Poor man's continue\n"
+"\t\t3) case \"$1\" in\n"
+"\t\t\t-if) if=1 ;;\n"
+"\t\t\t-of) of=1 ;;\n"
+"\t\t\t * ) return 1 ;;\n"
+"\t\t   esac ; shift ;;\n"
+"\t\t4) if=1 ; of=1 ; shift ; shift ;;\n"
+"\t\t*) return 1\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:215
+#, no-wrap
+msgid ""
+"\t# Make local copy of list\n"
+"\tcase \"$if\" in\n"
+"\t\t0) eval LIST=\\( \\\"\\$\\{$1\\[@\\]\\}\\\" \\) ;;\n"
+"\t\t1) LIST=( $(cat $1) ) ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:253
+#, no-wrap
+msgid ""
+"\t# Grok (grope?) the array\n"
+"\tLcnt=${#LIST[@]}\n"
+"\tLidx=0\n"
+"\tuntil (( Lidx >= Lcnt ))\n"
+"\tdo\n"
+"\tif IsNumber ${LIST[$Lidx]}\n"
+"\tthen\n"
+"\t\tlocal -i inode name\n"
+"\t\tlocal ft\n"
+"\t\tinode=Lidx\n"
+"\t\tlocal m=${LIST[$Lidx+2]}\t# Hard Links field\n"
+"\t\tft=${LIST[$Lidx+1]:0:1} \t# Fast-Stat\n"
+"\t\tcase $ft in\n"
+"\t\tb)\t((Lidx+=12)) ;;\t\t# Block device\n"
+"\t\tc)\t((Lidx+=12)) ;;\t\t# Character device\n"
+"\t\t*)\t((Lidx+=11)) ;;\t\t# Anything else\n"
+"\t\tesac\n"
+"\t\tname=Lidx\n"
+"\t\tcase $ft in\n"
+"\t\t-)\t((Lidx+=1)) ;;\t\t# The easy one\n"
+"\t\tb)\t((Lidx+=1)) ;;\t\t# Block device\n"
+"\t\tc)\t((Lidx+=1)) ;;\t\t# Character device\n"
+"\t\td)\t((Lidx+=1)) ;;\t\t# The other easy one\n"
+"\t\tl)\t((Lidx+=3)) ;;\t\t# At LEAST two more fields\n"
+"#  A little more elegance here would handle pipes,\n"
+"#+ sockets, deleted files - later.\n"
+"\t\t*)\tuntil IsNumber ${LIST[$Lidx]} || ((Lidx >= Lcnt))\n"
+"\t\t\tdo\n"
+"\t\t\t\t((Lidx+=1))\n"
+"\t\t\tdone\n"
+"\t\t\t;;\t\t\t# Not required\n"
+"\t\tesac\n"
+"\t\tINDEX[${#INDEX[*]}]=$inode\n"
+"\t\tINDEX[${#INDEX[*]}]=$name\n"
+"\t\tINDEX[0]=${INDEX[0]}+1\t\t# One more \"line\" found\n"
+"# echo \"Line: ${INDEX[0]} Type: $ft Links: $m Inode: \\\n"
+"# ${LIST[$inode]} Name: ${LIST[$name]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:264
+#, no-wrap
+msgid ""
+"\telse\n"
+"\t\t((Lidx+=1))\n"
+"\tfi\n"
+"\tdone\n"
+"\tcase \"$of\" in\n"
+"\t\t0) eval $2=\\( \\\"\\$\\{INDEX\\[@\\]\\}\\\" \\) ;;\n"
+"\t\t1) echo \"${INDEX[@]}\" > \"$2\" ;;\n"
+"\tesac\n"
+"\treturn 0\t\t\t\t# What could go wrong?\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:271
+msgid ""
+"# # # # # Content Identify File # # # # # # #\tDigestFile Input-Array-Name "
+"Digest-Array-Name # or #\tDigestFile -if Input-FileName Digest-Array-Name # "
+"# # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:274
+msgid "# Here document used as a comment block.  : &lt;&lt;DigestFilesDoc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:278
+msgid ""
+"The key (no pun intended) to a Unified Content File System (UCFS)  is to "
+"distinguish the files in the system based on their content.  Distinguishing "
+"files by their name is just so 20th Century."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:286
+msgid ""
+"The content is distinguished by computing a checksum of that content.  This "
+"version uses the md5sum program to generate a 128 bit checksum "
+"representative of the file's contents.  There is a chance that two files "
+"having different content might generate the same checksum using md5sum (or "
+"any checksum).  Should that become a problem, then the use of md5sum can be "
+"replace by a cyrptographic signature.  But until then..."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:295
+#, no-wrap
+msgid ""
+"The md5sum program is documented as outputting three fields (and it\n"
+"does), but when read it appears as two fields (array elements).  This\n"
+"is caused by the lack of whitespace between the second and third field.\n"
+"So this function gropes the md5sum output and returns:\n"
+"\t[0]\t32 character checksum in hexidecimal (UCFS filename)\n"
+"\t[1]\tSingle character: ' ' text file, '*' binary file\n"
+"\t[2]\tFilesystem (20th Century Style) name\n"
+"\tNote: That name may be the character '-' indicating STDIN read.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:297
+msgid "DigestFilesDoc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:304
+#, no-wrap
+msgid ""
+"DigestFile()\n"
+"{\n"
+"\tlocal if=0\t\t# Default, variable name\n"
+"\tlocal -a T1 T2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:313
+#, no-wrap
+msgid ""
+"\tcase \"$#\" in\n"
+"\t3)\tcase \"$1\" in\n"
+"\t\t-if)\tif=1 ; shift ;;\n"
+"\t\t * )\treturn 1 ;;\n"
+"\t\tesac ;;\n"
+"\t2)\t: ;;\t\t# Poor man's \"continue\"\n"
+"\t*)\treturn 1 ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:321
+#, no-wrap
+msgid ""
+"\tcase $if in\n"
+"\t0) eval T1=\\( \\\"\\$\\{$1\\[@\\]\\}\\\" \\)\n"
+"\t   T2=( $(echo ${T1[@]} | md5sum -) )\n"
+"\t   ;;\n"
+"\t1) T2=( $(md5sum $1) )\n"
+"\t   ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:337
+#, no-wrap
+msgid ""
+"\tcase ${#T2[@]} in\n"
+"\t0) return 1 ;;\n"
+"\t1) return 1 ;;\n"
+"\t2) case ${T2[1]:0:1} in\t\t# SanScrit-2.0.5\n"
+"\t   \\*) T2[${#T2[@]}]=${T2[1]:1}\n"
+"\t       T2[1]=\\*\n"
+"\t       ;;\n"
+"\t    *) T2[${#T2[@]}]=${T2[1]}\n"
+"\t       T2[1]=\" \"\n"
+"\t       ;;\n"
+"\t   esac\n"
+"\t   ;;\n"
+"\t3) : ;; # Assume it worked\n"
+"\t*) return 1 ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:342
+#, no-wrap
+msgid ""
+"\tlocal -i len=${#T2[0]}\n"
+"\tif [ $len -ne 32 ] ; then return 1 ; fi\n"
+"\teval $2=\\( \\\"\\$\\{T2\\[@\\]\\}\\\" \\)\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:349
+msgid ""
+"# # # # # Locate File # # # # # # #\tLocateFile [-l] FileName "
+"Location-Array-Name # or #\tLocateFile [-l] -of FileName "
+"Location-Array-FileName # # # # #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:351
+msgid "# A file location is Filesystem-id and inode-number"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:397
+#, no-wrap
+msgid ""
+"# Here document used as a comment block.\n"
+": &lt;&lt;StatFieldsDoc\n"
+"\tBased on stat, version 2.2\n"
+"\tstat -t and stat -lt fields\n"
+"\t[0]\tname\n"
+"\t[1]\tTotal size\n"
+"\t\tFile - number of bytes\n"
+"\t\tSymbolic link - string length of pathname\n"
+"\t[2]\tNumber of (512 byte) blocks allocated\n"
+"\t[3]\tFile type and Access rights (hex)\n"
+"\t[4]\tUser ID of owner\n"
+"\t[5]\tGroup ID of owner\n"
+"\t[6]\tDevice number\n"
+"\t[7]\tInode number\n"
+"\t[8]\tNumber of hard links\n"
+"\t[9]\tDevice type (if inode device) Major\n"
+"\t[10]\tDevice type (if inode device) Minor\n"
+"\t[11]\tTime of last access\n"
+"\t\tMay be disabled in 'mount' with noatime\n"
+"\t\tatime of files changed by exec, read, pipe, utime, mknod (mmap?)\n"
+"\t\tatime of directories changed by addition/deletion of files\n"
+"\t[12]\tTime of last modification\n"
+"\t\tmtime of files changed by write, truncate, utime, mknod\n"
+"\t\tmtime of directories changed by addtition/deletion of files\n"
+"\t[13]\tTime of last change\n"
+"\t\tctime reflects time of changed inode information (owner, group\n"
+"\t\tpermissions, link count\n"
+"-*-*- Per:\n"
+"\tReturn code: 0\n"
+"\tSize of array: 14\n"
+"\tContents of array\n"
+"\tElement 0: /home/mszick\n"
+"\tElement 1: 4096\n"
+"\tElement 2: 8\n"
+"\tElement 3: 41e8\n"
+"\tElement 4: 500\n"
+"\tElement 5: 500\n"
+"\tElement 6: 303\n"
+"\tElement 7: 32385\n"
+"\tElement 8: 22\n"
+"\tElement 9: 0\n"
+"\tElement 10: 0\n"
+"\tElement 11: 1051221030\n"
+"\tElement 12: 1051214068\n"
+"\tElement 13: 1051214068\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:401
+#, no-wrap
+msgid ""
+"\tFor a link in the form of linkname -> realname\n"
+"\tstat -t  linkname returns the linkname (link) information\n"
+"\tstat -lt linkname returns the realname information\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:412
+#, no-wrap
+msgid ""
+"\tstat -tf and stat -ltf fields\n"
+"\t[0]\tname\n"
+"\t[1]\tID-0?\t\t# Maybe someday, but Linux stat structure\n"
+"\t[2]\tID-0?\t\t# does not have either LABEL nor UUID\n"
+"\t\t\t\t# fields, currently information must come\n"
+"\t\t\t\t# from file-system specific utilities\n"
+"\tThese will be munged into:\n"
+"\t[1]\tUUID if possible\n"
+"\t[2]\tVolume Label if possible\n"
+"\tNote: 'mount -l' does return the label and could return the UUID\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:421
+#, no-wrap
+msgid ""
+"\t[3]\tMaximum length of filenames\n"
+"\t[4]\tFilesystem type\n"
+"\t[5]\tTotal blocks in the filesystem\n"
+"\t[6]\tFree blocks\n"
+"\t[7]\tFree blocks for non-root user(s)\n"
+"\t[8]\tBlock size of the filesystem\n"
+"\t[9]\tTotal inodes\n"
+"\t[10]\tFree inodes\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:437
+#, no-wrap
+msgid ""
+"-*-*- Per:\n"
+"\tReturn code: 0\n"
+"\tSize of array: 11\n"
+"\tContents of array\n"
+"\tElement 0: /home/mszick\n"
+"\tElement 1: 0\n"
+"\tElement 2: 0\n"
+"\tElement 3: 255\n"
+"\tElement 4: ef53\n"
+"\tElement 5: 2581445\n"
+"\tElement 6: 2277180\n"
+"\tElement 7: 2146050\n"
+"\tElement 8: 4096\n"
+"\tElement 9: 1311552\n"
+"\tElement 10: 1276425\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:439
+msgid "StatFieldsDoc"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:443
+msgid ""
+"#\tLocateFile [-l] FileName Location-Array-Name #\tLocateFile [-l] -of "
+"FileName Location-Array-FileName"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:448
+#, no-wrap
+msgid ""
+"LocateFile()\n"
+"{\n"
+"\tlocal -a LOC LOC1 LOC2\n"
+"\tlocal lk=\"\" of=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:463
+#, no-wrap
+msgid ""
+"\tcase \"$#\" in\n"
+"\t0) return 1 ;;\n"
+"\t1) return 1 ;;\n"
+"\t2) : ;;\n"
+"\t*) while (( \"$#\" > 2 ))\n"
+"\t   do\n"
+"\t      case \"$1\" in\n"
+"\t       -l) lk=-1 ;;\n"
+"\t      -of) of=1 ;;\n"
+"\t        *) return 1 ;;\n"
+"\t      esac\n"
+"\t   shift\n"
+"           done ;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:470
+#, no-wrap
+msgid ""
+"# More Sanscrit-2.0.5\n"
+"      # LOC1=( $(stat -t $lk $1) )\n"
+"      # LOC2=( $(stat -tf $lk $1) )\n"
+"      # Uncomment above two lines if system has \"stat\" command "
+"installed.\n"
+"\tLOC=( ${LOC1[@]:0:1} ${LOC1[@]:3:11}\n"
+"\t      ${LOC2[@]:1:2} ${LOC2[@]:4:1} )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:497
+#, no-wrap
+msgid ""
+"\tcase \"$of\" in\n"
+"\t\t0) eval $2=\\( \\\"\\$\\{LOC\\[@\\]\\}\\\" \\) ;;\n"
+"\t\t1) echo \"${LOC[@]}\" > \"$2\" ;;\n"
+"\tesac\n"
+"\treturn 0\n"
+"# Which yields (if you are lucky, and have \"stat\" installed)\n"
+"# -*-*- Location Discriptor -*-*-\n"
+"#\tReturn code: 0\n"
+"#\tSize of array: 15\n"
+"#\tContents of array\n"
+"#\tElement 0: /home/mszick\t\t20th Century name\n"
+"#\tElement 1: 41e8\t\t\tType and Permissions\n"
+"#\tElement 2: 500\t\t\tUser\n"
+"#\tElement 3: 500\t\t\tGroup\n"
+"#\tElement 4: 303\t\t\tDevice\n"
+"#\tElement 5: 32385\t\tinode\n"
+"#\tElement 6: 22\t\t\tLink count\n"
+"#\tElement 7: 0\t\t\tDevice Major\n"
+"#\tElement 8: 0\t\t\tDevice Minor\n"
+"#\tElement 9: 1051224608\t\tLast Access\n"
+"#\tElement 10: 1051214068\t\tLast Modify\n"
+"#\tElement 11: 1051214068\t\tLast Status\n"
+"#\tElement 12: 0\t\t\tUUID (to be)\n"
+"#\tElement 13: 0\t\t\tVolume Label (to be)\n"
+"#\tElement 14: ef53\t\tFilesystem type\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:501
+msgid "# And then there was some test code"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:505
+#, no-wrap
+msgid ""
+"ListArray() # ListArray Name\n"
+"{\n"
+"\tlocal -a Ta\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:517
+#, no-wrap
+msgid ""
+"\teval Ta=\\( \\\"\\$\\{$1\\[@\\]\\}\\\" \\)\n"
+"\techo\n"
+"\techo \"-*-*- List of Array -*-*-\"\n"
+"\techo \"Size of array $1: ${#Ta[*]}\"\n"
+"\techo \"Contents of array $1:\"\n"
+"\tfor (( i=0 ; i&lt;${#Ta[*]} ; i++ ))\n"
+"\tdo\n"
+"\t    echo -e \"\\tElement $i: ${Ta[$i]}\"\n"
+"\tdone\n"
+"\treturn 0\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:522
+msgid ""
+"declare -a CUR_DIR # For small arrays ListDirectory \"${PWD}\" CUR_DIR "
+"ListArray CUR_DIR"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:526
+msgid ""
+"declare -a DIR_DIG DigestFile CUR_DIR DIR_DIG echo \"The new \\\"name\\\" "
+"(checksum) for ${CUR_DIR[9]} is ${DIR_DIG[0]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:531
+msgid ""
+"declare -a DIR_ENT # BIG_DIR # For really big arrays - use a temporary file "
+"in ramdisk # BIG-DIR # ListDirectory -of \"${CUR_DIR[11]}/*\" "
+"\"/tmpfs/junk2\" ListDirectory \"${CUR_DIR[11]}/*\" DIR_ENT"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:535
+msgid ""
+"declare -a DIR_IDX # BIG-DIR # IndexList -if \"/tmpfs/junk2\" DIR_IDX "
+"IndexList DIR_ENT DIR_IDX"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:543
+msgid ""
+"declare -a IDX_DIG # BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )  # BIG-DIR # "
+"DigestFile -if /tmpfs/junk2 IDX_DIG DigestFile DIR_ENT IDX_DIG # Small "
+"(should) be able to parallize IndexList &amp; DigestFile # Large (should) be "
+"able to parallize IndexList &amp; DigestFile &amp; the assignment echo \"The "
+"\\\"name\\\" (checksum) for the contents of ${PWD} is ${IDX_DIG[0]}\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:547
+msgid "declare -a FILE_LOC LocateFile ${PWD} FILE_LOC ListArray FILE_LOC"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/directory-info.sh:548
+msgid "exit 0"
+msgstr ""

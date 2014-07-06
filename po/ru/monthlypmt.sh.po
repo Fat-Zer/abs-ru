@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:3
+msgid "#!/bin/bash # monthlypmt.sh: Calculates monthly payment on a mortgage."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:11
+#, no-wrap
+msgid ""
+"#  This is a modification of code in the\n"
+"#+ \"mcalc\" (mortgage calculator) package,\n"
+"#+ by Jeff Schmidt\n"
+"#+ and\n"
+"#+ Mendel Cooper (yours truly, the ABS Guide author).\n"
+"#   http://www.ibiblio.org/pub/Linux/apps/financial/mcalc-1.6.tar.gz\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:15
+msgid ""
+"echo echo \"Given the principal, interest rate, and term of a mortgage,\" "
+"echo \"calculate the monthly payment.\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:17
+msgid "bottom=1.0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:25
+msgid ""
+"echo echo -n \"Enter principal (no commas) \" read principal echo -n \"Enter "
+"interest rate (percent) \" # If 12%, enter \"12\", not \".12\".  read "
+"interest_r echo -n \"Enter term (months) \" read term"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:30
+#, no-wrap
+msgid ""
+" interest_r=$(echo \"scale=9; $interest_r/100.0\" | bc) # Convert to "
+"decimal.\n"
+"                 #           ^^^^^^^^^^^^^^^^^  Divide by 100. \n"
+"                 # \"scale\" determines how many decimal places.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:32
+#, no-wrap
+msgid " interest_rate=$(echo \"scale=9; $interest_r/12 + 1.0\" | bc)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:37
+#, no-wrap
+msgid ""
+" top=$(echo \"scale=9; $principal*$interest_rate^$term\" | bc)\n"
+"          #           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+"          #           Standard formula for figuring interest.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:39
+#, no-wrap
+msgid " echo; echo \"Please be patient. This may take a while.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:49
+#, no-wrap
+msgid ""
+" let \"months = $term - 1\"\n"
+"# ==================================================================== \n"
+" for ((x=$months; x > 0; x--))\n"
+" do\n"
+"   bot=$(echo \"scale=9; $interest_rate^$x\" | bc)\n"
+"   bottom=$(echo \"scale=9; $bottom+$bot\" | bc)\n"
+"#  bottom = $(($bottom + $bot\"))\n"
+" done\n"
+"# ==================================================================== \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:53
+msgid ""
+"# -------------------------------------------------------------------- # "
+"Rick Boivie pointed out a more efficient implementation #+ of the above "
+"loop, which decreases computation time by 2/3."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:58
+#, no-wrap
+msgid ""
+"# for ((x=1; x &lt;= $months; x++))\n"
+"# do\n"
+"#   bottom=$(echo \"scale=9; $bottom * $interest_rate + 1\" | bc)\n"
+"# done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:62
+msgid ""
+"# And then he came up with an even more efficient alternative, #+ one that "
+"cuts down the run time by about 95%!"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:74
+#, no-wrap
+msgid ""
+"# bottom=`{\n"
+"#     echo \"scale=9; bottom=$bottom; interest_rate=$interest_rate\"\n"
+"#     for ((x=1; x &lt;= $months; x++))\n"
+"#     do\n"
+"#          echo 'bottom = bottom * interest_rate + 1'\n"
+"#     done\n"
+"#     echo 'bottom'\n"
+"#     } | bc`       # Embeds a 'for loop' within command substitution.\n"
+"# "
+"--------------------------------------------------------------------------\n"
+"#  On the other hand, Frank Wang suggests:\n"
+"#  bottom=$(echo \"scale=9; ($interest_rate^$term-1)/($interest_rate-1)\" | "
+"bc)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:82
+msgid ""
+"# Because . . .  # The algorithm behind the loop #+ is actually a sum of "
+"geometric proportion series.  # The sum formula is e0(1-q^n)/(1-q), #+ where "
+"e0 is the first element and q=e(n+1)/e(n)  #+ and n is the number of "
+"elements.  # "
+"--------------------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:87
+#, no-wrap
+msgid ""
+" # let \"payment = $top/$bottom\"\n"
+" payment=$(echo \"scale=2; $top/$bottom\" | bc)\n"
+" # Use two decimal places for dollars and cents.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:91
+#, no-wrap
+msgid ""
+" echo\n"
+" echo \"monthly payment = \\$$payment\"  # Echo a dollar sign in front of "
+"amount.\n"
+" echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:94
+#, no-wrap
+msgid " exit 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/monthlypmt.sh:100
+#, no-wrap
+msgid ""
+" # Exercises:\n"
+" #   1) Filter input to permit commas in principal amount.\n"
+" #   2) Filter input to permit interest to be entered as percent or "
+"decimal.\n"
+" #   3) If you are really ambitious,\n"
+" #+     expand this script to print complete amortization tables.\n"
+msgstr ""

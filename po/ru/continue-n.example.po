@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/continue-n.example:3
+msgid ""
+"# Albert Reiner gives an example of how to use \"continue N\": # "
+"---------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:10
+msgid ""
+"# Suppose I have a large number of jobs that need to be run, with #+ any "
+"data that is to be treated in files of a given name pattern #+ in a "
+"directory. There are several machines that access #+ this directory, and I "
+"want to distribute the work over these #+ different boxen.  # Then I usually "
+"nohup something like the following on every box:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:29
+#, no-wrap
+msgid ""
+"while true\n"
+"do\n"
+"  for n in .iso.*\n"
+"  do\n"
+"    [ \"$n\" = \".iso.opts\" ] &amp;&amp; continue\n"
+"    beta=${n#.iso.}\n"
+"    [ -r .Iso.$beta ] &amp;&amp; continue\n"
+"    [ -r .lock.$beta ] &amp;&amp; sleep 10 &amp;&amp; continue\n"
+"    lockfile -r0 .lock.$beta || continue\n"
+"    echo -n \"$beta: \" `date`\n"
+"    run-isotherm $beta\n"
+"    date\n"
+"    ls -alF .Iso.$beta\n"
+"    [ -r .Iso.$beta ] &amp;&amp; rm -f .lock.$beta\n"
+"    continue 2\n"
+"  done\n"
+"  break\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:31
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:34
+msgid ""
+"# The details, in particular the sleep N, are particular to my #+ "
+"application, but the general pattern is:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:45
+#, no-wrap
+msgid ""
+"while true\n"
+"do\n"
+"  for job in {pattern}\n"
+"  do\n"
+"    {job already done or running} &amp;&amp; continue\n"
+"    {mark job as running, do job, mark job as done}\n"
+"    continue 2\n"
+"  done\n"
+"  break        # Or something like `sleep 600' to avoid termination.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/continue-n.example:56
+msgid ""
+"# This way the script will stop only when there are no more jobs to do #+ "
+"(including jobs that were added during runtime). Through the use #+ of "
+"appropriate lockfiles it can be run on several machines #+ concurrently "
+"without duplication of calculations [which run a couple #+ of hours in my "
+"case, so I really want to avoid this]. Also, as search #+ always starts "
+"again from the beginning, one can encode priorities in #+ the file names. Of "
+"course, one could also do this without `continue 2', #+ but then one would "
+"have to actually check whether or not some job #+ was done (so that we "
+"should immediately look for the next job) or not #+ (in which case we "
+"terminate or sleep for a long time before checking #+ for a new job)."
+msgstr ""

@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:3
+msgid "#!/bin/bash # Draw-box.sh: Drawing a box using ASCII characters."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:7
+msgid ""
+"# Script by Stefano Palmeri, with minor editing by document author.  # Minor "
+"edits suggested by Jim Angstadt.  # Used in the ABS Guide with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:11
+msgid ""
+"###################################################################### ### "
+"draw_box function doc ###"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:40
+#, no-wrap
+msgid ""
+"#  The \"draw_box\" function lets the user\n"
+"#+ draw a box in a terminal.       \n"
+"#\n"
+"#  Usage: draw_box ROW COLUMN HEIGHT WIDTH [COLOR] \n"
+"#  ROW and COLUMN represent the position        \n"
+"#+ of the upper left angle of the box you're going to draw.\n"
+"#  ROW and COLUMN must be greater than 0\n"
+"#+ and less than current terminal dimension.\n"
+"#  HEIGHT is the number of rows of the box, and must be > 0. \n"
+"#  HEIGHT + ROW must be &lt;= than current terminal height. \n"
+"#  WIDTH is the number of columns of the box and must be > 0.\n"
+"#  WIDTH + COLUMN must be &lt;= than current terminal width.\n"
+"#\n"
+"# E.g.: If your terminal dimension is 20x80,\n"
+"#  draw_box 2 3 10 45 is good\n"
+"#  draw_box 2 3 19 45 has bad HEIGHT value (19+2 > 20)\n"
+"#  draw_box 2 3 18 78 has bad WIDTH value (78+3 > 80)\n"
+"#\n"
+"#  COLOR is the color of the box frame.\n"
+"#  This is the 5th argument and is optional.\n"
+"#  0=black 1=red 2=green 3=tan 4=blue 5=purple 6=cyan 7=white.\n"
+"#  If you pass the function bad arguments,\n"
+"#+ it will just exit with code 65,\n"
+"#+ and no messages will be printed on stderr.\n"
+"#\n"
+"#  Clear the terminal before you start to draw a box.\n"
+"#  The clear command is not contained within the function.\n"
+"#  This allows the user to draw multiple boxes, even overlapping ones.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:43
+msgid ""
+"### end of draw_box function doc ### "
+"######################################################################"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:45
+msgid "draw_box(){"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:50
+msgid "#=============# HORZ=\"-\" VERT=\"|\" CORNER_CHAR=\"+\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:54
+msgid "MINARGS=4 E_BADARGS=65 #=============#"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:59
+#, no-wrap
+msgid ""
+"if [ $# -lt \"$MINARGS\" ]; then          # If args are less than 4, exit.\n"
+"    exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:65
+#, no-wrap
+msgid ""
+"# Looking for non digit chars in arguments.\n"
+"# Probably it could be done better (exercise for the reader?).\n"
+"if echo $@ | tr -d [:blank:] | tr -d [:digit:] | grep . &amp;> /dev/null; "
+"then\n"
+"   exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:70
+#, no-wrap
+msgid ""
+"BOX_HEIGHT=`expr $3 - 1`   #  -1 correction needed because angle char "
+"\"+\"\n"
+"BOX_WIDTH=`expr $4 - 1`    #+ is a part of both box height and width.\n"
+"T_ROWS=`tput lines`        #  Define current terminal dimension \n"
+"T_COLS=`tput cols`         #+ in rows and columns.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:86
+#, no-wrap
+msgid ""
+"if [ $1 -lt 1 ] || [ $1 -gt $T_ROWS ]; then    #  Start checking if "
+"arguments\n"
+"   exit $E_BADARGS                             #+ are correct.\n"
+"fi\n"
+"if [ $2 -lt 1 ] || [ $2 -gt $T_COLS ]; then\n"
+"   exit $E_BADARGS\n"
+"fi\n"
+"if [ `expr $1 + $BOX_HEIGHT + 1` -gt $T_ROWS ]; then\n"
+"   exit $E_BADARGS\n"
+"fi\n"
+"if [ `expr $2 + $BOX_WIDTH + 1` -gt $T_COLS ]; then\n"
+"   exit $E_BADARGS\n"
+"fi\n"
+"if [ $3 -lt 1 ] || [ $4 -lt 1 ]; then\n"
+"   exit $E_BADARGS\n"
+"fi                                 # End checking arguments.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:90
+#, no-wrap
+msgid ""
+"plot_char(){                       # Function within a function.\n"
+"   echo -e \"\\E[${1};${2}H\"$3\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:92
+#, no-wrap
+msgid "echo -ne \"\\E[3${5}m\"               # Set box frame color, if defined.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:94
+msgid "# start drawing the box"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:100
+#, no-wrap
+msgid ""
+"count=1                                         #  Draw vertical lines "
+"using\n"
+"for (( r=$1; count&lt;=$BOX_HEIGHT; r++)); do      #+ plot_char function.\n"
+"  plot_char $r $2 $VERT\n"
+"  let count=count+1\n"
+"done \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:107
+#, no-wrap
+msgid ""
+"count=1\n"
+"c=`expr $2 + $BOX_WIDTH`\n"
+"for (( r=$1; count&lt;=$BOX_HEIGHT; r++)); do\n"
+"  plot_char $r $c $VERT\n"
+"  let count=count+1\n"
+"done \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:113
+#, no-wrap
+msgid ""
+"count=1                                        #  Draw horizontal lines "
+"using\n"
+"for (( c=$2; count&lt;=$BOX_WIDTH; c++)); do      #+ plot_char function.\n"
+"  plot_char $1 $c $HORZ\n"
+"  let count=count+1\n"
+"done \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:120
+#, no-wrap
+msgid ""
+"count=1\n"
+"r=`expr $1 + $BOX_HEIGHT`\n"
+"for (( c=$2; count&lt;=$BOX_WIDTH; c++)); do\n"
+"  plot_char $r $c $HORZ\n"
+"  let count=count+1\n"
+"done \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:125
+#, no-wrap
+msgid ""
+"plot_char $1 $2 $CORNER_CHAR                   # Draw box angles.\n"
+"plot_char $1 `expr $2 + $BOX_WIDTH` $CORNER_CHAR\n"
+"plot_char `expr $1 + $BOX_HEIGHT` $2 $CORNER_CHAR\n"
+"plot_char `expr $1 + $BOX_HEIGHT` `expr $2 + $BOX_WIDTH` $CORNER_CHAR\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:127
+#, no-wrap
+msgid "echo -ne \"\\E[0m\"             #  Restore old colors.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:129
+#, no-wrap
+msgid "P_ROWS=`expr $T_ROWS - 1`    #  Put the prompt at bottom of the terminal.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:132
+#, no-wrap
+msgid ""
+"echo -e \"\\E[${P_ROWS};1H\"\n"
+"}      \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:142
+#, no-wrap
+msgid ""
+"# Now, let's try drawing a box.\n"
+"clear                       # Clear the terminal.\n"
+"R=2      # Row\n"
+"C=3      # Column\n"
+"H=10     # Height\n"
+"W=45     # Width \n"
+"col=1    # Color (red)\n"
+"draw_box $R $C $H $W $col   # Draw the box.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:144
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/Draw-box.sh:147
+msgid ""
+"# Exercise: # -------- # Add the option of printing text within the drawn "
+"box."
+msgstr ""

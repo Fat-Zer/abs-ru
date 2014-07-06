@@ -1,0 +1,1205 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/cdll:48
+#, no-wrap
+msgid ""
+"###########################################################################\n"
+"#\n"
+"#       cdll\n"
+"#       by Phil Braham\n"
+"#\n"
+"#       ############################################\n"
+"#       Latest version of this script available from\n"
+"#       http://freshmeat.net/projects/cd/\n"
+"#       ############################################\n"
+"#\n"
+"#       .cd_new\n"
+"#\n"
+"#       An enhancement of the Unix cd command\n"
+"#\n"
+"#       There are unlimited stack entries and special entries. The stack\n"
+"#       entries keep the last cd_maxhistory\n"
+"#       directories that have been used. The special entries can be\n"
+"#       assigned to commonly used directories.\n"
+"#\n"
+"#       The special entries may be pre-assigned by setting the environment\n"
+"#       variables CDSn or by using the -u or -U command.\n"
+"#\n"
+"#       The following is a suggestion for the .profile file:\n"
+"#\n"
+"#               . cdll              #  Set up the cd command\n"
+"#       alias cd='cd_new'           #  Replace the cd command\n"
+"#               cd -U               #  Upload pre-assigned entries for\n"
+"#                                   #+ the stack and special entries\n"
+"#               cd -D               #  Set non-default mode\n"
+"#               alias @=\"cd_new @\"  #  Allow @ to be used to get history\n"
+"#\n"
+"#       For help type:\n"
+"#\n"
+"#               cd -h or\n"
+"#               cd -H\n"
+"#\n"
+"#\n"
+"###########################################################################\n"
+"#\n"
+"#       Version 1.2.1\n"
+"#\n"
+"#       Written by Phil Braham - Realtime Software Pty Ltd\n"
+"#       (realtime@mpx.com.au)\n"
+"#       Please send any suggestions or enhancements to the author (also at\n"
+"#       phil@braham.net)\n"
+"#\n"
+"############################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:80
+#, no-wrap
+msgid ""
+"cd_hm ()\n"
+"{\n"
+"        ${PRINTF} \"%s\" \"cd [dir] [0-9] [@[s|h] [-g [&lt;dir&gt;]] [-d] "
+"\\\n"
+"[-D] [-r&lt;n&gt;] [dir|0-9] [-R&lt;n&gt;] [&lt;dir&gt;|0-9]\n"
+"   [-s&lt;n&gt;] [-S&lt;n&gt;] [-u] [-U] [-f] [-F] [-h] [-H] [-v]\n"
+"    &lt;dir&gt; Go to directory\n"
+"    0-n         Go to previous directory (0 is previous, 1 is last but 1 "
+"etc)\n"
+"                n is up to max history (default is 50)\n"
+"    @           List history and special entries\n"
+"    @h          List history entries\n"
+"    @s          List special entries\n"
+"    -g [&lt;dir&gt;]  Go to literal name (bypass special names)\n"
+"                This is to allow access to dirs called '0','1','-h' etc\n"
+"    -d          Change default action - verbose. (See note)\n"
+"    -D          Change default action - silent. (See note)\n"
+"    -s&lt;n&gt; Go to the special entry &lt;n&gt;*\n"
+"    -S&lt;n&gt; Go to the special entry &lt;n&gt;\n"
+"                and replace it with the current dir*\n"
+"    -r&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
+"                              and then put it on special entry &lt;n&gt;*\n"
+"    -R&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
+"                              and put current dir on special entry "
+"&lt;n&gt;*\n"
+"    -a&lt;n&gt;       Alternative suggested directory. See note below.\n"
+"    -f [&lt;file&gt;] File entries to &lt;file&gt;.\n"
+"    -u [&lt;file&gt;] Update entries from &lt;file&gt;.\n"
+"                If no filename supplied then default file\n"
+"                (${CDPath}${2:-\"$CDFile\"}) is used\n"
+"                -F and -U are silent versions\n"
+"    -v          Print version number\n"
+"    -h          Help\n"
+"    -H          Detailed help\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:83
+#, no-wrap
+msgid ""
+"    *The special entries (0 - 9) are held until log off, replaced by "
+"another\n"
+"     entry or updated with the -u command\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:91
+#, no-wrap
+msgid ""
+"    Alternative suggested directories:\n"
+"    If a directory is not found then CD will suggest any\n"
+"    possibilities. These are directories starting with the same letters\n"
+"    and if any are found they are listed prefixed with -a&lt;n&gt;\n"
+"    where &lt;n&gt; is a number.\n"
+"    It's possible to go to the directory by entering cd -a&lt;n&gt;\n"
+"    on the command line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:98
+#, no-wrap
+msgid ""
+"    The directory for -r&lt;n&gt; or -R&lt;n&gt; may be a number.\n"
+"    For example:\n"
+"        $ cd -r3 4  Go to history entry 4 and put it on special entry 3\n"
+"        $ cd -R3 4  Put current dir on the special entry 3\n"
+"                    and go to history entry 4\n"
+"        $ cd -s3    Go to special entry 3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:114
+#, no-wrap
+msgid ""
+"    Note that commands R,r,S and s may be used without a number\n"
+"    and refer to 0:\n"
+"        $ cd -s     Go to special entry 0\n"
+"        $ cd -S     Go to special entry 0 and make special\n"
+"                    entry 0 current dir\n"
+"        $ cd -r 1   Go to history entry 1 and put it on special entry 0\n"
+"        $ cd -r     Go to history entry 0 and put it on special entry 0\n"
+"    \"\n"
+"        if ${TEST} \"$CD_MODE\" = \"PREV\"\n"
+"        then\n"
+"                ${PRINTF} \"$cd_mnset\"\n"
+"        else\n"
+"                ${PRINTF} \"$cd_mset\"\n"
+"        fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:124
+#, no-wrap
+msgid ""
+"cd_Hm ()\n"
+"{\n"
+"        cd_hm\n"
+"        ${PRINTF} \"%s\" \"\n"
+"        The previous directories (0-$cd_maxhistory) are stored in the\n"
+"        environment variables CD[0] - CD[$cd_maxhistory]\n"
+"        Similarly the special directories S0 - $cd_maxspecial are in\n"
+"        the environment variable CDS[0] - CDS[$cd_maxspecial]\n"
+"        and may be accessed from the command line\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:127
+#, no-wrap
+msgid ""
+"        The default pathname for the -f and -u commands is $CDPath\n"
+"        The default filename for the -f and -u commands is $CDFile\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:147
+#, no-wrap
+msgid ""
+"        Set the following environment variables:\n"
+"            CDL_PROMPTLEN  - Set to the length of prompt you require.\n"
+"                Prompt string is set to the right characters of the\n"
+"                current directory.\n"
+"                If not set then prompt is left unchanged\n"
+"            CDL_PROMPT_PRE - Set to the string to prefix the prompt.\n"
+"                Default is:\n"
+"                    non-root:  \\\"\\\\[\\\\e[01;34m\\\\]\\\"  (sets colour "
+"to blue).\n"
+"                    root:      \\\"\\\\[\\\\e[01;31m\\\\]\\\"  (sets colour "
+"to red).\n"
+"            CDL_PROMPT_POST    - Set to the string to suffix the prompt.\n"
+"                Default is:\n"
+"                    non-root:  \\\"\\\\[\\\\e[00m\\\\]$\\\"\n"
+"                                (resets colour and displays $).\n"
+"                    root:      \\\"\\\\[\\\\e[00m\\\\]#\\\"\n"
+"                                (resets colour and displays #).\n"
+"            CDPath - Set the default path for the -f &amp; -u options.\n"
+"                     Default is home directory\n"
+"            CDFile - Set the default filename for the -f &amp; -u options.\n"
+"                     Default is cdfile\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:150
+#, no-wrap
+msgid ""
+"\"\n"
+"    cd_version\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:152
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:157
+#, no-wrap
+msgid ""
+"cd_version ()\n"
+"{\n"
+" printf \"Version: ${VERSION_MAJOR}.${VERSION_MINOR} Date: "
+"${VERSION_DATE}\\n\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:189
+#, no-wrap
+msgid ""
+"#\n"
+"# Truncate right.\n"
+"#\n"
+"# params:\n"
+"#   p1 - string\n"
+"#   p2 - length to truncate to\n"
+"#\n"
+"# returns string in tcd\n"
+"#\n"
+"cd_right_trunc ()\n"
+"{\n"
+"    local tlen=${2}\n"
+"    local plen=${#1}\n"
+"    local str=\"${1}\"\n"
+"    local diff\n"
+"    local filler=\"&lt;--\"\n"
+"    if ${TEST} ${plen} -le ${tlen}\n"
+"    then\n"
+"        tcd=\"${str}\"\n"
+"    else\n"
+"        let diff=${plen}-${tlen}\n"
+"        elen=3\n"
+"        if ${TEST} ${diff} -le 2\n"
+"        then\n"
+"            let elen=${diff}\n"
+"        fi\n"
+"        tlen=-${tlen}\n"
+"        let tlen=${tlen}+${elen}\n"
+"        tcd=${filler:0:elen}${str:tlen}\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:205
+#, no-wrap
+msgid ""
+"#\n"
+"# Three versions of do history:\n"
+"#    cd_dohistory  - packs history and specials side by side\n"
+"#    cd_dohistoryH - Shows only hstory\n"
+"#    cd_dohistoryS - Shows only specials\n"
+"#\n"
+"cd_dohistory ()\n"
+"{\n"
+"    cd_getrc\n"
+"        ${PRINTF} \"History:\\n\"\n"
+"    local -i count=${cd_histcount}\n"
+"    while ${TEST} ${count} -ge 0\n"
+"    do\n"
+"        cd_right_trunc \"${CD[count]}\" ${cd_lchar}\n"
+"            ${PRINTF} \"%2d %-${cd_lchar}.${cd_lchar}s \" ${count} "
+"\"${tcd}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:211
+#, no-wrap
+msgid ""
+"        cd_right_trunc \"${CDS[count]}\" ${cd_rchar}\n"
+"            ${PRINTF} \"S%d %-${cd_rchar}.${cd_rchar}s\\n\" ${count} "
+"\"${tcd}\"\n"
+"        count=${count}-1\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:223
+#, no-wrap
+msgid ""
+"cd_dohistoryH ()\n"
+"{\n"
+"    cd_getrc\n"
+"        ${PRINTF} \"History:\\n\"\n"
+"        local -i count=${cd_maxhistory}\n"
+"        while ${TEST} ${count} -ge 0\n"
+"        do\n"
+"          ${PRINTF} \"${count} %-${cd_flchar}.${cd_flchar}s\\n\" "
+"${CD[$count]}\n"
+"          count=${count}-1\n"
+"        done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:235
+#, no-wrap
+msgid ""
+"cd_dohistoryS ()\n"
+"{\n"
+"    cd_getrc\n"
+"        ${PRINTF} \"Specials:\\n\"\n"
+"        local -i count=${cd_maxspecial}\n"
+"        while ${TEST} ${count} -ge 0\n"
+"        do\n"
+"          ${PRINTF} \"S${count} %-${cd_flchar}.${cd_flchar}s\\n\" "
+"${CDS[$count]}\n"
+"          count=${count}-1\n"
+"        done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:252
+#, no-wrap
+msgid ""
+"cd_getrc ()\n"
+"{\n"
+"    cd_flchar=$(stty -a | awk -F \\;\n"
+"    '/rows/ { print $2 $3 }' | awk -F \\  '{ print $4 }')\n"
+"    if ${TEST} ${cd_flchar} -ne 0\n"
+"    then\n"
+"        cd_lchar=${cd_flchar}/2-5\n"
+"        cd_rchar=${cd_flchar}/2-5\n"
+"            cd_flchar=${cd_flchar}-5\n"
+"    else\n"
+"            cd_flchar=${FLCHAR:=75}\n"
+"\t    # cd_flchar is used for for the @s &amp; @h history\n"
+"            cd_lchar=${LCHAR:=35}\n"
+"            cd_rchar=${RCHAR:=35}\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:277
+#, no-wrap
+msgid ""
+"cd_doselection ()\n"
+"{\n"
+"        local -i nm=0\n"
+"        cd_doflag=\"TRUE\"\n"
+"        if ${TEST} \"${CD_MODE}\" = \"PREV\"\n"
+"        then\n"
+"                if ${TEST} -z \"$cd_npwd\"\n"
+"                then\n"
+"                        cd_npwd=0\n"
+"                fi\n"
+"        fi\n"
+"        tm=$(echo \"${cd_npwd}\" | cut -b 1)\n"
+"    if ${TEST} \"${tm}\" = \"-\"\n"
+"    then\n"
+"        pm=$(echo \"${cd_npwd}\" | cut -b 2)\n"
+"        nm=$(echo \"${cd_npwd}\" | cut -d $pm -f2)\n"
+"        case \"${pm}\" in\n"
+"             a) cd_npwd=${cd_sugg[$nm]} ;;\n"
+"             s) cd_npwd=\"${CDS[$nm]}\" ;;\n"
+"             S) cd_npwd=\"${CDS[$nm]}\" ; CDS[$nm]=`pwd` ;;\n"
+"             r) cd_npwd=\"$2\" ; cd_specDir=$nm ; cd_doselection \"$1\" "
+"\"$2\";;\n"
+"             R) cd_npwd=\"$2\" ; CDS[$nm]=`pwd` ; cd_doselection \"$1\" "
+"\"$2\";;\n"
+"        esac\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:304
+#, no-wrap
+msgid ""
+"    if ${TEST} \"${cd_npwd}\" != \".\" -a \"${cd_npwd}\" \\\n"
+"!= \"..\" -a \"${cd_npwd}\" -le ${cd_maxhistory} >>/dev/null 2>&amp;1\n"
+"    then\n"
+"      cd_npwd=${CD[$cd_npwd]}\n"
+"     else\n"
+"       case \"$cd_npwd\" in\n"
+"                @)  cd_dohistory ; cd_doflag=\"FALSE\" ;;\n"
+"               @h) cd_dohistoryH ; cd_doflag=\"FALSE\" ;;\n"
+"               @s) cd_dohistoryS ; cd_doflag=\"FALSE\" ;;\n"
+"               -h) cd_hm ; cd_doflag=\"FALSE\" ;;\n"
+"               -H) cd_Hm ; cd_doflag=\"FALSE\" ;;\n"
+"               -f) cd_fsave \"SHOW\" $2 ; cd_doflag=\"FALSE\" ;;\n"
+"               -u) cd_upload \"SHOW\" $2 ; cd_doflag=\"FALSE\" ;;\n"
+"               -F) cd_fsave \"NOSHOW\" $2 ; cd_doflag=\"FALSE\" ;;\n"
+"               -U) cd_upload \"NOSHOW\" $2 ; cd_doflag=\"FALSE\" ;;\n"
+"               -g) cd_npwd=\"$2\" ;;\n"
+"               -d) cd_chdefm 1; cd_doflag=\"FALSE\" ;;\n"
+"               -D) cd_chdefm 0; cd_doflag=\"FALSE\" ;;\n"
+"               -r) cd_npwd=\"$2\" ; cd_specDir=0 ; cd_doselection \"$1\" "
+"\"$2\";;\n"
+"               -R) cd_npwd=\"$2\" ; CDS[0]=`pwd` ; cd_doselection \"$1\" "
+"\"$2\";;\n"
+"               -s) cd_npwd=\"${CDS[0]}\" ;;\n"
+"               -S) cd_npwd=\"${CDS[0]}\"  ; CDS[0]=`pwd` ;;\n"
+"               -v) cd_version ; cd_doflag=\"FALSE\";;\n"
+"       esac\n"
+"    fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:322
+#, no-wrap
+msgid ""
+"cd_chdefm ()\n"
+"{\n"
+"        if ${TEST} \"${CD_MODE}\" = \"PREV\"\n"
+"        then\n"
+"                CD_MODE=\"\"\n"
+"                if ${TEST} $1 -eq 1\n"
+"                then\n"
+"                        ${PRINTF} \"${cd_mset}\"\n"
+"                fi\n"
+"        else\n"
+"                CD_MODE=\"PREV\"\n"
+"                if ${TEST} $1 -eq 1\n"
+"                then\n"
+"                        ${PRINTF} \"${cd_mnset}\"\n"
+"                fi\n"
+"        fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:344
+#, no-wrap
+msgid ""
+"cd_fsave ()\n"
+"{\n"
+"        local sfile=${CDPath}${2:-\"$CDFile\"}\n"
+"        if ${TEST} \"$1\" = \"SHOW\"\n"
+"        then\n"
+"                ${PRINTF} \"Saved to %s\\n\" $sfile\n"
+"        fi\n"
+"        ${RM} -f ${sfile}\n"
+"        local -i count=0\n"
+"        while ${TEST} ${count} -le ${cd_maxhistory}\n"
+"        do\n"
+"                echo \"CD[$count]=\\\"${CD[$count]}\\\"\" >> ${sfile}\n"
+"                count=${count}+1\n"
+"        done\n"
+"        count=0\n"
+"        while ${TEST} ${count} -le ${cd_maxspecial}\n"
+"        do\n"
+"                echo \"CDS[$count]=\\\"${CDS[$count]}\\\"\" >> ${sfile}\n"
+"                count=${count}+1\n"
+"        done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:354
+#, no-wrap
+msgid ""
+"cd_upload ()\n"
+"{\n"
+"        local sfile=${CDPath}${2:-\"$CDFile\"}\n"
+"        if ${TEST} \"${1}\" = \"SHOW\"\n"
+"        then\n"
+"                ${PRINTF} \"Loading from %s\\n\" ${sfile}\n"
+"        fi\n"
+"        . ${sfile}\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:359
+#, no-wrap
+msgid ""
+"cd_new ()\n"
+"{\n"
+"    local -i count\n"
+"    local -i choose=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:363
+#, no-wrap
+msgid ""
+"        cd_npwd=\"${1}\"\n"
+"        cd_specDir=-1\n"
+"        cd_doselection \"${1}\" \"${2}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:397
+#, no-wrap
+msgid ""
+"        if ${TEST} ${cd_doflag} = \"TRUE\"\n"
+"        then\n"
+"                if ${TEST} \"${CD[0]}\" != \"`pwd`\"\n"
+"                then\n"
+"                        count=$cd_maxhistory\n"
+"                        while ${TEST} $count -gt 0\n"
+"                        do\n"
+"                                CD[$count]=${CD[$count-1]}\n"
+"                                count=${count}-1\n"
+"                        done\n"
+"                        CD[0]=`pwd`\n"
+"                fi\n"
+"                command cd \"${cd_npwd}\" 2>/dev/null\n"
+"        if ${TEST} $? -eq 1\n"
+"        then\n"
+"            ${PRINTF} \"Unknown dir: %s\\n\" \"${cd_npwd}\"\n"
+"            local -i ftflag=0\n"
+"            for i in \"${cd_npwd}\"*\n"
+"            do\n"
+"                if ${TEST} -d \"${i}\"\n"
+"                then\n"
+"                    if ${TEST} ${ftflag} -eq 0\n"
+"                    then\n"
+"                        ${PRINTF} \"Suggest:\\n\"\n"
+"                        ftflag=1\n"
+"                fi\n"
+"                    ${PRINTF} \"\\t-a${choose} %s\\n\" \"$i\"\n"
+"                                        cd_sugg[$choose]=\"${i}\"\n"
+"                    choose=${choose}+1\n"
+"        fi\n"
+"            done\n"
+"        fi\n"
+"        fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:402
+#, no-wrap
+msgid ""
+"        if ${TEST} ${cd_specDir} -ne -1\n"
+"        then\n"
+"                CDS[${cd_specDir}]=`pwd`\n"
+"        fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:426
+#, no-wrap
+msgid ""
+"        if ${TEST} ! -z \"${CDL_PROMPTLEN}\"\n"
+"        then\n"
+"        cd_right_trunc \"${PWD}\" ${CDL_PROMPTLEN}\n"
+"            cd_rp=${CDL_PROMPT_PRE}${tcd}${CDL_PROMPT_POST}\n"
+"                export PS1=\"$(echo -ne ${cd_rp})\"\n"
+"        fi\n"
+"}\n"
+"#########################################################################\n"
+"#                                                                       #\n"
+"#                        Initialisation here                            #\n"
+"#                                                                       #\n"
+"#########################################################################\n"
+"#\n"
+"VERSION_MAJOR=\"1\"\n"
+"VERSION_MINOR=\"2.1\"\n"
+"VERSION_DATE=\"24-MAY-2003\"\n"
+"#\n"
+"alias cd=cd_new\n"
+"#\n"
+"# Set up commands\n"
+"RM=/bin/rm\n"
+"TEST=test\n"
+"PRINTF=printf              # Use builtin printf\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:446
+#, no-wrap
+msgid ""
+"#########################################################################\n"
+"#                                                                       #\n"
+"# Change this to modify the default pre- and post prompt strings.       #\n"
+"# These only come into effect if CDL_PROMPTLEN is set.                  #\n"
+"#                                                                       #\n"
+"#########################################################################\n"
+"if ${TEST} ${EUID} -eq 0\n"
+"then\n"
+"#   CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"$HOSTNAME@\"}\n"
+"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;31m\\\\]\"}  # Root is "
+"in red\n"
+"    CDL_PROMPT_POST=${CDL_PROMPT_POST:=\"\\\\[\\\\e[00m\\\\]#\"}\n"
+"else\n"
+"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;34m\\\\]\"}  # Users in "
+"blue\n"
+"    CDL_PROMPT_POST=${CDL_PROMPT_POST:=\"\\\\[\\\\e[00m\\\\]$\"}\n"
+"fi\n"
+"#########################################################################\n"
+"#\n"
+"# cd_maxhistory defines the max number of history entries allowed.\n"
+"typeset -i cd_maxhistory=50\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:470
+#, no-wrap
+msgid ""
+"#########################################################################\n"
+"#\n"
+"# cd_maxspecial defines the number of special entries.\n"
+"typeset -i cd_maxspecial=9\n"
+"#\n"
+"#\n"
+"#########################################################################\n"
+"#\n"
+"#  cd_histcount defines the number of entries displayed in\n"
+"#+ the history command.\n"
+"typeset -i cd_histcount=9\n"
+"#\n"
+"#########################################################################\n"
+"export CDPath=${HOME}/\n"
+"#  Change these to use a different                                      #\n"
+"#+ default path and filename                                            #\n"
+"export CDFile=${CDFILE:=cdfile}           # for the -u and -f commands  #\n"
+"#\n"
+"#########################################################################\n"
+"                                                                        #\n"
+"typeset -i cd_lchar cd_rchar cd_flchar\n"
+"                        #  This is the number of chars to allow for the #\n"
+"cd_flchar=${FLCHAR:=75} #+ cd_flchar is used for for the @s &amp; @h "
+"history#\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:479
+msgid ""
+"typeset -ax CD CDS # cd_mset=\"\\n\\tDefault mode is now set - entering cd "
+"with no parameters \\ has the default action\\n\\tUse cd -d or -D for cd to "
+"go to \\ previous directory with no parameters\\n\" "
+"cd_mnset=\"\\n\\tNon-default mode is now set - entering cd with no \\ "
+"parameters is the same as entering cd 0\\n\\tUse cd -d or \\ -D to change "
+"default cd action\\n\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:481
+msgid "# ==================================================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:485
+msgid ": &lt;&lt;DOCUMENTATION"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:489
+msgid ""
+"Written by Phil Braham. Realtime Software Pty Ltd.  Released under GNU "
+"license. Free to use. Please pass any modifications or comments to the "
+"author Phil Braham:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:491
+#, no-wrap
+msgid ""
+"realtime@mpx.com.au\n"
+"=======================================================================\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:495
+msgid ""
+"cdll is a replacement for cd and incorporates similar functionality to the "
+"bash pushd and popd commands but is independent of them."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:499
+msgid ""
+"This version of cdll has been tested on Linux using Bash. It will work on "
+"most Linux versions but will probably not work on other shells without "
+"modification."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:501
+#, no-wrap
+msgid ""
+"Introduction\n"
+"============\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:508
+msgid ""
+"cdll allows easy moving about between directories. When changing to a new "
+"directory the current one is automatically put onto a stack. By default 50 "
+"entries are kept, but this is configurable. Special directories can be kept "
+"for easy access - by default up to 10, but this is configurable. The most "
+"recent stack entries and the special entries can be easily viewed."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:512
+msgid ""
+"The directory stack and special entries can be saved to, and loaded from, a "
+"file. This allows them to be set up on login, saved before logging out or "
+"changed when moving project to project."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:516
+msgid ""
+"In addition, cdll provides a flexible command prompt facility that allows, "
+"for example, a directory name in colour that is truncated from the left if "
+"it gets too long."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:519
+#, no-wrap
+msgid ""
+"Setting up cdll\n"
+"===============\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:523
+msgid ""
+"Copy cdll to either your local home directory or a central directory such as "
+"/usr/bin (this will require root access)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:527
+msgid ""
+"Copy the file cdfile to your home directory. It will require read and write "
+"access. This a default file that contains a directory stack and special "
+"entries."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:530
+msgid ""
+"To replace the cd command you must add commands to your login script.  The "
+"login script is one or more of:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:537
+#, no-wrap
+msgid ""
+"    /etc/profile\n"
+"    ~/.bash_profile\n"
+"    ~/.bash_login\n"
+"    ~/.profile\n"
+"    ~/.bashrc\n"
+"    /etc/bash.bashrc.local\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:540
+msgid ""
+"To setup your login, ~/.bashrc is recommended, for global (and root) setup "
+"add the commands to /etc/bash.bashrc.local"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:547
+#, no-wrap
+msgid ""
+"To set up on login, add the command:\n"
+"    . &lt;dir&gt;/cdll\n"
+"For example if cdll is in your local home directory:\n"
+"    . ~/cdll\n"
+"If in /usr/bin then:\n"
+"    . /usr/bin/cdll\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:554
+#, no-wrap
+msgid ""
+"If you want to use this instead of the buitin cd command then add:\n"
+"    alias cd='cd_new'\n"
+"We would also recommend the following commands:\n"
+"    alias @='cd_new @'\n"
+"    cd -U\n"
+"    cd -D\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:559
+#, no-wrap
+msgid ""
+"If you want to use cdll's prompt facilty then add the following:\n"
+"    CDL_PROMPTLEN=nn\n"
+"Where nn is a number described below. Initially 99 would be suitable\n"
+"number.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:561
+msgid "Thus the script looks something like this:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:572
+#, no-wrap
+msgid ""
+"    ######################################################################\n"
+"    # CD Setup\n"
+"    ######################################################################\n"
+"    CDL_PROMPTLEN=21        # Allow a prompt length of up to 21 characters\n"
+"    . /usr/bin/cdll         # Initialise cdll\n"
+"    alias cd='cd_new'       # Replace the built in cd command\n"
+"    alias @='cd_new @'      # Allow @ at the prompt to display history\n"
+"    cd -U                   # Upload directories\n"
+"    cd -D                   # Set default action to non-posix\n"
+"    ######################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:574
+msgid "The full meaning of these commands will become clear later."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:580
+msgid ""
+"There are a couple of caveats. If another program changes the directory "
+"without calling cdll, then the directory won't be put on the stack and also "
+"if the prompt facility is used then this will not be updated. Two programs "
+"that can do this are pushd and popd. To update the prompt and stack simply "
+"enter:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:582
+#, no-wrap
+msgid "    cd .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:585
+msgid ""
+"Note that if the previous entry on the stack is the current directory then "
+"the stack is not updated."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:591
+#, no-wrap
+msgid ""
+"Usage\n"
+"=====  \n"
+"cd [dir] [0-9] [@[s|h] [-g &lt;dir&gt;] [-d] [-D] [-r&lt;n&gt;]\n"
+"   [dir|0-9] [-R&lt;n&gt;] [&lt;dir&gt;|0-9] [-s&lt;n&gt;] [-S&lt;n&gt;]\n"
+"   [-u] [-U] [-f] [-F] [-h] [-H] [-v]\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:618
+#, no-wrap
+msgid ""
+"    &lt;dir&gt;       Go to directory\n"
+"    0-n         Goto previous directory (0 is previous,\n"
+"                1 is last but 1, etc.)\n"
+"                n is up to max history (default is 50)\n"
+"    @           List history and special entries (Usually available as $ "
+"@)\n"
+"    @h          List history entries\n"
+"    @s          List special entries\n"
+"    -g [&lt;dir&gt;]  Go to literal name (bypass special names)\n"
+"                This is to allow access to dirs called '0','1','-h' etc\n"
+"    -d          Change default action - verbose. (See note)\n"
+"    -D          Change default action - silent. (See note)\n"
+"    -s&lt;n&gt;       Go to the special entry &lt;n&gt;\n"
+"    -S&lt;n&gt;       Go to the special entry &lt;n&gt;\n"
+"                      and replace it with the current dir\n"
+"    -r&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
+"                              and then put it on special entry &lt;n&gt;\n"
+"    -R&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
+"                              and put current dir on special entry "
+"&lt;n&gt;\n"
+"    -a&lt;n&gt;       Alternative suggested directory. See note below.\n"
+"    -f [&lt;file&gt;] File entries to &lt;file&gt;.\n"
+"    -u [&lt;file&gt;] Update entries from &lt;file&gt;.\n"
+"                If no filename supplied then default file (~/cdfile) is "
+"used\n"
+"                -F and -U are silent versions\n"
+"    -v          Print version number\n"
+"    -h          Help\n"
+"    -H          Detailed help\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:622
+#, no-wrap
+msgid ""
+"Examples\n"
+"========\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:628
+msgid ""
+"These examples assume non-default mode is set (that is, cd with no "
+"parameters will go to the most recent stack directory), that aliases have "
+"been set up for cd and @ as described above and that cd's prompt facility is "
+"active and the prompt length is 21 characters."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:639
+#, no-wrap
+msgid ""
+"    /home/phil$ @\n"
+"    # List the entries with the @\n"
+"    History:\n"
+"    # Output of the @ command\n"
+"    .....\n"
+"    # Skipped these entries for brevity\n"
+"    1 /home/phil/ummdev               S1 /home/phil/perl\n"
+"    # Most recent two history entries\n"
+"    0 /home/phil/perl/eg              S0 /home/phil/umm/ummdev\n"
+"    # and two special entries are shown\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:651
+#, no-wrap
+msgid ""
+"    /home/phil$ cd /home/phil/utils/Cdll\n"
+"    # Now change directories\n"
+"    /home/phil/utils/Cdll$ @\n"
+"    # Prompt reflects the directory.\n"
+"    History:\n"
+"    # New history\n"
+"    .....   \n"
+"    1 /home/phil/perl/eg              S1 /home/phil/perl\n"
+"    # History entry 0 has moved to 1\n"
+"    0 /home/phil                      S0 /home/phil/umm/ummdev\n"
+"    # and the most recent has entered\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:653
+msgid "To go to a history entry:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:658
+#, no-wrap
+msgid ""
+"    /home/phil/utils/Cdll$ cd 1\n"
+"    # Go to history entry 1.\n"
+"    /home/phil/perl/eg$\n"
+"    # Current directory is now what was 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:660
+msgid "To go to a special entry:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:665
+#, no-wrap
+msgid ""
+"    /home/phil/perl/eg$ cd -s1\n"
+"    # Go to special entry 1\n"
+"    /home/phil/umm/ummdev$\n"
+"    # Current directory is S1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:667
+msgid "To go to a directory called, for example, 1:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:671
+#, no-wrap
+msgid ""
+"    /home/phil$ cd -g 1\n"
+"    # -g ignores the special meaning of 1\n"
+"    /home/phil/1$\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:676
+#, no-wrap
+msgid ""
+"To put current directory on the special list as S1:\n"
+"    cd -r1 .        #  OR\n"
+"    cd -R1 .        #  These have the same effect if the directory is\n"
+"                    #+ . (the current directory)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:684
+#, no-wrap
+msgid ""
+"To go to a directory and add it as a special  \n"
+"  The directory for -r&lt;n&gt; or -R&lt;n&gt; may be a number.\n"
+"  For example:\n"
+"        $ cd -r3 4  Go to history entry 4 and put it on special entry 3\n"
+"        $ cd -R3 4  Put current dir on the special entry 3 and go to\n"
+"                    history entry 4\n"
+"        $ cd -s3    Go to special entry 3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:692
+#, no-wrap
+msgid ""
+"    Note that commands R,r,S and s may be used without a number and\n"
+"    refer to 0:\n"
+"        $ cd -s     Go to special entry 0\n"
+"        $ cd -S     Go to special entry 0 and make special entry 0\n"
+"                    current dir\n"
+"        $ cd -r 1   Go to history entry 1 and put it on special entry 0\n"
+"        $ cd -r     Go to history entry 0 and put it on special entry 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:695
+#, no-wrap
+msgid "    Alternative suggested directories:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:701
+#, no-wrap
+msgid ""
+"    If a directory is not found, then CD will suggest any\n"
+"    possibilities. These are directories starting with the same letters\n"
+"    and if any are found they are listed prefixed with -a&lt;n&gt;\n"
+"    where &lt;n&gt; is a number. It's possible to go to the directory\n"
+"    by entering cd -a&lt;n&gt; on the command line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:704
+#, no-wrap
+msgid ""
+"        Use cd -d or -D to change default cd action. cd -H will show\n"
+"        current action.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:710
+#, no-wrap
+msgid ""
+"        The history entries (0-n) are stored in the environment variables\n"
+"        CD[0] - CD[n]\n"
+"        Similarly the special directories S0 - 9 are in the environment\n"
+"        variable CDS[0] - CDS[9]\n"
+"        and may be accessed from the command line, for example:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:713
+#, no-wrap
+msgid ""
+"            ls -l ${CDS[3]}\n"
+"            cat ${CD[8]}/file.txt\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:716
+#, no-wrap
+msgid ""
+"        The default pathname for the -f and -u commands is ~\n"
+"        The default filename for the -f and -u commands is cdfile\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:719
+#, no-wrap
+msgid ""
+"Configuration\n"
+"=============\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:722
+#, no-wrap
+msgid "    The following environment variables can be set:\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:728
+#, no-wrap
+msgid ""
+"        CDL_PROMPTLEN  - Set to the length of prompt you require.\n"
+"            Prompt string is set to the right characters of the current\n"
+"            directory. If not set, then prompt is left unchanged. Note\n"
+"            that this is the number of characters that the directory is\n"
+"            shortened to, not the total characters in the prompt.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:733
+#, no-wrap
+msgid ""
+"            CDL_PROMPT_PRE - Set to the string to prefix the prompt.\n"
+"                Default is:\n"
+"                    non-root:  \"\\\\[\\\\e[01;34m\\\\]\"  (sets colour to "
+"blue).\n"
+"                    root:      \"\\\\[\\\\e[01;31m\\\\]\"  (sets colour to "
+"red).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:740
+#, no-wrap
+msgid ""
+"            CDL_PROMPT_POST    - Set to the string to suffix the prompt.\n"
+"                Default is:\n"
+"                    non-root:  \"\\\\[\\\\e[00m\\\\]$\"\n"
+"                               (resets colour and displays $).\n"
+"                    root:      \"\\\\[\\\\e[00m\\\\]#\"\n"
+"                               (resets colour and displays #).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:743
+#, no-wrap
+msgid ""
+"        Note:\n"
+"            CDL_PROMPT_PRE &amp; _POST only t\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:748
+#, no-wrap
+msgid ""
+"        CDPath - Set the default path for the -f &amp; -u options.\n"
+"                 Default is home directory\n"
+"        CDFile - Set the default filename for the -f &amp; -u options.\n"
+"                 Default is cdfile\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:753
+#, no-wrap
+msgid ""
+"    There are three variables defined in the file cdll which control the\n"
+"    number of entries stored or displayed. They are in the section labeled\n"
+"    'Initialisation here' towards the end of the file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:760
+#, no-wrap
+msgid ""
+"        cd_maxhistory       - The number of history entries stored.\n"
+"                              Default is 50.\n"
+"        cd_maxspecial       - The number of special entries allowed.\n"
+"                              Default is 9.\n"
+"        cd_histcount        - The number of history and special entries\n"
+"                              displayed. Default is 9.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:763
+#, no-wrap
+msgid ""
+"    Note that cd_maxspecial should be >= cd_histcount to avoid displaying\n"
+"    special entries that can't be set.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:766
+msgid "Version: 1.2.1 Date: 24-MAY-2003"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cdll:767
+msgid "DOCUMENTATION"
+msgstr ""

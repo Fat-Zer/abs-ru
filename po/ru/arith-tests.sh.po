@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:4
+msgid "#!/bin/bash # arith-tests.sh # Arithmetic tests."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:7
+msgid ""
+"# The (( ... )) construct evaluates and tests numerical expressions.  # Exit "
+"status opposite from [ ... ] construct!"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:10
+#, no-wrap
+msgid ""
+"(( 0 ))\n"
+"echo \"Exit status of \\\"(( 0 ))\\\" is $?.\"         # 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:13
+#, no-wrap
+msgid ""
+"(( 1 ))\n"
+"echo \"Exit status of \\\"(( 1 ))\\\" is $?.\"         # 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:16
+#, no-wrap
+msgid ""
+"(( 5 > 4 ))                                      # true\n"
+"echo \"Exit status of \\\"(( 5 > 4 ))\\\" is $?.\"     # 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:19
+#, no-wrap
+msgid ""
+"(( 5 > 9 ))                                      # false\n"
+"echo \"Exit status of \\\"(( 5 > 9 ))\\\" is $?.\"     # 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:23
+#, no-wrap
+msgid ""
+"(( 5 == 5 ))                                     # true\n"
+"echo \"Exit status of \\\"(( 5 == 5 ))\\\" is $?.\"    # 0\n"
+"# (( 5 = 5 ))  gives an error message.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:26
+#, no-wrap
+msgid ""
+"(( 5 - 5 ))                                      # 0\n"
+"echo \"Exit status of \\\"(( 5 - 5 ))\\\" is $?.\"     # 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:29
+#, no-wrap
+msgid ""
+"(( 5 / 4 ))                                      # Division o.k.\n"
+"echo \"Exit status of \\\"(( 5 / 4 ))\\\" is $?.\"     # 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:33
+#, no-wrap
+msgid ""
+"(( 1 / 2 ))                                      # Division result &lt; 1.\n"
+"echo \"Exit status of \\\"(( 1 / 2 ))\\\" is $?.\"     # Rounded off to 0.\n"
+"                                                 # 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:37
+#, no-wrap
+msgid ""
+"(( 1 / 0 )) 2>/dev/null                          # Illegal division by 0.\n"
+"#           ^^^^^^^^^^^\n"
+"echo \"Exit status of \\\"(( 1 / 0 ))\\\" is $?.\"     # 1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:41
+msgid ""
+"# What effect does the \"2>/dev/null\" have? # What would happen if it were "
+"removed? # Try removing it, then rerunning the script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:43
+msgid "# ======================================= #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:45
+msgid "# (( ... )) also useful in an if-then test."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:48
+msgid "var1=5 var2=4"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:53
+#, no-wrap
+msgid ""
+"if (( var1 > var2 ))\n"
+"then #^      ^      Note: Not $var1, $var2. Why?\n"
+"  echo \"$var1 is greater than $var2\"\n"
+"fi     # 5 is greater than 4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/arith-tests.sh:54
+msgid "exit 0"
+msgstr ""

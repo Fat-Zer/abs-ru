@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/wf.sh:4
+msgid ""
+"#!/bin/bash # wf.sh: Crude word frequency analysis on a text file.  # This "
+"is a more efficient version of the \"wf2.sh\" script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:10
+msgid "# Check for input file on command-line.  ARGS=1 E_BADARGS=85 E_NOFILE=86"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:16
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]  # Correct number of arguments passed to script?\n"
+"then\n"
+"  echo \"Usage: `basename $0` filename\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:22
+#, no-wrap
+msgid ""
+"if [ ! -f \"$1\" ]       # Check if file exists.\n"
+"then\n"
+"  echo \"File \\\"$1\\\" does not exist.\"\n"
+"  exit $E_NOFILE\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:31
+#, no-wrap
+msgid ""
+"########################################################\n"
+"# main ()\n"
+"sed -e 's/\\.//g'  -e 's/\\,//g' -e 's/ /\\\n"
+"/g' \"$1\" | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr\n"
+"#                           =========================\n"
+"#                            Frequency of occurrence\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:36
+msgid ""
+"# Filter out periods and commas, and #+ change space between words to "
+"linefeed, #+ then shift characters to lowercase, and #+ finally prefix "
+"occurrence count and sort numerically."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:52
+#, no-wrap
+msgid ""
+"#  Arun Giridhar suggests modifying the above to:\n"
+"#  . . . | sort | uniq -c | sort +1 [-f] | sort +0 -nr\n"
+"#  This adds a secondary sort key, so instances of\n"
+"#+ equal occurrence are sorted alphabetically.\n"
+"#  As he explains it:\n"
+"#  \"This is effectively a radix sort, first on the\n"
+"#+ least significant column\n"
+"#+ (word or string, optionally case-insensitive)\n"
+"#+ and last on the most significant column (frequency).\"\n"
+"#\n"
+"#  As Frank Wang explains, the above is equivalent to\n"
+"#+       . . . | sort | uniq -c | sort +0 -nr\n"
+"#+ and the following also works:\n"
+"#+       . . . | sort | uniq -c | sort -k1nr -k\n"
+"########################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:54
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/wf.sh:60
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Add 'sed' commands to filter out other punctuation,\n"
+"#+   such as semicolons.\n"
+"# 2) Modify the script to also filter out multiple spaces and\n"
+"#+   other whitespace.\n"
+msgstr ""

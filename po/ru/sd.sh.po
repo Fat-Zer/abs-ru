@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/sd.sh:3
+msgid "#!/bin/bash # sd.sh: Standard Deviation"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:9
+msgid ""
+"# The Standard Deviation indicates how consistent a set of data is.  # It "
+"shows to what extent the individual data points deviate from the #+ "
+"arithmetic mean, i.e., how much they \"bounce around\" (or cluster).  # It "
+"is essentially the average deviation-distance of the #+ data points from the "
+"mean."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:21
+#, no-wrap
+msgid ""
+"# =========================================================== #\n"
+"#    To calculate the Standard Deviation:\n"
+"#\n"
+"# 1  Find the arithmetic mean (average) of all the data points.\n"
+"# 2  Subtract each data point from the arithmetic mean,\n"
+"#    and square that difference.\n"
+"# 3  Add all of the individual difference-squares in # 2.\n"
+"# 4  Divide the sum in # 3 by the number of data points.\n"
+"#    This is known as the \"variance.\"\n"
+"# 5  The square root of # 4 gives the Standard Deviation.\n"
+"# =========================================================== #\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:25
+#, no-wrap
+msgid ""
+"count=0         # Number of data points; global.\n"
+"SC=9            # Scale to be used by bc. Nine decimal places.\n"
+"E_DATAFILE=90   # Data file error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:33
+#, no-wrap
+msgid ""
+"# ----------------- Set data file ---------------------\n"
+"if [ ! -z \"$1\" ]  # Specify filename as cmd-line arg?\n"
+"then\n"
+"  datafile=\"$1\" #  ASCII text file,\n"
+"else            #+ one (numerical) data point per line!\n"
+"  datafile=sample.dat\n"
+"fi              #  See example data file, below.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:40
+#, no-wrap
+msgid ""
+"if [ ! -e \"$datafile\" ]\n"
+"then\n"
+"  echo \"\\\"\"$datafile\"\\\" does not exist!\"\n"
+"  exit $E_DATAFILE\n"
+"fi\n"
+"# -----------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:47
+#, no-wrap
+msgid ""
+"arith_mean ()\n"
+"{\n"
+"  local rt=0         # Running total.\n"
+"  local am=0         # Arithmetic mean.\n"
+"  local ct=0         # Number of data points.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:53
+#, no-wrap
+msgid ""
+"  while read value   # Read one data point at a time.\n"
+"  do\n"
+"    rt=$(echo \"scale=$SC; $rt + $value\" | bc)\n"
+"    (( ct++ ))\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:55
+#, no-wrap
+msgid "  am=$(echo \"scale=$SC; $rt / $ct\" | bc)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:61
+#, no-wrap
+msgid ""
+"  echo $am; return $ct   # This function \"returns\" TWO values!\n"
+"  #  Caution: This little trick will not work if $ct > 255!\n"
+"  #  To handle a larger number of data points,\n"
+"  #+ simply comment out the \"return $ct\" above.\n"
+"} &lt;\"$datafile\"   # Feed in data file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:69
+#, no-wrap
+msgid ""
+"sd ()\n"
+"{\n"
+"  mean1=$1  # Arithmetic mean (passed to function).\n"
+"  n=$2      # How many data points.\n"
+"  sum2=0    # Sum of squared differences (\"variance\").\n"
+"  avg2=0    # Average of $sum2.\n"
+"  sdev=0    # Standard Deviation.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:77
+#, no-wrap
+msgid ""
+"  while read value   # Read one line at a time.\n"
+"  do\n"
+"    diff=$(echo \"scale=$SC; $mean1 - $value\" | bc)\n"
+"    # Difference between arith. mean and data point.\n"
+"    dif2=$(echo \"scale=$SC; $diff * $diff\" | bc) # Squared.\n"
+"    sum2=$(echo \"scale=$SC; $sum2 + $dif2\" | bc) # Sum of squares.\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:81
+#, no-wrap
+msgid ""
+"    avg2=$(echo \"scale=$SC; $sum2 / $n\" | bc)  # Avg. of sum of squares.\n"
+"    sdev=$(echo \"scale=$SC; sqrt($avg2)\" | bc) # Square root =\n"
+"    echo $sdev                                 # Standard Deviation.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:83
+#, no-wrap
+msgid "} &lt;\"$datafile\"   # Rewinds data file.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:88
+#, no-wrap
+msgid ""
+"# ======================================================= #\n"
+"mean=$(arith_mean); count=$?   # Two returns from function!\n"
+"std_dev=$(sd $mean $count)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:95
+msgid ""
+"echo echo \"Number of data points in \\\"\"$datafile\"\\\" = $count\" echo "
+"\"Arithmetic mean (average) = $mean\" echo \"Standard Deviation = $std_dev\" "
+"echo # ======================================================= #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:97
+msgid "exit"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:100
+msgid ""
+"# This script could stand some drastic streamlining, #+ but not at the cost "
+"of reduced legibility, please."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:104
+msgid ""
+"# ++++++++++++++++++++++++++++++++++++++++ # # A sample data file "
+"(sample1.dat):"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:110
+msgid "# 18.35 # 19.0 # 18.88 # 18.91 # 18.64"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:113
+msgid "# $ sh sd.sh sample1.dat"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sd.sh:117
+msgid ""
+"# Number of data points in \"sample1.dat\" = 5 # Arithmetic mean (average) = "
+"18.756000000 # Standard Deviation = .235338054 # "
+"++++++++++++++++++++++++++++++++++++++++ #"
+msgstr ""

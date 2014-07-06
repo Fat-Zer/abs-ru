@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/base64.sh:21
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# base64.sh: Bash implementation of Base64 encoding and decoding.\n"
+"#\n"
+"# Copyright (c) 2011 vladz &lt;vladz@devzero.fr&gt;\n"
+"# Used in ABSG with permission (thanks!).\n"
+"#\n"
+"#  Encode or decode original Base64 (and also Base64url)\n"
+"#+ from STDIN to STDOUT.\n"
+"#\n"
+"#    Usage:\n"
+"#\n"
+"#    Encode\n"
+"#    $ ./base64.sh &lt; binary-file > binary-file.base64\n"
+"#    Decode\n"
+"#    $ ./base64.sh -d &lt; binary-file.base64 > binary-file\n"
+"#\n"
+"# Reference:\n"
+"#\n"
+"#    [1]  RFC4648 - \"The Base16, Base32, and Base64 Data Encodings\"\n"
+"#         http://tools.ietf.org/html/rfc4648#section-5\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:27
+#, no-wrap
+msgid ""
+"# The base64_charset[] array contains entire base64 charset,\n"
+"# and additionally the character \"=\" ...\n"
+"base64_charset=( {A..Z} {a..z} {0..9} + / = )\n"
+"                # Nice illustration of brace expansion.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:31
+msgid ""
+"# Uncomment the ### line below to use base64url encoding instead of #+ "
+"original base64.  ### base64_charset=( {A..Z} {a..z} {0..9} - _ = )"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:35
+msgid ""
+"# Output text width when encoding #+ (64 characters, just like openssl "
+"output).  text_width=64"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:42
+#, no-wrap
+msgid ""
+"function display_base64_char {\n"
+"#  Convert a 6-bit number (between 0 and 63) into its corresponding values\n"
+"#+ in Base64, then display the result with the specified text width.\n"
+"  printf \"${base64_charset[$1]}\"; (( width++ ))\n"
+"  (( width % text_width == 0 )) &amp;&amp; printf \"\\n\"\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:49
+#, no-wrap
+msgid ""
+"function encode_base64 {\n"
+"# Encode three 8-bit hexadecimal codes into four 6-bit numbers.\n"
+"  #    We need two local int array variables:\n"
+"  #    c8[]: to store the codes of the 8-bit characters to encode\n"
+"  #    c6[]: to store the corresponding encoded values on 6-bit\n"
+"  declare -a -i c8 c6\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:52
+#, no-wrap
+msgid ""
+"  #  Convert hexadecimal to decimal.\n"
+"  c8=( $(printf \"ibase=16; ${1:0:2}\\n${1:2:2}\\n${1:4:2}\\n\" | bc) )\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:57
+#, no-wrap
+msgid ""
+"  #  Let's play with bitwise operators\n"
+"  #+ (3x8-bit into 4x6-bits conversion).\n"
+"  (( c6[0] = c8[0] >> 2 ))\n"
+"  (( c6[1] = ((c8[0] &amp;  3) &lt;&lt; 4) | (c8[1] >> 4) ))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:66
+#, no-wrap
+msgid ""
+"  # The following operations depend on the c8 element number.\n"
+"  case ${#c8[*]} in \n"
+"    3) (( c6[2] = ((c8[1] &amp; 15) &lt;&lt; 2) | (c8[2] >> 6) ))\n"
+"       (( c6[3] = c8[2] &amp; 63 )) ;;\n"
+"    2) (( c6[2] = (c8[1] &amp; 15) &lt;&lt; 2 ))\n"
+"       (( c6[3] = 64 )) ;;\n"
+"    1) (( c6[2] = c6[3] = 64 )) ;;\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:71
+#, no-wrap
+msgid ""
+"  for char in ${c6[@]}; do\n"
+"    display_base64_char ${char}\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:77
+#, no-wrap
+msgid ""
+"function decode_base64 {\n"
+"# Decode four base64 characters into three hexadecimal ASCII characters.\n"
+"  #  c8[]: to store the codes of the 8-bit characters\n"
+"  #  c6[]: to store the corresponding Base64 values on 6-bit\n"
+"  declare -a -i c8 c6\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:81
+#, no-wrap
+msgid ""
+"  # Find decimal value corresponding to the current base64 character.\n"
+"  for current_char in ${1:0:1} ${1:1:1} ${1:2:1} ${1:3:1}; do\n"
+"     [ \"${current_char}\" = \"=\" ] &amp;&amp; break\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:86
+#, no-wrap
+msgid ""
+"     position=0\n"
+"     while [ \"${current_char}\" != \"${base64_charset[${position}]}\" ]; "
+"do\n"
+"        (( position++ ))\n"
+"     done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:89
+#, no-wrap
+msgid ""
+"     c6=( ${c6[*]} ${position} )\n"
+"  done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:93
+#, no-wrap
+msgid ""
+"  #  Let's play with bitwise operators\n"
+"  #+ (4x8-bit into 3x6-bits conversion).\n"
+"  (( c8[0] = (c6[0] &lt;&lt; 2) | (c6[1] >> 4) ))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:101
+#, no-wrap
+msgid ""
+"  # The next operations depends on the c6 elements number.\n"
+"  case ${#c6[*]} in\n"
+"    3) (( c8[1] = ( (c6[1] &amp; 15) &lt;&lt; 4) | (c6[2] >> 2) ))\n"
+"       (( c8[2] = (c6[2] &amp; 3) &lt;&lt; 6 )); unset c8[2] ;;\n"
+"    4) (( c8[1] = ( (c6[1] &amp; 15) &lt;&lt; 4) | (c6[2] >> 2) ))\n"
+"       (( c8[2] = ( (c6[2] &amp;  3) &lt;&lt; 6) |  c6[3] )) ;;\n"
+"  esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:106
+#, no-wrap
+msgid ""
+"  for char in ${c8[*]}; do\n"
+"     printf \"\\x$(printf \"%x\" ${char})\"\n"
+"  done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:109
+msgid "# main ()"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:111
+#, no-wrap
+msgid "if [ \"$1\" = \"-d\" ]; then   # decode\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:114
+#, no-wrap
+msgid ""
+"  # Reformat STDIN in pseudo 4x6-bit groups.\n"
+"  content=$(cat - | tr -d \"\\n\" | sed -r \"s/(.{4})/\\1 /g\")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:116
+#, no-wrap
+msgid "  for chars in ${content}; do decode_base64 ${chars}; done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:121
+#, no-wrap
+msgid ""
+"else\n"
+"  # Make a hexdump of stdin and reformat in 3-byte groups.\n"
+"  content=$(cat - | xxd -ps -u | sed -r \"s/(\\w{6})/\\1 /g\" |\n"
+"            tr -d \"\\n\")\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:123
+#, no-wrap
+msgid "  for chars in ${content}; do encode_base64 ${chars}; done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:125
+#, no-wrap
+msgid "  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base64.sh:126
+msgid "fi"
+msgstr ""

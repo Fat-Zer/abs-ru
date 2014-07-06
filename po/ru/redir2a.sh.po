@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:4
+msgid "# This is an alternate form of the preceding script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:9
+msgid ""
+"# Suggested by Heiner Steven #+ as a workaround in those situations when a "
+"redirect loop #+ runs as a subshell, and therefore variables inside the loop "
+"# +do not keep their values upon loop termination."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:17
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]\n"
+"then\n"
+"  Filename=names.data     # Default, if no filename specified.\n"
+"else\n"
+"  Filename=$1\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:21
+#, no-wrap
+msgid ""
+"exec 3&lt;&amp;0                 # Save stdin to file descriptor 3.\n"
+"exec 0&lt;\"$Filename\"        # Redirect standard input.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:24
+msgid "count=0 echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:33
+#, no-wrap
+msgid ""
+"while [ \"$name\" != Smith ]\n"
+"do\n"
+"  read name               # Reads from redirected stdin ($Filename).\n"
+"  echo $name\n"
+"  let \"count += 1\"\n"
+"done                      #  Loop reads from file $Filename\n"
+"                          #+ because of line 20.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:38
+#, no-wrap
+msgid ""
+"#  The original version of this script terminated the \"while\" loop with\n"
+"#+      done &lt;\"$Filename\" \n"
+"#  Exercise:\n"
+"#  Why is this unnecessary?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:42
+#, no-wrap
+msgid ""
+"exec 0&lt;&amp;3                 # Restore old stdin.\n"
+"exec 3&lt;&amp;-                 # Close temporary fd 3.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:44
+msgid "echo; echo \"$count names read\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/redir2a.sh:45
+msgid "exit 0"
+msgstr ""

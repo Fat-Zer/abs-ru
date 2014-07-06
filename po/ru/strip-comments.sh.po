@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:3
+msgid ""
+"#!/bin/bash # strip-comment.sh: Strips out the comments (/* COMMENT */) in a "
+"C program."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:7
+msgid "E_NOARGS=0 E_ARGERROR=66 E_WRONG_FILE_TYPE=67"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:13
+#, no-wrap
+msgid ""
+"if [ $# -eq \"$E_NOARGS\" ]\n"
+"then\n"
+"  echo \"Usage: `basename $0` C-program-file\" >&amp;2 # Error message to "
+"stderr.\n"
+"  exit $E_ARGERROR\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:20
+msgid ""
+"# Test for correct file type.  type=`file $1 | awk '{ print $2, $3, $4, $5 "
+"}'` # \"file $1\" echoes file type . . .  # Then awk removes the first "
+"field, the filename . . .  # Then the result is fed into the variable "
+"\"type.\" correct_type=\"ASCII C program text\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:28
+#, no-wrap
+msgid ""
+"if [ \"$type\" != \"$correct_type\" ]\n"
+"then\n"
+"  echo\n"
+"  echo \"This script works on C program files only.\"\n"
+"  echo\n"
+"  exit $E_WRONG_FILE_TYPE\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:38
+msgid ""
+"# Rather cryptic sed script: #-------- sed ' /^\\/\\*/d /.*\\*\\//d ' $1 "
+"#-------- # Easy to understand if you take several hours to learn sed "
+"fundamentals."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:43
+msgid ""
+"# Need to add one more line to the sed script to deal with #+ case where "
+"line of code has a comment following it on same line.  # This is left as a "
+"non-trivial exercise."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:46
+msgid ""
+"# Also, the above code deletes non-comment lines with a \"*/\" . . .  #+ not "
+"a desirable result."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:48 abs-guide/strip-comments.sh:79
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:52
+msgid ""
+"# ---------------------------------------------------------------- # Code "
+"below this line will not execute because of 'exit 0' above."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:54
+msgid "# Stephane Chazelas suggests the following alternative:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:59
+#, no-wrap
+msgid ""
+"usage() {\n"
+"  echo \"Usage: `basename $0` C-program-file\" >&amp;2\n"
+"  exit 1\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:69
+#, no-wrap
+msgid ""
+"WEIRD=`echo -n -e '\\377'`   # or WEIRD=$'\\377'\n"
+"[[ $# -eq 1 ]] || usage\n"
+"case `file \"$1\"` in\n"
+"  *\"C program text\"*) sed -e \"s%/\\*%${WEIRD}%g;s%\\*/%${WEIRD}%g\" "
+"\"$1\" \\\n"
+"     | tr '\\377\\n' '\\n\\377' \\\n"
+"     | sed -ne 'p;n' \\\n"
+"     | tr -d '\\n' | tr '\\377' '\\n';;\n"
+"  *) usage;;\n"
+"esac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/strip-comments.sh:78
+msgid ""
+"# This is still fooled by things like: # printf(\"/*\"); # or # /* /* buggy "
+"embedded comment */ # # To handle all special cases (comments in strings, "
+"comments in string #+ where there is a \\\", \\\\\" ...), #+ the only way is "
+"to write a C parser (using lex or yacc perhaps?)."
+msgstr ""

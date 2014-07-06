@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/cannon.sh:3
+msgid "#!/bin/bash # cannon.sh: Approximating PI by firing cannonballs."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:7
+msgid ""
+"# Author: Mendel Cooper # License: Public Domain # Version 2.2, reldate "
+"13oct08."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:11
+msgid ""
+"# This is a very simple instance of a \"Monte Carlo\" simulation: #+ a "
+"mathematical model of a real-life event, #+ using pseudorandom numbers to "
+"emulate random chance."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:40
+msgid ""
+"# Consider a perfectly square plot of land, 10000 units on a side.  # This "
+"land has a perfectly circular lake in its center, #+ with a diameter of "
+"10000 units.  # The plot is actually mostly water, except for land in the "
+"four corners.  # (Think of it as a square with an inscribed circle.)  # # We "
+"will fire iron cannonballs from an old-style cannon #+ at the square.  # All "
+"the shots impact somewhere on the square, #+ either in the lake or on the "
+"dry corners.  # Since the lake takes up most of the area, #+ most of the "
+"shots will SPLASH! into the water.  # Just a few shots will THUD! into solid "
+"ground #+ in the four corners of the square.  # # If we take enough random, "
+"unaimed shots at the square, #+ Then the ratio of SPLASHES to total shots "
+"will approximate #+ the value of PI/4.  # # The simplified explanation is "
+"that the cannon is actually #+ shooting only at the upper right-hand "
+"quadrant of the square, #+ i.e., Quadrant I of the Cartesian coordinate "
+"plane.  # # # Theoretically, the more shots taken, the better the fit.  # "
+"However, a shell script, as opposed to a compiled language #+ with "
+"floating-point math built in, requires some compromises.  # This decreases "
+"the accuracy of the simulation."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:44
+#, no-wrap
+msgid ""
+"DIMENSION=10000  # Length of each side of the plot.\n"
+"                 # Also sets ceiling for random integers generated.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:48
+#, no-wrap
+msgid ""
+"MAXSHOTS=1000    # Fire this many shots.\n"
+"                 # 10000 or more would be better, but would take too long.\n"
+"PMULTIPLIER=4.0  # Scaling factor.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:51
+#, no-wrap
+msgid ""
+"declare -r M_PI=3.141592654\n"
+"                 # Actual 9-place value of PI, for comparison purposes.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:60
+#, no-wrap
+msgid ""
+"get_random ()\n"
+"{\n"
+"SEED=$(head -n 1 /dev/urandom | od -N 1 | awk '{ print $2 }')\n"
+"RANDOM=$SEED                                  #  From "
+"\"seeding-random.sh\"\n"
+"                                              #+ example script.\n"
+"let \"rnum = $RANDOM % $DIMENSION\"             #  Range less than 10000.\n"
+"echo $rnum\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:73
+#, no-wrap
+msgid ""
+"distance=        # Declare global variable.\n"
+"hypotenuse ()    # Calculate hypotenuse of a right triangle.\n"
+"{                # From \"alt-bc.sh\" example.\n"
+"distance=$(bc -l &lt;&lt; EOF\n"
+"scale = 0\n"
+"sqrt ( $1 * $1 + $2 * $2 )\n"
+"EOF\n"
+")\n"
+"#  Setting \"scale\" to zero rounds down result to integer value,\n"
+"#+ a necessary compromise in this script.\n"
+"#  It decreases the accuracy of this simulation.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:78
+msgid ""
+"# ========================================================== # main() { # "
+"\"Main\" code block, mimicking a C-language main() function."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:85
+msgid "# Initialize variables.  shots=0 splashes=0 thuds=0 Pi=0 error=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:88
+#, no-wrap
+msgid ""
+"while [ \"$shots\" -lt  \"$MAXSHOTS\" ]           # Main loop.\n"
+"do\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:94
+#, no-wrap
+msgid ""
+"  xCoord=$(get_random)                        # Get random X and Y coords.\n"
+"  yCoord=$(get_random)\n"
+"  hypotenuse $xCoord $yCoord                  #  Hypotenuse of\n"
+"                                              #+ right-triangle = "
+"distance.\n"
+"  ((shots++))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:102
+#, no-wrap
+msgid ""
+"  printf \"#%4d   \" $shots\n"
+"  printf \"Xc = %4d  \" $xCoord\n"
+"  printf \"Yc = %4d  \" $yCoord\n"
+"  printf \"Distance = %5d  \" $distance         #   Distance from\n"
+"                                              #+  center of lake\n"
+"                                              #+  -- the \"origin\" --\n"
+"                                              #+  coordinate (0,0).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:111
+#, no-wrap
+msgid ""
+"  if [ \"$distance\" -le \"$DIMENSION\" ]\n"
+"  then\n"
+"    echo -n \"SPLASH!  \"\n"
+"    ((splashes++))\n"
+"  else\n"
+"    echo -n \"THUD!    \"\n"
+"    ((thuds++))\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:116
+#, no-wrap
+msgid ""
+"  Pi=$(echo \"scale=9; $PMULTIPLIER*$splashes/$shots\" | bc)\n"
+"  # Multiply ratio by 4.0.\n"
+"  echo -n \"PI ~ $Pi\"\n"
+"  echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:118
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:130
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"After $shots shots, PI looks like approximately   $Pi\"\n"
+"#  Tends to run a bit high,\n"
+"#+ possibly due to round-off error and imperfect randomness of $RANDOM.\n"
+"#  But still usually within plus-or-minus 5% . . .\n"
+"#+ a pretty fair rough approximation.\n"
+"error=$(echo \"scale=9; $Pi - $M_PI\" | bc)\n"
+"pct_error=$(echo \"scale=2; 100.0 * $error / $M_PI\" | bc)\n"
+"echo -n \"Deviation from mathematical value of PI =        $error\"\n"
+"echo \" ($pct_error% error)\"\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:134
+msgid ""
+"# End of \"main\" code block.  # } # "
+"=========================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:136
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/cannon.sh:143
+#, no-wrap
+msgid ""
+"#  One might well wonder whether a shell script is appropriate for\n"
+"#+ an application as complex and computation-intensive as a simulation.\n"
+"#\n"
+"#  There are at least two justifications.\n"
+"#  1) As a proof of concept: to show it can be done.\n"
+"#  2) To prototype and test the algorithms before rewriting\n"
+"#+    it in a compiled high-level language.\n"
+msgstr ""

@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex64.sh:3
+msgid "#!/bin/bash # and list"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex64.sh:20
+#, no-wrap
+msgid ""
+"if [ ! -z \"$1\" ] &amp;&amp; echo \"Argument #1 = $1\" &amp;&amp; [ ! -z "
+"\"$2\" ] &amp;&amp; \\\n"
+"#                ^^                         ^^               ^^\n"
+"echo \"Argument #2 = $2\"\n"
+"then\n"
+"  echo \"At least 2 arguments passed to script.\"\n"
+"  # All the chained commands return true.\n"
+"else\n"
+"  echo \"Fewer than 2 arguments passed to script.\"\n"
+"  # At least one of the chained commands returns false.\n"
+"fi  \n"
+"# Note that \"if [ ! -z $1 ]\" works, but its alleged equivalent,\n"
+"#   \"if [ -n $1 ]\" does not.\n"
+"#     However, quoting fixes this.\n"
+"#  if \"[ -n \"$1\" ]\" works.\n"
+"#           ^  ^    Careful!\n"
+"# It is always best to QUOTE the variables being tested.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex64.sh:35
+#, no-wrap
+msgid ""
+"# This accomplishes the same thing, using \"pure\" if/then statements.\n"
+"if [ ! -z \"$1\" ]\n"
+"then\n"
+"  echo \"Argument #1 = $1\"\n"
+"fi\n"
+"if [ ! -z \"$2\" ]\n"
+"then\n"
+"  echo \"Argument #2 = $2\"\n"
+"  echo \"At least 2 arguments passed to script.\"\n"
+"else\n"
+"  echo \"Fewer than 2 arguments passed to script.\"\n"
+"fi\n"
+"# It's longer and more ponderous than using an \"and list\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex64.sh:37
+msgid "exit $?"
+msgstr ""

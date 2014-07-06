@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:4
+msgid "variable=\"one two three four five\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:7
+msgid ""
+"set -- $variable # Sets positional parameters to the contents of "
+"\"$variable\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:13
+#, no-wrap
+msgid ""
+"first_param=$1\n"
+"second_param=$2\n"
+"shift; shift        # Shift past first two positional params.\n"
+"# shift 2             also works.\n"
+"remaining_params=\"$*\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:18
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"first parameter = $first_param\"             # one\n"
+"echo \"second parameter = $second_param\"           # two\n"
+"echo \"remaining parameters = $remaining_params\"   # three four five\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:20
+msgid "echo; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:27
+#, no-wrap
+msgid ""
+"# Again.\n"
+"set -- $variable\n"
+"first_param=$1\n"
+"second_param=$2\n"
+"echo \"first parameter = $first_param\"             # one\n"
+"echo \"second parameter = $second_param\"           # two\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:29
+msgid "# ======================================================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:32
+msgid "set -- # Unsets positional parameters if no variable specified."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:37
+#, no-wrap
+msgid ""
+"first_param=$1\n"
+"second_param=$2\n"
+"echo \"first parameter = $first_param\"             # (null value)\n"
+"echo \"second parameter = $second_param\"           # (null value)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/set-pos.sh:38
+msgid "exit 0"
+msgstr ""

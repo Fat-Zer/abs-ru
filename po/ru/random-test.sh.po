@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/random-test.sh:3
+msgid "#!/bin/bash # How random is RANDOM?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:5
+#, no-wrap
+msgid ""
+"RANDOM=$$       # Reseed the random number generator using script process "
+"ID.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:9
+#, no-wrap
+msgid ""
+"PIPS=6          # A die has 6 pips.\n"
+"MAXTHROWS=600   # Increase this if you have nothing better to do with your "
+"time.\n"
+"throw=0         # Number of times the dice have been cast.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:16
+#, no-wrap
+msgid ""
+"ones=0          #  Must initialize counts to zero,\n"
+"twos=0          #+ since an uninitialized variable is null, NOT zero.\n"
+"threes=0\n"
+"fours=0\n"
+"fives=0\n"
+"sixes=0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:28
+#, no-wrap
+msgid ""
+"print_result ()\n"
+"{\n"
+"echo\n"
+"echo \"ones =   $ones\"\n"
+"echo \"twos =   $twos\"\n"
+"echo \"threes = $threes\"\n"
+"echo \"fours =  $fours\"\n"
+"echo \"fives =  $fives\"\n"
+"echo \"sixes =  $sixes\"\n"
+"echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:40
+#, no-wrap
+msgid ""
+"update_count()\n"
+"{\n"
+"case \"$1\" in\n"
+"  0) ((ones++));;   # Since a die has no \"zero\", this corresponds to 1.\n"
+"  1) ((twos++));;   # And this to 2.\n"
+"  2) ((threes++));; # And so forth.\n"
+"  3) ((fours++));;\n"
+"  4) ((fives++));;\n"
+"  5) ((sixes++));;\n"
+"esac\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:42
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:50
+#, no-wrap
+msgid ""
+"while [ \"$throw\" -lt \"$MAXTHROWS\" ]\n"
+"do\n"
+"  let \"die1 = RANDOM % $PIPS\"\n"
+"  update_count $die1\n"
+"  let \"throw += 1\"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:52
+msgid "print_result"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:54
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:61
+msgid ""
+"# The scores should distribute evenly, assuming RANDOM is random.  # With "
+"$MAXTHROWS at 600, all should cluster around 100, #+ plus-or-minus 20 or "
+"so.  # # Keep in mind that RANDOM is a ***pseudorandom*** generator, #+ and "
+"not a spectacularly good one at that."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:65
+msgid ""
+"# Randomness is a deep and complex subject.  # Sufficiently long \"random\" "
+"sequences may exhibit #+ chaotic and other \"non-random\" behavior."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-test.sh:69
+msgid ""
+"# Exercise (easy): # --------------- # Rewrite this script to flip a coin "
+"1000 times.  # Choices are \"HEADS\" and \"TAILS.\""
+msgstr ""

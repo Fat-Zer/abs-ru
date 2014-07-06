@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:4
+msgid "#!/bin/bash # avoid-subshell.sh # Suggested by Matthew Walker."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:6
+msgid "Lines=0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:8 abs-guide/avoid-subshell.sh:38
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:17
+#, no-wrap
+msgid ""
+"cat myfile.txt | while read line;\n"
+"                 do {\n"
+"                   echo $line\n"
+"                   (( Lines++ ));  #  Incremented values of this variable\n"
+"                                   #+ inaccessible outside loop.\n"
+"                                   #  Subshell problem.\n"
+"                 }\n"
+"                 done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:20
+#, no-wrap
+msgid ""
+"echo \"Number of lines read = $Lines\"     # 0\n"
+"                                         # Wrong!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:22
+msgid "echo \"------------------------\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:34
+#, no-wrap
+msgid ""
+"exec 3&lt;&gt; myfile.txt\n"
+"while read line &lt;&amp;3\n"
+"do {\n"
+"  echo \"$line\"\n"
+"  (( Lines++ ));                   #  Incremented values of this variable\n"
+"                                   #+ accessible outside loop.\n"
+"                                   #  No subshell, no problem.\n"
+"}\n"
+"done\n"
+"exec 3&gt;&amp;-\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:36
+#, no-wrap
+msgid "echo \"Number of lines read = $Lines\"     # 8\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:40
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:42
+msgid "# Lines below not seen by script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:44
+msgid "$ cat myfile.txt"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/avoid-subshell.sh:52
+msgid "Line 1.  Line 2.  Line 3.  Line 4.  Line 5.  Line 6.  Line 7.  Line 8."
+msgstr ""

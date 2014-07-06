@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:3
+msgid "#!/bin/bash # soundcard-on.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:11
+msgid ""
+"# Script author: Mkarcher # http://www.thinkwiki.org/wiki ...  # "
+"/Script_for_configuring_the_CS4239_sound_chip_in_PnP_mode # ABS Guide author "
+"made minor changes and added comments.  # Couldn't contact script author to "
+"ask for permission to use, but ...  #+ the script was released under the "
+"FDL, #+ so its use here should be both legal and ethical."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:22
+msgid ""
+"# Sound-via-pnp-script for Thinkpad 600E #+ and possibly other computers "
+"with onboard CS4239/CS4610 #+ that do not work with the PCI driver #+ and "
+"are not recognized by the PnP code of snd-cs4236.  # Also for some "
+"770-series Thinkpads, such as the 770x.  # Run as root user, of course.  # # "
+"These are old and very obsolete laptop computers, #+ but this particular "
+"script is very instructive, #+ as it shows how to set up and hack device "
+"files."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:26
+msgid "# Search for sound card pnp device:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:36
+#, no-wrap
+msgid ""
+"for dev in /sys/bus/pnp/devices/*\n"
+"do\n"
+"  grep CSC0100 $dev/id > /dev/null &amp;&amp; WSSDEV=$dev\n"
+"  grep CSC0110 $dev/id > /dev/null &amp;&amp; CTLDEV=$dev\n"
+"done\n"
+"# On 770x:\n"
+"# WSSDEV = /sys/bus/pnp/devices/00:07\n"
+"# CTLDEV = /sys/bus/pnp/devices/00:06\n"
+"# These are symbolic links to /sys/devices/pnp0/ ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:41
+msgid ""
+"# Activate devices: # Thinkpad boots with devices disabled unless \"fast "
+"boot\" is turned off #+ (in BIOS)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:44
+msgid "echo activate > $WSSDEV/resources echo activate > $CTLDEV/resources"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:47
+msgid "# Parse resource settings."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:57
+#, no-wrap
+msgid ""
+"{ read # Discard \"state = active\" (see below).\n"
+"  read bla port1\n"
+"  read bla port2\n"
+"  read bla port3\n"
+"  read bla irq\n"
+"  read bla dma1\n"
+"  read bla dma2\n"
+" # The \"bla's\" are labels in the first field: \"io,\" \"state,\" etc.\n"
+" # These are discarded.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:90
+#, no-wrap
+msgid ""
+" #  Hack: with PnPBIOS: ports are: port1: WSS, port2:\n"
+" #+ OPL, port3: sb (unneeded)\n"
+" #       with ACPI-PnP:ports are: port1: OPL, port2: sb, port3: WSS\n"
+" #  (ACPI bios seems to be wrong here, the PnP-card-code in snd-cs4236.c\n"
+" #+  uses the PnPBIOS port order)\n"
+" #  Detect port order using the fixed OPL port as reference.\n"
+"  if [ ${port2%%-*} = 0x388 ]\n"
+" #            ^^^^  Strip out everything following hyphen in port address.\n"
+" #                  So, if port1 is 0x530-0x537\n"
+" #+                 we're left with 0x530 -- the start address of the "
+"port.\n"
+" then\n"
+"   # PnPBIOS: usual order\n"
+"   port=${port1%%-*}\n"
+"   oplport=${port2%%-*}\n"
+" else\n"
+"   # ACPI: mixed-up order\n"
+"   port=${port3%%-*}\n"
+"   oplport=${port1%%-*}\n"
+" fi\n"
+" } &lt; $WSSDEV/resources\n"
+"# To see what's going on here:\n"
+"# ---------------------------\n"
+"#   cat /sys/devices/pnp0/00:07/resources\n"
+"#\n"
+"#   state = active\n"
+"#   io 0x530-0x537\n"
+"#   io 0x388-0x38b\n"
+"#   io 0x220-0x233\n"
+"#   irq 5\n"
+"#   dma 1\n"
+"#   dma 0\n"
+"#   ^^^   \"bla\" labels in first field (discarded). \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:98
+#, no-wrap
+msgid ""
+"{ read # Discard first line, as above.\n"
+"  read bla port1\n"
+"  cport=${port1%%-*}\n"
+"  #            ^^^^\n"
+"  # Just want _start_ address of port.\n"
+"} &lt; $CTLDEV/resources\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:101
+msgid "# Load the module:"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:105
+msgid ""
+"modprobe --ignore-install snd-cs4236 port=$port cport=$cport\\ "
+"fm_port=$oplport irq=$irq dma1=$dma1 dma2=$dma2 isapnp=0 index=0 # See the "
+"modprobe manpage."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/soundcard-on.sh:106
+msgid "exit $?"
+msgstr ""

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:3
+msgid ""
+"#!/bin/bash # tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less "
+"buggy]"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:9
+msgid ""
+"# Convert a text file to HTML format.  # Author: Mendel Cooper # License: "
+"GPL3 # Usage: sh tohtml.sh &lt; textfile > htmlfile # Script can easily be "
+"modified to accept source and target filenames."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:18
+#, no-wrap
+msgid ""
+"#    Assumptions:\n"
+"# 1) Paragraphs in (target) text file are separated by a blank line.\n"
+"# 2) Jpeg images (*.jpg) are located in \"images\" subdirectory.\n"
+"#    In the target file, the image names are enclosed in square brackets,\n"
+"#    for example, [image01.jpg].\n"
+"# 3) Emphasized (italic) phrases begin with a space+underscore\n"
+"#+   or the first character on the line is an underscore,\n"
+"#+   and end with an underscore+space or underscore+end-of-line.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:44
+#, no-wrap
+msgid ""
+"# Settings\n"
+"FNTSIZE=2        # Small-medium font size\n"
+"IMGDIR=\"images\"  # Image directory\n"
+"# Headers\n"
+"HDR01='&lt;!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 "
+"Transitional//EN\"&gt;'\n"
+"HDR02='&lt;!-- Converted to HTML by ***tohtml.sh*** script --&gt;'\n"
+"HDR03='&lt;!-- script author: M. Leo Cooper &lt;thegrendel.abs@gmail.com&gt; "
+"--&gt;'\n"
+"HDR10='&lt;html&gt;'\n"
+"HDR11='&lt;head&gt;'\n"
+"HDR11a='&lt;/head&gt;'\n"
+"HDR12a='&lt;title&gt;'\n"
+"HDR12b='&lt;/title&gt;'\n"
+"HDR121='&lt;META NAME=\"GENERATOR\" CONTENT=\"tohtml.sh script\"&gt;'\n"
+"HDR13='&lt;body bgcolor=\"#dddddd\"&gt;'   # Change background color to "
+"suit.\n"
+"HDR14a='&lt;font size='\n"
+"HDR14b='&gt;'\n"
+"# Footers\n"
+"FTR10='&lt;/body&gt;'\n"
+"FTR11='&lt;/html&gt;'\n"
+"# Tags\n"
+"BOLD=\"&lt;b&gt;\"\n"
+"CENTER=\"&lt;center&gt;\"\n"
+"END_CENTER=\"&lt;/center&gt;\"\n"
+"LF=\"&lt;br&gt;\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:66
+#, no-wrap
+msgid ""
+"write_headers ()\n"
+"  {\n"
+"  echo \"$HDR01\"\n"
+"  echo\n"
+"  echo \"$HDR02\"\n"
+"  echo \"$HDR03\"\n"
+"  echo\n"
+"  echo\n"
+"  echo \"$HDR10\"\n"
+"  echo \"$HDR11\"\n"
+"  echo \"$HDR121\"\n"
+"  echo \"$HDR11a\"\n"
+"  echo \"$HDR13\"\n"
+"  echo\n"
+"  echo -n \"$HDR14a\"\n"
+"  echo -n \"$FNTSIZE\"\n"
+"  echo \"$HDR14b\"\n"
+"  echo\n"
+"  echo \"$BOLD\"        # Everything in bold (more easily readable).\n"
+"  }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:81
+#, no-wrap
+msgid ""
+"process_text ()\n"
+"  {\n"
+"  while read line     # Read one line at a time.\n"
+"  do\n"
+"    {\n"
+"    if [ ! \"$line\" ]  # Blank line?\n"
+"    then              # Then new paragraph must follow.\n"
+"      echo\n"
+"      echo \"$LF\"      # Insert two &lt;br&gt; tags.\n"
+"      echo \"$LF\"\n"
+"      echo\n"
+"      continue        # Skip the underscore test.\n"
+"    else              # Otherwise . . .\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:89
+#, no-wrap
+msgid ""
+"      if [[ \"$line\" =~ \\[*jpg\\] ]]    # Is a graphic?\n"
+"      then                            # Strip away brackets.\n"
+"        temp=$( echo \"$line\" | sed -e 's/\\[//' -e 's/\\]//' )\n"
+"        line=\"\"$CENTER\" &lt;img src=\"\\\"$IMGDIR\"/$temp\\\"&gt; "
+"\"$END_CENTER\" \"\n"
+"                                      # Add image tag.\n"
+"                                      # And, center it.\n"
+"      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:91
+#, no-wrap
+msgid "    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:108
+#, no-wrap
+msgid ""
+"    echo \"$line\" | grep -q _\n"
+"    if [ \"$?\" -eq 0 ]    # If line contains underscore ...\n"
+"    then\n"
+"      # ===================================================\n"
+"      # Convert underscored phrase to italics.\n"
+"      temp=$( echo \"$line\" |\n"
+"              sed -e 's/ _/ &lt;i&gt;/' -e 's/_/&lt;\\/i&gt; /' |\n"
+"              sed -e 's/^_/&lt;i&gt;/'  -e 's/_/&lt;\\/i&gt;/' )\n"
+"      #  Process only underscores prefixed by space,\n"
+"      #+ or at beginning or end of line.\n"
+"      #  Do not convert underscores embedded within a word!\n"
+"      line=\"$temp\"\n"
+"      # Slows script execution. Can be optimized?\n"
+"      # ===================================================\n"
+"    fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:118
+#, no-wrap
+msgid ""
+"#   echo\n"
+"    echo \"$line\"\n"
+"#   echo\n"
+"#   Don't want extra blank lines in generated text!\n"
+"    } # End while\n"
+"  done\n"
+"  }   # End process_text ()\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:125
+#, no-wrap
+msgid ""
+"write_footers ()  # Termination tags.\n"
+"  {\n"
+"  echo \"$FTR10\"\n"
+"  echo \"$FTR11\"\n"
+"  }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:134
+#, no-wrap
+msgid ""
+"# main () {\n"
+"# =========\n"
+"write_headers\n"
+"process_text\n"
+"write_footers\n"
+"# =========\n"
+"#         }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:136
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/tohtml.sh:141
+#, no-wrap
+msgid ""
+"#  Exercises:\n"
+"#  ---------\n"
+"#  1) Fixup: Check for closing underscore before a comma or period.\n"
+"#  2) Add a test for the presence of a closing underscore\n"
+"#+    in phrases to be italicized.\n"
+msgstr ""

@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/max.sh:3
+msgid "#!/bin/bash # max.sh: Maximum of two integers."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:8
+#, no-wrap
+msgid ""
+"E_PARAM_ERR=250    # If less than 2 params passed to function.\n"
+"EQUAL=251          # Return value if both params equal.\n"
+"#  Error values out of range of any\n"
+"#+ params that might be fed to the function.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:15
+#, no-wrap
+msgid ""
+"max2 ()             # Returns larger of two numbers.\n"
+"{                   # Note: numbers compared must be less than 250.\n"
+"if [ -z \"$2\" ]\n"
+"then\n"
+"  return $E_PARAM_ERR\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:28
+#, no-wrap
+msgid ""
+"if [ \"$1\" -eq \"$2\" ]\n"
+"then\n"
+"  return $EQUAL\n"
+"else\n"
+"  if [ \"$1\" -gt \"$2\" ]\n"
+"  then\n"
+"    return $1\n"
+"  else\n"
+"    return $2\n"
+"  fi\n"
+"fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:31
+msgid "max2 33 34 return_val=$?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:41
+#, no-wrap
+msgid ""
+"if [ \"$return_val\" -eq $E_PARAM_ERR ]\n"
+"then\n"
+"  echo \"Need to pass two parameters to the function.\"\n"
+"elif [ \"$return_val\" -eq $EQUAL ]\n"
+"  then\n"
+"    echo \"The two numbers are equal.\"\n"
+"else\n"
+"    echo \"The larger of the two numbers is $return_val.\"\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:44
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/max.sh:48
+msgid ""
+"# Exercise (easy): # --------------- # Convert this to an interactive "
+"script, #+ that is, have the script ask for input (two numbers)."
+msgstr ""

@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:3
+msgid "#!/bin/bash # background-loop.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:9
+#, no-wrap
+msgid ""
+"for i in 1 2 3 4 5 6 7 8 9 10            # First loop.\n"
+"do\n"
+"  echo -n \"$i \"\n"
+"done &amp; # Run this loop in background.\n"
+"       # Will sometimes execute after second loop.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:11 abs-guide/background-loop.sh:18
+#, no-wrap
+msgid "echo   # This 'echo' sometimes will not display.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:16
+#, no-wrap
+msgid ""
+"for i in 11 12 13 14 15 16 17 18 19 20   # Second loop.\n"
+"do\n"
+"  echo -n \"$i \"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:20
+msgid "# ======================================================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:24
+msgid ""
+"# The expected output from the script: # 1 2 3 4 5 6 7 8 9 10 # 11 12 13 14 "
+"15 16 17 18 19 20"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:29
+msgid ""
+"# Sometimes, though, you get: # 11 12 13 14 15 16 17 18 19 20 # 1 2 3 4 5 6 "
+"7 8 9 10 bozo $ # (The second 'echo' doesn't execute. Why?)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:33
+msgid ""
+"# Occasionally also: # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # "
+"(The first 'echo' doesn't execute. Why?)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:37
+msgid ""
+"# Very rarely something like: # 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 "
+"19 20 # The foreground loop preempts the background one."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:39
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/background-loop.sh:42
+#, no-wrap
+msgid ""
+"#  Nasimuddin Ansari suggests adding    sleep 1\n"
+"#+ after the   echo -n \"$i\"   in lines 6 and 14,\n"
+"#+ for some real fun.\n"
+msgstr ""

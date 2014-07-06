@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/base.sh:15
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"###########################################################################\n"
+"# Shellscript:\tbase.sh - print number to different bases (Bourne Shell)\n"
+"# Author     :\tHeiner Steven (heiner.steven@odn.de)\n"
+"# Date       :\t07-03-95\n"
+"# Category   :\tDesktop\n"
+"# $Id$\n"
+"# ==> Above line is RCS ID info.\n"
+"###########################################################################\n"
+"# Description\n"
+"#\n"
+"# Changes\n"
+"# 21-03-95 stv\tfixed error occuring with 0xb as input (0.2)\n"
+"###########################################################################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:18
+msgid ""
+"# ==> Used in ABS Guide with the script author's permission.  # ==> Comments "
+"added by ABS Guide author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:22
+#, no-wrap
+msgid ""
+"NOARGS=85\n"
+"PN=`basename \"$0\"`\t\t\t       # Program name\n"
+"VER=`echo '$Revision$' | cut -d' ' -f2`  # ==> VER=1.2\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:26
+#, no-wrap
+msgid ""
+"Usage () {\n"
+"    echo \"$PN - print number to different bases, $VER (stv '95)\n"
+"usage: $PN [number ...]\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:35
+#, no-wrap
+msgid ""
+"If no number is given, the numbers are read from standard input.\n"
+"A number may be\n"
+"    binary (base 2)\t\tstarting with 0b (i.e. 0b1100)\n"
+"    octal (base 8)\t\tstarting with 0  (i.e. 014)\n"
+"    hexadecimal (base 16)\tstarting with 0x (i.e. 0xc)\n"
+"    decimal\t\t\totherwise (i.e. 12)\" >&amp;2\n"
+"    exit $NOARGS \n"
+"}   # ==> Prints usage message.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:41
+#, no-wrap
+msgid ""
+"Msg () {\n"
+"    for i   # ==> in [list] missing. Why?\n"
+"    do echo \"$PN: $i\" >&amp;2\n"
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:43
+msgid "Fatal () { Msg \"$@\"; exit 66; }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:57
+#, no-wrap
+msgid ""
+"PrintBases () {\n"
+"    # Determine base of the number\n"
+"    for i      # ==> in [list] missing...\n"
+"    do         # ==> so operates on command-line arg(s).\n"
+"\tcase \"$i\" in\n"
+"\t    0b*)\t\tibase=2;;\t# binary\n"
+"\t    0x*|[a-f]*|[A-F]*)\tibase=16;;\t# hexadecimal\n"
+"\t    0*)\t\t\tibase=8;;\t# octal\n"
+"\t    [1-9]*)\t\tibase=10;;\t# decimal\n"
+"\t    *)\n"
+"\t\tMsg \"illegal number $i - ignored\"\n"
+"\t\tcontinue;;\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:61
+#, no-wrap
+msgid ""
+"\t# Remove prefix, convert hex digits to uppercase (bc needs this).\n"
+"\tnumber=`echo \"$i\" | sed -e 's:^0[bBxX]::' | tr '[a-f]' '[A-F]'`\n"
+"\t# ==> Uses \":\" as sed separator, rather than \"/\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:68
+#, no-wrap
+msgid ""
+"\t# Convert number to decimal\n"
+"\tdec=`echo \"ibase=$ibase; $number\" | bc`  # ==> 'bc' is calculator "
+"utility.\n"
+"\tcase \"$dec\" in\n"
+"\t    [0-9]*)\t;;\t\t\t # number ok\n"
+"\t    *)\t\tcontinue;;\t\t # error: ignore\n"
+"\tesac\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:78
+#, no-wrap
+msgid ""
+"\t# Print all conversions in one line.\n"
+"\t# ==> 'here document' feeds command list to 'bc'.\n"
+"\techo `bc &lt;&lt;!\n"
+"\t    obase=16; \"hex=\"; $dec\n"
+"\t    obase=10; \"dec=\"; $dec\n"
+"\t    obase=8;  \"oct=\"; $dec\n"
+"\t    obase=2;  \"bin=\"; $dec\n"
+"!\n"
+"    ` | sed -e 's: :\t:g'\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:81
+#, no-wrap
+msgid ""
+"    done\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:96
+#, no-wrap
+msgid ""
+"while [ $# -gt 0 ]\n"
+"# ==>  Is a \"while loop\" really necessary here,\n"
+"# ==>+ since all the cases either break out of the loop\n"
+"# ==>+ or terminate the script.\n"
+"# ==> (Above comment by Paulo Marcel Coelho Aragao.)\n"
+"do\n"
+"    case \"$1\" in\n"
+"\t--)     shift; break;;\n"
+"\t-h)     Usage;;                 # ==> Help message.\n"
+"\t-*)     Usage;;\n"
+"         *)     break;;                 # First number\n"
+"    esac   # ==> Error checking for illegal input might be appropriate.\n"
+"    shift\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:106
+#, no-wrap
+msgid ""
+"if [ $# -gt 0 ]\n"
+"then\n"
+"    PrintBases \"$@\"\n"
+"else\t\t\t\t\t# Read from stdin.\n"
+"    while read line\n"
+"    do\n"
+"\tPrintBases $line\n"
+"    done\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/base.sh:108
+msgid "exit"
+msgstr ""

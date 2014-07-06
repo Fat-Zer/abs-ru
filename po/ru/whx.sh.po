@@ -1,0 +1,453 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/whx.sh:6
+msgid ""
+"#!/bin/bash # whx.sh: \"whois\" spammer lookup # Author: Walter Dnes # "
+"Slight revisions (first section) by ABS Guide author.  # Used in ABS Guide "
+"with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:9
+msgid ""
+"# Needs version 3.x or greater of Bash to run (because of =~ operator).  # "
+"Commented by script author and ABS Guide author."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:16
+#, no-wrap
+msgid ""
+"E_BADARGS=85        # Missing command-line arg.\n"
+"E_NOHOST=86         # Host not found.\n"
+"E_TIMEOUT=87        # Host lookup timed out.\n"
+"E_UNDEF=88          # Some other (undefined) error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:21
+#, no-wrap
+msgid ""
+"HOSTWAIT=10         # Specify up to 10 seconds for host query reply.\n"
+"                    # The actual wait may be a bit longer.\n"
+"OUTFILE=whois.txt   # Output file.\n"
+"PORT=4321\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:28
+#, no-wrap
+msgid ""
+"if [ -z \"$1\" ]      # Check for (required) command-line arg.\n"
+"then\n"
+"  echo \"Usage: $0 domain name or IP address\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:40
+#, no-wrap
+msgid ""
+"if [[ \"$1\" =~ [a-zA-Z][a-zA-Z]$ ]]  #  Ends in two alpha chars?\n"
+"then                                  #  It's a domain name &amp;&amp;\n"
+"                                      #+ must do host lookup.\n"
+"  IPADDR=$(host -W $HOSTWAIT $1 | awk '{print $4}')\n"
+"                                      #  Doing host lookup\n"
+"                                      #+ to get IP address.\n"
+"\t\t\t\t      #  Extract final field.\n"
+"else\n"
+"  IPADDR=\"$1\"                         #  Command-line arg was IP "
+"address.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:42
+msgid "echo; echo \"IP Address is: \"$IPADDR\"\"; echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:48
+#, no-wrap
+msgid ""
+"if [ -e \"$OUTFILE\" ]\n"
+"then\n"
+"  rm -f \"$OUTFILE\"\n"
+"  echo \"Stale output file \\\"$OUTFILE\\\" removed.\"; echo\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:59
+#, no-wrap
+msgid ""
+"#  Sanity checks.\n"
+"#  (This section needs more work.)\n"
+"#  ===============================\n"
+"if [ -z \"$IPADDR\" ]\n"
+"# No response.\n"
+"then\n"
+"  echo \"Host not found!\"\n"
+"  exit $E_NOHOST    # Bail out.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:66
+#, no-wrap
+msgid ""
+"if [[ \"$IPADDR\" =~ ^[;;] ]]\n"
+"#  ;; Connection timed out; no servers could be reached.\n"
+"then\n"
+"  echo \"Host lookup timed out!\"\n"
+"  exit $E_TIMEOUT   # Bail out.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:73
+#, no-wrap
+msgid ""
+"if [[ \"$IPADDR\" =~ [(NXDOMAIN)]$ ]]\n"
+"#  Host xxxxxxxxx.xxx not found: 3(NXDOMAIN)\n"
+"then\n"
+"  echo \"Host not found!\"\n"
+"  exit $E_NOHOST    # Bail out.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:80
+#, no-wrap
+msgid ""
+"if [[ \"$IPADDR\" =~ [(SERVFAIL)]$ ]]\n"
+"#  Host xxxxxxxxx.xxx not found: 2(SERVFAIL)\n"
+"then\n"
+"  echo \"Host not found!\"\n"
+"  exit $E_NOHOST    # Bail out.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:85
+msgid "# ======================== Main body of script ========================"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:89
+msgid ""
+"AFRINICquery() { # Define the function that queries AFRINIC. Echo a "
+"notification to the #+ screen, and then run the actual query, redirecting "
+"output to $OUTFILE."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:92
+#, no-wrap
+msgid ""
+"  echo \"Searching for $IPADDR in whois.afrinic.net\"\n"
+"  whois -h whois.afrinic.net \"$IPADDR\" > $OUTFILE\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:112
+#, no-wrap
+msgid ""
+"#  Check for presence of reference to an rwhois.\n"
+"#  Warn about non-functional rwhois.infosat.net server\n"
+"#+ and attempt rwhois query.\n"
+"  if grep -e \"^remarks: .*rwhois\\.[^ ]\\+\" \"$OUTFILE\"\n"
+"  then\n"
+"    echo \" \" >> $OUTFILE\n"
+"    echo \"***\" >> $OUTFILE\n"
+"    echo \"***\" >> $OUTFILE\n"
+"    echo \"Warning: rwhois.infosat.net was not working \\\n"
+"      as of 2005/02/02\" >> $OUTFILE\n"
+"    echo \"         when this script was written.\" >> $OUTFILE\n"
+"    echo \"***\" >> $OUTFILE\n"
+"    echo \"***\" >> $OUTFILE\n"
+"    echo \" \" >> $OUTFILE\n"
+"    RWHOIS=`grep \"^remarks: .*rwhois\\.[^ ]\\+\" \"$OUTFILE\" | tail -n 1 "
+"|\\\n"
+"    sed \"s/\\(^.*\\)\\(rwhois\\..*\\)\\(:4.*\\)/\\2/\"`\n"
+"    whois -h ${RWHOIS}:${PORT} \"$IPADDR\" >> $OUTFILE\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:116
+#, no-wrap
+msgid ""
+"APNICquery() {\n"
+"  echo \"Searching for $IPADDR in whois.apnic.net\"\n"
+"  whois -h whois.apnic.net \"$IPADDR\" > $OUTFILE\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:127
+msgid ""
+"# Just about every country has its own internet registrar.  # I don't "
+"normally bother consulting them, because the regional registry #+ usually "
+"supplies sufficient information.  # There are a few exceptions, where the "
+"regional registry simply #+ refers to the national registry for direct "
+"data.  # These are Japan and South Korea in APNIC, and Brasil in LACNIC.  # "
+"The following if statement checks $OUTFILE (whois.txt) for the presence #+ "
+"of \"KR\" (South Korea) or \"JP\" (Japan) in the country field.  # If either "
+"is found, the query is re-run against the appropriate #+ national registry."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:138
+#, no-wrap
+msgid ""
+"  if grep -E \"^country:[ ]+KR$\" \"$OUTFILE\"\n"
+"  then\n"
+"    echo \"Searching for $IPADDR in whois.krnic.net\"\n"
+"    whois -h whois.krnic.net \"$IPADDR\" >> $OUTFILE\n"
+"  elif grep -E \"^country:[ ]+JP$\" \"$OUTFILE\"\n"
+"  then\n"
+"    echo \"Searching for $IPADDR in whois.nic.ad.jp\"\n"
+"    whois -h whois.nic.ad.jp \"$IPADDR\"/e >> $OUTFILE\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:142
+#, no-wrap
+msgid ""
+"ARINquery() {\n"
+"  echo \"Searching for $IPADDR in whois.arin.net\"\n"
+"  whois -h whois.arin.net \"$IPADDR\" > $OUTFILE\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:161
+#, no-wrap
+msgid ""
+"#  Several large internet providers listed by ARIN have their own\n"
+"#+ internal whois service, referred to as \"rwhois\".\n"
+"#  A large block of IP addresses is listed with the provider\n"
+"#+ under the ARIN registry.\n"
+"#  To get the IP addresses of 2nd-level ISPs or other large customers,\n"
+"#+ one has to refer to the rwhois server on port 4321.\n"
+"#  I originally started with a bunch of \"if\" statements checking for\n"
+"#+ the larger providers.\n"
+"#  This approach is unwieldy, and there's always another rwhois server\n"
+"#+ that I didn't know about.\n"
+"#  A more elegant approach is to check $OUTFILE for a reference\n"
+"#+ to a whois server, parse that server name out of the comment section,\n"
+"#+ and re-run the query against the appropriate rwhois server.\n"
+"#  The parsing looks a bit ugly, with a long continued line inside\n"
+"#+ backticks.\n"
+"#  But it only has to be done once, and will work as new servers are "
+"added.\n"
+"#@   ABS Guide author comment: it isn't all that ugly, and is, in fact,\n"
+"#@+  an instructive use of Regular Expressions.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:170
+#, no-wrap
+msgid ""
+"  if grep -E \"^Comment: .*rwhois.[^ ]+\" \"$OUTFILE\"\n"
+"  then\n"
+"    RWHOIS=`grep -e \"^Comment:.*rwhois\\.[^ ]\\+\" \"$OUTFILE\" | tail -n 1 "
+"|\\\n"
+"    sed \"s/^\\(.*\\)\\(rwhois\\.[^ ]\\+\\)\\(.*$\\)/\\2/\"`\n"
+"    echo \"Searching for $IPADDR in ${RWHOIS}\"\n"
+"    whois -h ${RWHOIS}:${PORT} \"$IPADDR\" >> $OUTFILE\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:174
+#, no-wrap
+msgid ""
+"LACNICquery() {\n"
+"  echo \"Searching for $IPADDR in whois.lacnic.net\"\n"
+"  whois -h whois.lacnic.net \"$IPADDR\" > $OUTFILE\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:178
+msgid ""
+"# The following if statement checks $OUTFILE (whois.txt) for #+ the presence "
+"of \"BR\" (Brasil) in the country field.  # If it is found, the query is "
+"re-run against whois.registro.br."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:185
+#, no-wrap
+msgid ""
+"  if grep -E \"^country:[ ]+BR$\" \"$OUTFILE\"\n"
+"  then\n"
+"    echo \"Searching for $IPADDR in whois.registro.br\"\n"
+"    whois -h whois.registro.br \"$IPADDR\" >> $OUTFILE\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:190
+#, no-wrap
+msgid ""
+"RIPEquery() {\n"
+"  echo \"Searching for $IPADDR in whois.ripe.net\"\n"
+"  whois -h whois.ripe.net \"$IPADDR\" > $OUTFILE\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:195
+msgid ""
+"# Initialize a few variables.  # * slash8 is the most significant octet # * "
+"slash16 consists of the two most significant octets # * octet2 is the second "
+"most significant octet"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:218
+#, no-wrap
+msgid ""
+"slash8=`echo $IPADDR | cut -d. -f 1`\n"
+"  if [ -z \"$slash8\" ]  # Yet another sanity check.\n"
+"  then\n"
+"    echo \"Undefined error!\"\n"
+"    exit $E_UNDEF\n"
+"  fi\n"
+"slash16=`echo $IPADDR | cut -d. -f 1-2`\n"
+"#                             ^ Period specified as 'cut\" delimiter.\n"
+"  if [ -z \"$slash16\" ]\n"
+"  then\n"
+"    echo \"Undefined error!\"\n"
+"    exit $E_UNDEF\n"
+"  fi\n"
+"octet2=`echo $slash16 | cut -d. -f 2`\n"
+"  if [ -z \"$octet2\" ]\n"
+"  then\n"
+"    echo \"Undefined error!\"\n"
+"    exit $E_UNDEF\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:222
+msgid ""
+"# Check for various odds and ends of reserved space.  # There is no point in "
+"querying for those addresses."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:243
+#, no-wrap
+msgid ""
+"if [ $slash8 == 0 ]; then\n"
+"  echo $IPADDR is '\"This Network\"' space\\; Not querying\n"
+"elif [ $slash8 == 10 ]; then\n"
+"  echo $IPADDR is RFC1918 space\\; Not querying\n"
+"elif [ $slash8 == 14 ]; then\n"
+"  echo $IPADDR is '\"Public Data Network\"' space\\; Not querying\n"
+"elif [ $slash8 == 127 ]; then\n"
+"  echo $IPADDR is loopback space\\; Not querying\n"
+"elif [ $slash16 == 169.254 ]; then\n"
+"  echo $IPADDR is link-local space\\; Not querying\n"
+"elif [ $slash8 == 172 ] &amp;&amp; [ $octet2 -ge 16 ] &amp;&amp; [ $octet2 "
+"-le 31 ];then\n"
+"  echo $IPADDR is RFC1918 space\\; Not querying\n"
+"elif [ $slash16 == 192.168 ]; then\n"
+"  echo $IPADDR is RFC1918 space\\; Not querying\n"
+"elif [ $slash8 -ge 224 ]; then\n"
+"  echo $IPADDR is either Multicast or reserved space\\; Not querying\n"
+"elif [ $slash8 -ge 200 ] &amp;&amp; [ $slash8 -le 201 ]; then LACNICquery "
+"\"$IPADDR\"\n"
+"elif [ $slash8 -ge 202 ] &amp;&amp; [ $slash8 -le 203 ]; then APNICquery "
+"\"$IPADDR\"\n"
+"elif [ $slash8 -ge 210 ] &amp;&amp; [ $slash8 -le 211 ]; then APNICquery "
+"\"$IPADDR\"\n"
+"elif [ $slash8 -ge 218 ] &amp;&amp; [ $slash8 -le 223 ]; then APNICquery "
+"\"$IPADDR\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:247
+msgid ""
+"# If we got this far without making a decision, query ARIN.  # If a "
+"reference is found in $OUTFILE to APNIC, AFRINIC, LACNIC, or RIPE, #+ query "
+"the appropriate whois server."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:260
+#, no-wrap
+msgid ""
+"else\n"
+"  ARINquery \"$IPADDR\"\n"
+"  if grep \"whois.afrinic.net\" \"$OUTFILE\"; then\n"
+"    AFRINICquery \"$IPADDR\"\n"
+"  elif grep -E \"^OrgID:[ ]+RIPE$\" \"$OUTFILE\"; then\n"
+"    RIPEquery \"$IPADDR\"\n"
+"  elif grep -E \"^OrgID:[ ]+APNIC$\" \"$OUTFILE\"; then\n"
+"    APNICquery \"$IPADDR\"\n"
+"  elif grep -E \"^OrgID:[ ]+LACNIC$\" \"$OUTFILE\"; then\n"
+"    LACNICquery \"$IPADDR\"\n"
+"  fi\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:265
+#, no-wrap
+msgid ""
+"#@  ---------------------------------------------------------------\n"
+"#   Try also:\n"
+"#   wget http://logi.cc/nw/whois.php3?ACTION=doQuery&amp;DOMAIN=$IPADDR\n"
+"#@  ---------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:268
+msgid ""
+"# We've now finished the querying.  # Echo a copy of the final result to the "
+"screen."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:271
+msgid "cat $OUTFILE # Or \"less $OUTFILE\" . . ."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:274
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/whx.sh:280
+msgid ""
+"#@ ABS Guide author comments: #@ Nothing fancy here, but still a very useful "
+"tool for hunting spammers.  #@ Sure, the script can be cleaned up some, and "
+"it's still a bit buggy, #@+ (exercise for reader), but all the same, it's a "
+"nice piece of coding #@+ by Walter Dnes.  #@ Thank you!"
+msgstr ""

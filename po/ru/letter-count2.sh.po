@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:9
+#, no-wrap
+msgid ""
+"#! /bin/sh\n"
+"# letter-count2.sh: Counting letter occurrences in a text file.\n"
+"#\n"
+"# Script by nyal [nyal@voila.fr].\n"
+"# Used in ABS Guide with permission.\n"
+"# Recommented and reformatted by ABS Guide author.\n"
+"# Version 1.1: Modified to work with gawk 3.1.3.\n"
+"#              (Will still work with earlier versions.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:15
+msgid ""
+"INIT_TAB_AWK=\"\" # Parameter to initialize awk script.  count_case=0 "
+"FILE_PARSE=$1"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:17
+msgid "E_PARAMERR=85"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:24
+#, no-wrap
+msgid ""
+"usage()\n"
+"{\n"
+"    echo \"Usage: letter-count.sh file letters\" 2>&amp;1\n"
+"    # For example:   ./letter-count2.sh filename.txt a b c\n"
+"    exit $E_PARAMERR  # Too few arguments passed to script.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:29
+#, no-wrap
+msgid ""
+"if [ ! -f \"$1\" ] ; then\n"
+"    echo \"$1: No such file.\" 2>&amp;1\n"
+"    usage                 # Print usage message and exit.\n"
+"fi \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:34
+#, no-wrap
+msgid ""
+"if [ -z \"$2\" ] ; then\n"
+"    echo \"$2: No letters specified.\" 2>&amp;1\n"
+"    usage\n"
+"fi \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:43
+#, no-wrap
+msgid ""
+"shift                      # Letters specified.\n"
+"for letter in `echo $@`    # For each one . . .\n"
+"  do\n"
+"  INIT_TAB_AWK=\"$INIT_TAB_AWK tab_search[${count_case}] = \\\n"
+"  \\\"$letter\\\"; final_tab[${count_case}] = 0; \" \n"
+"  # Pass as parameter to awk script below.\n"
+"  count_case=`expr $count_case + 1`\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:46
+msgid "# DEBUG: # echo $INIT_TAB_AWK;"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:49
+msgid "cat $FILE_PARSE | # Pipe the target file to the following awk script."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:54
+msgid ""
+"# --------------------------------------------------------------------- # "
+"Earlier version of script: # awk -v tab_search=0 -v final_tab=0 -v tab=0 -v "
+"\\ # nb_letter=0 -v chara=0 -v chara2=0 \\"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:66
+msgid ""
+"awk \\ \"BEGIN { $INIT_TAB_AWK } \\ { split(\\$0, tab, \\\"\\\"); \\ for "
+"(chara in tab) \\ { for (chara2 in tab_search) \\ { if (tab_search[chara2] "
+"== tab[chara]) { final_tab[chara2]++ } } } } \\ END { for (chara in "
+"final_tab) \\ { print tab_search[chara] \\\" => \\\" final_tab[chara] } }\" "
+"# --------------------------------------------------------------------- # "
+"Nothing all that complicated, just . . .  #+ for-loops, if-tests, and a "
+"couple of specialized functions."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:68
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/letter-count2.sh:69
+msgid "# Compare this script to letter-count.sh."
+msgstr ""

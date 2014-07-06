@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:4
+msgid ""
+"#!/bin/bash # ind-ref.sh: Indirect variable referencing.  # Accessing the "
+"contents of the contents of a variable."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:6
+msgid "# First, let's fool around a little."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:8
+msgid "var=23"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:11
+#, no-wrap
+msgid ""
+"echo \"\\$var   = $var\"           # $var   = 23\n"
+"# So far, everything as expected. But ...\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:18
+#, no-wrap
+msgid ""
+"echo \"\\$\\$var  = $$var\"         # $$var  = 4570var\n"
+"#  Not useful ...\n"
+"#  \\$\\$ expanded to PID of the script\n"
+"#  -- refer to the entry on the $$ variable --\n"
+"#+ and \"var\" is echoed as plain text.\n"
+"#  (Thank you, Jakob Bohm, for pointing this out.)\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:23
+#, no-wrap
+msgid ""
+"echo \"\\\\\\$\\$var = \\$$var\"       # \\$$var = $23\n"
+"#  As expected. The first $ is escaped and pasted on to\n"
+"#+ the value of var ($var = 23 ).\n"
+"#  Meaningful, but still not useful. \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:25
+msgid "# Now, let's start over and do it the right way."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:27
+msgid "# ============================================== #"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:31
+#, no-wrap
+msgid ""
+"a=letter_of_alphabet   # Variable \"a\" holds the name of another "
+"variable.\n"
+"letter_of_alphabet=z\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:33 abs-guide/ind-ref.sh:48 abs-guide/ind-ref.sh:60 abs-guide/ind-ref.sh:71
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:36
+#, no-wrap
+msgid ""
+"# Direct reference.\n"
+"echo \"a = $a\"          # a = letter_of_alphabet\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:46
+#, no-wrap
+msgid ""
+"# Indirect reference.\n"
+"  eval a=\\$$a\n"
+"# ^^^        Forcing an eval(uation), and ...\n"
+"#        ^   Escaping the first $ ...\n"
+"# ------------------------------------------------------------------------\n"
+"# The 'eval' forces an update of $a, sets it to the updated value of "
+"\\$$a.\n"
+"# So, we see why 'eval' so often shows up in indirect reference notation.\n"
+"# ------------------------------------------------------------------------\n"
+"  echo \"Now a = $a\"    # Now a = z\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:51
+msgid "# Now, let's try changing the second-order reference."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:58
+#, no-wrap
+msgid ""
+"t=table_cell_3\n"
+"table_cell_3=24\n"
+"echo \"\\\"table_cell_3\\\" = $table_cell_3\"            # \"table_cell_3\" "
+"= 24\n"
+"echo -n \"dereferenced \\\"t\\\" = \"; eval echo \\$$t    # dereferenced "
+"\"t\" = 24\n"
+"# In this simple case, the following also works (why?).\n"
+"#         eval t=\\$$t; echo \"\\\"t\\\" = $t\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:68
+msgid ""
+"t=table_cell_3 NEW_VAL=387 table_cell_3=$NEW_VAL echo \"Changing value of "
+"\\\"table_cell_3\\\" to $NEW_VAL.\" echo \"\\\"table_cell_3\\\" now "
+"$table_cell_3\" echo -n \"dereferenced \\\"t\\\" now \"; eval echo \\$$t # "
+"\"eval\" takes the two arguments \"echo\" and \"\\$$t\" (set equal to "
+"$table_cell_3)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:73
+msgid "# (Thanks, Stephane Chazelas, for clearing up the above behavior.)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:78
+#, no-wrap
+msgid ""
+"#   A more straightforward method is the ${!t} notation, discussed in the\n"
+"#+ \"Bash, version 2\" section.\n"
+"#   See also ex78.sh.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ind-ref.sh:79
+msgid "exit 0"
+msgstr ""

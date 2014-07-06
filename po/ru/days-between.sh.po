@@ -1,0 +1,285 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/days-between.sh:8
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# days-between.sh:    Number of days between two dates.\n"
+"# Usage: ./days-between.sh [M]M/[D]D/YYYY [M]M/[D]D/YYYY\n"
+"#\n"
+"# Note: Script modified to account for changes in Bash, v. 2.05b +,\n"
+"#+      that closed the loophole permitting large negative\n"
+"#+      integer return values.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:11
+#, no-wrap
+msgid ""
+"ARGS=2                # Two command-line parameters expected.\n"
+"E_PARAM_ERR=85        # Param error.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:19
+#, no-wrap
+msgid ""
+"REFYR=1600            # Reference year.\n"
+"CENTURY=100\n"
+"DIY=365\n"
+"ADJ_DIY=367           # Adjusted for leap year + fraction.\n"
+"MIY=12\n"
+"DIM=31\n"
+"LEAPCYCLE=4\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:22
+#, no-wrap
+msgid ""
+"MAXRETVAL=255         #  Largest permissible\n"
+"                      #+ positive return value from a function.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:28
+#, no-wrap
+msgid ""
+"diff=                 # Declare global variable for date difference.\n"
+"value=                # Declare global variable for absolute value.\n"
+"day=                  # Declare globals for day, month, year.\n"
+"month=\n"
+"year=\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:36
+#, no-wrap
+msgid ""
+"Param_Error ()        # Command-line parameters wrong.\n"
+"{\n"
+"  echo \"Usage: `basename $0` [M]M/[D]D/YYYY [M]M/[D]D/YYYY\"\n"
+"  echo \"       (date must be after 1/3/1600)\"\n"
+"  exit $E_PARAM_ERR\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:45
+#, no-wrap
+msgid ""
+"Parse_Date ()                 # Parse date from command-line params.\n"
+"{\n"
+"  month=${1%%/**}\n"
+"  dm=${1%/**}                 # Day and month.\n"
+"  day=${dm#*/}\n"
+"  let \"year = `basename $1`\"  # Not a filename, but works just the same.\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:56
+#, no-wrap
+msgid ""
+"check_date ()                 # Checks for invalid date(s) passed.\n"
+"{\n"
+"  [ \"$day\" -gt \"$DIM\" ] || [ \"$month\" -gt \"$MIY\" ] ||\n"
+"  [ \"$year\" -lt \"$REFYR\" ] &amp;&amp; Param_Error\n"
+"  # Exit script on bad value(s).\n"
+"  # Uses or-list / and-list.\n"
+"  #\n"
+"  # Exercise: Implement more rigorous date checking.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:62
+#, no-wrap
+msgid ""
+"strip_leading_zero () #  Better to strip possible leading zero(s)\n"
+"{                     #+ from day and/or month\n"
+"  return ${1#0}       #+ since otherwise Bash will interpret them\n"
+"}                     #+ as octal values (POSIX.2, sect 2.9.2.1).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:70
+#, no-wrap
+msgid ""
+"day_index ()          # Gauss' Formula:\n"
+"{                     # Days from March 1, 1600 to date passed as param.\n"
+"                      #           ^^^^^^^^^^^^^\n"
+"  day=$1\n"
+"  month=$2\n"
+"  year=$3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:77
+#, no-wrap
+msgid ""
+"  let \"month = $month - 2\"\n"
+"  if [ \"$month\" -le 0 ]\n"
+"  then\n"
+"    let \"month += 12\"\n"
+"    let \"year -= 1\"\n"
+"  fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:80
+#, no-wrap
+msgid ""
+"  let \"year -= $REFYR\"\n"
+"  let \"indexyr = $year / $CENTURY\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:86
+#, no-wrap
+msgid ""
+"  let \"Days = $DIY*$year + $year/$LEAPCYCLE - $indexyr \\\n"
+"              + $indexyr/$LEAPCYCLE + $ADJ_DIY*$month/$MIY + $day - $DIM\"\n"
+"  #  For an in-depth explanation of this algorithm, see\n"
+"  #+   http://weblogs.asp.net/pgreborio/archive/2005/01/06/347968.aspx\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:89
+#, no-wrap
+msgid "  echo $Days\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:91
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:97
+#, no-wrap
+msgid ""
+"calculate_difference ()            # Difference between two day indices.\n"
+"{\n"
+"  let \"diff = $1 - $2\"             # Global variable.\n"
+"}  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:108
+#, no-wrap
+msgid ""
+"abs ()                             #  Absolute value\n"
+"{                                  #  Uses global \"value\" variable.\n"
+"  if [ \"$1\" -lt 0 ]                #  If negative\n"
+"  then                             #+ then\n"
+"    let \"value = 0 - $1\"           #+ change sign,\n"
+"  else                             #+ else\n"
+"    let \"value = $1\"               #+ leave it alone.\n"
+"  fi\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:115
+#, no-wrap
+msgid ""
+"if [ $# -ne \"$ARGS\" ]              # Require two command-line params.\n"
+"then\n"
+"  Param_Error\n"
+"fi  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:118
+#, no-wrap
+msgid ""
+"Parse_Date $1\n"
+"check_date $day $month $year       #  See if valid date.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:123
+#, no-wrap
+msgid ""
+"strip_leading_zero $day            #  Remove any leading zeroes\n"
+"day=$?                             #+ on day and/or month.\n"
+"strip_leading_zero $month\n"
+"month=$?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:125
+msgid "let \"date1 = `day_index $day $month $year`\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:129
+msgid "Parse_Date $2 check_date $day $month $year"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:134
+msgid "strip_leading_zero $day day=$? strip_leading_zero $month month=$?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:136
+msgid "date2=$(day_index $day $month $year) # Command substitution."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:139
+msgid "calculate_difference $date1 $date2"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:142
+#, no-wrap
+msgid ""
+"abs $diff                            # Make sure it's positive.\n"
+"diff=$value\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:144
+msgid "echo $diff"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:146
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:151
+msgid ""
+"# Exercise: # -------- # If given only one command-line parameter, have the "
+"script #+ use today's date as the second."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/days-between.sh:155
+#, no-wrap
+msgid ""
+"#  Compare this script with\n"
+"#+ the implementation of Gauss' Formula in a C program at\n"
+"#+    http://buschencrew.hypermart.net/software/datedif\n"
+msgstr ""

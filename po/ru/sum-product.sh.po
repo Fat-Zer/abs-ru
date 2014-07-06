@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:4
+msgid ""
+"#!/bin/bash # sum-product.sh # A function may \"return\" more than one "
+"value."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:10
+#, no-wrap
+msgid ""
+"sum_and_product ()   # Calculates both sum and product of passed args.\n"
+"{\n"
+"  echo $(( $1 + $2 )) $(( $1 * $2 ))\n"
+"# Echoes to stdout each calculated value, separated by space.\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:14
+msgid "echo echo \"Enter first number \" read first"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:19
+msgid "echo echo \"Enter second number \" read second echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:23
+#, no-wrap
+msgid ""
+"retval=`sum_and_product $first $second`      # Assigns output of function.\n"
+"sum=`echo \"$retval\" | awk '{print $1}'`      # Assigns first field.\n"
+"product=`echo \"$retval\" | awk '{print $2}'`  # Assigns second field.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:27
+msgid "echo \"$first + $second = $sum\" echo \"$first * $second = $product\" echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/sum-product.sh:28
+msgid "exit 0"
+msgstr ""

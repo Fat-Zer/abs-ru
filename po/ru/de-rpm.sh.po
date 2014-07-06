@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:3
+msgid "#!/bin/bash # de-rpm.sh: Unpack an 'rpm' archive"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:6
+msgid ""
+": ${1?\"Usage: `basename $0` target-file\"} # Must specify 'rpm' archive "
+"name as an argument."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:10
+#, no-wrap
+msgid ""
+"TEMPFILE=$$.cpio                         #  Tempfile with \"unique\" name.\n"
+"                                         #  $$ is process ID of script.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:15
+#, no-wrap
+msgid ""
+"rpm2cpio &lt; $1 > $TEMPFILE                #  Converts rpm archive into\n"
+"                                         #+ cpio archive.\n"
+"cpio --make-directories -F $TEMPFILE -i  #  Unpacks cpio archive.\n"
+"rm -f $TEMPFILE                          #  Deletes cpio archive.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:17
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/de-rpm.sh:21
+#, no-wrap
+msgid ""
+"#  Exercise:\n"
+"#  Add check for whether 1) \"target-file\" exists and\n"
+"#+                       2) it is an rpm archive.\n"
+"#  Hint:                    Parse output of 'file' command.\n"
+msgstr ""

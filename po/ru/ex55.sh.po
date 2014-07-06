@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex55.sh:2
+msgid "#!/bin/sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:4
+msgid "# --> Comments added by the author of this document marked by \"# -->\"."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:7
+msgid ""
+"# --> This is part of the 'rc' script package # --> by Miquel van "
+"Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:10
+msgid ""
+"# --> This particular script seems to be Red Hat / FC specific # --> (may "
+"not be present in other distributions)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:13
+msgid ""
+"# Bring down all unneeded services that are still running #+ (there "
+"shouldn't be any, so this is just a sanity check)"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:21
+#, no-wrap
+msgid ""
+"for i in /var/lock/subsys/*; do\n"
+"        # --> Standard for/in loop, but since \"do\" is on same line,\n"
+"        # --> it is necessary to add \";\".\n"
+"        # Check if the script is there.\n"
+"        [ ! -f $i ] &amp;&amp; continue\n"
+"        # --> This is a clever use of an \"and list\", equivalent to:\n"
+"        # --> if [ ! -f \"$i\" ]; then continue\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:26
+#, no-wrap
+msgid ""
+"        # Get the subsystem name.\n"
+"        subsys=${i#/var/lock/subsys/}\n"
+"        # --> Match variable name, which, in this case, is the file name.\n"
+"        # --> This is the exact equivalent of subsys=`basename $i`.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:31
+#, no-wrap
+msgid ""
+"        # -->  It gets it from the lock file name\n"
+"        # -->+ (if there is a lock file,\n"
+"        # -->+ that's proof the process has been running).\n"
+"        # -->  See the \"lockfile\" entry, above.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex55.sh:42
+#, no-wrap
+msgid ""
+"        # Bring the subsystem down.\n"
+"        if [ -f /etc/rc.d/init.d/$subsys.init ]; then\n"
+"           /etc/rc.d/init.d/$subsys.init stop\n"
+"        else\n"
+"           /etc/rc.d/init.d/$subsys stop\n"
+"        # -->  Suspend running jobs and daemons.\n"
+"        # -->  Note that \"stop\" is a positional parameter,\n"
+"        # -->+ not a shell builtin.\n"
+"        fi\n"
+"done\n"
+msgstr ""

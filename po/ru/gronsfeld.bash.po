@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:3
+msgid "#!/bin/bash # gronsfeld.bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:6
+msgid "# License: GPL3 # Reldate 06/23/11"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:15
+msgid ""
+"# This is an implementation of the Gronsfeld Cipher.  # It's essentially a "
+"stripped-down variant of the #+ polyalphabetic Vigen&egrave;re Tableau, but "
+"with only 10 alphabets.  # The classic Gronsfeld has a numeric sequence as "
+"the key word, #+ but here we substitute a letter string, for ease of use.  # "
+"Allegedly, this cipher was invented by the eponymous Count Gronsfeld #+ in "
+"the 17th Century. It was at one time considered to be unbreakable.  # Note "
+"that this is ###not### a secure cipher by modern standards."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:25
+#, no-wrap
+msgid ""
+"#  Global Variables  #\n"
+"Enc_suffix=\"29379\"   #  Encrypted text output with this 5-digit suffix. \n"
+"                     #  This functions as a decryption flag,\n"
+"                     #+ and when used to generate passwords adds security.\n"
+"Default_key=\"gronsfeldk\"\n"
+"                     #  The script uses this if key not entered below\n"
+"                     #  (at \"Keychain\").\n"
+"                     #  Change the above two values frequently\n"
+"                     #+ for added security.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:36
+#, no-wrap
+msgid ""
+"GROUPLEN=5           #  Output in groups of 5 letters, per tradition.\n"
+"alpha1=( abcdefghijklmnopqrstuvwxyz )\n"
+"alpha2=( {A..Z} )    #  Output in all caps, per tradition.\n"
+"                     #  Use   alpha2=( {a..z} )   for password generator.\n"
+"wraplen=26           #  Wrap around if past end of alphabet.\n"
+"dflag=               #  Decrypt flag (set if $Enc_suffix present).\n"
+"E_NOARGS=76          #  Missing command-line args?\n"
+"DEBUG=77             #  Debugging flag.\n"
+"declare -a offsets   #  This array holds the numeric shift values for\n"
+"                     #+ encryption/decryption.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:41
+#, no-wrap
+msgid ""
+"########Keychain#########\n"
+"key=  ### Put key here!!!\n"
+"      # 10 characters!\n"
+"#########################\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:48
+#, no-wrap
+msgid ""
+"# Function\n"
+": ()\n"
+"{ # Encrypt or decrypt, depending on whether $dflag is set.\n"
+"  # Why \": ()\" as a function name? Just to prove that it can be done.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:52
+#, no-wrap
+msgid ""
+"  local idx keydx mlen off1 shft\n"
+"  local plaintext=\"$1\"\n"
+"  local mlen=${#plaintext}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:57
+#, no-wrap
+msgid ""
+"for (( idx=0; idx&lt;$mlen; idx++ ))\n"
+"do\n"
+"  let \"keydx = $idx % $keylen\"\n"
+"  shft=${offsets[keydx]}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:69
+#, no-wrap
+msgid ""
+"  if [ -n \"$dflag\" ]\n"
+"  then                  # Decrypt!\n"
+"    let \"off1 = $(expr index \"${alpha1[*]}\" ${plaintext:idx:1}) - "
+"$shft\"\n"
+"    # Shift backward to decrypt.\n"
+"  else                  # Encrypt!\n"
+"    let \"off1 = $(expr index \"${alpha1[*]}\" ${plaintext:idx:1}) + "
+"$shft\"\n"
+"    # Shift forward to encrypt.\n"
+"    test $(( $idx % $GROUPLEN)) = 0 &amp;&amp; echo -n \" \"  # Groups of 5 "
+"letters.\n"
+"    #  Comment out above line for output as a string without whitespace,\n"
+"    #+ for example, if using the script as a password generator.\n"
+"  fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:71
+#, no-wrap
+msgid "  ((off1--))   # Normalize. Why is this necessary?\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:76
+#, no-wrap
+msgid ""
+"      if [ $off1 -lt 0 ]\n"
+"      then     # Catch negative indices.\n"
+"        let \"off1 += $wraplen\"\n"
+"      fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:78
+#, no-wrap
+msgid "  ((off1 %= $wraplen))   # Wrap around if past end of alphabet.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:80
+#, no-wrap
+msgid "  echo -n \"${alpha2[off1]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:82
+msgid "done"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:91
+#, no-wrap
+msgid ""
+"  if [ -z \"$dflag\" ]\n"
+"  then\n"
+"    echo \" $Enc_suffix\"\n"
+"#   echo \"$Enc_suffix\"  # For password generator.\n"
+"  else\n"
+"    echo\n"
+"  fi\n"
+"} # End encrypt/decrypt function.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:95
+msgid "# int main () {"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:102
+#, no-wrap
+msgid ""
+"# Check for command-line args.\n"
+"if [ -z \"$1\" ]\n"
+"then\n"
+"   echo \"Usage: $0 TEXT TO ENCODE/DECODE\"\n"
+"   exit $E_NOARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:109
+#, no-wrap
+msgid ""
+"if [ ${!#} == \"$Enc_suffix\" ]\n"
+"#    ^^^^^ Final command-line arg.\n"
+"then\n"
+"  dflag=ON\n"
+"  echo -n \"+\"           # Flag decrypted text with a \"+\" for easy ID.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:114
+#, no-wrap
+msgid ""
+"if [ -z \"$key\" ]\n"
+"then\n"
+"  key=\"$Default_key\"    # \"gronsfeldk\" per above.\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:116
+msgid "keylen=${#key}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:125
+#, no-wrap
+msgid ""
+"for (( idx=0; idx&lt;$keylen; idx++ ))\n"
+"do  # Calculate shift values for encryption/decryption.\n"
+"  offsets[idx]=$(expr index \"${alpha1[*]}\" ${key:idx:1})   # Normalize.\n"
+"  ((offsets[idx]--))  #  Necessary because \"expr index\" starts at 1,\n"
+"                      #+ whereas array count starts at 0.\n"
+"  # Generate array of numerical offsets corresponding to the key.\n"
+"  # There are simpler ways to accomplish this.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:129
+msgid ""
+"args=$(echo \"$*\" | sed -e 's/ //g' | tr A-Z a-z | sed -e 's/[0-9]//g')  # "
+"Remove whitespace and digits from command-line args.  # Can modify to also "
+"remove punctuation characters, if desired."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:132
+#, no-wrap
+msgid ""
+"         # Debug:\n"
+"         # echo \"$args\"; exit $DEBUG\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:135
+#, no-wrap
+msgid ""
+": \"$args\"               # Call the function named \":\".\n"
+"# : is a null operator, except . . . when it's a function name!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:137
+#, no-wrap
+msgid "exit $?    # } End-of-script\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/gronsfeld.bash:147
+#, no-wrap
+msgid ""
+"#   **************************************************************   #\n"
+"#   This script can function as a  password generator,\n"
+"#+  with several minor mods, see above.\n"
+"#   That would allow an easy-to-remember password, even the word\n"
+"#+ \"password\" itself, which encrypts to vrgfotvo29379\n"
+"#+  a fairly secure password not susceptible to a dictionary attack.\n"
+"#   Or, you could use your own name (surely that's easy to remember!).\n"
+"#   For example, Bozo Bozeman encrypts to hfnbttdppkt29379.\n"
+"#   **************************************************************   #\n"
+msgstr ""

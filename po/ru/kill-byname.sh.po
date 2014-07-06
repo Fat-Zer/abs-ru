@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:4
+msgid ""
+"#!/bin/bash # kill-byname.sh: Killing processes by name.  # Compare this "
+"script with kill-process.sh."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:8
+msgid ""
+"# For instance, #+ try \"./kill-byname.sh xterm\" -- #+ and watch all the "
+"xterms on your desktop disappear."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:14
+msgid ""
+"# Warning: # ------- # This is a fairly dangerous script.  # Running it "
+"carelessly (especially as root)  #+ can cause data loss and other "
+"undesirable effects."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:16
+msgid "E_BADARGS=66"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:22
+#, no-wrap
+msgid ""
+"if test -z \"$1\"  # No command-line arg supplied?\n"
+"then\n"
+"  echo \"Usage: `basename $0` Process(es)_to_kill\"\n"
+"  exit $E_BADARGS\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:27
+#, no-wrap
+msgid ""
+"PROCESS_NAME=\"$1\"\n"
+"ps ax | grep \"$PROCESS_NAME\" | awk '{print $1}' | xargs -i kill {} "
+"2&amp;>/dev/null\n"
+"#                                                       ^^      ^^\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:36
+msgid ""
+"# --------------------------------------------------------------- # Notes: # "
+"-i is the \"replace strings\" option to xargs.  # The curly brackets are the "
+"placeholder for the replacement.  # 2&amp;>/dev/null suppresses unwanted "
+"error messages.  # # Can grep \"$PROCESS_NAME\" be replaced by pidof "
+"\"$PROCESS_NAME\"? # "
+"---------------------------------------------------------------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:38
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/kill-byname.sh:40
+msgid ""
+"# The \"killall\" command has the same effect as this script, #+ but using "
+"it is not quite as educational."
+msgstr ""

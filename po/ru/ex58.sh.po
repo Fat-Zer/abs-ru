@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex58.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:5
+msgid ""
+"# Backs up all files in current directory modified within last 24 hours #+ "
+"in a \"tarball\" (tarred and gzipped file)."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:12
+#, no-wrap
+msgid ""
+"BACKUPFILE=backup-$(date +%m-%d-%Y)\n"
+"#                 Embeds date in backup filename.\n"
+"#                 Thanks, Joshua Tschida, for the idea.\n"
+"archive=${1:-$BACKUPFILE}\n"
+"#  If no backup-archive filename specified on command-line,\n"
+"#+ it will default to \"backup-MM-DD-YYYY.tar.gz.\"\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:16
+msgid ""
+"tar cvf - `find . -mtime -1 -type f -print` > $archive.tar gzip $archive.tar "
+"echo \"Directory $PWD backed up in archive file \\\"$archive.tar.gz\\\".\""
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:21
+msgid ""
+"# Stephane Chazelas points out that the above code will fail #+ if there are "
+"too many files found #+ or if any filenames contain blank characters."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:26
+#, no-wrap
+msgid ""
+"# He suggests the following alternatives:\n"
+"# -------------------------------------------------------------------\n"
+"#   find . -mtime -1 -type f -print0 | xargs -0 tar rvf \"$archive.tar\"\n"
+"#      using the GNU version of \"find\".\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:31
+#, no-wrap
+msgid ""
+"#   find . -mtime -1 -type f -exec tar rvf \"$archive.tar\" '{}' \\;\n"
+"#         portable to other UNIX flavors, but much slower.\n"
+"# -------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex58.sh:33
+msgid "exit 0"
+msgstr ""

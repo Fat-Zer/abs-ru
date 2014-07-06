@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/random-between.sh:7
+msgid ""
+"#!/bin/bash # random-between.sh # Random number between two specified "
+"values.  # Script by Bill Gradwohl, with minor modifications by the document "
+"author.  # Corrections in lines 187 and 189 by Anthony Le Clezio.  # Used "
+"with permission."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:16
+#, no-wrap
+msgid ""
+"randomBetween() {\n"
+"   #  Generates a positive or negative random number\n"
+"   #+ between $min and $max\n"
+"   #+ and divisible by $divisibleBy.\n"
+"   #  Gives a \"reasonably random\" distribution of return values.\n"
+"   #\n"
+"   #  Bill Gradwohl - Oct 1, 2003\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:39
+#, no-wrap
+msgid ""
+"   syntax() {\n"
+"   # Function embedded within function.\n"
+"      echo\n"
+"      echo    \"Syntax: randomBetween [min] [max] [multiple]\"\n"
+"      echo\n"
+"      echo -n \"Expects up to 3 passed parameters, \"\n"
+"      echo    \"but all are completely optional.\"\n"
+"      echo    \"min is the minimum value\"\n"
+"      echo    \"max is the maximum value\"\n"
+"      echo -n \"multiple specifies that the answer must be \"\n"
+"      echo     \"a multiple of this value.\"\n"
+"      echo    \"    i.e. answer must be evenly divisible by this number.\"\n"
+"      echo    \n"
+"      echo    \"If any value is missing, defaults area supplied as: 0 32767 "
+"1\"\n"
+"      echo -n \"Successful completion returns 0, \"\n"
+"      echo     \"unsuccessful completion returns\"\n"
+"      echo    \"function syntax and 1.\"\n"
+"      echo -n \"The answer is returned in the global variable \"\n"
+"      echo    \"randomBetweenAnswer\"\n"
+"      echo -n \"Negative values for any passed parameter are \"\n"
+"      echo    \"handled correctly.\"\n"
+"   }\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:44
+#, no-wrap
+msgid ""
+"   local min=${1:-0}\n"
+"   local max=${2:-32767}\n"
+"   local divisibleBy=${3:-1}\n"
+"   # Default values assigned, in case parameters not passed to function.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:47
+#, no-wrap
+msgid ""
+"   local x\n"
+"   local spread\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:50
+#, no-wrap
+msgid ""
+"   # Let's make sure the divisibleBy value is positive.\n"
+"   [ ${divisibleBy} -lt 0 ] &amp;&amp; divisibleBy=$((0-divisibleBy))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:56
+#, no-wrap
+msgid ""
+"   # Sanity check.\n"
+"   if [ $# -gt 3 -o ${divisibleBy} -eq 0 -o  ${min} -eq ${max} ]; then \n"
+"      syntax\n"
+"      return 1\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:64
+#, no-wrap
+msgid ""
+"   # See if the min and max are reversed.\n"
+"   if [ ${min} -gt ${max} ]; then\n"
+"      # Swap them.\n"
+"      x=${min}\n"
+"      min=${max}\n"
+"      max=${x}\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:74
+#, no-wrap
+msgid ""
+"   #  If min is itself not evenly divisible by $divisibleBy,\n"
+"   #+ then fix the min to be within range.\n"
+"   if [ $((min/divisibleBy*divisibleBy)) -ne ${min} ]; then \n"
+"      if [ ${min} -lt 0 ]; then\n"
+"         min=$((min/divisibleBy*divisibleBy))\n"
+"      else\n"
+"         min=$((((min/divisibleBy)+1)*divisibleBy))\n"
+"      fi\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:84
+#, no-wrap
+msgid ""
+"   #  If max is itself not evenly divisible by $divisibleBy,\n"
+"   #+ then fix the max to be within range.\n"
+"   if [ $((max/divisibleBy*divisibleBy)) -ne ${max} ]; then \n"
+"      if [ ${max} -lt 0 ]; then\n"
+"         max=$((((max/divisibleBy)-1)*divisibleBy))\n"
+"      else\n"
+"         max=$((max/divisibleBy*divisibleBy))\n"
+"      fi\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:87
+#, no-wrap
+msgid ""
+"   #  "
+"---------------------------------------------------------------------\n"
+"   #  Now, to do the real work.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:91
+#, no-wrap
+msgid ""
+"   #  Note that to get a proper distribution for the end points,\n"
+"   #+ the range of random values has to be allowed to go between\n"
+"   #+ 0 and abs(max-min)+divisibleBy, not just abs(max-min)+1.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:94
+#, no-wrap
+msgid ""
+"   #  The slight increase will produce the proper distribution for the\n"
+"   #+ end points.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:100
+#, no-wrap
+msgid ""
+"   #  Changing the formula to use abs(max-min)+1 will still produce\n"
+"   #+ correct answers, but the randomness of those answers is faulty in\n"
+"   #+ that the number of times the end points ($min and $max) are returned\n"
+"   #+ is considerably lower than when the correct formula is used.\n"
+"   #  "
+"---------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:107
+#, no-wrap
+msgid ""
+"   spread=$((max-min))\n"
+"   #  Omair Eshkenazi points out that this test is unnecessary,\n"
+"   #+ since max and min have already been switched around.\n"
+"   [ ${spread} -lt 0 ] &amp;&amp; spread=$((0-spread))\n"
+"   let spread+=divisibleBy\n"
+"   randomBetweenAnswer=$(((RANDOM%spread)/divisibleBy*divisibleBy+min))   \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:109
+#, no-wrap
+msgid "   return 0\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:116
+#, no-wrap
+msgid ""
+"   #  However, Paulo Marcel Coelho Aragao points out that\n"
+"   #+ when $max and $min are not divisible by $divisibleBy,\n"
+"   #+ the formula fails.\n"
+"   #\n"
+"   #  He suggests instead the following formula:\n"
+"   #    rnumber = $(((RANDOM%(max-min+1)+min)/divisibleBy*divisibleBy))\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:118
+msgid "}"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:123
+msgid "# Let's test the function.  min=-14 max=20 divisibleBy=3"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:127
+msgid ""
+"# Generate an array of expected answers and check to make sure we get #+ at "
+"least one of each answer if we loop long enough."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:138
+#, no-wrap
+msgid ""
+"declare -a answer\n"
+"minimum=${min}\n"
+"maximum=${max}\n"
+"   if [ $((minimum/divisibleBy*divisibleBy)) -ne ${minimum} ]; then \n"
+"      if [ ${minimum} -lt 0 ]; then\n"
+"         minimum=$((minimum/divisibleBy*divisibleBy))\n"
+"      else\n"
+"         minimum=$((((minimum/divisibleBy)+1)*divisibleBy))\n"
+"      fi\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:142
+#, no-wrap
+msgid ""
+"   #  If max is itself not evenly divisible by $divisibleBy,\n"
+"   #+ then fix the max to be within range.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:150
+#, no-wrap
+msgid ""
+"   if [ $((maximum/divisibleBy*divisibleBy)) -ne ${maximum} ]; then \n"
+"      if [ ${maximum} -lt 0 ]; then\n"
+"         maximum=$((((maximum/divisibleBy)-1)*divisibleBy))\n"
+"      else\n"
+"         maximum=$((maximum/divisibleBy*divisibleBy))\n"
+"      fi\n"
+"   fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:155
+msgid ""
+"# We need to generate only positive array subscripts, #+ so we need a "
+"displacement that that will guarantee #+ positive results."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:160
+#, no-wrap
+msgid ""
+"disp=$((0-minimum))\n"
+"for ((i=${minimum}; i&lt;=${maximum}; i+=divisibleBy)); do\n"
+"   answer[i+disp]=0\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:165
+#, no-wrap
+msgid ""
+"# Now loop a large number of times to see what we get.\n"
+"loopIt=1000   #  The script author suggests 100000,\n"
+"              #+ but that takes a good long while.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:167
+msgid "for ((i=0; i&lt;${loopIt}; ++i)); do"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:170
+#, no-wrap
+msgid ""
+"   #  Note that we are specifying min and max in reversed order here to\n"
+"   #+ make the function correct for this case.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:172
+#, no-wrap
+msgid "   randomBetween ${max} ${min} ${divisibleBy}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:178
+#, no-wrap
+msgid ""
+"   # Report an error if an answer is unexpected.\n"
+"   [ ${randomBetweenAnswer} -lt ${min} -o ${randomBetweenAnswer} -gt ${max} "
+"] \\\n"
+"   &amp;&amp; echo MIN or MAX error - ${randomBetweenAnswer}!\n"
+"   [ $((randomBetweenAnswer%${divisibleBy})) -ne 0 ] \\\n"
+"   &amp;&amp; echo DIVISIBLE BY error - ${randomBetweenAnswer}!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:182
+#, no-wrap
+msgid ""
+"   # Store the answer away statistically.\n"
+"   "
+"answer[randomBetweenAnswer+disp]=$((answer[randomBetweenAnswer+disp]+1))\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:186
+msgid "# Let's check the results"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:192
+#, no-wrap
+msgid ""
+"for ((i=${minimum}; i&lt;=${maximum}; i+=divisibleBy)); do\n"
+"   [ ${answer[i+disp]} -eq 0 ] \\\n"
+"   &amp;&amp; echo \"We never got an answer of $i.\" \\\n"
+"   || echo \"${i} occurred ${answer[i+disp]} times.\"\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/random-between.sh:194
+msgid "exit 0"
+msgstr ""

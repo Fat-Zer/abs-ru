@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/and-or.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:5
+msgid "a=24 b=47"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:12
+#, no-wrap
+msgid ""
+"if [ \"$a\" -eq 24 ] &amp;&amp; [ \"$b\" -eq 47 ]\n"
+"then\n"
+"  echo \"Test #1 succeeds.\"\n"
+"else\n"
+"  echo \"Test #1 fails.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:22
+#, no-wrap
+msgid ""
+"# ERROR:   if [ \"$a\" -eq 24 &amp;&amp; \"$b\" -eq 47 ]\n"
+"#+         attempts to execute  ' [ \"$a\" -eq 24 '\n"
+"#+         and fails to finding matching ']'.\n"
+"#\n"
+"#  Note:  if [[ $a -eq 24 &amp;&amp; $b -eq 24 ]]  works.\n"
+"#  The double-bracket if-test is more flexible\n"
+"#+ than the single-bracket version.       \n"
+"#    (The \"&amp;&amp;\" has a different meaning in line 17 than in line "
+"6.)\n"
+"#    Thanks, Stephane Chazelas, for pointing this out.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:30
+#, no-wrap
+msgid ""
+"if [ \"$a\" -eq 98 ] || [ \"$b\" -eq 47 ]\n"
+"then\n"
+"  echo \"Test #2 succeeds.\"\n"
+"else\n"
+"  echo \"Test #2 fails.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:35
+msgid ""
+"# The -a and -o options provide #+ an alternative compound condition test.  "
+"# Thanks to Patrick Callahan for pointing this out."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:43
+#, no-wrap
+msgid ""
+"if [ \"$a\" -eq 24 -a \"$b\" -eq 47 ]\n"
+"then\n"
+"  echo \"Test #3 succeeds.\"\n"
+"else\n"
+"  echo \"Test #3 fails.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:51
+#, no-wrap
+msgid ""
+"if [ \"$a\" -eq 98 -o \"$b\" -eq 47 ]\n"
+"then\n"
+"  echo \"Test #4 succeeds.\"\n"
+"else\n"
+"  echo \"Test #4 fails.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:61
+#, no-wrap
+msgid ""
+"a=rhino\n"
+"b=crocodile\n"
+"if [ \"$a\" = rhino ] &amp;&amp; [ \"$b\" = crocodile ]\n"
+"then\n"
+"  echo \"Test #5 succeeds.\"\n"
+"else\n"
+"  echo \"Test #5 fails.\"\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/and-or.sh:62
+msgid "exit 0"
+msgstr ""

@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/ex41.sh:2
+msgid "#!/bin/bash"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:5
+msgid ""
+"# Generates a log file in current directory # from the tail end of "
+"/var/log/messages."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:9
+#, no-wrap
+msgid ""
+"# Note: /var/log/messages must be world readable\n"
+"# if this script invoked by an ordinary user.\n"
+"#         #root chmod 644 /var/log/messages\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:11
+msgid "LINES=5"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:18
+msgid ""
+"( date; uname -a ) >>logfile # Time and machine name echo "
+"---------------------------------------------------------- >>logfile tail -n "
+"$LINES /var/log/messages | xargs | fmt -s >>logfile echo >>logfile echo "
+">>logfile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:20
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:29
+msgid ""
+"# Note: # ---- # As Frank Wang points out, #+ unmatched quotes (either "
+"single or double quotes) in the source file #+ may give xargs indigestion.  "
+"# # He suggests the following substitution for line 15: # tail -n $LINES "
+"/var/log/messages | tr -d \"\\\"'\" | xargs | fmt -s >>logfile"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex41.sh:36
+msgid ""
+"# Exercise: # -------- # Modify this script to track changes in "
+"/var/log/messages at intervals #+ of 20 minutes.  # Hint: Use the \"watch\" "
+"command."
+msgstr ""

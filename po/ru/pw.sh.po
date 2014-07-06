@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/pw.sh:9
+msgid ""
+"#!/bin/bash # # # Random password generator for Bash 2.x + #+ by Antek "
+"Sawicki &lt;tenox@tenox.tc&gt;, #+ who generously gave usage permission to "
+"the ABS Guide author.  # # ==> Comments added by document author ==>"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:15
+msgid ""
+"MATRIX=\"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\" # "
+"==> Password will consist of alphanumeric characters.  LENGTH=\"8\" # ==> "
+"May change 'LENGTH' for longer password."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:23
+#, no-wrap
+msgid ""
+"while [ \"${n:=1}\" -le \"$LENGTH\" ]\n"
+"# ==> Recall that := is \"default substitution\" operator.\n"
+"# ==> So, if 'n' has not been initialized, set it to 1.\n"
+"do\n"
+"\tPASS=\"$PASS${MATRIX:$(($RANDOM%${#MATRIX})):1}\"\n"
+"\t# ==> Very clever, but tricky.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:26
+#, no-wrap
+msgid ""
+"\t# ==> Starting from the innermost nesting...\n"
+"\t# ==> ${#MATRIX} returns length of array MATRIX.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:29
+#, no-wrap
+msgid ""
+"\t# ==> $RANDOM%${#MATRIX} returns random number between 1\n"
+"\t# ==> and [length of MATRIX] - 1.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:34
+#, no-wrap
+msgid ""
+"\t# ==> ${MATRIX:$(($RANDOM%${#MATRIX})):1}\n"
+"\t# ==> returns expansion of MATRIX at random position, by length 1. \n"
+"\t# ==> See {var:pos:len} parameter substitution in Chapter 9.\n"
+"\t# ==> and the associated examples.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:36
+#, no-wrap
+msgid ""
+"\t# ==> PASS=... simply pastes this result onto previous PASS "
+"(concatenation).\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:41
+#, no-wrap
+msgid ""
+"\t# ==> To visualize this more clearly, uncomment the following line\n"
+"\t#                 echo \"$PASS\"\n"
+"\t# ==> to see PASS being built up,\n"
+"\t# ==> one character at a time, each iteration of the loop.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:45
+#, no-wrap
+msgid ""
+"\tlet n+=1\n"
+"\t# ==> Increment 'n' for next pass.\n"
+"done\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:47
+#, no-wrap
+msgid "echo \"$PASS\"      # ==> Or, redirect to a file, as desired.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/pw.sh:48
+msgid "exit 0"
+msgstr ""

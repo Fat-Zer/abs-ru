@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/userlist.sh:3
+msgid "#!/bin/bash # userlist.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/userlist.sh:6
+#, no-wrap
+msgid ""
+"PASSWORD_FILE=/etc/passwd\n"
+"n=1           # User number\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/userlist.sh:15
+#, no-wrap
+msgid ""
+"for name in $(awk 'BEGIN{FS=\":\"}{print $1}' &lt; \"$PASSWORD_FILE\" )\n"
+"# Field separator = :    ^^^^^^\n"
+"# Print first field              ^^^^^^^^\n"
+"# Get input from password file  /etc/passwd  ^^^^^^^^^^^^^^^^^\n"
+"do\n"
+"  echo \"USER #$n = $name\"\n"
+"  let \"n += 1\"\n"
+"done  \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/userlist.sh:22
+msgid "# USER #1 = root # USER #2 = bin # USER #3 = daemon # ...  # USER #33 = bozo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/userlist.sh:24
+msgid "exit $?"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/userlist.sh:29
+msgid ""
+"# Discussion: # ---------- # How is it that an ordinary user, or a script "
+"run by same, #+ can read /etc/passwd? (Hint: Check the /etc/passwd file "
+"permissions.)  # Is this a security hole? Why or why not?"
+msgstr ""

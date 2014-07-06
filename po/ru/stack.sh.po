@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/stack.sh:3
+msgid "#!/bin/bash # stack.sh: push-down stack simulation"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:6
+msgid ""
+"# Similar to the CPU stack, a push-down stack stores data items #+ "
+"sequentially, but releases them in reverse order, last-in first-out."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:10
+#, no-wrap
+msgid ""
+"BP=100            #  Base Pointer of stack array.\n"
+"                  #  Begin at element 100.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:13
+#, no-wrap
+msgid ""
+"SP=$BP            #  Stack Pointer.\n"
+"                  #  Initialize it to \"base\" (bottom) of stack.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:17
+#, no-wrap
+msgid ""
+"Data=             #  Contents of stack location.  \n"
+"                  #  Must use global variable,\n"
+"                  #+ because of limitation on function return range.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:24
+#, no-wrap
+msgid ""
+"                  # 100     Base pointer       &lt;-- Base Pointer\n"
+"                  #  99     First data item\n"
+"                  #  98     Second data item\n"
+"                  # ...     More data\n"
+"                  #         Last data item     &lt;-- Stack pointer\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:27
+msgid "declare -a stack"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:35
+#, no-wrap
+msgid ""
+"push()            # Push item on stack.\n"
+"{\n"
+"if [ -z \"$1\" ]    # Nothing to push?\n"
+"then\n"
+"  return\n"
+"fi\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:38
+#, no-wrap
+msgid ""
+"let \"SP -= 1\"     # Bump stack pointer.\n"
+"stack[$SP]=$1\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:41
+msgid "return }"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:45
+#, no-wrap
+msgid ""
+"pop()                    # Pop item off stack.\n"
+"{\n"
+"Data=                    # Empty out data item.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:51
+#, no-wrap
+msgid ""
+"if [ \"$SP\" -eq \"$BP\" ]   # Stack empty?\n"
+"then\n"
+"  return\n"
+"fi                       #  This also keeps SP from getting past 100,\n"
+"                         #+ i.e., prevents a runaway stack.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:56
+#, no-wrap
+msgid ""
+"Data=${stack[$SP]}\n"
+"let \"SP += 1\"            # Bump stack pointer.\n"
+"return\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:66
+#, no-wrap
+msgid ""
+"status_report()          # Find out what's happening.\n"
+"{\n"
+"echo \"-------------------------------------\"\n"
+"echo \"REPORT\"\n"
+"echo \"Stack Pointer = $SP\"\n"
+"echo \"Just popped \\\"\"$Data\"\\\" off the stack.\"\n"
+"echo \"-------------------------------------\"\n"
+"echo\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:70
+msgid ""
+"# ======================================================= # Now, for some "
+"fun."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:72 abs-guide/stack.sh:78 abs-guide/stack.sh:98
+msgid "echo"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:76
+msgid "# See if you can pop anything off empty stack.  pop status_report"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:82
+#, no-wrap
+msgid ""
+"push garbage\n"
+"pop\n"
+"status_report     # Garbage in, garbage out.      \n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:86
+#, no-wrap
+msgid ""
+"value1=23;        push $value1\n"
+"value2=skidoo;    push $value2\n"
+"value3=LAST;      push $value3\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:93
+#, no-wrap
+msgid ""
+"pop               # LAST\n"
+"status_report\n"
+"pop               # skidoo\n"
+"status_report\n"
+"pop               # 23\n"
+"status_report     # Last-in, first-out!\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:96
+msgid ""
+"# Notice how the stack pointer decrements with each push, #+ and increments "
+"with each pop."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:100
+msgid "exit 0"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:102
+msgid "# ======================================================="
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:106
+msgid "# Exercises: # ---------"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:109
+#, no-wrap
+msgid ""
+"# 1)  Modify the \"push()\" function to permit pushing\n"
+"#   + multiple element on the stack with a single function call.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:112
+#, no-wrap
+msgid ""
+"# 2)  Modify the \"pop()\" function to permit popping\n"
+"#   + multiple element from the stack with a single function call.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:117
+#, no-wrap
+msgid ""
+"# 3)  Add error checking to the critical functions.\n"
+"#     That is, return an error code, depending on\n"
+"#   + successful or unsuccessful completion of the operation,\n"
+"#   + and take appropriate action.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/stack.sh:119
+#, no-wrap
+msgid ""
+"# 4)  Using this script as a starting point,\n"
+"#   + write a stack-based 4-function calculator.\n"
+msgstr ""

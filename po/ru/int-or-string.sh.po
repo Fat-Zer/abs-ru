@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:3
+msgid "#!/bin/bash # int-or-string.sh"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:8
+#, no-wrap
+msgid ""
+"a=2334                   # Integer.\n"
+"let \"a += 1\"\n"
+"echo \"a = $a \"           # a = 2335\n"
+"echo                     # Integer, still.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:15
+#, no-wrap
+msgid ""
+"b=${a/23/BB}             # Substitute \"BB\" for \"23\".\n"
+"                         # This transforms $b into a string.\n"
+"echo \"b = $b\"            # b = BB35\n"
+"declare -i b             # Declaring it an integer doesn't help.\n"
+"echo \"b = $b\"            # b = BB35\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:19
+#, no-wrap
+msgid ""
+"let \"b += 1\"             # BB35 + 1\n"
+"echo \"b = $b\"            # b = 1\n"
+"echo                     # Bash sets the \"integer value\" of a string to "
+"0.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:28
+#, no-wrap
+msgid ""
+"c=BB34\n"
+"echo \"c = $c\"            # c = BB34\n"
+"d=${c/BB/23}             # Substitute \"23\" for \"BB\".\n"
+"                         # This makes $d an integer.\n"
+"echo \"d = $d\"            # d = 2334\n"
+"let \"d += 1\"             # 2334 + 1\n"
+"echo \"d = $d\"            # d = 2335\n"
+"echo\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:36
+#, no-wrap
+msgid ""
+"# What about null variables?\n"
+"e=''                     # ... Or e=\"\" ... Or e=\n"
+"echo \"e = $e\"            # e =\n"
+"let \"e += 1\"             # Arithmetic operations allowed on a null "
+"variable?\n"
+"echo \"e = $e\"            # e = 1\n"
+"echo                     # Null variable transformed into an integer.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:52
+#, no-wrap
+msgid ""
+"# What about undeclared variables?\n"
+"echo \"f = $f\"            # f =\n"
+"let \"f += 1\"             # Arithmetic operations allowed?\n"
+"echo \"f = $f\"            # f = 1\n"
+"echo                     # Undeclared variable transformed into an "
+"integer.\n"
+"#\n"
+"# However ...\n"
+"let \"f /= $undecl_var\"   # Divide by zero?\n"
+"#   let: f /= : syntax error: operand expected (error token is \" \")\n"
+"# Syntax error! Variable $undecl_var is not set to zero here!\n"
+"#\n"
+"# But still ...\n"
+"let \"f /= 0\"\n"
+"#   let: f /= 0: division by 0 (error token is \"0\")\n"
+"# Expected behavior.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:58
+msgid ""
+"# Bash (usually) sets the \"integer value\" of null to zero #+ when "
+"performing an arithmetic operation.  # But, don't try this at home, folks! # "
+"It's undocumented and probably non-portable behavior."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:62
+msgid ""
+"# Conclusion: Variables in Bash are untyped, #+ with all attendant "
+"consequences."
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/int-or-string.sh:63
+msgid "exit $?"
+msgstr ""
