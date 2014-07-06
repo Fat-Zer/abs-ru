@@ -1,0 +1,2463 @@
+[main]
+host = https://www.transifex.com
+
+[abs-guide.abs-guide-xml-pot]
+source_file = pot/abs-guide.xml.pot
+source_lang = en
+trans.ru = po/ru/abs-guide.xml.po
+type = PO
+
+[abs-guide.add-drive-sh-pot]
+source_file = pot/add-drive.sh.pot
+source_lang = en
+trans.ru = po/ru/add-drive.sh.po
+type = PO
+
+[abs-guide.agram2-sh-pot]
+source_file = pot/agram2.sh.pot
+source_lang = en
+trans.ru = po/ru/agram2.sh.po
+type = PO
+
+[abs-guide.agram-sh-pot]
+source_file = pot/agram.sh.pot
+source_lang = en
+trans.ru = po/ru/agram.sh.po
+type = PO
+
+[abs-guide.alias-sh-pot]
+source_file = pot/alias.sh.pot
+source_lang = en
+trans.ru = po/ru/alias.sh.po
+type = PO
+
+[abs-guide.allprofs-sh-pot]
+source_file = pot/allprofs.sh.pot
+source_lang = en
+trans.ru = po/ru/allprofs.sh.po
+type = PO
+
+[abs-guide.alt-bc-sh-pot]
+source_file = pot/alt-bc.sh.pot
+source_lang = en
+trans.ru = po/ru/alt-bc.sh.po
+type = PO
+
+[abs-guide.am-i-root-sh-pot]
+source_file = pot/am-i-root.sh.pot
+source_lang = en
+trans.ru = po/ru/am-i-root.sh.po
+type = PO
+
+[abs-guide.and-list2-sh-pot]
+source_file = pot/and-list2.sh.pot
+source_lang = en
+trans.ru = po/ru/and-list2.sh.po
+type = PO
+
+[abs-guide.and-or-sh-pot]
+source_file = pot/and-or.sh.pot
+source_lang = en
+trans.ru = po/ru/and-or.sh.po
+type = PO
+
+[abs-guide.archiveweblogs-sh-pot]
+source_file = pot/archiveweblogs.sh.pot
+source_lang = en
+trans.ru = po/ru/archiveweblogs.sh.po
+type = PO
+
+[abs-guide.arglist-sh-pot]
+source_file = pot/arglist.sh.pot
+source_lang = en
+trans.ru = po/ru/arglist.sh.po
+type = PO
+
+[abs-guide.arith-ops-sh-pot]
+source_file = pot/arith-ops.sh.pot
+source_lang = en
+trans.ru = po/ru/arith-ops.sh.po
+type = PO
+
+[abs-guide.arith-tests-sh-pot]
+source_file = pot/arith-tests.sh.pot
+source_lang = en
+trans.ru = po/ru/arith-tests.sh.po
+type = PO
+
+[abs-guide.array-append-bash-pot]
+source_file = pot/array-append.bash.pot
+source_lang = en
+trans.ru = po/ru/array-append.bash.po
+type = PO
+
+[abs-guide.array-assign-bash-pot]
+source_file = pot/array-assign.bash.pot
+source_lang = en
+trans.ru = po/ru/array-assign.bash.po
+type = PO
+
+[abs-guide.array-function-sh-pot]
+source_file = pot/array-function.sh.pot
+source_lang = en
+trans.ru = po/ru/array-function.sh.po
+type = PO
+
+[abs-guide.array-ops-sh-pot]
+source_file = pot/array-ops.sh.pot
+source_lang = en
+trans.ru = po/ru/array-ops.sh.po
+type = PO
+
+[abs-guide.array-strops-sh-pot]
+source_file = pot/array-strops.sh.pot
+source_lang = en
+trans.ru = po/ru/array-strops.sh.po
+type = PO
+
+[abs-guide.arr-choice-sh-pot]
+source_file = pot/arr-choice.sh.pot
+source_lang = en
+trans.ru = po/ru/arr-choice.sh.po
+type = PO
+
+[abs-guide.arrow-detect-sh-pot]
+source_file = pot/arrow-detect.sh.pot
+source_lang = en
+trans.ru = po/ru/arrow-detect.sh.po
+type = PO
+
+[abs-guide.ascii2-sh-pot]
+source_file = pot/ascii2.sh.pot
+source_lang = en
+trans.ru = po/ru/ascii2.sh.po
+type = PO
+
+[abs-guide.ascii3-sh-pot]
+source_file = pot/ascii3.sh.pot
+source_lang = en
+trans.ru = po/ru/ascii3.sh.po
+type = PO
+
+[abs-guide.ascii-c-pot]
+source_file = pot/ascii.c.pot
+source_lang = en
+trans.ru = po/ru/ascii.c.po
+type = PO
+
+[abs-guide.ascii-sh-pot]
+source_file = pot/ascii.sh.pot
+source_lang = en
+trans.ru = po/ru/ascii.sh.po
+type = PO
+
+[abs-guide.assert-sh-pot]
+source_file = pot/assert.sh.pot
+source_lang = en
+trans.ru = po/ru/assert.sh.po
+type = PO
+
+[abs-guide.assoc-arr-test-sh-pot]
+source_file = pot/assoc-arr-test.sh.pot
+source_lang = en
+trans.ru = po/ru/assoc-arr-test.sh.po
+type = PO
+
+[abs-guide.avoid-subshell-sh-pot]
+source_file = pot/avoid-subshell.sh.pot
+source_lang = en
+trans.ru = po/ru/avoid-subshell.sh.po
+type = PO
+
+[abs-guide.background-loop-sh-pot]
+source_file = pot/background-loop.sh.pot
+source_lang = en
+trans.ru = po/ru/background-loop.sh.po
+type = PO
+
+[abs-guide.backlight-sh-pot]
+source_file = pot/backlight.sh.pot
+source_lang = en
+trans.ru = po/ru/backlight.sh.po
+type = PO
+
+[abs-guide.bad-op-sh-pot]
+source_file = pot/bad-op.sh.pot
+source_lang = en
+trans.ru = po/ru/bad-op.sh.po
+type = PO
+
+[abs-guide.badread-sh-pot]
+source_file = pot/badread.sh.pot
+source_lang = en
+trans.ru = po/ru/badread.sh.po
+type = PO
+
+[abs-guide.base64-sh-pot]
+source_file = pot/base64.sh.pot
+source_lang = en
+trans.ru = po/ru/base64.sh.po
+type = PO
+
+[abs-guide.base-sh-pot]
+source_file = pot/base.sh.pot
+source_lang = en
+trans.ru = po/ru/base.sh.po
+type = PO
+
+[abs-guide.bashandperl-sh-pot]
+source_file = pot/bashandperl.sh.pot
+source_lang = en
+trans.ru = po/ru/bashandperl.sh.po
+type = PO
+
+[abs-guide.BashExtraKeys-sh-pot]
+source_file = pot/BashExtraKeys.sh.pot
+source_lang = en
+trans.ru = po/ru/BashExtraKeys.sh.po
+type = PO
+
+[abs-guide.bashpodder-sh-pot]
+source_file = pot/bashpodder.sh.pot
+source_lang = en
+trans.ru = po/ru/bashpodder.sh.po
+type = PO
+
+[abs-guide.bash-profile-snippet-pot]
+source_file = pot/bash-profile.snippet.pot
+source_lang = en
+trans.ru = po/ru/bash-profile.snippet.po
+type = PO
+
+[abs-guide.bashrc-pot]
+source_file = pot/bashrc.pot
+source_lang = en
+trans.ru = po/ru/bashrc.po
+type = PO
+
+[abs-guide.basics-reviewed-bash-pot]
+source_file = pot/basics-reviewed.bash.pot
+source_lang = en
+trans.ru = po/ru/basics-reviewed.bash.po
+type = PO
+
+[abs-guide.behead-sh-pot]
+source_file = pot/behead.sh.pot
+source_lang = en
+trans.ru = po/ru/behead.sh.po
+type = PO
+
+[abs-guide.bingo-sh-pot]
+source_file = pot/bingo.sh.pot
+source_lang = en
+trans.ru = po/ru/bingo.sh.po
+type = PO
+
+[abs-guide.bin-grep-sh-pot]
+source_file = pot/bin-grep.sh.pot
+source_lang = en
+trans.ru = po/ru/bin-grep.sh.po
+type = PO
+
+[abs-guide.blank-rename-sh-pot]
+source_file = pot/blank-rename.sh.pot
+source_lang = en
+trans.ru = po/ru/blank-rename.sh.po
+type = PO
+
+[abs-guide.blot-out-sh-pot]
+source_file = pot/blot-out.sh.pot
+source_lang = en
+trans.ru = po/ru/blot-out.sh.po
+type = PO
+
+[abs-guide.break-levels-sh-pot]
+source_file = pot/break-levels.sh.pot
+source_lang = en
+trans.ru = po/ru/break-levels.sh.po
+type = PO
+
+[abs-guide.broken-link-sh-pot]
+source_file = pot/broken-link.sh.pot
+source_lang = en
+trans.ru = po/ru/broken-link.sh.po
+type = PO
+
+[abs-guide.brownian-sh-pot]
+source_file = pot/brownian.sh.pot
+source_lang = en
+trans.ru = po/ru/brownian.sh.po
+type = PO
+
+[abs-guide.bubble-sh-pot]
+source_file = pot/bubble.sh.pot
+source_lang = en
+trans.ru = po/ru/bubble.sh.po
+type = PO
+
+[abs-guide.cannon-sh-pot]
+source_file = pot/cannon.sh.pot
+source_lang = en
+trans.ru = po/ru/cannon.sh.po
+type = PO
+
+[abs-guide.cards-sh-pot]
+source_file = pot/cards.sh.pot
+source_lang = en
+trans.ru = po/ru/cards.sh.po
+type = PO
+
+[abs-guide.case4-sh-pot]
+source_file = pot/case4.sh.pot
+source_lang = en
+trans.ru = po/ru/case4.sh.po
+type = PO
+
+[abs-guide.case-cmd-sh-pot]
+source_file = pot/case-cmd.sh.pot
+source_lang = en
+trans.ru = po/ru/case-cmd.sh.po
+type = PO
+
+[abs-guide.cdll-pot]
+source_file = pot/cdll.pot
+source_lang = en
+trans.ru = po/ru/cdll.po
+type = PO
+
+[abs-guide.collatz-sh-pot]
+source_file = pot/collatz.sh.pot
+source_lang = en
+trans.ru = po/ru/collatz.sh.po
+type = PO
+
+[abs-guide.colm-sh-pot]
+source_file = pot/colm.sh.pot
+source_lang = en
+trans.ru = po/ru/colm.sh.po
+type = PO
+
+[abs-guide.color-echo-sh-pot]
+source_file = pot/color-echo.sh.pot
+source_lang = en
+trans.ru = po/ru/color-echo.sh.po
+type = PO
+
+[abs-guide.col-sh-pot]
+source_file = pot/col.sh.pot
+source_lang = en
+trans.ru = po/ru/col.sh.po
+type = PO
+
+[abs-guide.col-totaler2-sh-pot]
+source_file = pot/col-totaler2.sh.pot
+source_lang = en
+trans.ru = po/ru/col-totaler2.sh.po
+type = PO
+
+[abs-guide.col-totaler3-sh-pot]
+source_file = pot/col-totaler3.sh.pot
+source_lang = en
+trans.ru = po/ru/col-totaler3.sh.po
+type = PO
+
+[abs-guide.col-totaler-sh-pot]
+source_file = pot/col-totaler.sh.pot
+source_lang = en
+trans.ru = po/ru/col-totaler.sh.po
+type = PO
+
+[abs-guide.commentblock-sh-pot]
+source_file = pot/commentblock.sh.pot
+source_lang = en
+trans.ru = po/ru/commentblock.sh.po
+type = PO
+
+[abs-guide.connect-stat-sh-pot]
+source_file = pot/connect-stat.sh.pot
+source_lang = en
+trans.ru = po/ru/connect-stat.sh.po
+type = PO
+
+[abs-guide.continue-n-example-pot]
+source_file = pot/continue-n.example.pot
+source_lang = en
+trans.ru = po/ru/continue-n.example.po
+type = PO
+
+[abs-guide.continue-nlevel-sh-pot]
+source_file = pot/continue-nlevel.sh.pot
+source_lang = en
+trans.ru = po/ru/continue-nlevel.sh.po
+type = PO
+
+[abs-guide.CopyArray-sh-pot]
+source_file = pot/CopyArray.sh.pot
+source_lang = en
+trans.ru = po/ru/CopyArray.sh.po
+type = PO
+
+[abs-guide.copy-cd-sh-pot]
+source_file = pot/copy-cd.sh.pot
+source_lang = en
+trans.ru = po/ru/copy-cd.sh.po
+type = PO
+
+[abs-guide.crypto-quote-sh-pot]
+source_file = pot/crypto-quote.sh.pot
+source_lang = en
+trans.ru = po/ru/crypto-quote.sh.po
+type = PO
+
+[abs-guide.csubloop-sh-pot]
+source_file = pot/csubloop.sh.pot
+source_lang = en
+trans.ru = po/ru/csubloop.sh.po
+type = PO
+
+[abs-guide.c-vars-sh-pot]
+source_file = pot/c-vars.sh.pot
+source_lang = en
+trans.ru = po/ru/c-vars.sh.po
+type = PO
+
+[abs-guide.cvt-sh-pot]
+source_file = pot/cvt.sh.pot
+source_lang = en
+trans.ru = po/ru/cvt.sh.po
+type = PO
+
+[abs-guide.cw-solver-sh-pot]
+source_file = pot/cw-solver.sh.pot
+source_lang = en
+trans.ru = po/ru/cw-solver.sh.po
+type = PO
+
+[abs-guide.data-file-pot]
+source_file = pot/data-file.pot
+source_lang = en
+trans.ru = po/ru/data-file.po
+type = PO
+
+[abs-guide.date-calc-sh-pot]
+source_file = pot/date-calc.sh.pot
+source_lang = en
+trans.ru = po/ru/date-calc.sh.po
+type = PO
+
+[abs-guide.days-between-sh-pot]
+source_file = pot/days-between.sh.pot
+source_lang = en
+trans.ru = po/ru/days-between.sh.po
+type = PO
+
+[abs-guide.dd-keypress-sh-pot]
+source_file = pot/dd-keypress.sh.pot
+source_lang = en
+trans.ru = po/ru/dd-keypress.sh.po
+type = PO
+
+[abs-guide.dereference-sh-pot]
+source_file = pot/dereference.sh.pot
+source_lang = en
+trans.ru = po/ru/dereference.sh.po
+type = PO
+
+[abs-guide.de-rpm-sh-pot]
+source_file = pot/de-rpm.sh.pot
+source_lang = en
+trans.ru = po/ru/de-rpm.sh.po
+type = PO
+
+[abs-guide.dev-tcp-sh-pot]
+source_file = pot/dev-tcp.sh.pot
+source_lang = en
+trans.ru = po/ru/dev-tcp.sh.po
+type = PO
+
+[abs-guide.dialog-sh-pot]
+source_file = pot/dialog.sh.pot
+source_lang = en
+trans.ru = po/ru/dialog.sh.po
+type = PO
+
+[abs-guide.dict-lookup-sh-pot]
+source_file = pot/dict-lookup.sh.pot
+source_lang = en
+trans.ru = po/ru/dict-lookup.sh.po
+type = PO
+
+[abs-guide.directory-info-sh-pot]
+source_file = pot/directory-info.sh.pot
+source_lang = en
+trans.ru = po/ru/directory-info.sh.po
+type = PO
+
+[abs-guide.Draw-box-sh-pot]
+source_file = pot/Draw-box.sh.pot
+source_lang = en
+trans.ru = po/ru/Draw-box.sh.po
+type = PO
+
+[abs-guide.Du-sh-pot]
+source_file = pot/Du.sh.pot
+source_lang = en
+trans.ru = po/ru/Du.sh.po
+type = PO
+
+[abs-guide.echo-params-sh-pot]
+source_file = pot/echo-params.sh.pot
+source_lang = en
+trans.ru = po/ru/echo-params.sh.po
+type = PO
+
+[abs-guide.embedded-arrays-sh-pot]
+source_file = pot/embedded-arrays.sh.pot
+source_lang = en
+trans.ru = po/ru/embedded-arrays.sh.po
+type = PO
+
+[abs-guide.empty-array-sh-pot]
+source_file = pot/empty-array.sh.pot
+source_lang = en
+trans.ru = po/ru/empty-array.sh.po
+type = PO
+
+[abs-guide.encryptedpw-sh-pot]
+source_file = pot/encryptedpw.sh.pot
+source_lang = en
+trans.ru = po/ru/encryptedpw.sh.po
+type = PO
+
+[abs-guide.erase-sh-pot]
+source_file = pot/erase.sh.pot
+source_lang = en
+trans.ru = po/ru/erase.sh.po
+type = PO
+
+[abs-guide.escaped-sh-pot]
+source_file = pot/escaped.sh.pot
+source_lang = en
+trans.ru = po/ru/escaped.sh.po
+type = PO
+
+[abs-guide.eval-example-pot]
+source_file = pot/eval.example.pot
+source_lang = en
+trans.ru = po/ru/eval.example.po
+type = PO
+
+[abs-guide.ex10-sh-pot]
+source_file = pot/ex10.sh.pot
+source_lang = en
+trans.ru = po/ru/ex10.sh.po
+type = PO
+
+[abs-guide.ex11-sh-pot]
+source_file = pot/ex11.sh.pot
+source_lang = en
+trans.ru = po/ru/ex11.sh.po
+type = PO
+
+[abs-guide.ex12-sh-pot]
+source_file = pot/ex12.sh.pot
+source_lang = en
+trans.ru = po/ru/ex12.sh.po
+type = PO
+
+[abs-guide.ex13-sh-pot]
+source_file = pot/ex13.sh.pot
+source_lang = en
+trans.ru = po/ru/ex13.sh.po
+type = PO
+
+[abs-guide.ex14-sh-pot]
+source_file = pot/ex14.sh.pot
+source_lang = en
+trans.ru = po/ru/ex14.sh.po
+type = PO
+
+[abs-guide.ex15-sh-pot]
+source_file = pot/ex15.sh.pot
+source_lang = en
+trans.ru = po/ru/ex15.sh.po
+type = PO
+
+[abs-guide.ex16-sh-pot]
+source_file = pot/ex16.sh.pot
+source_lang = en
+trans.ru = po/ru/ex16.sh.po
+type = PO
+
+[abs-guide.ex17-sh-pot]
+source_file = pot/ex17.sh.pot
+source_lang = en
+trans.ru = po/ru/ex17.sh.po
+type = PO
+
+[abs-guide.ex18-sh-pot]
+source_file = pot/ex18.sh.pot
+source_lang = en
+trans.ru = po/ru/ex18.sh.po
+type = PO
+
+[abs-guide.ex19-sh-pot]
+source_file = pot/ex19.sh.pot
+source_lang = en
+trans.ru = po/ru/ex19.sh.po
+type = PO
+
+[abs-guide.ex1a-sh-pot]
+source_file = pot/ex1a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex1a.sh.po
+type = PO
+
+[abs-guide.ex1-sh-pot]
+source_file = pot/ex1.sh.pot
+source_lang = en
+trans.ru = po/ru/ex1.sh.po
+type = PO
+
+[abs-guide.ex20-sh-pot]
+source_file = pot/ex20.sh.pot
+source_lang = en
+trans.ru = po/ru/ex20.sh.po
+type = PO
+
+[abs-guide.ex21-sh-pot]
+source_file = pot/ex21.sh.pot
+source_lang = en
+trans.ru = po/ru/ex21.sh.po
+type = PO
+
+[abs-guide.ex22a-sh-pot]
+source_file = pot/ex22a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex22a.sh.po
+type = PO
+
+[abs-guide.ex22-sh-pot]
+source_file = pot/ex22.sh.pot
+source_lang = en
+trans.ru = po/ru/ex22.sh.po
+type = PO
+
+[abs-guide.ex23-sh-pot]
+source_file = pot/ex23.sh.pot
+source_lang = en
+trans.ru = po/ru/ex23.sh.po
+type = PO
+
+[abs-guide.ex24-sh-pot]
+source_file = pot/ex24.sh.pot
+source_lang = en
+trans.ru = po/ru/ex24.sh.po
+type = PO
+
+[abs-guide.ex25-sh-pot]
+source_file = pot/ex25.sh.pot
+source_lang = en
+trans.ru = po/ru/ex25.sh.po
+type = PO
+
+[abs-guide.ex26a-sh-pot]
+source_file = pot/ex26a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex26a.sh.po
+type = PO
+
+[abs-guide.ex26-sh-pot]
+source_file = pot/ex26.sh.pot
+source_lang = en
+trans.ru = po/ru/ex26.sh.po
+type = PO
+
+[abs-guide.ex27-sh-pot]
+source_file = pot/ex27.sh.pot
+source_lang = en
+trans.ru = po/ru/ex27.sh.po
+type = PO
+
+[abs-guide.ex28-sh-pot]
+source_file = pot/ex28.sh.pot
+source_lang = en
+trans.ru = po/ru/ex28.sh.po
+type = PO
+
+[abs-guide.ex29-sh-pot]
+source_file = pot/ex29.sh.pot
+source_lang = en
+trans.ru = po/ru/ex29.sh.po
+type = PO
+
+[abs-guide.ex2-sh-pot]
+source_file = pot/ex2.sh.pot
+source_lang = en
+trans.ru = po/ru/ex2.sh.po
+type = PO
+
+[abs-guide.ex30a-sh-pot]
+source_file = pot/ex30a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex30a.sh.po
+type = PO
+
+[abs-guide.ex30-sh-pot]
+source_file = pot/ex30.sh.pot
+source_lang = en
+trans.ru = po/ru/ex30.sh.po
+type = PO
+
+[abs-guide.ex31-sh-pot]
+source_file = pot/ex31.sh.pot
+source_lang = en
+trans.ru = po/ru/ex31.sh.po
+type = PO
+
+[abs-guide.ex32-sh-pot]
+source_file = pot/ex32.sh.pot
+source_lang = en
+trans.ru = po/ru/ex32.sh.po
+type = PO
+
+[abs-guide.ex33a-sh-pot]
+source_file = pot/ex33a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex33a.sh.po
+type = PO
+
+[abs-guide.ex33-sh-pot]
+source_file = pot/ex33.sh.pot
+source_lang = en
+trans.ru = po/ru/ex33.sh.po
+type = PO
+
+[abs-guide.ex34-sh-pot]
+source_file = pot/ex34.sh.pot
+source_lang = en
+trans.ru = po/ru/ex34.sh.po
+type = PO
+
+[abs-guide.ex35-sh-pot]
+source_file = pot/ex35.sh.pot
+source_lang = en
+trans.ru = po/ru/ex35.sh.po
+type = PO
+
+[abs-guide.ex36-sh-pot]
+source_file = pot/ex36.sh.pot
+source_lang = en
+trans.ru = po/ru/ex36.sh.po
+type = PO
+
+[abs-guide.ex37-sh-pot]
+source_file = pot/ex37.sh.pot
+source_lang = en
+trans.ru = po/ru/ex37.sh.po
+type = PO
+
+[abs-guide.ex38-sh-pot]
+source_file = pot/ex38.sh.pot
+source_lang = en
+trans.ru = po/ru/ex38.sh.po
+type = PO
+
+[abs-guide.ex39-sh-pot]
+source_file = pot/ex39.sh.pot
+source_lang = en
+trans.ru = po/ru/ex39.sh.po
+type = PO
+
+[abs-guide.ex3-sh-pot]
+source_file = pot/ex3.sh.pot
+source_lang = en
+trans.ru = po/ru/ex3.sh.po
+type = PO
+
+[abs-guide.ex40-sh-pot]
+source_file = pot/ex40.sh.pot
+source_lang = en
+trans.ru = po/ru/ex40.sh.po
+type = PO
+
+[abs-guide.ex41-sh-pot]
+source_file = pot/ex41.sh.pot
+source_lang = en
+trans.ru = po/ru/ex41.sh.po
+type = PO
+
+[abs-guide.ex42-sh-pot]
+source_file = pot/ex42.sh.pot
+source_lang = en
+trans.ru = po/ru/ex42.sh.po
+type = PO
+
+[abs-guide.ex43-sh-pot]
+source_file = pot/ex43.sh.pot
+source_lang = en
+trans.ru = po/ru/ex43.sh.po
+type = PO
+
+[abs-guide.ex44-sh-pot]
+source_file = pot/ex44.sh.pot
+source_lang = en
+trans.ru = po/ru/ex44.sh.po
+type = PO
+
+[abs-guide.ex45a-sh-pot]
+source_file = pot/ex45a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex45a.sh.po
+type = PO
+
+[abs-guide.ex45-sh-pot]
+source_file = pot/ex45.sh.pot
+source_lang = en
+trans.ru = po/ru/ex45.sh.po
+type = PO
+
+[abs-guide.ex46-sh-pot]
+source_file = pot/ex46.sh.pot
+source_lang = en
+trans.ru = po/ru/ex46.sh.po
+type = PO
+
+[abs-guide.ex47-sh-pot]
+source_file = pot/ex47.sh.pot
+source_lang = en
+trans.ru = po/ru/ex47.sh.po
+type = PO
+
+[abs-guide.ex48-sh-pot]
+source_file = pot/ex48.sh.pot
+source_lang = en
+trans.ru = po/ru/ex48.sh.po
+type = PO
+
+[abs-guide.ex49-sh-pot]
+source_file = pot/ex49.sh.pot
+source_lang = en
+trans.ru = po/ru/ex49.sh.po
+type = PO
+
+[abs-guide.ex4-sh-pot]
+source_file = pot/ex4.sh.pot
+source_lang = en
+trans.ru = po/ru/ex4.sh.po
+type = PO
+
+[abs-guide.ex50-sh-pot]
+source_file = pot/ex50.sh.pot
+source_lang = en
+trans.ru = po/ru/ex50.sh.po
+type = PO
+
+[abs-guide.ex51-sh-pot]
+source_file = pot/ex51.sh.pot
+source_lang = en
+trans.ru = po/ru/ex51.sh.po
+type = PO
+
+[abs-guide.ex52-sh-pot]
+source_file = pot/ex52.sh.pot
+source_lang = en
+trans.ru = po/ru/ex52.sh.po
+type = PO
+
+[abs-guide.ex53-sh-pot]
+source_file = pot/ex53.sh.pot
+source_lang = en
+trans.ru = po/ru/ex53.sh.po
+type = PO
+
+[abs-guide.ex54-sh-pot]
+source_file = pot/ex54.sh.pot
+source_lang = en
+trans.ru = po/ru/ex54.sh.po
+type = PO
+
+[abs-guide.ex55-sh-pot]
+source_file = pot/ex55.sh.pot
+source_lang = en
+trans.ru = po/ru/ex55.sh.po
+type = PO
+
+[abs-guide.ex56py-sh-pot]
+source_file = pot/ex56py.sh.pot
+source_lang = en
+trans.ru = po/ru/ex56py.sh.po
+type = PO
+
+[abs-guide.ex56-sh-pot]
+source_file = pot/ex56.sh.pot
+source_lang = en
+trans.ru = po/ru/ex56.sh.po
+type = PO
+
+[abs-guide.ex57-sh-pot]
+source_file = pot/ex57.sh.pot
+source_lang = en
+trans.ru = po/ru/ex57.sh.po
+type = PO
+
+[abs-guide.ex58-sh-pot]
+source_file = pot/ex58.sh.pot
+source_lang = en
+trans.ru = po/ru/ex58.sh.po
+type = PO
+
+[abs-guide.ex59-sh-pot]
+source_file = pot/ex59.sh.pot
+source_lang = en
+trans.ru = po/ru/ex59.sh.po
+type = PO
+
+[abs-guide.ex5-sh-pot]
+source_file = pot/ex5.sh.pot
+source_lang = en
+trans.ru = po/ru/ex5.sh.po
+type = PO
+
+[abs-guide.ex60-sh-pot]
+source_file = pot/ex60.sh.pot
+source_lang = en
+trans.ru = po/ru/ex60.sh.po
+type = PO
+
+[abs-guide.ex61-sh-pot]
+source_file = pot/ex61.sh.pot
+source_lang = en
+trans.ru = po/ru/ex61.sh.po
+type = PO
+
+[abs-guide.ex62-sh-pot]
+source_file = pot/ex62.sh.pot
+source_lang = en
+trans.ru = po/ru/ex62.sh.po
+type = PO
+
+[abs-guide.ex63-sh-pot]
+source_file = pot/ex63.sh.pot
+source_lang = en
+trans.ru = po/ru/ex63.sh.po
+type = PO
+
+[abs-guide.ex64-sh-pot]
+source_file = pot/ex64.sh.pot
+source_lang = en
+trans.ru = po/ru/ex64.sh.po
+type = PO
+
+[abs-guide.ex65-sh-pot]
+source_file = pot/ex65.sh.pot
+source_lang = en
+trans.ru = po/ru/ex65.sh.po
+type = PO
+
+[abs-guide.ex66-sh-pot]
+source_file = pot/ex66.sh.pot
+source_lang = en
+trans.ru = po/ru/ex66.sh.po
+type = PO
+
+[abs-guide.ex67-sh-pot]
+source_file = pot/ex67.sh.pot
+source_lang = en
+trans.ru = po/ru/ex67.sh.po
+type = PO
+
+[abs-guide.ex68a-sh-pot]
+source_file = pot/ex68a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex68a.sh.po
+type = PO
+
+[abs-guide.ex68-sh-pot]
+source_file = pot/ex68.sh.pot
+source_lang = en
+trans.ru = po/ru/ex68.sh.po
+type = PO
+
+[abs-guide.ex69-sh-pot]
+source_file = pot/ex69.sh.pot
+source_lang = en
+trans.ru = po/ru/ex69.sh.po
+type = PO
+
+[abs-guide.ex6-sh-pot]
+source_file = pot/ex6.sh.pot
+source_lang = en
+trans.ru = po/ru/ex6.sh.po
+type = PO
+
+[abs-guide.ex70-sh-pot]
+source_file = pot/ex70.sh.pot
+source_lang = en
+trans.ru = po/ru/ex70.sh.po
+type = PO
+
+[abs-guide.ex71a-sh-pot]
+source_file = pot/ex71a.sh.pot
+source_lang = en
+trans.ru = po/ru/ex71a.sh.po
+type = PO
+
+[abs-guide.ex71b-sh-pot]
+source_file = pot/ex71b.sh.pot
+source_lang = en
+trans.ru = po/ru/ex71b.sh.po
+type = PO
+
+[abs-guide.ex71c-sh-pot]
+source_file = pot/ex71c.sh.pot
+source_lang = en
+trans.ru = po/ru/ex71c.sh.po
+type = PO
+
+[abs-guide.ex71-sh-pot]
+source_file = pot/ex71.sh.pot
+source_lang = en
+trans.ru = po/ru/ex71.sh.po
+type = PO
+
+[abs-guide.ex72-sh-pot]
+source_file = pot/ex72.sh.pot
+source_lang = en
+trans.ru = po/ru/ex72.sh.po
+type = PO
+
+[abs-guide.ex73-sh-pot]
+source_file = pot/ex73.sh.pot
+source_lang = en
+trans.ru = po/ru/ex73.sh.po
+type = PO
+
+[abs-guide.ex74-sh-pot]
+source_file = pot/ex74.sh.pot
+source_lang = en
+trans.ru = po/ru/ex74.sh.po
+type = PO
+
+[abs-guide.ex75-sh-pot]
+source_file = pot/ex75.sh.pot
+source_lang = en
+trans.ru = po/ru/ex75.sh.po
+type = PO
+
+[abs-guide.ex76-sh-pot]
+source_file = pot/ex76.sh.pot
+source_lang = en
+trans.ru = po/ru/ex76.sh.po
+type = PO
+
+[abs-guide.ex77-sh-pot]
+source_file = pot/ex77.sh.pot
+source_lang = en
+trans.ru = po/ru/ex77.sh.po
+type = PO
+
+[abs-guide.ex78-sh-pot]
+source_file = pot/ex78.sh.pot
+source_lang = en
+trans.ru = po/ru/ex78.sh.po
+type = PO
+
+[abs-guide.ex79-sh-pot]
+source_file = pot/ex79.sh.pot
+source_lang = en
+trans.ru = po/ru/ex79.sh.po
+type = PO
+
+[abs-guide.ex7-sh-pot]
+source_file = pot/ex7.sh.pot
+source_lang = en
+trans.ru = po/ru/ex7.sh.po
+type = PO
+
+[abs-guide.ex8-sh-pot]
+source_file = pot/ex8.sh.pot
+source_lang = en
+trans.ru = po/ru/ex8.sh.po
+type = PO
+
+[abs-guide.ex9-sh-pot]
+source_file = pot/ex9.sh.pot
+source_lang = en
+trans.ru = po/ru/ex9.sh.po
+type = PO
+
+[abs-guide.exercising-dd-sh-pot]
+source_file = pot/exercising-dd.sh.pot
+source_lang = en
+trans.ru = po/ru/exercising-dd.sh.po
+type = PO
+
+[abs-guide.factr-sh-pot]
+source_file = pot/factr.sh.pot
+source_lang = en
+trans.ru = po/ru/factr.sh.po
+type = PO
+
+[abs-guide.fc4upd-sh-pot]
+source_file = pot/fc4upd.sh.pot
+source_lang = en
+trans.ru = po/ru/fc4upd.sh.po
+type = PO
+
+[abs-guide.fetch_address-2-sh-pot]
+source_file = pot/fetch_address-2.sh.pot
+source_lang = en
+trans.ru = po/ru/fetch_address-2.sh.po
+type = PO
+
+[abs-guide.fetch_address-sh-pot]
+source_file = pot/fetch_address.sh.pot
+source_lang = en
+trans.ru = po/ru/fetch_address.sh.po
+type = PO
+
+[abs-guide.fibo-sh-pot]
+source_file = pot/fibo.sh.pot
+source_lang = en
+trans.ru = po/ru/fibo.sh.po
+type = PO
+
+[abs-guide.fifo-sh-pot]
+source_file = pot/fifo.sh.pot
+source_lang = en
+trans.ru = po/ru/fifo.sh.po
+type = PO
+
+[abs-guide.fifteen-sh-pot]
+source_file = pot/fifteen.sh.pot
+source_lang = en
+trans.ru = po/ru/fifteen.sh.po
+type = PO
+
+[abs-guide.file-comparison-sh-pot]
+source_file = pot/file-comparison.sh.pot
+source_lang = en
+trans.ru = po/ru/file-comparison.sh.po
+type = PO
+
+[abs-guide.file-info01-sh-pot]
+source_file = pot/file-info01.sh.pot
+source_lang = en
+trans.ru = po/ru/file-info01.sh.po
+type = PO
+
+[abs-guide.file-info-sh-pot]
+source_file = pot/file-info.sh.pot
+source_lang = en
+trans.ru = po/ru/file-info.sh.po
+type = PO
+
+[abs-guide.file-integrity-sh-pot]
+source_file = pot/file-integrity.sh.pot
+source_lang = en
+trans.ru = po/ru/file-integrity.sh.po
+type = PO
+
+[abs-guide.find-splitpara-sh-pot]
+source_file = pot/find-splitpara.sh.pot
+source_lang = en
+trans.ru = po/ru/find-splitpara.sh.po
+type = PO
+
+[abs-guide.findstring-sh-pot]
+source_file = pot/findstring.sh.pot
+source_lang = en
+trans.ru = po/ru/findstring.sh.po
+type = PO
+
+[abs-guide.for-loopcmd-sh-pot]
+source_file = pot/for-loopcmd.sh.pot
+source_lang = en
+trans.ru = po/ru/for-loopcmd.sh.po
+type = PO
+
+[abs-guide.for-loopc-sh-pot]
+source_file = pot/for-loopc.sh.pot
+source_lang = en
+trans.ru = po/ru/for-loopc.sh.po
+type = PO
+
+[abs-guide.from-sh-pot]
+source_file = pot/from.sh.pot
+source_lang = en
+trans.ru = po/ru/from.sh.po
+type = PO
+
+[abs-guide.ftpget-sh-pot]
+source_file = pot/ftpget.sh.pot
+source_lang = en
+trans.ru = po/ru/ftpget.sh.po
+type = PO
+
+[abs-guide.func-cmdlinearg-sh-pot]
+source_file = pot/func-cmdlinearg.sh.pot
+source_lang = en
+trans.ru = po/ru/func-cmdlinearg.sh.po
+type = PO
+
+[abs-guide.gcd-sh-pot]
+source_file = pot/gcd.sh.pot
+source_lang = en
+trans.ru = po/ru/gcd.sh.po
+type = PO
+
+[abs-guide.gen0-pot]
+source_file = pot/gen0.pot
+source_lang = en
+trans.ru = po/ru/gen0.po
+type = PO
+
+[abs-guide.generate-script-sh-pot]
+source_file = pot/generate-script.sh.pot
+source_lang = en
+trans.ru = po/ru/generate-script.sh.po
+type = PO
+
+[abs-guide.getopt-simple-sh-pot]
+source_file = pot/getopt-simple.sh.pot
+source_lang = en
+trans.ru = po/ru/getopt-simple.sh.po
+type = PO
+
+[abs-guide.gronsfeld-bash-pot]
+source_file = pot/gronsfeld.bash.pot
+source_lang = en
+trans.ru = po/ru/gronsfeld.bash.po
+type = PO
+
+[abs-guide.grp-sh-pot]
+source_file = pot/grp.sh.pot
+source_lang = en
+trans.ru = po/ru/grp.sh.po
+type = PO
+
+[abs-guide.hanoi2a-bash-pot]
+source_file = pot/hanoi2a.bash.pot
+source_lang = en
+trans.ru = po/ru/hanoi2a.bash.po
+type = PO
+
+[abs-guide.hanoi2-bash-pot]
+source_file = pot/hanoi2.bash.pot
+source_lang = en
+trans.ru = po/ru/hanoi2.bash.po
+type = PO
+
+[abs-guide.hanoi-bash-pot]
+source_file = pot/hanoi.bash.pot
+source_lang = en
+trans.ru = po/ru/hanoi.bash.po
+type = PO
+
+[abs-guide.hash-example-sh-pot]
+source_file = pot/hash-example.sh.pot
+source_lang = en
+trans.ru = po/ru/hash-example.sh.po
+type = PO
+
+[abs-guide.Hash-lib-pot]
+source_file = pot/Hash.lib.pot
+source_lang = en
+trans.ru = po/ru/Hash.lib.po
+type = PO
+
+[abs-guide.ha-sh-pot]
+source_file = pot/ha.sh.pot
+source_lang = en
+trans.ru = po/ru/ha.sh.po
+type = PO
+
+[abs-guide.hello-sh-pot]
+source_file = pot/hello.sh.pot
+source_lang = en
+trans.ru = po/ru/hello.sh.po
+type = PO
+
+[abs-guide.here-commsub-sh-pot]
+source_file = pot/here-commsub.sh.pot
+source_lang = en
+trans.ru = po/ru/here-commsub.sh.po
+type = PO
+
+[abs-guide.here-function-sh-pot]
+source_file = pot/here-function.sh.pot
+source_lang = en
+trans.ru = po/ru/here-function.sh.po
+type = PO
+
+[abs-guide.hexconvert-sh-pot]
+source_file = pot/hexconvert.sh.pot
+source_lang = en
+trans.ru = po/ru/hexconvert.sh.po
+type = PO
+
+[abs-guide.homework-sh-pot]
+source_file = pot/homework.sh.pot
+source_lang = en
+trans.ru = po/ru/homework.sh.po
+type = PO
+
+[abs-guide.horserace-sh-pot]
+source_file = pot/horserace.sh.pot
+source_lang = en
+trans.ru = po/ru/horserace.sh.po
+type = PO
+
+[abs-guide.hypotenuse-sh-pot]
+source_file = pot/hypotenuse.sh.pot
+source_lang = en
+trans.ru = po/ru/hypotenuse.sh.po
+type = PO
+
+[abs-guide.idelete-sh-pot]
+source_file = pot/idelete.sh.pot
+source_lang = en
+trans.ru = po/ru/idelete.sh.po
+type = PO
+
+[abs-guide.ifs-empty-sh-pot]
+source_file = pot/ifs-empty.sh.pot
+source_lang = en
+trans.ru = po/ru/ifs-empty.sh.po
+type = PO
+
+[abs-guide.ifs-sh-pot]
+source_file = pot/ifs.sh.pot
+source_lang = en
+trans.ru = po/ru/ifs.sh.po
+type = PO
+
+[abs-guide.incompat-sh-pot]
+source_file = pot/incompat.sh.pot
+source_lang = en
+trans.ru = po/ru/incompat.sh.po
+type = PO
+
+[abs-guide.INDEX00-xml-pot]
+source_file = pot/INDEX00.xml.pot
+source_lang = en
+trans.ru = po/ru/INDEX00.xml.po
+type = PO
+
+[abs-guide.ind-func-sh-pot]
+source_file = pot/ind-func.sh.pot
+source_lang = en
+trans.ru = po/ru/ind-func.sh.po
+type = PO
+
+[abs-guide.ind-ref-sh-pot]
+source_file = pot/ind-ref.sh.pot
+source_lang = en
+trans.ru = po/ru/ind-ref.sh.po
+type = PO
+
+[abs-guide.insertion-sort-bash-pot]
+source_file = pot/insertion-sort.bash.pot
+source_lang = en
+trans.ru = po/ru/insertion-sort.bash.po
+type = PO
+
+[abs-guide.int-or-string-sh-pot]
+source_file = pot/int-or-string.sh.pot
+source_lang = en
+trans.ru = po/ru/int-or-string.sh.po
+type = PO
+
+[abs-guide.ip-addresses-sh-pot]
+source_file = pot/ip-addresses.sh.pot
+source_lang = en
+trans.ru = po/ru/ip-addresses.sh.po
+type = PO
+
+[abs-guide.ip-sh-pot]
+source_file = pot/ip.sh.pot
+source_lang = en
+trans.ru = po/ru/ip.sh.po
+type = PO
+
+[abs-guide.isalpha-sh-pot]
+source_file = pot/isalpha.sh.pot
+source_lang = en
+trans.ru = po/ru/isalpha.sh.po
+type = PO
+
+[abs-guide.iscan-sh-pot]
+source_file = pot/iscan.sh.pot
+source_lang = en
+trans.ru = po/ru/iscan.sh.po
+type = PO
+
+[abs-guide.is_spammer-bash-pot]
+source_file = pot/is_spammer.bash.pot
+source_lang = en
+trans.ru = po/ru/is_spammer.bash.po
+type = PO
+
+[abs-guide.is-spammer-sh-pot]
+source_file = pot/is-spammer.sh.pot
+source_lang = en
+trans.ru = po/ru/is-spammer.sh.po
+type = PO
+
+[abs-guide.keypress-sh-pot]
+source_file = pot/keypress.sh.pot
+source_lang = en
+trans.ru = po/ru/keypress.sh.po
+type = PO
+
+[abs-guide.kill-byname-sh-pot]
+source_file = pot/kill-byname.sh.pot
+source_lang = en
+trans.ru = po/ru/kill-byname.sh.po
+type = PO
+
+[abs-guide.kill-process-sh-pot]
+source_file = pot/kill-process.sh.pot
+source_lang = en
+trans.ru = po/ru/kill-process.sh.po
+type = PO
+
+[abs-guide.ktour-sh-pot]
+source_file = pot/ktour.sh.pot
+source_lang = en
+trans.ru = po/ru/ktour.sh.po
+type = PO
+
+[abs-guide.lastpipe-option-sh-pot]
+source_file = pot/lastpipe-option.sh.pot
+source_lang = en
+trans.ru = po/ru/lastpipe-option.sh.po
+type = PO
+
+[abs-guide.length-sh-pot]
+source_file = pot/length.sh.pot
+source_lang = en
+trans.ru = po/ru/length.sh.po
+type = PO
+
+[abs-guide.letter-count2-sh-pot]
+source_file = pot/letter-count2.sh.pot
+source_lang = en
+trans.ru = po/ru/letter-count2.sh.po
+type = PO
+
+[abs-guide.letter-count-sh-pot]
+source_file = pot/letter-count.sh.pot
+source_lang = en
+trans.ru = po/ru/letter-count.sh.po
+type = PO
+
+[abs-guide.life-sh-pot]
+source_file = pot/life.sh.pot
+source_lang = en
+trans.ru = po/ru/life.sh.po
+type = PO
+
+[abs-guide.line-number-sh-pot]
+source_file = pot/line-number.sh.pot
+source_lang = en
+trans.ru = po/ru/line-number.sh.po
+type = PO
+
+[abs-guide.list-glob-sh-pot]
+source_file = pot/list-glob.sh.pot
+source_lang = en
+trans.ru = po/ru/list-glob.sh.po
+type = PO
+
+[abs-guide.logevents-sh-pot]
+source_file = pot/logevents.sh.pot
+source_lang = en
+trans.ru = po/ru/logevents.sh.po
+type = PO
+
+[abs-guide.logging-wrapper-sh-pot]
+source_file = pot/logging-wrapper.sh.pot
+source_lang = en
+trans.ru = po/ru/logging-wrapper.sh.po
+type = PO
+
+[abs-guide.lookup-sh-pot]
+source_file = pot/lookup.sh.pot
+source_lang = en
+trans.ru = po/ru/lookup.sh.po
+type = PO
+
+[abs-guide.lowercase-sh-pot]
+source_file = pot/lowercase.sh.pot
+source_lang = en
+trans.ru = po/ru/lowercase.sh.po
+type = PO
+
+[abs-guide.m4-sh-pot]
+source_file = pot/m4.sh.pot
+source_lang = en
+trans.ru = po/ru/m4.sh.po
+type = PO
+
+[abs-guide.mailbox_grep-sh-pot]
+source_file = pot/mailbox_grep.sh.pot
+source_lang = en
+trans.ru = po/ru/mailbox_grep.sh.po
+type = PO
+
+[abs-guide.mail-format-sh-pot]
+source_file = pot/mail-format.sh.pot
+source_lang = en
+trans.ru = po/ru/mail-format.sh.po
+type = PO
+
+[abs-guide.makedict-sh-pot]
+source_file = pot/makedict.sh.pot
+source_lang = en
+trans.ru = po/ru/makedict.sh.po
+type = PO
+
+[abs-guide.maned-sh-pot]
+source_file = pot/maned.sh.pot
+source_lang = en
+trans.ru = po/ru/maned.sh.po
+type = PO
+
+[abs-guide.manview-sh-pot]
+source_file = pot/manview.sh.pot
+source_lang = en
+trans.ru = po/ru/manview.sh.po
+type = PO
+
+[abs-guide.match-string-sh-pot]
+source_file = pot/match-string.sh.pot
+source_lang = en
+trans.ru = po/ru/match-string.sh.po
+type = PO
+
+[abs-guide.max2-sh-pot]
+source_file = pot/max2.sh.pot
+source_lang = en
+trans.ru = po/ru/max2.sh.po
+type = PO
+
+[abs-guide.max-sh-pot]
+source_file = pot/max.sh.pot
+source_lang = en
+trans.ru = po/ru/max.sh.po
+type = PO
+
+[abs-guide.missing-keyword-sh-pot]
+source_file = pot/missing-keyword.sh.pot
+source_lang = en
+trans.ru = po/ru/missing-keyword.sh.po
+type = PO
+
+[abs-guide.monthlypmt-sh-pot]
+source_file = pot/monthlypmt.sh.pot
+source_lang = en
+trans.ru = po/ru/monthlypmt.sh.po
+type = PO
+
+[abs-guide.Moraes-COPYRIGHT-pot]
+source_file = pot/Moraes-COPYRIGHT.pot
+source_lang = en
+trans.ru = po/ru/Moraes-COPYRIGHT.po
+type = PO
+
+[abs-guide.msquare-sh-pot]
+source_file = pot/msquare.sh.pot
+source_lang = en
+trans.ru = po/ru/msquare.sh.po
+type = PO
+
+[abs-guide.multiple-processes-sh-pot]
+source_file = pot/multiple-processes.sh.pot
+source_lang = en
+trans.ru = po/ru/multiple-processes.sh.po
+type = PO
+
+[abs-guide.multiplication-sh-pot]
+source_file = pot/multiplication.sh.pot
+source_lang = en
+trans.ru = po/ru/multiplication.sh.po
+type = PO
+
+[abs-guide.music-sh-pot]
+source_file = pot/music.sh.pot
+source_lang = en
+trans.ru = po/ru/music.sh.po
+type = PO
+
+[abs-guide.names-data-pot]
+source_file = pot/names.data.pot
+source_lang = en
+trans.ru = po/ru/names.data.po
+type = PO
+
+[abs-guide.neg-array-sh-pot]
+source_file = pot/neg-array.sh.pot
+source_lang = en
+trans.ru = po/ru/neg-array.sh.po
+type = PO
+
+[abs-guide.neg-offset-sh-pot]
+source_file = pot/neg-offset.sh.pot
+source_lang = en
+trans.ru = po/ru/neg-offset.sh.po
+type = PO
+
+[abs-guide.nested-loop-sh-pot]
+source_file = pot/nested-loop.sh.pot
+source_lang = en
+trans.ru = po/ru/nested-loop.sh.po
+type = PO
+
+[abs-guide.nightly-backup-sh-pot]
+source_file = pot/nightly-backup.sh.pot
+source_lang = en
+trans.ru = po/ru/nightly-backup.sh.po
+type = PO
+
+[abs-guide.nim-sh-pot]
+source_file = pot/nim.sh.pot
+source_lang = en
+trans.ru = po/ru/nim.sh.po
+type = PO
+
+[abs-guide.numbers-sh-pot]
+source_file = pot/numbers.sh.pot
+source_lang = en
+trans.ru = po/ru/numbers.sh.po
+type = PO
+
+[abs-guide.obj-oriented-sh-pot]
+source_file = pot/obj-oriented.sh.pot
+source_lang = en
+trans.ru = po/ru/obj-oriented.sh.po
+type = PO
+
+[abs-guide.online-sh-pot]
+source_file = pot/online.sh.pot
+source_lang = en
+trans.ru = po/ru/online.sh.po
+type = PO
+
+[abs-guide.opprec-table-xml-pot]
+source_file = pot/opprec-table.xml.pot
+source_lang = en
+trans.ru = po/ru/opprec-table.xml.po
+type = PO
+
+[abs-guide.pad-sh-pot]
+source_file = pot/pad.sh.pot
+source_lang = en
+trans.ru = po/ru/pad.sh.po
+type = PO
+
+[abs-guide.paragraph-space-sh-pot]
+source_file = pot/paragraph-space.sh.pot
+source_lang = en
+trans.ru = po/ru/paragraph-space.sh.po
+type = PO
+
+[abs-guide.param-sub-sh-pot]
+source_file = pot/param-sub.sh.pot
+source_lang = en
+trans.ru = po/ru/param-sub.sh.po
+type = PO
+
+[abs-guide.patt-matching-sh-pot]
+source_file = pot/patt-matching.sh.pot
+source_lang = en
+trans.ru = po/ru/patt-matching.sh.po
+type = PO
+
+[abs-guide.pb-sh-pot]
+source_file = pot/pb.sh.pot
+source_lang = en
+trans.ru = po/ru/pb.sh.po
+type = PO
+
+[abs-guide.petals-sh-pot]
+source_file = pot/petals.sh.pot
+source_lang = en
+trans.ru = po/ru/petals.sh.po
+type = PO
+
+[abs-guide.pick-card-sh-pot]
+source_file = pot/pick-card.sh.pot
+source_lang = en
+trans.ru = po/ru/pick-card.sh.po
+type = PO
+
+[abs-guide.pid-identifier-sh-pot]
+source_file = pot/pid-identifier.sh.pot
+source_lang = en
+trans.ru = po/ru/pid-identifier.sh.po
+type = PO
+
+[abs-guide.poem-sh-pot]
+source_file = pot/poem.sh.pot
+source_lang = en
+trans.ru = po/ru/poem.sh.po
+type = PO
+
+[abs-guide.pr-asc-sh-pot]
+source_file = pot/pr-asc.sh.pot
+source_lang = en
+trans.ru = po/ru/pr-asc.sh.po
+type = PO
+
+[abs-guide.prepend-sh-pot]
+source_file = pot/prepend.sh.pot
+source_lang = en
+trans.ru = po/ru/prepend.sh.po
+type = PO
+
+[abs-guide.primes2-sh-pot]
+source_file = pot/primes2.sh.pot
+source_lang = en
+trans.ru = po/ru/primes2.sh.po
+type = PO
+
+[abs-guide.primes-sh-pot]
+source_file = pot/primes.sh.pot
+source_lang = en
+trans.ru = po/ru/primes.sh.po
+type = PO
+
+[abs-guide.progress-bar2-sh-pot]
+source_file = pot/progress-bar2.sh.pot
+source_lang = en
+trans.ru = po/ru/progress-bar2.sh.po
+type = PO
+
+[abs-guide.progress-bar-sh-pot]
+source_file = pot/progress-bar.sh.pot
+source_lang = en
+trans.ru = po/ru/progress-bar.sh.po
+type = PO
+
+[abs-guide.protect_literal-sh-pot]
+source_file = pot/protect_literal.sh.pot
+source_lang = en
+trans.ru = po/ru/protect_literal.sh.po
+type = PO
+
+[abs-guide.psub-bash-pot]
+source_file = pot/psub.bash.pot
+source_lang = en
+trans.ru = po/ru/psub.bash.po
+type = PO
+
+[abs-guide.pw-sh-pot]
+source_file = pot/pw.sh.pot
+source_lang = en
+trans.ru = po/ru/pw.sh.po
+type = PO
+
+[abs-guide.q-function-sh-pot]
+source_file = pot/q-function.sh.pot
+source_lang = en
+trans.ru = po/ru/q-function.sh.po
+type = PO
+
+[abs-guide.qky-sh-pot]
+source_file = pot/qky.sh.pot
+source_lang = en
+trans.ru = po/ru/qky.sh.po
+type = PO
+
+[abs-guide.quote-fetch-sh-pot]
+source_file = pot/quote-fetch.sh.pot
+source_lang = en
+trans.ru = po/ru/quote-fetch.sh.po
+type = PO
+
+[abs-guide.ra2ogg-sh-pot]
+source_file = pot/ra2ogg.sh.pot
+source_lang = en
+trans.ru = po/ru/ra2ogg.sh.po
+type = PO
+
+[abs-guide.ramdisk-sh-pot]
+source_file = pot/ramdisk.sh.pot
+source_lang = en
+trans.ru = po/ru/ramdisk.sh.po
+type = PO
+
+[abs-guide.random2-sh-pot]
+source_file = pot/random2.sh.pot
+source_lang = en
+trans.ru = po/ru/random2.sh.po
+type = PO
+
+[abs-guide.random-between-sh-pot]
+source_file = pot/random-between.sh.pot
+source_lang = en
+trans.ru = po/ru/random-between.sh.po
+type = PO
+
+[abs-guide.random-test-sh-pot]
+source_file = pot/random-test.sh.pot
+source_lang = en
+trans.ru = po/ru/random-test.sh.po
+type = PO
+
+[abs-guide.rand-string-sh-pot]
+source_file = pot/rand-string.sh.pot
+source_lang = en
+trans.ru = po/ru/rand-string.sh.po
+type = PO
+
+[abs-guide.README-pot]
+source_file = pot/README.pot
+source_lang = en
+trans.ru = po/ru/README.po
+type = PO
+
+[abs-guide.read-novar-sh-pot]
+source_file = pot/read-novar.sh.pot
+source_lang = en
+trans.ru = po/ru/read-novar.sh.po
+type = PO
+
+[abs-guide.read-N-sh-pot]
+source_file = pot/read-N.sh.pot
+source_lang = en
+trans.ru = po/ru/read-N.sh.po
+type = PO
+
+[abs-guide.readpipe-sh-pot]
+source_file = pot/readpipe.sh.pot
+source_lang = en
+trans.ru = po/ru/readpipe.sh.po
+type = PO
+
+[abs-guide.read-redir-sh-pot]
+source_file = pot/read-redir.sh.pot
+source_lang = en
+trans.ru = po/ru/read-redir.sh.po
+type = PO
+
+[abs-guide.read-r-sh-pot]
+source_file = pot/read-r.sh.pot
+source_lang = en
+trans.ru = po/ru/read-r.sh.po
+type = PO
+
+[abs-guide.realname-sh-pot]
+source_file = pot/realname.sh.pot
+source_lang = en
+trans.ru = po/ru/realname.sh.po
+type = PO
+
+[abs-guide.reassign-stdout-sh-pot]
+source_file = pot/reassign-stdout.sh.pot
+source_lang = en
+trans.ru = po/ru/reassign-stdout.sh.po
+type = PO
+
+[abs-guide.recurse-sh-pot]
+source_file = pot/recurse.sh.pot
+source_lang = en
+trans.ru = po/ru/recurse.sh.po
+type = PO
+
+[abs-guide.recursion-def-sh-pot]
+source_file = pot/recursion-def.sh.pot
+source_lang = en
+trans.ru = po/ru/recursion-def.sh.po
+type = PO
+
+[abs-guide.recursion-demo-sh-pot]
+source_file = pot/recursion-demo.sh.pot
+source_lang = en
+trans.ru = po/ru/recursion-demo.sh.po
+type = PO
+
+[abs-guide.redir1-sh-pot]
+source_file = pot/redir1.sh.pot
+source_lang = en
+trans.ru = po/ru/redir1.sh.po
+type = PO
+
+[abs-guide.redir2a-sh-pot]
+source_file = pot/redir2a.sh.pot
+source_lang = en
+trans.ru = po/ru/redir2a.sh.po
+type = PO
+
+[abs-guide.redir2-sh-pot]
+source_file = pot/redir2.sh.pot
+source_lang = en
+trans.ru = po/ru/redir2.sh.po
+type = PO
+
+[abs-guide.redir3-sh-pot]
+source_file = pot/redir3.sh.pot
+source_lang = en
+trans.ru = po/ru/redir3.sh.po
+type = PO
+
+[abs-guide.redir4a-sh-pot]
+source_file = pot/redir4a.sh.pot
+source_lang = en
+trans.ru = po/ru/redir4a.sh.po
+type = PO
+
+[abs-guide.redir4-sh-pot]
+source_file = pot/redir4.sh.pot
+source_lang = en
+trans.ru = po/ru/redir4.sh.po
+type = PO
+
+[abs-guide.redir5-sh-pot]
+source_file = pot/redir5.sh.pot
+source_lang = en
+trans.ru = po/ru/redir5.sh.po
+type = PO
+
+[abs-guide.ref-params-sh-pot]
+source_file = pot/ref-params.sh.pot
+source_lang = en
+trans.ru = po/ru/ref-params.sh.po
+type = PO
+
+[abs-guide.remote-bash-pot]
+source_file = pot/remote.bash.pot
+source_lang = en
+trans.ru = po/ru/remote.bash.po
+type = PO
+
+[abs-guide.reply-sh-pot]
+source_file = pot/reply.sh.pot
+source_lang = en
+trans.ru = po/ru/reply.sh.po
+type = PO
+
+[abs-guide.resistor-inventory-sh-pot]
+source_file = pot/resistor-inventory.sh.pot
+source_lang = en
+trans.ru = po/ru/resistor-inventory.sh.po
+type = PO
+
+[abs-guide.restricted-sh-pot]
+source_file = pot/restricted.sh.pot
+source_lang = en
+trans.ru = po/ru/restricted.sh.po
+type = PO
+
+[abs-guide.return-test-sh-pot]
+source_file = pot/return-test.sh.pot
+source_lang = en
+trans.ru = po/ru/return-test.sh.po
+type = PO
+
+[abs-guide.revposparams-sh-pot]
+source_file = pot/revposparams.sh.pot
+source_lang = en
+trans.ru = po/ru/revposparams.sh.po
+type = PO
+
+[abs-guide.rfe-sh-pot]
+source_file = pot/rfe.sh.pot
+source_lang = en
+trans.ru = po/ru/rfe.sh.po
+type = PO
+
+[abs-guide.rnd-sh-pot]
+source_file = pot/rnd.sh.pot
+source_lang = en
+trans.ru = po/ru/rnd.sh.po
+type = PO
+
+[abs-guide.rn-sh-pot]
+source_file = pot/rn.sh.pot
+source_lang = en
+trans.ru = po/ru/rn.sh.po
+type = PO
+
+[abs-guide.rot13_2-sh-pot]
+source_file = pot/rot13_2.sh.pot
+source_lang = en
+trans.ru = po/ru/rot13_2.sh.po
+type = PO
+
+[abs-guide.rot13a-sh-pot]
+source_file = pot/rot13a.sh.pot
+source_lang = en
+trans.ru = po/ru/rot13a.sh.po
+type = PO
+
+[abs-guide.rot13-sh-pot]
+source_file = pot/rot13.sh.pot
+source_lang = en
+trans.ru = po/ru/rot13.sh.po
+type = PO
+
+[abs-guide.rot14-sh-pot]
+source_file = pot/rot14.sh.pot
+source_lang = en
+trans.ru = po/ru/rot14.sh.po
+type = PO
+
+[abs-guide.rpm-check-sh-pot]
+source_file = pot/rpm-check.sh.pot
+source_lang = en
+trans.ru = po/ru/rpm-check.sh.po
+type = PO
+
+[abs-guide.rp-sdcard-sh-pot]
+source_file = pot/rp.sdcard.sh.pot
+source_lang = en
+trans.ru = po/ru/rp.sdcard.sh.po
+type = PO
+
+[abs-guide.sam-sh-pot]
+source_file = pot/sam.sh.pot
+source_lang = en
+trans.ru = po/ru/sam.sh.po
+type = PO
+
+[abs-guide.script-array-sh-pot]
+source_file = pot/script-array.sh.pot
+source_lang = en
+trans.ru = po/ru/script-array.sh.po
+type = PO
+
+[abs-guide.script-detector-sh-pot]
+source_file = pot/script-detector.sh.pot
+source_lang = en
+trans.ru = po/ru/script-detector.sh.po
+type = PO
+
+[abs-guide.sd-sh-pot]
+source_file = pot/sd.sh.pot
+source_lang = en
+trans.ru = po/ru/sd.sh.po
+type = PO
+
+[abs-guide.seconds-sh-pot]
+source_file = pot/seconds.sh.pot
+source_lang = en
+trans.ru = po/ru/seconds.sh.po
+type = PO
+
+[abs-guide.secret-pw-sh-pot]
+source_file = pot/secret-pw.sh.pot
+source_lang = en
+trans.ru = po/ru/secret-pw.sh.po
+type = PO
+
+[abs-guide.sedappend-sh-pot]
+source_file = pot/sedappend.sh.pot
+source_lang = en
+trans.ru = po/ru/sedappend.sh.po
+type = PO
+
+[abs-guide.seeding-random-sh-pot]
+source_file = pot/seeding-random.sh.pot
+source_lang = en
+trans.ru = po/ru/seeding-random.sh.po
+type = PO
+
+[abs-guide.self-copy-sh-pot]
+source_file = pot/self-copy.sh.pot
+source_lang = en
+trans.ru = po/ru/self-copy.sh.po
+type = PO
+
+[abs-guide.self-destruct-sh-pot]
+source_file = pot/self-destruct.sh.pot
+source_lang = en
+trans.ru = po/ru/self-destruct.sh.po
+type = PO
+
+[abs-guide.self-document-sh-pot]
+source_file = pot/self-document.sh.pot
+source_lang = en
+trans.ru = po/ru/self-document.sh.po
+type = PO
+
+[abs-guide.self-exec-sh-pot]
+source_file = pot/self-exec.sh.pot
+source_lang = en
+trans.ru = po/ru/self-exec.sh.po
+type = PO
+
+[abs-guide.self-mailer-sh-pot]
+source_file = pot/self-mailer.sh.pot
+source_lang = en
+trans.ru = po/ru/self-mailer.sh.po
+type = PO
+
+[abs-guide.self-source-sh-pot]
+source_file = pot/self-source.sh.pot
+source_lang = en
+trans.ru = po/ru/self-source.sh.po
+type = PO
+
+[abs-guide.setnew-passwd-sh-pot]
+source_file = pot/setnew-passwd.sh.pot
+source_lang = en
+trans.ru = po/ru/setnew-passwd.sh.po
+type = PO
+
+[abs-guide.set-pos-sh-pot]
+source_file = pot/set-pos.sh.pot
+source_lang = en
+trans.ru = po/ru/set-pos.sh.po
+type = PO
+
+[abs-guide.show-all-colors-sh-pot]
+source_file = pot/show-all-colors.sh.pot
+source_lang = en
+trans.ru = po/ru/show-all-colors.sh.po
+type = PO
+
+[abs-guide.soundcard-on-sh-pot]
+source_file = pot/soundcard-on.sh.pot
+source_lang = en
+trans.ru = po/ru/soundcard-on.sh.po
+type = PO
+
+[abs-guide.soundex-sh-pot]
+source_file = pot/soundex.sh.pot
+source_lang = en
+trans.ru = po/ru/soundex.sh.po
+type = PO
+
+[abs-guide.spam-lookup-sh-pot]
+source_file = pot/spam-lookup.sh.pot
+source_lang = en
+trans.ru = po/ru/spam-lookup.sh.po
+type = PO
+
+[abs-guide.spawn-sh-pot]
+source_file = pot/spawn.sh.pot
+source_lang = en
+trans.ru = po/ru/spawn.sh.po
+type = PO
+
+[abs-guide.speech-sh-pot]
+source_file = pot/speech.sh.pot
+source_lang = en
+trans.ru = po/ru/speech.sh.po
+type = PO
+
+[abs-guide.splitcopy-sh-pot]
+source_file = pot/splitcopy.sh.pot
+source_lang = en
+trans.ru = po/ru/splitcopy.sh.po
+type = PO
+
+[abs-guide.stack-sh-pot]
+source_file = pot/stack.sh.pot
+source_lang = en
+trans.ru = po/ru/stack.sh.po
+type = PO
+
+[abs-guide.string-sh-pot]
+source_file = pot/string.sh.pot
+source_lang = en
+trans.ru = po/ru/string.sh.po
+type = PO
+
+[abs-guide.strip-comments-sh-pot]
+source_file = pot/strip-comments.sh.pot
+source_lang = en
+trans.ru = po/ru/strip-comments.sh.po
+type = PO
+
+[abs-guide.str-test-sh-pot]
+source_file = pot/str-test.sh.pot
+source_lang = en
+trans.ru = po/ru/str-test.sh.po
+type = PO
+
+[abs-guide.stupid-script-tricks-sh-pot]
+source_file = pot/stupid-script-tricks.sh.pot
+source_lang = en
+trans.ru = po/ru/stupid-script-tricks.sh.po
+type = PO
+
+[abs-guide.subshell-pitfalls-sh-pot]
+source_file = pot/subshell-pitfalls.sh.pot
+source_lang = en
+trans.ru = po/ru/subshell-pitfalls.sh.po
+type = PO
+
+[abs-guide.subshell-sh-pot]
+source_file = pot/subshell.sh.pot
+source_lang = en
+trans.ru = po/ru/subshell.sh.po
+type = PO
+
+[abs-guide.substring-extraction-sh-pot]
+source_file = pot/substring-extraction.sh.pot
+source_lang = en
+trans.ru = po/ru/substring-extraction.sh.po
+type = PO
+
+[abs-guide.sum-product-sh-pot]
+source_file = pot/sum-product.sh.pot
+source_lang = en
+trans.ru = po/ru/sum-product.sh.po
+type = PO
+
+[abs-guide.sw-sh-pot]
+source_file = pot/sw.sh.pot
+source_lang = en
+trans.ru = po/ru/sw.sh.po
+type = PO
+
+[abs-guide.symlinks2-sh-pot]
+source_file = pot/symlinks2.sh.pot
+source_lang = en
+trans.ru = po/ru/symlinks2.sh.po
+type = PO
+
+[abs-guide.symlinks-sh-pot]
+source_file = pot/symlinks.sh.pot
+source_lang = en
+trans.ru = po/ru/symlinks.sh.po
+type = PO
+
+[abs-guide.TABEXP-xml-pot]
+source_file = pot/TABEXP.xml.pot
+source_lang = en
+trans.ru = po/ru/TABEXP.xml.po
+type = PO
+
+[abs-guide.tempfile-name-sh-pot]
+source_file = pot/tempfile-name.sh.pot
+source_lang = en
+trans.ru = po/ru/tempfile-name.sh.po
+type = PO
+
+[abs-guide.test-cgi-sh-pot]
+source_file = pot/test-cgi.sh.pot
+source_lang = en
+trans.ru = po/ru/test-cgi.sh.po
+type = PO
+
+[abs-guide.test-execution-time-sh-pot]
+source_file = pot/test-execution-time.sh.pot
+source_lang = en
+trans.ru = po/ru/test-execution-time.sh.po
+type = PO
+
+[abs-guide.test-suite-sh-pot]
+source_file = pot/test-suite.sh.pot
+source_lang = en
+trans.ru = po/ru/test-suite.sh.po
+type = PO
+
+[abs-guide.timed-input-sh-pot]
+source_file = pot/timed-input.sh.pot
+source_lang = en
+trans.ru = po/ru/timed-input.sh.po
+type = PO
+
+[abs-guide.timeout-sh-pot]
+source_file = pot/timeout.sh.pot
+source_lang = en
+trans.ru = po/ru/timeout.sh.po
+type = PO
+
+[abs-guide.tohtml-sh-pot]
+source_file = pot/tohtml.sh.pot
+source_lang = en
+trans.ru = po/ru/tohtml.sh.po
+type = PO
+
+[abs-guide.t-out-sh-pot]
+source_file = pot/t-out.sh.pot
+source_lang = en
+trans.ru = po/ru/t-out.sh.po
+type = PO
+
+[abs-guide.tree2-sh-pot]
+source_file = pot/tree2.sh.pot
+source_lang = en
+trans.ru = po/ru/tree2.sh.po
+type = PO
+
+[abs-guide.tree-sh-pot]
+source_file = pot/tree.sh.pot
+source_lang = en
+trans.ru = po/ru/tree.sh.po
+type = PO
+
+[abs-guide.twodim-sh-pot]
+source_file = pot/twodim.sh.pot
+source_lang = en
+trans.ru = po/ru/twodim.sh.po
+type = PO
+
+[abs-guide.unalias-sh-pot]
+source_file = pot/unalias.sh.pot
+source_lang = en
+trans.ru = po/ru/unalias.sh.po
+type = PO
+
+[abs-guide.unit-conversion-sh-pot]
+source_file = pot/unit-conversion.sh.pot
+source_lang = en
+trans.ru = po/ru/unit-conversion.sh.po
+type = PO
+
+[abs-guide.unprotect_literal-sh-pot]
+source_file = pot/unprotect_literal.sh.pot
+source_lang = en
+trans.ru = po/ru/unprotect_literal.sh.po
+type = PO
+
+[abs-guide.unset-sh-pot]
+source_file = pot/unset.sh.pot
+source_lang = en
+trans.ru = po/ru/unset.sh.po
+type = PO
+
+[abs-guide.upperconv-sh-pot]
+source_file = pot/upperconv.sh.pot
+source_lang = en
+trans.ru = po/ru/upperconv.sh.po
+type = PO
+
+[abs-guide.usage-message-sh-pot]
+source_file = pot/usage-message.sh.pot
+source_lang = en
+trans.ru = po/ru/usage-message.sh.po
+type = PO
+
+[abs-guide.usb-sh-pot]
+source_file = pot/usb.sh.pot
+source_lang = en
+trans.ru = po/ru/usb.sh.po
+type = PO
+
+[abs-guide.UseGetOpt-2-pot]
+source_file = pot/UseGetOpt-2.pot
+source_lang = en
+trans.ru = po/ru/UseGetOpt-2.po
+type = PO
+
+[abs-guide.UseGetOpt-2-sh-pot]
+source_file = pot/UseGetOpt-2.sh.pot
+source_lang = en
+trans.ru = po/ru/UseGetOpt-2.sh.po
+type = PO
+
+[abs-guide.UseGetOpt-sh-pot]
+source_file = pot/UseGetOpt.sh.pot
+source_lang = en
+trans.ru = po/ru/UseGetOpt.sh.po
+type = PO
+
+[abs-guide.userlist-sh-pot]
+source_file = pot/userlist.sh.pot
+source_lang = en
+trans.ru = po/ru/userlist.sh.po
+type = PO
+
+[abs-guide.usrmnt-sh-pot]
+source_file = pot/usrmnt.sh.pot
+source_lang = en
+trans.ru = po/ru/usrmnt.sh.po
+type = PO
+
+[abs-guide.var-match-sh-pot]
+source_file = pot/var-match.sh.pot
+source_lang = en
+trans.ru = po/ru/var-match.sh.po
+type = PO
+
+[abs-guide.vartrace-sh-pot]
+source_file = pot/vartrace.sh.pot
+source_lang = en
+trans.ru = po/ru/vartrace.sh.po
+type = PO
+
+[abs-guide.VIEWDATA-BAT-pot]
+source_file = pot/VIEWDATA.BAT.pot
+source_lang = en
+trans.ru = po/ru/VIEWDATA.BAT.po
+type = PO
+
+[abs-guide.viewdata-sh-pot]
+source_file = pot/viewdata.sh.pot
+source_lang = en
+trans.ru = po/ru/viewdata.sh.po
+type = PO
+
+[abs-guide.weirdvars-sh-pot]
+source_file = pot/weirdvars.sh.pot
+source_lang = en
+trans.ru = po/ru/weirdvars.sh.po
+type = PO
+
+[abs-guide.wf2-sh-pot]
+source_file = pot/wf2.sh.pot
+source_lang = en
+trans.ru = po/ru/wf2.sh.po
+type = PO
+
+[abs-guide.wf-sh-pot]
+source_file = pot/wf.sh.pot
+source_lang = en
+trans.ru = po/ru/wf.sh.po
+type = PO
+
+[abs-guide.wgetter2-bash-pot]
+source_file = pot/wgetter2.bash.pot
+source_lang = en
+trans.ru = po/ru/wgetter2.bash.po
+type = PO
+
+[abs-guide.what-sh-pot]
+source_file = pot/what.sh.pot
+source_lang = en
+trans.ru = po/ru/what.sh.po
+type = PO
+
+[abs-guide.wh-loopc-sh-pot]
+source_file = pot/wh-loopc.sh.pot
+source_lang = en
+trans.ru = po/ru/wh-loopc.sh.po
+type = PO
+
+[abs-guide.whx-sh-pot]
+source_file = pot/whx.sh.pot
+source_lang = en
+trans.ru = po/ru/whx.sh.po
+type = PO
+
+[abs-guide.wipedir-sh-pot]
+source_file = pot/wipedir.sh.pot
+source_lang = en
+trans.ru = po/ru/wipedir.sh.po
+type = PO
+
+[abs-guide.words-data-pot]
+source_file = pot/words.data.pot
+source_lang = en
+trans.ru = po/ru/words.data.po
+type = PO
+
+[abs-guide.wr-ps-bash-pot]
+source_file = pot/wr-ps.bash.pot
+source_lang = en
+trans.ru = po/ru/wr-ps.bash.po
+type = PO
+
+[abs-guide.wstrings-sh-pot]
+source_file = pot/wstrings.sh.pot
+source_lang = en
+trans.ru = po/ru/wstrings.sh.po
+type = PO
+
