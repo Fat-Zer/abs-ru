@@ -58,7 +58,7 @@ msgstr ""
 #. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
 #: abs-guide/abs-guide.xml:433 abs-guide/abs-guide.xml:39927
 msgid "05 Apr 2012"
-msgstr ""
+msgstr "05 Апреля 2012"
 
 #. type: Content of: <book><bookinfo><revhistory><revision><authorinitials>
 #: abs-guide/abs-guide.xml:434 abs-guide/abs-guide.xml:441 abs-guide/abs-guide.xml:448
@@ -68,7 +68,7 @@ msgstr ""
 #. type: Content of: <book><bookinfo><revhistory><revision><revremark>
 #: abs-guide/abs-guide.xml:435
 msgid "'TUNGSTENBERRY' release"
-msgstr ""
+msgstr "'Вольфрамниковый' выпуск"
 
 #. type: Content of: <book><bookinfo><revhistory><revision><revnumber>
 #: abs-guide/abs-guide.xml:439
@@ -78,22 +78,22 @@ msgstr ""
 #. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
 #: abs-guide/abs-guide.xml:440 abs-guide/abs-guide.xml:39932
 msgid "27 Nov 2012"
-msgstr ""
+msgstr "27 Ноября 2012"
 
 #. type: Content of: <book><bookinfo><revhistory><revision><revremark>
 #: abs-guide/abs-guide.xml:442
 msgid "'YTTERBIUMBERRY' release"
-msgstr ""
+msgstr "'Иттербийниковый' выпуск"
 
 #. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
 #: abs-guide/abs-guide.xml:447 abs-guide/abs-guide.xml:39937
 msgid "10 Mar 2014"
-msgstr ""
+msgstr "10 Марта 2014"
 
 #. type: Content of: <book><bookinfo><revhistory><revision><revremark>
 #: abs-guide/abs-guide.xml:449
 msgid "'PUBLICDOMAIN' release"
-msgstr ""
+msgstr "Выпуск 'Общественное достояние'"
 
 #. type: Content of: <book><bookinfo><abstract><para>
 #: abs-guide/abs-guide.xml:457

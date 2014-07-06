@@ -424,23 +424,23 @@
 
       <revision>
         <revnumber>6.5</revnumber>
-        <date>05 Apr 2012</date>
+        <date>05 Апреля 2012</date>
         <authorinitials>mc</authorinitials>
-	<revremark>'TUNGSTENBERRY' release</revremark>
+	<revremark>'Вольфрамниковый' выпуск</revremark>
       </revision>
 
       <revision>
         <revnumber>6.6</revnumber>
-        <date>27 Nov 2012</date>
+        <date>27 Ноября 2012</date>
         <authorinitials>mc</authorinitials>
-	<revremark>'YTTERBIUMBERRY' release</revremark>
+	<revremark>'Иттербийниковый' выпуск</revremark>
       </revision>
 
       <revision>
         <revnumber>10</revnumber>
-        <date>10 Mar 2014</date>
+        <date>10 Марта 2014</date>
         <authorinitials>mc</authorinitials>
-	<revremark>'PUBLICDOMAIN' release</revremark>
+	<revremark>Выпуск 'Общественное достояние'</revremark>
       </revision>
 
     </revhistory>
@@ -36655,17 +36655,17 @@ thegrendel@theriver.com</programlisting></para>
 	    </row>
 	    <row>
 	      <entry><option>6.5</option></entry>
-	      <entry>05 Apr 2012</entry>
+	      <entry>05 Апреля 2012</entry>
 	      <entry>TUNGSTENBERRY release: Minor update.</entry>
 	    </row>
 	    <row>
 	      <entry><option>6.6</option></entry>
-	      <entry>27 Nov 2012</entry>
+	      <entry>27 Ноября 2012</entry>
 	      <entry>YTTERBIUMBERRY release: Minor update.</entry>
 	    </row>
 	    <row>
 	      <entry><option>10</option></entry>
-	      <entry>10 Mar 2014</entry>
+	      <entry>10 Марта 2014</entry>
 	      <entry>YTTERBIUMBERRY release: License change.</entry>
 	    </row>
 	  </tbody>
