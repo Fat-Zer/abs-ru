@@ -1,6 +1,9 @@
 PO4A_GETTEXTIZE = po4a-gettextize
 PO4A_TRANSLATE  = po4a-translate -k 0
 PO4A_UPDATEPO   = po4a-updatepo
+XSLTPROC        = xsltproc --nonet
+DOCBOOK_HTML_XSL = http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl
+DOCBOOK_HTML_CHUNK_XSL = http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl
 
 SOURCES = abs-guide.xml add-drive.sh agram2.sh agram.sh alias.sh allprofs.sh \
 		alt-bc.sh am-i-root.sh and-list2.sh and-or.sh archiveweblogs.sh arglist.sh \
@@ -78,27 +81,52 @@ PODIR = po
 GENERAL_POS = $(addsuffix .po, $(SOURCES))
 POS = $(foreach lang, $(LANGS), $(addprefix $(PODIR)/$(lang)/, $(GENERAL_POS)))
 
-TRANSLATIONS = $(foreach lang, $(LANGS), $(addprefix $(lang)/, $(SOURCES)))
-
+define var_translation_lang =
+TRANSLATIONS_${1} = $(addprefix $(lang)/, $(SOURCES))
+endef
+$(foreach lang,$(LANGS),$(eval $(call var_translation_lang,$(lang))))
+TRANSLATIONS = $(foreach lang, $(LANGS), $(TRANSLATIONS_$(lang)))
 
 all: update-po translate update-pot
+
+# html targets
+html: $(foreach lang, $(LANGS), build-html-$(lang))
+
+html-chunk: $(foreach lang, $(LANGS), build-html-chunk-$(lang))
+
+define rule_html_lang =
+build-html-$(1) : abs-guide-$(1).html
+
+abs-guide-$(1).html :  ${TRANSLATIONS_${1}}
+	$(XSLTPROC) -o $$@ $(DOCBOOK_HTML_XSL) $(1)/abs-guide.xml
+
+build-html-chunk-$(1) : html-$(1)/.builded
+
+html-$(1)/.builded : ${TRANSLATIONS_${1}} html-$(1)/ 
+	$(XSLTPROC) -o html-$(1)/ $(DOCBOOK_HTML_CHUNK_XSL) $(1)/abs-guide.xml
+	touch html-$(1)/.builded
+html-$(1)/ :
+	mkdir -p html-$(1)
+endef
+
+$(foreach lang,$(LANGS),$(eval $(call rule_html_lang,$(lang))))
 
 
 # translations
 translate:  $(foreach lang, $(LANGS), translate-$(lang))
 
 define rule_translate_lang =
-translate-$(1): $(addprefix $(1)/, $(SOURCES))
+translate-$(1) : ${TRANSLATIONS_${1}}
 
-$(1)/%.xml: $(SOURCEDIR)/%.xml $(PODIR)/$(1)/%.xml.po
+$(1)/%.xml : $(SOURCEDIR)/%.xml $(PODIR)/$(1)/%.xml.po
 	$(PO4A_TRANSLATE) -f docbook -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.xml.po
 
-$(1)/%: $(SOURCEDIR)/% $(PODIR)/$(1)/%.po
+$(1)/% : $(SOURCEDIR)/% $(PODIR)/$(1)/%.po
 	$(PO4A_TRANSLATE) -f text -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.po
 
-$(addprefix $(1)/, $(SOURCES)): | $(1)
+$(addprefix $(1)/, $(SOURCES)) : | $(1)
 
-$(1): 
+$(1) : 
 	mkdir -p $(1)
 endef
 
@@ -115,8 +143,8 @@ $(PODIR)/$(1)/%.xml.po : $(SOURCEDIR)/%.xml
 $(PODIR)/$(1)/%.po : $(SOURCEDIR)/%
 	$(PO4A_UPDATEPO) -f text -p $$@ -m $$<
 
-$(addprefix $(PODIR)/$(1)/, $(GENERAL_POS))): | $(PODIR)/$(1)
-$(PODIR)/$(1):
+$(addprefix $(PODIR)/$(1)/, $(GENERAL_POS))) : | $(PODIR)/$(1)
+$(PODIR)/$(1) :
 	mkdir -p $(PODIR)/$(1)
 endef
 
