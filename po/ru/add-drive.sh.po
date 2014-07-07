@@ -3,25 +3,26 @@
 # This file is distributed under the same license as the abs-guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: abs-guide 10\n"
 "Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
 "POT-Creation-Date: 2014-07-07 23:01+0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-07-07 23:35+0300\n"
+"Last-Translator: Alexander Golubev <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Basepath: ~/projects/abs-ru/\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:2
 #, no-wrap
 msgid "#!/bin/bash\n"
-msgstr ""
+msgstr "#!/bin/bash\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:7
@@ -32,6 +33,11 @@ msgid ""
 "# From an article by the author of the ABS Guide.\n"
 "# In issue #38 of _Linux Gazette_, http://www.linuxgazette.com.\n"
 msgstr ""
+"# Добавление второго жёсткого диска в систему.\n"
+"# Настройка программного обеспечения.\n"
+"# Предполагается что жёсткий диск уже подключён физически.\n"
+"# Из статьи автора ABS Guide, опубликованной в выпуске №38\n"
+"# электронного журнала _Linux Gazette_, http://www.linuxgazette.com.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:10
@@ -40,6 +46,8 @@ msgid ""
 "ROOT_UID=0     # This script must be run as root.\n"
 "E_NOTROOT=67   # Non-root exit error.\n"
 msgstr ""
+"ROOT_UID=0     # Данный скрипт требует привилегии root.\n"
+"E_NOTROOT=67   # Код ошибки, если их нет.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:16
@@ -51,6 +59,11 @@ msgid ""
 "  exit $E_NOTROOT\n"
 "fi  \n"
 msgstr ""
+"if [ \"$UID\" -ne \"$ROOT_UID\" ]\n"
+"then\n"
+"  echo \"Этот сценарий надо запускать с привилегиями root.\"\n"
+"  exit $E_NOTROOT\n"
+"fi  \n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:19
@@ -59,6 +72,8 @@ msgid ""
 "# Use with extreme caution!\n"
 "# If something goes wrong, you may wipe out your current filesystem.\n"
 msgstr ""
+"# Использовать с особой осторожностью!\n"
+"# Если что то пойдёт не так, Вы можете потерять свою файловую систему.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:23
@@ -67,6 +82,8 @@ msgid ""
 "NEWDISK=/dev/hdb         # Assumes /dev/hdb vacant. Check!\n"
 "MOUNTPOINT=/mnt/newdisk  # Or choose another mount point.\n"
 msgstr ""
+"NEWDISK=/dev/hdb         # Предполагается что устройство /dev/hdb свободно. Проверьте это дважды!\n"
+"MOUNTPOINT=/mnt/newdisk  # Или выберите другую точку монтирования.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:30
@@ -78,6 +95,11 @@ msgid ""
 "mkdir $MOUNTPOINT\n"
 "chmod 777 $MOUNTPOINT  # Makes new drive accessible to all users.\n"
 msgstr ""
+"fdisk $NEWDISK\n"
+"mke2fs -cv $NEWDISK1   # Проверка на бэд-блоки (подробный вывод).\n"
+"#  Примечание:     ^     /dev/hdb1 -- это *НЕ* /dev/hdb!\n"
+"mkdir $MOUNTPOINT\n"
+"chmod 777 $MOUNTPOINT  # Делаем новый диск доступным для всех пользователей.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:36
@@ -88,6 +110,10 @@ msgid ""
 "# Try creating a directory.\n"
 "# If it works, umount it, and proceed.\n"
 msgstr ""
+"# Теперь проверьте ...\n"
+"# mount -t ext2 /dev/hdb1 /mnt/newdisk\n"
+"# Попробуйте создать директорию.\n"
+"# Если это удалось, то отмонтиройте(umount) раздел и продолжайте.\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:40
@@ -97,9 +123,12 @@ msgid ""
 "# Add the following line to /etc/fstab.\n"
 "# /dev/hdb1  /mnt/newdisk  ext2  defaults  1 1\n"
 msgstr ""
+"# Заключительный шаг:\n"
+"# Добавьте следующую строку в /etc/fstab.\n"
+"# /dev/hdb1  /mnt/newdisk  ext2  defaults  1 1\n"
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:41
 #, no-wrap
 msgid "exit\n"
-msgstr ""
+msgstr "exit\n"
