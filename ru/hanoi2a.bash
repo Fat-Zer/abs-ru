@@ -1,11 +1,15 @@
-#! /bin/bash # The Towers Of Hanoi # Original script (hanoi.bash) copyright
-(C) 2000 Amit Singh.  # All Rights Reserved.  #
-http://hanoi.kernelthread.com
+#! /bin/bash
+# The Towers Of Hanoi
+# Original script (hanoi.bash) copyright (C) 2000 Amit Singh.
+# All Rights Reserved.
+# http://hanoi.kernelthread.com
 
-# hanoi2.bash # Version 2: modded for ASCII-graphic display.  # Uses code
-contributed by Antonio Macchi, #+ with heavy editing by ABS Guide author.  #
-This variant also falls under the original copyright, see above.  # Used in
-ABS Guide with Amit Singh's permission (thanks!).
+#  hanoi2.bash
+#  Version 2: modded for ASCII-graphic display.
+#  Uses code contributed by Antonio Macchi,
+#+ with heavy editing by ABS Guide author.
+#  This variant also falls under the original copyright, see above.
+#  Used in ABS Guide with Amit Singh's permission (thanks!).
 
 
 #   Variables   #
@@ -23,8 +27,10 @@ MARGIN=2
 let "basewidth = $MWIDTH * $DISKS + $MARGIN" # "Base" beneath rods.
 # Above "algorithm" could likely stand improvement.
 
-# Display variables.  let "disks1 = $DISKS - 1" let "spaces1 = $DISKS" let
-"spaces2 = 2 * $DISKS"
+# Display variables.
+let "disks1 = $DISKS - 1"
+let "spaces1 = $DISKS" 
+let "spaces2 = 2 * $DISKS" 
 
 let "lastmove_t = $DISKS - 1"                # Final move?
 
@@ -170,11 +176,14 @@ setup_arrays ()
 
 ###   Main   ###
 
-trap "tput cnorm" 0 tput civis clear
+trap "tput cnorm" 0
+tput civis
+clear
 
 setup_arrays $DISKS
 
-tput cup 0 0 echo; echo "+ Start Position"
+tput cup 0 0
+echo; echo "+  Start Position"
 
 case $# in
     1) case $(($1>0)) in     # Must have at least one disk.
@@ -200,5 +209,8 @@ esac
 
 exit $E_NOEXIT   # Shouldn't exit here.
 
-# Exercise: # -------- # There is a minor bug in the script that causes the
-display of #+ the next-to-last move to be skipped.  #+ Fix this.
+#  Exercise:
+#  --------
+#  There is a minor bug in the script that causes the display of
+#+ the next-to-last move to be skipped.
+#+ Fix this.

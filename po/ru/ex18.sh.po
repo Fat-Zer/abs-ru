@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex18.sh:3
-msgid "#!/bin/bash # ex18.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex18.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,20 +34,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex18.sh:8
-msgid "# Place this script -- renamed 'wh' -- in /usr/local/bin"
+#, no-wrap
+msgid "# Place this script -- renamed 'wh' -- in /usr/local/bin\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex18.sh:13
+#, no-wrap
 msgid ""
-"# Requires symbolic links: # ln -s /usr/local/bin/wh /usr/local/bin/wh-ripe "
-"# ln -s /usr/local/bin/wh /usr/local/bin/wh-apnic # ln -s /usr/local/bin/wh "
-"/usr/local/bin/wh-tucows"
+"# Requires symbolic links:\n"
+"# ln -s /usr/local/bin/wh /usr/local/bin/wh-ripe\n"
+"# ln -s /usr/local/bin/wh /usr/local/bin/wh-apnic\n"
+"# ln -s /usr/local/bin/wh /usr/local/bin/wh-tucows\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex18.sh:15
-msgid "E_NOARGS=75"
+#, no-wrap
+msgid "E_NOARGS=75\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,5 +81,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex18.sh:32
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

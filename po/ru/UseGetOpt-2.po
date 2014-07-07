@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt-2:3
-msgid "# file: UseGetOpt-2 # UseGetOpt-2.sh parameter-completion"
+#, no-wrap
+msgid ""
+"# file: UseGetOpt-2\n"
+"# UseGetOpt-2.sh parameter-completion\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,8 +50,7 @@ msgid ""
 "  case \"$cur\" in\n"
 "    -*)\n"
 "    COMPREPLY=( $( compgen -W '-a -d -f -l -t -h --aoption --debug \\\n"
-"                               --file --log --test --help --' -- $cur ) "
-");;\n"
+"                               --file --log --test --help --' -- $cur ) );;\n"
 "#   Generate the completion matches and load them into $COMPREPLY array.\n"
 "#   xx) May add more cases here.\n"
 "#   yy)\n"

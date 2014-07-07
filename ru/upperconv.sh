@@ -1,6 +1,9 @@
-#!/bin/bash # upperconv.sh # Converts a specified input file to uppercase.
+#!/bin/bash
+# upperconv.sh
+# Converts a specified input file to uppercase.
 
-E_FILE_ACCESS=70 E_WRONG_ARGS=71
+E_FILE_ACCESS=70
+E_WRONG_ARGS=71
 
 if [ ! -r "$1" ]     # Is specified input file readable?
 then
@@ -36,7 +39,7 @@ exec > $2            # Will write to output file.
 exec 1>&amp;7 7>&amp;-       # Restore stout.
 exec 0&lt;&amp;4 4&lt;&amp;-       # Restore stdin.
 
-# After restoration, the following line prints to stdout as expected.  echo
-"File \"$1\" written to \"$2\" as uppercase conversion."
+# After restoration, the following line prints to stdout as expected.
+echo "File \"$1\" written to \"$2\" as uppercase conversion."
 
 exit 0

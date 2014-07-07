@@ -1,4 +1,5 @@
-#!/bin/bash # The "continue N" command, continuing at the Nth level loop.
+#!/bin/bash
+# The "continue N" command, continuing at the Nth level loop.
 
 for outer in I II III IV V           # outer loop
 do
@@ -23,6 +24,7 @@ done
 
 echo; echo
 
-# Exercise: # Come up with a meaningful use for "continue N" in a script.
+# Exercise:
+# Come up with a meaningful use for "continue N" in a script.
 
 exit 0

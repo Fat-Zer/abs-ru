@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,9 +27,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33.sh:8
+#, no-wrap
 msgid ""
-"# Here we observe how 'getopts' processes command-line arguments to script.  "
-"# The arguments are parsed as \"options\" (flags) and associated arguments."
+"# Here we observe how 'getopts' processes command-line arguments to "
+"script.\n"
+"# The arguments are parsed as \"options\" (flags) and associated "
+"arguments.\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,7 +57,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33.sh:26
-msgid "NO_ARGS=0 E_OPTERROR=85"
+#, no-wrap
+msgid ""
+"NO_ARGS=0 \n"
+"E_OPTERROR=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,15 +98,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33.sh:55
+#, no-wrap
 msgid ""
-"shift $(($OPTIND - 1))  # Decrements the argument pointer so it points to "
-"next argument.  # $1 now references the first non-option item supplied on "
-"the command-line #+ if one exists."
+"shift $(($OPTIND - 1))\n"
+"#  Decrements the argument pointer so it points to next argument.\n"
+"#  $1 now references the first non-option item supplied on the "
+"command-line\n"
+"#+ if one exists.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33.sh:57
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

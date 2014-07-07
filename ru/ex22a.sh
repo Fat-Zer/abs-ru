@@ -1,4 +1,5 @@
-#!/bin/bash # Planets revisited.
+#!/bin/bash
+# Planets revisited.
 
 # Associate the name of each planet with its distance from the sun.
 

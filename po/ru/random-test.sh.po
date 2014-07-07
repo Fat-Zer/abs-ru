@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:3
-msgid "#!/bin/bash # How random is RANDOM?"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# How random is RANDOM?\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,7 +90,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:42
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -104,33 +108,43 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:52
-msgid "print_result"
+#, no-wrap
+msgid "print_result\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:54
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:61
+#, no-wrap
 msgid ""
-"# The scores should distribute evenly, assuming RANDOM is random.  # With "
-"$MAXTHROWS at 600, all should cluster around 100, #+ plus-or-minus 20 or "
-"so.  # # Keep in mind that RANDOM is a ***pseudorandom*** generator, #+ and "
-"not a spectacularly good one at that."
+"#  The scores should distribute evenly, assuming RANDOM is random.\n"
+"#  With $MAXTHROWS at 600, all should cluster around 100,\n"
+"#+ plus-or-minus 20 or so.\n"
+"#\n"
+"#  Keep in mind that RANDOM is a ***pseudorandom*** generator,\n"
+"#+ and not a spectacularly good one at that.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:65
+#, no-wrap
 msgid ""
-"# Randomness is a deep and complex subject.  # Sufficiently long \"random\" "
-"sequences may exhibit #+ chaotic and other \"non-random\" behavior."
+"#  Randomness is a deep and complex subject.\n"
+"#  Sufficiently long \"random\" sequences may exhibit\n"
+"#+ chaotic and other \"non-random\" behavior.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-test.sh:69
+#, no-wrap
 msgid ""
-"# Exercise (easy): # --------------- # Rewrite this script to flip a coin "
-"1000 times.  # Choices are \"HEADS\" and \"TAILS.\""
+"# Exercise (easy):\n"
+"# ---------------\n"
+"# Rewrite this script to flip a coin 1000 times.\n"
+"# Choices are \"HEADS\" and \"TAILS.\"\n"
 msgstr ""

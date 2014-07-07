@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dd-keypress.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # dd-keypress.sh: Capture keystrokes without needing to press "
-"ENTER."
+"#!/bin/bash\n"
+"# dd-keypress.sh: Capture keystrokes without needing to press ENTER.\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,10 +55,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dd-keypress.sh:19
-msgid "echo \"You pressed the \\\"$keys\\\" keys.\""
+#, no-wrap
+msgid "echo \"You pressed the \\\"$keys\\\" keys.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dd-keypress.sh:21
-msgid "# Thanks, Stephane Chazelas, for showing the way.  exit 0"
+#, no-wrap
+msgid ""
+"# Thanks, Stephane Chazelas, for showing the way.\n"
+"exit 0\n"
 msgstr ""

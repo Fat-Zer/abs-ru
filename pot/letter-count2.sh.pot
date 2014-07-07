@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,14 +32,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:15
+#, no-wrap
 msgid ""
-"INIT_TAB_AWK=\"\" # Parameter to initialize awk script.  count_case=0 "
-"FILE_PARSE=$1"
+"INIT_TAB_AWK=\"\"\n"
+"# Parameter to initialize awk script.\n"
+"count_case=0\n"
+"FILE_PARSE=$1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:17
-msgid "E_PARAMERR=85"
+#, no-wrap
+msgid "E_PARAMERR=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,40 +94,55 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:46
-msgid "# DEBUG: # echo $INIT_TAB_AWK;"
+#, no-wrap
+msgid ""
+"# DEBUG:\n"
+"# echo $INIT_TAB_AWK;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:49
-msgid "cat $FILE_PARSE | # Pipe the target file to the following awk script."
+#, no-wrap
+msgid ""
+"cat $FILE_PARSE |\n"
+"# Pipe the target file to the following awk script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:54
+#, no-wrap
 msgid ""
-"# --------------------------------------------------------------------- # "
-"Earlier version of script: # awk -v tab_search=0 -v final_tab=0 -v tab=0 -v "
-"\\ # nb_letter=0 -v chara=0 -v chara2=0 \\"
+"# ---------------------------------------------------------------------\n"
+"# Earlier version of script:\n"
+"# awk -v tab_search=0 -v final_tab=0 -v tab=0 -v \\\n"
+"# nb_letter=0 -v chara=0 -v chara2=0 \\\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:66
+#, no-wrap
 msgid ""
-"awk \\ \"BEGIN { $INIT_TAB_AWK } \\ { split(\\$0, tab, \\\"\\\"); \\ for "
-"(chara in tab) \\ { for (chara2 in tab_search) \\ { if (tab_search[chara2] "
-"== tab[chara]) { final_tab[chara2]++ } } } } \\ END { for (chara in "
-"final_tab) \\ { print tab_search[chara] \\\" => \\\" final_tab[chara] } }\" "
-"# --------------------------------------------------------------------- # "
-"Nothing all that complicated, just . . .  #+ for-loops, if-tests, and a "
-"couple of specialized functions."
+"awk \\\n"
+"\"BEGIN { $INIT_TAB_AWK } \\\n"
+"{ split(\\$0, tab, \\\"\\\"); \\\n"
+"for (chara in tab) \\\n"
+"{ for (chara2 in tab_search) \\\n"
+"{ if (tab_search[chara2] == tab[chara]) { final_tab[chara2]++ } } } } \\\n"
+"END { for (chara in final_tab) \\\n"
+"{ print tab_search[chara] \\\" => \\\" final_tab[chara] } }\"\n"
+"# ---------------------------------------------------------------------\n"
+"#  Nothing all that complicated, just . . .\n"
+"#+ for-loops, if-tests, and a couple of specialized functions.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:68
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/letter-count2.sh:69
-msgid "# Compare this script to letter-count.sh."
+#, no-wrap
+msgid "# Compare this script to letter-count.sh.\n"
 msgstr ""

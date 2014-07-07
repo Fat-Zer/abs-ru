@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/script-array.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # script-array.sh: Loads this script into an array.  # Inspired "
-"by an e-mail from Chris Martin (thanks!)."
+"#!/bin/bash\n"
+"# script-array.sh: Loads this script into an array.\n"
+"# Inspired by an e-mail from Chris Martin (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,17 +53,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/script-array.sh:22
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/script-array.sh:24
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/script-array.sh:29
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Modify this script so it lists itself #+ in its "
-"original format, #+ complete with whitespace, line breaks, etc."
+"# Exercise:\n"
+"# --------\n"
+"#  Modify this script so it lists itself\n"
+"#+ in its original format,\n"
+"#+ complete with whitespace, line breaks, etc.\n"
 msgstr ""

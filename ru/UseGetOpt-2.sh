@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# UseGetOpt-2.sh # Modified version of the script for illustrating
-tab-expansion #+ of command-line options.  # See the "Introduction to Tab
-Expansion" appendix.
+#  UseGetOpt-2.sh
+#  Modified version of the script for illustrating tab-expansion
+#+ of command-line options.
+#  See the "Introduction to Tab Expansion" appendix.
 
 #  Possible options: -a -d -f -l -t -h
 #+                   --aoption, --debug --file --log --test -- help --
 
-# Author of original script: Peggy Russell
-&lt;prusselltechgroup@gmail.com&gt;
+#  Author of original script: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;
 
 
 # UseGetOpt () {
@@ -89,6 +89,6 @@ DoSomething () {
 
   shift
   
-# }
+#  }
 
 exit

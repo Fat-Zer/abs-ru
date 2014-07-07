@@ -87,7 +87,7 @@ day_index ()          # Gauss' Formula:
 
   echo $Days
 
-}
+}  
 
 
 calculate_difference ()            # Difference between two day indices.
@@ -124,9 +124,13 @@ month=$?
 let "date1 = `day_index $day $month $year`"
 
 
-Parse_Date $2 check_date $day $month $year
+Parse_Date $2
+check_date $day $month $year
 
-strip_leading_zero $day day=$? strip_leading_zero $month month=$?
+strip_leading_zero $day
+day=$?
+strip_leading_zero $month
+month=$?
 
 date2=$(day_index $day $month $year) # Command substitution.
 
@@ -140,8 +144,10 @@ echo $diff
 
 exit 0
 
-# Exercise: # -------- # If given only one command-line parameter, have the
-script #+ use today's date as the second.
+#  Exercise:
+#  --------
+#  If given only one command-line parameter, have the script
+#+ use today's date as the second.
 
 
 #  Compare this script with

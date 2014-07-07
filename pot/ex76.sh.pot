@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,49 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:3
-msgid "#!/bin/bash # Hunting variables with a trap."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Hunting variables with a trap.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:9
+#, no-wrap
 msgid ""
-"trap 'echo Variable Listing --- a = $a b = $b' EXIT # EXIT is the name of "
-"the signal generated upon exit from a script.  # # The command specified by "
-"the \"trap\" doesn't execute until #+ the appropriate signal is sent."
+"trap 'echo Variable Listing --- a = $a  b = $b' EXIT\n"
+"#  EXIT is the name of the signal generated upon exit from a script.\n"
+"#\n"
+"#  The command specified by the \"trap\" doesn't execute until\n"
+"#+ the appropriate signal is sent.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:13
+#, no-wrap
 msgid ""
-"echo \"This prints before the \\\"trap\\\" --\" echo \"even though the "
-"script sees the \\\"trap\\\" first.\" echo"
+"echo \"This prints before the \\\"trap\\\" --\"\n"
+"echo \"even though the script sees the \\\"trap\\\" first.\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:15
-msgid "a=39"
+#, no-wrap
+msgid "a=39\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:17
-msgid "b=36"
+#, no-wrap
+msgid "b=36\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex76.sh:20
+#, no-wrap
 msgid ""
-"exit 0 # Note that commenting out the 'exit' command makes no difference, #+ "
-"since the script exits in any case after running out of commands."
+"exit 0\n"
+"#  Note that commenting out the 'exit' command makes no difference,\n"
+"#+ since the script exits in any case after running out of commands.\n"
 msgstr ""

@@ -1,24 +1,28 @@
-#!/bin/bash # alias.sh
+#!/bin/bash
+# alias.sh
 
-shopt -s expand_aliases # Must set this option, else script will not expand
-aliases.
+shopt -s expand_aliases
+# Must set this option, else script will not expand aliases.
 
 
-# First, some fun.  alias Jesse_James='echo "\"Alias Jesse James\" was a
-1959 comedy starring Bob Hope."' Jesse_James
+# First, some fun.
+alias Jesse_James='echo "\"Alias Jesse James\" was a 1959 comedy starring Bob Hope."'
+Jesse_James
 
 echo; echo; echo;
 
-alias ll="ls -l" # May use either single (') or double (") quotes to define
-an alias.
+alias ll="ls -l"
+# May use either single (') or double (") quotes to define an alias.
 
 echo "Trying aliased \"ll\":"
 ll /usr/X11R6/bin/mk*   #* Alias works.
 
 echo
 
-directory=/usr/X11R6/bin/ prefix=mk* # See if wild card causes problems.
-echo "Variables \"directory\" + \"prefix\" = $directory$prefix" echo
+directory=/usr/X11R6/bin/
+prefix=mk*  # See if wild card causes problems.
+echo "Variables \"directory\" + \"prefix\" = $directory$prefix"
+echo
 
 alias lll="ls -l $directory$prefix"
 

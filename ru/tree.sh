@@ -1,10 +1,13 @@
-#!/bin/bash # tree.sh
+#!/bin/bash
+# tree.sh
 
-# Written by Rick Boivie.  # Used with permission.  # This is a revised and
-simplified version of a script #+ by Jordi Sanfeliu (the original author),
-and patched by Ian Kjos.  # This script replaces the earlier version used in
-#+ previous releases of the Advanced Bash Scripting Guide.  # Copyright (c)
-2002, by Jordi Sanfeliu, Rick Boivie, and Ian Kjos.
+#  Written by Rick Boivie.
+#  Used with permission.
+#  This is a revised and simplified version of a script
+#+ by Jordi Sanfeliu (the original author), and patched by Ian Kjos.
+#  This script replaces the earlier version used in
+#+ previous releases of the Advanced Bash Scripting Guide.
+#  Copyright (c) 2002, by Jordi Sanfeliu, Rick Boivie, and Ian Kjos.
 
 # ==> Comments added by the author of this document.
 
@@ -50,8 +53,10 @@ if [ $# != 0 ] ; then
   #else   # stay in current directory
 fi
 
-echo "Initial directory = `pwd`" numdirs=0
+echo "Initial directory = `pwd`"
+numdirs=0
 
-search 0 echo "Total directories = $numdirs"
+search 0
+echo "Total directories = $numdirs"
 
 exit 0

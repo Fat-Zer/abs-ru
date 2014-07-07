@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir5.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,7 +36,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir5.sh:11
-msgid "TRUE=1"
+#, no-wrap
+msgid "TRUE=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,12 +54,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir5.sh:21
+#, no-wrap
 msgid ""
-"# Reads only first line of file.  # An \"if/then\" test has no way of "
-"iterating unless embedded in a loop."
+"# Reads only first line of file.\n"
+"# An \"if/then\" test has no way of iterating unless embedded in a loop.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir5.sh:22
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

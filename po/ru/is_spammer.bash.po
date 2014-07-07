@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:5
-msgid "# $Id$ # Above line is RCS info."
+#, no-wrap
+msgid ""
+"# $Id$\n"
+"# Above line is RCS info.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:11
+#, no-wrap
 msgid ""
 "# The latest version of this script is available from "
-"http://www.morethan.org.  # # Spammer-identification # by Michael S. Zick # "
-"Used in the ABS Guide with permission."
+"http://www.morethan.org.\n"
+"#\n"
+"# Spammer-identification\n"
+"# by Michael S. Zick\n"
+"# Used in the ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:18
+#, no-wrap
 msgid ""
-"####################################################### # Documentation # "
-"See also \"Quickstart\" at end of script.  "
-"#######################################################"
+"#######################################################\n"
+"# Documentation\n"
+"# See also \"Quickstart\" at end of script.\n"
+"#######################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:20
-msgid ":&lt;&lt;-'__is_spammer_Doc_'"
+#, no-wrap
+msgid ":&lt;&lt;-'__is_spammer_Doc_'\n"
 msgstr ""
 
 #. type: Plain text
@@ -278,69 +289,97 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:126
-msgid "__is_spammer_Doc_"
+#, no-wrap
+msgid "__is_spammer_Doc_\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:128
-msgid "#######################################################"
+#, no-wrap
+msgid "#######################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:133
-msgid "#### Special IFS settings used for string parsing. ####"
+#, no-wrap
+msgid "#### Special IFS settings used for string parsing. ####\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:136
+#, no-wrap
 msgid ""
-"# Whitespace == :Space:Tab:Line Feed:Carriage Return: "
-"WSP_IFS=$'\\x20'$'\\x09'$'\\x0A'$'\\x0D'"
+"# Whitespace == :Space:Tab:Line Feed:Carriage Return:\n"
+"WSP_IFS=$'\\x20'$'\\x09'$'\\x0A'$'\\x0D'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:139
-msgid "# No Whitespace == Line Feed:Carriage Return NO_WSP=$'\\x0A'$'\\x0D'"
+#, no-wrap
+msgid ""
+"# No Whitespace == Line Feed:Carriage Return\n"
+"NO_WSP=$'\\x0A'$'\\x0D'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:142
-msgid "# Field separator for dotted decimal IP addresses ADR_IFS=${NO_WSP}'.'"
+#, no-wrap
+msgid ""
+"# Field separator for dotted decimal IP addresses\n"
+"ADR_IFS=${NO_WSP}'.'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:145
-msgid "# Array to dotted string conversions DOT_IFS='.'${WSP_IFS}"
+#, no-wrap
+msgid ""
+"# Array to dotted string conversions\n"
+"DOT_IFS='.'${WSP_IFS}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:150
+#, no-wrap
 msgid ""
-"# # # Pending operations stack machine # # # # This set of functions "
-"described in func_stack.bash.  # (See \"Additional documentation\" above.)  "
-"# # #"
+"# # # Pending operations stack machine # # #\n"
+"# This set of functions described in func_stack.bash.\n"
+"# (See \"Additional documentation\" above.)\n"
+"# # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:157
+#, no-wrap
 msgid ""
-"# Global stack of pending operations.  declare -f -a _pending_ # Global "
-"sentinel for stack runners declare -i _p_ctrl_ # Global holder for currently "
-"executing function declare -f _pend_current_"
+"# Global stack of pending operations.\n"
+"declare -f -a _pending_\n"
+"# Global sentinel for stack runners\n"
+"declare -i _p_ctrl_\n"
+"# Global holder for currently executing function\n"
+"declare -f _pend_current_\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:167
+#, no-wrap
 msgid ""
-"# # # Debug version only - remove for regular use # # # # # The function "
-"stored in _pend_hook_ is called # immediately before each pending function "
-"is # evaluated.  Stack clean, _pend_current_ set.  # # This thingy "
-"demonstrated in pend_hook.bash.  declare -f _pend_hook_ # # #"
+"# # # Debug version only - remove for regular use # # #\n"
+"#\n"
+"# The function stored in _pend_hook_ is called\n"
+"# immediately before each pending function is\n"
+"# evaluated.  Stack clean, _pend_current_ set.\n"
+"#\n"
+"# This thingy demonstrated in pend_hook.bash.\n"
+"declare -f _pend_hook_\n"
+"# # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:170
-msgid "# The do nothing function pend_dummy() { : ; }"
+#, no-wrap
+msgid ""
+"# The do nothing function\n"
+"pend_dummy() { : ; }\n"
 msgstr ""
 
 #. type: Plain text
@@ -450,7 +489,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:242
-msgid "#### Array editors ####"
+#, no-wrap
+msgid "#### Array editors ####\n"
 msgstr ""
 
 #. type: Plain text
@@ -614,7 +654,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:382
-msgid "#### Application helper functions ####"
+#, no-wrap
+msgid "#### Application helper functions ####\n"
 msgstr ""
 
 #. type: Plain text
@@ -803,132 +844,181 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:532
-msgid "# # # # 'Hunt the Spammer' data flow # # # #"
+#, no-wrap
+msgid "# # # # 'Hunt the Spammer' data flow # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:535
-msgid "# Application return code declare -i _hs_RC"
+#, no-wrap
+msgid ""
+"# Application return code\n"
+"declare -i _hs_RC\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:539
+#, no-wrap
 msgid ""
-"# Original input, from which IP addresses are removed # After which, domain "
-"names to check declare -a uc_name"
+"# Original input, from which IP addresses are removed\n"
+"# After which, domain names to check\n"
+"declare -a uc_name\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:543
+#, no-wrap
 msgid ""
-"# Original input IP addresses are moved here # After which, IP addresses to "
-"check declare -a uc_address"
+"# Original input IP addresses are moved here\n"
+"# After which, IP addresses to check\n"
+"declare -a uc_address\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:547
+#, no-wrap
 msgid ""
-"# Names against which address expansion run # Ready for name detail lookup "
-"declare -a chk_name"
+"# Names against which address expansion run\n"
+"# Ready for name detail lookup\n"
+"declare -a chk_name\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:551
+#, no-wrap
 msgid ""
-"# Addresses against which name expansion run # Ready for address detail "
-"lookup declare -a chk_address"
+"# Addresses against which name expansion run\n"
+"# Ready for address detail lookup\n"
+"declare -a chk_address\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:558
+#, no-wrap
 msgid ""
-"# Recursion is depth-first-by-name.  # The expand_input_address maintains "
-"this list #+ to prohibit looking up addresses twice during #+ domain name "
-"recursion.  declare -a been_there_addr been_there_addr=( '127.0.0.1' ) # "
-"Whitelist localhost"
+"#  Recursion is depth-first-by-name.\n"
+"#  The expand_input_address maintains this list\n"
+"#+ to prohibit looking up addresses twice during\n"
+"#+ domain name recursion.\n"
+"declare -a been_there_addr\n"
+"been_there_addr=( '127.0.0.1' ) # Whitelist localhost\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:561
-msgid "# Names which we have checked (or given up on)  declare -a known_name"
+#, no-wrap
+msgid ""
+"# Names which we have checked (or given up on)\n"
+"declare -a known_name\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:564
-msgid "# Addresses which we have checked (or given up on)  declare -a known_address"
+#, no-wrap
+msgid ""
+"# Addresses which we have checked (or given up on)\n"
+"declare -a known_address\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:569
+#, no-wrap
 msgid ""
-"# List of zero or more Blacklist servers to check.  # Each 'known_address' "
-"will be checked against each server, #+ with negative replies and failures "
-"suppressed.  declare -a list_server"
+"#  List of zero or more Blacklist servers to check.\n"
+"#  Each 'known_address' will be checked against each server,\n"
+"#+ with negative replies and failures suppressed.\n"
+"declare -a list_server\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:572
-msgid "# Indirection limit - set to zero == no limit indirect=${SPAMMER_LIMIT:=2}"
+#, no-wrap
+msgid ""
+"# Indirection limit - set to zero == no limit\n"
+"indirect=${SPAMMER_LIMIT:=2}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:574
-msgid "# # # # 'Hunt the Spammer' information output data # # # #"
+#, no-wrap
+msgid "# # # # 'Hunt the Spammer' information output data # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:580
+#, no-wrap
 msgid ""
-"# Any domain name may have multiple IP addresses.  # Any IP address may have "
-"multiple domain names.  # Therefore, track unique address-name pairs.  "
-"declare -a known_pair declare -a reverse_pair"
+"# Any domain name may have multiple IP addresses.\n"
+"# Any IP address may have multiple domain names.\n"
+"# Therefore, track unique address-name pairs.\n"
+"declare -a known_pair\n"
+"declare -a reverse_pair\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:584
+#, no-wrap
 msgid ""
-"# In addition to the data flow variables; known_address #+ known_name and "
-"list_server, the following are output to the #+ external graphics interface "
-"file."
+"#  In addition to the data flow variables; known_address\n"
+"#+ known_name and list_server, the following are output to the\n"
+"#+ external graphics interface file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:587
-msgid "# Authority chain, parent -> SOA fields.  declare -a auth_chain"
+#, no-wrap
+msgid ""
+"# Authority chain, parent -> SOA fields.\n"
+"declare -a auth_chain\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:590
-msgid "# Reference chain, parent name -> child name declare -a ref_chain"
+#, no-wrap
+msgid ""
+"# Reference chain, parent name -> child name\n"
+"declare -a ref_chain\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:593
-msgid "# DNS chain - domain name -> address declare -a name_address"
+#, no-wrap
+msgid ""
+"# DNS chain - domain name -> address\n"
+"declare -a name_address\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:596
-msgid "# Name and service pairs - domain name -> service declare -a name_srvc"
+#, no-wrap
+msgid ""
+"# Name and service pairs - domain name -> service\n"
+"declare -a name_srvc\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:599
+#, no-wrap
 msgid ""
-"# Name and resource pairs - domain name -> Resource Record declare -a "
-"name_resource"
+"# Name and resource pairs - domain name -> Resource Record\n"
+"declare -a name_resource\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:603
+#, no-wrap
 msgid ""
-"# Parent and Child pairs - parent name -> child name # This MAY NOT be the "
-"same as the ref_chain followed! declare -a parent_child"
+"# Parent and Child pairs - parent name -> child name\n"
+"# This MAY NOT be the same as the ref_chain followed!\n"
+"declare -a parent_child\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:606
-msgid "# Address and Blacklist hit pairs - address->server declare -a address_hits"
+#, no-wrap
+msgid ""
+"# Address and Blacklist hit pairs - address->server\n"
+"declare -a address_hits\n"
 msgstr ""
 
 #. type: Plain text
@@ -942,9 +1032,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:614
+#, no-wrap
 msgid ""
-"# Data dump is enabled by setting the environment variable SPAMMER_DATA #+ "
-"to the name of a writable file.  declare _dot_file"
+"#  Data dump is enabled by setting the environment variable SPAMMER_DATA\n"
+"#+ to the name of a writable file.\n"
+"declare _dot_file\n"
 msgstr ""
 
 #. type: Plain text
@@ -1144,15 +1236,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:743
-msgid "# # # # 'Hunt the Spammer' execution flow # # # #"
+#, no-wrap
+msgid "# # # # 'Hunt the Spammer' execution flow # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:748
+#, no-wrap
 msgid ""
-"# Execution trace is enabled by setting the #+ environment variable "
-"SPAMMER_TRACE to the name of a writable file.  declare -a _trace_log declare "
-"_log_file"
+"#  Execution trace is enabled by setting the\n"
+"#+ environment variable SPAMMER_TRACE to the name of a writable file.\n"
+"declare -a _trace_log\n"
+"declare _log_file\n"
 msgstr ""
 
 #. type: Plain text
@@ -1201,17 +1296,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:790
+#, no-wrap
 msgid ""
-"# # # Utility program 'dig' wrappers # # # # # These wrappers are derived "
-"from the #+ examples shown in dig_wrappers.bash.  # # The major difference "
-"is these return #+ their results as a list in an array.  # # See "
-"dig_wrappers.bash for details and #+ use that script to develop any "
-"changes.  # # # #"
+"# # # Utility program 'dig' wrappers # # #\n"
+"#\n"
+"#  These wrappers are derived from the\n"
+"#+ examples shown in dig_wrappers.bash.\n"
+"#\n"
+"#  The major difference is these return\n"
+"#+ their results as a list in an array.\n"
+"#\n"
+"#  See dig_wrappers.bash for details and\n"
+"#+ use that script to develop any changes.\n"
+"#\n"
+"# # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:792
-msgid "# Short form answer: 'dig' parses answer."
+#, no-wrap
+msgid "# Short form answer: 'dig' parses answer.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1320,7 +1424,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:880
-msgid "# The long forms, a.k.a., the parse it yourself versions"
+#, no-wrap
+msgid "# The long forms, a.k.a., the parse it yourself versions\n"
 msgstr ""
 
 #. type: Plain text
@@ -1417,7 +1522,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:956
-msgid "# # # Application specific functions # # #"
+#, no-wrap
+msgid "# # # Application specific functions # # #\n"
 msgstr ""
 
 #. type: Plain text
@@ -1507,9 +1613,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1032
+#, no-wrap
 msgid ""
-"# # # Discovery functions -- recursively interlocked by external data # # # "
-"# # # The leading 'if list is empty; return 0' in each is required. # # #"
+"# # # Discovery functions -- recursively interlocked by external data # # "
+"#\n"
+"# # # The leading 'if list is empty; return 0' in each is required. # # #\n"
 msgstr ""
 
 #. type: Plain text
@@ -2146,7 +2254,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1497
-msgid "# # # Application specific output functions # # #"
+#, no-wrap
+msgid "# # # Application specific output functions # # #\n"
 msgstr ""
 
 #. type: Plain text
@@ -2236,7 +2345,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1558
-msgid "# # # The usual application glue # # #"
+#, no-wrap
+msgid "# # # The usual application glue # # #\n"
 msgstr ""
 
 #. type: Plain text
@@ -2346,30 +2456,39 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1612
-msgid "_usage_statement_ }"
+#, no-wrap
+msgid ""
+"_usage_statement_\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1615
+#, no-wrap
 msgid ""
-"# The default list of Blacklist servers: # Many choices, see: "
-"http://www.spews.org/lists.html"
+"# The default list of Blacklist servers:\n"
+"# Many choices, see: http://www.spews.org/lists.html\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1631
+#, no-wrap
 msgid ""
-"declare -a default_servers # See: http://www.spamhaus.org (Conservative, "
-"well maintained)  default_servers[0]='sbl-xbl.spamhaus.org' # See: "
-"http://ordb.org (Open mail relays)  default_servers[1]='relays.ordb.org' # "
-"See: http://www.spamcop.net/ (You can report spammers here)  "
-"default_servers[2]='bl.spamcop.net' # See: http://www.spews.org (An 'early "
-"detect' system)  default_servers[3]='l2.spews.dnsbl.sorbs.net' # See: "
-"http://www.dnsbl.us.sorbs.net/using.shtml "
-"default_servers[4]='dnsbl.sorbs.net' # See: http://dsbl.org/usage (Various "
-"mail relay lists)  default_servers[5]='list.dsbl.org' "
-"default_servers[6]='multihop.dsbl.org' "
-"default_servers[7]='unconfirmed.dsbl.org'"
+"declare -a default_servers\n"
+"# See: http://www.spamhaus.org (Conservative, well maintained)\n"
+"default_servers[0]='sbl-xbl.spamhaus.org'\n"
+"# See: http://ordb.org (Open mail relays)\n"
+"default_servers[1]='relays.ordb.org'\n"
+"# See: http://www.spamcop.net/ (You can report spammers here)\n"
+"default_servers[2]='bl.spamcop.net'\n"
+"# See: http://www.spews.org (An 'early detect' system)\n"
+"default_servers[3]='l2.spews.dnsbl.sorbs.net'\n"
+"# See: http://www.dnsbl.us.sorbs.net/using.shtml\n"
+"default_servers[4]='dnsbl.sorbs.net'\n"
+"# See: http://dsbl.org/usage (Various mail relay lists)\n"
+"default_servers[5]='list.dsbl.org'\n"
+"default_servers[6]='multihop.dsbl.org'\n"
+"default_servers[7]='unconfirmed.dsbl.org'\n"
 msgstr ""
 
 #. type: Plain text
@@ -2682,14 +2801,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1859
+#, no-wrap
 msgid ""
-"############################## # Example output from script # "
-"############################## :&lt;&lt;-'_is_spammer_outputs_'"
+"##############################\n"
+"# Example output from script #\n"
+"##############################\n"
+":&lt;&lt;-'_is_spammer_outputs_'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1861
-msgid "./is_spammer.bash 0 web4.alojamentos7.com"
+#, no-wrap
+msgid "./is_spammer.bash 0 web4.alojamentos7.com\n"
 msgstr ""
 
 #. type: Plain text
@@ -2743,17 +2866,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1901
-msgid "Advanced Bash Scripting Guide: is_spammer.bash, v2, 2004-msz"
+#, no-wrap
+msgid "Advanced Bash Scripting Guide: is_spammer.bash, v2, 2004-msz\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1903
-msgid "_is_spammer_outputs_"
+#, no-wrap
+msgid "_is_spammer_outputs_\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1905
-msgid "exit ${_hs_RC}"
+#, no-wrap
+msgid "exit ${_hs_RC}\n"
 msgstr ""
 
 #. type: Plain text
@@ -2852,7 +2978,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:1954
-msgid "In the same directory as the is_spammer.bash script; Do: ./is_spammer.bash"
+#, no-wrap
+msgid ""
+"In the same directory as the is_spammer.bash script; \n"
+"Do: ./is_spammer.bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -3117,86 +3246,105 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2063
+#, no-wrap
 msgid ""
-"The script does not directly produce a graph (diagram).  It only produces a "
-"graphic description file. You can process the graphic descriptor file that "
-"was output with the 'dot' program."
+"The script does not directly produce a graph (diagram). \n"
+"It only produces a graphic description file. You can \n"
+"process the graphic descriptor file that was output \n"
+"with the 'dot' program.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2067
+#, no-wrap
 msgid ""
-"Until you edit that descriptor file, to describe the relationships you want "
-"shown, all that you will get is a bunch of labeled name and address nodes."
+"Until you edit that descriptor file, to describe the \n"
+"relationships you want shown, all that you will get is \n"
+"a bunch of labeled name and address nodes.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2071
+#, no-wrap
 msgid ""
-"All of the script's discovered relationships are within a comment block in "
-"the graphic descriptor file, each with a descriptive heading."
+"All of the script's discovered relationships are within \n"
+"a comment block in the graphic descriptor file, each \n"
+"with a descriptive heading.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2075
+#, no-wrap
 msgid ""
-"The editing required to draw a line between a pair of nodes from the "
-"information in the descriptor file may be done with a text editor."
+"The editing required to draw a line between a pair of \n"
+"nodes from the information in the descriptor file may \n"
+"be done with a text editor. \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2077
-msgid "Given these lines somewhere in the descriptor file:"
+#, no-wrap
+msgid "Given these lines somewhere in the descriptor file:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2079 abs-guide/is_spammer.bash:2110
-msgid "# Known domain name nodes"
+#, no-wrap
+msgid "# Known domain name nodes\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2081 abs-guide/is_spammer.bash:2112
-msgid "N0000 [label=\"guardproof.info.\"] ;"
+#, no-wrap
+msgid "N0000 [label=\"guardproof.info.\"] ;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2083 abs-guide/is_spammer.bash:2114
-msgid "N0002 [label=\"third.guardproof.info.\"] ;"
+#, no-wrap
+msgid "N0002 [label=\"third.guardproof.info.\"] ;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2087 abs-guide/is_spammer.bash:2118
-msgid "# Known address nodes"
+#, no-wrap
+msgid "# Known address nodes\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2089 abs-guide/is_spammer.bash:2120
-msgid "A0000 [label=\"61.141.32.197\"] ;"
+#, no-wrap
+msgid "A0000 [label=\"61.141.32.197\"] ;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2093 abs-guide/is_spammer.bash:2136
-msgid "/*"
+#, no-wrap
+msgid "/*\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2095 abs-guide/is_spammer.bash:2138
-msgid "# Known name->address edges"
+#, no-wrap
+msgid "# Known name->address edges\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2097 abs-guide/is_spammer.bash:2140
-msgid "NA0000 third.guardproof.info. 61.141.32.197"
+#, no-wrap
+msgid "NA0000 third.guardproof.info. 61.141.32.197\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2101 abs-guide/is_spammer.bash:2144
-msgid "# Known parent->child edges"
+#, no-wrap
+msgid "# Known parent->child edges\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2103 abs-guide/is_spammer.bash:2146
-msgid "PC0000 guardproof.info. third.guardproof.info."
+#, no-wrap
+msgid "PC0000 guardproof.info. third.guardproof.info.\n"
 msgstr ""
 
 #. type: Plain text
@@ -3207,70 +3355,86 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2108
+#, no-wrap
 msgid ""
-"Turn that into the following lines by substituting node identifiers into the "
-"relationships:"
+"Turn that into the following lines by substituting node \n"
+"identifiers into the relationships:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2124
-msgid "# PC0000 guardproof.info. third.guardproof.info."
+#, no-wrap
+msgid "# PC0000 guardproof.info. third.guardproof.info.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2126
-msgid "N0000->N0002 ;"
+#, no-wrap
+msgid "N0000->N0002 ;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2130
-msgid "# NA0000 third.guardproof.info. 61.141.32.197"
+#, no-wrap
+msgid "# NA0000 third.guardproof.info. 61.141.32.197\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2132
-msgid "N0002->A0000 ;"
+#, no-wrap
+msgid "N0002->A0000 ;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2151
+#, no-wrap
 msgid ""
-"Process that with the 'dot' program, and you have your first network "
-"diagram."
+"Process that with the 'dot' program, and you have your \n"
+"first network diagram.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2159
+#, no-wrap
 msgid ""
-"In addition to the conventional graphic edges, the descriptor file includes "
-"similar format pair-data that describes services, zone records "
-"(sub-graphs?), blacklisted addresses, and other things which might be "
-"interesting to include in your graph. This additional information could be "
-"displayed as different node shapes, colors, line sizes, etc."
+"In addition to the conventional graphic edges, the \n"
+"descriptor file includes similar format pair-data that \n"
+"describes services, zone records (sub-graphs?), \n"
+"blacklisted addresses, and other things which might be \n"
+"interesting to include in your graph. This additional \n"
+"information could be displayed as different node \n"
+"shapes, colors, line sizes, etc.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2164
+#, no-wrap
 msgid ""
-"The descriptor file can also be read and edited by a Bash script (of "
-"course). You should be able to find most of the functions required within "
-"the \"is_spammer.bash\" script."
+"The descriptor file can also be read and edited by a \n"
+"Bash script (of course). You should be able to find \n"
+"most of the functions required within the \n"
+"\"is_spammer.bash\" script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2166
-msgid "# End Quickstart."
+#, no-wrap
+msgid "# End Quickstart.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2171
-msgid "Additional Note ========== ===="
+#, no-wrap
+msgid ""
+"Additional Note\n"
+"========== ====\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/is_spammer.bash:2174
+#, no-wrap
 msgid ""
-"Michael Zick points out that there is a \"makeviz.bash\" interactive Web "
-"site at rediris.es. Can't give the full URL, since this is not a publically "
-"accessible site."
+"Michael Zick points out that there is a \"makeviz.bash\" interactive\n"
+"Web site at rediris.es. Can't give the full URL, since this is not\n"
+"a publically accessible site.\n"
 msgstr ""

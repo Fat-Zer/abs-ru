@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:4
-msgid "#!/bin/bash # maned.sh # A rudimentary man page editor"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# maned.sh\n"
+"# A rudimentary man page editor\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:9
+#, no-wrap
 msgid ""
-"# Version: 0.1 (Alpha, probably buggy)  # Author: Mendel Cooper "
-"&lt;thegrendel.abs@gmail.com&gt; # Reldate: 16 June 2008 # License: GPL3"
+"# Version: 0.1 (Alpha, probably buggy)\n"
+"# Author: Mendel Cooper &lt;thegrendel.abs@gmail.com&gt;\n"
+"# Reldate: 16 June 2008\n"
+"# License: GPL3\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,15 +45,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:31
+#, no-wrap
 msgid ""
-"# =========== Markup Tags ============ # TopHeader=\".TH\" NameHeader=\".SH "
-"NAME\" SyntaxHeader=\".SH SYNTAX\" SynopsisHeader=\".SH SYNOPSIS\" "
-"InstallationHeader=\".SH INSTALLATION\" DescHeader=\".SH DESCRIPTION\" "
-"OptHeader=\".SH OPTIONS\" FilesHeader=\".SH FILES\" EnvHeader=\".SH "
-"ENVIRONMENT\" AuthHeader=\".SH AUTHOR\" BugsHeader=\".SH BUGS\" "
-"SeeAlsoHeader=\".SH SEE ALSO\" BOLD=\".B\" # Add more tags, as needed.  # "
-"See groff docs for markup meanings.  # ==================================== "
-"#"
+"# =========== Markup Tags ============ #\n"
+"TopHeader=\".TH\"\n"
+"NameHeader=\".SH NAME\"\n"
+"SyntaxHeader=\".SH SYNTAX\"\n"
+"SynopsisHeader=\".SH SYNOPSIS\"\n"
+"InstallationHeader=\".SH INSTALLATION\"\n"
+"DescHeader=\".SH DESCRIPTION\"\n"
+"OptHeader=\".SH OPTIONS\"\n"
+"FilesHeader=\".SH FILES\"\n"
+"EnvHeader=\".SH ENVIRONMENT\"\n"
+"AuthHeader=\".SH AUTHOR\"\n"
+"BugsHeader=\".SH BUGS\"\n"
+"SeeAlsoHeader=\".SH SEE ALSO\"\n"
+"BOLD=\".B\"\n"
+"# Add more tags, as needed.\n"
+"# See groff docs for markup meanings.\n"
+"# ==================================== #\n"
 msgstr ""
 
 #. type: Plain text
@@ -138,7 +155,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:85
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -214,28 +232,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:135
+#, no-wrap
 msgid ""
-"# Note that the generated man page will usually #+ require manual "
-"fine-tuning with a text editor.  # However, it's a distinct improvement upon "
-"#+ writing man source from scratch #+ or even editing a blank man page "
-"template."
+"#  Note that the generated man page will usually\n"
+"#+ require manual fine-tuning with a text editor.\n"
+"#  However, it's a distinct improvement upon\n"
+"#+ writing man source from scratch\n"
+"#+ or even editing a blank man page template.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:144
+#, no-wrap
 msgid ""
-"# The main deficiency of the script is that it permits #+ pasting only a "
-"single text line into the input fields.  # This may be a long, "
-"cobbled-together line, which groff # will automatically wrap and hyphenate.  "
-"# However, if you want multiple (newline-separated) paragraphs, #+ these "
-"must be inserted by manual text editing on the #+ script-generated man "
-"page.  # Exercise (difficult): Fix this!"
+"#  The main deficiency of the script is that it permits\n"
+"#+ pasting only a single text line into the input fields.\n"
+"#  This may be a long, cobbled-together line, which groff\n"
+"#  will automatically wrap and hyphenate.\n"
+"#  However, if you want multiple (newline-separated) paragraphs,\n"
+"#+ these must be inserted by manual text editing on the\n"
+"#+ script-generated man page.\n"
+"#  Exercise (difficult): Fix this!\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/maned.sh:148
+#, no-wrap
 msgid ""
-"# This script is not nearly as elaborate as the #+ full-featured \"manedit\" "
-"package #+ http://freshmeat.net/projects/manedit/ #+ but it's much easier to "
-"use."
+"#  This script is not nearly as elaborate as the\n"
+"#+ full-featured \"manedit\" package\n"
+"#+ http://freshmeat.net/projects/manedit/\n"
+"#+ but it's much easier to use.\n"
 msgstr ""

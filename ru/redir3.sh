@@ -1,4 +1,5 @@
-#!/bin/bash # Same as previous example, but with "until" loop.
+#!/bin/bash
+# Same as previous example, but with "until" loop.
 
 if [ -z "$1" ]
 then

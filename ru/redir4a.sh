@@ -10,8 +10,7 @@ fi
 Savefile=$Filename.new         # Filename to save results in.
 FinalName=Jonah                # Name to terminate "read" on.
 
-line_count=`wc $Filename | awk '{ print $1 }'` # Number of lines in target
-file.
+line_count=`wc $Filename | awk '{ print $1 }'`  # Number of lines in target file.
 
 
 for name in `seq $line_count`

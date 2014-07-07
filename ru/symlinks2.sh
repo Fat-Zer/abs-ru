@@ -1,13 +1,15 @@
-#!/bin/bash # symlinks.sh: Lists symbolic links in a directory.
+#!/bin/bash
+# symlinks.sh: Lists symbolic links in a directory.
 
 OUTFILE=symlinks.list                         # save-file
 
-directory=${1-`pwd`} # Defaults to current working directory, #+ if not
-otherwise specified.
+directory=${1-`pwd`}
+#  Defaults to current working directory,
+#+ if not otherwise specified.
 
 
-echo "symbolic links in directory \"$directory\"" > "$OUTFILE" echo
-"---------------------------" >> "$OUTFILE"
+echo "symbolic links in directory \"$directory\"" > "$OUTFILE"
+echo "---------------------------" >> "$OUTFILE"
 
 for file in "$( find $directory -type l )"    # -type l = symbolic links
 do

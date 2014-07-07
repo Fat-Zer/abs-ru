@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sedappend.sh:10
+#, no-wrap
 msgid ""
-"#!/bin/bash # Prepends a string at a specified line #+ in files with names "
-"ending in \"sample\" #+ in the current working directory.  # "
-"000000000000000000000000000000000000 # This script overwrites files! # Be "
-"careful running it in a directory #+ where you have important files!!! # "
-"000000000000000000000000000000000000"
+"#!/bin/bash\n"
+"#  Prepends a string at a specified line\n"
+"#+ in files with names ending in \"sample\"\n"
+"#+ in the current working directory.\n"
+"#  000000000000000000000000000000000000\n"
+"#  This script overwrites files!\n"
+"#  Be careful running it in a directory\n"
+"#+ where you have important files!!!\n"
+"#  000000000000000000000000000000000000\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sedappend.sh:16
+#, no-wrap
 msgid ""
-"# Create a couple of files to operate on ...  # 01sample # 02sample # "
-"... etc.  # These files must not be empty, else the prepend will not work."
+"#  Create a couple of files to operate on ...\n"
+"#  01sample\n"
+"#  02sample\n"
+"#  ... etc.\n"
+"#  These files must not be empty, else the prepend will not work.\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,15 +73,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sedappend.sh:32
-msgid "echo \"Warning: files possibly clobbered!\""
+#, no-wrap
+msgid "echo \"Warning: files possibly clobbered!\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sedappend.sh:34
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sedappend.sh:37
-msgid "# Exercise: # Add error checking to this script.  # It needs it badly."
+#, no-wrap
+msgid ""
+"# Exercise:\n"
+"# Add error checking to this script.\n"
+"# It needs it badly.\n"
 msgstr ""

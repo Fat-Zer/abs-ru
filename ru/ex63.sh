@@ -4,11 +4,14 @@
 #               ---------
 
 
-# Does bash permit recursion? # Well, yes, but...  # It's so slow that you
-gotta have rocks in your head to try it.
+# Does bash permit recursion?
+# Well, yes, but...
+# It's so slow that you gotta have rocks in your head to try it.
 
 
-MAX_ARG=5 E_WRONG_ARGS=85 E_RANGE_ERR=86
+MAX_ARG=5
+E_WRONG_ARGS=85
+E_RANGE_ERR=86
 
 
 if [ -z "$1" ]
@@ -43,6 +46,7 @@ fact ()
   return $factorial
 }
 
-fact $1 echo "Factorial of $1 is $?."
+fact $1
+echo "Factorial of $1 is $?."
 
 exit 0

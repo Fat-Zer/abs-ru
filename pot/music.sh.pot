@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:3
-msgid "#!/bin/bash # music.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# music.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:5
-msgid "# Music without external files"
+#, no-wrap
+msgid "# Music without external files\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:8
-msgid "# Author: Antonio Macchi # Used in ABS Guide with permission."
+#, no-wrap
+msgid ""
+"# Author: Antonio Macchi\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:12
+#, no-wrap
 msgid ""
-"# /dev/dsp default = 8000 frames per second, 8 bits per frame (1 byte), #+ 1 "
-"channel (mono)"
+"#  /dev/dsp default = 8000 frames per second, 8 bits per frame (1 byte),\n"
+"#+ 1 channel (mono)\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,18 +70,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:35
+#, no-wrap
 msgid ""
-"e=`mknote 49` g=`mknote 41` a=`mknote 36` b=`mknote 32` c=`mknote 30` "
-"cis=`mknote 29` d=`mknote 27` e2=`mknote 24` n=`mknote 32767` # European "
-"notation."
+"e=`mknote 49`\n"
+"g=`mknote 41`\n"
+"a=`mknote 36`\n"
+"b=`mknote 32`\n"
+"c=`mknote 30`\n"
+"cis=`mknote 29`\n"
+"d=`mknote 27`\n"
+"e2=`mknote 24`\n"
+"n=`mknote 32767`\n"
+"# European notation.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/music.sh:39
+#, no-wrap
 msgid ""
-"echo -n \"$g$e2$d$c$d$c$a$g$n$g$e$n$g$e2$d$c$c$b$c$cis$n$cis$d \\ "
-"$n$g$e2$d$c$d$c$a$g$n$g$e$n$g$a$d$c$b$a$b$c\" > /dev/dsp # dsp = Digital "
-"Signal Processor"
+"echo -n \"$g$e2$d$c$d$c$a$g$n$g$e$n$g$e2$d$c$c$b$c$cis$n$cis$d \\\n"
+"$n$g$e2$d$c$d$c$a$g$n$g$e$n$g$a$d$c$b$a$b$c\" > /dev/dsp\n"
+"# dsp = Digital Signal Processor\n"
 msgstr ""
 
 #. type: Plain text

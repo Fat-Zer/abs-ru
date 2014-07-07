@@ -1,4 +1,5 @@
-#!/bin/bash # substring-extraction.sh
+#!/bin/bash
+# substring-extraction.sh
 
 String=23skidoo1
 #      012345678    Bash

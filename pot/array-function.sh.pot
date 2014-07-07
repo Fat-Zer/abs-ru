@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:17
-msgid "original_array=( element1 element2 element3 element4 element5 )"
+#, no-wrap
+msgid "original_array=( element1 element2 element3 element4 element5 )\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,62 +56,76 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:31
+#, no-wrap
 msgid ""
-"# This is the trick that permits passing an array to a function.  # "
-"********************************** argument=`echo ${original_array[@]}` # "
-"********************************** # Pack a variable #+ with all the "
-"space-separated elements of the original array.  # # Attempting to just pass "
-"the array itself will not work."
+"# This is the trick that permits passing an array to a function.\n"
+"# **********************************\n"
+"argument=`echo ${original_array[@]}`\n"
+"# **********************************\n"
+"#  Pack a variable\n"
+"#+ with all the space-separated elements of the original array.\n"
+"#\n"
+"# Attempting to just pass the array itself will not work.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:38
+#, no-wrap
 msgid ""
-"# This is the trick that allows grabbing an array as a \"return value\".  # "
-"***************************************** returned_array=( `Pass_Array "
-"\"$argument\"` )  # ***************************************** # Assign "
-"'echoed' output of function to array variable."
+"# This is the trick that allows grabbing an array as a \"return value\".\n"
+"# *****************************************\n"
+"returned_array=( `Pass_Array \"$argument\"` )\n"
+"# *****************************************\n"
+"# Assign 'echoed' output of function to array variable.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:40
-msgid "echo \"returned_array = ${returned_array[@]}\""
+#, no-wrap
+msgid "echo \"returned_array = ${returned_array[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:42
-msgid "echo \"=============================================================\""
+#, no-wrap
+msgid "echo \"=============================================================\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:46
+#, no-wrap
 msgid ""
-"# Now, try it again, #+ attempting to access (list) the array from outside "
-"the function.  Pass_Array \"$argument\""
+"#  Now, try it again,\n"
+"#+ attempting to access (list) the array from outside the function.\n"
+"Pass_Array \"$argument\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:51
+#, no-wrap
 msgid ""
-"# The function itself lists the array, but ...  #+ accessing the array from "
-"outside the function is forbidden.  echo \"Passed array (within function) = "
-"${passed_array[@]}\" # NULL VALUE since the array is a variable local to the "
-"function."
+"# The function itself lists the array, but ...\n"
+"#+ accessing the array from outside the function is forbidden.\n"
+"echo \"Passed array (within function) = ${passed_array[@]}\"\n"
+"# NULL VALUE since the array is a variable local to the function.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:53 abs-guide/array-function.sh:74
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:55
-msgid "############################################"
+#, no-wrap
+msgid "############################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:57
-msgid "# And here is an even more explicit example:"
+#, no-wrap
+msgid "# And here is an even more explicit example:\n"
 msgstr ""
 
 #. type: Plain text
@@ -145,12 +160,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:76
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-function.sh:78
+#, no-wrap
 msgid ""
-"# Nathan Coulter points out that passing arrays with elements containing #+ "
-"whitespace breaks this example."
+"#  Nathan Coulter points out that passing arrays with elements containing\n"
+"#+ whitespace breaks this example.\n"
 msgstr ""

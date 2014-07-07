@@ -1,7 +1,8 @@
-#!/bin/bash # pb.sh: phone book
+#!/bin/bash
+# pb.sh: phone book
 
-# Written by Rick Boivie, and used with permission.  # Modifications by ABS
-Guide author.
+# Written by Rick Boivie, and used with permission.
+# Modifications by ABS Guide author.
 
 MINARGS=1     #  Script needs at least one argument.
 DATAFILE=./phonebook
@@ -45,5 +46,5 @@ Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678
 $bash pb.sh Roe Sam
 Sam Roe         956 E. 8th St., New York, NY 10009          (212) 444-5678
 
-# When more than one argument is passed to this script, #+ it prints *only*
-the line(s) containing all the arguments.
+#  When more than one argument is passed to this script,
+#+ it prints *only* the line(s) containing all the arguments.

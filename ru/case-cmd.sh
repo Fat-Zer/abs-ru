@@ -1,5 +1,5 @@
-#!/bin/bash # case-cmd.sh: Using command substitution to generate a "case"
-variable.
+#!/bin/bash
+# case-cmd.sh: Using command substitution to generate a "case" variable.
 
 case $( arch ) in   # $( arch ) returns machine architecture.
                     # Equivalent to 'uname -m' ...

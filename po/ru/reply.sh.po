@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,58 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:3
-msgid "#!/bin/bash # reply.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# reply.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:5
-msgid "# REPLY is the default value for a 'read' command."
+#, no-wrap
+msgid "# REPLY is the default value for a 'read' command.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:9
-msgid "echo echo -n \"What is your favorite vegetable? \" read"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo -n \"What is your favorite vegetable? \"\n"
+"read\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:13
+#, no-wrap
 msgid ""
-"echo \"Your favorite vegetable is $REPLY.\" # REPLY holds the value of last "
-"\"read\" if and only if #+ no variable supplied."
+"echo \"Your favorite vegetable is $REPLY.\"\n"
+"#  REPLY holds the value of last \"read\" if and only if\n"
+"#+ no variable supplied.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:22
+#, no-wrap
 msgid ""
-"echo echo -n \"What is your favorite fruit? \" read fruit echo \"Your "
-"favorite fruit is $fruit.\" echo \"but...\" echo \"Value of \\$REPLY is "
-"still $REPLY.\" # $REPLY is still set to its previous value because #+ the "
-"variable $fruit absorbed the new \"read\" value."
+"echo\n"
+"echo -n \"What is your favorite fruit? \"\n"
+"read fruit\n"
+"echo \"Your favorite fruit is $fruit.\"\n"
+"echo \"but...\"\n"
+"echo \"Value of \\$REPLY is still $REPLY.\"\n"
+"#  $REPLY is still set to its previous value because\n"
+"#+ the variable $fruit absorbed the new \"read\" value.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:24
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/reply.sh:25
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

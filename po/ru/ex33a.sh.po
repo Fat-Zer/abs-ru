@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33a.sh:3
-msgid "#!/bin/bash # Using getopt"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Using getopt\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,7 +44,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33a.sh:18
-msgid "E_OPTERR=65"
+#, no-wrap
+msgid "E_OPTERR=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,9 +61,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33a.sh:28
+#, no-wrap
 msgid ""
-"set -- `getopt \"abcd:\" \"$@\"` # Sets positional parameters to "
-"command-line arguments.  # What happens if you use \"$*\" instead of \"$@\"?"
+"set -- `getopt \"abcd:\" \"$@\"`\n"
+"# Sets positional parameters to command-line arguments.\n"
+"# What happens if you use \"$*\" instead of \"$@\"?\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,12 +93,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33a.sh:44
+#, no-wrap
 msgid ""
-"# It is usually better to use the 'getopts' builtin in a script.  # See "
-"\"ex33.sh.\""
+"#  It is usually better to use the 'getopts' builtin in a script.\n"
+"#  See \"ex33.sh.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex33a.sh:45
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

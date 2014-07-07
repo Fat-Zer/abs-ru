@@ -1,11 +1,14 @@
-#!/bin/bash # realname.sh # # From username, gets "real name" from
-/etc/passwd.
+#!/bin/bash
+# realname.sh
+#
+# From username, gets "real name" from /etc/passwd.
 
 
 ARGCOUNT=1       # Expect one arg.
 E_WRONGARGS=85
 
-file=/etc/passwd pattern=$1
+file=/etc/passwd
+pattern=$1
 
 if [ $# -ne "$ARGCOUNT" ]
 then

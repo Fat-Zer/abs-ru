@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,24 +46,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/am-i-root.sh:14
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/am-i-root.sh:18
+#, no-wrap
 msgid ""
-"# ============================================================= # # Code "
-"below will not execute, because the script already exited."
+"# ============================================================= #\n"
+"# Code below will not execute, because the script already exited.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/am-i-root.sh:20
-msgid "# An alternate method of getting to the root of matters:"
+#, no-wrap
+msgid "# An alternate method of getting to the root of matters:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/am-i-root.sh:22
-msgid "ROOTUSER_NAME=root"
+#, no-wrap
+msgid "ROOTUSER_NAME=root\n"
 msgstr ""
 
 #. type: Plain text

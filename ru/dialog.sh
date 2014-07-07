@@ -1,8 +1,9 @@
-#!/bin/bash # dialog.sh: Using 'gdialog' widgets.
+#!/bin/bash
+# dialog.sh: Using 'gdialog' widgets.
 
-# Must have 'gdialog' installed on your system to run this script.  # Or,
-you can replace all instance of 'gdialog' below with 'kdialog' ...  #
-Version 1.1 (corrected 04/05/05)
+# Must have 'gdialog' installed on your system to run this script.
+# Or, you can replace all instance of 'gdialog' below with 'kdialog' ...
+# Version 1.1 (corrected 04/05/05)
 
 # This script was inspired by the following article.
 #     "Scripting for X Productivity," by Marco Fioretti,
@@ -10,19 +11,24 @@ Version 1.1 (corrected 04/05/05)
 # Thank you, all you good people at LJ.
 
 
-# Input error in dialog box.  E_INPUT=85 # Dimensions of display, input
-widgets.  HEIGHT=50 WIDTH=60
+# Input error in dialog box.
+E_INPUT=85
+# Dimensions of display, input widgets.
+HEIGHT=50
+WIDTH=60
 
-# Output file name (constructed out of script name).  OUTFILE=$0.output
+# Output file name (constructed out of script name).
+OUTFILE=$0.output
 
-# Display this script in a text widget.  gdialog --title "Displaying: $0"
---textbox $0 $HEIGHT $WIDTH
+# Display this script in a text widget.
+gdialog --title "Displaying: $0" --textbox $0 $HEIGHT $WIDTH
 
 
 
-# Now, we'll try saving input in a file.  echo -n "VARIABLE=" > $OUTFILE
-gdialog --title "User Input" --inputbox "Enter variable, please:" \ $HEIGHT
-$WIDTH 2>> $OUTFILE
+# Now, we'll try saving input in a file.
+echo -n "VARIABLE=" > $OUTFILE
+gdialog --title "User Input" --inputbox "Enter variable, please:" \
+$HEIGHT $WIDTH 2>> $OUTFILE
 
 
 if [ "$?" -eq 0 ]

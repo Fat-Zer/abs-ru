@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/de-rpm.sh:3
-msgid "#!/bin/bash # de-rpm.sh: Unpack an 'rpm' archive"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# de-rpm.sh: Unpack an 'rpm' archive\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/de-rpm.sh:6
+#, no-wrap
 msgid ""
-": ${1?\"Usage: `basename $0` target-file\"} # Must specify 'rpm' archive "
-"name as an argument."
+": ${1?\"Usage: `basename $0` target-file\"}\n"
+"# Must specify 'rpm' archive name as an argument.\n"
 msgstr ""
 
 #. type: Plain text
@@ -48,7 +52,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/de-rpm.sh:17
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

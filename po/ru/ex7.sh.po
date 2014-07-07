@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:5
-msgid "var1=abcd-1234-defg echo \"var1 = $var1\""
+#, no-wrap
+msgid ""
+"var1=abcd-1234-defg\n"
+"echo \"var1 = $var1\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:12
+#, no-wrap
 msgid ""
-"t=${var1#*-*} echo \"var1 (with everything, up to and including first - "
-"stripped out) = $t\" # t=${var1#*-} works just the same, #+ since # matches "
-"the shortest string, #+ and * matches everything preceding, including an "
-"empty string.  # (Thanks, Stephane Chazelas, for pointing this out.)"
+"t=${var1#*-*}\n"
+"echo \"var1 (with everything, up to and including first - stripped out) = "
+"$t\"\n"
+"#  t=${var1#*-}  works just the same,\n"
+"#+ since # matches the shortest string,\n"
+"#+ and * matches everything preceding, including an empty string.\n"
+"# (Thanks, Stephane Chazelas, for pointing this out.)\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,14 +53,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:19
+#, no-wrap
 msgid ""
-"t=${var1%*-*} echo \"var1 (with everything from the last - on stripped out) "
-"= $t\""
+"t=${var1%*-*}\n"
+"echo \"var1 (with everything from the last - on stripped out) = $t\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:21 abs-guide/ex7.sh:44 abs-guide/ex7.sh:51
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,23 +100,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:49
+#, no-wrap
 msgid ""
-"t=${path_name:11} echo \"$path_name, with first 11 chars stripped off = $t\" "
-"t=${path_name:11:5} echo \"$path_name, with first 11 chars stripped off, "
-"length 5 = $t\""
+"t=${path_name:11}\n"
+"echo \"$path_name, with first 11 chars stripped off = $t\"\n"
+"t=${path_name:11:5}\n"
+"echo \"$path_name, with first 11 chars stripped off, length 5 = $t\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:60
+#, no-wrap
 msgid ""
-"t=${path_name/bozo/clown} echo \"$path_name with \\\"bozo\\\" replaced by "
-"\\\"clown\\\" = $t\" t=${path_name/today/} echo \"$path_name with "
-"\\\"today\\\" deleted = $t\" t=${path_name//o/O} echo \"$path_name with all "
-"o's capitalized = $t\" t=${path_name//o/} echo \"$path_name with all o's "
-"deleted = $t\""
+"t=${path_name/bozo/clown}\n"
+"echo \"$path_name with \\\"bozo\\\" replaced  by \\\"clown\\\" = $t\"\n"
+"t=${path_name/today/}\n"
+"echo \"$path_name with \\\"today\\\" deleted = $t\"\n"
+"t=${path_name//o/O}\n"
+"echo \"$path_name with all o's capitalized = $t\"\n"
+"t=${path_name//o/}\n"
+"echo \"$path_name with all o's deleted = $t\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex7.sh:61
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dev-tcp.sh:3
-msgid "#!/bin/bash # dev-tcp.sh: /dev/tcp redirection to check Internet connection."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# dev-tcp.sh: /dev/tcp redirection to check Internet connection.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dev-tcp.sh:6
-msgid "# Script by Troy Engel.  # Used with permission."
+#, no-wrap
+msgid ""
+"# Script by Troy Engel.\n"
+"# Used with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -36,18 +42,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dev-tcp.sh:13
+#, no-wrap
 msgid ""
-"# Try to connect. (Somewhat similar to a 'ping' . . .)  echo \"HEAD / "
-"HTTP/1.0\" >/dev/tcp/${TCP_HOST}/${TCP_PORT} MYEXIT=$?"
+"# Try to connect. (Somewhat similar to a 'ping' . . .) \n"
+"echo \"HEAD / HTTP/1.0\" >/dev/tcp/${TCP_HOST}/${TCP_PORT}\n"
+"MYEXIT=$?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dev-tcp.sh:19
+#, no-wrap
 msgid ""
-": &lt;&lt;EXPLANATION If bash was compiled with --enable-net-redirections, "
-"it has the capability of using a special character device for both TCP and "
-"UDP redirections. These redirections are used identically as "
-"STDIN/STDOUT/STDERR. The device entries are 30,36 for /dev/tcp:"
+": &lt;&lt;EXPLANATION\n"
+"If bash was compiled with --enable-net-redirections, it has the capability "
+"of\n"
+"using a special character device for both TCP and UDP redirections. These\n"
+"redirections are used identically as STDIN/STDOUT/STDERR. The device "
+"entries\n"
+"are 30,36 for /dev/tcp:\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,5 +94,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dev-tcp.sh:36
-msgid "exit $MYEXIT"
+#, no-wrap
+msgid "exit $MYEXIT\n"
 msgstr ""

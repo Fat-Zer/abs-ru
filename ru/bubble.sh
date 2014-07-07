@@ -1,13 +1,15 @@
-#!/bin/bash # bubble.sh: Bubble sort, of sorts.
+#!/bin/bash
+# bubble.sh: Bubble sort, of sorts.
 
 # Recall the algorithm for a bubble sort. In this particular version...
 
-# With each successive pass through the array to be sorted, #+ compare two
-adjacent elements, and swap them if out of order.  # At the end of the first
-pass, the "heaviest" element has sunk to bottom.  # At the end of the second
-pass, the next "heaviest" one has sunk next to bottom.  # And so forth.  #
-This means that each successive pass needs to traverse less of the array.  #
-You will therefore notice a speeding up in the printing of the later passes.
+#  With each successive pass through the array to be sorted,
+#+ compare two adjacent elements, and swap them if out of order.
+#  At the end of the first pass, the "heaviest" element has sunk to bottom.
+#  At the end of the second pass, the next "heaviest" one has sunk next to bottom.
+#  And so forth.
+#  This means that each successive pass needs to traverse less of the array.
+#  You will therefore notice a speeding up in the printing of the later passes.
 
 
 exchange()
@@ -24,23 +26,25 @@ exchange()
 declare -a Countries  #  Declare array,
                       #+ optional here since it's initialized below.
 
-# Is it permissable to split an array variable over multiple lines #+ using
-an escape (\)? # Yes.
+#  Is it permissable to split an array variable over multiple lines
+#+ using an escape (\)?
+#  Yes.
 
-Countries=(Netherlands Ukraine Zaire Turkey Russia Yemen Syria \ Brazil
-Argentina Nicaragua Japan Mexico Venezuela Greece England \ Israel Peru
-Canada Oman Denmark Wales France Kenya \ Xanadu Qatar Liechtenstein Hungary)
+Countries=(Netherlands Ukraine Zaire Turkey Russia Yemen Syria \
+Brazil Argentina Nicaragua Japan Mexico Venezuela Greece England \
+Israel Peru Canada Oman Denmark Wales France Kenya \
+Xanadu Qatar Liechtenstein Hungary)
 
-# "Xanadu" is the mythical place where, according to Coleridge, #+ Kubla
-Khan did a pleasure dome decree.
+# "Xanadu" is the mythical place where, according to Coleridge,
+#+ Kubla Khan did a pleasure dome decree.
 
 
 clear                      # Clear the screen to start with. 
 
-echo "0: ${Countries[*]}" # List entire array at pass 0.
+echo "0: ${Countries[*]}"  # List entire array at pass 0.
 
-number_of_elements=${#Countries[@]} let "comparisons = $number_of_elements -
-1"
+number_of_elements=${#Countries[@]}
+let "comparisons = $number_of_elements - 1"
 
 count=1 # Pass number.
 

@@ -1,4 +1,5 @@
-#!/bin/bash # Functions and parameters
+#!/bin/bash
+# Functions and parameters
 
 DEFAULT=default                             # Default param value.
 

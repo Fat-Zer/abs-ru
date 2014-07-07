@@ -1,10 +1,14 @@
-#!/bin/bash # seeding-random.sh: Seeding the RANDOM variable.  # v 1.1,
-reldate 09 Feb 2013
+#!/bin/bash
+# seeding-random.sh: Seeding the RANDOM variable.
+# v 1.1, reldate 09 Feb 2013
 
 MAXCOUNT=25       # How many numbers to generate.
 SEED=
 
-random_numbers ()  { local count=0 local number
+random_numbers ()
+{
+local count=0
+local number
 
 while [ "$count" -lt "$MAXCOUNT" ]
 do
@@ -38,15 +42,19 @@ random_numbers    # . . . gives a different number series.
 
 echo; echo
 
-# RANDOM=$$ seeds RANDOM from process id of script.  # It is also possible
-to seed RANDOM from 'time' or 'date' commands.
+# RANDOM=$$  seeds RANDOM from process id of script.
+# It is also possible to seed RANDOM from 'time' or 'date' commands.
 
-# Getting fancy...  SEED=$(head -1 /dev/urandom | od -N 1 | awk '{ print $2
-}'| sed s/^0*//)  # Pseudo-random output fetched #+ from /dev/urandom
-(system pseudo-random device-file), #+ then converted to line of printable
-(octal) numbers by "od", #+ then "awk" retrieves just one number for SEED,
-#+ finally "sed" removes any leading zeros.  RANDOM=$SEED echo "Random seed
-= $SEED" random_numbers
+# Getting fancy...
+SEED=$(head -1 /dev/urandom | od -N 1 | awk '{ print $2 }'| sed s/^0*//)
+#  Pseudo-random output fetched
+#+ from /dev/urandom (system pseudo-random device-file),
+#+ then converted to line of printable (octal) numbers by "od",
+#+ then "awk" retrieves just one number for SEED,
+#+ finally "sed" removes any leading zeros.
+RANDOM=$SEED
+echo "Random seed = $SEED"
+random_numbers
 
 echo; echo
 

@@ -1,6 +1,9 @@
-#!/bin/bash # file-comparison.sh
+#!/bin/bash
+# file-comparison.sh
 
-ARGS=2 # Two args to script expected.  E_BADARGS=85 E_UNREADABLE=86
+ARGS=2  # Two args to script expected.
+E_BADARGS=85
+E_UNREADABLE=86
 
 if [ $# -ne "$ARGS" ]
 then

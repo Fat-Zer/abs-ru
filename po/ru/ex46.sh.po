@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex46.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex46.sh:4
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,9 +82,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex46.sh:30
+#, no-wrap
 msgid ""
-"# Does \"let\" permit C-style operators? # Yes, just as the (( ... )) "
-"double-parentheses construct does."
+"# Does \"let\" permit C-style operators?\n"
+"# Yes, just as the (( ... )) double-parentheses construct does.\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,7 +102,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex46.sh:40
-msgid "# Trinary operator."
+#, no-wrap
+msgid "# Trinary operator.\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,5 +126,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex46.sh:49
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

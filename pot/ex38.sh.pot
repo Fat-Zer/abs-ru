@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # Note that this example must be invoked with bash, i.e., bash "
-"ex38.sh #+ not sh ex38.sh !"
+"#!/bin/bash\n"
+"#  Note that this example must be invoked with bash, i.e., bash ex38.sh\n"
+"#+ not  sh ex38.sh !\n"
 msgstr ""
 
 #. type: Plain text
@@ -33,21 +35,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:10
+#, no-wrap
 msgid ""
-"# The file \"data-file\" must be present in current working directory, #+ "
-"since it is referred to by its basename."
+"#  The file \"data-file\" must be present in current working directory,\n"
+"#+ since it is referred to by its basename.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:12
-msgid "# Now, let's reference some data from that file."
+#, no-wrap
+msgid "# Now, let's reference some data from that file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:15
+#, no-wrap
 msgid ""
-"echo \"variable1 (from data-file) = $variable1\" echo \"variable3 (from "
-"data-file) = $variable3\""
+"echo \"variable1 (from data-file) = $variable1\"\n"
+"echo \"variable3 (from data-file) = $variable3\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,10 +68,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:23
-msgid "print_message This is the message-print function in the data-file."
+#, no-wrap
+msgid "print_message This is the message-print function in the data-file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex38.sh:25
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

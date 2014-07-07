@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi.bash:14
+#, no-wrap
 msgid ""
-"#! /bin/bash # # The Towers Of Hanoi # Bash script # Copyright (C) 2000 Amit "
-"Singh. All Rights Reserved.  # http://hanoi.kernelthread.com # # Tested "
-"under Bash version 2.05b.0(13)-release.  # Also works under Bash version "
-"3.x.  # # Used in \"Advanced Bash Scripting Guide\" #+ with permission of "
-"script author.  # Slightly modified and commented by ABS author."
+"#! /bin/bash\n"
+"#\n"
+"# The Towers Of Hanoi\n"
+"# Bash script\n"
+"# Copyright (C) 2000 Amit Singh. All Rights Reserved.\n"
+"# http://hanoi.kernelthread.com\n"
+"#\n"
+"# Tested under Bash version 2.05b.0(13)-release.\n"
+"# Also works under Bash version 3.x.\n"
+"#\n"
+"#  Used in \"Advanced Bash Scripting Guide\"\n"
+"#+ with permission of script author.\n"
+"#  Slightly modified and commented by ABS author.\n"
 msgstr ""
 
 #. type: Plain text

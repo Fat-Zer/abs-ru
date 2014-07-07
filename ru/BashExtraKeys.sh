@@ -1,5 +1,7 @@
-#!/bin/bash # Author: Sigurd Solaas, 20 Apr 2011 # Used in ABS Guide with
-permission.  # Requires version 4.2+ of Bash.
+#!/bin/bash
+# Author: Sigurd Solaas, 20 Apr 2011
+# Used in ABS Guide with permission.
+# Requires version 4.2+ of Bash.
 
 key="no value yet"
 while true; do

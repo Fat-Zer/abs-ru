@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rfe.sh:12
-msgid "E_BADARGS=65"
+#, no-wrap
+msgid "E_BADARGS=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,5 +63,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rfe.sh:29
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -1,4 +1,5 @@
-#!/bin/bash # Requires Bash version -ge 4.1 ...
+#!/bin/bash
+# Requires Bash version -ge 4.1 ...
 
 num_chars=61
 
@@ -8,6 +9,7 @@ exit
 
 ####### Output of Script #######
 
-#!/bin/bash # Requires Bash version -ge 4.1 ...
+#!/bin/bash
+# Requires Bash version -ge 4.1 ...
 
 num_chars=61

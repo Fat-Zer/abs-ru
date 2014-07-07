@@ -1,4 +1,5 @@
-#!/bin/bash # timed-input.sh
+#!/bin/bash
+# timed-input.sh
 
 # TMOUT=3    Also works, as of newer versions of Bash.
 
@@ -18,7 +19,7 @@ PrintAnswer()
              #  $! is PID of last job running in background.
   fi
 
-}
+}  
 
 
 TimerOn()
@@ -35,19 +36,23 @@ Int14Vector()
   exit $TIMER_INTERRUPT
 }  
 
-trap Int14Vector $TIMER_INTERRUPT # Timer interrupt (14) subverted for our
-purposes.
+trap Int14Vector $TIMER_INTERRUPT
+# Timer interrupt (14) subverted for our purposes.
 
-echo "What is your favorite vegetable " TimerOn read answer PrintAnswer
+echo "What is your favorite vegetable "
+TimerOn
+read answer
+PrintAnswer
 
 
-# Admittedly, this is a kludgy implementation of timed input.  # However,
-the "-t" option to "read" simplifies this task.  # See the "t-out.sh"
-script.  # However, what about timing not just single user input, #+ but an
-entire script?
+#  Admittedly, this is a kludgy implementation of timed input.
+#  However, the "-t" option to "read" simplifies this task.
+#  See the "t-out.sh" script.
+#  However, what about timing not just single user input,
+#+ but an entire script?
 
-# If you need something really elegant ...  #+ consider writing the
-application in C or C++, #+ using appropriate library functions, such as
-'alarm' and 'setitimer.'
+#  If you need something really elegant ...
+#+ consider writing the application in C or C++,
+#+ using appropriate library functions, such as 'alarm' and 'setitimer.'
 
 exit 0

@@ -1,29 +1,46 @@
-#!/bin/bash # ==> usb.sh # ==> Script for mounting and installing
-pen/keychain USB storage devices.  # ==> Runs as root at system startup (see
-below).  # ==> # ==> Newer Linux distros (2004 or later) autodetect # ==>
-and install USB pen drives, and therefore don't need this script.  # ==>
-But, it's still instructive.
+#!/bin/bash
+# ==> usb.sh
+# ==> Script for mounting and installing pen/keychain USB storage devices.
+# ==> Runs as root at system startup (see below).
+# ==>
+# ==> Newer Linux distros (2004 or later) autodetect
+# ==> and install USB pen drives, and therefore don't need this script.
+# ==> But, it's still instructive.
  
-# This code is free software covered by GNU GPL license version 2 or above.
-# Please refer to http://www.gnu.org/ for the full license text.  # # Some
-code lifted from usb-mount by Michael Hamilton's usb-mount (LGPL)  #+ see
-http://users.actrix.co.nz/michael/usbmount.html # # INSTALL # ------- # Put
-this in /etc/hotplug/usb/diskonkey.  # Then look in
-/etc/hotplug/usb.distmap, and copy all usb-storage entries #+ into
-/etc/hotplug/usb.usermap, substituting "usb-storage" for "diskonkey".  #
-Otherwise this code is only run during the kernel module invocation/removal
-#+ (at least in my tests), which defeats the purpose.  # # TODO # ---- #
-Handle more than one diskonkey device at one time (e.g. /dev/diskonkey1 #+
-and /mnt/diskonkey1), etc. The biggest problem here is the handling in #+
-devlabel, which I haven't yet tried.  # # AUTHOR and SUPPORT #
------------------- # Konstantin Riabitsev, &lt;icon linux duke edu&gt;.  #
-Send any problem reports to my email address at the moment.  # # ==>
-Comments added by ABS Guide author.
+#  This code is free software covered by GNU GPL license version 2 or above.
+#  Please refer to http://www.gnu.org/ for the full license text.
+#
+#  Some code lifted from usb-mount by Michael Hamilton's usb-mount (LGPL)
+#+ see http://users.actrix.co.nz/michael/usbmount.html
+#
+#  INSTALL
+#  -------
+#  Put this in /etc/hotplug/usb/diskonkey.
+#  Then look in /etc/hotplug/usb.distmap, and copy all usb-storage entries
+#+ into /etc/hotplug/usb.usermap, substituting "usb-storage" for "diskonkey".
+#  Otherwise this code is only run during the kernel module invocation/removal
+#+ (at least in my tests), which defeats the purpose.
+#
+#  TODO
+#  ----
+#  Handle more than one diskonkey device at one time (e.g. /dev/diskonkey1
+#+ and /mnt/diskonkey1), etc. The biggest problem here is the handling in
+#+ devlabel, which I haven't yet tried.
+#
+#  AUTHOR and SUPPORT
+#  ------------------
+#  Konstantin Riabitsev, &lt;icon linux duke edu&gt;.
+#  Send any problem reports to my email address at the moment.
+#
+# ==> Comments added by ABS Guide author.
 
 
 
-SYMLINKDEV=/dev/diskonkey MOUNTPOINT=/mnt/diskonkey DEVLABEL=/sbin/devlabel
-DEVLABELCONFIG=/etc/sysconfig/devlabel IAM=$0
+SYMLINKDEV=/dev/diskonkey
+MOUNTPOINT=/mnt/diskonkey
+DEVLABEL=/sbin/devlabel
+DEVLABELCONFIG=/etc/sysconfig/devlabel
+IAM=$0
 
 ##
 # Functions lifted near-verbatim from usb-mount code.

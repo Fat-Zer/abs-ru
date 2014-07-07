@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:6
+#, no-wrap
 msgid ""
-"# Erratic behavior of the \"$*\" and \"$@\" internal Bash variables, #+ "
-"depending on whether or not they are quoted.  # Demonstrates inconsistent "
-"handling of word splitting and linefeeds."
+"#  Erratic behavior of the \"$*\" and \"$@\" internal Bash variables,\n"
+"#+ depending on whether or not they are quoted.\n"
+"#  Demonstrates inconsistent handling of word splitting and linefeeds.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:10
+#, no-wrap
 msgid ""
-"set -- \"First one\" \"second\" \"third:one\" \"\" \"Fifth: :one\" # Setting "
-"the script arguments, $1, $2, $3, etc."
+"set -- \"First one\" \"second\" \"third:one\" \"\" \"Fifth: :one\"\n"
+"# Setting the script arguments, $1, $2, $3, etc.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:12 abs-guide/incompat.sh:131
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -69,115 +73,192 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:34
+#, no-wrap
 msgid ""
-"echo 'IFS unchanged, using \"$@\"' c=0 for i in \"$@\" do echo \"$((c+=1)): "
-"[$i]\" done echo ---"
+"echo 'IFS unchanged, using \"$@\"'\n"
+"c=0\n"
+"for i in \"$@\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:41
+#, no-wrap
 msgid ""
-"echo 'IFS unchanged, using $@' c=0 for i in $@ do echo \"$((c+=1)): [$i]\" "
-"done echo ---"
+"echo 'IFS unchanged, using $@'\n"
+"c=0\n"
+"for i in $@\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:49
+#, no-wrap
 msgid ""
-"IFS=: echo 'IFS=\":\", using \"$*\"' c=0 for i in \"$*\" do echo "
-"\"$((c+=1)): [$i]\" done echo ---"
+"IFS=:\n"
+"echo 'IFS=\":\", using \"$*\"'\n"
+"c=0\n"
+"for i in \"$*\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:56
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using $*' c=0 for i in $* do echo \"$((c+=1)): [$i]\" done "
-"echo ---"
+"echo 'IFS=\":\", using $*'\n"
+"c=0\n"
+"for i in $*\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:64
+#, no-wrap
 msgid ""
-"var=$* echo 'IFS=\":\", using \"$var\" (var=$*)' c=0 for i in \"$var\" do "
-"echo \"$((c+=1)): [$i]\" done echo ---"
+"var=$*\n"
+"echo 'IFS=\":\", using \"$var\" (var=$*)'\n"
+"c=0\n"
+"for i in \"$var\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:71
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using $var (var=$*)' c=0 for i in $var do echo \"$((c+=1)): "
-"[$i]\" done echo ---"
+"echo 'IFS=\":\", using $var (var=$*)'\n"
+"c=0\n"
+"for i in $var\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:79
+#, no-wrap
 msgid ""
-"var=\"$*\" echo 'IFS=\":\", using $var (var=\"$*\")' c=0 for i in $var do "
-"echo \"$((c+=1)): [$i]\" done echo ---"
+"var=\"$*\"\n"
+"echo 'IFS=\":\", using $var (var=\"$*\")'\n"
+"c=0\n"
+"for i in $var\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:86
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using \"$var\" (var=\"$*\")' c=0 for i in \"$var\" do echo "
-"\"$((c+=1)): [$i]\" done echo ---"
+"echo 'IFS=\":\", using \"$var\" (var=\"$*\")'\n"
+"c=0\n"
+"for i in \"$var\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:93
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using \"$@\"' c=0 for i in \"$@\" do echo \"$((c+=1)): "
-"[$i]\" done echo ---"
+"echo 'IFS=\":\", using \"$@\"'\n"
+"c=0\n"
+"for i in \"$@\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:100
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using $@' c=0 for i in $@ do echo \"$((c+=1)): [$i]\" done "
-"echo ---"
+"echo 'IFS=\":\", using $@'\n"
+"c=0\n"
+"for i in $@\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:108
+#, no-wrap
 msgid ""
-"var=$@ echo 'IFS=\":\", using $var (var=$@)' c=0 for i in $var do echo "
-"\"$((c+=1)): [$i]\" done echo ---"
+"var=$@\n"
+"echo 'IFS=\":\", using $var (var=$@)'\n"
+"c=0\n"
+"for i in $var\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:115
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using \"$var\" (var=$@)' c=0 for i in \"$var\" do echo "
-"\"$((c+=1)): [$i]\" done echo ---"
+"echo 'IFS=\":\", using \"$var\" (var=$@)'\n"
+"c=0\n"
+"for i in \"$var\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:123
+#, no-wrap
 msgid ""
-"var=\"$@\" echo 'IFS=\":\", using \"$var\" (var=\"$@\")' c=0 for i in "
-"\"$var\" do echo \"$((c+=1)): [$i]\" done echo ---"
+"var=\"$@\"\n"
+"echo 'IFS=\":\", using \"$var\" (var=\"$@\")'\n"
+"c=0\n"
+"for i in \"$var\"\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
+"echo ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:129
+#, no-wrap
 msgid ""
-"echo 'IFS=\":\", using $var (var=\"$@\")' c=0 for i in $var do echo "
-"\"$((c+=1)): [$i]\" done"
+"echo 'IFS=\":\", using $var (var=\"$@\")'\n"
+"c=0\n"
+"for i in $var\n"
+"do echo \"$((c+=1)): [$i]\"\n"
+"done\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:133
-msgid "# Try this script with ksh or zsh -y."
+#, no-wrap
+msgid "# Try this script with ksh or zsh -y.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:135
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/incompat.sh:137
+#, no-wrap
 msgid ""
-"# This example script written by Stephane Chazelas, #+ and slightly modified "
-"by the document author."
+"#  This example script written by Stephane Chazelas,\n"
+"#+ and slightly modified by the document author.\n"
 msgstr ""

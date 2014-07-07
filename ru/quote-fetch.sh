@@ -1,4 +1,5 @@
-#!/bin/bash # quote-fetch.sh: Download a stock quote.
+#!/bin/bash
+# quote-fetch.sh: Download a stock quote.
 
 
 E_NOPARAMS=86
@@ -10,21 +11,22 @@ fi
 
 stock_symbol=$1
 
-file_suffix=.html # Fetches an HTML file, so name it appropriately.
-URL='http://finance.yahoo.com/q?s=' # Yahoo finance board, with stock query
-suffix.
+file_suffix=.html
+# Fetches an HTML file, so name it appropriately.
+URL='http://finance.yahoo.com/q?s='
+# Yahoo finance board, with stock query suffix.
 
-# ----------------------------------------------------------- wget -O
-${stock_symbol}${file_suffix} "${URL}${stock_symbol}" #
------------------------------------------------------------
+# -----------------------------------------------------------
+wget -O ${stock_symbol}${file_suffix} "${URL}${stock_symbol}"
+# -----------------------------------------------------------
 
 
-# To look up stuff on http://search.yahoo.com: #
------------------------------------------------------------ #
-URL="http://search.yahoo.com/search?fr=ush-news&amp;p=${query}" # wget -O
-"$savefilename" "${URL}" #
------------------------------------------------------------ # Saves a list
-of relevant URLs.
+# To look up stuff on http://search.yahoo.com:
+# -----------------------------------------------------------
+# URL="http://search.yahoo.com/search?fr=ush-news&amp;p=${query}"
+# wget -O "$savefilename" "${URL}"
+# -----------------------------------------------------------
+# Saves a list of relevant URLs.
 
 exit $?
 

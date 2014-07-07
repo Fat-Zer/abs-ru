@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:3
-msgid "#!/bin/bash # dialog.sh: Using 'gdialog' widgets."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# dialog.sh: Using 'gdialog' widgets.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:7
+#, no-wrap
 msgid ""
-"# Must have 'gdialog' installed on your system to run this script.  # Or, "
-"you can replace all instance of 'gdialog' below with 'kdialog' ...  # "
-"Version 1.1 (corrected 04/05/05)"
+"# Must have 'gdialog' installed on your system to run this script.\n"
+"# Or, you can replace all instance of 'gdialog' below with 'kdialog' ...\n"
+"# Version 1.1 (corrected 04/05/05)\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,29 +45,39 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:19
+#, no-wrap
 msgid ""
-"# Input error in dialog box.  E_INPUT=85 # Dimensions of display, input "
-"widgets.  HEIGHT=50 WIDTH=60"
+"# Input error in dialog box.\n"
+"E_INPUT=85\n"
+"# Dimensions of display, input widgets.\n"
+"HEIGHT=50\n"
+"WIDTH=60\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:22
-msgid "# Output file name (constructed out of script name).  OUTFILE=$0.output"
+#, no-wrap
+msgid ""
+"# Output file name (constructed out of script name).\n"
+"OUTFILE=$0.output\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:25
+#, no-wrap
 msgid ""
-"# Display this script in a text widget.  gdialog --title \"Displaying: $0\" "
-"--textbox $0 $HEIGHT $WIDTH"
+"# Display this script in a text widget.\n"
+"gdialog --title \"Displaying: $0\" --textbox $0 $HEIGHT $WIDTH\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:32
+#, no-wrap
 msgid ""
-"# Now, we'll try saving input in a file.  echo -n \"VARIABLE=\" > $OUTFILE "
-"gdialog --title \"User Input\" --inputbox \"Enter variable, please:\" \\ "
-"$HEIGHT $WIDTH 2>> $OUTFILE"
+"# Now, we'll try saving input in a file.\n"
+"echo -n \"VARIABLE=\" > $OUTFILE\n"
+"gdialog --title \"User Input\" --inputbox \"Enter variable, please:\" \\\n"
+"$HEIGHT $WIDTH 2>> $OUTFILE\n"
 msgstr ""
 
 #. type: Plain text
@@ -101,10 +115,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:56
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dialog.sh:57
-msgid "# Exercise: Rewrite this script using the 'zenity' widget set."
+#, no-wrap
+msgid "# Exercise: Rewrite this script using the 'zenity' widget set.\n"
 msgstr ""

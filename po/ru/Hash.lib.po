@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Hash.lib:5
+#, no-wrap
 msgid ""
-"# Hash: # Hash function library # Author: Mariusz Gniazdowski "
-"&lt;mariusz.gn-at-gmail.com&gt; # Date: 2005-04-07"
+"# Hash:\n"
+"# Hash function library\n"
+"# Author: Mariusz Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;\n"
+"# Date: 2005-04-07\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Hash.lib:7
-msgid "# Functions making emulating hashes in Bash a little less painful."
+#, no-wrap
+msgid "# Functions making emulating hashes in Bash a little less painful.\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,7 +54,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Hash.lib:26
-msgid "Hash_config_varname_prefix=__hash__"
+#, no-wrap
+msgid "Hash_config_varname_prefix=__hash__\n"
 msgstr ""
 
 #. type: Plain text
@@ -100,11 +105,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Hash.lib:72
+#, no-wrap
 msgid ""
-"# Emulates: hash1[key1]=hash2[key2] # # Params: # 1 - hash1 # 2 - key1 # 3 - "
-"hash2 # 4 - key2 function hash_copy { eval "
-"\"${Hash_config_varname_prefix}${1}_${2}\\ "
-"=\\\"\\$${Hash_config_varname_prefix}${3}_${4}\\\"\" }"
+"# Emulates:  hash1[key1]=hash2[key2]\n"
+"#\n"
+"# Params:\n"
+"# 1 - hash1\n"
+"# 2 - key1\n"
+"# 3 - hash2\n"
+"# 4 - key2\n"
+"function hash_copy {\n"
+"eval \"${Hash_config_varname_prefix}${1}_${2}\\\n"
+"=\\\"\\$${Hash_config_varname_prefix}${3}_${4}\\\"\"\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -195,8 +208,7 @@ msgid ""
 "  hash=$1\n"
 "  key=$2\n"
 "  shift 2\n"
-"  eval \"eval \\\"\\$${Hash_config_varname_prefix}${hash}_${key} "
-"\\\\\\\"\\\\\\$@\\\\\\\"\\\"\"\n"
+"  eval \"eval \\\"\\$${Hash_config_varname_prefix}${hash}_${key} \\\\\\\"\\\\\\$@\\\\\\\"\\\"\"\n"
 "}\n"
 msgstr ""
 
@@ -213,8 +225,7 @@ msgid ""
 "# 0 - there is such key\n"
 "# 1 - there is no such key\n"
 "function hash_is_set {\n"
-"  eval \"if [[ \\\"\\${${Hash_config_varname_prefix}${1}_${2}-a}\\\" = "
-"\\\"a\\\" &amp;&amp; \n"
+"  eval \"if [[ \\\"\\${${Hash_config_varname_prefix}${1}_${2}-a}\\\" = \\\"a\\\" &amp;&amp; \n"
 "  \\\"\\${${Hash_config_varname_prefix}${1}_${2}-b}\\\" = \\\"b\\\" ]]\n"
 "    then return 1; else return 0; fi\"\n"
 "}\n"
@@ -246,7 +257,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Hash.lib:182
+#, no-wrap
 msgid ""
-"# NOTE: In lines 103 and 116, ampersand changed.  # But, it doesn't matter, "
-"because these are comment lines anyhow."
+"#  NOTE: In lines 103 and 116, ampersand changed.\n"
+"#  But, it doesn't matter, because these are comment lines anyhow.\n"
 msgstr ""

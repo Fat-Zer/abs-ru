@@ -1,8 +1,11 @@
-#!/bin/bash # lookup: Does a dictionary lookup on each word in a data file.
+#!/bin/bash
+# lookup: Does a dictionary lookup on each word in a data file.
 
-file=words.data # Data file from which to read words to test.
+file=words.data  # Data file from which to read words to test.
 
-echo echo "Testing file $file" echo
+echo
+echo "Testing file $file"
+echo
 
 while [ "$word" != end ]  # Last word in data file.
 do               # ^^^
@@ -25,8 +28,8 @@ echo
 
 exit 0
 
-# ---------------------------------------------------------------- # Code
-below line will not execute because of "exit" command above.
+# ----------------------------------------------------------------
+# Code below line will not execute because of "exit" command above.
 
 
 # Stephane Chazelas proposes the following, more concise alternative:

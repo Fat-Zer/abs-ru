@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # cvt.sh: # Converts all the MacPaint image files in a directory "
-"to \"pbm\" format."
+"#!/bin/bash\n"
+"#  cvt.sh:\n"
+"#  Converts all the MacPaint image files in a directory to \"pbm\" format.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:8
+#, no-wrap
 msgid ""
-"# Uses the \"macptopbm\" binary from the \"netpbm\" package, #+ which is "
-"maintained by Brian Henderson (bryanh@giraffe-data.com).  # Netpbm is a "
-"standard part of most Linux distros."
+"#  Uses the \"macptopbm\" binary from the \"netpbm\" package,\n"
+"#+ which is maintained by Brian Henderson (bryanh@giraffe-data.com).\n"
+"#  Netpbm is a standard part of most Linux distros.\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,9 +56,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:21
+#, no-wrap
 msgid ""
-"# Assumes all files in the target directory are MacPaint image files, #+ "
-"with a \".mac\" filename suffix."
+"#  Assumes all files in the target directory are MacPaint image files,\n"
+"#+ with a \".mac\" filename suffix.\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,27 +80,34 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:34
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:40
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # As it stands, this script converts *all* the files "
-"in the current #+ working directory.  # Modify it to work *only* on files "
-"with a \".mac\" suffix."
+"# Exercise:\n"
+"# --------\n"
+"#  As it stands, this script converts *all* the files in the current\n"
+"#+ working directory.\n"
+"#  Modify it to work *only* on files with a \".mac\" suffix.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:44
-msgid "# *** And here's another way to do it. *** #"
+#, no-wrap
+msgid "# *** And here's another way to do it. *** #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:48
+#, no-wrap
 msgid ""
-"#!/bin/bash # Batch convert into different graphic formats.  # Assumes "
-"imagemagick installed (standard in most Linux distros)."
+"#!/bin/bash\n"
+"# Batch convert into different graphic formats.\n"
+"# Assumes imagemagick installed (standard in most Linux distros).\n"
 msgstr ""
 
 #. type: Plain text
@@ -121,5 +132,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cvt.sh:59
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

@@ -1,7 +1,8 @@
 #!/bin/bash
 
-read var1 &lt;data-file echo "var1 = $var1" # var1 set to the entire first
-line of the input file "data-file"
+read var1 &lt;data-file
+echo "var1 = $var1"
+# var1 set to the entire first line of the input file "data-file"
 
 read var2 var3 &lt;data-file
 echo "var2 = $var2   var3 = $var3"
@@ -24,8 +25,8 @@ done &lt;data-file
 
 echo "------------------------------------------------"
 
-# Use $IFS (Internal Field Separator variable) to split a line of input to #
-"read", if you do not want the default to be whitespace.
+# Use $IFS (Internal Field Separator variable) to split a line of input to
+# "read", if you do not want the default to be whitespace.
 
 echo "List of all users:"
 OIFS=$IFS; IFS=:       # /etc/passwd uses ":" for field separator.
@@ -38,16 +39,19 @@ IFS=$OIFS              # Restore original $IFS.
 
 
 
-# Setting the $IFS variable within the loop itself #+ eliminates the need
-for storing the original $IFS #+ in a temporary variable.  # Thanks, Dim
-Segebart, for pointing this out.  echo
-"------------------------------------------------" echo "List of all users:"
+#  Setting the $IFS variable within the loop itself
+#+ eliminates the need for storing the original $IFS
+#+ in a temporary variable.
+#  Thanks, Dim Segebart, for pointing this out.
+echo "------------------------------------------------"
+echo "List of all users:"
 
 while IFS=: read name passwd uid gid fullname ignore
 do
   echo "$name ($fullname)"
 done &lt;/etc/passwd   # I/O redirection.
 
-echo echo "\$IFS still $IFS"
+echo
+echo "\$IFS still $IFS"
 
 exit 0

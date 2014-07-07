@@ -1,17 +1,24 @@
 #!/bin/bash
 
-# Cards: # Deals four random hands from a deck of cards.
+# Cards:
+# Deals four random hands from a deck of cards.
 
-UNPICKED=0 PICKED=1
+UNPICKED=0
+PICKED=1
 
 DUPE_CARD=99
 
-LOWER_LIMIT=0 UPPER_LIMIT=51 CARDS_IN_SUIT=13 CARDS=52
+LOWER_LIMIT=0
+UPPER_LIMIT=51
+CARDS_IN_SUIT=13
+CARDS=52
 
-declare -a Deck declare -a Suits declare -a Cards # It would have been
-easier to implement and more intuitive #+ with a single, 3-dimensional
-array.  # Perhaps a future version of Bash will support multidimensional
-arrays.
+declare -a Deck
+declare -a Suits
+declare -a Cards
+#  It would have been easier to implement and more intuitive
+#+ with a single, 3-dimensional array.
+#  Perhaps a future version of Bash will support multidimensional arrays.
 
 
 initialize_Deck ()
@@ -25,11 +32,19 @@ done
 echo
 }
 
-initialize_Suits ()  { Suits[0]=C #Clubs Suits[1]=D #Diamonds Suits[2]=H
-#Hearts Suits[3]=S #Spades }
+initialize_Suits ()
+{
+Suits[0]=C #Clubs
+Suits[1]=D #Diamonds
+Suits[2]=H #Hearts
+Suits[3]=S #Spades
+}
 
-initialize_Cards ()  { Cards=(2 3 4 5 6 7 8 9 10 J Q K A)  # Alternate
-method of initializing an array.  }
+initialize_Cards ()
+{
+Cards=(2 3 4 5 6 7 8 9 10 J Q K A)
+# Alternate method of initializing an array.
+}
 
 pick_a_card ()
 {
@@ -44,10 +59,17 @@ else
 fi
 }
 
-parse_card ()  { number=$1 let "suit_number = number / CARDS_IN_SUIT"
-suit=${Suits[suit_number]} echo -n "$suit-" let "card_no = number %
-CARDS_IN_SUIT" Card=${Cards[card_no]} printf %-4s $Card # Print cards in
-neat columns.  }
+parse_card ()
+{
+number=$1
+let "suit_number = number / CARDS_IN_SUIT"
+suit=${Suits[suit_number]}
+echo -n "$suit-"
+let "card_no = number % CARDS_IN_SUIT"
+Card=${Cards[card_no]}
+printf %-4s $Card
+# Print cards in neat columns.
+}
 
 seed_random ()  # Seed random number generator.
 {               # What happens if you don't do this?
@@ -58,7 +80,9 @@ RANDOM=$seed
 #+ of seeding the random number generator?
 }
 
-deal_cards ()  { echo
+deal_cards ()
+{
+echo
 
 cards_picked=0
 while [ "$cards_picked" -le $UPPER_LIMIT ]
@@ -86,21 +110,31 @@ done
 
 echo
 
-return 0 }
+return 0
+}
 
 
-# Structured programming: # Entire program logic modularized in functions.
+# Structured programming:
+# Entire program logic modularized in functions.
 
-#================ seed_random initialize_Deck initialize_Suits
-initialize_Cards deal_cards #================
+#================
+seed_random
+initialize_Deck
+initialize_Suits
+initialize_Cards
+deal_cards
+#================
 
 exit 0
 
 
 
-# Exercise 1: # Add comments to thoroughly document this script.
+# Exercise 1:
+# Add comments to thoroughly document this script.
 
-# Exercise 2: # Add a routine (function) to print out each hand sorted in
-suits.  # You may add other bells and whistles if you like.
+# Exercise 2:
+# Add a routine (function) to print out each hand sorted in suits.
+# You may add other bells and whistles if you like.
 
-# Exercise 3: # Simplify and streamline the logic of the script.
+# Exercise 3:
+# Simplify and streamline the logic of the script.

@@ -9,7 +9,8 @@
 
 # Conversion to bash v2 syntax done by Chet Ramey
 
-# Commentary: # Code:
+# Commentary:
+# Code:
 
 #:docstring strcat:
 # Usage: strcat s1 s2
@@ -73,10 +74,13 @@ function strncat ()
     # ==> if one of the variables contains a single quote.
 }
 
-#:docstring strcmp: # Usage: strcmp $s1 $s2 # # Strcmp compares its
-arguments and returns an integer less than, equal to, # or greater than
-zero, depending on whether string s1 is lexicographically # less than, equal
-to, or greater than string s2.  #:end docstring:
+#:docstring strcmp:
+# Usage: strcmp $s1 $s2
+#
+# Strcmp compares its arguments and returns an integer less than, equal to,
+# or greater than zero, depending on whether string s1 is lexicographically
+# less than, equal to, or greater than string s2.
+#:end docstring:
 
 ###;;;autoload
 function strcmp ()
@@ -88,9 +92,12 @@ function strcmp ()
     return 1
 }
 
-#:docstring strncmp: # Usage: strncmp $s1 $s2 $n # # Like strcmp, but makes
-the comparison by examining a maximum of n # characters (n less than or
-equal to zero yields equality).  #:end docstring:
+#:docstring strncmp:
+# Usage: strncmp $s1 $s2 $n
+# 
+# Like strcmp, but makes the comparison by examining a maximum of n
+# characters (n less than or equal to zero yields equality).
+#:end docstring:
 
 ###;;;autoload
 function strncmp ()
@@ -110,8 +117,11 @@ function strncmp ()
     fi
 }
 
-#:docstring strlen: # Usage: strlen s # # Strlen returns the number of
-characters in string literal s.  #:end docstring:
+#:docstring strlen:
+# Usage: strlen s
+#
+# Strlen returns the number of characters in string literal s.
+#:end docstring:
 
 ###;;;autoload
 function strlen ()
@@ -121,9 +131,12 @@ function strlen ()
     # ==> whose name is passed as an argument.
 }
 
-#:docstring strspn: # Usage: strspn $s1 $s2 # # Strspn returns the length of
-the maximum initial segment of string s1, # which consists entirely of
-characters from string s2.  #:end docstring:
+#:docstring strspn:
+# Usage: strspn $s1 $s2
+# 
+# Strspn returns the length of the maximum initial segment of string s1,
+# which consists entirely of characters from string s2.
+#:end docstring:
 
 ###;;;autoload
 function strspn ()
@@ -135,9 +148,12 @@ function strspn ()
     echo ${#result}
 }
 
-#:docstring strcspn: # Usage: strcspn $s1 $s2 # # Strcspn returns the length
-of the maximum initial segment of string s1, # which consists entirely of
-characters not from string s2.  #:end docstring:
+#:docstring strcspn:
+# Usage: strcspn $s1 $s2
+#
+# Strcspn returns the length of the maximum initial segment of string s1,
+# which consists entirely of characters not from string s2.
+#:end docstring:
 
 ###;;;autoload
 function strcspn ()
@@ -149,10 +165,13 @@ function strcspn ()
     echo ${#result}
 }
 
-#:docstring strstr: # Usage: strstr s1 s2 # # Strstr echoes a substring
-starting at the first occurrence of string s2 in # string s1, or nothing if
-s2 does not occur in the string.  If s2 points to # a string of zero length,
-strstr echoes s1.  #:end docstring:
+#:docstring strstr:
+# Usage: strstr s1 s2
+# 
+# Strstr echoes a substring starting at the first occurrence of string s2 in
+# string s1, or nothing if s2 does not occur in the string.  If s2 points to
+# a string of zero length, strstr echoes s1.
+#:end docstring:
 
 ###;;;autoload
 function strstr ()
@@ -174,17 +193,20 @@ function strstr ()
     echo "${1##$first}"
 }
 
-#:docstring strtok: # Usage: strtok s1 s2 # # Strtok considers the string s1
-to consist of a sequence of zero or more # text tokens separated by spans of
-one or more characters from the # separator string s2.  The first call (with
-a non-empty string s1 # specified) echoes a string consisting of the first
-token on stdout. The # function keeps track of its position in the string s1
-between separate # calls, so that subsequent calls made with the first
-argument an empty # string will work through the string immediately
-following that token.  In # this way subsequent calls will work through the
-string s1 until no tokens # remain.  The separator string s2 may be
-different from call to call.  # When no token remains in s1, an empty value
-is echoed on stdout.  #:end docstring:
+#:docstring strtok:
+# Usage: strtok s1 s2
+#
+# Strtok considers the string s1 to consist of a sequence of zero or more
+# text tokens separated by spans of one or more characters from the
+# separator string s2.  The first call (with a non-empty string s1
+# specified) echoes a string consisting of the first token on stdout. The
+# function keeps track of its position in the string s1 between separate
+# calls, so that subsequent calls made with the first argument an empty
+# string will work through the string immediately following that token.  In
+# this way subsequent calls will work through the string s1 until no tokens
+# remain.  The separator string s2 may be different from call to call.
+# When no token remains in s1, an empty value is echoed on stdout.
+#:end docstring:
 
 ###;;;autoload
 function strtok ()
@@ -192,9 +214,12 @@ function strtok ()
  :
 }
 
-#:docstring strtrunc: # Usage: strtrunc $n $s1 {$s2} {$...} # # Used by many
-functions like strncmp to truncate arguments for comparison.  # Echoes the
-first n characters of each string s1 s2 ... on stdout.  #:end docstring:
+#:docstring strtrunc:
+# Usage: strtrunc $n $s1 {$s2} {$...}
+#
+# Used by many functions like strncmp to truncate arguments for comparison.
+# Echoes the first n characters of each string s1 s2 ... on stdout. 
+#:end docstring:
 
 ###;;;autoload
 function strtrunc ()
@@ -210,23 +235,37 @@ function strtrunc ()
 # string.bash ends here
 
 
-# ==========================================================================
-# # ==> Everything below here added by the document author.
+# ========================================================================== #
+# ==> Everything below here added by the document author.
 
-# ==> Suggested use of this script is to delete everything below here, # ==>
-and "source" this file into your own scripts.
+# ==> Suggested use of this script is to delete everything below here,
+# ==> and "source" this file into your own scripts.
 
-# strcat string0=one string1=two echo echo "Testing \"strcat\" function:"
-echo "Original \"string0\" = $string0" echo "\"string1\" = $string1" strcat
-string0 string1 echo "New \"string0\" = $string0" echo
+# strcat
+string0=one
+string1=two
+echo
+echo "Testing \"strcat\" function:"
+echo "Original \"string0\" = $string0"
+echo "\"string1\" = $string1"
+strcat string0 string1
+echo "New \"string0\" = $string0"
+echo
 
-# strlen echo echo "Testing \"strlen\" function:" str=123456789 echo
-"\"str\" = $str" echo -n "Length of \"str\" = " strlen str echo
+# strlen
+echo
+echo "Testing \"strlen\" function:"
+str=123456789
+echo "\"str\" = $str"
+echo -n "Length of \"str\" = "
+strlen str
+echo
 
 
 
-# Exercise: # -------- # Add code to test all the other string functions
-above.
+# Exercise:
+# --------
+# Add code to test all the other string functions above.
 
 
 exit 0

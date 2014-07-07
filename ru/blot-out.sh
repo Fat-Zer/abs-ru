@@ -1,9 +1,10 @@
-#!/bin/bash # blot-out.sh: Erase "all" traces of a file.
+#!/bin/bash
+# blot-out.sh: Erase "all" traces of a file.
 
-# This script overwrites a target file alternately #+ with random bytes,
-then zeros before finally deleting it.  # After that, even examining the raw
-disk sectors by conventional methods #+ will not reveal the original file
-data.
+#  This script overwrites a target file alternately
+#+ with random bytes, then zeros before finally deleting it.
+#  After that, even examining the raw disk sectors by conventional methods
+#+ will not reveal the original file data.
 
 PASSES=7         #  Number of file-shredding passes.
                  #  Increasing this slows script execution,
@@ -68,16 +69,18 @@ echo "File \"$file\" blotted out and deleted."; echo
 
 exit 0
 
-# This is a fairly secure, if inefficient and slow method #+ of thoroughly
-"shredding" a file.  # The "shred" command, part of the GNU "fileutils"
-package, #+ does the same thing, although more efficiently.
+#  This is a fairly secure, if inefficient and slow method
+#+ of thoroughly "shredding" a file.
+#  The "shred" command, part of the GNU "fileutils" package,
+#+ does the same thing, although more efficiently.
 
-# The file cannot not be "undeleted" or retrieved by normal methods.  #
-However . . .  #+ this simple method would *not* likely withstand #+
-sophisticated forensic analysis.
+#  The file cannot not be "undeleted" or retrieved by normal methods.
+#  However . . .
+#+ this simple method would *not* likely withstand
+#+ sophisticated forensic analysis.
 
-# This script may not play well with a journaled file system.  # Exercise
-(difficult): Fix it so it does.
+#  This script may not play well with a journaled file system.
+#  Exercise (difficult): Fix it so it does.
 
 
 

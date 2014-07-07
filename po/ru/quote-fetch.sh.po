@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:3
-msgid "#!/bin/bash # quote-fetch.sh: Download a stock quote."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# quote-fetch.sh: Download a stock quote.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:6
-msgid "E_NOPARAMS=86"
+#, no-wrap
+msgid "E_NOPARAMS=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,39 +42,45 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:13
-msgid "stock_symbol=$1"
+#, no-wrap
+msgid "stock_symbol=$1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:18
+#, no-wrap
 msgid ""
-"file_suffix=.html # Fetches an HTML file, so name it appropriately.  "
-"URL='http://finance.yahoo.com/q?s=' # Yahoo finance board, with stock query "
-"suffix."
+"file_suffix=.html\n"
+"# Fetches an HTML file, so name it appropriately.\n"
+"URL='http://finance.yahoo.com/q?s='\n"
+"# Yahoo finance board, with stock query suffix.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:22
+#, no-wrap
 msgid ""
-"# ----------------------------------------------------------- wget -O "
-"${stock_symbol}${file_suffix} \"${URL}${stock_symbol}\" # "
-"-----------------------------------------------------------"
+"# -----------------------------------------------------------\n"
+"wget -O ${stock_symbol}${file_suffix} \"${URL}${stock_symbol}\"\n"
+"# -----------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:30
+#, no-wrap
 msgid ""
-"# To look up stuff on http://search.yahoo.com: # "
-"----------------------------------------------------------- # "
-"URL=\"http://search.yahoo.com/search?fr=ush-news&amp;p=${query}\" # wget -O "
-"\"$savefilename\" \"${URL}\" # "
-"----------------------------------------------------------- # Saves a list "
-"of relevant URLs."
+"# To look up stuff on http://search.yahoo.com:\n"
+"# -----------------------------------------------------------\n"
+"# URL=\"http://search.yahoo.com/search?fr=ush-news&amp;p=${query}\"\n"
+"# wget -O \"$savefilename\" \"${URL}\"\n"
+"# -----------------------------------------------------------\n"
+"# Saves a list of relevant URLs.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/quote-fetch.sh:32
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

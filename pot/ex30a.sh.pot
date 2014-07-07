@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,12 +61,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:32
-msgid "read person"
+#, no-wrap
+msgid "read person\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:35
-msgid "case \"$person\" in # Note variable is quoted."
+#, no-wrap
+msgid ""
+"case \"$person\" in\n"
+"# Note variable is quoted.\n"
 msgstr ""
 
 #. type: Plain text
@@ -105,7 +109,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:61
-msgid "# Add info for Smith &amp; Zane later."
+#, no-wrap
+msgid "# Add info for Smith &amp; Zane later.\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,7 +127,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:70
-msgid "esac"
+#, no-wrap
+msgid "esac\n"
 msgstr ""
 
 #. type: Plain text
@@ -133,10 +139,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:74
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex30a.sh:75
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -8,7 +8,9 @@
 #              (Will still work with earlier versions.)
 
 
-INIT_TAB_AWK="" # Parameter to initialize awk script.  count_case=0
+INIT_TAB_AWK=""
+# Parameter to initialize awk script.
+count_case=0
 FILE_PARSE=$1
 
 E_PARAMERR=85
@@ -39,21 +41,28 @@ for letter in `echo $@`    # For each one . . .
   count_case=`expr $count_case + 1`
 done
 
-# DEBUG: # echo $INIT_TAB_AWK;
+# DEBUG:
+# echo $INIT_TAB_AWK;
 
-cat $FILE_PARSE | # Pipe the target file to the following awk script.
+cat $FILE_PARSE |
+# Pipe the target file to the following awk script.
 
-# --------------------------------------------------------------------- #
-Earlier version of script: # awk -v tab_search=0 -v final_tab=0 -v tab=0 -v
-\ # nb_letter=0 -v chara=0 -v chara2=0 \
+# ---------------------------------------------------------------------
+# Earlier version of script:
+# awk -v tab_search=0 -v final_tab=0 -v tab=0 -v \
+# nb_letter=0 -v chara=0 -v chara2=0 \
 
-awk \ "BEGIN { $INIT_TAB_AWK } \ { split(\$0, tab, \"\"); \ for (chara in
-tab) \ { for (chara2 in tab_search) \ { if (tab_search[chara2] ==
-tab[chara]) { final_tab[chara2]++ } } } } \ END { for (chara in final_tab) \ 
-{ print tab_search[chara] \" => \" final_tab[chara] } }" #
---------------------------------------------------------------------- #
-Nothing all that complicated, just . . .  #+ for-loops, if-tests, and a
-couple of specialized functions.
+awk \
+"BEGIN { $INIT_TAB_AWK } \
+{ split(\$0, tab, \"\"); \
+for (chara in tab) \
+{ for (chara2 in tab_search) \
+{ if (tab_search[chara2] == tab[chara]) { final_tab[chara2]++ } } } } \
+END { for (chara in final_tab) \
+{ print tab_search[chara] \" => \" final_tab[chara] } }"
+# ---------------------------------------------------------------------
+#  Nothing all that complicated, just . . .
+#+ for-loops, if-tests, and a couple of specialized functions.
 
 exit $?
 

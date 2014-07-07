@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram.sh:3
-msgid "#!/bin/bash # agram.sh: Playing games with anagrams."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# agram.sh: Playing games with anagrams.\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,10 +48,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram.sh:20
+#, no-wrap
 msgid ""
-"# Uses \"anagram\" utility #+ that is part of the author's \"yawl\" word "
-"list package.  # http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz # "
-"http://bash.deta.in/yawl-0.3.2.tar.gz"
+"#  Uses \"anagram\" utility\n"
+"#+ that is part of the author's \"yawl\" word list package.\n"
+"#  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz\n"
+"#  http://bash.deta.in/yawl-0.3.2.tar.gz\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,21 +64,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram.sh:29
-msgid "bash$ sh agram.sh islander isolate isolead isotheral"
+#, no-wrap
+msgid ""
+"bash$ sh agram.sh\n"
+"islander\n"
+"isolate\n"
+"isolead\n"
+"isotheral\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram.sh:37
+#, no-wrap
 msgid ""
-"# Exercises: # --------- # Modify this script to take the LETTERSET as a "
-"command-line parameter.  # Parameterize the filters in lines 11 - 13 (as "
-"with $FILTER), #+ so that they can be specified by passing arguments to a "
-"function."
+"#  Exercises:\n"
+"#  ---------\n"
+"#  Modify this script to take the LETTERSET as a command-line parameter.\n"
+"#  Parameterize the filters in lines 11 - 13 (as with $FILTER),\n"
+"#+ so that they can be specified by passing arguments to a function.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram.sh:39
+#, no-wrap
 msgid ""
-"# For a slightly different approach to anagramming, #+ see the agram2.sh "
-"script."
+"#  For a slightly different approach to anagramming,\n"
+"#+ see the agram2.sh script.\n"
 msgstr ""

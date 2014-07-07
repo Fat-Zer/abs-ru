@@ -1,8 +1,10 @@
-#!/bin/bash # parent.sh # Running multiple processes on an SMP box.  #
-Author: Tedman Eng
+#!/bin/bash
+# parent.sh
+# Running multiple processes on an SMP box.
+# Author: Tedman Eng
 
-# This is the first of two scripts, #+ both of which must be present in the
-current working directory.
+#  This is the first of two scripts,
+#+ both of which must be present in the current working directory.
 
 
 
@@ -29,7 +31,8 @@ while [ "$NUMPROC" -gt 0 ]; do
 done
 
 
-while true do
+while true
+do
 
 trap "start_thread" SIGRTMIN
 
@@ -42,26 +45,36 @@ exit 0
 # ======== Second script follows ========
 
 
-#!/bin/bash # child.sh # Running multiple processes on an SMP box.  # This
-script is called by parent.sh.  # Author: Tedman Eng
+#!/bin/bash
+# child.sh
+# Running multiple processes on an SMP box.
+# This script is called by parent.sh.
+# Author: Tedman Eng
 
-temp=$RANDOM index=$1 shift let "temp %= 5" let "temp += 4" echo "Starting
-$index Time:$temp" "$@" sleep ${temp} echo "Ending $index" kill -s SIGRTMIN
-$PPID
+temp=$RANDOM
+index=$1
+shift
+let "temp %= 5"
+let "temp += 4"
+echo "Starting $index  Time:$temp" "$@"
+sleep ${temp}
+echo "Ending $index"
+kill -s SIGRTMIN $PPID
 
 exit 0
 
 
-# ======================= SCRIPT AUTHOR'S NOTES ======================= # #
-It's not completely bug free.  # I ran it with limit = 500 and after the
-first few hundred iterations, #+ one of the concurrent threads disappeared!
-# Not sure if this is collisions from trap signals or something else.  #
-Once the trap is received, there's a brief moment while executing the #+
-trap handler but before the next trap is set.  During this time, it may #+
-be possible to miss a trap signal, thus miss spawning a child process.
+# ======================= SCRIPT AUTHOR'S NOTES ======================= #
+#  It's not completely bug free.
+#  I ran it with limit = 500 and after the first few hundred iterations,
+#+ one of the concurrent threads disappeared!
+#  Not sure if this is collisions from trap signals or something else.
+#  Once the trap is received, there's a brief moment while executing the
+#+ trap handler but before the next trap is set.  During this time, it may
+#+ be possible to miss a trap signal, thus miss spawning a child process.
 
-# No doubt someone may spot the bug and will be writing #+ . . . in the
-future.
+#  No doubt someone may spot the bug and will be writing 
+#+ . . . in the future.
 
 
 
@@ -73,16 +86,16 @@ future.
 
 
 
-################################################################# # The
-following is the original script written by Vernia Damiano.  #
-Unfortunately, it doesn't work properly.
+#################################################################
+# The following is the original script written by Vernia Damiano.
+# Unfortunately, it doesn't work properly.
 #################################################################
 
 #!/bin/bash
 
-# Must call script with at least one integer parameter #+ (number of
-concurrent processes).  # All other parameters are passed through to the
-processes started.
+#  Must call script with at least one integer parameter
+#+ (number of concurrent processes).
+#  All other parameters are passed through to the processes started.
 
 
 INDICE=8        # Total number of process to start
@@ -129,14 +142,16 @@ while [ "$NUMPROC" -gt 0 ]; do
          let "NUMPROC--"
 done
 
-wait trap - SIGRTMIN
+wait
+trap - SIGRTMIN
 
 exit $?
 
-: &lt;&lt;SCRIPT_AUTHOR_COMMENTS I had the need to run a program, with
-specified options, on a number of different files, using a SMP machine. So I
-thought [I'd] keep running a specified number of processes and start a new
-one each time . . . one of these terminates.
+: &lt;&lt;SCRIPT_AUTHOR_COMMENTS
+I had the need to run a program, with specified options, on a number of
+different files, using a SMP machine. So I thought [I'd] keep running
+a specified number of processes and start a new one each time . . . one
+of these terminates.
 
 The "wait" instruction does not help, since it waits for a given process
 or *all* process started in background. So I wrote [this] bash script

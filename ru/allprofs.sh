@@ -1,4 +1,5 @@
-#!/bin/bash # allprofs.sh: Print all user profiles.
+#!/bin/bash
+# allprofs.sh: Print all user profiles.
 
 # This script written by Heiner Steven, and modified by the document author.
 
@@ -12,7 +13,7 @@ do
   (cd $home; [ -e $FILE ] &amp;&amp; less $FILE)
 done
 
-# When script terminates, there is no need to 'cd' back to original
-directory, #+ because 'cd $home' takes place in a subshell.
+#  When script terminates, there is no need to 'cd' back to original directory,
+#+ because 'cd $home' takes place in a subshell.
 
 exit 0

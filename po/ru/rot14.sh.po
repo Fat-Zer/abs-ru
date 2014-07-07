@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rot14.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # A version of \"rot13\" using 'eval'.  # Compare to "
-"\"rot13.sh\" example."
+"#!/bin/bash\n"
+"# A version of \"rot13\" using 'eval'.\n"
+"# Compare to \"rot13.sh\" example.\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,10 +55,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rot14.sh:21
-msgid "# This example by Stephane Chazelas.  # Modified by document author."
+#, no-wrap
+msgid ""
+"# This example by Stephane Chazelas.\n"
+"# Modified by document author.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rot14.sh:22
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

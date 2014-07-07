@@ -1,11 +1,13 @@
-#!/bin/bash # Killing ppp to force a log-off.  # For dialup connection, of
-course.
+#!/bin/bash
+# Killing ppp to force a log-off.
+# For dialup connection, of course.
 
 # Script should be run as root user.
 
-SERPORT=ttyS3 # Depending on the hardware and even the kernel version, #+
-the modem port on your machine may be different -- #+ /dev/ttyS1 or
-/dev/ttyS2.
+SERPORT=ttyS3
+#  Depending on the hardware and even the kernel version,
+#+ the modem port on your machine may be different --
+#+ /dev/ttyS1 or /dev/ttyS2.
 
 
 killppp="eval kill -9 `ps ax | awk '/ppp/ { print $1 }'`"

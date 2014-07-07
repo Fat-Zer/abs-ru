@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:3
-msgid "#!/bin/bash # fifteen.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# fifteen.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:8
+#, no-wrap
 msgid ""
-"# Classic \"Fifteen Puzzle\" # Author: Antonio Macchi # Lightly edited and "
-"commented by ABS Guide author.  # Used in ABS Guide with "
-"permission. (Thanks!)"
+"# Classic \"Fifteen Puzzle\"\n"
+"# Author: Antonio Macchi\n"
+"# Lightly edited and commented by ABS Guide author.\n"
+"# Used in ABS Guide with permission. (Thanks!)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:12
+#, no-wrap
 msgid ""
-"# The invention of the Fifteen Puzzle is attributed to either #+ Sam Loyd or "
-"Noyes Palmer Chapman.  # The puzzle was wildly popular in the late "
-"19th-century."
+"#  The invention of the Fifteen Puzzle is attributed to either\n"
+"#+ Sam Loyd or Noyes Palmer Chapman.\n"
+"#  The puzzle was wildly popular in the late 19th-century.\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,17 +70,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:33
-msgid "######## # Data # ########"
+#, no-wrap
+msgid ""
+"########\n"
+"# Data #\n"
+"########\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:35
-msgid "Puzzle=( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 \" \" )"
+#, no-wrap
+msgid "Puzzle=( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 \" \" )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:40
-msgid "############# # Functions # #############"
+#, no-wrap
+msgid ""
+"#############\n"
+"# Functions #\n"
+"#############\n"
 msgstr ""
 
 #. type: Plain text
@@ -245,7 +260,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:145
-msgid "################### MAIN () #######################{ moves=0 Jumble"
+#, no-wrap
+msgid ""
+"################### MAIN () #######################{\n"
+"moves=0\n"
+"Jumble\n"
 msgstr ""
 
 #. type: Plain text
@@ -272,17 +291,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:166
-msgid "echo;echo PrintPuzzle echo; echo \"BRAVO!\"; echo"
+#, no-wrap
+msgid ""
+"echo;echo\n"
+"PrintPuzzle\n"
+"echo; echo \"BRAVO!\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:169
-msgid "exit 0 ###################################################}"
+#, no-wrap
+msgid ""
+"exit 0\n"
+"###################################################}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifteen.sh:173
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Rewrite the script to display the letters A - O, #+ "
-"rather than the numbers 1 - 15."
+"#  Exercise:\n"
+"#  --------\n"
+"#  Rewrite the script to display the letters A - O,\n"
+"#+ rather than the numbers 1 - 15.\n"
 msgstr ""

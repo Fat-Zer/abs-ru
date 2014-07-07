@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:4
-msgid "#!/bin/bash # here-commsub.sh # Requires Bash version -ge 4.1 ..."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# here-commsub.sh\n"
+"# Requires Bash version -ge 4.1 ...\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,29 +45,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:12
-msgid "ENDxxx)"
+#, no-wrap
+msgid "ENDxxx)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:16
+#, no-wrap
 msgid ""
-"# Rather than what Bash 4.0 requires: #+ that the terminating limit string "
-"and #+ the terminating close-parenthesis be on separate lines."
+"#  Rather than what Bash 4.0 requires:\n"
+"#+ that the terminating limit string and\n"
+"#+ the terminating close-parenthesis be on separate lines.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:19
-msgid "# ENDxxx # )"
+#, no-wrap
+msgid ""
+"# ENDxxx\n"
+"# )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:22
-msgid "echo \"$multi_line_var\""
+#, no-wrap
+msgid "echo \"$multi_line_var\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-commsub.sh:25
+#, no-wrap
 msgid ""
-"# Bash still emits a warning, though.  # warning: here-document at line 10 "
-"delimited #+ by end-of-file (wanted `ENDxxx')"
+"#  Bash still emits a warning, though.\n"
+"#  warning: here-document at line 10 delimited\n"
+"#+ by end-of-file (wanted `ENDxxx')\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/csubloop.sh:3
-msgid "#!/bin/bash # csubloop.sh: Setting a variable to the output of a loop."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# csubloop.sh: Setting a variable to the output of a loop.\n"
 msgstr ""
 
 #. type: Plain text
@@ -33,7 +36,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/csubloop.sh:10
-msgid "echo \"variable1 = $variable1\" # variable1 = 12345"
+#, no-wrap
+msgid "echo \"variable1 = $variable1\"  # variable1 = 12345\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,17 +54,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/csubloop.sh:20
-msgid "echo \"variable2 = $variable2\" # variable2 = 0123456789"
+#, no-wrap
+msgid "echo \"variable2 = $variable2\"  # variable2 = 0123456789\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/csubloop.sh:23
+#, no-wrap
 msgid ""
-"# Demonstrates that it's possible to embed a loop #+ inside a variable "
-"declaration."
+"#  Demonstrates that it's possible to embed a loop\n"
+"#+ inside a variable declaration.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/csubloop.sh:24
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -1,4 +1,5 @@
-#!/bin/bash # symlinks.sh: Lists symbolic links in a directory.
+#!/bin/bash
+# symlinks.sh: Lists symbolic links in a directory.
 
 
 directory=${1-`pwd`}
@@ -26,18 +27,21 @@ done | sort                                  # Otherwise file list is unsorted.
 #+ since the output of the "find" command is expanded into a single word.
 #  However, it's easy to understand and illustrative this way.
 
-# As Dominik 'Aeneas' Schnitzer points out, #+ failing to quote $( find
-$directory -type l )  #+ will choke on filenames with embedded whitespace.
-# containing whitespace.
+#  As Dominik 'Aeneas' Schnitzer points out,
+#+ failing to quote  $( find $directory -type l )
+#+ will choke on filenames with embedded whitespace.
+#  containing whitespace. 
 
 exit 0
 
 
-# -------------------------------------------------------- # Jean Helou
-proposes the following alternative:
+# --------------------------------------------------------
+# Jean Helou proposes the following alternative:
 
-echo "symbolic links in directory \"$directory\"" # Backup of the current
-IFS. One can never be too cautious.  OLDIFS=$IFS IFS=:
+echo "symbolic links in directory \"$directory\""
+# Backup of the current IFS. One can never be too cautious.
+OLDIFS=$IFS
+IFS=:
 
 for file in $(find $directory -type l -printf "%p$IFS")
 do     #                              ^^^^^^^^^^^^^^^^
@@ -53,7 +57,8 @@ do
   echo $file
   done | sort
 
-# This works in the "pathological" case of a directory name having #+ an
-embedded colon.  # "This also fixes the pathological case of the directory
-name having #+ a colon (or space in earlier example) as well."
+#  This works in the "pathological" case of a directory name having
+#+ an embedded colon.
+#  "This also fixes the pathological case of the directory name having
+#+  a colon (or space in earlier example) as well."
 

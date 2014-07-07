@@ -1,11 +1,14 @@
-#! /bin/sh ## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll
-be p*ssed.  ## Args: target port [port port port ...] ## Hose stdout _and_
-stderr together.  ## ## Advantages: runs slower than ident-scan, giving
-remote inetd less cause ##+ for alarm, and only hits the few known daemon
-ports you specify.  ## Disadvantages: requires numeric-only port args, the
-output sleazitude, ##+ and won't work for r-services when coming from high
-source ports.  # Script author: Hobbit &lt;hobbit@avian.org&gt; # Used in
-ABS Guide with permission.
+#! /bin/sh
+## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll be p*ssed.
+## Args: target port [port port port ...]
+## Hose stdout _and_ stderr together.
+##
+##  Advantages: runs slower than ident-scan, giving remote inetd less cause
+##+ for alarm, and only hits the few known daemon ports you specify.
+##  Disadvantages: requires numeric-only port args, the output sleazitude,
+##+ and won't work for r-services when coming from high source ports.
+# Script author: Hobbit &lt;hobbit@avian.org&gt;
+# Used in ABS Guide with permission.
 
 # ---------------------------------------------------
 E_BADARGS=65       # Need at least two args.
@@ -29,9 +32,11 @@ nc -z -w $TIMEOUT0 "$1" $IDPORT || \
 #  -z scans for listening daemons.
 #     -w $TIMEOUT = How long to try to connect.
 
-# Generate a randomish base port.  RP=`expr $$ % $RAND1 + $RAND2`
+# Generate a randomish base port.
+RP=`expr $$ % $RAND1 + $RAND2`
 
-TRG="$1" shift
+TRG="$1"
+shift
 
 while test "$1" ; do
   nc -v -w $TIMEOUT1 -p ${RP} "$TRG" ${1} &lt; /dev/null > /dev/null &amp;
@@ -51,10 +56,12 @@ done
 
 exit $?
 
-# Notes: # -----
+#  Notes:
+#  -----
 
-# Try commenting out line 30 and running this script #+ with
-"localhost.localdomain 25" as arguments.
+#  Try commenting out line 30 and running this script
+#+ with "localhost.localdomain 25" as arguments.
 
-# For more of Hobbit's 'nc' example scripts, #+ look in the documentation:
+#  For more of Hobbit's 'nc' example scripts,
+#+ look in the documentation:
 #+ the /usr/share/doc/nc-X.XX/scripts directory.

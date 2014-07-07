@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/isalpha.sh:3
-msgid "#!/bin/bash # isalpha.sh: Using a \"case\" structure to filter a string."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# isalpha.sh: Using a \"case\" structure to filter a string.\n"
 msgstr ""
 
 #. type: Plain text
@@ -117,12 +120,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/isalpha.sh:61 abs-guide/isalpha.sh:74
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/isalpha.sh:63 abs-guide/isalpha.sh:76
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -179,8 +184,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/isalpha.sh:106
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Write an 'isfloat ()' function that tests for "
-"floating point numbers.  # Hint: The function duplicates 'isdigit ()', #+ "
-"but adds a test for a mandatory decimal point."
+"# Exercise:\n"
+"# --------\n"
+"#  Write an 'isfloat ()' function that tests for floating point numbers.\n"
+"#  Hint: The function duplicates 'isdigit ()',\n"
+"#+ but adds a test for a mandatory decimal point.\n"
 msgstr ""

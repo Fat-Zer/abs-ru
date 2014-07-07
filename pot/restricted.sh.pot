@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:5
+#, no-wrap
 msgid ""
-"# Starting the script with \"#!/bin/bash -r\" #+ runs entire script in "
-"restricted mode."
+"#  Starting the script with \"#!/bin/bash -r\"\n"
+"#+ runs entire script in restricted mode.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:7 abs-guide/restricted.sh:46
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:15
+#, no-wrap
 msgid ""
-"echo \"Changing directory.\" cd /usr/local echo \"Now in `pwd`\" echo "
-"\"Coming back home.\" cd echo \"Now in `pwd`\" echo"
+"echo \"Changing directory.\"\n"
+"cd /usr/local\n"
+"echo \"Now in `pwd`\"\n"
+"echo \"Coming back home.\"\n"
+"cd\n"
+"echo \"Now in `pwd`\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:17
-msgid "# Everything up to here in normal, unrestricted mode."
+#, no-wrap
+msgid "# Everything up to here in normal, unrestricted mode.\n"
 msgstr ""
 
 #. type: Plain text
@@ -56,21 +66,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:24 abs-guide/restricted.sh:31 abs-guide/restricted.sh:40
-msgid "echo echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:28
+#, no-wrap
 msgid ""
-"echo \"Attempting directory change in restricted mode.\" cd ..  echo \"Still "
-"in `pwd`\""
+"echo \"Attempting directory change in restricted mode.\"\n"
+"cd ..\n"
+"echo \"Still in `pwd`\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:37
+#, no-wrap
 msgid ""
-"echo \"\\$SHELL = $SHELL\" echo \"Attempting to change shell in restricted "
-"mode.\" SHELL=\"/bin/ash\" echo echo \"\\$SHELL= $SHELL\""
+"echo \"\\$SHELL = $SHELL\"\n"
+"echo \"Attempting to change shell in restricted mode.\"\n"
+"SHELL=\"/bin/ash\"\n"
+"echo\n"
+"echo \"\\$SHELL= $SHELL\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -84,5 +103,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/restricted.sh:47
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

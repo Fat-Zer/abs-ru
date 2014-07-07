@@ -1,7 +1,8 @@
-#!/bin/bash # primes2.sh
+#!/bin/bash
+# primes2.sh
 
-# Generating prime numbers the quick-and-easy way, #+ without resorting to
-fancy algorithms.
+#  Generating prime numbers the quick-and-easy way,
+#+ without resorting to fancy algorithms.
 
 CEILING=10000   # 1 to 10000
 PRIME=0

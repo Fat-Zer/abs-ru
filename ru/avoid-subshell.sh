@@ -1,4 +1,6 @@
-#!/bin/bash # avoid-subshell.sh # Suggested by Matthew Walker.
+#!/bin/bash
+# avoid-subshell.sh
+# Suggested by Matthew Walker.
 
 Lines=0
 
@@ -40,4 +42,11 @@ exit 0
 
 $ cat myfile.txt
 
-Line 1.  Line 2.  Line 3.  Line 4.  Line 5.  Line 6.  Line 7.  Line 8.
+Line 1.
+Line 2.
+Line 3.
+Line 4.
+Line 5.
+Line 6.
+Line 7.
+Line 8.

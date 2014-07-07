@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex29.sh:3
-msgid "#!/bin/bash # Testing ranges of characters."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Testing ranges of characters.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex29.sh:6
-msgid "echo; echo \"Hit a key, then hit return.\" read Keypress"
+#, no-wrap
+msgid ""
+"echo; echo \"Hit a key, then hit return.\"\n"
+"read Keypress\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,23 +47,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex29.sh:21
+#, no-wrap
 msgid ""
-"# In the first version of this example, #+ the tests for lowercase and "
-"uppercase characters were #+ [a-z] and [A-Z].  # This no longer works in "
-"certain locales and/or Linux distros.  # POSIX is more portable.  # Thanks "
-"to Frank Wang for pointing this out."
+"#  In the first version of this example,\n"
+"#+ the tests for lowercase and uppercase characters were\n"
+"#+ [a-z] and [A-Z].\n"
+"#  This no longer works in certain locales and/or Linux distros.\n"
+"#  POSIX is more portable.\n"
+"#  Thanks to Frank Wang for pointing this out.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex29.sh:28
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # As the script stands, it accepts a single "
-"keystroke, then terminates.  # Change the script so it accepts repeated "
-"input, #+ reports on each keystroke, and terminates only when \"X\" is hit.  "
-"# Hint: enclose everything in a \"while\" loop."
+"#  Exercise:\n"
+"#  --------\n"
+"#  As the script stands, it accepts a single keystroke, then terminates.\n"
+"#  Change the script so it accepts repeated input,\n"
+"#+ reports on each keystroke, and terminates only when \"X\" is hit.\n"
+"#  Hint: enclose everything in a \"while\" loop.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex29.sh:29
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

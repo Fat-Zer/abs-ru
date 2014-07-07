@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:6
+#, no-wrap
 msgid ""
-"# Call this script with at least 10 parameters, for example # ./scriptname 1 "
-"2 3 4 5 6 7 8 9 10 MINPARAMS=10"
+"# Call this script with at least 10 parameters, for example\n"
+"# ./scriptname 1 2 3 4 5 6 7 8 9 10\n"
+"MINPARAMS=10\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:8 abs-guide/ex17.sh:15 abs-guide/ex17.sh:49
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:13
+#, no-wrap
 msgid ""
-"echo \"The name of this script is \\\"$0\\\".\" # Adds ./ for current "
-"directory echo \"The name of this script is \\\"`basename $0`\\\".\" # "
-"Strips out path name info (see 'basename')"
+"echo \"The name of this script is \\\"$0\\\".\"\n"
+"# Adds ./ for current directory\n"
+"echo \"The name of this script is \\\"`basename $0`\\\".\"\n"
+"# Strips out path name info (see 'basename')\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,7 +79,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:32
-msgid "# ..."
+#, no-wrap
+msgid "# ...\n"
 msgstr ""
 
 #. type: Plain text
@@ -88,9 +95,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:41
+#, no-wrap
 msgid ""
-"echo \"-----------------------------------\" echo \"All the command-line "
-"parameters are: \"$*\"\""
+"echo \"-----------------------------------\"\n"
+"echo \"All the command-line parameters are: \"$*\"\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -106,5 +114,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex17.sh:50
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

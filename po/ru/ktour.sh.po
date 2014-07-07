@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:3
-msgid "#!/bin/bash # ktour.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ktour.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:9
+#, no-wrap
 msgid ""
-"# author: mendel cooper # reldate: 12 Jan 2009 # license: public domain # "
-"(Not much sense GPLing something that's pretty much in the common #+ domain "
-"anyhow.)"
+"# author: mendel cooper\n"
+"# reldate: 12 Jan 2009\n"
+"# license: public domain\n"
+"# (Not much sense GPLing something that's pretty much in the common\n"
+"#+ domain anyhow.)\n"
 msgstr ""
 
 #. type: Plain text
@@ -103,10 +109,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:71
+#, no-wrap
 msgid ""
-"declare -i board # Use a one-dimensional array to simulate a two-dimensional "
-"one.  # This can make life difficult and result in ugly kludges; see below.  "
-"declare -i moves # Offsets from current knight position."
+"declare -i board\n"
+"# Use a one-dimensional array to simulate a two-dimensional one.\n"
+"# This can make life difficult and result in ugly kludges; see below.\n"
+"declare -i moves  # Offsets from current knight position.\n"
 msgstr ""
 
 #. type: Plain text
@@ -364,7 +372,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:227 abs-guide/ktour.sh:301
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -897,7 +906,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:576
-msgid "initialize_board"
+#, no-wrap
+msgid "initialize_board\n"
 msgstr ""
 
 #. type: Plain text
@@ -912,19 +922,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:584
+#, no-wrap
 msgid ""
-"echo; echo \"Starting from $algpos [square #$startpos] ...\"; echo echo -n "
-"\"Moves:\""
+"echo; echo \"Starting from $algpos [square #$startpos] ...\"; echo\n"
+"echo -n \"Moves:\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:586
-msgid "strategy \"$currpos\""
+#, no-wrap
+msgid "strategy \"$currpos\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ktour.sh:588
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logging-wrapper.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # logging-wrapper.sh # Generic shell wrapper that performs an "
-"operation #+ and logs it."
+"#!/bin/bash\n"
+"#  logging-wrapper.sh\n"
+"#  Generic shell wrapper that performs an operation\n"
+"#+ and logs it.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/logging-wrapper.sh:7
-msgid "DEFAULT_LOGFILE=logfile.txt"
+#, no-wrap
+msgid "DEFAULT_LOGFILE=logfile.txt\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,12 +63,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logging-wrapper.sh:27
+#, no-wrap
 msgid ""
-"# Log it.  echo \"`date` + `whoami` + $OPERATION \"$@\"\" >> $LOGFILE # Now, "
-"do it.  exec $OPERATION \"$@\""
+"# Log it.\n"
+"echo \"`date` + `whoami` + $OPERATION \"$@\"\" >> $LOGFILE\n"
+"# Now, do it.\n"
+"exec $OPERATION \"$@\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/logging-wrapper.sh:29
-msgid "# It's necessary to do the logging before the operation.  # Why?"
+#, no-wrap
+msgid ""
+"# It's necessary to do the logging before the operation.\n"
+"# Why?\n"
 msgstr ""

@@ -1,8 +1,11 @@
-#!/bin/bash # ktour.sh
+#!/bin/bash
+# ktour.sh
 
-# author: mendel cooper # reldate: 12 Jan 2009 # license: public domain #
-(Not much sense GPLing something that's pretty much in the common #+ domain
-anyhow.)
+# author: mendel cooper
+# reldate: 12 Jan 2009
+# license: public domain
+# (Not much sense GPLing something that's pretty much in the common
+#+ domain anyhow.)
 
 ###################################################################
 #             The Knight's Tour, a classic problem.               #
@@ -61,9 +64,10 @@ currpos=     # Current position.
 movenum=     # Move number.
 CRITPOS=37   # Have to patch for f5 starting position!
 
-declare -i board # Use a one-dimensional array to simulate a two-dimensional
-one.  # This can make life difficult and result in ugly kludges; see below.
-declare -i moves # Offsets from current knight position.
+declare -i board
+# Use a one-dimensional array to simulate a two-dimensional one.
+# This can make life difficult and result in ugly kludges; see below.
+declare -i moves  # Offsets from current knight position.
 
 
 initialize_board ()
@@ -575,8 +579,8 @@ board[startpos]=$movenum   # Mark each board square with move number.
 currpos=$startpos
 algpos=$(to_algebraic $startpos)
 
-echo; echo "Starting from $algpos [square #$startpos] ..."; echo echo -n
-"Moves:"
+echo; echo "Starting from $algpos [square #$startpos] ..."; echo
+echo -n "Moves:"
 
 strategy "$currpos"
 

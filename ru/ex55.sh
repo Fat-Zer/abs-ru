@@ -2,14 +2,14 @@
 
 # --> Comments added by the author of this document marked by "# -->".
 
-# --> This is part of the 'rc' script package # --> by Miquel van
-Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>.
+# --> This is part of the 'rc' script package
+# --> by Miquel van Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>.
 
-# --> This particular script seems to be Red Hat / FC specific # --> (may
-not be present in other distributions).
+# --> This particular script seems to be Red Hat / FC specific
+# --> (may not be present in other distributions).
 
-# Bring down all unneeded services that are still running #+ (there
-shouldn't be any, so this is just a sanity check)
+#  Bring down all unneeded services that are still running
+#+ (there shouldn't be any, so this is just a sanity check)
 
 for i in /var/lock/subsys/*; do
         # --> Standard for/in loop, but since "do" is on same line,

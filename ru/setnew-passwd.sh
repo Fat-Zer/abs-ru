@@ -6,7 +6,8 @@
 ROOT_UID=0         # Root has $UID 0.
 E_WRONG_USER=65    # Not root?
 
-E_NOSUCHUSER=70 SUCCESS=0
+E_NOSUCHUSER=70
+SUCCESS=0
 
 
 if [ "$UID" -ne "$ROOT_UID" ]
@@ -21,7 +22,8 @@ else
 fi  
 
 
-username=bozo NEWPASSWORD=security_violation
+username=bozo
+NEWPASSWORD=security_violation
 
 # Check if bozo lives here.
 grep -q "$username" /etc/passwd
@@ -32,8 +34,9 @@ then
   exit $E_NOSUCHUSER
 fi  
 
-echo "$NEWPASSWORD" | passwd --stdin "$username" # The '--stdin' option to
-'passwd' permits #+ getting a new password from stdin (or a pipe).
+echo "$NEWPASSWORD" | passwd --stdin "$username"
+#  The '--stdin' option to 'passwd' permits
+#+ getting a new password from stdin (or a pipe).
 
 echo; echo "User $username's password changed!"
 

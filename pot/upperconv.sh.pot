@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/upperconv.sh:4
-msgid "#!/bin/bash # upperconv.sh # Converts a specified input file to uppercase."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# upperconv.sh\n"
+"# Converts a specified input file to uppercase.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/upperconv.sh:7
-msgid "E_FILE_ACCESS=70 E_WRONG_ARGS=71"
+#, no-wrap
+msgid ""
+"E_FILE_ACCESS=70\n"
+"E_WRONG_ARGS=71\n"
 msgstr ""
 
 #. type: Plain text
@@ -91,12 +98,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/upperconv.sh:44
+#, no-wrap
 msgid ""
-"# After restoration, the following line prints to stdout as expected.  echo "
-"\"File \\\"$1\\\" written to \\\"$2\\\" as uppercase conversion.\""
+"# After restoration, the following line prints to stdout as expected.\n"
+"echo \"File \\\"$1\\\" written to \\\"$2\\\" as uppercase conversion.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/upperconv.sh:45
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

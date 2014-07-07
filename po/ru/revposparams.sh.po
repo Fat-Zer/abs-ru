@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # revposparams.sh: Reverse positional parameters.  # Script by "
-"Dan Jacobson, with stylistic revisions by document author."
+"#!/bin/bash\n"
+"# revposparams.sh: Reverse positional parameters.\n"
+"# Script by Dan Jacobson, with stylistic revisions by document author.\n"
 msgstr ""
 
 #. type: Plain text
@@ -36,7 +38,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:13
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -56,9 +59,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:29
+#, no-wrap
 msgid ""
-"set $k # Set new positional parameters.  echo - echo $# # Count of "
-"positional parameters.  echo - echo"
+"set $k  #  Set new positional parameters.\n"
+"echo -\n"
+"echo $# #  Count of positional parameters.\n"
+"echo -\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,41 +81,57 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:37
-msgid "IFS=$OIFS # Restore IFS."
+#, no-wrap
+msgid "IFS=$OIFS  # Restore IFS.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:45
+#, no-wrap
 msgid ""
-"# Question: # Is it necessary to set an new IFS, internal field separator, "
-"#+ in order for this script to work properly? # What happens if you don't? "
-"Try it.  # And, why use the new IFS -- a colon -- in line 17, #+ to append "
-"to the loop variable? # What is the purpose of this?"
+"#  Question:\n"
+"#  Is it necessary to set an new IFS, internal field separator,\n"
+"#+ in order for this script to work properly?\n"
+"#  What happens if you don't? Try it.\n"
+"#  And, why use the new IFS -- a colon -- in line 17,\n"
+"#+ to append to the loop variable?\n"
+"#  What is the purpose of this?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:47
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:49
-msgid "$ ./revposparams.sh"
+#, no-wrap
+msgid "$ ./revposparams.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:52
-msgid "### k0 = ### k = a b"
+#, no-wrap
+msgid ""
+"### k0 = \n"
+"### k = a b\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:55
-msgid "### k0 = a b ### k = c a b"
+#, no-wrap
+msgid ""
+"### k0 = a b\n"
+"### k = c a b\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:58
-msgid "### k0 = c a b ### k = d e c a b"
+#, no-wrap
+msgid ""
+"### k0 = c a b\n"
+"### k = d e c a b\n"
 msgstr ""
 
 #. type: Plain text
@@ -127,5 +150,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/revposparams.sh:65
-msgid "d e c a b"
+#, no-wrap
+msgid ""
+"d e\n"
+"c\n"
+"a b\n"
 msgstr ""

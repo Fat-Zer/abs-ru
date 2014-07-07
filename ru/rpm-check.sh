@@ -1,10 +1,14 @@
-#!/bin/bash # rpm-check.sh
+#!/bin/bash
+# rpm-check.sh
 
-# Queries an rpm file for description, listing, #+ and whether it can be
-installed.  # Saves output to a file.  # # This script illustrates using a
-code block.
+#  Queries an rpm file for description, listing,
+#+ and whether it can be installed.
+#  Saves output to a file.
+# 
+#  This script illustrates using a code block.
 
-SUCCESS=0 E_NOARGS=65
+SUCCESS=0
+E_NOARGS=65
 
 if [ -z "$1" ]
 then

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex58.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex58.sh:5
+#, no-wrap
 msgid ""
-"# Backs up all files in current directory modified within last 24 hours #+ "
-"in a \"tarball\" (tarred and gzipped file)."
+"#  Backs up all files in current directory modified within last 24 hours\n"
+"#+ in a \"tarball\" (tarred and gzipped file).\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,16 +44,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex58.sh:16
+#, no-wrap
 msgid ""
-"tar cvf - `find . -mtime -1 -type f -print` > $archive.tar gzip $archive.tar "
-"echo \"Directory $PWD backed up in archive file \\\"$archive.tar.gz\\\".\""
+"tar cvf - `find . -mtime -1 -type f -print` > $archive.tar\n"
+"gzip $archive.tar\n"
+"echo \"Directory $PWD backed up in archive file \\\"$archive.tar.gz\\\".\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex58.sh:21
+#, no-wrap
 msgid ""
-"# Stephane Chazelas points out that the above code will fail #+ if there are "
-"too many files found #+ or if any filenames contain blank characters."
+"#  Stephane Chazelas points out that the above code will fail\n"
+"#+ if there are too many files found\n"
+"#+ or if any filenames contain blank characters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -75,5 +81,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex58.sh:33
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

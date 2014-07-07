@@ -1,6 +1,8 @@
-#!/bin/bash # letter-count.sh: Counting letter occurrences in a text file.
-# Written by Stefano Palmeri.  # Used in ABS Guide with permission.  #
-Slightly modified by document author.
+#!/bin/bash
+# letter-count.sh: Counting letter occurrences in a text file.
+# Written by Stefano Palmeri.
+# Used in ABS Guide with permission.
+# Slightly modified by document author.
 
 MINARGS=2          # Script requires at least two arguments.
 E_BADARGS=65
@@ -48,5 +50,6 @@ done
 
 exit $?
 
-# This script has exactly the same functionality as letter-count2.sh, #+ but
-executes faster.  # Why?
+#  This script has exactly the same functionality as letter-count2.sh,
+#+ but executes faster.
+#  Why?

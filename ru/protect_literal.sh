@@ -1,4 +1,5 @@
-#! /bin/bash # protect_literal.sh
+#! /bin/bash
+# protect_literal.sh
 
 # set -vx
 
@@ -60,24 +61,31 @@ _pls() {
     echo $'\x27'$@$'\x27'           # Hard quoted parameter glob
 }
 
-# :&lt;&lt;-'_Protect_Literal_String_Test' # # # Remove the above "# " to
-disable this code. # # #
+# :&lt;&lt;-'_Protect_Literal_String_Test'
+# # # Remove the above "# " to disable this code. # # #
 
-# See how that looks when printed.  echo echo "- - Test One - -"
-_protect_literal_str 'Hello $user' _protect_literal_str 'Hello
-"${username}"' echo
+# See how that looks when printed.
+echo
+echo "- - Test One - -"
+_protect_literal_str 'Hello $user'
+_protect_literal_str 'Hello "${username}"'
+echo
 
-# Which yields: # - - Test One - - # 'Hello $user' is 13 long.  # 'Hello
-"${username}"' is 21 long.
+# Which yields:
+# - - Test One - -
+# 'Hello $user' is 13 long.
+# 'Hello "${username}"' is 21 long.
 
-# Looks as expected, but why all of the trouble? # The difference is hidden
-inside the Bash internal order #+ of operations.  # Which shows when you use
-it on the RHS of an assignment.
+#  Looks as expected, but why all of the trouble?
+#  The difference is hidden inside the Bash internal order
+#+ of operations.
+#  Which shows when you use it on the RHS of an assignment.
 
-# Declare an array for test values.  declare -a arrayZ
+# Declare an array for test values.
+declare -a arrayZ
 
-# Assign elements with various types of quotes and escapes.  arrayZ=( zero
-"$(_pls 'Hello ${Me}')" 'Hello ${You}' "\'Pass: ${pw}\'" )
+# Assign elements with various types of quotes and escapes.
+arrayZ=( zero "$(_pls 'Hello ${Me}')" 'Hello ${You}' "\'Pass: ${pw}\'" )
 
 # Now list that array and see what is there.
 echo "- - Test Two - -"
@@ -94,8 +102,8 @@ echo
 # Element 2: Hello ${You} is: 12 long.  # Quotes are missing
 # Element 3: \'Pass: \' is: 10 long.    # ${pw} expanded to nothing
 
-# Now make an assignment with that result.  declare -a array2=( ${arrayZ[@]}
-)
+# Now make an assignment with that result.
+declare -a array2=( ${arrayZ[@]} )
 
 # And print what happened.
 echo "- - Test Three - -"
@@ -113,25 +121,28 @@ echo
 # Element 3: 'Pass: is: 6 long.         # Split on the whitespace.
 # Element 4: ' is: 1 long.              # The end quote is here now.
 
-# Our Element 1 has had its leading and trailing hard quotes stripped.  #
-Although not shown, leading and trailing whitespace is also stripped.  # Now
-that the string contents are set, Bash will always, internally, #+ hard
-quote the contents as required during its operations.
+#  Our Element 1 has had its leading and trailing hard quotes stripped.
+#  Although not shown, leading and trailing whitespace is also stripped.
+#  Now that the string contents are set, Bash will always, internally,
+#+ hard quote the contents as required during its operations.
 
-# Why? # Considering our "$(_pls 'Hello ${Me}')" construction: # " ... " ->
-Expansion required, strip the quotes.  # $( ... ) -> Replace with the result
-of..., strip this.  # _pls ' ... ' -> called with literal arguments, strip
-the quotes.  # The result returned includes hard quotes; BUT the above
-processing #+ has already been done, so they become part of the value
-assigned.  # # Similarly, during further usage of the string variable, the
-${Me} #+ is part of the contents (result) and survives any operations #
-(Until explicitly told to evaluate the string).
+#  Why?
+#  Considering our "$(_pls 'Hello ${Me}')" construction:
+#  " ... " -> Expansion required, strip the quotes.
+#  $( ... ) -> Replace with the result of..., strip this.
+#  _pls ' ... ' -> called with literal arguments, strip the quotes.
+#  The result returned includes hard quotes; BUT the above processing
+#+ has already been done, so they become part of the value assigned.
+#
+#  Similarly, during further usage of the string variable, the ${Me}
+#+ is part of the contents (result) and survives any operations
+#  (Until explicitly told to evaluate the string).
 
-# Hint: See what happens when the hard quotes ($'\x27') are replaced #+ with
-soft quotes ($'\x22') in the above procedures.  # Interesting also is to
-remove the addition of any quoting.
+#  Hint: See what happens when the hard quotes ($'\x27') are replaced
+#+ with soft quotes ($'\x22') in the above procedures.
+#  Interesting also is to remove the addition of any quoting.
 
-# _Protect_Literal_String_Test # # # Remove the above "# " to disable this
-code. # # #
+# _Protect_Literal_String_Test
+# # # Remove the above "# " to disable this code. # # #
 
 exit 0

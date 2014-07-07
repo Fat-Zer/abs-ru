@@ -30,7 +30,8 @@ echo
 
 read person
 
-case "$person" in # Note variable is quoted.
+case "$person" in
+# Note variable is quoted.
 
   "E" | "e" )
   # Accept upper or lowercase input.

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:3
-msgid "#!/bin/bash # upload.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# upload.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:9
+#, no-wrap
 msgid ""
-"# Upload file pair (Filename.lsm, Filename.tar.gz)  #+ to incoming directory "
-"at Sunsite/UNC (ibiblio.org).  # Filename.tar.gz is the tarball itself.  # "
-"Filename.lsm is the descriptor file.  # Sunsite requires \"lsm\" file, "
-"otherwise will bounce contributions."
+"#  Upload file pair (Filename.lsm, Filename.tar.gz)\n"
+"#+ to incoming directory at Sunsite/UNC (ibiblio.org).\n"
+"#  Filename.tar.gz is the tarball itself.\n"
+"#  Filename.lsm is the descriptor file.\n"
+"#  Sunsite requires \"lsm\" file, otherwise will bounce contributions.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:12
-msgid "E_ARGERROR=85"
+#, no-wrap
+msgid "E_ARGERROR=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,10 +60,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:26
+#, no-wrap
 msgid ""
-"Server=\"ibiblio.org\" Directory=\"/incoming/Linux\" # These need not be "
-"hard-coded into script, #+ but may instead be changed to command-line "
-"argument."
+"Server=\"ibiblio.org\"\n"
+"Directory=\"/incoming/Linux\"\n"
+"#  These need not be hard-coded into script,\n"
+"#+ but may instead be changed to command-line argument.\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,7 +76,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:31
-msgid "ftp -n $Server &lt;&lt;End-Of-Session # -n option disables auto-logon"
+#, no-wrap
+msgid ""
+"ftp -n $Server &lt;&lt;End-Of-Session\n"
+"# -n option disables auto-logon\n"
 msgstr ""
 
 #. type: Plain text
@@ -88,5 +99,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex72.sh:42
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

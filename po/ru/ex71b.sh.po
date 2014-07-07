@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:3
-msgid "#!/bin/bash # Another 'cat' here document, using parameter substitution."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Another 'cat' here document, using parameter substitution.\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,35 +55,46 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:20
-msgid "RESPONDENT=\"the author of this fine script\""
+#, no-wrap
+msgid "RESPONDENT=\"the author of this fine script\"  \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:23
-msgid "cat &lt;&lt;Endofmessage"
+#, no-wrap
+msgid "cat &lt;&lt;Endofmessage\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:26
-msgid "Hello, there, $NAME.  Greetings to you, $NAME, from $RESPONDENT."
+#, no-wrap
+msgid ""
+"Hello, there, $NAME.\n"
+"Greetings to you, $NAME, from $RESPONDENT.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:28
-msgid "# This comment shows up in the output (why?)."
+#, no-wrap
+msgid "# This comment shows up in the output (why?).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:30
-msgid "Endofmessage"
+#, no-wrap
+msgid "Endofmessage\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:33
-msgid "# Note that the blank lines show up in the output.  # So does the comment."
+#, no-wrap
+msgid ""
+"# Note that the blank lines show up in the output.\n"
+"# So does the comment.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71b.sh:34
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

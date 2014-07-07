@@ -1,11 +1,12 @@
                         SOME SCRIPTS WILL NOT RUN AS IS
 
 
-Note that the source code for certain of the example shell scripts have the
-"&lt;" and "&gt;" in place of angle brackets (< and >), or &amp; in place of
-the ampersand (&). This is necessary for the Docbook SGML conversion. If you
-plan to run these scripts from the enclosed source files, then it will, of
-course, be necessary to restore the angle brackets or ampersand.
+Note that the source code for certain of the example shell scripts
+have the "&lt;" and "&gt;" in place of angle brackets (< and >), or &amp; in
+place of the ampersand (&). This is necessary for the Docbook SGML
+conversion. If you plan to run these scripts from the enclosed source
+files, then it will, of course, be necessary to restore the angle
+brackets or ampersand.
 
                      &lt;           becomes  <
                      &gt;           becomes  >
@@ -14,8 +15,8 @@ course, be necessary to restore the angle brackets or ampersand.
                      &gt;&gt;       becomes  >>
                      &amp;          becomes  &
 
-In some of the below cases, only the comments are affected, and these
-scripts require no fixups to execute as expected.
+In some of the below cases, only the comments are affected, and these scripts
+require no fixups to execute as expected.
 
 
 The following sed scriptlet will accomplish the fixup:
@@ -123,7 +124,8 @@ sw.sh
 here-commsub.sh
          line 5
 
-UseGetOpt.sh: line 4 (comment)  UseGetOpt-2.sh: line 11 (comment)
+UseGetOpt.sh: line 4 (comment)
+UseGetOpt-2.sh: line 11 (comment)
 
 bash64.sh: line 4 (comment)
 

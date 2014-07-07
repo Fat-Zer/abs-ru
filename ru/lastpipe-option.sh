@@ -1,4 +1,5 @@
-#!/bin/bash # lastpipe-option.sh
+#!/bin/bash
+# lastpipe-option.sh
 
 line=''                   # Null value.
 echo "\$line = "$line""   # $line =

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # self-source.sh: a script sourcing itself \"recursively.\" # "
-"From \"Stupid Script Tricks,\" Volume II."
+"#!/bin/bash\n"
+"# self-source.sh: a script sourcing itself \"recursively.\"\n"
+"# From \"Stupid Script Tricks,\" Volume II.\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,18 +33,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:10
+#, no-wrap
 msgid ""
-"echo -n \"$pass_count \" # At first execution pass, this just echoes two "
-"blank spaces, #+ since $pass_count still uninitialized."
+"echo -n  \"$pass_count  \"\n"
+"#  At first execution pass, this just echoes two blank spaces,\n"
+"#+ since $pass_count still uninitialized.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:17
+#, no-wrap
 msgid ""
-"let \"pass_count += 1\" # Assumes the uninitialized variable $pass_count #+ "
-"can be incremented the first time around.  # This works with Bash and pdksh, "
-"but #+ it relies on non-portable (and possibly dangerous) behavior.  # "
-"Better would be to initialize $pass_count to 0 before incrementing."
+"let \"pass_count += 1\"\n"
+"#  Assumes the uninitialized variable $pass_count\n"
+"#+ can be incremented the first time around.\n"
+"#  This works with Bash and pdksh, but\n"
+"#+ it relies on non-portable (and possibly dangerous) behavior.\n"
+"#  Better would be to initialize $pass_count to 0 before incrementing.\n"
 msgstr ""
 
 #. type: Plain text
@@ -58,17 +65,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:32
+#, no-wrap
 msgid ""
-"# What occurs here is not actually recursion, #+ since the script "
-"effectively \"expands\" itself, i.e., #+ generates a new section of code #+ "
-"with each pass through the 'while' loop', # with each 'source' in line 20.  "
-"# # Of course, the script interprets each newly 'sourced' \"#!\" line #+ as "
-"a comment, and not as the start of a new script."
+"#  What occurs here is not actually recursion,\n"
+"#+ since the script effectively \"expands\" itself, i.e.,\n"
+"#+ generates a new section of code\n"
+"#+ with each pass through the 'while' loop',\n"
+"#  with each 'source' in line 20.\n"
+"#\n"
+"#  Of course, the script interprets each newly 'sourced' \"#!\" line\n"
+"#+ as a comment, and not as the start of a new script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:34
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -81,7 +93,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-source.sh:40
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Write a script that uses this trick to actually do "
-"something useful."
+"# Exercise:\n"
+"# --------\n"
+"# Write a script that uses this trick to actually do something useful.\n"
 msgstr ""

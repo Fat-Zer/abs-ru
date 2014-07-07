@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # random2.sh: Returns a pseudorandom number in the range 0 - 1, "
-"#+ to 6 decimal places. For example: 0.822725 # Uses the awk rand() "
-"function."
+"#!/bin/bash\n"
+"#  random2.sh: Returns a pseudorandom number in the range 0 - 1,\n"
+"#+ to 6 decimal places. For example: 0.822725\n"
+"#  Uses the awk rand() function.\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,22 +37,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:12
-msgid "echo -n \"Random number between 0 and 1 = \""
+#, no-wrap
+msgid "echo -n \"Random number between 0 and 1 = \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:15
-msgid "echo | awk \"$AWKSCRIPT\" # What happens if you leave out the 'echo'?"
+#, no-wrap
+msgid ""
+"echo | awk \"$AWKSCRIPT\"\n"
+"# What happens if you leave out the 'echo'?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:17
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:21
-msgid "# Exercises: # ---------"
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,5 +83,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random2.sh:29
-msgid "# 3) Same as exercise #2, above, but generate random integers this time."
+#, no-wrap
+msgid "# 3) Same as exercise #2, above, but generate random integers this time.\n"
 msgstr ""

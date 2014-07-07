@@ -1,14 +1,20 @@
-#!/bin/bash # twodim.sh: Simulating a two-dimensional array.
+#!/bin/bash
+# twodim.sh: Simulating a two-dimensional array.
 
-# A one-dimensional array consists of a single row.  # A two-dimensional
-array stores rows sequentially.
+# A one-dimensional array consists of a single row.
+# A two-dimensional array stores rows sequentially.
 
-Rows=5 Columns=5 # 5 X 5 Array.
+Rows=5
+Columns=5
+# 5 X 5 Array.
 
 declare -a alpha     # char alpha [Rows] [Columns];
                      # Unnecessary declaration. Why?
 
-load_alpha ()  { local rc=0 local index
+load_alpha ()
+{
+local rc=0
+local index
 
 for i in A B C D E F G H I J K L M N O P Q R S T U V W X Y
 do     # Use different symbols if you like.
@@ -25,7 +31,10 @@ done
 #+ but this somehow lacks the "flavor" of a two-dimensional array.
 }
 
-print_alpha ()  { local row=0 local index
+print_alpha ()
+{
+local row=0
+local index
 
 echo
 
@@ -46,12 +55,13 @@ do                             #+ columns vary,
   let "row += 1"
   echo
 
-done
+done  
 
 # The simpler equivalent is
 #     echo ${alpha[*]} | xargs -n $Columns
 
-echo }
+echo
+}
 
 filter ()     # Filter out negative array indices.
 {
@@ -98,12 +108,13 @@ for (( row = Rows; row > -Rows; row-- ))
 
   echo; echo
 
-done
+done 
 
-# Array rotation inspired by examples (pp. 143-146) in #+ "Advanced C
-Programming on the IBM PC," by Herbert Mayer #+ (see bibliography).  # This
-just goes to show that much of what can be done in C #+ can also be done in
-shell scripting.
+#  Array rotation inspired by examples (pp. 143-146) in
+#+ "Advanced C Programming on the IBM PC," by Herbert Mayer
+#+ (see bibliography).
+#  This just goes to show that much of what can be done in C
+#+ can also be done in shell scripting.
 
 }
 

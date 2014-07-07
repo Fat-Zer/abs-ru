@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:4
-msgid "#!/bin/bash # Script by Juan Nicolas Ruiz # Used with his kind permission."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Script by Juan Nicolas Ruiz\n"
+"# Used with his kind permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:6
-msgid "# Setting up (and stopping) a GRE tunnel."
+#, no-wrap
+msgid "# Setting up (and stopping) a GRE tunnel.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:9
-msgid "# --- start-tunnel.sh ---"
+#, no-wrap
+msgid "# --- start-tunnel.sh ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:14
+#, no-wrap
 msgid ""
-"LOCAL_IP=\"192.168.1.17\" REMOTE_IP=\"10.0.5.33\" "
-"OTHER_IFACE=\"192.168.0.100\" REMOTE_NET=\"192.168.3.0/24\""
+"LOCAL_IP=\"192.168.1.17\"\n"
+"REMOTE_IP=\"10.0.5.33\"\n"
+"OTHER_IFACE=\"192.168.0.100\"\n"
+"REMOTE_NET=\"192.168.3.0/24\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,27 +60,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:22
-msgid "exit 0 #############################################"
+#, no-wrap
+msgid "exit 0  #############################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:24
-msgid "# --- stop-tunnel.sh ---"
+#, no-wrap
+msgid "# --- stop-tunnel.sh ---\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:26
-msgid "REMOTE_NET=\"192.168.3.0/24\""
+#, no-wrap
+msgid "REMOTE_NET=\"192.168.3.0/24\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:30
+#, no-wrap
 msgid ""
-"/sbin/ip route del $REMOTE_NET dev netb /sbin/ip link set netb down /sbin/ip "
-"tunnel del netb"
+"/sbin/ip route del $REMOTE_NET dev netb\n"
+"/sbin/ip link set netb down\n"
+"/sbin/ip tunnel del netb\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ip.sh:31
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

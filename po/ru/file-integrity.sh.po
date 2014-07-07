@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,12 +27,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:7
-msgid "E_DIR_NOMATCH=80 E_BAD_DBFILE=81"
+#, no-wrap
+msgid ""
+"E_DIR_NOMATCH=80\n"
+"E_BAD_DBFILE=81\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:10
-msgid "dbfile=File_record.md5 # Filename for storing records (database file)."
+#, no-wrap
+msgid ""
+"dbfile=File_record.md5\n"
+"# Filename for storing records (database file).\n"
 msgstr ""
 
 #. type: Plain text
@@ -156,12 +162,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:81
-msgid "}"
+#, no-wrap
+msgid "}  \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:84
-msgid "# =================================================== # # main ()"
+#, no-wrap
+msgid ""
+"# =================================================== #\n"
+"# main ()\n"
 msgstr ""
 
 #. type: Plain text
@@ -207,24 +217,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:107
-msgid "echo"
+#, no-wrap
+msgid "echo \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:110
+#, no-wrap
 msgid ""
-"# You may wish to redirect the stdout of this script to a file, #+ "
-"especially if the directory checked has many files in it."
+"#  You may wish to redirect the stdout of this script to a file,\n"
+"#+ especially if the directory checked has many files in it.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:112
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-integrity.sh:115
+#, no-wrap
 msgid ""
-"# For a much more thorough file integrity check, #+ consider the "
-"\"Tripwire\" package, #+ http://sourceforge.net/projects/tripwire/."
+"#  For a much more thorough file integrity check,\n"
+"#+ consider the \"Tripwire\" package,\n"
+"#+ http://sourceforge.net/projects/tripwire/.\n"
 msgstr ""

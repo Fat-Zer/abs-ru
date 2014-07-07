@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-demo.sh:4
-msgid "#!/bin/bash # recursion-demo.sh # Demonstration of recursion."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# recursion-demo.sh\n"
+"# Demonstration of recursion.\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,10 +57,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-demo.sh:21
-msgid "recurse $RECURSIONS"
+#, no-wrap
+msgid "recurse $RECURSIONS\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-demo.sh:22
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

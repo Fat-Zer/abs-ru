@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:5
+#, no-wrap
 msgid ""
-"# Generates a log file in current directory # from the tail end of "
-"/var/log/messages."
+"# Generates a log file in current directory\n"
+"# from the tail end of /var/log/messages.\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,36 +41,50 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:11
-msgid "LINES=5"
+#, no-wrap
+msgid "LINES=5\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:18
+#, no-wrap
 msgid ""
-"( date; uname -a ) >>logfile # Time and machine name echo "
-"---------------------------------------------------------- >>logfile tail -n "
-"$LINES /var/log/messages | xargs | fmt -s >>logfile echo >>logfile echo "
-">>logfile"
+"( date; uname -a ) >>logfile\n"
+"# Time and machine name\n"
+"echo ---------------------------------------------------------- >>logfile\n"
+"tail -n $LINES /var/log/messages | xargs | fmt -s >>logfile\n"
+"echo >>logfile\n"
+"echo >>logfile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:20
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:29
+#, no-wrap
 msgid ""
-"# Note: # ---- # As Frank Wang points out, #+ unmatched quotes (either "
-"single or double quotes) in the source file #+ may give xargs indigestion.  "
-"# # He suggests the following substitution for line 15: # tail -n $LINES "
-"/var/log/messages | tr -d \"\\\"'\" | xargs | fmt -s >>logfile"
+"#  Note:\n"
+"#  ----\n"
+"#  As Frank Wang points out,\n"
+"#+ unmatched quotes (either single or double quotes) in the source file\n"
+"#+ may give xargs indigestion.\n"
+"#\n"
+"#  He suggests the following substitution for line 15:\n"
+"#  tail -n $LINES /var/log/messages | tr -d \"\\\"'\" | xargs | fmt -s "
+">>logfile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex41.sh:36
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Modify this script to track changes in "
-"/var/log/messages at intervals #+ of 20 minutes.  # Hint: Use the \"watch\" "
-"command."
+"#  Exercise:\n"
+"#  --------\n"
+"#  Modify this script to track changes in /var/log/messages at intervals\n"
+"#+ of 20 minutes.\n"
+"#  Hint: Use the \"watch\" command. \n"
 msgstr ""

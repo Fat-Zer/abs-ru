@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-function.sh:3
-msgid "#!/bin/bash # here-function.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# here-function.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,19 +41,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-function.sh:24
+#, no-wrap
 msgid ""
-"# Supply input to the above function.  GetPersonalData &lt;&lt;RECORD001 "
-"Bozo Bozeman 2726 Nondescript Dr.  Bozeman MT 21226 RECORD001"
+"# Supply input to the above function.\n"
+"GetPersonalData &lt;&lt;RECORD001\n"
+"Bozo\n"
+"Bozeman\n"
+"2726 Nondescript Dr.\n"
+"Bozeman\n"
+"MT\n"
+"21226\n"
+"RECORD001\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-function.sh:31
+#, no-wrap
 msgid ""
-"echo echo \"$firstname $lastname\" echo \"$address\" echo \"$city, $state "
-"$zipcode\" echo"
+"echo\n"
+"echo \"$firstname $lastname\"\n"
+"echo \"$address\"\n"
+"echo \"$city, $state $zipcode\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/here-function.sh:32
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

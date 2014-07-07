@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/BashExtraKeys.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # Author: Sigurd Solaas, 20 Apr 2011 # Used in ABS Guide with "
-"permission.  # Requires version 4.2+ of Bash."
+"#!/bin/bash\n"
+"# Author: Sigurd Solaas, 20 Apr 2011\n"
+"# Used in ABS Guide with permission.\n"
+"# Requires version 4.2+ of Bash.\n"
 msgstr ""
 
 #. type: Plain text
@@ -149,10 +152,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/BashExtraKeys.sh:101
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/BashExtraKeys.sh:102
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

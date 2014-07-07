@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,45 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:6
+#, no-wrap
 msgid ""
-"#!/bin/bash # brownian.sh # Author: Mendel Cooper # Reldate: 10/26/07 # "
-"License: GPL3"
+"#!/bin/bash\n"
+"# brownian.sh\n"
+"# Author: Mendel Cooper\n"
+"# Reldate: 10/26/07\n"
+"# License: GPL3\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:12
+#, no-wrap
 msgid ""
-"# ---------------------------------------------------------------- # This "
-"script models Brownian motion: #+ the random wanderings of tiny particles in "
-"a fluid, #+ as they are buffeted by random currents and collisions.  #+ This "
-"is colloquially known as the \"Drunkard's Walk.\""
+"#  ----------------------------------------------------------------\n"
+"#  This script models Brownian motion:\n"
+"#+ the random wanderings of tiny particles in a fluid,\n"
+"#+ as they are buffeted by random currents and collisions.\n"
+"#+ This is colloquially known as the \"Drunkard's Walk.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:28
+#, no-wrap
 msgid ""
-"# It can also be considered as a stripped-down simulation of a #+ Galton "
-"Board, a slanted board with a pattern of pegs, #+ down which rolls a "
-"succession of marbles, one at a time.  #+ At the bottom is a row of slots or "
-"catch basins in which #+ the marbles come to rest at the end of their "
-"journey.  # Think of it as a kind of bare-bones Pachinko game.  # As you see "
-"by running the script, #+ most of the marbles cluster around the center "
-"slot.  #+ This is consistent with the expected binomial distribution.  # As "
-"a Galton Board simulation, the script #+ disregards such parameters as #+ "
-"board tilt-angle, rolling friction of the marbles, #+ angles of impact, and "
-"elasticity of the pegs.  # To what extent does this affect the accuracy of "
-"the simulation? # "
-"----------------------------------------------------------------"
+"#  It can also be considered as a stripped-down simulation of a\n"
+"#+ Galton Board, a slanted board with a pattern of pegs,\n"
+"#+ down which rolls a succession of marbles, one at a time.\n"
+"#+ At the bottom is a row of slots or catch basins in which\n"
+"#+ the marbles come to rest at the end of their journey.\n"
+"#  Think of it as a kind of bare-bones Pachinko game.\n"
+"#  As you see by running the script,\n"
+"#+ most of the marbles cluster around the center slot.\n"
+"#+ This is consistent with the expected binomial distribution.\n"
+"#  As a Galton Board simulation, the script\n"
+"#+ disregards such parameters as\n"
+"#+ board tilt-angle, rolling friction of the marbles,\n"
+"#+ angles of impact, and elasticity of the pegs.\n"
+"#  To what extent does this affect the accuracy of the simulation?\n"
+"#  ----------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -154,7 +164,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:92
-msgid "# echo -n \"$POS \""
+#, no-wrap
+msgid "# echo -n \"$POS \"\n"
 msgstr ""
 
 #. type: Plain text
@@ -180,12 +191,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:113
-msgid "# -------------- # main ()  Initialize_Slots Run Show_Slots # --------------"
+#, no-wrap
+msgid ""
+"# --------------\n"
+"# main ()\n"
+"Initialize_Slots\n"
+"Run\n"
+"Show_Slots\n"
+"# --------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/brownian.sh:115
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

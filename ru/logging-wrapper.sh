@@ -1,5 +1,7 @@
-#!/bin/bash # logging-wrapper.sh # Generic shell wrapper that performs an
-operation #+ and logs it.
+#!/bin/bash
+#  logging-wrapper.sh
+#  Generic shell wrapper that performs an operation
+#+ and logs it.
 
 DEFAULT_LOGFILE=logfile.txt
 
@@ -18,7 +20,10 @@ fi
 OPTIONS="$@"
 
 
-# Log it.  echo "`date` + `whoami` + $OPERATION "$@"" >> $LOGFILE # Now, do
-it.  exec $OPERATION "$@"
+# Log it.
+echo "`date` + `whoami` + $OPERATION "$@"" >> $LOGFILE
+# Now, do it.
+exec $OPERATION "$@"
 
-# It's necessary to do the logging before the operation.  # Why?
+# It's necessary to do the logging before the operation.
+# Why?

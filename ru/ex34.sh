@@ -1,11 +1,15 @@
-#!/bin/bash # ex34.sh # Script "set-test"
+#!/bin/bash
+# ex34.sh
+# Script "set-test"
 
-# Invoke this script with three command-line parameters, # for example, "sh
-ex34.sh one two three".
+# Invoke this script with three command-line parameters,
+# for example, "sh ex34.sh one two three".
 
-echo echo "Positional parameters before set \`uname -a\` :" echo
-"Command-line argument #1 = $1" echo "Command-line argument #2 = $2" echo
-"Command-line argument #3 = $3"
+echo
+echo "Positional parameters before  set \`uname -a\` :"
+echo "Command-line argument #1 = $1"
+echo "Command-line argument #2 = $2"
+echo "Command-line argument #3 = $3"
 
 
 set `uname -a` # Sets the positional parameters to the output

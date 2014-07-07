@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:3
-msgid "#!/bin/bash # Draw-box.sh: Drawing a box using ASCII characters."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Draw-box.sh: Drawing a box using ASCII characters.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:7
+#, no-wrap
 msgid ""
-"# Script by Stefano Palmeri, with minor editing by document author.  # Minor "
-"edits suggested by Jim Angstadt.  # Used in the ABS Guide with permission."
+"# Script by Stefano Palmeri, with minor editing by document author.\n"
+"# Minor edits suggested by Jim Angstadt.\n"
+"# Used in the ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:11
+#, no-wrap
 msgid ""
-"###################################################################### ### "
-"draw_box function doc ###"
+"######################################################################\n"
+"###  draw_box function doc  ###\n"
 msgstr ""
 
 #. type: Plain text
@@ -71,24 +77,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:43
+#, no-wrap
 msgid ""
-"### end of draw_box function doc ### "
-"######################################################################"
+"###  end of draw_box function doc  ### \n"
+"######################################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:45
-msgid "draw_box(){"
+#, no-wrap
+msgid "draw_box(){\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:50
-msgid "#=============# HORZ=\"-\" VERT=\"|\" CORNER_CHAR=\"+\""
+#, no-wrap
+msgid ""
+"#=============#\n"
+"HORZ=\"-\"\n"
+"VERT=\"|\"\n"
+"CORNER_CHAR=\"+\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:54
-msgid "MINARGS=4 E_BADARGS=65 #=============#"
+#, no-wrap
+msgid ""
+"MINARGS=4\n"
+"E_BADARGS=65\n"
+"#=============#\n"
 msgstr ""
 
 #. type: Plain text
@@ -162,7 +179,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:94
-msgid "# start drawing the box"
+#, no-wrap
+msgid "# start drawing the box\n"
 msgstr ""
 
 #. type: Plain text
@@ -259,12 +277,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:144
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Draw-box.sh:147
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Add the option of printing text within the drawn "
-"box."
+"# Exercise:\n"
+"# --------\n"
+"# Add the option of printing text within the drawn box.\n"
 msgstr ""

@@ -1,8 +1,10 @@
-#! /bin/bash # rn.sh
+#! /bin/bash
+# rn.sh
 
-# Very simpleminded filename "rename" utility (based on "lowercase.sh").  #
-# The "ren" utility, by Vladimir Lanin (lanin@csd2.nyu.edu), #+ does a much
-better job of this.
+# Very simpleminded filename "rename" utility (based on "lowercase.sh").
+#
+#  The "ren" utility, by Vladimir Lanin (lanin@csd2.nyu.edu),
+#+ does a much better job of this.
 
 
 ARGS=2
@@ -40,5 +42,7 @@ fi
 exit $?
 
 
-# Exercises: # --------- # What types of files will this not work on? # How
-can this be fixed?
+# Exercises:
+# ---------
+# What types of files will this not work on?
+# How can this be fixed?

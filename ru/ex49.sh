@@ -1,4 +1,5 @@
-#!/bin/bash # Changes a file to all uppercase.
+#!/bin/bash
+# Changes a file to all uppercase.
 
 E_BADARGS=85
 
@@ -20,6 +21,7 @@ tr a-z A-Z &lt;"$1"
 
 exit 0
 
-# Exercise: # Rewrite this script to give the option of changing a file #+
-to *either* upper or lowercase.  # Hint: Use either the "case" or "select"
-command.
+#  Exercise:
+#  Rewrite this script to give the option of changing a file
+#+ to *either* upper or lowercase.
+#  Hint: Use either the "case" or "select" command.

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:7
+#, no-wrap
 msgid ""
-"# Check some of the system's environmental variables.  # This is good "
-"preventative maintenance.  # If, for example, $USER, the name of the person "
-"at the console, is not set, #+ the machine will not recognize you."
+"#  Check some of the system's environmental variables.\n"
+"#  This is good preventative maintenance.\n"
+"#  If, for example, $USER, the name of the person at the console, is not "
+"set,\n"
+"#+ the machine will not recognize you.\n"
 msgstr ""
 
 #. type: Plain text
@@ -48,39 +52,50 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:21
-msgid "# ------------------------------------------------------"
+#, no-wrap
+msgid "# ------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:24
+#, no-wrap
 msgid ""
-"# The ${variablename?} construction can also check #+ for variables set "
-"within the script."
+"#  The ${variablename?} construction can also check\n"
+"#+ for variables set within the script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:30
+#, no-wrap
 msgid ""
-"ThisVariable=Value-of-ThisVariable # Note, by the way, that string variables "
-"may be set #+ to characters disallowed in their names.  : ${ThisVariable?} "
-"echo \"Value of ThisVariable is $ThisVariable\"."
+"ThisVariable=Value-of-ThisVariable\n"
+"#  Note, by the way, that string variables may be set\n"
+"#+ to characters disallowed in their names.\n"
+": ${ThisVariable?}\n"
+"echo \"Value of ThisVariable is $ThisVariable\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:32
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:37
+#, no-wrap
 msgid ""
-": ${ZZXy23AB?\"ZZXy23AB has not been set.\"} # Since ZZXy23AB has not been "
-"set, #+ then the script terminates with an error message."
+": ${ZZXy23AB?\"ZZXy23AB has not been set.\"}\n"
+"#  Since ZZXy23AB has not been set,\n"
+"#+ then the script terminates with an error message.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:40
-msgid "# You can specify the error message.  # : ${variablename?\"ERROR MESSAGE\"}"
+#, no-wrap
+msgid ""
+"# You can specify the error message.\n"
+"# : ${variablename?\"ERROR MESSAGE\"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -96,14 +111,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:49
+#, no-wrap
 msgid ""
-"# Compare these methods of checking whether a variable has been set #+ with "
-"\"set -u\" . . ."
+"#  Compare these methods of checking whether a variable has been set\n"
+"#+ with \"set -u\" . . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:53
-msgid "echo \"You will not see this message, because script already terminated.\""
+#, no-wrap
+msgid "echo \"You will not see this message, because script already terminated.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -116,5 +133,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex6.sh:57
-msgid "# In fact, this script will return an exit status (echo $?) of 1."
+#, no-wrap
+msgid "# In fact, this script will return an exit status (echo $?) of 1.\n"
 msgstr ""

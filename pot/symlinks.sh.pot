@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:3
-msgid "#!/bin/bash # symlinks.sh: Lists symbolic links in a directory."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# symlinks.sh: Lists symbolic links in a directory.\n"
 msgstr ""
 
 #. type: Plain text
@@ -43,7 +46,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:21
-msgid "echo \"symbolic links in directory \\\"$directory\\\"\""
+#, no-wrap
+msgid "echo \"symbolic links in directory \\\"$directory\\\"\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,29 +67,36 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:34
+#, no-wrap
 msgid ""
-"# As Dominik 'Aeneas' Schnitzer points out, #+ failing to quote $( find "
-"$directory -type l )  #+ will choke on filenames with embedded whitespace.  "
-"# containing whitespace."
+"#  As Dominik 'Aeneas' Schnitzer points out,\n"
+"#+ failing to quote  $( find $directory -type l )\n"
+"#+ will choke on filenames with embedded whitespace.\n"
+"#  containing whitespace. \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:36
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:40
+#, no-wrap
 msgid ""
-"# -------------------------------------------------------- # Jean Helou "
-"proposes the following alternative:"
+"# --------------------------------------------------------\n"
+"# Jean Helou proposes the following alternative:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:45
+#, no-wrap
 msgid ""
-"echo \"symbolic links in directory \\\"$directory\\\"\" # Backup of the "
-"current IFS. One can never be too cautious.  OLDIFS=$IFS IFS=:"
+"echo \"symbolic links in directory \\\"$directory\\\"\"\n"
+"# Backup of the current IFS. One can never be too cautious.\n"
+"OLDIFS=$IFS\n"
+"IFS=:\n"
 msgstr ""
 
 #. type: Plain text
@@ -100,7 +111,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:52
-msgid "# And, James \"Mike\" Conley suggests modifying Helou's code thusly:"
+#, no-wrap
+msgid "# And, James \"Mike\" Conley suggests modifying Helou's code thusly:\n"
 msgstr ""
 
 #. type: Plain text
@@ -117,8 +129,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/symlinks.sh:64
+#, no-wrap
 msgid ""
-"# This works in the \"pathological\" case of a directory name having #+ an "
-"embedded colon.  # \"This also fixes the pathological case of the directory "
-"name having #+ a colon (or space in earlier example) as well.\""
+"#  This works in the \"pathological\" case of a directory name having\n"
+"#+ an embedded colon.\n"
+"#  \"This also fixes the pathological case of the directory name having\n"
+"#+  a colon (or space in earlier example) as well.\"\n"
 msgstr ""

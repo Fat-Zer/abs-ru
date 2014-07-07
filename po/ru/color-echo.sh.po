@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:3
-msgid "#!/bin/bash # color-echo.sh: Echoing text messages in color."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# color-echo.sh: Echoing text messages in color.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:6
+#, no-wrap
 msgid ""
-"# Modify this script for your own purposes.  # It's easier than hand-coding "
-"color."
+"# Modify this script for your own purposes.\n"
+"# It's easier than hand-coding color.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:15
+#, no-wrap
 msgid ""
-"black='\\E[30;47m' red='\\E[31;47m' green='\\E[32;47m' yellow='\\E[33;47m' "
-"blue='\\E[34;47m' magenta='\\E[35;47m' cyan='\\E[36;47m' white='\\E[37;47m'"
+"black='\\E[30;47m'\n"
+"red='\\E[31;47m'\n"
+"green='\\E[32;47m'\n"
+"yellow='\\E[33;47m'\n"
+"blue='\\E[34;47m'\n"
+"magenta='\\E[35;47m'\n"
+"cyan='\\E[36;47m'\n"
+"white='\\E[37;47m'\n"
 msgstr ""
 
 #. type: Plain text
@@ -104,17 +115,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:57
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:59
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/color-echo.sh:63
+#, no-wrap
 msgid ""
-"# Exercises: # --------- # 1) Add the \"bold\" attribute to the 'cecho ()' "
-"function.  # 2) Add options for colored backgrounds."
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Add the \"bold\" attribute to the 'cecho ()' function.\n"
+"# 2) Add options for colored backgrounds.\n"
 msgstr ""

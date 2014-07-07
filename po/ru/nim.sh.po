@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:3
-msgid "#!/bin/bash # nim.sh: Game of Nim"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# nim.sh: Game of Nim\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:7
-msgid "# Author: Mendel Cooper # Reldate: 15 July 2008 # License: GPL3"
+#, no-wrap
+msgid ""
+"# Author: Mendel Cooper\n"
+"# Reldate: 15 July 2008\n"
+"# License: GPL3\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,9 +71,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:31
+#, no-wrap
 msgid ""
-"Nim is a game with roots in the distant past.  This particular variant "
-"starts with five rows of pegs."
+"Nim is a game with roots in the distant past.\n"
+"This particular variant starts with five rows of pegs.\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,33 +90,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:39
-msgid "The number at the left identifies the row."
+#, no-wrap
+msgid "The number at the left identifies the row.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:45
+#, no-wrap
 msgid ""
-"The human player moves first, and alternates turns with the bot.  A turn "
-"consists of removing at least one peg from a single row.  It is permissable "
-"to remove ALL the pegs from a row.  For example, in row 2, above, the player "
-"can remove 1, 2, 3, or 4 pegs.  The player who removes the last peg loses."
+"The human player moves first, and alternates turns with the bot.\n"
+"A turn consists of removing at least one peg from a single row.\n"
+"It is permissable to remove ALL the pegs from a row.\n"
+"For example, in row 2, above, the player can remove 1, 2, 3, or 4 pegs.\n"
+"The player who removes the last peg loses.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:48
+#, no-wrap
 msgid ""
-"The strategy consists of trying to be the one who removes the next-to-last "
-"peg(s), leaving the loser with the final peg."
+"The strategy consists of trying to be the one who removes\n"
+"the next-to-last peg(s), leaving the loser with the final peg.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:51
-msgid "To exit the game early, hit ENTER during your turn.  INSTRUCTIONS"
+#, no-wrap
+msgid ""
+"To exit the game early, hit ENTER during your turn.\n"
+"INSTRUCTIONS\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:53
-msgid "echo; echo -n \"Hit ENTER to begin game. \"; read azx"
+#, no-wrap
+msgid "echo; echo -n \"Hit ENTER to begin game. \"; read azx\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,12 +138,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:59
-msgid "clear"
+#, no-wrap
+msgid "clear\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:61 abs-guide/nim.sh:248
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -246,7 +264,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:123
-msgid "player_move ()  {"
+#, no-wrap
+msgid ""
+"player_move ()\n"
+"{\n"
 msgstr ""
 
 #. type: Plain text
@@ -384,7 +405,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:203
-msgid "bot_move ()  {"
+#, no-wrap
+msgid ""
+"bot_move ()\n"
+"{\n"
 msgstr ""
 
 #. type: Plain text
@@ -484,18 +508,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:268
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Improve the bot's strategy.  # There is, in fact, a "
-"Nim strategy that can force a win.  # See the Wikipedia article on Nim: "
-"http://en.wikipedia.org/wiki/Nim # Recode the bot to use this strategy "
-"(rather difficult)."
+"# Exercise:\n"
+"# --------\n"
+"# Improve the bot's strategy.\n"
+"# There is, in fact, a Nim strategy that can force a win.\n"
+"# See the Wikipedia article on Nim:  http://en.wikipedia.org/wiki/Nim\n"
+"# Recode the bot to use this strategy (rather difficult).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nim.sh:275
+#, no-wrap
 msgid ""
-"# Curiosities: # ----------- # Nim played a prominent role in Alain Resnais' "
-"1961 New Wave film, #+ Last Year at Marienbad.  # # In 1978, Leo "
-"Christopherson wrote an animated version of Nim, #+ Android Nim, for the "
-"TRS-80 Model I."
+"#  Curiosities:\n"
+"#  -----------\n"
+"#  Nim played a prominent role in Alain Resnais' 1961 New Wave film,\n"
+"#+ Last Year at Marienbad.\n"
+"#\n"
+"#  In 1978, Leo Christopherson wrote an animated version of Nim,\n"
+"#+ Android Nim, for the TRS-80 Model I.\n"
 msgstr ""

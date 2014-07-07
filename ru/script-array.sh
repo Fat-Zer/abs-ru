@@ -1,5 +1,6 @@
-#!/bin/bash # script-array.sh: Loads this script into an array.  # Inspired
-by an e-mail from Chris Martin (thanks!).
+#!/bin/bash
+# script-array.sh: Loads this script into an array.
+# Inspired by an e-mail from Chris Martin (thanks!).
 
 script_contents=( $(cat "$0") )  #  Stores contents of this script ($0)
                                  #+ in an array.
@@ -21,5 +22,8 @@ echo
 
 exit 0
 
-# Exercise: # -------- # Modify this script so it lists itself #+ in its
-original format, #+ complete with whitespace, line breaks, etc.
+# Exercise:
+# --------
+#  Modify this script so it lists itself
+#+ in its original format,
+#+ complete with whitespace, line breaks, etc.

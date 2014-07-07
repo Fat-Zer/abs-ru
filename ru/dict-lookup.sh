@@ -1,11 +1,15 @@
-#!/bin/bash # dict-lookup.sh
+#!/bin/bash
+# dict-lookup.sh
 
-# This script looks up definitions in the 1913 Webster's Dictionary.  # This
-Public Domain dictionary is available for download #+ from various sites,
-including #+ Project Gutenberg (http://www.gutenberg.org/etext/247).  # #
-Convert it from DOS to UNIX format (with only LF at end of line)  #+ before
-using it with this script.  # Store the file in plain, uncompressed ASCII
-text.  # Set DEFAULT_DICTFILE variable below to path/filename.
+#  This script looks up definitions in the 1913 Webster's Dictionary.
+#  This Public Domain dictionary is available for download
+#+ from various sites, including
+#+ Project Gutenberg (http://www.gutenberg.org/etext/247).
+#
+#  Convert it from DOS to UNIX format (with only LF at end of line)
+#+ before using it with this script.
+#  Store the file in plain, uncompressed ASCII text.
+#  Set DEFAULT_DICTFILE variable below to path/filename.
 
 
 E_BADARGS=85
@@ -55,10 +59,14 @@ Definition=$(fgrep -A $MAXCONTEXTLINES "$1 \\" "$dictfile")
 
 # Now, snip out just the definition block.
 
-echo "$Definition" | sed -n '1,/^[A-Z]/p' | # Print from first line of
-output #+ to the first line of the next entry.  sed '$d' | sed '$d' # Delete
-last two lines of output #+ (blank line and first line of next entry).  #
----------------------------------------------------------
+echo "$Definition" |
+sed -n '1,/^[A-Z]/p' |
+#  Print from first line of output
+#+ to the first line of the next entry.
+sed '$d' | sed '$d'
+#  Delete last two lines of output
+#+ (blank line and first line of next entry).
+# ---------------------------------------------------------
 
 exit $?
 

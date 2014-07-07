@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:3
-msgid "#!/bin/bash # tree2.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# tree2.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:6
+#, no-wrap
 msgid ""
-"# Lightly modified/reformatted by ABS Guide author.  # Included in ABS Guide "
-"with permission of script author (thanks!)."
+"# Lightly modified/reformatted by ABS Guide author.\n"
+"# Included in ABS Guide with permission of script author (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:15
+#, no-wrap
 msgid ""
-"## Recursive file/dirsize checking script, by Patsie ## ## This script "
-"builds a list of files/directories and their size (du -akx)  ## and "
-"processes this list to a human readable tree shape ## The 'du -akx' is only "
-"as good as the permissions the owner has.  ## So preferably run as root* to "
-"get the best results, or use only on ## directories for which you have read "
-"permissions. Anything you can't ## read is not in the list."
+"## Recursive file/dirsize checking script, by Patsie\n"
+"##\n"
+"## This script builds a list of files/directories and their size (du -akx)\n"
+"## and processes this list to a human readable tree shape\n"
+"## The 'du -akx' is only as good as the permissions the owner has.\n"
+"## So preferably run as root* to get the best results, or use only on\n"
+"## directories for which you have read permissions. Anything you can't\n"
+"## read is not in the list.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:17
-msgid "#* ABS Guide author advises caution when running scripts as root!"
+#, no-wrap
+msgid "#* ABS Guide author advises caution when running scripts as root!\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:20
-msgid "########## THIS IS CONFIGURABLE ##########"
+#, no-wrap
+msgid "##########  THIS IS CONFIGURABLE  ##########\n"
 msgstr ""
 
 #. type: Plain text
@@ -61,7 +70,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:28
-msgid "########## DON'T CHANGE ANYTHING BELOW THIS LINE ##########"
+#, no-wrap
+msgid "##########  DON'T CHANGE ANYTHING BELOW THIS LINE  ##########\n"
 msgstr ""
 
 #. type: Plain text
@@ -202,5 +212,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree2.sh:105
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

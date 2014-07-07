@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:3
-msgid "#!/bin/bash # exercising-dd.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# exercising-dd.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:6
-msgid "# Script by Stephane Chazelas.  # Somewhat modified by ABS Guide author."
+#, no-wrap
+msgid ""
+"# Script by Stephane Chazelas.\n"
+"# Somewhat modified by ABS Guide author.\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,25 +44,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:14
+#, no-wrap
 msgid ""
-"dd if=$infile of=$outfile bs=1 skip=$((n-1)) count=$((p-n+1)) 2> /dev/null # "
-"Extracts characters n to p (8 to 11) from this script (\"bash\")."
+"dd if=$infile of=$outfile bs=1 skip=$((n-1)) count=$((p-n+1)) 2> /dev/null\n"
+"# Extracts characters n to p (8 to 11) from this script (\"bash\").\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:16
-msgid "# ----------------------------------------------------------------"
+#, no-wrap
+msgid "# ----------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:20
+#, no-wrap
 msgid ""
-"echo -n \"hello vertical world\" | dd cbs=1 conv=unblock 2> /dev/null # "
-"Echoes \"hello vertical world\" vertically downward.  # Why? A newline "
-"follows each character dd emits."
+"echo -n \"hello vertical world\" | dd cbs=1 conv=unblock 2> /dev/null\n"
+"# Echoes \"hello vertical world\" vertically downward.\n"
+"# Why? A newline follows each character dd emits.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/exercising-dd.sh:21
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

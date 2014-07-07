@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:3
-msgid "#!/bin/bash # gronsfeld.bash"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# gronsfeld.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:6
-msgid "# License: GPL3 # Reldate 06/23/11"
+#, no-wrap
+msgid ""
+"# License: GPL3\n"
+"# Reldate 06/23/11\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:15
+#, no-wrap
 msgid ""
-"# This is an implementation of the Gronsfeld Cipher.  # It's essentially a "
-"stripped-down variant of the #+ polyalphabetic Vigen&egrave;re Tableau, but "
-"with only 10 alphabets.  # The classic Gronsfeld has a numeric sequence as "
-"the key word, #+ but here we substitute a letter string, for ease of use.  # "
-"Allegedly, this cipher was invented by the eponymous Count Gronsfeld #+ in "
-"the 17th Century. It was at one time considered to be unbreakable.  # Note "
-"that this is ###not### a secure cipher by modern standards."
+"#  This is an implementation of the Gronsfeld Cipher.\n"
+"#  It's essentially a stripped-down variant of the \n"
+"#+ polyalphabetic Vigen&egrave;re Tableau, but with only 10 alphabets.\n"
+"#  The classic Gronsfeld has a numeric sequence as the key word,\n"
+"#+ but here we substitute a letter string, for ease of use.\n"
+"#  Allegedly, this cipher was invented by the eponymous Count Gronsfeld\n"
+"#+ in the 17th Century. It was at one time considered to be unbreakable.\n"
+"#  Note that this is ###not### a secure cipher by modern standards.\n"
 msgstr ""
 
 #. type: Plain text
@@ -158,7 +166,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:82
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
@@ -177,7 +186,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:95
-msgid "# int main () {"
+#, no-wrap
+msgid "# int main () {\n"
 msgstr ""
 
 #. type: Plain text
@@ -216,7 +226,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:116
-msgid "keylen=${#key}"
+#, no-wrap
+msgid "keylen=${#key}\n"
 msgstr ""
 
 #. type: Plain text
@@ -235,10 +246,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/gronsfeld.bash:129
+#, no-wrap
 msgid ""
-"args=$(echo \"$*\" | sed -e 's/ //g' | tr A-Z a-z | sed -e 's/[0-9]//g')  # "
-"Remove whitespace and digits from command-line args.  # Can modify to also "
-"remove punctuation characters, if desired."
+"args=$(echo \"$*\" | sed -e 's/ //g' | tr A-Z a-z | sed -e 's/[0-9]//g')\n"
+"# Remove whitespace and digits from command-line args.\n"
+"# Can modify to also remove punctuation characters, if desired.\n"
 msgstr ""
 
 #. type: Plain text

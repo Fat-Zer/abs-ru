@@ -1,7 +1,8 @@
-#!/bin/bash # de-rpm.sh: Unpack an 'rpm' archive
+#!/bin/bash
+# de-rpm.sh: Unpack an 'rpm' archive
 
-: ${1?"Usage: `basename $0` target-file"} # Must specify 'rpm' archive name
-as an argument.
+: ${1?"Usage: `basename $0` target-file"}
+# Must specify 'rpm' archive name as an argument.
 
 
 TEMPFILE=$$.cpio                         #  Tempfile with "unique" name.

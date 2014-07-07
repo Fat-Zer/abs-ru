@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:3
-msgid "#!/bin/bash # bad-op.sh: Trying to use a string comparison on integers."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# bad-op.sh: Trying to use a string comparison on integers.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:6
-msgid "echo number=1"
+#, no-wrap
+msgid ""
+"echo\n"
+"number=1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:9
+#, no-wrap
 msgid ""
-"# The following while-loop has two errors: #+ one blatant, and the other "
-"subtle."
+"#  The following while-loop has two errors:\n"
+"#+ one blatant, and the other subtle.\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,7 +58,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:21
-msgid "echo \"---------------------\""
+#, no-wrap
+msgid "echo \"---------------------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -67,17 +75,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:29
-msgid "echo; echo \"---------------------\""
+#, no-wrap
+msgid "echo; echo \"---------------------\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:31
-msgid "# This can cause problems. For example:"
+#, no-wrap
+msgid "# This can cause problems. For example:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:34
-msgid "lesser=5 greater=105"
+#, no-wrap
+msgid ""
+"lesser=5\n"
+"greater=105\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,10 +107,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:43
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bad-op.sh:44
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

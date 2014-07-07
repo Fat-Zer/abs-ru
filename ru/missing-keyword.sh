@@ -1,5 +1,6 @@
-#!/bin/bash # missing-keyword.sh # What error message will this script
-generate? And why?
+#!/bin/bash
+# missing-keyword.sh
+# What error message will this script generate? And why?
 
 for a in 1 2 3
 do

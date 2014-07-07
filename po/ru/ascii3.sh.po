@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii3.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # ASCII table script, using awk.  # Author: Joseph Steinhauser # "
-"Used in ABS Guide with permission."
+"#!/bin/bash\n"
+"# ASCII table script, using awk.\n"
+"# Author: Joseph Steinhauser\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,7 +45,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii3.sh:20
-msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob"
+#, no-wrap
+msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,5 +80,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii3.sh:38
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

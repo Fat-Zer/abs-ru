@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:3
-msgid "#!/bin/bash # zmore"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# zmore\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:5
-msgid "# View gzipped files with 'more' filter."
+#, no-wrap
+msgid "# View gzipped files with 'more' filter.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:9
-msgid "E_NOARGS=85 E_NOTFOUND=86 E_NOTGZIP=87"
+#, no-wrap
+msgid ""
+"E_NOARGS=85\n"
+"E_NOTFOUND=86\n"
+"E_NOTGZIP=87\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,7 +55,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:20
-msgid "filename=$1"
+#, no-wrap
+msgid "filename=$1\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,12 +85,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:35
-msgid "zcat $1 | more"
+#, no-wrap
+msgid "zcat $1 | more\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex14.sh:38
-msgid "# Uses the 'more' filter.  # May substitute 'less' if desired."
+#, no-wrap
+msgid ""
+"# Uses the 'more' filter.\n"
+"# May substitute 'less' if desired.\n"
 msgstr ""
 
 #. type: Plain text

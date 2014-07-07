@@ -1,13 +1,18 @@
-#!/bin/bash # Naked variables
+#!/bin/bash
+# Naked variables
 
 echo
 
-# When is a variable "naked", i.e., lacking the '$' in front? # When it is
-being assigned, rather than referenced.
+# When is a variable "naked", i.e., lacking the '$' in front?
+# When it is being assigned, rather than referenced.
 
-# Assignment a=879 echo "The value of \"a\" is $a."
+# Assignment
+a=879
+echo "The value of \"a\" is $a."
 
-# Assignment using 'let' let a=16+5 echo "The value of \"a\" is now $a."
+# Assignment using 'let'
+let a=16+5
+echo "The value of \"a\" is now $a."
 
 echo
 
@@ -18,10 +23,13 @@ do
   echo -n "$a "
 done
 
-echo echo
+echo
+echo
 
-# In a 'read' statement (also a type of assignment): echo -n "Enter \"a\" "
-read a echo "The value of \"a\" is now $a."
+# In a 'read' statement (also a type of assignment):
+echo -n "Enter \"a\" "
+read a
+echo "The value of \"a\" is now $a."
 
 echo
 

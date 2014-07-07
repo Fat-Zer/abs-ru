@@ -1,5 +1,5 @@
-#!/bin/bash # rot13a.sh: Same as "rot13.sh" script, but writes output to
-"secure" file.
+#!/bin/bash
+# rot13a.sh: Same as "rot13.sh" script, but writes output to "secure" file.
 
 # Usage: ./rot13a.sh filename
 # or     ./rot13a.sh &lt;filename

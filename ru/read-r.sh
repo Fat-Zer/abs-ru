@@ -2,9 +2,8 @@
 
 echo
 
-echo "Enter a string terminated by a \\, then press &lt;ENTER&gt;." echo
-"Then, enter a second string (no \\ this time), and again press
-&lt;ENTER&gt;."
+echo "Enter a string terminated by a \\, then press &lt;ENTER&gt;."
+echo "Then, enter a second string (no \\ this time), and again press &lt;ENTER&gt;."
 
 read var1     # The "\" suppresses the newline, when reading $var1.
               #     first line \
@@ -13,8 +12,8 @@ read var1     # The "\" suppresses the newline, when reading $var1.
 echo "var1 = $var1"
 #     var1 = first line second line
 
-# For each line terminated by a "\" #+ you get a prompt on the next line to
-continue feeding characters into var1.
+#  For each line terminated by a "\"
+#+ you get a prompt on the next line to continue feeding characters into var1.
 
 echo; echo
 
@@ -27,6 +26,6 @@ echo "var2 = $var2"
 
 # Data entry terminates with the first &lt;ENTER&gt;.
 
-echo
+echo 
 
 exit 0

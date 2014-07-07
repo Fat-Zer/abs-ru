@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # Script author: Joseph Steinhauser # Lightly edited by ABS "
-"Guide author, but not commented.  # Used in ABS Guide with permission."
+"#!/bin/bash\n"
+"# Script author: Joseph Steinhauser\n"
+"# Lightly edited by ABS Guide author, but not commented.\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,7 +45,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:19
-msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob"
+#, no-wrap
+msgid "[ -n \"$BASH_VERSION\" ] &amp;&amp; shopt -s extglob\n"
 msgstr ""
 
 #. type: Plain text
@@ -60,21 +64,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:29
+#, no-wrap
 msgid ""
 "printf \"\\t\\t## $Obase ASCII Chart ##\\n\\n\"; FM1=\"|%0${Numy:-3d}\"; "
-"LD=-1"
+"LD=-1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:32
+#, no-wrap
 msgid ""
-"AB=\"nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle\" AD=\"dc1 "
-"dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp\""
+"AB=\"nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle\"\n"
+"AD=\"dc1 dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:35
-msgid "for TOK in $AB $AD; do ABR[$((LD+=1))]=$TOK; done; ABR[127]=del"
+#, no-wrap
+msgid ""
+"for TOK in $AB $AD; do ABR[$((LD+=1))]=$TOK; done;\n"
+"ABR[127]=del\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,5 +99,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii2.sh:42
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

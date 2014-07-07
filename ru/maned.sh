@@ -1,19 +1,33 @@
-#!/bin/bash # maned.sh # A rudimentary man page editor
+#!/bin/bash
+# maned.sh
+# A rudimentary man page editor
 
-# Version: 0.1 (Alpha, probably buggy)  # Author: Mendel Cooper
-&lt;thegrendel.abs@gmail.com&gt; # Reldate: 16 June 2008 # License: GPL3
+# Version: 0.1 (Alpha, probably buggy)
+# Author: Mendel Cooper &lt;thegrendel.abs@gmail.com&gt;
+# Reldate: 16 June 2008
+# License: GPL3
 
 
 savefile=      # Global, used in multiple functions.
 E_NOINPUT=90   # User input missing (error). May or may not be critical.
 
-# =========== Markup Tags ============ # TopHeader=".TH" NameHeader=".SH
-NAME" SyntaxHeader=".SH SYNTAX" SynopsisHeader=".SH SYNOPSIS"
-InstallationHeader=".SH INSTALLATION" DescHeader=".SH DESCRIPTION"
-OptHeader=".SH OPTIONS" FilesHeader=".SH FILES" EnvHeader=".SH ENVIRONMENT"
-AuthHeader=".SH AUTHOR" BugsHeader=".SH BUGS" SeeAlsoHeader=".SH SEE ALSO"
-BOLD=".B" # Add more tags, as needed.  # See groff docs for markup
-meanings.  # ==================================== #
+# =========== Markup Tags ============ #
+TopHeader=".TH"
+NameHeader=".SH NAME"
+SyntaxHeader=".SH SYNTAX"
+SynopsisHeader=".SH SYNOPSIS"
+InstallationHeader=".SH INSTALLATION"
+DescHeader=".SH DESCRIPTION"
+OptHeader=".SH OPTIONS"
+FilesHeader=".SH FILES"
+EnvHeader=".SH ENVIRONMENT"
+AuthHeader=".SH AUTHOR"
+BugsHeader=".SH BUGS"
+SeeAlsoHeader=".SH SEE ALSO"
+BOLD=".B"
+# Add more tags, as needed.
+# See groff docs for markup meanings.
+# ==================================== #
 
 start ()
 {
@@ -113,18 +127,22 @@ fill_in "$SeeAlsoHeader" "See also"
 end    # ... exit not needed.
 # ---------------------------------------- #
 
-# Note that the generated man page will usually #+ require manual
-fine-tuning with a text editor.  # However, it's a distinct improvement upon
-#+ writing man source from scratch #+ or even editing a blank man page
-template.
+#  Note that the generated man page will usually
+#+ require manual fine-tuning with a text editor.
+#  However, it's a distinct improvement upon
+#+ writing man source from scratch
+#+ or even editing a blank man page template.
 
-# The main deficiency of the script is that it permits #+ pasting only a
-single text line into the input fields.  # This may be a long,
-cobbled-together line, which groff # will automatically wrap and hyphenate.
-# However, if you want multiple (newline-separated) paragraphs, #+ these
-must be inserted by manual text editing on the #+ script-generated man
-page.  # Exercise (difficult): Fix this!
+#  The main deficiency of the script is that it permits
+#+ pasting only a single text line into the input fields.
+#  This may be a long, cobbled-together line, which groff
+#  will automatically wrap and hyphenate.
+#  However, if you want multiple (newline-separated) paragraphs,
+#+ these must be inserted by manual text editing on the
+#+ script-generated man page.
+#  Exercise (difficult): Fix this!
 
-# This script is not nearly as elaborate as the #+ full-featured "manedit"
-package #+ http://freshmeat.net/projects/manedit/ #+ but it's much easier to
-use.
+#  This script is not nearly as elaborate as the
+#+ full-featured "manedit" package
+#+ http://freshmeat.net/projects/manedit/
+#+ but it's much easier to use.

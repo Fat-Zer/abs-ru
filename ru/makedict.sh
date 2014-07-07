@@ -1,13 +1,17 @@
-#!/bin/bash # makedict.sh [make dictionary]
+#!/bin/bash
+# makedict.sh  [make dictionary]
 
-# Modification of /usr/sbin/mkdict (/usr/sbin/cracklib-forman) script.  #
-Original script copyright 1993, by Alec Muffett.  # # This modified script
-included in this document in a manner #+ consistent with the "LICENSE"
-document of the "Crack" package #+ that the original script is a part of.
+# Modification of /usr/sbin/mkdict (/usr/sbin/cracklib-forman) script.
+# Original script copyright 1993, by Alec Muffett.
+#
+#  This modified script included in this document in a manner
+#+ consistent with the "LICENSE" document of the "Crack" package
+#+ that the original script is a part of.
 
-# This script processes text files to produce a sorted list #+ of words
-found in the files.  # This may be useful for compiling dictionaries #+ and
-for other lexicographic purposes.
+#  This script processes text files to produce a sorted list
+#+ of words found in the files.
+#  This may be useful for compiling dictionaries
+#+ and for other lexicographic purposes.
 
 
 E_BADARGS=85

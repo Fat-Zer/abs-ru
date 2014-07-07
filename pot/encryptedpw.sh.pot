@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:4
-msgid "# Example \"ex72.sh\" modified to use encrypted password."
+#, no-wrap
+msgid "# Example \"ex72.sh\" modified to use encrypted password.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:8
+#, no-wrap
 msgid ""
-"# Note that this is still rather insecure, #+ since the decrypted password "
-"is sent in the clear.  # Use something like \"ssh\" if this is a concern."
+"#  Note that this is still rather insecure,\n"
+"#+ since the decrypted password is sent in the clear.\n"
+"#  Use something like \"ssh\" if this is a concern.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:10
-msgid "E_BADARGS=85"
+#, no-wrap
+msgid "E_BADARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -60,7 +65,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:22
-msgid "Filename=`basename $1` # Strips pathname out of file name."
+#, no-wrap
+msgid "Filename=`basename $1`  # Strips pathname out of file name.\n"
 msgstr ""
 
 #. type: Plain text
@@ -86,14 +92,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:45
+#, no-wrap
 msgid ""
-"ftp -n $Server &lt;&lt;End-Of-Session user $Username $Password binary bell "
-"cd $Directory put $Filename bye End-Of-Session # -n option to \"ftp\" "
-"disables auto-logon.  # Note that \"bell\" rings 'bell' after each file "
-"transfer."
+"ftp -n $Server &lt;&lt;End-Of-Session\n"
+"user $Username $Password\n"
+"binary\n"
+"bell\n"
+"cd $Directory\n"
+"put $Filename\n"
+"bye\n"
+"End-Of-Session\n"
+"# -n option to \"ftp\" disables auto-logon.\n"
+"# Note that \"bell\" rings 'bell' after each file transfer.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/encryptedpw.sh:46
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

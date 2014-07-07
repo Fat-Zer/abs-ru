@@ -1,4 +1,5 @@
-#!/bin/bash # wh-loopc.sh: Count to 10 in a "while" loop.
+#!/bin/bash
+# wh-loopc.sh: Count to 10 in a "while" loop.
 
 LIMIT=10                 # 10 iterations.
 a=1

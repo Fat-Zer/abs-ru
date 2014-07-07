@@ -1,11 +1,17 @@
-#!/bin/bash # progress-bar.sh
+#!/bin/bash
+# progress-bar.sh
 
-# Author: Dotan Barak (very minor revisions by ABS Guide author).  # Used in
-ABS Guide with permission (thanks!).
+# Author: Dotan Barak (very minor revisions by ABS Guide author).
+# Used in ABS Guide with permission (thanks!).
 
 
-BAR_WIDTH=50 BAR_CHAR_START="[" BAR_CHAR_END="]" BAR_CHAR_EMPTY="."
-BAR_CHAR_FULL="=" BRACKET_CHARS=2 LIMIT=100
+BAR_WIDTH=50
+BAR_CHAR_START="["
+BAR_CHAR_END="]"
+BAR_CHAR_EMPTY="."
+BAR_CHAR_FULL="="
+BRACKET_CHARS=2
+LIMIT=100
 
 print_progress_bar()
 {

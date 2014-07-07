@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,72 +18,94 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:3
-msgid "#!/bin/bash # rnd.sh: Outputs a 10-digit random number"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# rnd.sh: Outputs a 10-digit random number\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:5
-msgid "# Script by Stephane Chazelas."
+#, no-wrap
+msgid "# Script by Stephane Chazelas.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:7
-msgid "head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'"
+#, no-wrap
+msgid "head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:10 abs-guide/rnd.sh:78
-msgid "# =================================================================== #"
+#, no-wrap
+msgid "# =================================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:13
-msgid "# Analysis # --------"
+#, no-wrap
+msgid ""
+"# Analysis\n"
+"# --------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:16
-msgid "# head: # -c4 option takes first 4 bytes."
+#, no-wrap
+msgid ""
+"# head:\n"
+"# -c4 option takes first 4 bytes.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:20
+#, no-wrap
 msgid ""
-"# od: # -N4 option limits output to 4 bytes.  # -tu4 option selects unsigned "
-"decimal format for output."
+"# od:\n"
+"# -N4 option limits output to 4 bytes.\n"
+"# -tu4 option selects unsigned decimal format for output.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:24
+#, no-wrap
 msgid ""
-"# sed: # -n option, in combination with \"p\" flag to the \"s\" command, # "
-"outputs only matched lines."
+"# sed: \n"
+"# -n option, in combination with \"p\" flag to the \"s\" command,\n"
+"# outputs only matched lines.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:28
-msgid "# The author of this script explains the action of 'sed', as follows."
+#, no-wrap
+msgid "# The author of this script explains the action of 'sed', as follows.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:31
+#, no-wrap
 msgid ""
-"# head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p' # "
-"----------------------------------> |"
+"# head -c4 /dev/urandom | od -N4 -tu4 | sed -ne '1s/.* //p'\n"
+"# ----------------------------------> |\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:34
-msgid "# Assume output up to \"sed\" --------> | # is 0000000 1198195154\\n"
+#, no-wrap
+msgid ""
+"# Assume output up to \"sed\" --------> |\n"
+"# is 0000000 1198195154\\n\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:39
+#, no-wrap
 msgid ""
-"# sed begins reading characters: 0000000 1198195154\\n.  # Here it finds a "
-"newline character, #+ so it is ready to process the first line (0000000 "
-"1198195154).  # It looks at its &lt;range&gt;&lt;action&gt;s. The first and "
-"only one is"
+"#  sed begins reading characters: 0000000 1198195154\\n.\n"
+"#  Here it finds a newline character,\n"
+"#+ so it is ready to process the first line (0000000 1198195154).\n"
+"#  It looks at its &lt;range&gt;&lt;action&gt;s. The first and only one is\n"
 msgstr ""
 
 #. type: Plain text
@@ -96,36 +118,43 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:48
+#, no-wrap
 msgid ""
-"# The line number is in the range, so it executes the action: #+ tries to "
-"substitute the longest string ending with a space in the line # (\"0000000 "
-"\") with nothing (//), and if it succeeds, prints the result # (\"p\" is a "
-"flag to the \"s\" command here, this is different #+ from the \"p\" "
-"command)."
+"#  The line number is in the range, so it executes the action:\n"
+"#+ tries to substitute the longest string ending with a space in the line\n"
+"#  (\"0000000 \") with nothing (//), and if it succeeds, prints the result\n"
+"#  (\"p\" is a flag to the \"s\" command here, this is different\n"
+"#+ from the \"p\" command).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:52
+#, no-wrap
 msgid ""
-"# sed is now ready to continue reading its input. (Note that before #+ "
-"continuing, if -n option had not been passed, sed would have printed #+ the "
-"line once again)."
+"#  sed is now ready to continue reading its input. (Note that before\n"
+"#+ continuing, if -n option had not been passed, sed would have printed\n"
+"#+ the line once again).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:58
+#, no-wrap
 msgid ""
-"# Now, sed reads the remainder of the characters, and finds the #+ end of "
-"the file.  # It is now ready to process its 2nd line (which is also numbered "
-"'$' as #+ it's the last one).  # It sees it is not matched by any "
-"&lt;range&gt;, so its job is done."
+"#  Now, sed reads the remainder of the characters, and finds the\n"
+"#+ end of the file.\n"
+"#  It is now ready to process its 2nd line (which is also numbered '$' as\n"
+"#+ it's the last one).\n"
+"#  It sees it is not matched by any &lt;range&gt;, so its job is done.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:62
+#, no-wrap
 msgid ""
-"# In few word this sed commmand means: # \"On the first line only, remove "
-"any character up to the right-most space, #+ then print it.\""
+"#  In few word this sed commmand means:\n"
+"#  \"On the first line only, remove any character up to the right-most "
+"space,\n"
+"#+ then print it.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -155,10 +184,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:76
+#, no-wrap
 msgid ""
-"# Here, sed only reads its first line of input.  # It performs both actions, "
-"and prints the line (substituted) before #+ quitting (because of the \"q\" "
-"action) since the \"-n\" option is not passed."
+"#  Here, sed only reads its first line of input.\n"
+"#  It performs both actions, and prints the line (substituted) before\n"
+"#+ quitting (because of the \"q\" action) since the \"-n\" option is not "
+"passed.\n"
 msgstr ""
 
 #. type: Plain text
@@ -171,5 +202,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rnd.sh:82
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

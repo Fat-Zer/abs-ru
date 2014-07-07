@@ -1,4 +1,5 @@
-#!/bin/bash # ramdisk.sh
+#!/bin/bash
+# ramdisk.sh
 
 #  A "ramdisk" is a segment of system RAM memory
 #+ which acts as if it were a filesystem.
@@ -42,18 +43,18 @@ chmod 777 $MOUNTPT             # Enables ordinary user to access ramdisk.
 # Need to test whether above commands succeed. Could cause problems otherwise.
 # Exercise: modify this script to make it safer.
 
-echo "\"$MOUNTPT\" now available for use." # The ramdisk is now accessible
-for storing files, even by an ordinary user.
+echo "\"$MOUNTPT\" now available for use."
+# The ramdisk is now accessible for storing files, even by an ordinary user.
 
-# Caution, the ramdisk is volatile, and its contents will disappear #+ on
-reboot or power loss.  # Copy anything you want saved to a regular
-directory.
+#  Caution, the ramdisk is volatile, and its contents will disappear
+#+ on reboot or power loss.
+#  Copy anything you want saved to a regular directory.
 
-# After reboot, run this script to again set up ramdisk.  # Remounting
-/mnt/ramdisk without the other steps will not work.
+# After reboot, run this script to again set up ramdisk.
+# Remounting /mnt/ramdisk without the other steps will not work.
 
-# Suitably modified, this script can by invoked in /etc/rc.d/rc.local, #+ to
-set up ramdisk automatically at bootup.  # That may be appropriate on, for
-example, a database server.
+#  Suitably modified, this script can by invoked in /etc/rc.d/rc.local,
+#+ to set up ramdisk automatically at bootup.
+#  That may be appropriate on, for example, a database server.
 
 exit 0

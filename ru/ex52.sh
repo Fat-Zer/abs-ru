@@ -1,4 +1,5 @@
-#!/bin/bash # Uudecodes all uuencoded files in current working directory.
+#!/bin/bash
+# Uudecodes all uuencoded files in current working directory.
 
 lines=35        # Allow 35 lines for the header (very generous).
 
@@ -18,10 +19,13 @@ do
   fi
 done  
 
-# Note that running this script upon itself fools it #+ into thinking it is
-a uuencoded file, #+ because it contains both "begin" and "end".
+#  Note that running this script upon itself fools it
+#+ into thinking it is a uuencoded file,
+#+ because it contains both "begin" and "end".
 
-# Exercise: # -------- # Modify this script to check each file for a
-newsgroup header, #+ and skip to next if not found.
+#  Exercise:
+#  --------
+#  Modify this script to check each file for a newsgroup header,
+#+ and skip to next if not found.
 
 exit 0

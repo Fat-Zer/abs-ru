@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:3
-msgid "#!/bin/bash # psub.bash"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# psub.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:5
-msgid "# As inspired by Diego Molina (thanks!)."
+#, no-wrap
+msgid "# As inspired by Diego Molina (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,25 +46,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:15
-msgid "echo \"${array0[@]}\""
+#, no-wrap
+msgid "echo \"${array0[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:17
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:19
-msgid "# ====================================== #"
+#, no-wrap
+msgid "# ====================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:21
-msgid "bash psub.bash"
+#, no-wrap
+msgid "bash psub.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/psub.bash:22
-msgid "#!/bin/CRASH-BANG! done #!/bin/CRASH-BANG!"
+#, no-wrap
+msgid "#!/bin/CRASH-BANG! done #!/bin/CRASH-BANG!\n"
 msgstr ""

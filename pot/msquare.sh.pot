@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/msquare.sh:4
-msgid "#!/bin/bash # msquare.sh # Magic Square generator (odd-order squares only!)"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# msquare.sh\n"
+"# Magic Square generator (odd-order squares only!)\n"
 msgstr ""
 
 #. type: Plain text
@@ -182,7 +186,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/msquare.sh:99
-msgid "exit $? #################################################"
+#, no-wrap
+msgid ""
+"exit $?\n"
+"#################################################\n"
 msgstr ""
 
 #. type: Plain text

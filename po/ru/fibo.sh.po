@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fibo.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # fibo.sh : Fibonacci sequence (recursive)  # Author: M. Cooper "
-"# License: GPL3"
+"#!/bin/bash\n"
+"# fibo.sh : Fibonacci sequence (recursive)\n"
+"# Author: M. Cooper\n"
+"# License: GPL3\n"
 msgstr ""
 
 #. type: Plain text
@@ -93,10 +96,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fibo.sh:45
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fibo.sh:46
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

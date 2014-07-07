@@ -1,6 +1,9 @@
-#!/bin/bash # nim.sh: Game of Nim
+#!/bin/bash
+# nim.sh: Game of Nim
 
-# Author: Mendel Cooper # Reldate: 15 July 2008 # License: GPL3
+# Author: Mendel Cooper
+# Reldate: 15 July 2008
+# License: GPL3
 
 ROWS=5     # Five rows of pegs (or matchsticks).
 WON=91     # Exit codes to keep track of wins/losses.
@@ -23,8 +26,8 @@ instructions ()
      echo -e '\E[33;41m'  # Yellow fg., over red bg.; bold.
      cat &lt;&lt;INSTRUCTIONS
 
-Nim is a game with roots in the distant past.  This particular variant
-starts with five rows of pegs.
+Nim is a game with roots in the distant past.
+This particular variant starts with five rows of pegs.
 
 1:    | | | | | 
 2:     | | | | 
@@ -34,15 +37,17 @@ starts with five rows of pegs.
 
 The number at the left identifies the row.
 
-The human player moves first, and alternates turns with the bot.  A turn
-consists of removing at least one peg from a single row.  It is permissable
-to remove ALL the pegs from a row.  For example, in row 2, above, the player
-can remove 1, 2, 3, or 4 pegs.  The player who removes the last peg loses.
+The human player moves first, and alternates turns with the bot.
+A turn consists of removing at least one peg from a single row.
+It is permissable to remove ALL the pegs from a row.
+For example, in row 2, above, the player can remove 1, 2, 3, or 4 pegs.
+The player who removes the last peg loses.
 
-The strategy consists of trying to be the one who removes the next-to-last
-peg(s), leaving the loser with the final peg.
+The strategy consists of trying to be the one who removes
+the next-to-last peg(s), leaving the loser with the final peg.
 
-To exit the game early, hit ENTER during your turn.  INSTRUCTIONS
+To exit the game early, hit ENTER during your turn.
+INSTRUCTIONS
 
 echo; echo -n "Hit ENTER to begin game. "; read azx
 
@@ -113,7 +118,8 @@ display ()
   echo
 }
 
-player_move ()  {
+player_move ()
+{
 
   echo "Your move:"
 
@@ -192,7 +198,8 @@ player_move ()  {
 }
 
 
-bot_move ()  {
+bot_move ()
+{
 
   row_b=0
   while [[ $row_b -eq 0 || ${Rows[row_b]} -eq 0 ]]
@@ -252,12 +259,17 @@ do               # Alternate human and bot turns.
 done
 # ================================================== #
 
-# Exercise: # -------- # Improve the bot's strategy.  # There is, in fact, a
-Nim strategy that can force a win.  # See the Wikipedia article on Nim:
-http://en.wikipedia.org/wiki/Nim # Recode the bot to use this strategy
-(rather difficult).
+# Exercise:
+# --------
+# Improve the bot's strategy.
+# There is, in fact, a Nim strategy that can force a win.
+# See the Wikipedia article on Nim:  http://en.wikipedia.org/wiki/Nim
+# Recode the bot to use this strategy (rather difficult).
 
-# Curiosities: # ----------- # Nim played a prominent role in Alain Resnais'
-1961 New Wave film, #+ Last Year at Marienbad.  # # In 1978, Leo
-Christopherson wrote an animated version of Nim, #+ Android Nim, for the
-TRS-80 Model I.
+#  Curiosities:
+#  -----------
+#  Nim played a prominent role in Alain Resnais' 1961 New Wave film,
+#+ Last Year at Marienbad.
+#
+#  In 1978, Leo Christopherson wrote an animated version of Nim,
+#+ Android Nim, for the TRS-80 Model I.

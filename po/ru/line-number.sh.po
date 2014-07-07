@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:3
-msgid "#!/bin/bash # line-number.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# line-number.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:5
-msgid "# This script echoes itself twice to stdout with its lines numbered."
+#, no-wrap
+msgid "# This script echoes itself twice to stdout with its lines numbered.\n"
 msgstr ""
 
 #. type: Plain text
@@ -37,22 +41,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:11
-msgid "nl `basename $0`"
+#, no-wrap
+msgid "nl `basename $0`\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:13
-msgid "echo; echo # Now, let's try it with 'cat -n'"
+#, no-wrap
+msgid "echo; echo  # Now, let's try it with 'cat -n'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:17
+#, no-wrap
 msgid ""
-"cat -n `basename $0` # The difference is that 'cat -n' numbers the blank "
-"lines.  # Note that 'nl -ba' will also do so."
+"cat -n `basename $0`\n"
+"# The difference is that 'cat -n' numbers the blank lines.\n"
+"# Note that 'nl -ba' will also do so.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/line-number.sh:19
-msgid "exit 0 # -----------------------------------------------------------------"
+#, no-wrap
+msgid ""
+"exit 0\n"
+"# -----------------------------------------------------------------\n"
 msgstr ""

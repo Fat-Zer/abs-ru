@@ -1,6 +1,8 @@
-#!/bin/bash # remote.bash: Using ssh.
+#!/bin/bash
+# remote.bash: Using ssh.
 
-# This example by Michael Zick.  # Used with permission.
+# This example by Michael Zick.
+# Used with permission.
 
 
 #   Presumptions:
@@ -28,27 +30,30 @@
 #          Last login: Tue Aug 10 20:25:49 2004 from localhost.localdomain
 #   Enter 'exit' when done.
 
-# The above gives you an interactive shell.  # It is possible for sshd to be
-set up in a 'single command' mode, #+ but that is beyond the scope of this
-example.  # The only thing to note is that the following will work in #+
-'single command' mode.
+#  The above gives you an interactive shell.
+#  It is possible for sshd to be set up in a 'single command' mode,
+#+ but that is beyond the scope of this example.
+#  The only thing to note is that the following will work in
+#+ 'single command' mode.
 
 
 # A basic, write stdout (local) command.
 
 ls -l
 
-# Now the same basic command on a remote machine.  # Pass a different
-'USERNAME' 'HOSTNAME' if desired: USER=${USERNAME:-$(whoami)}
+# Now the same basic command on a remote machine.
+# Pass a different 'USERNAME' 'HOSTNAME' if desired:
+USER=${USERNAME:-$(whoami)}
 HOST=${HOSTNAME:-$(hostname)}
 
-# Now excute the above command-line on the remote host, #+ with all
-transmissions encrypted.
+#  Now excute the above command-line on the remote host,
+#+ with all transmissions encrypted.
 
 ssh -l ${USER} ${HOST} " ls -l "
 
-# The expected result is a listing of your username's home #+ directory on
-the remote machine.  # To see any difference, run this script from somewhere
+#  The expected result is a listing of your username's home
+#+ directory on the remote machine.
+#  To see any difference, run this script from somewhere
 #+ other than your home directory.
 
 #  In other words, the Bash command is passed as a quoted line

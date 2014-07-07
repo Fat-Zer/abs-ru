@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:3
-msgid "#!/bin/bash # printf demo"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# printf demo\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,19 +34,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:9
-msgid "Message1=\"Greetings,\" Message2=\"Earthling.\""
+#, no-wrap
+msgid ""
+"Message1=\"Greetings,\"\n"
+"Message2=\"Earthling.\"\n"
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/ex47.sh:11 abs-guide/ex47.sh:24 abs-guide/ex47.sh:30
-msgid "echo"
+#: abs-guide/ex47.sh:11 abs-guide/ex47.sh:24
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:15
+#, no-wrap
 msgid ""
-"printf \"Pi to 2 decimal places = %1.2f\" $PI echo printf \"Pi to 9 decimal "
-"places = %1.9f\" $PI # It even rounds off correctly."
+"printf \"Pi to 2 decimal places = %1.2f\" $PI\n"
+"echo\n"
+"printf \"Pi to 9 decimal places = %1.9f\" $PI  # It even rounds off "
+"correctly.\n"
 msgstr ""
 
 #. type: Plain text
@@ -56,19 +66,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:20
-msgid "printf \"Constant = \\t%d\\n\" $DecimalConstant # Inserts tab (\\t)."
+#, no-wrap
+msgid "printf \"Constant = \\t%d\\n\" $DecimalConstant  # Inserts tab (\\t).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:22
-msgid "printf \"%s %s \\n\" $Message1 $Message2"
+#, no-wrap
+msgid "printf \"%s %s \\n\" $Message1 $Message2\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:28
+#, no-wrap
 msgid ""
-"# ==========================================# # Simulation of C function, "
-"sprintf().  # Loading a variable with a formatted string."
+"# ==========================================#\n"
+"# Simulation of C function, sprintf().\n"
+"# Loading a variable with a formatted string.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/ex47.sh:30
+#, no-wrap
+msgid "echo \n"
 msgstr ""
 
 #. type: Plain text
@@ -81,17 +101,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:36
-msgid "Msg=`printf \"%s %s \\n\" $Message1 $Message2` echo $Msg; echo $Msg"
+#, no-wrap
+msgid ""
+"Msg=`printf \"%s %s \\n\" $Message1 $Message2`\n"
+"echo $Msg; echo $Msg\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:40
+#, no-wrap
 msgid ""
-"# As it happens, the 'sprintf' function can now be accessed #+ as a loadable "
-"module to Bash, #+ but this is not portable."
+"#  As it happens, the 'sprintf' function can now be accessed\n"
+"#+ as a loadable module to Bash,\n"
+"#+ but this is not portable.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex47.sh:41
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

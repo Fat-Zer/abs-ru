@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/continue-nlevel.sh:3
-msgid "#!/bin/bash # The \"continue N\" command, continuing at the Nth level loop."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# The \"continue N\" command, continuing at the Nth level loop.\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,20 +65,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/continue-nlevel.sh:24
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/continue-nlevel.sh:26
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/continue-nlevel.sh:29
-msgid "# Exercise: # Come up with a meaningful use for \"continue N\" in a script."
+#, no-wrap
+msgid ""
+"# Exercise:\n"
+"# Come up with a meaningful use for \"continue N\" in a script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/continue-nlevel.sh:30
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

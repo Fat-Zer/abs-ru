@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Adds up a specified column (of numbers) in the target file.  #
-Floating-point (decimal) numbers okay, because awk can handle them.
+# Adds up a specified column (of numbers) in the target file.
+# Floating-point (decimal) numbers okay, because awk can handle them.
 
-ARGS=2 E_WRONGARGS=85
+ARGS=2
+E_WRONGARGS=85
 
 if [ $# -ne "$ARGS" ] # Check for proper number of command-line args.
 then
@@ -11,7 +12,8 @@ then
    exit $E_WRONGARGS
 fi
 
-filename=$1 column_number=$2
+filename=$1
+column_number=$2
 
 #  Passing shell variables to the awk part of the script is a bit tricky.
 #  One method is to strong-quote the Bash-script variable
@@ -29,7 +31,9 @@ filename=$1 column_number=$2
 #   '
 
 
-# Begin awk script.  # ----------------------------- awk '
+# Begin awk script.
+# -----------------------------
+awk '
 
 { total += $'"${column_number}"'
 }
@@ -37,7 +41,9 @@ END {
      print total
 }     
 
-' "$filename" # ----------------------------- # End awk script.
+' "$filename"
+# -----------------------------
+# End awk script.
 
 
 #   It may not be safe to pass shell variables to an embedded awk script,

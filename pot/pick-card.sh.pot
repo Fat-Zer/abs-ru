@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,32 +18,57 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:3
-msgid "#!/bin/bash # pick-card.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# pick-card.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:5
-msgid "# This is an example of choosing random elements of an array."
+#, no-wrap
+msgid "# This is an example of choosing random elements of an array.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:8
-msgid "# Pick a card, any card."
+#, no-wrap
+msgid "# Pick a card, any card.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:13
-msgid "Suites=\"Clubs Diamonds Hearts Spades\""
+#, no-wrap
+msgid ""
+"Suites=\"Clubs\n"
+"Diamonds\n"
+"Hearts\n"
+"Spades\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:27
-msgid "Denominations=\"2 3 4 5 6 7 8 9 10 Jack Queen King Ace\""
+#, no-wrap
+msgid ""
+"Denominations=\"2\n"
+"3\n"
+"4\n"
+"5\n"
+"6\n"
+"7\n"
+"8\n"
+"9\n"
+"10\n"
+"Jack\n"
+"Queen\n"
+"King\n"
+"Ace\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:29
-msgid "# Note variables spread over multiple lines."
+#, no-wrap
+msgid "# Note variables spread over multiple lines.\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,17 +89,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:39
+#, no-wrap
 msgid ""
-"echo -n \"${denomination[$((RANDOM%num_denominations))]} of \" echo "
-"${suite[$((RANDOM%num_suites))]}"
+"echo -n \"${denomination[$((RANDOM%num_denominations))]} of \"\n"
+"echo ${suite[$((RANDOM%num_suites))]}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:43
-msgid "# $bozo sh pick-cards.sh # Jack of Clubs"
+#, no-wrap
+msgid ""
+"# $bozo sh pick-cards.sh\n"
+"# Jack of Clubs\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pick-card.sh:46
-msgid "# Thank you, \"jipe,\" for pointing out this use of $RANDOM.  exit 0"
+#, no-wrap
+msgid ""
+"# Thank you, \"jipe,\" for pointing out this use of $RANDOM.\n"
+"exit 0\n"
 msgstr ""

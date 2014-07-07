@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # self-document.sh: self-documenting script # Modification of "
-"\"colm.sh\"."
+"#!/bin/bash\n"
+"# self-document.sh: self-documenting script\n"
+"# Modification of \"colm.sh\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:6
-msgid "DOC_REQUEST=70"
+#, no-wrap
+msgid "DOC_REQUEST=70\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,15 +53,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:20
+#, no-wrap
 msgid ""
-"The command-line parameter gives the directory to be listed.  If no "
-"directory specified or directory specified cannot be read, then list the "
-"current working directory."
+"The command-line parameter gives the directory to be listed.\n"
+"If no directory specified or directory specified cannot be read,\n"
+"then list the current working directory.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:22
-msgid "DOCUMENTATIONXX"
+#, no-wrap
+msgid "DOCUMENTATIONXX\n"
 msgstr ""
 
 #. type: Plain text
@@ -75,13 +80,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:33
+#, no-wrap
 msgid ""
-"echo \"Listing of \"$directory\":\"; echo (printf \"PERMISSIONS LINKS OWNER "
-"GROUP SIZE MONTH DAY HH:MM PROG-NAME\\n\" \\ ; ls -l \"$directory\" | sed "
-"1d) | column -t"
+"echo \"Listing of \"$directory\":\"; echo\n"
+"(printf \"PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\\n\" "
+"\\\n"
+"; ls -l \"$directory\" | sed 1d) | column -t\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-document.sh:34
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dict-lookup.sh:3
-msgid "#!/bin/bash # dict-lookup.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# dict-lookup.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dict-lookup.sh:13
+#, no-wrap
 msgid ""
-"# This script looks up definitions in the 1913 Webster's Dictionary.  # This "
-"Public Domain dictionary is available for download #+ from various sites, "
-"including #+ Project Gutenberg (http://www.gutenberg.org/etext/247).  # # "
-"Convert it from DOS to UNIX format (with only LF at end of line)  #+ before "
-"using it with this script.  # Store the file in plain, uncompressed ASCII "
-"text.  # Set DEFAULT_DICTFILE variable below to path/filename."
+"#  This script looks up definitions in the 1913 Webster's Dictionary.\n"
+"#  This Public Domain dictionary is available for download\n"
+"#+ from various sites, including\n"
+"#+ Project Gutenberg (http://www.gutenberg.org/etext/247).\n"
+"#\n"
+"#  Convert it from DOS to UNIX format (with only LF at end of line)\n"
+"#+ before using it with this script.\n"
+"#  Store the file in plain, uncompressed ASCII text.\n"
+"#  Set DEFAULT_DICTFILE variable below to path/filename.\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,21 +106,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/dict-lookup.sh:61
-msgid "# Now, snip out just the definition block."
+#, no-wrap
+msgid "# Now, snip out just the definition block.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dict-lookup.sh:70
+#, no-wrap
 msgid ""
-"echo \"$Definition\" | sed -n '1,/^[A-Z]/p' | # Print from first line of "
-"output #+ to the first line of the next entry.  sed '$d' | sed '$d' # Delete "
-"last two lines of output #+ (blank line and first line of next entry).  # "
-"---------------------------------------------------------"
+"echo \"$Definition\" |\n"
+"sed -n '1,/^[A-Z]/p' |\n"
+"#  Print from first line of output\n"
+"#+ to the first line of the next entry.\n"
+"sed '$d' | sed '$d'\n"
+"#  Delete last two lines of output\n"
+"#+ (blank line and first line of next entry).\n"
+"# ---------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/dict-lookup.sh:72
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

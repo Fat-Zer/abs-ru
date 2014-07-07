@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:4
-msgid "#! /bin/bash # directory-info.sh # Parses and lists directory information."
+#, no-wrap
+msgid ""
+"#! /bin/bash\n"
+"# directory-info.sh\n"
+"# Parses and lists directory information.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:6
-msgid "# NOTE: Change lines 273 and 353 per \"README\" file."
+#, no-wrap
+msgid "# NOTE: Change lines 273 and 353 per \"README\" file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:9
+#, no-wrap
 msgid ""
-"# Michael Zick is the author of this script.  # Used here with his "
-"permission."
+"# Michael Zick is the author of this script.\n"
+"# Used here with his permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -49,9 +55,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:21
+#, no-wrap
 msgid ""
-"# Default location for content addressed file descriptors.  "
-"MD5UCFS=${1:-${MD5UCFS:-'/tmpfs/ucfs'}}"
+"# Default location for content addressed file descriptors.\n"
+"MD5UCFS=${1:-${MD5UCFS:-'/tmpfs/ucfs'}}\n"
 msgstr ""
 
 #. type: Plain text
@@ -83,16 +90,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:44
+#, no-wrap
 msgid ""
-"# Here document used as a comment block.  : &lt;&lt;LSfieldsDoc # # # # # "
-"List Filesystem Directory Information # # # # # # #\tListDirectory "
-"\"FileGlob\" \"Field-Array-Name\" # or #\tListDirectory -of \"FileGlob\" "
-"\"Field-Array-Filename\" #\t'-of' meaning 'output to filename' # # # # #"
+"# Here document used as a comment block.\n"
+": &lt;&lt;LSfieldsDoc\n"
+"# # # # # List Filesystem Directory Information # # # # #\n"
+"#\n"
+"#\tListDirectory \"FileGlob\" \"Field-Array-Name\"\n"
+"# or\n"
+"#\tListDirectory -of \"FileGlob\" \"Field-Array-Filename\"\n"
+"#\t'-of' meaning 'output to filename'\n"
+"# # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:46
-msgid "String format description based on: ls (GNU fileutils) version 4.0.36"
+#, no-wrap
+msgid "String format description based on: ls (GNU fileutils) version 4.0.36\n"
 msgstr ""
 
 #. type: Plain text
@@ -123,58 +137,84 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:61
+#, no-wrap
 msgid ""
-"major minor day month date hh:mm:ss year path 4, 68 Sun Apr 20 09:27:33 2003 "
-"/dev/ttyS4 NOTE: that pesky comma after the major number"
+"major minor day month date hh:mm:ss year path\n"
+"4,  68 Sun Apr 20 09:27:33 2003 /dev/ttyS4\n"
+"NOTE: that pesky comma after the major number\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:70
+#, no-wrap
 msgid ""
-"NOTE: the 'path' may be multiple fields: /home/mszick/core /proc/982/fd/0 -> "
-"/dev/null /proc/982/fd/1 -> /home/mszick/.xsession-errors /proc/982/fd/13 -> "
-"/tmp/tmpfZVVOCs (deleted)  /proc/982/fd/7 -> /tmp/kde-mszick/ksycoca "
-"/proc/982/fd/8 -> socket:[11586] /proc/982/fd/9 -> pipe:[11588]"
+"NOTE: the 'path' may be multiple fields:\n"
+"/home/mszick/core\n"
+"/proc/982/fd/0 -> /dev/null\n"
+"/proc/982/fd/1 -> /home/mszick/.xsession-errors\n"
+"/proc/982/fd/13 -> /tmp/tmpfZVVOCs (deleted)\n"
+"/proc/982/fd/7 -> /tmp/kde-mszick/ksycoca\n"
+"/proc/982/fd/8 -> socket:[11586]\n"
+"/proc/982/fd/9 -> pipe:[11588]\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:75
+#, no-wrap
 msgid ""
-"If that isn't enough to keep your parser guessing, either or both of the "
-"path components may be relative: ../Built-Shared -> Built-Static "
-"../linux-2.4.20.tar.bz2 -> ../../../SRCS/linux-2.4.20.tar.bz2"
+"If that isn't enough to keep your parser guessing,\n"
+"either or both of the path components may be relative:\n"
+"../Built-Shared -> Built-Static\n"
+"../linux-2.4.20.tar.bz2 -> ../../../SRCS/linux-2.4.20.tar.bz2\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:88
+#, no-wrap
 msgid ""
-"The first character of the 11 (10?) character permissions field: 's' Socket "
-"'d' Directory 'b' Block device 'c' Character device 'l' Symbolic link NOTE: "
-"Hard links not marked - test for identical inode numbers on identical "
-"filesystems.  All information about hard linked files are shared, except for "
-"the names and the name's location in the directory system.  NOTE: A \"Hard "
-"link\" is known as a \"File Alias\" on some systems.  '-' An undistingushed "
-"file"
+"The first character of the 11 (10?) character permissions field:\n"
+"'s' Socket\n"
+"'d' Directory\n"
+"'b' Block device\n"
+"'c' Character device\n"
+"'l' Symbolic link\n"
+"NOTE: Hard links not marked - test for identical inode numbers\n"
+"on identical filesystems.\n"
+"All information about hard linked files are shared, except\n"
+"for the names and the name's location in the directory system.\n"
+"NOTE: A \"Hard link\" is known as a \"File Alias\" on some systems.\n"
+"'-' An undistingushed file\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:102
+#, no-wrap
 msgid ""
-"Followed by three groups of letters for: User, Group, Others Character 1: "
-"'-' Not readable; 'r' Readable Character 2: '-' Not writable; 'w' Writable "
-"Character 3, User and Group: Combined execute and special '-' Not "
-"Executable, Not Special 'x' Executable, Not Special 's' Executable, Special "
-"'S' Not Executable, Special Character 3, Others: Combined execute and sticky "
-"(tacky?)  '-' Not Executable, Not Tacky 'x' Executable, Not Tacky 't' "
-"Executable, Tacky 'T' Not Executable, Tacky"
+"Followed by three groups of letters for: User, Group, Others\n"
+"Character 1: '-' Not readable; 'r' Readable\n"
+"Character 2: '-' Not writable; 'w' Writable\n"
+"Character 3, User and Group: Combined execute and special\n"
+"'-' Not Executable, Not Special\n"
+"'x' Executable, Not Special\n"
+"'s' Executable, Special\n"
+"'S' Not Executable, Special\n"
+"Character 3, Others: Combined execute and sticky (tacky?)\n"
+"'-' Not Executable, Not Tacky\n"
+"'x' Executable, Not Tacky\n"
+"'t' Executable, Tacky\n"
+"'T' Not Executable, Tacky\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:109
+#, no-wrap
 msgid ""
-"Followed by an access indicator Haven't tested this one, it may be the "
-"eleventh character or it may generate another field ' ' No alternate access "
-"'+' Alternate access LSfieldsDoc"
+"Followed by an access indicator\n"
+"Haven't tested this one, it may be the eleventh character\n"
+"or it may generate another field\n"
+"' ' No alternate access\n"
+"'+' Alternate access\n"
+"LSfieldsDoc\n"
 msgstr ""
 
 #. type: Plain text
@@ -228,9 +268,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:144
+#, no-wrap
 msgid ""
-"# # # # # Is that string a legal number? # # # # # # #\tIsNumber \"Var\" # # "
-"# # # There has to be a better way, sigh..."
+"# # # # # Is that string a legal number? # # # # #\n"
+"#\n"
+"#\tIsNumber \"Var\"\n"
+"# # # # # There has to be a better way, sigh...\n"
 msgstr ""
 
 #. type: Plain text
@@ -252,52 +295,63 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:165
+#, no-wrap
 msgid ""
-"# # # # # Index Filesystem Directory Information # # # # # # #\tIndexList "
-"\"Field-Array-Name\" \"Index-Array-Name\" # or #\tIndexList -if "
-"Field-Array-Filename Index-Array-Name #\tIndexList -of Field-Array-Name "
-"Index-Array-Filename #\tIndexList -if -of Field-Array-Filename "
-"Index-Array-Filename # # # # #"
+"# # # # # Index Filesystem Directory Information # # # # #\n"
+"#\n"
+"#\tIndexList \"Field-Array-Name\" \"Index-Array-Name\"\n"
+"# or\n"
+"#\tIndexList -if Field-Array-Filename Index-Array-Name\n"
+"#\tIndexList -of Field-Array-Name Index-Array-Filename\n"
+"#\tIndexList -if -of Field-Array-Filename Index-Array-Filename\n"
+"# # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:168
+#, no-wrap
 msgid ""
-": &lt;&lt;IndexListDoc Walk an array of directory fields produced by "
-"ListDirectory"
+": &lt;&lt;IndexListDoc\n"
+"Walk an array of directory fields produced by ListDirectory\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:171
+#, no-wrap
 msgid ""
-"Having suppressed the line breaks in an otherwise line oriented report, "
-"build an index to the array element which starts each line."
+"Having suppressed the line breaks in an otherwise line oriented\n"
+"report, build an index to the array element which starts each line.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:174
+#, no-wrap
 msgid ""
-"Each line gets two index entries, the first element of each line (inode) and "
-"the element that holds the pathname of the file."
+"Each line gets two index entries, the first element of each line\n"
+"(inode) and the element that holds the pathname of the file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:178
+#, no-wrap
 msgid ""
-"The first index entry pair (Line-Number==0) are informational: "
-"Index-Array-Name[0] : Number of \"Lines\" indexed Index-Array-Name[1] : "
-"\"Current Line\" pointer into Index-Array-Name"
+"The first index entry pair (Line-Number==0) are informational:\n"
+"Index-Array-Name[0] : Number of \"Lines\" indexed\n"
+"Index-Array-Name[1] : \"Current Line\" pointer into Index-Array-Name\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:187
+#, no-wrap
 msgid ""
-"The following index pairs (if any) hold element indexes into the "
-"Field-Array-Name per: Index-Array-Name[Line-Number * 2] : The \"inode\" "
-"field element.  NOTE: This distance may be either +11 or +12 elements.  "
-"Index-Array-Name[(Line-Number * 2) + 1] : The \"pathname\" element.  NOTE: "
-"This distance may be a variable number of elements.  Next line index pair "
-"for Line-Number+1.  IndexListDoc"
+"The following index pairs (if any) hold element indexes into\n"
+"the Field-Array-Name per:\n"
+"Index-Array-Name[Line-Number * 2] : The \"inode\" field element.\n"
+"NOTE: This distance may be either +11 or +12 elements.\n"
+"Index-Array-Name[(Line-Number * 2) + 1] : The \"pathname\" element.\n"
+"NOTE: This distance may be a variable number of elements.\n"
+"Next line index pair for Line-Number+1.\n"
+"IndexListDoc\n"
 msgstr ""
 
 #. type: Plain text
@@ -402,34 +456,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:271
+#, no-wrap
 msgid ""
-"# # # # # Content Identify File # # # # # # #\tDigestFile Input-Array-Name "
-"Digest-Array-Name # or #\tDigestFile -if Input-FileName Digest-Array-Name # "
-"# # # #"
+"# # # # # Content Identify File # # # # #\n"
+"#\n"
+"#\tDigestFile Input-Array-Name Digest-Array-Name\n"
+"# or\n"
+"#\tDigestFile -if Input-FileName Digest-Array-Name\n"
+"# # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:274
-msgid "# Here document used as a comment block.  : &lt;&lt;DigestFilesDoc"
+#, no-wrap
+msgid ""
+"# Here document used as a comment block.\n"
+": &lt;&lt;DigestFilesDoc\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:278
+#, no-wrap
 msgid ""
-"The key (no pun intended) to a Unified Content File System (UCFS)  is to "
-"distinguish the files in the system based on their content.  Distinguishing "
-"files by their name is just so 20th Century."
+"The key (no pun intended) to a Unified Content File System (UCFS)\n"
+"is to distinguish the files in the system based on their content.\n"
+"Distinguishing files by their name is just so 20th Century.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:286
+#, no-wrap
 msgid ""
-"The content is distinguished by computing a checksum of that content.  This "
-"version uses the md5sum program to generate a 128 bit checksum "
-"representative of the file's contents.  There is a chance that two files "
-"having different content might generate the same checksum using md5sum (or "
-"any checksum).  Should that become a problem, then the use of md5sum can be "
-"replace by a cyrptographic signature.  But until then..."
+"The content is distinguished by computing a checksum of that content.\n"
+"This version uses the md5sum program to generate a 128 bit checksum\n"
+"representative of the file's contents.\n"
+"There is a chance that two files having different content might\n"
+"generate the same checksum using md5sum (or any checksum).  Should\n"
+"that become a problem, then the use of md5sum can be replace by a\n"
+"cyrptographic signature.  But until then...\n"
 msgstr ""
 
 #. type: Plain text
@@ -448,7 +512,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:297
-msgid "DigestFilesDoc"
+#, no-wrap
+msgid "DigestFilesDoc\n"
 msgstr ""
 
 #. type: Plain text
@@ -521,15 +586,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:349
+#, no-wrap
 msgid ""
-"# # # # # Locate File # # # # # # #\tLocateFile [-l] FileName "
-"Location-Array-Name # or #\tLocateFile [-l] -of FileName "
-"Location-Array-FileName # # # # #"
+"# # # # # Locate File # # # # #\n"
+"#\n"
+"#\tLocateFile [-l] FileName Location-Array-Name\n"
+"# or\n"
+"#\tLocateFile [-l] -of FileName Location-Array-FileName\n"
+"# # # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:351
-msgid "# A file location is Filesystem-id and inode-number"
+#, no-wrap
+msgid "# A file location is Filesystem-id and inode-number\n"
 msgstr ""
 
 #. type: Plain text
@@ -645,14 +715,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:439
-msgid "StatFieldsDoc"
+#, no-wrap
+msgid "StatFieldsDoc\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:443
+#, no-wrap
 msgid ""
-"#\tLocateFile [-l] FileName Location-Array-Name #\tLocateFile [-l] -of "
-"FileName Location-Array-FileName"
+"#\tLocateFile [-l] FileName Location-Array-Name\n"
+"#\tLocateFile [-l] -of FileName Location-Array-FileName\n"
 msgstr ""
 
 #. type: Plain text
@@ -732,7 +804,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:501
-msgid "# And then there was some test code"
+#, no-wrap
+msgid "# And then there was some test code\n"
 msgstr ""
 
 #. type: Plain text
@@ -763,49 +836,69 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:522
+#, no-wrap
 msgid ""
-"declare -a CUR_DIR # For small arrays ListDirectory \"${PWD}\" CUR_DIR "
-"ListArray CUR_DIR"
+"declare -a CUR_DIR\n"
+"# For small arrays\n"
+"ListDirectory \"${PWD}\" CUR_DIR\n"
+"ListArray CUR_DIR\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:526
+#, no-wrap
 msgid ""
-"declare -a DIR_DIG DigestFile CUR_DIR DIR_DIG echo \"The new \\\"name\\\" "
-"(checksum) for ${CUR_DIR[9]} is ${DIR_DIG[0]}\""
+"declare -a DIR_DIG\n"
+"DigestFile CUR_DIR DIR_DIG\n"
+"echo \"The new \\\"name\\\" (checksum) for ${CUR_DIR[9]} is "
+"${DIR_DIG[0]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:531
+#, no-wrap
 msgid ""
-"declare -a DIR_ENT # BIG_DIR # For really big arrays - use a temporary file "
-"in ramdisk # BIG-DIR # ListDirectory -of \"${CUR_DIR[11]}/*\" "
-"\"/tmpfs/junk2\" ListDirectory \"${CUR_DIR[11]}/*\" DIR_ENT"
+"declare -a DIR_ENT\n"
+"# BIG_DIR # For really big arrays - use a temporary file in ramdisk\n"
+"# BIG-DIR # ListDirectory -of \"${CUR_DIR[11]}/*\" \"/tmpfs/junk2\"\n"
+"ListDirectory \"${CUR_DIR[11]}/*\" DIR_ENT\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:535
+#, no-wrap
 msgid ""
-"declare -a DIR_IDX # BIG-DIR # IndexList -if \"/tmpfs/junk2\" DIR_IDX "
-"IndexList DIR_ENT DIR_IDX"
+"declare -a DIR_IDX\n"
+"# BIG-DIR # IndexList -if \"/tmpfs/junk2\" DIR_IDX\n"
+"IndexList DIR_ENT DIR_IDX\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:543
+#, no-wrap
 msgid ""
-"declare -a IDX_DIG # BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )  # BIG-DIR # "
-"DigestFile -if /tmpfs/junk2 IDX_DIG DigestFile DIR_ENT IDX_DIG # Small "
-"(should) be able to parallize IndexList &amp; DigestFile # Large (should) be "
-"able to parallize IndexList &amp; DigestFile &amp; the assignment echo \"The "
-"\\\"name\\\" (checksum) for the contents of ${PWD} is ${IDX_DIG[0]}\""
+"declare -a IDX_DIG\n"
+"# BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )\n"
+"# BIG-DIR # DigestFile -if /tmpfs/junk2 IDX_DIG\n"
+"DigestFile DIR_ENT IDX_DIG\n"
+"# Small (should) be able to parallize IndexList &amp; DigestFile\n"
+"# Large (should) be able to parallize IndexList &amp; DigestFile &amp; the "
+"assignment\n"
+"echo \"The \\\"name\\\" (checksum) for the contents of ${PWD} is "
+"${IDX_DIG[0]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:547
-msgid "declare -a FILE_LOC LocateFile ${PWD} FILE_LOC ListArray FILE_LOC"
+#, no-wrap
+msgid ""
+"declare -a FILE_LOC\n"
+"LocateFile ${PWD} FILE_LOC\n"
+"ListArray FILE_LOC\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/directory-info.sh:548
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

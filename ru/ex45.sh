@@ -1,25 +1,39 @@
 #!/bin/bash
 
-# Demonstrating some of the uses of 'expr' #
-=======================================
+# Demonstrating some of the uses of 'expr'
+# =======================================
 
 echo
 
-# Arithmetic Operators # ---------- ---------
+# Arithmetic Operators
+# ---------- ---------
 
-echo "Arithmetic Operators" echo a=`expr 5 + 3` echo "5 + 3 = $a"
+echo "Arithmetic Operators"
+echo
+a=`expr 5 + 3`
+echo "5 + 3 = $a"
 
-a=`expr $a + 1` echo echo "a + 1 = $a" echo "(incrementing a variable)"
+a=`expr $a + 1`
+echo
+echo "a + 1 = $a"
+echo "(incrementing a variable)"
 
-a=`expr 5 % 3` # modulo echo echo "5 mod 3 = $a"
+a=`expr 5 % 3`
+# modulo
+echo
+echo "5 mod 3 = $a"
 
-echo echo
+echo
+echo
 
-# Logical Operators # ------- ---------
+# Logical Operators
+# ------- ---------
 
-# Returns 1 if true, 0 if false, #+ opposite of normal Bash convention.
+#  Returns 1 if true, 0 if false,
+#+ opposite of normal Bash convention.
 
-echo "Logical Operators" echo
+echo "Logical Operators"
+echo
 
 x=24
 y=25
@@ -46,17 +60,23 @@ echo "b = $b"            # 1  ( 3 -le 3 )
 # There is also a "\>=" operator (greater than or equal to).
 
 
-echo echo
+echo
+echo
 
 
 
-# String Operators # ------ ---------
+# String Operators
+# ------ ---------
 
-echo "String Operators" echo
+echo "String Operators"
+echo
 
-a=1234zipper43231 echo "The string being operated upon is \"$a\"."
+a=1234zipper43231
+echo "The string being operated upon is \"$a\"."
 
-# length: length of string b=`expr length $a` echo "Length of \"$a\" is $b."
+# length: length of string
+b=`expr length $a`
+echo "Length of \"$a\" is $b."
 
 # index: position of first character in substring
 #        that matches a character in string
@@ -64,7 +84,8 @@ b=`expr index $a 23`
 echo "Numerical position of first \"2\" in \"$a\" is \"$b\"."
 
 # substr: extract substring, starting position &amp; length specified
-b=`expr substr $a 2 6` echo "Substring of \"$a\", starting at position 2,\ 
+b=`expr substr $a 2 6`
+echo "Substring of \"$a\", starting at position 2,\
 and 6 chars long is \"$b\"."
 
 

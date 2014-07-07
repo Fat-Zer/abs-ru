@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address.sh:3
-msgid "#!/bin/bash4 # fetch_address.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash4\n"
+"# fetch_address.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,25 +34,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address.sh:10
+#, no-wrap
 msgid ""
-"address[Charles]=\"414 W. 10th Ave., Baltimore, MD 21236\" "
-"address[John]=\"202 E. 3rd St., New York, NY 10009\" address[Wilma]=\"1854 "
-"Vermont Ave, Los Angeles, CA 90023\""
+"address[Charles]=\"414 W. 10th Ave., Baltimore, MD 21236\"\n"
+"address[John]=\"202 E. 3rd St., New York, NY 10009\"\n"
+"address[Wilma]=\"1854 Vermont Ave, Los Angeles, CA 90023\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address.sh:18
+#, no-wrap
 msgid ""
-"echo \"Charles's address is ${address[Charles]}.\" # Charles's address is "
-"414 W. 10th Ave., Baltimore, MD 21236.  echo \"Wilma's address is "
-"${address[Wilma]}.\" # Wilma's address is 1854 Vermont Ave, Los Angeles, CA "
-"90023.  echo \"John's address is ${address[John]}.\" # John's address is 202 "
-"E. 3rd St., New York, NY 10009."
+"echo \"Charles's address is ${address[Charles]}.\"\n"
+"# Charles's address is 414 W. 10th Ave., Baltimore, MD 21236.\n"
+"echo \"Wilma's address is ${address[Wilma]}.\"\n"
+"# Wilma's address is 1854 Vermont Ave, Los Angeles, CA 90023.\n"
+"echo \"John's address is ${address[John]}.\"\n"
+"# John's address is 202 E. 3rd St., New York, NY 10009.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address.sh:20
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text

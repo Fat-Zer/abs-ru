@@ -1,4 +1,5 @@
-#!/bin/bash # Using "seq"
+#!/bin/bash
+# Using "seq"
 
 echo
 
@@ -14,7 +15,7 @@ done      # 1 2 3 4 5 ... 80
 echo; echo
 
 
-COUNT=80 # Yes, 'seq' also accepts a replaceable parameter.
+COUNT=80  # Yes, 'seq' also accepts a replaceable parameter.
 
 for a in `seq $COUNT`  # or   for a in $( seq $COUNT )
 do
@@ -23,7 +24,8 @@ done      # 1 2 3 4 5 ... 80
 
 echo; echo
 
-BEGIN=75 END=80
+BEGIN=75
+END=80
 
 for a in `seq $BEGIN $END`
 #  Giving "seq" two arguments starts the count at the first one,
@@ -34,7 +36,9 @@ done      # 75 76 77 78 79 80
 
 echo; echo
 
-BEGIN=45 INTERVAL=5 END=80
+BEGIN=45
+INTERVAL=5
+END=80
 
 for a in `seq $BEGIN $INTERVAL $END`
 #  Giving "seq" three arguments starts the count at the first one,

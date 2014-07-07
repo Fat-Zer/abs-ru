@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/primes2.sh:3
-msgid "#!/bin/bash # primes2.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# primes2.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/primes2.sh:6
+#, no-wrap
 msgid ""
-"# Generating prime numbers the quick-and-easy way, #+ without resorting to "
-"fancy algorithms."
+"#  Generating prime numbers the quick-and-easy way,\n"
+"#+ without resorting to fancy algorithms.\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,10 +84,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/primes2.sh:38
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/primes2.sh:39
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

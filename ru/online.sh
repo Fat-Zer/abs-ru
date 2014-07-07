@@ -1,7 +1,7 @@
-#!/bin/bash # logon.sh: A quick 'n dirty script to check whether you are
-on-line yet.
+#!/bin/bash
+# logon.sh: A quick 'n dirty script to check whether you are on-line yet.
 
-umask 177 # Make sure temp files are not world readable.
+umask 177  # Make sure temp files are not world readable.
 
 
 TRUE=1
@@ -21,8 +21,8 @@ USER_INTERRUPT=13
 CHECK_LINES=100
 #  How many lines in log file to check.
 
-trap 'rm -f $TEMPFILE; exit $USER_INTERRUPT' TERM INT # Cleans up the temp
-file if script interrupted by control-c.
+trap 'rm -f $TEMPFILE; exit $USER_INTERRUPT' TERM INT
+#  Cleans up the temp file if script interrupted by control-c.
 
 echo
 
@@ -49,8 +49,9 @@ do
 done  
 
 
-# Note: if you change the KEYWORD variable to "Exit", #+ this script can be
-used while on-line #+ to check for an unexpected logoff.
+#  Note: if you change the KEYWORD variable to "Exit",
+#+ this script can be used while on-line
+#+ to check for an unexpected logoff.
 
 # Exercise: Change the script, per the above note,
 #           and prettify it.

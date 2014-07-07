@@ -1,8 +1,13 @@
-#!/bin/bash # pid-identifier.sh: # Gives complete path name to process
-associated with pid.
+#!/bin/bash
+# pid-identifier.sh:
+# Gives complete path name to process associated with pid.
 
-ARGNO=1 # Number of arguments the script expects.  E_WRONGARGS=65
-E_BADPID=66 E_NOSUCHPROCESS=67 E_NOPERMISSION=68 PROCFILE=exe
+ARGNO=1  # Number of arguments the script expects.
+E_WRONGARGS=65
+E_BADPID=66
+E_NOSUCHPROCESS=67
+E_NOPERMISSION=68
+PROCFILE=exe
 
 if [ $# -ne $ARGNO ]
 then

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:6
+#, no-wrap
 msgid ""
-"# Another version of the \"column totaler\" script #+ that adds up a "
-"specified column (of numbers) in the target file.  # This one uses indirect "
-"references."
+"#  Another version of the \"column totaler\" script\n"
+"#+ that adds up a specified column (of numbers) in the target file.\n"
+"#  This one uses indirect references.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:9
-msgid "ARGS=2 E_WRONGARGS=85"
+#, no-wrap
+msgid ""
+"ARGS=2\n"
+"E_WRONGARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,7 +60,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:20
-msgid "#===== Same as original script, up to this point =====#"
+#, no-wrap
+msgid "#===== Same as original script, up to this point =====#\n"
 msgstr ""
 
 #. type: Plain text
@@ -72,9 +78,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:33
+#, no-wrap
 msgid ""
-"# Begin awk script.  # ------------------------------------------------- awk "
-"\""
+"# Begin awk script.\n"
+"# -------------------------------------------------\n"
+"awk \"\n"
 msgstr ""
 
 #. type: Plain text
@@ -100,12 +108,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:48
+#, no-wrap
 msgid ""
-"# Indirect variable reference avoids the hassles #+ of referencing a shell "
-"variable within the embedded awk script.  # Thanks, Stephane Chazelas."
+"#  Indirect variable reference avoids the hassles\n"
+"#+ of referencing a shell variable within the embedded awk script.\n"
+"#  Thanks, Stephane Chazelas.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler2.sh:50
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Moraes-COPYRIGHT:5
+#, no-wrap
 msgid ""
-"The following is the mandatory copyright notice for the two included "
+"The following is the mandatory copyright notice for the two included\n"
 "\"contrib\" scripts by Mark Moraes, \"behead.sh\" and \"ftpget.sh\". It is "
-"part of the combined HTML/source tarball of the _ABS Guide_, and included by "
-"reference in the PDF version."
+"part\n"
+"of the combined HTML/source tarball of the _ABS Guide_, and included by\n"
+"reference in the PDF version.\n"
 msgstr ""
 
 #. type: Plain text

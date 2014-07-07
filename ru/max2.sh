@@ -1,7 +1,8 @@
-#!/bin/bash # max2.sh: Maximum of two LARGE integers.
+#!/bin/bash
+# max2.sh: Maximum of two LARGE integers.
 
-# This is the previous "max.sh" example, #+ modified to permit comparing
-large integers.
+#  This is the previous "max.sh" example,
+#+ modified to permit comparing large integers.
 
 EQUAL=0             # Return value if both params equal.
 E_PARAM_ERR=-99999  # Not enough params passed to function.

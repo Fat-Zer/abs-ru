@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:4
-msgid "variable=\"one two three four five\""
+#, no-wrap
+msgid "variable=\"one two three four five\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:7
+#, no-wrap
 msgid ""
-"set -- $variable # Sets positional parameters to the contents of "
-"\"$variable\"."
+"set -- $variable\n"
+"# Sets positional parameters to the contents of \"$variable\".\n"
 msgstr ""
 
 #. type: Plain text
@@ -56,7 +59,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:20
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,12 +77,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:29
-msgid "# ======================================================"
+#, no-wrap
+msgid "# ======================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:32
-msgid "set -- # Unsets positional parameters if no variable specified."
+#, no-wrap
+msgid ""
+"set --\n"
+"# Unsets positional parameters if no variable specified.\n"
 msgstr ""
 
 #. type: Plain text
@@ -93,5 +101,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/set-pos.sh:38
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

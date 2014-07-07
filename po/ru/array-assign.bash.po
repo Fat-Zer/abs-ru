@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,66 +18,84 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:3
-msgid "#! /bin/bash # array-assign.bash"
+#, no-wrap
+msgid ""
+"#! /bin/bash\n"
+"# array-assign.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:6
+#, no-wrap
 msgid ""
-"# Array operations are Bash-specific, #+ hence the \".bash\" in the script "
-"name."
+"#  Array operations are Bash-specific,\n"
+"#+ hence the \".bash\" in the script name.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:12
+#, no-wrap
 msgid ""
-"# Copyright (c) Michael S. Zick, 2003, All rights reserved.  # License: "
-"Unrestricted reuse in any form, for any purpose.  # Version: $ID$ # # "
-"Clarification and additional comments by William Park."
+"# Copyright (c) Michael S. Zick, 2003, All rights reserved.\n"
+"# License: Unrestricted reuse in any form, for any purpose.\n"
+"# Version: $ID$\n"
+"#\n"
+"# Clarification and additional comments by William Park.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:16
+#, no-wrap
 msgid ""
-"# Based on an example provided by Stephane Chazelas #+ which appeared in an "
-"earlier version of the #+ Advanced Bash Scripting Guide."
+"#  Based on an example provided by Stephane Chazelas\n"
+"#+ which appeared in an earlier version of the\n"
+"#+ Advanced Bash Scripting Guide.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:20
+#, no-wrap
 msgid ""
-"# Output format of the 'times' command: # User CPU &lt;space&gt; System CPU "
-"# User CPU of dead children &lt;space&gt; System CPU of dead children"
+"# Output format of the 'times' command:\n"
+"# User CPU &lt;space&gt; System CPU\n"
+"# User CPU of dead children &lt;space&gt; System CPU of dead children\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:27
+#, no-wrap
 msgid ""
-"# Bash has two versions of assigning all elements of an array #+ to a new "
-"array variable.  # Both drop 'null reference' elements #+ in Bash versions "
-"2.04 and later.  # An additional array assignment that maintains the "
-"relationship of #+ [subscript]=value for arrays may be added to newer "
-"versions."
+"#  Bash has two versions of assigning all elements of an array\n"
+"#+ to a new array variable.\n"
+"#  Both drop 'null reference' elements\n"
+"#+ in Bash versions 2.04 and later.\n"
+"#  An additional array assignment that maintains the relationship of\n"
+"#+ [subscript]=value for arrays may be added to newer versions.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:31
+#, no-wrap
 msgid ""
-"# Constructs a large array using an internal command, #+ but anything "
-"creating an array of several thousand elements #+ will do just fine."
+"#  Constructs a large array using an internal command,\n"
+"#+ but anything creating an array of several thousand elements\n"
+"#+ will do just fine.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:36
+#, no-wrap
 msgid ""
-"declare -a bigOne=( /dev/* )  # All the files in /dev . . .  echo echo "
-"'Conditions: Unquoted, default IFS, All-Elements-Of' echo \"Number of "
-"elements in array is ${#bigOne[@]}\""
+"declare -a bigOne=( /dev/* )  # All the files in /dev . . .\n"
+"echo\n"
+"echo 'Conditions: Unquoted, default IFS, All-Elements-Of'\n"
+"echo \"Number of elements in array is ${#bigOne[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:38
-msgid "# set -vx"
+#, no-wrap
+msgid "# set -vx\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,9 +112,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:55
+#, no-wrap
 msgid ""
-"echo echo '- - testing: =${array[@]} - -' times declare -a "
-"bigThree=${bigOne[@]} # No parentheses this time.  times"
+"echo\n"
+"echo '- - testing: =${array[@]} - -'\n"
+"times\n"
+"declare -a bigThree=${bigOne[@]}\n"
+"# No parentheses this time.\n"
+"times\n"
 msgstr ""
 
 #. type: Plain text
@@ -119,33 +142,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:72
+#, no-wrap
 msgid ""
-"# I will continue to use the first form in my example descriptions #+ "
-"because I think it is a better illustration of what is happening."
+"#  I will continue to use the first form in my example descriptions\n"
+"#+ because I think it is a better illustration of what is happening.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:75
+#, no-wrap
 msgid ""
-"# The reusable portions of my examples will actual contain #+ the second "
-"form where appropriate because of the speedup."
+"#  The reusable portions of my examples will actual contain\n"
+"#+ the second form where appropriate because of the speedup.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:77
-msgid "# MSZ: Sorry about that earlier oversight folks."
+#, no-wrap
+msgid "# MSZ: Sorry about that earlier oversight folks.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:87
+#, no-wrap
 msgid ""
-"# Note: # ---- # The \"declare -a\" statements in lines 32 and 44 #+ are not "
-"strictly necessary, since it is implicit #+ in the Array=( ... )  assignment "
-"form.  # However, eliminating these declarations slows down #+ the execution "
-"of the following sections of the script.  # Try it, and see."
+"#  Note:\n"
+"#  ----\n"
+"#  The \"declare -a\" statements in lines 32 and 44\n"
+"#+ are not strictly necessary, since it is implicit\n"
+"#+ in the  Array=( ... )  assignment form.\n"
+"#  However, eliminating these declarations slows down\n"
+"#+ the execution of the following sections of the script.\n"
+"#  Try it, and see.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-assign.bash:88
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,47 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:3
-msgid "#!/bin/bash # Proper header for a Bash script."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Proper header for a Bash script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:5
-msgid "# Cleanup, version 2"
+#, no-wrap
+msgid "# Cleanup, version 2\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:8
+#, no-wrap
 msgid ""
-"# Run as root, of course.  # Insert code here to print error message and "
-"exit if not root."
+"# Run as root, of course.\n"
+"# Insert code here to print error message and exit if not root.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:12
-msgid "LOG_DIR=/var/log # Variables are better than hard-coded values.  cd $LOG_DIR"
+#, no-wrap
+msgid ""
+"LOG_DIR=/var/log\n"
+"# Variables are better than hard-coded values.\n"
+"cd $LOG_DIR\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:15
-msgid "cat /dev/null > messages cat /dev/null > wtmp"
+#, no-wrap
+msgid ""
+"cat /dev/null > messages\n"
+"cat /dev/null > wtmp\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex1a.sh:18
-msgid "echo \"Logs cleaned up.\""
+#, no-wrap
+msgid "echo \"Logs cleaned up.\"\n"
 msgstr ""
 
 #. type: Plain text

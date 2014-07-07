@@ -1,4 +1,5 @@
-#!/bin/bash # weirdvars.sh: Echoing weird variables.
+#!/bin/bash
+# weirdvars.sh: Echoing weird variables.
 
 echo
 
@@ -26,8 +27,8 @@ echo "$var3"     # \\\\
 # Strong quoting works, though.
 
 
-# ************************************************************ # # As the
-first example above shows, nesting quotes is permitted.
+# ************************************************************ #
+# As the first example above shows, nesting quotes is permitted.
 
 echo "$(echo '"')"           # "
 #    ^           ^

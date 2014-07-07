@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:3
-msgid "#!/bin/bash # commentblock.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# commentblock.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:8
+#, no-wrap
 msgid ""
-": &lt;&lt;COMMENTBLOCK echo \"This line will not echo.\" This is a comment "
-"line missing the \"#\" prefix.  This is another comment line missing the "
-"\"#\" prefix."
+": &lt;&lt;COMMENTBLOCK\n"
+"echo \"This line will not echo.\"\n"
+"This is a comment line missing the \"#\" prefix.\n"
+"This is another comment line missing the \"#\" prefix.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:13
+#, no-wrap
 msgid ""
-"&amp;*@!!++= The above line will cause no error message, because the Bash "
-"interpreter will ignore it.  COMMENTBLOCK"
+"&amp;*@!!++=\n"
+"The above line will cause no error message,\n"
+"because the Bash interpreter will ignore it.\n"
+"COMMENTBLOCK\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,11 +55,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:24
+#, no-wrap
 msgid ""
-"# The above technique also comes in useful for commenting out #+ a block of "
-"working code for debugging purposes.  # This saves having to put a \"#\" at "
-"the beginning of each line, #+ then having to go back and delete each \"#\" "
-"later.  # Note that the use of of colon, above, is optional."
+"#  The above technique also comes in useful for commenting out\n"
+"#+ a block of working code for debugging purposes.\n"
+"#  This saves having to put a \"#\" at the beginning of each line,\n"
+"#+ then having to go back and delete each \"#\" later.\n"
+"#  Note that the use of of colon, above, is optional.\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,20 +83,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:38
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:46
+#, no-wrap
 msgid ""
-"###################################################################### # "
-"Note, however, that if a bracketed variable is contained within #+ the "
-"commented-out code block, #+ then this could cause problems.  # for example:"
+"######################################################################\n"
+"#  Note, however, that if a bracketed variable is contained within\n"
+"#+ the commented-out code block,\n"
+"#+ then this could cause problems.\n"
+"#  for example:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:49
-msgid "#/!/bin/bash"
+#, no-wrap
+msgid "#/!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -104,16 +119,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:61
+#, no-wrap
 msgid ""
-"$ sh commented-bad.sh commented-bad.sh: line 3: foo_bar_bazz: parameter null "
-"or not set"
+"$ sh commented-bad.sh\n"
+"commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:63
+#, no-wrap
 msgid ""
 "# The remedy for this is to strong-quote the 'COMMENTBLOCK' in line 49, "
-"above."
+"above.\n"
 msgstr ""
 
 #. type: Plain text
@@ -124,5 +141,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/commentblock.sh:66
-msgid "# Thank you, Kurt Pfeifle, for pointing this out."
+#, no-wrap
+msgid "# Thank you, Kurt Pfeifle, for pointing this out.\n"
 msgstr ""

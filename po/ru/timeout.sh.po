@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:3
-msgid "#!/bin/bash # timeout.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# timeout.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:6
-msgid "# Written by Stephane Chazelas, #+ and modified by the document author."
+#, no-wrap
+msgid ""
+"#  Written by Stephane Chazelas,\n"
+"#+ and modified by the document author.\n"
 msgstr ""
 
 #. type: Plain text
@@ -49,21 +55,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:21
+#, no-wrap
 msgid ""
-"echo; echo -n \"What's your name? Quick! \" timedout_read $INTERVAL "
-"your_name"
+"echo; echo -n \"What's your name? Quick! \"\n"
+"timedout_read $INTERVAL your_name\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:25
+#, no-wrap
 msgid ""
-"# This may not work on every terminal type.  # The maximum timeout depends "
-"on the terminal.  #+ (it is often 25.5 seconds)."
+"#  This may not work on every terminal type.\n"
+"#  The maximum timeout depends on the terminal.\n"
+"#+ (it is often 25.5 seconds).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:27 abs-guide/timeout.sh:36
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,12 +90,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:39
+#, no-wrap
 msgid ""
-"# The behavior of this script differs somewhat from \"timed-input.sh.\" # At "
-"each keystroke, the counter resets."
+"# The behavior of this script differs somewhat from \"timed-input.sh.\"\n"
+"# At each keystroke, the counter resets.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timeout.sh:40
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

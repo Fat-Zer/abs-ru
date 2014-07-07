@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:4
-msgid "#!/bin/bash # rand-string.sh # Generating an 8-character \"random\" string."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# rand-string.sh\n"
+"# Generating an 8-character \"random\" string.\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,9 +39,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:14
+#, no-wrap
 msgid ""
-"POS=2 # Starting from position 2 in the string.  LEN=8 # Extract eight "
-"characters."
+"POS=2  # Starting from position 2 in the string.\n"
+"LEN=8  # Extract eight characters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,27 +56,36 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:21
-msgid "randstring=\"${str1:$POS:$LEN}\" # Can parameterize ^^^^ ^^^^"
+#, no-wrap
+msgid ""
+"randstring=\"${str1:$POS:$LEN}\"\n"
+"# Can parameterize ^^^^ ^^^^\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:23
-msgid "echo \"$randstring\""
+#, no-wrap
+msgid "echo \"$randstring\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:25
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:28
-msgid "# bozo$ ./rand-string.sh my-password # 1bdd88c4"
+#, no-wrap
+msgid ""
+"# bozo$ ./rand-string.sh my-password\n"
+"# 1bdd88c4\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rand-string.sh:30
+#, no-wrap
 msgid ""
-"# No, this is is not recommended #+ as a method of generating hack-proof "
-"passwords."
+"#  No, this is is not recommended\n"
+"#+ as a method of generating hack-proof passwords.\n"
 msgstr ""

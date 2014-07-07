@@ -1,4 +1,5 @@
-#!/bin/bash # Exercising "eval" ...
+#!/bin/bash
+# Exercising "eval" ...
 
 y=`eval ls -l`  #  Similar to y=`ls -l`
 echo $y         #+ but linefeeds removed because "echoed" variable is unquoted.
@@ -10,19 +11,25 @@ echo; echo
 y=`eval df`     #  Similar to y=`df`
 echo $y         #+ but linefeeds removed.
 
-# When LF's not preserved, it may make it easier to parse output, #+ using
-utilities such as "awk".
+#  When LF's not preserved, it may make it easier to parse output,
+#+ using utilities such as "awk".
 
-echo echo "===========================================================" echo
+echo
+echo "==========================================================="
+echo
 
-eval "`seq 3 | sed -e 's/.*/echo var&amp;=ABCDEFGHIJ/'`" # var1=ABCDEFGHIJ #
-var2=ABCDEFGHIJ # var3=ABCDEFGHIJ
+eval "`seq 3 | sed -e 's/.*/echo var&amp;=ABCDEFGHIJ/'`"
+# var1=ABCDEFGHIJ
+# var2=ABCDEFGHIJ
+# var3=ABCDEFGHIJ
 
-echo echo "===========================================================" echo
+echo
+echo "==========================================================="
+echo
 
 
-# Now, showing how to do something useful with "eval" . . .  # (Thank you,
-E. Choroba!)
+# Now, showing how to do something useful with "eval" . . .
+# (Thank you, E. Choroba!)
 
 version=3.4     #  Can we split the version into major and minor
                 #+ part in one command?

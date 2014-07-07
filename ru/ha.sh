@@ -1,6 +1,9 @@
-#!/bin/bash # $Id$ # Copyright 2005 Oliver Beckstein # Released under the
-GNU Public License # Author of script granted permission for inclusion in
-ABS Guide.  # (Thank you!)
+#!/bin/bash
+# $Id$
+# Copyright 2005 Oliver Beckstein
+# Released under the GNU Public License
+# Author of script granted permission for inclusion in ABS Guide.
+# (Thank you!)
 
 #----------------------------------------------------------------
 # pseudo hash based on indirect parameter expansion
@@ -119,9 +122,11 @@ function keyshash () {
 
 # -----------------------------------------------------------------------
 
-# Now, let's test it.  # (Per comments at the beginning of the script.)
-newhash Lovers addhash Lovers Tristan Isolde addhash Lovers 'Romeo Montague'
-'Juliet Capulet'
+# Now, let's test it.
+# (Per comments at the beginning of the script.)
+newhash Lovers
+addhash Lovers Tristan Isolde
+addhash Lovers 'Romeo Montague' 'Juliet Capulet'
 
 # Output results.
 echo
@@ -133,6 +138,7 @@ echo; echo
 
 exit 0
 
-# Exercise: # --------
+# Exercise:
+# --------
 
 # Add error checks to the functions.

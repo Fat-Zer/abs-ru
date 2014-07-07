@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,62 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:3
-msgid "#!/bin/bash # cannon.sh: Approximating PI by firing cannonballs."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# cannon.sh: Approximating PI by firing cannonballs.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:7
+#, no-wrap
 msgid ""
-"# Author: Mendel Cooper # License: Public Domain # Version 2.2, reldate "
-"13oct08."
+"# Author: Mendel Cooper\n"
+"# License: Public Domain\n"
+"# Version 2.2, reldate 13oct08.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:11
+#, no-wrap
 msgid ""
-"# This is a very simple instance of a \"Monte Carlo\" simulation: #+ a "
-"mathematical model of a real-life event, #+ using pseudorandom numbers to "
-"emulate random chance."
+"# This is a very simple instance of a \"Monte Carlo\" simulation:\n"
+"#+ a mathematical model of a real-life event,\n"
+"#+ using pseudorandom numbers to emulate random chance.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:40
+#, no-wrap
 msgid ""
-"# Consider a perfectly square plot of land, 10000 units on a side.  # This "
-"land has a perfectly circular lake in its center, #+ with a diameter of "
-"10000 units.  # The plot is actually mostly water, except for land in the "
-"four corners.  # (Think of it as a square with an inscribed circle.)  # # We "
-"will fire iron cannonballs from an old-style cannon #+ at the square.  # All "
-"the shots impact somewhere on the square, #+ either in the lake or on the "
-"dry corners.  # Since the lake takes up most of the area, #+ most of the "
-"shots will SPLASH! into the water.  # Just a few shots will THUD! into solid "
-"ground #+ in the four corners of the square.  # # If we take enough random, "
-"unaimed shots at the square, #+ Then the ratio of SPLASHES to total shots "
-"will approximate #+ the value of PI/4.  # # The simplified explanation is "
-"that the cannon is actually #+ shooting only at the upper right-hand "
-"quadrant of the square, #+ i.e., Quadrant I of the Cartesian coordinate "
-"plane.  # # # Theoretically, the more shots taken, the better the fit.  # "
-"However, a shell script, as opposed to a compiled language #+ with "
-"floating-point math built in, requires some compromises.  # This decreases "
-"the accuracy of the simulation."
+"#  Consider a perfectly square plot of land, 10000 units on a side.\n"
+"#  This land has a perfectly circular lake in its center,\n"
+"#+ with a diameter of 10000 units.\n"
+"#  The plot is actually mostly water, except for land in the four corners.\n"
+"#  (Think of it as a square with an inscribed circle.)\n"
+"#\n"
+"#  We will fire iron cannonballs from an old-style cannon\n"
+"#+ at the square.\n"
+"#  All the shots impact somewhere on the square,\n"
+"#+ either in the lake or on the dry corners.\n"
+"#  Since the lake takes up most of the area,\n"
+"#+ most of the shots will SPLASH! into the water.\n"
+"#  Just a few shots will THUD! into solid ground\n"
+"#+ in the four corners of the square.\n"
+"#\n"
+"#  If we take enough random, unaimed shots at the square,\n"
+"#+ Then the ratio of SPLASHES to total shots will approximate\n"
+"#+ the value of PI/4.\n"
+"#\n"
+"#  The simplified explanation is that the cannon is actually\n"
+"#+ shooting only at the upper right-hand quadrant of the square,\n"
+"#+ i.e., Quadrant I of the Cartesian coordinate plane.\n"
+"#\n"
+"#\n"
+"#  Theoretically, the more shots taken, the better the fit.\n"
+"#  However, a shell script, as opposed to a compiled language\n"
+"#+ with floating-point math built in, requires some compromises.\n"
+"#  This decreases the accuracy of the simulation.\n"
 msgstr ""
 
 #. type: Plain text
@@ -118,14 +136,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:78
+#, no-wrap
 msgid ""
-"# ========================================================== # main() { # "
-"\"Main\" code block, mimicking a C-language main() function."
+"# ==========================================================\n"
+"# main() {\n"
+"# \"Main\" code block, mimicking a C-language main() function.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:85
-msgid "# Initialize variables.  shots=0 splashes=0 thuds=0 Pi=0 error=0"
+#, no-wrap
+msgid ""
+"# Initialize variables.\n"
+"shots=0\n"
+"splashes=0\n"
+"thuds=0\n"
+"Pi=0\n"
+"error=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -187,7 +214,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:118
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
@@ -209,14 +237,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:134
+#, no-wrap
 msgid ""
-"# End of \"main\" code block.  # } # "
-"=========================================================="
+"# End of \"main\" code block.\n"
+"# }\n"
+"# ==========================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cannon.sh:136
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

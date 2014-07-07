@@ -1,6 +1,7 @@
 #!/bin/bash
 
-var1=unset previous=$var1
+var1=unset
+previous=$var1
 
 while echo "previous-variable = $previous"
       echo
@@ -14,6 +15,7 @@ echo "Input variable #1 (end to exit) "
   echo "variable #1 = $var1"
 done  
 
-# Try to figure out how this all works.  # It's a wee bit tricky.
+# Try to figure out how this all works.
+# It's a wee bit tricky.
 
 exit 0

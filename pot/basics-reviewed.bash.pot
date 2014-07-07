@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:3
-msgid "#!/bin/bash # basics-reviewed.bash"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# basics-reviewed.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:5
-msgid "# File extension == *.bash == specific to Bash"
+#, no-wrap
+msgid "# File extension == *.bash == specific to Bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,17 +45,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:19
+#, no-wrap
 msgid ""
-"# This script tested under Bash versions 2.04, 2.05a and 2.05b.  # It may "
-"not work with earlier versions.  # This demonstration script generates one "
-"--intentional-- #+ \"command not found\" error message. See line 436."
+"#  This script tested under Bash versions 2.04, 2.05a and 2.05b.\n"
+"#  It may not work with earlier versions.\n"
+"#  This demonstration script generates one --intentional--\n"
+"#+ \"command not found\" error message. See line 436.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:22
+#, no-wrap
 msgid ""
-"# The current Bash maintainer, Chet Ramey, has fixed the items noted #+ for "
-"later versions of Bash."
+"#  The current Bash maintainer, Chet Ramey, has fixed the items noted\n"
+"#+ for later versions of Bash.\n"
 msgstr ""
 
 #. type: Plain text
@@ -79,26 +86,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:41
-msgid "# Variables are not typed unless otherwise specified."
+#, no-wrap
+msgid "# Variables are not typed unless otherwise specified.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:45
+#, no-wrap
 msgid ""
-"# Variables are named. Names must contain a non-digit.  # File descriptor "
-"names (as in, for example: 2>&amp;1)  #+ contain ONLY digits."
+"#  Variables are named. Names must contain a non-digit.\n"
+"#  File descriptor names (as in, for example: 2>&amp;1)\n"
+"#+ contain ONLY digits.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:48
+#, no-wrap
 msgid ""
-"# Parameters and Bash array elements are numbered.  # (Parameters are very "
-"similar to Bash arrays.)"
+"# Parameters and Bash array elements are numbered.\n"
+"# (Parameters are very similar to Bash arrays.)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:51
-msgid "# A variable name may be undefined (null reference).  unset VarNull"
+#, no-wrap
+msgid ""
+"# A variable name may be undefined (null reference).\n"
+"unset VarNull\n"
 msgstr ""
 
 #. type: Plain text
@@ -111,7 +125,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:57
-msgid "# A variable name may be defined and non-empty.  VarSomething='Literal'"
+#, no-wrap
+msgid ""
+"# A variable name may be defined and non-empty.\n"
+"VarSomething='Literal'\n"
 msgstr ""
 
 #. type: Plain text
@@ -126,29 +143,36 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:65
+#, no-wrap
 msgid ""
-"# A string may contain embedded blanks and may be treated #+ as if it where "
-"a function name with optional arguments."
+"#  A string may contain embedded blanks and may be treated\n"
+"#+ as if it where a function name with optional arguments.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:68
+#, no-wrap
 msgid ""
-"# The names of variables and the names of functions #+ are in different "
-"namespaces."
+"#  The names of variables and the names of functions\n"
+"#+ are in different namespaces.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:74
+#, no-wrap
 msgid ""
-"# A variable may be defined as a Bash array either explicitly or #+ "
-"implicitly by the syntax of the assignment statement.  # Explicit: declare "
-"-a ArrayVar"
+"#  A variable may be defined as a Bash array either explicitly or\n"
+"#+ implicitly by the syntax of the assignment statement.\n"
+"#  Explicit:\n"
+"declare -a ArrayVar\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:79
-msgid "# The echo command is a builtin.  echo $VarSomething"
+#, no-wrap
+msgid ""
+"# The echo command is a builtin.\n"
+"echo $VarSomething\n"
 msgstr ""
 
 #. type: Plain text
@@ -163,47 +187,57 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:91
+#, no-wrap
 msgid ""
-"# The Bash parser word breaks on whitespace.  # Whitespace, or the lack of "
-"it is significant.  # (This holds true in general; there are, of course, "
-"exceptions.)"
+"# The Bash parser word breaks on whitespace.\n"
+"# Whitespace, or the lack of it is significant.\n"
+"# (This holds true in general; there are, of course, exceptions.)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:96
-msgid "# Translate the DOLLAR_SIGN character as: Content-Of."
+#, no-wrap
+msgid "# Translate the DOLLAR_SIGN character as: Content-Of.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:99
-msgid "# Extended-Syntax way of writing Content-Of: echo ${VarSomething}"
+#, no-wrap
+msgid ""
+"# Extended-Syntax way of writing Content-Of:\n"
+"echo ${VarSomething}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:103
+#, no-wrap
 msgid ""
-"# The ${ ... } Extended-Syntax allows more than just the variable #+ name to "
-"be specified.  # In general, $VarSomething can always be written as: "
-"${VarSomething}."
+"#  The ${ ... } Extended-Syntax allows more than just the variable\n"
+"#+ name to be specified.\n"
+"#  In general, $VarSomething can always be written as: ${VarSomething}.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:105
-msgid "# Call this script with arguments to see the following in action."
+#, no-wrap
+msgid "# Call this script with arguments to see the following in action.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:111
+#, no-wrap
 msgid ""
-"# Outside of double-quotes, the special characters @ and * #+ specify "
-"identical behavior.  # May be pronounced as: All-Elements-Of."
+"#  Outside of double-quotes, the special characters @ and *\n"
+"#+ specify identical behavior.\n"
+"#  May be pronounced as: All-Elements-Of.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:114
+#, no-wrap
 msgid ""
-"# Without specification of a name, they refer to the #+ pre-defined "
-"parameter Bash-Array."
+"#  Without specification of a name, they refer to the\n"
+"#+ pre-defined parameter Bash-Array.\n"
 msgstr ""
 
 #. type: Plain text
@@ -217,9 +251,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:123
+#, no-wrap
 msgid ""
-"# Bash disables filename expansion for Glob-Patterns.  # Only character "
-"matching is active."
+"# Bash disables filename expansion for Glob-Patterns.\n"
+"# Only character matching is active.\n"
 msgstr ""
 
 #. type: Plain text
@@ -233,53 +268,61 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:135
+#, no-wrap
 msgid ""
-"# Within double-quotes, the behavior of Glob-Pattern references #+ depends "
-"on the setting of IFS (Input Field Separator).  # Within double-quotes, "
-"All-Elements-Of references behave the same."
+"#  Within double-quotes, the behavior of Glob-Pattern references\n"
+"#+ depends on the setting of IFS (Input Field Separator).\n"
+"#  Within double-quotes, All-Elements-Of references behave the same.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:139
+#, no-wrap
 msgid ""
-"# Specifying only the name of a variable holding a string refers #+ to all "
-"elements (characters) of a string."
+"#  Specifying only the name of a variable holding a string refers\n"
+"#+ to all elements (characters) of a string.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:143
+#, no-wrap
 msgid ""
-"# To specify an element (character) of a string, #+ the Extended-Syntax "
-"reference notation (see below) MAY be used."
+"#  To specify an element (character) of a string,\n"
+"#+ the Extended-Syntax reference notation (see below) MAY be used.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:150
+#, no-wrap
 msgid ""
-"# Specifying only the name of a Bash array references #+ the subscript zero "
-"element, #+ NOT the FIRST DEFINED nor the FIRST WITH CONTENTS element."
+"#  Specifying only the name of a Bash array references\n"
+"#+ the subscript zero element,\n"
+"#+ NOT the FIRST DEFINED nor the FIRST WITH CONTENTS element.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:154
+#, no-wrap
 msgid ""
-"# Additional qualification is needed to reference other elements, #+ which "
-"means that the reference MUST be written in Extended-Syntax.  # The general "
-"form is: ${name[subscript]}."
+"#  Additional qualification is needed to reference other elements,\n"
+"#+ which means that the reference MUST be written in Extended-Syntax.\n"
+"#  The general form is: ${name[subscript]}.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:157
+#, no-wrap
 msgid ""
-"# The string forms may also be used: ${name:subscript} #+ for Bash-Arrays "
-"when referencing the subscript zero element."
+"#  The string forms may also be used: ${name:subscript}\n"
+"#+ for Bash-Arrays when referencing the subscript zero element.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:161
+#, no-wrap
 msgid ""
-"# Bash-Arrays are implemented internally as linked lists, #+ not as a fixed "
-"area of storage as in some programming languages."
+"# Bash-Arrays are implemented internally as linked lists,\n"
+"#+ not as a fixed area of storage as in some programming languages.\n"
 msgstr ""
 
 #. type: Plain text
@@ -330,7 +373,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:201
-msgid "echo \"=========================================================\""
+#, no-wrap
+msgid "echo \"=========================================================\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -418,22 +462,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:275
+#, no-wrap
 msgid ""
-"echo echo '---Case2: Within double-quotes - IFS is q' IFS='q' echo 'Here is: "
-"printf %q \"{${ArrayVar[*]}\"' printf %q \"${ArrayVar[*]}\" echo echo 'Here "
-"is: printf %q \"{${ArrayVar[@]}\"' printf %q \"${ArrayVar[@]}\" echo echo "
-"'Here is: echo \"${ArrayVar[*]}\"' echo \"${ArrayVar[@]}\" echo 'Here is: "
-"echo \"{${ArrayVar[@]}\"' echo \"${ArrayVar[@]}\""
+"echo\n"
+"echo '---Case2: Within double-quotes - IFS is q'\n"
+"IFS='q'\n"
+"echo 'Here is: printf %q \"{${ArrayVar[*]}\"'\n"
+"printf %q \"${ArrayVar[*]}\"\n"
+"echo\n"
+"echo 'Here is: printf %q \"{${ArrayVar[@]}\"'\n"
+"printf %q \"${ArrayVar[@]}\"\n"
+"echo\n"
+"echo 'Here is: echo \"${ArrayVar[*]}\"'\n"
+"echo  \"${ArrayVar[@]}\"\n"
+"echo 'Here is: echo \"{${ArrayVar[@]}\"'\n"
+"echo \"${ArrayVar[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:289
+#, no-wrap
 msgid ""
-"echo echo '---Case3: Within double-quotes - IFS is ^' IFS='^' echo 'Here is: "
-"printf %q \"{${ArrayVar[*]}\"' printf %q \"${ArrayVar[*]}\" echo echo 'Here "
-"is: printf %q \"{${ArrayVar[@]}\"' printf %q \"${ArrayVar[@]}\" echo echo "
-"'Here is: echo \"${ArrayVar[*]}\"' echo \"${ArrayVar[@]}\" echo 'Here is: "
-"echo \"{${ArrayVar[@]}\"' echo \"${ArrayVar[@]}\""
+"echo\n"
+"echo '---Case3: Within double-quotes - IFS is ^'\n"
+"IFS='^'\n"
+"echo 'Here is: printf %q \"{${ArrayVar[*]}\"'\n"
+"printf %q \"${ArrayVar[*]}\"\n"
+"echo\n"
+"echo 'Here is: printf %q \"{${ArrayVar[@]}\"'\n"
+"printf %q \"${ArrayVar[@]}\"\n"
+"echo\n"
+"echo 'Here is: echo \"${ArrayVar[*]}\"'\n"
+"echo  \"${ArrayVar[@]}\"\n"
+"echo 'Here is: echo \"{${ArrayVar[@]}\"'\n"
+"echo \"${ArrayVar[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -458,29 +520,49 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:318
+#, no-wrap
 msgid ""
-"echo echo '---Case6: Within double-quotes - IFS set and empty ' IFS='' echo "
-"'Here is: printf %q \"{${ArrayVar[*]}\"' printf %q \"${ArrayVar[*]}\" echo "
-"echo 'Here is: printf %q \"{${ArrayVar[@]}\"' printf %q \"${ArrayVar[@]}\" "
-"echo echo 'Here is: echo \"${ArrayVar[*]}\"' echo \"${ArrayVar[@]}\" echo "
-"'Here is: echo \"{${ArrayVar[@]}\"' echo \"${ArrayVar[@]}\""
+"echo\n"
+"echo '---Case6: Within double-quotes - IFS set and empty '\n"
+"IFS=''\n"
+"echo 'Here is: printf %q \"{${ArrayVar[*]}\"'\n"
+"printf %q \"${ArrayVar[*]}\"\n"
+"echo\n"
+"echo 'Here is: printf %q \"{${ArrayVar[@]}\"'\n"
+"printf %q \"${ArrayVar[@]}\"\n"
+"echo\n"
+"echo 'Here is: echo \"${ArrayVar[*]}\"'\n"
+"echo  \"${ArrayVar[@]}\"\n"
+"echo 'Here is: echo \"{${ArrayVar[@]}\"'\n"
+"echo \"${ArrayVar[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:332
+#, no-wrap
 msgid ""
-"echo echo '---Case7: Within double-quotes - IFS is unset' unset IFS echo "
-"'Here is: printf %q \"{${ArrayVar[*]}\"' printf %q \"${ArrayVar[*]}\" echo "
-"echo 'Here is: printf %q \"{${ArrayVar[@]}\"' printf %q \"${ArrayVar[@]}\" "
-"echo echo 'Here is: echo \"${ArrayVar[*]}\"' echo \"${ArrayVar[@]}\" echo "
-"'Here is: echo \"{${ArrayVar[@]}\"' echo \"${ArrayVar[@]}\""
+"echo\n"
+"echo '---Case7: Within double-quotes - IFS is unset'\n"
+"unset IFS\n"
+"echo 'Here is: printf %q \"{${ArrayVar[*]}\"'\n"
+"printf %q \"${ArrayVar[*]}\"\n"
+"echo\n"
+"echo 'Here is: printf %q \"{${ArrayVar[@]}\"'\n"
+"printf %q \"${ArrayVar[@]}\"\n"
+"echo\n"
+"echo 'Here is: echo \"${ArrayVar[*]}\"'\n"
+"echo  \"${ArrayVar[@]}\"\n"
+"echo 'Here is: echo \"{${ArrayVar[@]}\"'\n"
+"echo \"${ArrayVar[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:336
+#, no-wrap
 msgid ""
-"echo echo '---End of Cases---' echo "
-"\"=========================================================\"; echo"
+"echo\n"
+"echo '---End of Cases---'\n"
+"echo \"=========================================================\"; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -524,10 +606,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:370
+#, no-wrap
 msgid ""
-"# The length of a string, measured in non-null elements (characters): echo "
-"echo '- - Non-quoted references - -' echo 'Non-Null character count: "
-"'${#VarSomething}' characters.'"
+"# The length of a string, measured in non-null elements (characters):\n"
+"echo\n"
+"echo '- - Non-quoted references - -'\n"
+"echo 'Non-Null character count: '${#VarSomething}' characters.'\n"
 msgstr ""
 
 #. type: Plain text
@@ -540,37 +624,48 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:386
+#, no-wrap
 msgid ""
-"# The length of an array, measured in defined elements, #+ including null "
-"content elements.  echo echo 'Defined content count: '${#ArrayVar[@]}' "
-"elements.' # That is NOT the maximum subscript (4).  # That is NOT the range "
-"of the subscripts (1 . . 4 inclusive).  # It IS the length of the linked "
-"list.  ### # Both the maximum subscript and the range of the subscripts may "
-"#+ be found with additional script programming."
+"#  The length of an array, measured in defined elements,\n"
+"#+ including null content elements.\n"
+"echo\n"
+"echo 'Defined content count: '${#ArrayVar[@]}' elements.'\n"
+"# That is NOT the maximum subscript (4).\n"
+"# That is NOT the range of the subscripts (1 . . 4 inclusive).\n"
+"# It IS the length of the linked list.\n"
+"###\n"
+"#  Both the maximum subscript and the range of the subscripts may\n"
+"#+ be found with additional script programming.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:391
+#, no-wrap
 msgid ""
-"# The length of a string, measured in non-null elements (characters): echo "
-"echo '- - Quoted, Glob-Pattern references - -' echo 'Non-Null character "
-"count: '\"${#VarSomething}\"' characters.'"
+"# The length of a string, measured in non-null elements (characters):\n"
+"echo\n"
+"echo '- - Quoted, Glob-Pattern references - -'\n"
+"echo 'Non-Null character count: '\"${#VarSomething}\"' characters.'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:396
+#, no-wrap
 msgid ""
-"# The length of an array, measured in defined elements, #+ including "
-"null-content elements.  echo echo 'Defined element count: "
-"'\"${#ArrayVar[*]}\"' elements.'"
+"#  The length of an array, measured in defined elements,\n"
+"#+ including null-content elements.\n"
+"echo\n"
+"echo 'Defined element count: '\"${#ArrayVar[*]}\"' elements.'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:401
+#, no-wrap
 msgid ""
-"# Interpretation: Substitution does not effect the ${# ... } operation.  # "
-"Suggestion: # Always use the All-Elements-Of character #+ if that is what is "
-"intended (independence from IFS)."
+"#  Interpretation: Substitution does not effect the ${# ... } operation.\n"
+"#  Suggestion:\n"
+"#  Always use the All-Elements-Of character\n"
+"#+ if that is what is intended (independence from IFS).\n"
 msgstr ""
 
 #. type: Plain text
@@ -592,9 +687,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:419
+#, no-wrap
 msgid ""
-"# The ( ... ) notation invokes a command or function.  # The $( ... ) "
-"notation is pronounced: Result-Of."
+"# The ( ... ) notation invokes a command or function.\n"
+"# The $( ... ) notation is pronounced: Result-Of.\n"
 msgstr ""
 
 #. type: Plain text
@@ -621,7 +717,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:434
-msgid "# Invoke the result of function _simple (Error msg intended)"
+#, no-wrap
+msgid "# Invoke the result of function _simple (Error msg intended)\n"
 msgstr ""
 
 #. type: Plain text
@@ -636,7 +733,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:442
-msgid "echo ###"
+#, no-wrap
+msgid ""
+"echo\n"
+"###\n"
 msgstr ""
 
 #. type: Plain text
@@ -692,15 +792,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:474
-msgid "# Function variables # ------------------"
+#, no-wrap
+msgid ""
+"# Function variables\n"
+"# ------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:479
+#, no-wrap
 msgid ""
-"echo echo '- - Function variables - -' # A variable may represent a signed "
-"integer, a string or an array.  # A string may be used like a function name "
-"with optional arguments."
+"echo\n"
+"echo '- - Function variables - -'\n"
+"# A variable may represent a signed integer, a string or an array.\n"
+"# A string may be used like a function name with optional arguments.\n"
 msgstr ""
 
 #. type: Plain text
@@ -750,16 +855,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:504
+#, no-wrap
 msgid ""
-"# The difference between the unquoted and the double-quoted versions #+ "
-"above can be seen in the \"protect_literal.sh\" example.  # The first case "
-"above is processed as two, unquoted, Bash-Words.  # The second case above is "
-"processed as one, quoted, Bash-Word."
+"#  The difference between the unquoted and the double-quoted versions\n"
+"#+ above can be seen in the \"protect_literal.sh\" example.\n"
+"#  The first case above is processed as two, unquoted, Bash-Words.\n"
+"#  The second case above is processed as one, quoted, Bash-Word.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:510
-msgid "# Delayed replacement # -------------------"
+#, no-wrap
+msgid ""
+"# Delayed replacement\n"
+"# -------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -784,39 +893,59 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:523
-msgid "# Restore the original setting trashed above.  VarSomething=Literal"
+#, no-wrap
+msgid ""
+"# Restore the original setting trashed above.\n"
+"VarSomething=Literal\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:528
+#, no-wrap
 msgid ""
-"# There are a pair of functions demonstrated in the #+ "
-"\"protect_literal.sh\" and \"unprotect_literal.sh\" examples.  # These are "
-"general purpose functions for delayed replacement literals #+ containing "
-"variables."
+"#  There are a pair of functions demonstrated in the\n"
+"#+ \"protect_literal.sh\" and \"unprotect_literal.sh\" examples.\n"
+"#  These are general purpose functions for delayed replacement literals\n"
+"#+ containing variables.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:535
-msgid "# REVIEW: # ------"
+#, no-wrap
+msgid ""
+"# REVIEW:\n"
+"# ------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:561
+#, no-wrap
 msgid ""
-"# A string can be considered a Classic-Array of elements (characters).  # A "
-"string operation applies to all elements (characters) of the string #+ (in "
-"concept, anyway).  ### # The notation: ${array_name[@]} represents all "
-"elements of the #+ Bash-Array: array_name.  ### # The Extended-Syntax string "
-"operations can be applied to all #+ elements of an array.  ### # This may be "
-"thought of as a For-Each operation on a vector of strings.  ### # Parameters "
-"are similar to an array.  # The initialization of a parameter array for a "
-"script #+ and a parameter array for a function only differ #+ in the "
-"initialization of ${0}, which never changes its setting.  ### # Subscript "
-"zero of the script's parameter array contains #+ the name of the script.  "
-"### # Subscript zero of a function's parameter array DOES NOT contain #+ the "
-"name of the function.  # The name of the current function is accessed by the "
-"$FUNCNAME variable.  ### # A quick, review list follows (quick, not short)."
+"#  A string can be considered a Classic-Array of elements (characters).\n"
+"#  A string operation applies to all elements (characters) of the string\n"
+"#+ (in concept, anyway).\n"
+"###\n"
+"#  The notation: ${array_name[@]} represents all elements of the\n"
+"#+ Bash-Array: array_name.\n"
+"###\n"
+"#  The Extended-Syntax string operations can be applied to all\n"
+"#+ elements of an array.\n"
+"###\n"
+"#  This may be thought of as a For-Each operation on a vector of strings.\n"
+"###\n"
+"#  Parameters are similar to an array.\n"
+"#  The initialization of a parameter array for a script\n"
+"#+ and a parameter array for a function only differ\n"
+"#+ in the initialization of ${0}, which never changes its setting.\n"
+"###\n"
+"#  Subscript zero of the script's parameter array contains\n"
+"#+ the name of the script.\n"
+"###\n"
+"#  Subscript zero of a function's parameter array DOES NOT contain\n"
+"#+ the name of the function.\n"
+"#  The name of the current function is accessed by the $FUNCNAME variable.\n"
+"###\n"
+"#  A quick, review list follows (quick, not short).\n"
 msgstr ""
 
 #. type: Plain text
@@ -854,7 +983,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:582
-msgid "echo '- Sparse Array -' echo ${ArrayVar[@]-'not set'}"
+#, no-wrap
+msgid ""
+"echo '- Sparse Array -'\n"
+"echo ${ArrayVar[@]-'not set'}\n"
 msgstr ""
 
 #. type: Plain text
@@ -916,7 +1048,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:619
-msgid "# Exercise: clean up that example.  unset t unset _decT VarSomething=Literal"
+#, no-wrap
+msgid ""
+"# Exercise: clean up that example.\n"
+"unset t\n"
+"unset _decT\n"
+"VarSomething=Literal\n"
 msgstr ""
 
 #. type: Plain text
@@ -972,35 +1109,52 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:659
+#, no-wrap
 msgid ""
-"# \"Subscript sparse\" Bash-Arrays ### # Bash-Arrays are subscript packed, "
-"beginning with #+ subscript zero unless otherwise specified.  ### # The "
-"initialization of ArrayVar was one way #+ to \"otherwise specify\".  Here is "
-"the other way: ### echo declare -a ArraySparse ArraySparse=( [1]=one [2]='' "
-"[4]='four' )  # [0]=null reference, [2]=null content, [3]=null reference"
+"# \"Subscript sparse\" Bash-Arrays\n"
+"###\n"
+"#  Bash-Arrays are subscript packed, beginning with\n"
+"#+ subscript zero unless otherwise specified.\n"
+"###\n"
+"#  The initialization of ArrayVar was one way\n"
+"#+ to \"otherwise specify\".  Here is the other way:\n"
+"###\n"
+"echo\n"
+"declare -a ArraySparse\n"
+"ArraySparse=( [1]=one [2]='' [4]='four' )\n"
+"# [0]=null reference, [2]=null content, [3]=null reference\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:662
+#, no-wrap
 msgid ""
-"echo '- - Array-Sparse List - -' # Within double-quotes, default IFS, "
-"Glob-Pattern"
+"echo '- - Array-Sparse List - -'\n"
+"# Within double-quotes, default IFS, Glob-Pattern\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:666
-msgid "IFS=$'\\x20'$'\\x09'$'\\x0A' printf %q \"${ArraySparse[*]}\" echo"
+#, no-wrap
+msgid ""
+"IFS=$'\\x20'$'\\x09'$'\\x0A'\n"
+"printf %q \"${ArraySparse[*]}\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:676
+#, no-wrap
 msgid ""
-"# Note that the output does not distinguish between \"null content\" #+ and "
-"\"null reference\".  # Both print as escaped whitespace.  ### # Note also "
-"that the output does NOT contain escaped whitespace #+ for the \"null "
-"reference(s)\" prior to the first defined element.  ### # This behavior of "
-"2.04, 2.05a and 2.05b has been reported #+ and may change in a future "
-"version of Bash."
+"#  Note that the output does not distinguish between \"null content\"\n"
+"#+ and \"null reference\".\n"
+"#  Both print as escaped whitespace.\n"
+"###\n"
+"#  Note also that the output does NOT contain escaped whitespace\n"
+"#+ for the \"null reference(s)\" prior to the first defined element.\n"
+"###\n"
+"# This behavior of 2.04, 2.05a and 2.05b has been reported\n"
+"#+ and may change in a future version of Bash.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1026,35 +1180,51 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:706
+#, no-wrap
 msgid ""
-"# The reader coming upon the above code fragment cold #+ might want to "
-"review \"command lists\" and \"multiple commands on a line\" #+ in the text "
-"of the foregoing \"Advanced Bash Scripting Guide.\" ### # Note: # The \"read "
-"-a array_name\" version of the \"read\" command #+ begins filling array_name "
-"at subscript zero.  # ArraySparse does not define a value at subscript "
-"zero.  ### # The user needing to read/write a sparse array to either #+ "
-"external storage or a communications socket must invent #+ a read/write code "
-"pair suitable for their purpose.  ### # Exercise: clean it up."
+"# The reader coming upon the above code fragment cold\n"
+"#+ might want to review \"command lists\" and \"multiple commands on a "
+"line\"\n"
+"#+ in the text of the foregoing \"Advanced Bash Scripting Guide.\"\n"
+"###\n"
+"#  Note:\n"
+"#  The \"read -a array_name\" version of the \"read\" command\n"
+"#+ begins filling array_name at subscript zero.\n"
+"#  ArraySparse does not define a value at subscript zero.\n"
+"###\n"
+"#  The user needing to read/write a sparse array to either\n"
+"#+ external storage or a communications socket must invent\n"
+"#+ a read/write code pair suitable for their purpose.\n"
+"###\n"
+"# Exercise: clean it up.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:708
-msgid "unset ArraySparse"
+#, no-wrap
+msgid "unset ArraySparse\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:715
+#, no-wrap
 msgid ""
-"echo echo '- - Conditional alternate (But not change)- -' echo '- No "
-"alternate if null reference -' echo -n ${VarNull+'NotSet'}' ' echo "
-"${VarNull} unset VarNull"
+"echo\n"
+"echo '- - Conditional alternate (But not change)- -'\n"
+"echo '- No alternate if null reference -'\n"
+"echo -n ${VarNull+'NotSet'}' '\n"
+"echo ${VarNull}\n"
+"unset VarNull\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:720
+#, no-wrap
 msgid ""
-"echo '- No alternate if null reference -' echo -n ${VarNull:+'NotSet'}' ' "
-"echo ${VarNull} unset VarNull"
+"echo '- No alternate if null reference -'\n"
+"echo -n ${VarNull:+'NotSet'}' '\n"
+"echo ${VarNull}\n"
+"unset VarNull\n"
 msgstr ""
 
 #. type: Plain text
@@ -1079,7 +1249,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:732
-msgid "echo '- Alternate if already has contents -'"
+#, no-wrap
+msgid "echo '- Alternate if already has contents -'\n"
 msgstr ""
 
 #. type: Plain text
@@ -1112,7 +1283,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:747
-msgid "echo '- - Test 2 for undefined - -'"
+#, no-wrap
+msgid "echo '- - Test 2 for undefined - -'\n"
 msgstr ""
 
 #. type: Plain text
@@ -1127,9 +1299,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:756
+#, no-wrap
 msgid ""
-"# Note: # This is the same test used in the sparse array #+ listing code "
-"fragment."
+"#  Note:\n"
+"#  This is the same test used in the sparse array\n"
+"#+ listing code fragment.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1164,38 +1338,54 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:775
-msgid "# Exercise: clean up that example.  unset t unset _incT"
+#, no-wrap
+msgid ""
+"# Exercise: clean up that example.\n"
+"unset t\n"
+"unset _incT\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:783
+#, no-wrap
 msgid ""
-"# ${name?err_msg} ${name:?err_msg} # These follow the same rules but always "
-"exit afterwards #+ if an action is specified following the question mark.  # "
-"The action following the question mark may be a literal #+ or a function "
-"result.  ### # ${name?} ${name:?} are test-only, the return can be tested."
+"# ${name?err_msg} ${name:?err_msg}\n"
+"#  These follow the same rules but always exit afterwards\n"
+"#+ if an action is specified following the question mark.\n"
+"#  The action following the question mark may be a literal\n"
+"#+ or a function result.\n"
+"###\n"
+"#  ${name?} ${name:?} are test-only, the return can be tested.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:789
-msgid "# Element operations # ------------------"
+#, no-wrap
+msgid ""
+"# Element operations\n"
+"# ------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:792
-msgid "echo echo '- - Trailing sub-element selection - -'"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo '- - Trailing sub-element selection - -'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:794
-msgid "# Strings, Arrays and Positional parameters"
+#, no-wrap
+msgid "#  Strings, Arrays and Positional parameters\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:797
+#, no-wrap
 msgid ""
-"# Call this script with multiple arguments #+ to see the parameter "
-"selections."
+"#  Call this script with multiple arguments\n"
+"#+ to see the parameter selections.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1248,10 +1438,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:830
+#, no-wrap
 msgid ""
-"# In versions 2.04, 2.05a and 2.05b, #+ Bash does not handle sparse arrays "
-"as expected using this notation.  # # The current Bash maintainer, Chet "
-"Ramey, has corrected this."
+"#  In versions 2.04, 2.05a and 2.05b,\n"
+"#+ Bash does not handle sparse arrays as expected using this notation.\n"
+"#\n"
+"#  The current Bash maintainer, Chet Ramey, has corrected this.\n"
 msgstr ""
 
 #. type: Plain text
@@ -1264,28 +1456,36 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:839
+#, no-wrap
 msgid ""
-"# New victims for string vector examples: stringZ=abcABC123ABCabc arrayZ=( "
-"abcabc ABCABC 123123 ABCABC abcabc )  sparseZ=( [1]='abcabc' [3]='ABCABC' "
-"[4]='' [5]='123123' )"
+"# New victims for string vector examples:\n"
+"stringZ=abcABC123ABCabc\n"
+"arrayZ=( abcabc ABCABC 123123 ABCABC abcabc )\n"
+"sparseZ=( [1]='abcabc' [3]='ABCABC' [4]='' [5]='123123' )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:847
+#, no-wrap
 msgid ""
-"echo echo ' - - Victim string - -'$stringZ'- - ' echo ' - - Victim array - "
-"-'${arrayZ[@]}'- - ' echo ' - - Sparse array - -'${sparseZ[@]}'- - ' echo ' "
-"- [0]==null ref, [2]==null ref, [4]==null content - ' echo ' - [1]=abcabc "
-"[3]=ABCABC [5]=123123 - ' echo ' - non-null-reference count: "
-"'${#sparseZ[@]}' elements'"
+"echo\n"
+"echo ' - - Victim string - -'$stringZ'- - '\n"
+"echo ' - - Victim array - -'${arrayZ[@]}'- - '\n"
+"echo ' - - Sparse array - -'${sparseZ[@]}'- - '\n"
+"echo ' - [0]==null ref, [2]==null ref, [4]==null content - '\n"
+"echo ' - [1]=abcabc [3]=ABCABC [5]=123123 - '\n"
+"echo ' - non-null-reference count: '${#sparseZ[@]}' elements'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:853
+#, no-wrap
 msgid ""
-"echo echo '- - Prefix sub-element removal - -' echo '- - Glob-Pattern match "
-"must include the first character. - -' echo '- - Glob-Pattern may be a "
-"literal or a function result. - -' echo"
+"echo\n"
+"echo '- - Prefix sub-element removal - -'\n"
+"echo '- - Glob-Pattern match must include the first character. - -'\n"
+"echo '- - Glob-Pattern may be a literal or a function result. - -'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -1432,9 +1632,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:934
+#, no-wrap
 msgid ""
-"echo echo '- Delete first occurrence -' echo ${stringZ/$(_123)/} echo "
-"${stringZ/ABC/} echo ${arrayZ[@]/ABC/} echo ${sparseZ[@]/ABC/}"
+"echo\n"
+"echo '- Delete first occurrence -'\n"
+"echo ${stringZ/$(_123)/}\n"
+"echo ${stringZ/ABC/}\n"
+"echo ${arrayZ[@]/ABC/}\n"
+"echo ${sparseZ[@]/ABC/}\n"
 msgstr ""
 
 #. type: Plain text
@@ -1465,16 +1670,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:957
+#, no-wrap
 msgid ""
-"echo echo '- Delete all occurrences -' echo ${stringZ//[b2]/} echo "
-"${stringZ//abc/} echo ${arrayZ[@]//abc/} echo ${sparseZ[@]//abc/}"
+"echo\n"
+"echo '- Delete all occurrences -'\n"
+"echo ${stringZ//[b2]/}\n"
+"echo ${stringZ//abc/}\n"
+"echo ${arrayZ[@]//abc/}\n"
+"echo ${sparseZ[@]//abc/}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:962
+#, no-wrap
 msgid ""
-"echo echo '- - Prefix sub-element replacement - -' echo '- - Match must "
-"include the first character. - -' echo"
+"echo\n"
+"echo '- - Prefix sub-element replacement - -'\n"
+"echo '- - Match must include the first character. - -'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -1490,16 +1703,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:975
+#, no-wrap
 msgid ""
-"echo echo '- Delete prefix occurrences -' echo ${stringZ/#[b2]/} echo "
-"${stringZ/#$(_abc)/} echo ${arrayZ[@]/#abc/} echo ${sparseZ[@]/#abc/}"
+"echo\n"
+"echo '- Delete prefix occurrences -'\n"
+"echo ${stringZ/#[b2]/}\n"
+"echo ${stringZ/#$(_abc)/}\n"
+"echo ${arrayZ[@]/#abc/}\n"
+"echo ${sparseZ[@]/#abc/}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:980
+#, no-wrap
 msgid ""
-"echo echo '- - Suffix sub-element replacement - -' echo '- - Match must "
-"include the last character. - -' echo"
+"echo\n"
+"echo '- - Suffix sub-element replacement - -'\n"
+"echo '- - Match must include the last character. - -'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -1515,14 +1736,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:993
+#, no-wrap
 msgid ""
-"echo echo '- Delete suffix occurrences -' echo ${stringZ/%[b2]/} echo "
-"${stringZ/%$(_abc)/} echo ${arrayZ[@]/%abc/} echo ${sparseZ[@]/%abc/}"
+"echo\n"
+"echo '- Delete suffix occurrences -'\n"
+"echo ${stringZ/%[b2]/}\n"
+"echo ${stringZ/%$(_abc)/}\n"
+"echo ${arrayZ[@]/%abc/}\n"
+"echo ${sparseZ[@]/%abc/}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:997
-msgid "echo echo '- - Special cases of null Glob-Pattern - -' echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo '- - Special cases of null Glob-Pattern - -'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -1552,9 +1782,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:1017
+#, no-wrap
 msgid ""
-"echo echo '- - Special case For-Each Glob-Pattern - -' echo '- - - - This is "
-"a nice-to-have dream - - - -' echo"
+"echo\n"
+"echo '- - Special case For-Each Glob-Pattern - -'\n"
+"echo '- - - - This is a nice-to-have dream - - - -'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -1569,10 +1802,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:1027
+#, no-wrap
 msgid ""
-"# All occurrences, matching the AnyThing pattern.  # Currently //*/ does not "
-"match null-content nor null-reference.  # /#/ and /%/ does match "
-"null-content but not null-reference.  echo ${sparseZ[@]//*/$(_GenFunc)}"
+"# All occurrences, matching the AnyThing pattern.\n"
+"# Currently //*/ does not match null-content nor null-reference.\n"
+"# /#/ and /%/ does match null-content but not null-reference.\n"
+"echo ${sparseZ[@]//*/$(_GenFunc)}\n"
 msgstr ""
 
 #. type: Plain text
@@ -1592,5 +1827,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/basics-reviewed.bash:1040
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

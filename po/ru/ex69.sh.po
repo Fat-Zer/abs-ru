@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:5
-msgid "# Noninteractive use of 'vi' to edit a file.  # Emulates 'sed'."
+#, no-wrap
+msgid ""
+"# Noninteractive use of 'vi' to edit a file.\n"
+"# Emulates 'sed'.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:7
-msgid "E_BADARGS=85"
+#, no-wrap
+msgid "E_BADARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -44,31 +49,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:15
-msgid "TARGETFILE=$1"
+#, no-wrap
+msgid "TARGETFILE=$1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:26
+#, no-wrap
 msgid ""
-"# Insert 2 lines in file, then save.  #--------Begin here "
-"document-----------# vi $TARGETFILE &lt;&lt;x23LimitStringx23 i This is line "
-"1 of the example file.  This is line 2 of the example file.  ^[ ZZ "
-"x23LimitStringx23 #----------End here document-----------#"
+"# Insert 2 lines in file, then save.\n"
+"#--------Begin here document-----------#\n"
+"vi $TARGETFILE &lt;&lt;x23LimitStringx23\n"
+"i\n"
+"This is line 1 of the example file.\n"
+"This is line 2 of the example file.\n"
+"^[\n"
+"ZZ\n"
+"x23LimitStringx23\n"
+"#----------End here document-----------#\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:29
-msgid "# Note that ^[ above is a literal escape #+ typed by Control-V &lt;Esc&gt;."
+#, no-wrap
+msgid ""
+"#  Note that ^[ above is a literal escape\n"
+"#+ typed by Control-V &lt;Esc&gt;.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:32
+#, no-wrap
 msgid ""
-"# Bram Moolenaar points out that this may not work with 'vim' #+ because of "
-"possible problems with terminal interaction."
+"#  Bram Moolenaar points out that this may not work with 'vim'\n"
+"#+ because of possible problems with terminal interaction.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex69.sh:33
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

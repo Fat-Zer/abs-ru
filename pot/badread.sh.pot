@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # badread.sh: # Attempting to use 'echo and 'read' #+ to assign "
-"variables non-interactively."
+"#!/bin/bash\n"
+"#  badread.sh:\n"
+"#  Attempting to use 'echo and 'read'\n"
+"#+ to assign variables non-interactively.\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,19 +34,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:11
-msgid "a=aaa b=bbb c=ccc"
+#, no-wrap
+msgid ""
+"a=aaa\n"
+"b=bbb\n"
+"c=ccc\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:14
-msgid "echo \"one two three\" | read a b c # Try to reassign a, b, and c."
+#, no-wrap
+msgid ""
+"echo \"one two three\" | read a b c\n"
+"# Try to reassign a, b, and c.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:20
+#, no-wrap
 msgid ""
-"echo echo \"a = $a\" # a = aaa echo \"b = $b\" # b = bbb echo \"c = $c\" # c "
-"= ccc # Reassignment failed."
+"echo\n"
+"echo \"a = $a\"  # a = aaa\n"
+"echo \"b = $b\"  # b = bbb\n"
+"echo \"c = $c\"  # c = ccc\n"
+"# Reassignment failed.\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,31 +73,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:28 abs-guide/badread.sh:42
-msgid "# ------------------------------"
+#, no-wrap
+msgid "# ------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:30
-msgid "# Try the following alternative."
+#, no-wrap
+msgid "# Try the following alternative.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:34
-msgid "var=`echo \"one two three\"` set -- $var a=$1; b=$2; c=$3"
+#, no-wrap
+msgid ""
+"var=`echo \"one two three\"`\n"
+"set -- $var\n"
+"a=$1; b=$2; c=$3\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:40
+#, no-wrap
 msgid ""
-"echo \"-------\" echo \"a = $a\" # a = one echo \"b = $b\" # b = two echo "
-"\"c = $c\" # c = three # Reassignment succeeded."
+"echo \"-------\"\n"
+"echo \"a = $a\"  # a = one\n"
+"echo \"b = $b\"  # b = two\n"
+"echo \"c = $c\"  # c = three \n"
+"# Reassignment succeeded.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:45
+#, no-wrap
 msgid ""
-"# Note also that an echo to a 'read' works within a subshell.  # However, "
-"the value of the variable changes *only* within the subshell."
+"#  Note also that an echo to a 'read' works within a subshell.\n"
+"#  However, the value of the variable changes *only* within the subshell.\n"
 msgstr ""
 
 #. type: Plain text
@@ -97,14 +122,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:62
+#, no-wrap
 msgid ""
-"echo; echo echo \"one two three\" | ( read a b c; echo \"Inside subshell: "
-"\"; echo \"a = $a\"; echo \"b = $b\"; echo \"c = $c\" )  # a = one # b = two "
-"# c = three echo \"-----------------\" echo \"Outside subshell: \" echo \"a "
-"= $a\" # a = aaa echo \"b = $b\" # b = bbb echo \"c = $c\" # c = ccc echo"
+"echo; echo\n"
+"echo \"one two three\" | ( read a b c;\n"
+"echo \"Inside subshell: \"; echo \"a = $a\"; echo \"b = $b\"; echo \"c = "
+"$c\" )\n"
+"# a = one\n"
+"# b = two\n"
+"# c = three\n"
+"echo \"-----------------\"\n"
+"echo \"Outside subshell: \"\n"
+"echo \"a = $a\"  # a = aaa\n"
+"echo \"b = $b\"  # b = bbb\n"
+"echo \"c = $c\"  # c = ccc\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/badread.sh:63
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

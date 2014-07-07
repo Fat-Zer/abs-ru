@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ra2ogg.sh:3
-msgid "#!/bin/bash # ra2ogg.sh: Convert streaming audio files (*.ra) to ogg."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,11 +60,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ra2ogg.sh:29
+#, no-wrap
 msgid ""
-"########################################################################## "
-"mplayer \"$1\" -ao pcm:file=$OUTFILE oggenc \"$OUTFILE\" # Correct file "
-"extension automatically added by oggenc.  "
-"##########################################################################"
+"##########################################################################\n"
+"mplayer \"$1\" -ao pcm:file=$OUTFILE\n"
+"oggenc \"$OUTFILE\"  # Correct file extension automatically added by "
+"oggenc.\n"
+"##########################################################################\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,24 +79,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ra2ogg.sh:34
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ra2ogg.sh:41
+#, no-wrap
 msgid ""
-"# Note: # ---- # On a Website, simply clicking on a *.ram streaming audio "
-"file #+ usually only downloads the URL of the actual *.ra audio file.  # You "
-"can then use \"wget\" or something similar #+ to download the *.ra file "
-"itself."
+"#  Note:\n"
+"#  ----\n"
+"#  On a Website, simply clicking on a *.ram streaming audio file\n"
+"#+ usually only downloads the URL of the actual *.ra audio file.\n"
+"#  You can then use \"wget\" or something similar\n"
+"#+ to download the *.ra file itself.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ra2ogg.sh:51
+#, no-wrap
 msgid ""
-"# Exercises: # --------- # As is, this script converts only *.ra filenames.  "
-"# Add flexibility by permitting use of *.ram and other filenames.  # # If "
-"you're really ambitious, expand the script #+ to do automatic downloads and "
-"conversions of streaming audio files.  # Given a URL, batch download "
-"streaming audio files (using \"wget\")  #+ and convert them on the fly."
+"#  Exercises:\n"
+"#  ---------\n"
+"#  As is, this script converts only *.ra filenames.\n"
+"#  Add flexibility by permitting use of *.ram and other filenames.\n"
+"#\n"
+"#  If you're really ambitious, expand the script\n"
+"#+ to do automatic downloads and conversions of streaming audio files.\n"
+"#  Given a URL, batch download streaming audio files (using \"wget\")\n"
+"#+ and convert them on the fly.\n"
 msgstr ""

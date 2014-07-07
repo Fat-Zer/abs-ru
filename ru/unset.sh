@@ -1,4 +1,5 @@
-#!/bin/bash # unset.sh: Unsetting a variable.
+#!/bin/bash
+# unset.sh: Unsetting a variable.
 
 variable=hello                       #  Initialized.
 echo "variable = $variable"

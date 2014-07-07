@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/max.sh:3
-msgid "#!/bin/bash # max.sh: Maximum of two integers."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# max.sh: Maximum of two integers.\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,7 +66,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/max.sh:31
-msgid "max2 33 34 return_val=$?"
+#, no-wrap
+msgid ""
+"max2 33 34\n"
+"return_val=$?\n"
 msgstr ""
 
 #. type: Plain text
@@ -83,12 +89,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/max.sh:44
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/max.sh:48
+#, no-wrap
 msgid ""
-"# Exercise (easy): # --------------- # Convert this to an interactive "
-"script, #+ that is, have the script ask for input (two numbers)."
+"#  Exercise (easy):\n"
+"#  ---------------\n"
+"#  Convert this to an interactive script,\n"
+"#+ that is, have the script ask for input (two numbers).\n"
 msgstr ""

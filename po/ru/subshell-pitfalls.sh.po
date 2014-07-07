@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,39 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:3
-msgid "#!/bin/bash # Pitfalls of variables in a subshell."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Pitfalls of variables in a subshell.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:8
-msgid "outer_variable=outer echo echo \"outer_variable = $outer_variable\" echo"
+#, no-wrap
+msgid ""
+"outer_variable=outer\n"
+"echo\n"
+"echo \"outer_variable = $outer_variable\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:11
-msgid "( # Begin subshell"
+#, no-wrap
+msgid ""
+"(\n"
+"# Begin subshell\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:17
+#, no-wrap
 msgid ""
-"echo \"outer_variable inside subshell = $outer_variable\" "
-"inner_variable=inner # Set echo \"inner_variable inside subshell = "
-"$inner_variable\" outer_variable=inner # Will value change globally? echo "
-"\"outer_variable inside subshell = $outer_variable\""
+"echo \"outer_variable inside subshell = $outer_variable\"\n"
+"inner_variable=inner  # Set\n"
+"echo \"inner_variable inside subshell = $inner_variable\"\n"
+"outer_variable=inner  # Will value change globally?\n"
+"echo \"outer_variable inside subshell = $outer_variable\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,25 +65,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:25
-msgid "# End subshell )"
+#, no-wrap
+msgid ""
+"# End subshell\n"
+")\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:30
+#, no-wrap
 msgid ""
-"echo echo \"inner_variable outside subshell = $inner_variable\" # Unset.  "
-"echo \"outer_variable outside subshell = $outer_variable\" # Unchanged.  "
-"echo"
+"echo\n"
+"echo \"inner_variable outside subshell = $inner_variable\"  # Unset.\n"
+"echo \"outer_variable outside subshell = $outer_variable\"  # Unchanged.\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:32
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell-pitfalls.sh:34
+#, no-wrap
 msgid ""
-"# What happens if you uncomment lines 19 and 20? # Does it make a "
-"difference?"
+"# What happens if you uncomment lines 19 and 20?\n"
+"# Does it make a difference?\n"
 msgstr ""

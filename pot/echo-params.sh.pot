@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/echo-params.sh:3
-msgid "#!/bin/bash # echo-params.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# echo-params.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -69,18 +72,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/echo-params.sh:31
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/echo-params.sh:33
-msgid "# ================================================="
+#, no-wrap
+msgid "# =================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/echo-params.sh:39
+#, no-wrap
 msgid ""
-"$ sh echo-params.sh first second third fourth fifth Command-line parameter "
-"$1 = first Command-line parameter $2 = second Command-line parameter $3 = "
-"third Command-line parameter $4 = fourth Command-line parameter $5 = fifth"
+"$ sh echo-params.sh first second third fourth fifth\n"
+"Command-line parameter $1 = first\n"
+"Command-line parameter $2 = second\n"
+"Command-line parameter $3 = third\n"
+"Command-line parameter $4 = fourth\n"
+"Command-line parameter $5 = fifth\n"
 msgstr ""

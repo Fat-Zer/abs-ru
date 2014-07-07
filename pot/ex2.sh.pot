@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:3
-msgid "#!/bin/bash # Cleanup, version 3"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Cleanup, version 3\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:10
+#, no-wrap
 msgid ""
-"# Warning: # ------- # This script uses quite a number of features that will "
-"be explained #+ later on.  # By the time you've finished the first half of "
-"the book, #+ there should be nothing mysterious about it."
+"#  Warning:\n"
+"#  -------\n"
+"#  This script uses quite a number of features that will be explained\n"
+"#+ later on.\n"
+"#  By the time you've finished the first half of the book,\n"
+"#+ there should be nothing mysterious about it.\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,7 +94,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:53
-msgid "cd $LOG_DIR"
+#, no-wrap
+msgid "cd $LOG_DIR\n"
 msgstr ""
 
 #. type: Plain text
@@ -125,22 +133,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:77
+#, no-wrap
 msgid ""
-"# cat /dev/null > messages #* No longer needed, as the above method is "
-"safer."
+"#  cat /dev/null > messages\n"
+"#* No longer needed, as the above method is safer.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:82
+#, no-wrap
 msgid ""
-"cat /dev/null > wtmp # ': > wtmp' and '> wtmp' have the same effect.  echo "
-"\"Log files cleaned up.\" # Note that there are other log files in /var/log "
-"not affected #+ by this script."
+"cat /dev/null > wtmp  #  ': > wtmp' and '> wtmp'  have the same effect.\n"
+"echo \"Log files cleaned up.\"\n"
+"#  Note that there are other log files in /var/log not affected\n"
+"#+ by this script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex2.sh:85
+#, no-wrap
 msgid ""
-"exit 0 # A zero return value from the script upon exit indicates success #+ "
-"to the shell."
+"exit 0\n"
+"#  A zero return value from the script upon exit indicates success\n"
+"#+ to the shell.\n"
 msgstr ""

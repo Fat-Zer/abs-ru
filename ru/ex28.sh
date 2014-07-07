@@ -1,8 +1,9 @@
 #!/bin/bash
 
-LIMIT=19 # Upper limit
+LIMIT=19  # Upper limit
 
-echo echo "Printing Numbers 1 through 20 (but not 3 and 11)."
+echo
+echo "Printing Numbers 1 through 20 (but not 3 and 11)."
 
 a=0
 
@@ -18,7 +19,8 @@ do
  echo -n "$a "   # This will not execute for 3 and 11.
 done 
 
-# Exercise: # Why does the loop print up to 20?
+# Exercise:
+# Why does the loop print up to 20?
 
 echo; echo
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:3
-msgid "#!/bin/bash # qky.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# qky.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,29 +83,37 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:40
+#, no-wrap
 msgid ""
-"declare -a Words declare -a Status declare -a Score=( 0 0 0 0 0 0 0 0 0 0 0 "
-")"
+"declare -a Words\n"
+"declare -a Status\n"
+"declare -a Score=( 0 0 0 0 0 0 0 0 0 0 0 )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:48
+#, no-wrap
 msgid ""
-"letters=( a n s r t m l k p r b c i d s i d z e w u e t f e y e r e f e g t "
-"g h h i t r s c i t i d i j a t a o l a m n a n o v n w o s e l n o s p a q "
-"e e r a b r s a o d s t g t i t l u e u v n e o x y m r k )  # Letter "
-"distribution table shamelessly borrowed from \"Wordy\" game, #+ ca. 1992, "
-"written by a certain fine fellow named Mendel Cooper."
+"letters=( a n s r t m l k p r b c i d s i d z e w u e t f\n"
+"e y e r e f e g t g h h i t r s c i t i d i j a t a o l a\n"
+"m n a n o v n w o s e l n o s p a q e e r a b r s a o d s\n"
+"t g t i t l u e u v n e o x y m r k )\n"
+"#  Letter distribution table shamelessly borrowed from \"Wordy\" game,\n"
+"#+ ca. 1992, written by a certain fine fellow named Mendel Cooper.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:50
-msgid "declare -a LS"
+#, no-wrap
+msgid "declare -a LS\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:53
-msgid "numelements=${#letters[@]} randseed=\"$1\""
+#, no-wrap
+msgid ""
+"numelements=${#letters[@]}\n"
+"randseed=\"$1\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -129,33 +140,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:70
+#, no-wrap
 msgid ""
-"QUACKEY is a variant of Perquackey [TM].  The rules are the same, but the "
-"scoring is simplified and plurals of previously played words are allowed.  "
-"\"Vulnerable\" play is not yet implemented, but it is otherwise "
-"feature-complete."
+"QUACKEY is a variant of Perquackey [TM].\n"
+"The rules are the same, but the scoring is simplified\n"
+"and plurals of previously played words are allowed.\n"
+"\"Vulnerable\" play is not yet implemented,\n"
+"but it is otherwise feature-complete.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:78
+#, no-wrap
 msgid ""
-"As the game begins, the player gets 10 letters.  The object is to construct "
-"valid dictionary words of at least 3-letter length from the letterset.  Each "
-"word-length category -- 3-letter, 4-letter, 5-letter, ... -- fills up with "
-"the fifth word entered, and no further words in that category are accepted."
+"As the game begins, the player gets 10 letters.\n"
+"The object is to construct valid dictionary words\n"
+"of at least 3-letter length from the letterset.\n"
+"Each word-length category\n"
+"-- 3-letter, 4-letter, 5-letter, ... --\n"
+"fills up with the fifth word entered,\n"
+"and no further words in that category are accepted.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:82
+#, no-wrap
 msgid ""
-"The penalty for too-short (two-letter), duplicate, unconstructable, and "
-"invalid (not in dictionary) words is -200. The same penalty applies to "
-"attempts to enter a word in a filled-up category."
+"The penalty for too-short (two-letter), duplicate, unconstructable,\n"
+"and invalid (not in dictionary) words is -200. The same penalty applies\n"
+"to attempts to enter a word in a filled-up category.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:84
-msgid "INSTRUCTION1"
+#, no-wrap
+msgid "INSTRUCTION1\n"
 msgstr ""
 
 #. type: Plain text
@@ -202,7 +221,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:110
-msgid "INSTRUCTION2"
+#, no-wrap
+msgid "INSTRUCTION2\n"
 msgstr ""
 
 #. type: Plain text
@@ -219,14 +239,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:117
-msgid "Hitting just ENTER for a word entry ends the game."
+#, no-wrap
+msgid "Hitting just ENTER for a word entry ends the game.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:121
+#, no-wrap
 msgid ""
-"Individual word entry is timed to a maximum of 10 seconds.  *** Timing out "
-"on an entry ends the game. *** Aside from that, the game is untimed."
+"Individual word entry is timed to a maximum of 10 seconds.\n"
+"*** Timing out on an entry ends the game. ***\n"
+"Aside from that, the game is untimed.\n"
 msgstr ""
 
 #. type: Plain text
@@ -245,11 +268,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:132
+#, no-wrap
 msgid ""
-"For competitive (\"duplicate\") play, a previous letterset may be duplicated "
-"by repeating the script's random seed, command-line parameter \\$1.  For "
-"example, \"qky 7633\" specifies the letterset c a d i f r h u s k ...  "
-"INSTRUCTION3"
+"For competitive (\"duplicate\") play, a previous letterset\n"
+"may be duplicated by repeating the script's random seed,\n"
+"command-line parameter \\$1.\n"
+"For example, \"qky 7633\" specifies the letterset \n"
+"c a d i f r h u s k ...\n"
+"INSTRUCTION3\n"
 msgstr ""
 
 #. type: Plain text
@@ -275,7 +301,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:142 abs-guide/qky.sh:177 abs-guide/qky.sh:205 abs-guide/qky.sh:269 abs-guide/qky.sh:360
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -719,7 +746,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:422
-msgid "end_of_game ()  { # Save and display stats."
+#, no-wrap
+msgid ""
+"end_of_game ()\n"
+"{ # Save and display stats.\n"
 msgstr ""
 
 #. type: Plain text
@@ -759,14 +789,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:450
+#, no-wrap
 msgid ""
-"# ---------# instructions seed_random get_letset play end_of_game # "
-"---------#"
+"# ---------#\n"
+"instructions\n"
+"seed_random\n"
+"get_letset\n"
+"play\n"
+"end_of_game\n"
+"# ---------#\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:452
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
@@ -788,5 +825,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/qky.sh:466
-msgid "# For more info, reference: # http://bash.deta.in/qky.README.html"
+#, no-wrap
+msgid ""
+"# For more info, reference:\n"
+"# http://bash.deta.in/qky.README.html\n"
 msgstr ""

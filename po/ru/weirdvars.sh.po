@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:3
-msgid "#!/bin/bash # weirdvars.sh: Echoing weird variables."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# weirdvars.sh: Echoing weird variables.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:5 abs-guide/weirdvars.sh:11 abs-guide/weirdvars.sh:19
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,7 +50,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:17
-msgid "# Examples above supplied by Stephane Chazelas."
+#, no-wrap
+msgid "# Examples above supplied by Stephane Chazelas.\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,9 +70,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:32
+#, no-wrap
 msgid ""
-"# ************************************************************ # # As the "
-"first example above shows, nesting quotes is permitted."
+"# ************************************************************ #\n"
+"# As the first example above shows, nesting quotes is permitted.\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,7 +86,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:38
-msgid "# At times this comes in useful."
+#, no-wrap
+msgid "# At times this comes in useful.\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,7 +101,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/weirdvars.sh:44
-msgid "# Or, as Chris Hiestand points out ..."
+#, no-wrap
+msgid "# Or, as Chris Hiestand points out ...\n"
 msgstr ""
 
 #. type: Plain text

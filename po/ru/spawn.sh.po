@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/spawn.sh:3
-msgid "#!/bin/bash # spawn.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# spawn.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,21 +56,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/spawn.sh:23
+#, no-wrap
 msgid ""
-"# After exiting with a Ctl-C, #+ do all the spawned instances of the script "
-"die? # If so, why?"
+"#  After exiting with a Ctl-C,\n"
+"#+ do all the spawned instances of the script die?\n"
+"#  If so, why?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/spawn.sh:28
+#, no-wrap
 msgid ""
-"# Note: # ---- # Be careful not to run this script too long.  # It will "
-"eventually eat up too many system resources."
+"# Note:\n"
+"# ----\n"
+"# Be careful not to run this script too long.\n"
+"# It will eventually eat up too many system resources.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/spawn.sh:31
+#, no-wrap
 msgid ""
-"# Is having a script spawn multiple instances of itself #+ an advisable "
-"scripting technique.  # Why or why not?"
+"#  Is having a script spawn multiple instances of itself\n"
+"#+ an advisable scripting technique.\n"
+"#  Why or why not?\n"
 msgstr ""

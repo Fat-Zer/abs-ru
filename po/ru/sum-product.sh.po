@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sum-product.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # sum-product.sh # A function may \"return\" more than one "
-"value."
+"#!/bin/bash\n"
+"# sum-product.sh\n"
+"# A function may \"return\" more than one value.\n"
 msgstr ""
 
 #. type: Plain text
@@ -36,12 +38,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sum-product.sh:14
-msgid "echo echo \"Enter first number \" read first"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Enter first number \"\n"
+"read first\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sum-product.sh:19
-msgid "echo echo \"Enter second number \" read second echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Enter second number \"\n"
+"read second\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,10 +66,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sum-product.sh:27
-msgid "echo \"$first + $second = $sum\" echo \"$first * $second = $product\" echo"
+#, no-wrap
+msgid ""
+"echo \"$first + $second = $sum\"\n"
+"echo \"$first * $second = $product\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sum-product.sh:28
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

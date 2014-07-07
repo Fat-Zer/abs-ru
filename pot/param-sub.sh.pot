@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:3
-msgid "#!/bin/bash # param-sub.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# param-sub.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:7
+#, no-wrap
 msgid ""
-"# Whether a variable has been declared #+ affects triggering of the default "
-"option #+ even if the variable is null."
+"#  Whether a variable has been declared\n"
+"#+ affects triggering of the default option\n"
+"#+ even if the variable is null.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:12
+#, no-wrap
 msgid ""
-"username0= echo \"username0 has been declared, but is set to null.\" echo "
-"\"username0 = ${username0-`whoami`}\" # Will not echo."
+"username0=\n"
+"echo \"username0 has been declared, but is set to null.\"\n"
+"echo \"username0 = ${username0-`whoami`}\"\n"
+"# Will not echo.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:14
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:18
+#, no-wrap
 msgid ""
-"echo username1 has not been declared.  echo \"username1 = "
-"${username1-`whoami`}\" # Will echo."
+"echo username1 has not been declared.\n"
+"echo \"username1 = ${username1-`whoami`}\"\n"
+"# Will echo.\n"
 msgstr ""
 
 #. type: Plain text
@@ -61,17 +72,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:28
-msgid "#"
+#, no-wrap
+msgid "#\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:30
-msgid "# Once again:"
+#, no-wrap
+msgid "# Once again:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:33
-msgid "variable= # variable has been declared, but is set to null."
+#, no-wrap
+msgid ""
+"variable=\n"
+"# variable has been declared, but is set to null.\n"
 msgstr ""
 
 #. type: Plain text
@@ -85,7 +101,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:39
-msgid "unset variable"
+#, no-wrap
+msgid "unset variable\n"
 msgstr ""
 
 #. type: Plain text
@@ -98,5 +115,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/param-sub.sh:43
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

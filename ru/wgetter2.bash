@@ -1,23 +1,27 @@
-#!/bin/bash # wgetter2.bash
+#!/bin/bash
+# wgetter2.bash
 
-# Author: Little Monster [monster@monstruum.co.uk] # ==> Used in ABS Guide
-with permission of script author.  # ==> This script still needs debugging
-and fixups (exercise for reader).  # ==> It could also use some additional
-editing in the comments.
+# Author: Little Monster [monster@monstruum.co.uk]
+# ==> Used in ABS Guide with permission of script author.
+# ==> This script still needs debugging and fixups (exercise for reader).
+# ==> It could also use some additional editing in the comments.
 
 
-# This is wgetter2 -- #+ a Bash script to make wget a bit more friendly, and
-save typing.
+#  This is wgetter2 --
+#+ a Bash script to make wget a bit more friendly, and save typing.
 
-# Carefully crafted by Little Monster.  # More or less complete on
-02/02/2005.  # If you think this script can be improved, #+ email me at:
-monster@monstruum.co.uk # ==> and cc: to the author of the ABS Guide,
-please.  # This script is licenced under the GPL.  # You are free to copy,
-alter and re-use it, #+ but please don't try to claim you wrote it.  # Log
-your changes here instead.
+#  Carefully crafted by Little Monster.
+#  More or less complete on 02/02/2005.
+#  If you think this script can be improved,
+#+ email me at: monster@monstruum.co.uk
+# ==> and cc: to the author of the ABS Guide, please.
+#  This script is licenced under the GPL.
+#  You are free to copy, alter and re-use it,
+#+ but please don't try to claim you wrote it.
+#  Log your changes here instead.
 
-# ======================================================================= #
-changelog:
+# =======================================================================
+# changelog:
 
 # 07/02/2005.  Fixups by Little Monster.
 # 02/02/2005.  Minor additions by Little Monster.
@@ -50,17 +54,18 @@ E_NO_SAVEFILE=70  # No save filename passed to script.
 E_USER_EXIT=71    # User decides to quit.
 
 
-# Basic default wget command we want to use.  # This is the place to change
-it, if required.  # NB: if using a proxy, set http_proxy = yourproxy in
-.wgetrc.  # Otherwise delete --proxy=on, below.  #
-====================================================================
-CommandA="wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r" #
-====================================================================
+#  Basic default wget command we want to use.
+#  This is the place to change it, if required.
+#  NB: if using a proxy, set http_proxy = yourproxy in .wgetrc.
+#  Otherwise delete --proxy=on, below.
+# ====================================================================
+CommandA="wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r"
+# ====================================================================
 
 
 
-# -------------------------------------------------------------------- # Set
-some other variables and explain them.
+# --------------------------------------------------------------------
+# Set some other variables and explain them.
 
 pattern=" -A .jpg,.JPG,.jpeg,.JPEG,.gif,.GIF,.htm,.html,.shtml,.php"
                     # wget's option to only get certain types of file.
@@ -85,8 +90,8 @@ Cookie_List="$home/.cookielist"
                     # So we know where the cookies are kept . . .
 cFlag=""            # Part of the cookie file selection routine.
 
-# Define the options available. Easy to change letters here if needed.  #
-These are the optional options; you don't just wait to be asked.
+# Define the options available. Easy to change letters here if needed.
+# These are the optional options; you don't just wait to be asked.
 
 save=s   # Save command instead of executing it.
 cook=c   # Change cookie file for this session.
@@ -106,8 +111,8 @@ fi
 
 
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
-added added added added added added added added added added added added
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# added added added added added added added added added added added added
 
 if [ ! -e "$Config" ]; then   # See if configuration file exists.
    echo "Creating configuration file, $Config"
@@ -150,8 +155,8 @@ if [ -z "$cFlag" ]; then # If we haven't already done this . . .
    echo "cFlag=1" >> $Config  # So we know not to ask again.
 fi
 
-# end added section end added section end added section end added section #
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# end added section end added section end added section end added section
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
@@ -164,20 +169,28 @@ CookiesON=$Cookie
                                    # Got caught with this one!
 
 
-wopts()  { echo "Enter options to pass to wget." echo "It is assumed you
-know what you're doing." echo echo "You can pass their arguments here too."
+wopts()
+{
+echo "Enter options to pass to wget."
+echo "It is assumed you know what you're doing."
+echo
+echo "You can pass their arguments here too."
 # That is to say, everything passed here is passed to wget.
 
-read Wopts # Read in the options to be passed to wget.
+read Wopts
+# Read in the options to be passed to wget.
 
 Woptions=" $Wopts"
 #         ^  Why the leading space?
 # Assign to another variable.
 # Just for fun, or something . . .
 
-echo "passing options ${Wopts} to wget" # Mainly for debugging.  # Is cute.
+echo "passing options ${Wopts} to wget"
+# Mainly for debugging.
+# Is cute.
 
-return }
+return
+}
 
 
 save_func()
@@ -188,10 +201,12 @@ if [ ! -d $savePath ]; then  #  See if directory exists.
                              #+ if it isn't already there.
 fi
 
-Flag=S # Tell the final bit of code what to do.  # Set a flag since stuff is
-done in main.
+Flag=S
+# Tell the final bit of code what to do.
+# Set a flag since stuff is done in main.
 
-return }
+return
+}
 
 
 usage() # Tell them how it works.
@@ -332,7 +347,8 @@ while read; do
     echo "Completed: $REPLY"
 done &lt; $filePath  # Feed the actual file we are using into a 'while' loop.
 
-exit }
+exit
+}
 
 
 
@@ -367,8 +383,8 @@ if [ -z "$1" ] &amp;&amp; [ -z "$lister" ]; then
    exit $E_NO_URLS        # Bail out, with appropriate error code.
 fi
 
-URLS=" $@" # Use this so that URL list can be changed if we stay in the
-option loop.
+URLS=" $@"
+# Use this so that URL list can be changed if we stay in the option loop.
 
 while [ 1 ]; do
    # This is where we ask for the most used options.

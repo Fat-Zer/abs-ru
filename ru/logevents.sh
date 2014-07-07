@@ -1,8 +1,10 @@
-#!/bin/bash # logevents.sh # Author: Stephane Chazelas.  # Used in ABS Guide
-with permission.
+#!/bin/bash
+# logevents.sh
+# Author: Stephane Chazelas.
+# Used in ABS Guide with permission.
 
-# Event logging to a file.  # Must be run as root (for write access in
-/var/log).
+# Event logging to a file.
+# Must be run as root (for write access in /var/log).
 
 ROOT_UID=0     # Only users with $UID 0 have root privileges.
 E_NOTROOT=67   # Non-root exit error.
@@ -15,10 +17,13 @@ then
 fi  
 
 
-FD_DEBUG1=3 FD_DEBUG2=4 FD_DEBUG3=5
+FD_DEBUG1=3
+FD_DEBUG2=4
+FD_DEBUG3=5
 
-# === Uncomment one of the two lines below to activate script. === #
-LOG_EVENTS=1 # LOG_VARS=1
+# === Uncomment one of the two lines below to activate script. ===
+# LOG_EVENTS=1
+# LOG_VARS=1
 
 
 log()  # Writes time and date to log file.
@@ -59,8 +64,8 @@ ls -l &gt;&amp;5 2&gt;&amp;4                             # command1 &gt;&amp;5 2
 
 echo "Done"                                # command2 
 
-echo "sending mail" &gt;&amp;${FD_LOGEVENTS} # Writes "sending mail" to file
-descriptor #7.
+echo "sending mail" &gt;&amp;${FD_LOGEVENTS}
+# Writes "sending mail" to file descriptor #7.
 
 
 exit 0

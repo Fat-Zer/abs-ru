@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:12
+#, no-wrap
 msgid ""
-"#! /bin/sh ## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll "
-"be p*ssed.  ## Args: target port [port port port ...] ## Hose stdout _and_ "
-"stderr together.  ## ## Advantages: runs slower than ident-scan, giving "
-"remote inetd less cause ##+ for alarm, and only hits the few known daemon "
-"ports you specify.  ## Disadvantages: requires numeric-only port args, the "
-"output sleazitude, ##+ and won't work for r-services when coming from high "
-"source ports.  # Script author: Hobbit &lt;hobbit@avian.org&gt; # Used in "
-"ABS Guide with permission."
+"#! /bin/sh\n"
+"## Duplicate DaveG's ident-scan thingie using netcat. Oooh, he'll be "
+"p*ssed.\n"
+"## Args: target port [port port port ...]\n"
+"## Hose stdout _and_ stderr together.\n"
+"##\n"
+"##  Advantages: runs slower than ident-scan, giving remote inetd less "
+"cause\n"
+"##+ for alarm, and only hits the few known daemon ports you specify.\n"
+"##  Disadvantages: requires numeric-only port args, the output sleazitude,\n"
+"##+ and won't work for r-services when coming from high source ports.\n"
+"# Script author: Hobbit &lt;hobbit@avian.org&gt;\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,12 +74,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:37
-msgid "# Generate a randomish base port.  RP=`expr $$ % $RAND1 + $RAND2`"
+#, no-wrap
+msgid ""
+"# Generate a randomish base port.\n"
+"RP=`expr $$ % $RAND1 + $RAND2`\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:40
-msgid "TRG=\"$1\" shift"
+#, no-wrap
+msgid ""
+"TRG=\"$1\"\n"
+"shift\n"
 msgstr ""
 
 #. type: Plain text
@@ -110,24 +122,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:58
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:61
-msgid "# Notes: # -----"
+#, no-wrap
+msgid ""
+"#  Notes:\n"
+"#  -----\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:64
+#, no-wrap
 msgid ""
-"# Try commenting out line 30 and running this script #+ with "
-"\"localhost.localdomain 25\" as arguments."
+"#  Try commenting out line 30 and running this script\n"
+"#+ with \"localhost.localdomain 25\" as arguments.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/iscan.sh:67
+#, no-wrap
 msgid ""
-"# For more of Hobbit's 'nc' example scripts, #+ look in the documentation: "
-"#+ the /usr/share/doc/nc-X.XX/scripts directory."
+"#  For more of Hobbit's 'nc' example scripts,\n"
+"#+ look in the documentation:\n"
+"#+ the /usr/share/doc/nc-X.XX/scripts directory.\n"
 msgstr ""

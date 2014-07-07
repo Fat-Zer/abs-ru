@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/splitcopy.sh:3
-msgid "#!/bin/bash # splitcopy.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# splitcopy.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/splitcopy.sh:7
+#, no-wrap
 msgid ""
-"# A script that splits itself into chunks, #+ then reassembles the chunks "
-"into an exact copy #+ of the original script."
+"#  A script that splits itself into chunks,\n"
+"#+ then reassembles the chunks into an exact copy\n"
+"#+ of the original script.\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,14 +44,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/splitcopy.sh:13
-msgid "csplit \"$0\" \"$CHUNKSIZE\""
+#, no-wrap
+msgid "csplit \"$0\" \"$CHUNKSIZE\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/splitcopy.sh:21
+#, no-wrap
 msgid ""
-"# Some comment lines for padding . . .  # Line 15 # Line 16 # Line 17 # Line "
-"18 # Line 19 # Line 20"
+"# Some comment lines for padding . . .\n"
+"# Line 15\n"
+"# Line 16\n"
+"# Line 17\n"
+"# Line 18\n"
+"# Line 19\n"
+"# Line 20\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,5 +71,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/splitcopy.sh:25
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

@@ -1,7 +1,10 @@
-#!/bin/bash # # Changes every filename in working directory to all
-lowercase.  # # Inspired by a script of John Dubois, #+ which was translated
-into Bash by Chet Ramey, #+ and considerably simplified by the author of the
-ABS Guide.
+#!/bin/bash
+#
+#  Changes every filename in working directory to all lowercase.
+#
+#  Inspired by a script of John Dubois,
+#+ which was translated into Bash by Chet Ramey,
+#+ and considerably simplified by the author of the ABS Guide.
 
 
 for filename in *                # Traverse all files in directory.
@@ -18,11 +21,11 @@ exit $?
 
 
 # Code below this line will not execute because of "exit".
-#--------------------------------------------------------# # To run it,
-delete script above line.
+#--------------------------------------------------------#
+# To run it, delete script above line.
 
-# The above script will not work on filenames containing blanks or
-newlines.  # Stephane Chazelas therefore suggests the following alternative:
+# The above script will not work on filenames containing blanks or newlines.
+# Stephane Chazelas therefore suggests the following alternative:
 
 
 for filename in *    # Not necessary to use basename,

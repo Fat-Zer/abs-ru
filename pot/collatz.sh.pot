@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:3
-msgid "#!/bin/bash # collatz.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# collatz.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:22
+#, no-wrap
 msgid ""
-"# The notorious \"hailstone\" or Collatz series.  # "
-"------------------------------------------- # 1) Get the integer \"seed\" "
-"from the command-line.  # 2) NUMBER &lt;-- seed # 3) Print NUMBER.  # 4)  If "
-"NUMBER is even, divide by 2, or # 5)+ if odd, multiply by 3 and add 1.  # 6) "
-"NUMBER &lt;-- result # 7) Loop back to step 3 (for specified number of "
-"iterations).  # # The theory is that every such sequence, #+ no matter how "
-"large the initial value, #+ eventually settles down to repeating "
-"\"4,2,1...\" cycles, #+ even after fluctuating through a wide range of "
-"values.  # # This is an instance of an \"iterate,\" #+ an operation that "
-"feeds its output back into its input.  # Sometimes the result is a "
-"\"chaotic\" series."
+"#  The notorious \"hailstone\" or Collatz series.\n"
+"#  -------------------------------------------\n"
+"#  1) Get the integer \"seed\" from the command-line.\n"
+"#  2) NUMBER &lt;-- seed\n"
+"#  3) Print NUMBER.\n"
+"#  4)  If NUMBER is even, divide by 2, or\n"
+"#  5)+ if odd, multiply by 3 and add 1.\n"
+"#  6) NUMBER &lt;-- result \n"
+"#  7) Loop back to step 3 (for specified number of iterations).\n"
+"#\n"
+"#  The theory is that every such sequence,\n"
+"#+ no matter how large the initial value,\n"
+"#+ eventually settles down to repeating \"4,2,1...\" cycles,\n"
+"#+ even after fluctuating through a wide range of values.\n"
+"#\n"
+"#  This is an instance of an \"iterate,\"\n"
+"#+ an operation that feeds its output back into its input.\n"
+"#  Sometimes the result is a \"chaotic\" series.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:26
+#, no-wrap
 msgid ""
-"MAX_ITERATIONS=200 # For large seed numbers (&gt;32000), try increasing "
-"MAX_ITERATIONS."
+"MAX_ITERATIONS=200\n"
+"# For large seed numbers (&gt;32000), try increasing MAX_ITERATIONS.\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,12 +67,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:34
-msgid "echo echo \"C($h) -*- $MAX_ITERATIONS Iterations\" echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"C($h) -*- $MAX_ITERATIONS Iterations\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:37
-msgid "for ((i=1; i&lt;=MAX_ITERATIONS; i++))  do"
+#, no-wrap
+msgid ""
+"for ((i=1; i&lt;=MAX_ITERATIONS; i++))\n"
+"do\n"
 msgstr ""
 
 #. type: Plain text
@@ -102,23 +121,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:62
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:64
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:68
+#, no-wrap
 msgid ""
-"# For more information on this strange mathematical function, #+ see "
-"_Computers, Pattern, Chaos, and Beauty_, by Pickover, p. 185 ff., #+ as "
-"listed in the bibliography."
+"#  For more information on this strange mathematical function,\n"
+"#+ see _Computers, Pattern, Chaos, and Beauty_, by Pickover, p. 185 ff.,\n"
+"#+ as listed in the bibliography.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/collatz.sh:69
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

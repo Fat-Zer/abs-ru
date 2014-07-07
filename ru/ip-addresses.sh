@@ -1,5 +1,6 @@
-#!/bin/bash # ip-addresses.sh # List the IP addresses your computer is
-connected to.
+#!/bin/bash
+# ip-addresses.sh
+# List the IP addresses your computer is connected to.
 
 #  Inspired by Greg Bledsoe's ddos.sh script,
 #  Linux Journal, 09 March 2011.
@@ -31,5 +32,7 @@ lsof "$lsof_args" | grep $connection_type | grep -v "$no_match" |
 #  ... within a 60-second delay loop to bounce packets from DDOS attacks.
 
 
-# Exercise: # -------- # Use the 'iptables' command to extend this script #+
-to reject connection attempts from well-known spammer IP domains.
+#  Exercise:
+#  --------
+#  Use the 'iptables' command to extend this script
+#+ to reject connection attempts from well-known spammer IP domains.

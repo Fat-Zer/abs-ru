@@ -1,4 +1,5 @@
-#!/bin/bash # numbers.sh: Representation of numbers in different bases.
+#!/bin/bash
+# numbers.sh: Representation of numbers in different bases.
 
 # Decimal: the default
 let "dec = 32"
@@ -23,8 +24,9 @@ echo $((0x9abc))                         # 39612
 
 
 
-# Other bases: BASE#NUMBER # BASE between 2 and 64.  # NUMBER must use
-symbols within the BASE range, see below.
+# Other bases: BASE#NUMBER
+# BASE between 2 and 64.
+# NUMBER must use symbols within the BASE range, see below.
 
 
 let "bin = 2#111100111001101"
@@ -45,8 +47,10 @@ echo $((36#zz)) $((2#10101010)) $((16#AF16)) $((53#1aA))
                                          # 1295 170 44822 3375
 
 
-# Important note: # -------------- # Using a digit out of range of the
-specified base notation #+ gives an error message.
+#  Important note:
+#  --------------
+#  Using a digit out of range of the specified base notation
+#+ gives an error message.
 
 let "bad_oct = 081"
 # (Partial) error message output:

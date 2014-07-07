@@ -1,4 +1,6 @@
-#!/bin/bash # neg-array.sh # Requires Bash, version -ge 4.2.
+#!/bin/bash
+# neg-array.sh
+# Requires Bash, version -ge 4.2.
 
 array=( zero one two three four five )   # Six-element array.
 #         0    1   2    3    4    5
@@ -17,14 +19,16 @@ echo ${array[-7]}   # array: bad array subscript
 
 # So, what is this new feature good for?
 
-echo "The last element in the array is "${array[-1]}"" # Which is quite a
-bit more straightforward than: echo "The last element in the array is
-"${array[${#array[*]}-1]}"" echo
+echo "The last element in the array is "${array[-1]}""
+# Which is quite a bit more straightforward than:
+echo "The last element in the array is "${array[${#array[*]}-1]}""
+echo
 
 # And ...
 
-index=0 let "neg_element_count = 0 - ${#array[*]}" # Number of elements,
-converted to a negative number.
+index=0
+let "neg_element_count = 0 - ${#array[*]}"
+# Number of elements, converted to a negative number.
 
 while [ $index -gt $neg_element_count ]; do
   ((index--)); echo -n "${array[index]} "

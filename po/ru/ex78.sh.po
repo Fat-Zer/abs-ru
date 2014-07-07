@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:5
+#, no-wrap
 msgid ""
-"# Indirect variable referencing.  # This has a few of the attributes of "
-"references in C++."
+"# Indirect variable referencing.\n"
+"# This has a few of the attributes of references in C++.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:9
-msgid "a=letter_of_alphabet letter_of_alphabet=z"
+#, no-wrap
+msgid ""
+"a=letter_of_alphabet\n"
+"letter_of_alphabet=z\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,7 +55,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:17
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -67,18 +73,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:29
+#, no-wrap
 msgid ""
-"# This is useful for referencing members of an array or table, #+ or for "
-"simulating a multi-dimensional array.  # An indexing option (analogous to "
-"pointer arithmetic)  #+ would have been nice. Sigh."
+"#  This is useful for referencing members of an array or table,\n"
+"#+ or for simulating a multi-dimensional array.\n"
+"#  An indexing option (analogous to pointer arithmetic)\n"
+"#+ would have been nice. Sigh.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:31
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex78.sh:32
-msgid "# See also, ind-ref.sh example."
+#, no-wrap
+msgid "# See also, ind-ref.sh example.\n"
 msgstr ""

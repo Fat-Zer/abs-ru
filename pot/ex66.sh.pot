@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:7
-msgid "area[11]=23 area[13]=37 area[51]=UFOs"
+#, no-wrap
+msgid ""
+"area[11]=23\n"
+"area[13]=37\n"
+"area[51]=UFOs\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:9
-msgid "# Array members need not be consecutive or contiguous."
+#, no-wrap
+msgid "#  Array members need not be consecutive or contiguous.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:14
+#, no-wrap
 msgid ""
-"# Some members of the array can be left uninitialized.  # Gaps in the array "
-"are okay.  # In fact, arrays with sparse data (\"sparse arrays\")  #+ are "
-"useful in spreadsheet-processing software."
+"#  Some members of the array can be left uninitialized.\n"
+"#  Gaps in the array are okay.\n"
+"#  In fact, arrays with sparse data (\"sparse arrays\")\n"
+"#+ are useful in spreadsheet-processing software.\n"
 msgstr ""
 
 #. type: Plain text
@@ -49,65 +57,85 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:21
-msgid "echo -n \"area[13] = \" echo ${area[13]}"
+#, no-wrap
+msgid ""
+"echo -n \"area[13] = \"\n"
+"echo ${area[13]}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:23
-msgid "echo \"Contents of area[51] are ${area[51]}.\""
+#, no-wrap
+msgid "echo \"Contents of area[51] are ${area[51]}.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:28
+#, no-wrap
 msgid ""
-"# Contents of uninitialized array variable print blank (null variable).  "
-"echo -n \"area[43] = \" echo ${area[43]} echo \"(area[43] unassigned)\""
+"# Contents of uninitialized array variable print blank (null variable).\n"
+"echo -n \"area[43] = \"\n"
+"echo ${area[43]}\n"
+"echo \"(area[43] unassigned)\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:30
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:36
+#, no-wrap
 msgid ""
-"# Sum of two array variables assigned to third area[5]=`expr ${area[11]} + "
-"${area[13]}` echo \"area[5] = area[11] + area[13]\" echo -n \"area[5] = \" "
-"echo ${area[5]}"
+"# Sum of two array variables assigned to third\n"
+"area[5]=`expr ${area[11]} + ${area[13]}`\n"
+"echo \"area[5] = area[11] + area[13]\"\n"
+"echo -n \"area[5] = \"\n"
+"echo ${area[5]}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:42
+#, no-wrap
 msgid ""
-"area[6]=`expr ${area[11]} + ${area[51]}` echo \"area[6] = area[11] + "
-"area[51]\" echo -n \"area[6] = \" echo ${area[6]} # This fails because "
-"adding an integer to a string is not permitted."
+"area[6]=`expr ${area[11]} + ${area[51]}`\n"
+"echo \"area[6] = area[11] + area[51]\"\n"
+"echo -n \"area[6] = \"\n"
+"echo ${area[6]}\n"
+"# This fails because adding an integer to a string is not permitted.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:44 abs-guide/ex66.sh:61
-msgid "echo; echo; echo"
+#, no-wrap
+msgid "echo; echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:49
+#, no-wrap
 msgid ""
-"# ----------------------------------------------------------------- # "
-"Another array, \"area2\".  # Another way of assigning array variables...  # "
-"array_name=( XXX YYY ZZZ ... )"
+"# -----------------------------------------------------------------\n"
+"# Another array, \"area2\".\n"
+"# Another way of assigning array variables...\n"
+"# array_name=( XXX YYY ZZZ ... )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:51
-msgid "area2=( zero one two three four )"
+#, no-wrap
+msgid "area2=( zero one two three four )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:55
+#, no-wrap
 msgid ""
-"echo -n \"area2[0] = \" echo ${area2[0]} # Aha, zero-based indexing (first "
-"element of array is [0], not [1])."
+"echo -n \"area2[0] = \"\n"
+"echo ${area2[0]}\n"
+"# Aha, zero-based indexing (first element of array is [0], not [1]).\n"
 msgstr ""
 
 #. type: Plain text
@@ -121,30 +149,39 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:66
+#, no-wrap
 msgid ""
-"# ----------------------------------------------- # Yet another array, "
-"\"area3\".  # Yet another way of assigning array variables...  # "
-"array_name=([xx]=XXX [yy]=YYY ...)"
+"# -----------------------------------------------\n"
+"# Yet another array, \"area3\".\n"
+"# Yet another way of assigning array variables...\n"
+"# array_name=([xx]=XXX [yy]=YYY ...)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:68
-msgid "area3=([17]=seventeen [24]=twenty-four)"
+#, no-wrap
+msgid "area3=([17]=seventeen [24]=twenty-four)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:71
-msgid "echo -n \"area3[17] = \" echo ${area3[17]}"
+#, no-wrap
+msgid ""
+"echo -n \"area3[17] = \"\n"
+"echo ${area3[17]}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:75
+#, no-wrap
 msgid ""
-"echo -n \"area3[24] = \" echo ${area3[24]} # "
-"-----------------------------------------------"
+"echo -n \"area3[24] = \"\n"
+"echo ${area3[24]}\n"
+"# -----------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex66.sh:76
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

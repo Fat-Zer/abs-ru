@@ -1,5 +1,7 @@
-#!/bin/bash # Script author: Joseph Steinhauser # Lightly edited by ABS
-Guide author, but not commented.  # Used in ABS Guide with permission.
+#!/bin/bash
+# Script author: Joseph Steinhauser
+# Lightly edited by ABS Guide author, but not commented.
+# Used in ABS Guide with permission.
 
 #-------------------------------------------------------------------------
 #-- File:  ascii.sh    Print ASCII chart, base 10/8/16         (JETS-2012)
@@ -25,10 +27,11 @@ esac # CODE is actually shorter than the chart!
 
 printf "\t\t## $Obase ASCII Chart ##\n\n"; FM1="|%0${Numy:-3d}"; LD=-1
 
-AB="nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle" AD="dc1
-dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp"
+AB="nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle"
+AD="dc1 dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp"
 
-for TOK in $AB $AD; do ABR[$((LD+=1))]=$TOK; done; ABR[127]=del
+for TOK in $AB $AD; do ABR[$((LD+=1))]=$TOK; done;
+ABR[127]=del
 
 IDX=0
 while [ $IDX -le 127 ] &amp;&amp; CHR="${ABR[$IDX]}"

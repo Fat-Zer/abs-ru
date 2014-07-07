@@ -1,4 +1,5 @@
-#!/bin/bash # and list
+#!/bin/bash
+# and list
 
 if [ ! -z "$1" ] &amp;&amp; echo "Argument #1 = $1" &amp;&amp; [ ! -z "$2" ] &amp;&amp; \
 #                ^^                         ^^               ^^

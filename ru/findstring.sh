@@ -1,8 +1,9 @@
-#!/bin/bash # findstring.sh: # Find a particular string in the binaries in a
-specified directory.
+#!/bin/bash
+# findstring.sh:
+# Find a particular string in the binaries in a specified directory.
 
-directory=/usr/bin/ fstring="Free Software Foundation" # See which files
-come from the FSF.
+directory=/usr/bin/
+fstring="Free Software Foundation"  # See which files come from the FSF.
 
 for file in $( find $directory -type f -name '*' | sort )
 do
@@ -15,5 +16,7 @@ done
 
 exit $?
 
-# Exercise (easy): # --------------- # Convert this script to take
-command-line parameters #+ for $directory and $fstring.
+#  Exercise (easy):
+#  ---------------
+#  Convert this script to take command-line parameters
+#+ for $directory and $fstring.

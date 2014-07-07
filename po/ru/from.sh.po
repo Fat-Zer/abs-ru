@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/from.sh:3
-msgid "#!/bin/bash # from.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# from.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/from.sh:7
+#, no-wrap
 msgid ""
-"# Emulates the useful 'from' utility in Solaris, BSD, etc.  # Echoes the "
-"\"From\" header line in all messages #+ in your e-mail directory."
+"#  Emulates the useful 'from' utility in Solaris, BSD, etc.\n"
+"#  Echoes the \"From\" header line in all messages\n"
+"#+ in your e-mail directory.\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,12 +58,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/from.sh:23
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/from.sh:25
+#, no-wrap
 msgid ""
-"# You might wish to pipe the output of this script to 'more' #+ or redirect "
-"it to a file . . ."
+"#  You might wish to pipe the output of this script to 'more'\n"
+"#+ or redirect it to a file . . .\n"
 msgstr ""

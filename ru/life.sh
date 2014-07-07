@@ -1,5 +1,7 @@
-#!/bin/bash # life.sh: "Life in the Slow Lane" # Author: Mendel Cooper #
-License: GPL3
+#!/bin/bash
+# life.sh: "Life in the Slow Lane"
+# Author: Mendel Cooper
+# License: GPL3
 
 # Version 0.2:   Patched by Daniel Albers
 #+               to allow non-square grids as input.
@@ -37,8 +39,10 @@ then
     startfile="$1"
 fi  
 
-############################################ # Abort script if "startfile"
-not specified #+ and #+ default file "gen0" not present.
+############################################
+#  Abort script if "startfile" not specified
+#+ and
+#+ default file "gen0" not present.
 
 E_NOSTARTFILE=86
 
@@ -54,10 +58,13 @@ ALIVE1=.
 DEAD1=_
                  # Represent living and dead cells in the start-up file.
 
-# -----------------------------------------------------# # This script uses
-a 10 x 10 grid (may be increased, #+ but a large grid will slow down
-execution).  ROWS=10 COLS=10 # Change above two variables to match desired
-grid size.  # -----------------------------------------------------#
+#  -----------------------------------------------------#
+#  This script uses a 10 x 10 grid (may be increased,
+#+ but a large grid will slow down execution).
+ROWS=10
+COLS=10
+#  Change above two variables to match desired grid size.
+#  -----------------------------------------------------#
 
 GENERATIONS=10          #  How many generations to cycle through.
                         #  Adjust this upwards
@@ -78,9 +85,12 @@ generation=0            # Initialize generation count.
 
 let "cells = $ROWS * $COLS"   # How many cells.
 
-# Arrays containing "cells." declare -a initial declare -a current
+# Arrays containing "cells."
+declare -a initial
+declare -a current
 
-display ()  {
+display ()
+{
 
 alive=0                 # How many cells alive at any given time.
                         # Initially zero.
@@ -90,9 +100,11 @@ arr=( `echo "$1"` )     # Convert passed arg to array.
 
 element_count=${#arr[*]}
 
-local i local rowcheck
+local i
+local rowcheck
 
-for ((i=0; i&lt;$element_count; i++))  do
+for ((i=0; i&lt;$element_count; i++))
+do
 
   # Insert newline at end of each row.
   let "rowcheck = $i % COLS"
@@ -150,7 +162,7 @@ fi
 
 return $TRUE                          # Valid coordinate.
 
-}
+}  
 
 
 IsAlive ()              #  Test whether cell is alive.
@@ -171,7 +183,7 @@ IsAlive ()              #  Test whether cell is alive.
 
   return $DEAD          # Defaults to dead.
 
-}
+}  
 
 
 GetCount ()             # Count live cells in passed cell's neighborhood.
@@ -253,7 +265,8 @@ GetCount ()             # Count live cells in passed cell's neighborhood.
 next_gen ()               # Update generation array.
 {
 
-local array local i=0
+local array
+local i=0
 
 array=( `echo "$1"` )     # Convert passed arg to array.
 
@@ -292,7 +305,8 @@ fi                        #+ if no live cells.
 
 # =========================================================
 
-# main ()  # {
+# main ()
+# {
 
 # Load initial array with contents of startup file.
 initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
@@ -346,7 +360,8 @@ do
 done
 # ==============================================================
 
-echo # }
+echo
+# }
 
 exit 0   # CEOF:EOF
 

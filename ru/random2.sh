@@ -1,6 +1,7 @@
-#!/bin/bash # random2.sh: Returns a pseudorandom number in the range 0 - 1,
-#+ to 6 decimal places. For example: 0.822725 # Uses the awk rand()
-function.
+#!/bin/bash
+#  random2.sh: Returns a pseudorandom number in the range 0 - 1,
+#+ to 6 decimal places. For example: 0.822725
+#  Uses the awk rand() function.
 
 AWKSCRIPT=' { srand(); print rand() } '
 #           Command(s)/parameters passed to awk
@@ -9,12 +10,14 @@ AWKSCRIPT=' { srand(); print rand() } '
 
 echo -n "Random number between 0 and 1 = "
 
-echo | awk "$AWKSCRIPT" # What happens if you leave out the 'echo'?
+echo | awk "$AWKSCRIPT"
+# What happens if you leave out the 'echo'?
 
 exit 0
 
 
-# Exercises: # ---------
+# Exercises:
+# ---------
 
 # 1) Using a loop construct, print out 10 different random numbers.
 #      (Hint: you must reseed the srand() function with a different seed

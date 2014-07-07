@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Tip: # If you're unsure how a certain condition might evaluate, #+ test it
-in an if-test.
+#  Tip:
+#  If you're unsure how a certain condition might evaluate,
+#+ test it in an if-test.
 
 echo
 
@@ -112,7 +113,7 @@ else
 fi            # "$false" is false.
               # Now, we get the expected result.
 
-# What would happen if we tested the uninitialized variable "$true"?
+#  What would happen if we tested the uninitialized variable "$true"?
 
 echo
 

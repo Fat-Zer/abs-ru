@@ -1,4 +1,5 @@
-#!/bin/bash # fileinfo.sh
+#!/bin/bash
+# fileinfo.sh
 
 FILES="/usr/sbin/accept
 /usr/sbin/pwck
@@ -10,7 +11,8 @@ FILES="/usr/sbin/accept
 
 echo
 
-for file in $FILES do
+for file in $FILES
+do
 
   if [ ! -e "$file" ]       # Check if file exists.
   then

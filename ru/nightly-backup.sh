@@ -1,23 +1,29 @@
-#!/bin/bash # nightly-backup.sh #
-http://www.richardneill.org/source.php#nightly-backup-rsync # Copyright (c)
-2005 Richard Neill &lt;backup@richardneill.org&gt;.  # This is Free Software
-licensed under the GNU GPL.  # ==> Included in ABS Guide with script
-author's kind permission.  # ==> (Thanks!)
+#!/bin/bash
+# nightly-backup.sh
+# http://www.richardneill.org/source.php#nightly-backup-rsync
+# Copyright (c) 2005 Richard Neill &lt;backup@richardneill.org&gt;.
+# This is Free Software licensed under the GNU GPL.
+# ==> Included in ABS Guide with script author's kind permission.
+# ==> (Thanks!)
 
-# This does a backup from the host computer to a locally connected #+
-firewire HDD using rsync and ssh.  # (Script should work with USB-connected
-device (see lines 40-43).  # It then rotates the backups.  # Run it via cron
-every night at 5am.  # This only backs up the home directory.  # If
-ownerships (other than the user's) should be preserved, #+ then run the
-rsync process as root (and re-instate the -o).  # We save every day for 7
-days, then every week for 4 weeks, #+ then every month for 3 months.
+#  This does a backup from the host computer to a locally connected
+#+ firewire HDD using rsync and ssh.
+#  (Script should work with USB-connected device (see lines 40-43).
+#  It then rotates the backups.
+#  Run it via cron every night at 5am.
+#  This only backs up the home directory.
+#  If ownerships (other than the user's) should be preserved,
+#+ then run the rsync process as root (and re-instate the -o).
+#  We save every day for 7 days, then every week for 4 weeks,
+#+ then every month for 3 months.
 
-# See: http://www.mikerubel.org/computers/rsync_snapshots/ #+ for more
-explanation of the theory.  # Save as:
-$HOME/bin/nightly-backup_firewire-hdd.sh
+#  See: http://www.mikerubel.org/computers/rsync_snapshots/
+#+ for more explanation of the theory.
+#  Save as: $HOME/bin/nightly-backup_firewire-hdd.sh
 
-# Known bugs: # ---------- # i)  Ideally, we want to exclude ~/.tmp and the
-browser caches.
+#  Known bugs:
+#  ----------
+#  i)  Ideally, we want to exclude ~/.tmp and the browser caches.
 
 #  ii) If the user is sitting at the computer at 5am,
 #+     and files are modified while the rsync is occurring,
@@ -45,9 +51,14 @@ COMPRESS=false                # If true, compress.
                               # Good for internet, bad on LAN.
                               # Comment out or set to false otherwise.
 
-### Exit Codes ### E_VARS_NOT_SET=64 E_COMMANDLINE=65 E_MOUNT_FAIL=70
-E_NOSOURCEDIR=71 E_UNMOUNTED=72 E_BACKUP=73 ##### END CONFIGURATION SECTION
-##############################################
+### Exit Codes ###
+E_VARS_NOT_SET=64
+E_COMMANDLINE=65
+E_MOUNT_FAIL=70
+E_NOSOURCEDIR=71
+E_UNMOUNTED=72
+E_BACKUP=73
+##### END CONFIGURATION SECTION ##############################################
 
 
 # Check that all the important variables have been set:
@@ -86,7 +97,8 @@ then              # Here document(ation).
 fi
 
 
-# Parse the options.  # ==================
+# Parse the options.
+# ==================
 
 if [ "$DRY_RUN" == "true" ]; then
   DRY_RUN="-n"
@@ -161,9 +173,10 @@ if [ ! -r  $SOURCE_DIR ] ; then
 fi
 
 
-# Check that the backup directory structure is as it should be.  # If not,
-create it.  # Create the subdirectories.  # Note that backup.0 will be
-created as needed by rsync.
+# Check that the backup directory structure is as it should be.
+# If not, create it.
+# Create the subdirectories.
+# Note that backup.0 will be created as needed by rsync.
 
 for ((i=1;i&lt;=15;i++)); do
   if [ ! -d $BACKUP_DEST_DIR/backup.$i ]; then
@@ -210,18 +223,21 @@ if [ ! -h current ] ; then
 fi
 
 
-# Now, do the rsync.  echo "Now doing backup with rsync..." echo "Source
-dir: $SOURCE_DIR" echo -e "Backup destination dir: $BACKUP_DEST_DIR\n"
+# Now, do the rsync.
+echo "Now doing backup with rsync..."
+echo "Source dir: $SOURCE_DIR"
+echo -e "Backup destination dir: $BACKUP_DEST_DIR\n"
 
 
-/usr/bin/rsync $DRY_RUN $VERBOSE -a -S --delete --modify-window=60 \ 
+/usr/bin/rsync $DRY_RUN $VERBOSE -a -S --delete --modify-window=60 \
 --link-dest=../backup.1 $SOURCE_DIR $BACKUP_DEST_DIR/backup.0/
 
-# Only warn, rather than exit if the rsync failed, #+ since it may only be a
-minor problem.  # E.g., if one file is not readable, rsync will fail.  #
-This shouldn't prevent the rotation.  # Not using, e.g., `date +%a` since
-these directories #+ are just full of links and don't consume *that much*
-space.
+#  Only warn, rather than exit if the rsync failed,
+#+ since it may only be a minor problem.
+#  E.g., if one file is not readable, rsync will fail.
+#  This shouldn't prevent the rotation.
+#  Not using, e.g., `date +%a`  since these directories
+#+ are just full of links and don't consume *that much* space.
 
 if [ $? != 0 ]; then
   BACKUP_JUSTINCASE=backup.`date +%F_%T`.justincase
@@ -232,14 +248,15 @@ if [ $? != 0 ]; then
   echo "even though these are just hard-links!"
 fi
 
-# Save a readme in the backup parent directory.  # Save another one in the
-recent subdirectory.  echo "Backup of $SOURCE_DIR on `hostname` was last run
-on \ `date`" > $BACKUP_DEST_DIR/README.txt echo "This backup of $SOURCE_DIR
-on `hostname` was created on \ `date`" >
-$BACKUP_DEST_DIR/backup.0/README.txt
+# Save a readme in the backup parent directory.
+# Save another one in the recent subdirectory.
+echo "Backup of $SOURCE_DIR on `hostname` was last run on \
+`date`" > $BACKUP_DEST_DIR/README.txt
+echo "This backup of $SOURCE_DIR on `hostname` was created on \
+`date`" > $BACKUP_DEST_DIR/backup.0/README.txt
 
-# If we are not in a dry run, rotate the backups.  [ -z "$DRY_RUN" ]
-&amp;&amp;
+# If we are not in a dry run, rotate the backups.
+[ -z "$DRY_RUN" ] &amp;&amp;
 
   #  Check how full the backup disk is.
   #  Warn if 90%. if 98% or more, we'll probably fail, so give up.
@@ -342,5 +359,6 @@ if [ "$SUCCESS" == "true" ]; then
   exit 0
 fi
 
-# Should have already exited if backup worked.  echo 'BACKUP FAILED! Is this
-just a dry run? Is the disk full?) ' exit $E_BACKUP
+# Should have already exited if backup worked.
+echo 'BACKUP FAILED! Is this just a dry run? Is the disk full?) '
+exit $E_BACKUP

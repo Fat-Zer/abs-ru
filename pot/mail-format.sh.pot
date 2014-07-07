@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/mail-format.sh:3
-msgid "#!/bin/bash # mail-format.sh (ver. 1.1): Format e-mail messages."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# mail-format.sh (ver. 1.1): Format e-mail messages.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/mail-format.sh:5
-msgid "# Gets rid of carets, tabs, and also folds excessively long lines."
+#, no-wrap
+msgid "# Gets rid of carets, tabs, and also folds excessively long lines.\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,10 +74,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/mail-format.sh:37
+#, no-wrap
 msgid ""
-"# ================================= # A variable can hold a sed script.  # "
-"It's a useful technique.  sedscript='s/^>// s/^ *>// s/^ *// s/\t\t*//' # "
-"================================="
+"# =================================\n"
+"# A variable can hold a sed script.\n"
+"# It's a useful technique.\n"
+"sedscript='s/^>//\n"
+"s/^  *>//\n"
+"s/^  *//\n"
+"s/\t\t*//'\n"
+"# =================================\n"
 msgstr ""
 
 #. type: Plain text
@@ -89,15 +99,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/mail-format.sh:51
+#, no-wrap
 msgid ""
-"# This script was inspired by an article in a well-known trade journal #+ "
-"extolling a 164K MS Windows utility with similar functionality.  # # An nice "
-"set of text processing utilities and an efficient #+ scripting language "
-"provide an alternative to the bloated executables #+ of a clunky operating "
-"system."
+"#  This script was inspired by an article in a well-known trade journal\n"
+"#+ extolling a 164K MS Windows utility with similar functionality.\n"
+"#\n"
+"#  An nice set of text processing utilities and an efficient\n"
+"#+ scripting language provide an alternative to the bloated executables\n"
+"#+ of a clunky operating system.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/mail-format.sh:52
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

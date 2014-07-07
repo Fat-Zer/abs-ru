@@ -1,7 +1,9 @@
-#!/bin/bash # Same as previous example, but...
+#!/bin/bash
+# Same as previous example, but...
 
-# The - option to a here document &lt;&lt;- #+ suppresses leading tabs in
-the body of the document, #+ but *not* spaces.
+#  The - option to a here document &lt;&lt;-
+#+ suppresses leading tabs in the body of the document,
+#+ but *not* spaces.
 
 cat &lt;&lt;-ENDOFMESSAGE
 	This is line 1 of the message.

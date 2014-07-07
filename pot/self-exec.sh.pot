@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-exec.sh:3
-msgid "#!/bin/bash # self-exec.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# self-exec.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,7 +34,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-exec.sh:8
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,12 +49,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-exec.sh:14
-msgid "echo \"==================== Hit Ctl-C to exit ====================\""
+#, no-wrap
+msgid "echo \"==================== Hit Ctl-C to exit ====================\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-exec.sh:16
-msgid "sleep 1"
+#, no-wrap
+msgid "sleep 1\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,7 +69,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-exec.sh:21
-msgid "echo \"This line will never echo!\" # Why not?"
+#, no-wrap
+msgid "echo \"This line will never echo!\"  # Why not?\n"
 msgstr ""
 
 #. type: Plain text

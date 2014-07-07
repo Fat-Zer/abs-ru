@@ -1,4 +1,5 @@
-#!/bin/bash # hexconvert.sh: Convert a decimal number to hexadecimal.
+#!/bin/bash
+# hexconvert.sh: Convert a decimal number to hexadecimal.
 
 E_NOARGS=85 # Command-line arg missing.
 BASE=16     # Hexadecimal.

@@ -1,4 +1,5 @@
-#!/bin/bash # pad.sh
+#!/bin/bash
+# pad.sh
 
 #######################################################
 #               PAD (xml) file creator
@@ -21,15 +22,17 @@ else
 fi  
 
 
-# ===== PAD file headers ===== HDR1="&lt;?xml version=\"1.0\"
-encoding=\"Windows-1252\" ?&gt;" HDR2="&lt;XML_DIZ_INFO&gt;"
+# ===== PAD file headers =====
+HDR1="&lt;?xml version=\"1.0\" encoding=\"Windows-1252\" ?&gt;"
+HDR2="&lt;XML_DIZ_INFO&gt;"
 HDR3="&lt;MASTER_PAD_VERSION_INFO&gt;"
 HDR4="\t&lt;MASTER_PAD_VERSION&gt;1.15&lt;/MASTER_PAD_VERSION&gt;"
-HDR5="\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD for
-short, is a data set that is used by shareware authors to disseminate
-information to anyone interested in their software products.  To find out
-more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;"
-HDR6="&lt;/MASTER_PAD_VERSION_INFO&gt;" # ============================
+HDR5="\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD
+for short, is a data set that is used by shareware authors to
+disseminate information to anyone interested in their software products.
+To find out more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;"
+HDR6="&lt;/MASTER_PAD_VERSION_INFO&gt;"
+# ============================
 
 
 fill_in ()
@@ -69,19 +72,32 @@ echo "PAD File Creator"
 echo "--- ---- -------"
 echo
 
-# Write File Headers to file.  echo $HDR1 >$savefile echo $HDR2 >>$savefile
-echo $HDR3 >>$savefile echo -e $HDR4 >>$savefile echo -e $HDR5 >>$savefile
+# Write File Headers to file.
+echo $HDR1 >$savefile
+echo $HDR2 >>$savefile
+echo $HDR3 >>$savefile
+echo -e $HDR4 >>$savefile
+echo -e $HDR5 >>$savefile
 echo $HDR6 >>$savefile
 
 
-# Company_Info echo "COMPANY INFO" CO_HDR="Company_Info" echo "&lt;$CO_HDR>"
->>$savefile
+# Company_Info
+echo "COMPANY INFO"
+CO_HDR="Company_Info"
+echo "&lt;$CO_HDR>" >>$savefile
 
-fill_in Company_Name fill_in Address_1 fill_in Address_2 fill_in City_Town
-fill_in State_Province fill_in Zip_Postal_Code fill_in Country
+fill_in Company_Name
+fill_in Address_1
+fill_in Address_2
+fill_in City_Town 
+fill_in State_Province
+fill_in Zip_Postal_Code
+fill_in Country
 
-# If applicable: # fill_in ASP_Member "[Y/N]" # fill_in ASP_Member_Number #
-fill_in ESC_Member "[Y/N]"
+# If applicable:
+# fill_in ASP_Member "[Y/N]"
+# fill_in ASP_Member_Number
+# fill_in ESC_Member "[Y/N]"
 
 fill_in Company_WebSite_URL
 
@@ -116,18 +132,27 @@ fill_in Fax_Phone
 echo -e "\t&lt;/$SUPPORT_HDR>" >>$savefile
    # END Support_Info
 
-echo "&lt;/$CO_HDR>" >>$savefile # END Company_Info
+echo "&lt;/$CO_HDR>" >>$savefile
+# END Company_Info
 
 clear
 
-# Program_Info echo "PROGRAM INFO" PROGRAM_HDR="Program_Info" echo
-"&lt;$PROGRAM_HDR>" >>$savefile fill_in Program_Name fill_in Program_Version
-fill_in Program_Release_Month fill_in Program_Release_Day fill_in
-Program_Release_Year fill_in Program_Cost_Dollars fill_in Program_Cost_Other
-fill_in Program_Type "[Shareware/Freeware/GPL]" fill_in
-Program_Release_Status "[Beta, Major Upgrade, etc.]" fill_in
-Program_Install_Support fill_in Program_OS_Support
-"[Win9x/Win2k/Linux/etc.]" fill_in Program_Language "[English/Spanish/etc.]"
+# Program_Info 
+echo "PROGRAM INFO"
+PROGRAM_HDR="Program_Info"
+echo "&lt;$PROGRAM_HDR>" >>$savefile
+fill_in Program_Name
+fill_in Program_Version
+fill_in Program_Release_Month
+fill_in Program_Release_Day
+fill_in Program_Release_Year
+fill_in Program_Cost_Dollars
+fill_in Program_Cost_Other
+fill_in Program_Type "[Shareware/Freeware/GPL]"
+fill_in Program_Release_Status "[Beta, Major Upgrade, etc.]"
+fill_in Program_Install_Support
+fill_in Program_OS_Support "[Win9x/Win2k/Linux/etc.]"
+fill_in Program_Language "[English/Spanish/etc.]"
 
 echo; echo
 
@@ -173,14 +198,18 @@ fill_in Includes_VB_Runtime "[Y/N]"
 fill_in Includes_DirectX "[Y/N]"
   # END More Program_Info
 
-echo "&lt;/$PROGRAM_HDR>" >>$savefile # END Program_Info
+echo "&lt;/$PROGRAM_HDR>" >>$savefile
+# END Program_Info 
 
 clear
 
-# Program Description echo "PROGRAM DESCRIPTIONS"
-PROGDESC_HDR="Program_Descriptions" echo "&lt;$PROGDESC_HDR>" >>$savefile
+# Program Description
+echo "PROGRAM DESCRIPTIONS"
+PROGDESC_HDR="Program_Descriptions"
+echo "&lt;$PROGDESC_HDR>" >>$savefile
 
-LANG="English" echo "&lt;$LANG>" >>$savefile
+LANG="English"
+echo "&lt;$LANG>" >>$savefile
 
 fill_in Keywords "[comma + space separated]"
 echo
@@ -197,13 +226,18 @@ echo
 fill_in Char_Desc_80
 check_field_length 80 "$?"
 
-fill_in Char_Desc_250 check_field_length 250 "$?"
+fill_in Char_Desc_250
+check_field_length 250 "$?"
 
-fill_in Char_Desc_450 fill_in Char_Desc_2000
+fill_in Char_Desc_450
+fill_in Char_Desc_2000
 
-echo "&lt;/$LANG>" >>$savefile echo "&lt;/$PROGDESC_HDR>" >>$savefile # END
-Program Description
+echo "&lt;/$LANG>" >>$savefile
+echo "&lt;/$PROGDESC_HDR>" >>$savefile
+# END Program Description
 
-clear echo "Done."; echo; echo echo "Save file is: \""$savefile"\""
+clear
+echo "Done."; echo; echo
+echo "Save file is:  \""$savefile"\""
 
 exit 0

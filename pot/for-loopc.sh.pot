@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:3
-msgid "#!/bin/bash # Multiple ways to count up to 10."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Multiple ways to count up to 10.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:5
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,12 +43,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:13 abs-guide/for-loopc.sh:23 abs-guide/for-loopc.sh:34 abs-guide/for-loopc.sh:47 abs-guide/for-loopc.sh:58
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:15 abs-guide/for-loopc.sh:25 abs-guide/for-loopc.sh:36
-msgid "# +==========================================+"
+#, no-wrap
+msgid "# +==========================================+\n"
 msgstr ""
 
 #. type: Plain text
@@ -72,12 +78,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:38
-msgid "# Now, let's do the same, using C-like syntax."
+#, no-wrap
+msgid "# Now, let's do the same, using C-like syntax.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:40
-msgid "LIMIT=10"
+#, no-wrap
+msgid "LIMIT=10\n"
 msgstr ""
 
 #. type: Plain text
@@ -93,16 +101,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:49
+#, no-wrap
 msgid ""
 "# "
-"+=========================================================================+"
+"+=========================================================================+\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:51
+#, no-wrap
 msgid ""
 "# Let's use the C \"comma operator\" to increment two variables "
-"simultaneously."
+"simultaneously.\n"
 msgstr ""
 
 #. type: Plain text
@@ -117,5 +127,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/for-loopc.sh:59
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/and-or.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/and-or.sh:5
-msgid "a=24 b=47"
+#, no-wrap
+msgid ""
+"a=24\n"
+"b=47\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,9 +72,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/and-or.sh:35
+#, no-wrap
 msgid ""
-"# The -a and -o options provide #+ an alternative compound condition test.  "
-"# Thanks to Patrick Callahan for pointing this out."
+"#  The -a and -o options provide\n"
+"#+ an alternative compound condition test.\n"
+"#  Thanks to Patrick Callahan for pointing this out.\n"
 msgstr ""
 
 #. type: Plain text
@@ -113,5 +119,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/and-or.sh:62
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

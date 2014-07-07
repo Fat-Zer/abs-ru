@@ -1,5 +1,6 @@
-#!/bin/bash # cw-solver.sh # This is actually a wrapper around a one-liner
-(line 46).
+#!/bin/bash
+# cw-solver.sh
+# This is actually a wrapper around a one-liner (line 46).
 
 #  Crossword puzzle and anagramming word game solver.
 #  You know *some* of the letters in the word you're looking for,
@@ -47,14 +48,19 @@ grep ^"$1"$ "$DICT"   # Yes, only one line!
 # ^ is start-of-word regex anchor.
 # $ is end-of-word regex anchor.
 
-# From _Stupid Grep Tricks_, vol. 1, #+ a book the ABS Guide author may yet
-get around #+ to writing . . . one of these days . . .  #
-=============================================== echo
+#  From _Stupid Grep Tricks_, vol. 1,
+#+ a book the ABS Guide author may yet get around
+#+ to writing . . . one of these days . . .
+# ===============================================
+echo
 
 
-exit $? # Script terminates here.  # If there are too many words generated,
+exit $?  # Script terminates here.
+#  If there are too many words generated,
 #+ redirect the output to a file.
 
 $ sh cw-solver.sh w...i....n
 
-wellington workingman workingmen
+wellington
+workingman
+workingmen

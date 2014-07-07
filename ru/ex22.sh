@@ -1,4 +1,5 @@
-#!/bin/bash # Listing the planets.
+#!/bin/bash
+# Listing the planets.
 
 for planet in Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto
 do

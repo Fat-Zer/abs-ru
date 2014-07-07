@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/prepend.sh:6
+#, no-wrap
 msgid ""
-"#!/bin/bash # prepend.sh: Add text at beginning of file.  # # Example "
-"contributed by Kenny Stauffer, #+ and slightly modified by document author."
+"#!/bin/bash\n"
+"# prepend.sh: Add text at beginning of file.\n"
+"#\n"
+"#  Example contributed by Kenny Stauffer,\n"
+"#+ and slightly modified by document author.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/prepend.sh:9
-msgid "E_NOSUCHFILE=85"
+#, no-wrap
+msgid "E_NOSUCHFILE=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,17 +47,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/prepend.sh:19
-msgid "read -p \"Title: \" title cat - $file &lt;&lt;&lt;$title &gt; $file.new"
+#, no-wrap
+msgid ""
+"read -p \"Title: \" title\n"
+"cat - $file &lt;&lt;&lt;$title &gt; $file.new\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/prepend.sh:21
-msgid "echo \"Modified file is $file.new\""
+#, no-wrap
+msgid "echo \"Modified file is $file.new\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/prepend.sh:23
-msgid "exit # Ends script execution."
+#, no-wrap
+msgid "exit  # Ends script execution.\n"
 msgstr ""
 
 #. type: Plain text

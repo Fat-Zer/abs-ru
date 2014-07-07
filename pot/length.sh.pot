@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/length.sh:3
-msgid "#!/bin/bash # length.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# length.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/length.sh:5
-msgid "E_NO_ARGS=65"
+#, no-wrap
+msgid "E_NO_ARGS=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -40,20 +44,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/length.sh:19
+#, no-wrap
 msgid ""
-"var01=abcdEFGH28ij echo \"var01 = ${var01}\" echo \"Length of var01 = "
-"${#var01}\" # Now, let's try embedding a space.  var02=\"abcd EFGH28ij\" "
-"echo \"var02 = ${var02}\" echo \"Length of var02 = ${#var02}\""
+"var01=abcdEFGH28ij\n"
+"echo \"var01 = ${var01}\"\n"
+"echo \"Length of var01 = ${#var01}\"\n"
+"# Now, let's try embedding a space.\n"
+"var02=\"abcd EFGH28ij\"\n"
+"echo \"var02 = ${var02}\"\n"
+"echo \"Length of var02 = ${#var02}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/length.sh:22
+#, no-wrap
 msgid ""
-"echo \"Number of command-line arguments passed to script = ${#@}\" echo "
-"\"Number of command-line arguments passed to script = ${#*}\""
+"echo \"Number of command-line arguments passed to script = ${#@}\"\n"
+"echo \"Number of command-line arguments passed to script = ${#*}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/length.sh:23
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

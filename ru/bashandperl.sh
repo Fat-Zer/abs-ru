@@ -1,9 +1,11 @@
-#!/bin/bash # bashandperl.sh
+#!/bin/bash
+# bashandperl.sh
 
-echo "Greetings from the Bash part of the script, $0." # More Bash commands
-may follow here.
+echo "Greetings from the Bash part of the script, $0."
+# More Bash commands may follow here.
 
-exit # End of Bash part of the script.
+exit
+# End of Bash part of the script.
 
 # =======================================================
 

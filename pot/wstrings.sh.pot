@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wstrings.sh:8
+#, no-wrap
 msgid ""
-"#!/bin/bash # wstrings.sh: \"word-strings\" (enhanced \"strings\" command)  "
-"# # This script filters the output of \"strings\" by checking it #+ against "
-"a standard word list file.  # This effectively eliminates gibberish and "
-"noise, #+ and outputs only recognized words."
+"#!/bin/bash\n"
+"# wstrings.sh: \"word-strings\" (enhanced \"strings\" command)\n"
+"#\n"
+"#  This script filters the output of \"strings\" by checking it\n"
+"#+ against a standard word list file.\n"
+"#  This effectively eliminates gibberish and noise,\n"
+"#+ and outputs only recognized words.\n"
 msgstr ""
 
 #. type: Plain text
@@ -81,25 +85,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wstrings.sh:51
+#, no-wrap
 msgid ""
-"# Translate output of 'strings' command with multiple passes of 'tr'.  # "
-"\"tr A-Z a-z\" converts to lowercase.  # \"tr '[:space:]'\" converts "
-"whitespace characters to Z's.  # \"tr -cs '[:alpha:]' Z\" converts "
-"non-alphabetic characters to Z's, #+ and squeezes multiple consecutive Z's.  "
-"# \"tr -s '\\173-\\377' Z\" converts all characters past 'z' to Z's #+ and "
-"squeezes multiple consecutive Z's, #+ which gets rid of all the weird "
-"characters that the previous #+ translation failed to deal with.  # Finally, "
-"\"tr Z ' '\" converts all those Z's to whitespace, #+ which will be seen as "
-"word separators in the loop below."
+"# Translate output of 'strings' command with multiple passes of 'tr'.\n"
+"#  \"tr A-Z a-z\"  converts to lowercase.\n"
+"#  \"tr '[:space:]'\"  converts whitespace characters to Z's.\n"
+"#  \"tr -cs '[:alpha:]' Z\"  converts non-alphabetic characters to Z's,\n"
+"#+ and squeezes multiple consecutive Z's.\n"
+"#  \"tr -s '\\173-\\377' Z\"  converts all characters past 'z' to Z's\n"
+"#+ and squeezes multiple consecutive Z's,\n"
+"#+ which gets rid of all the weird characters that the previous\n"
+"#+ translation failed to deal with.\n"
+"#  Finally, \"tr Z ' '\" converts all those Z's to whitespace,\n"
+"#+ which will be seen as word separators in the loop below.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wstrings.sh:56
+#, no-wrap
 msgid ""
-"# *********************************************************************** # "
-"Note the technique of feeding/piping the output of 'tr' back to itself, #+ "
-"but with different arguments and/or options on each successive pass.  # "
-"***********************************************************************"
+"#  ***********************************************************************\n"
+"#  Note the technique of feeding/piping the output of 'tr' back to itself,\n"
+"#+ but with different arguments and/or options on each successive pass.\n"
+"#  ***********************************************************************\n"
 msgstr ""
 
 #. type: Plain text
@@ -130,5 +138,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wstrings.sh:74
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

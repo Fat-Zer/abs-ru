@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/manview.sh:3
-msgid "#!/bin/bash # manview.sh: Formats the source of a man page for viewing."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# manview.sh: Formats the source of a man page for viewing.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/manview.sh:7
+#, no-wrap
 msgid ""
-"# This script is useful when writing man page source.  # It lets you look at "
-"the intermediate results on the fly #+ while working on it."
+"#  This script is useful when writing man page source.\n"
+"#  It lets you look at the intermediate results on the fly\n"
+"#+ while working on it.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/manview.sh:9
-msgid "E_WRONGARGS=85"
+#, no-wrap
+msgid "E_WRONGARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,9 +52,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/manview.sh:20
+#, no-wrap
 msgid ""
-"# --------------------------- groff -Tascii -man $1 | less # From the man "
-"page for groff.  # ---------------------------"
+"# ---------------------------\n"
+"groff -Tascii -man $1 | less\n"
+"# From the man page for groff.\n"
+"# ---------------------------\n"
 msgstr ""
 
 #. type: Plain text

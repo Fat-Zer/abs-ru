@@ -1,23 +1,30 @@
-#!/bin/bash # brownian.sh # Author: Mendel Cooper # Reldate: 10/26/07 #
-License: GPL3
+#!/bin/bash
+# brownian.sh
+# Author: Mendel Cooper
+# Reldate: 10/26/07
+# License: GPL3
 
-# ---------------------------------------------------------------- # This
-script models Brownian motion: #+ the random wanderings of tiny particles in
-a fluid, #+ as they are buffeted by random currents and collisions.  #+ This
-is colloquially known as the "Drunkard's Walk."
+#  ----------------------------------------------------------------
+#  This script models Brownian motion:
+#+ the random wanderings of tiny particles in a fluid,
+#+ as they are buffeted by random currents and collisions.
+#+ This is colloquially known as the "Drunkard's Walk."
 
-# It can also be considered as a stripped-down simulation of a #+ Galton
-Board, a slanted board with a pattern of pegs, #+ down which rolls a
-succession of marbles, one at a time.  #+ At the bottom is a row of slots or
-catch basins in which #+ the marbles come to rest at the end of their
-journey.  # Think of it as a kind of bare-bones Pachinko game.  # As you see
-by running the script, #+ most of the marbles cluster around the center
-slot.  #+ This is consistent with the expected binomial distribution.  # As
-a Galton Board simulation, the script #+ disregards such parameters as #+
-board tilt-angle, rolling friction of the marbles, #+ angles of impact, and
-elasticity of the pegs.  # To what extent does this affect the accuracy of
-the simulation? #
-----------------------------------------------------------------
+#  It can also be considered as a stripped-down simulation of a
+#+ Galton Board, a slanted board with a pattern of pegs,
+#+ down which rolls a succession of marbles, one at a time.
+#+ At the bottom is a row of slots or catch basins in which
+#+ the marbles come to rest at the end of their journey.
+#  Think of it as a kind of bare-bones Pachinko game.
+#  As you see by running the script,
+#+ most of the marbles cluster around the center slot.
+#+ This is consistent with the expected binomial distribution.
+#  As a Galton Board simulation, the script
+#+ disregards such parameters as
+#+ board tilt-angle, rolling friction of the marbles,
+#+ angles of impact, and elasticity of the pegs.
+#  To what extent does this affect the accuracy of the simulation?
+#  ----------------------------------------------------------------
 
 PASSES=500            #  Number of particle interactions / marbles.
 ROWS=10               #  Number of "collisions" (or horiz. peg rows).
@@ -97,7 +104,12 @@ done
   }
 
 
-# -------------- # main ()  Initialize_Slots Run Show_Slots # --------------
+# --------------
+# main ()
+Initialize_Slots
+Run
+Show_Slots
+# --------------
 
 exit $?
 

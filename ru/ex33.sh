@@ -21,7 +21,8 @@
 #  If an option expects an argument ("flag:"), then it will grab
 #+ whatever is next on the command-line.
 
-NO_ARGS=0 E_OPTERROR=85
+NO_ARGS=0 
+E_OPTERROR=85
 
 if [ $# -eq "$NO_ARGS" ]    # Script invoked with no command-line args?
 then
@@ -47,9 +48,10 @@ do
   esac
 done
 
-shift $(($OPTIND - 1))  # Decrements the argument pointer so it points to
-next argument.  # $1 now references the first non-option item supplied on
-the command-line #+ if one exists.
+shift $(($OPTIND - 1))
+#  Decrements the argument pointer so it points to next argument.
+#  $1 now references the first non-option item supplied on the command-line
+#+ if one exists.
 
 exit $?
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/lowercase.sh:8
+#, no-wrap
 msgid ""
-"#!/bin/bash # # Changes every filename in working directory to all "
-"lowercase.  # # Inspired by a script of John Dubois, #+ which was translated "
-"into Bash by Chet Ramey, #+ and considerably simplified by the author of the "
-"ABS Guide."
+"#!/bin/bash\n"
+"#\n"
+"#  Changes every filename in working directory to all lowercase.\n"
+"#\n"
+"#  Inspired by a script of John Dubois,\n"
+"#+ which was translated into Bash by Chet Ramey,\n"
+"#+ and considerably simplified by the author of the ABS Guide.\n"
 msgstr ""
 
 #. type: Plain text
@@ -43,22 +47,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/lowercase.sh:21 abs-guide/lowercase.sh:43
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lowercase.sh:26
+#, no-wrap
 msgid ""
-"# Code below this line will not execute because of \"exit\".  "
-"#--------------------------------------------------------# # To run it, "
-"delete script above line."
+"# Code below this line will not execute because of \"exit\".\n"
+"#--------------------------------------------------------#\n"
+"# To run it, delete script above line.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lowercase.sh:29
+#, no-wrap
 msgid ""
 "# The above script will not work on filenames containing blanks or "
-"newlines.  # Stephane Chazelas therefore suggests the following alternative:"
+"newlines.\n"
+"# Stephane Chazelas therefore suggests the following alternative:\n"
 msgstr ""
 
 #. type: Plain text

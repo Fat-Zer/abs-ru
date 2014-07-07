@@ -1,5 +1,6 @@
-#!/bin/bash # hash-example.sh: Colorizing text.  # Author: Mariusz
-Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;
+#!/bin/bash
+# hash-example.sh: Colorizing text.
+# Author: Mariusz Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;
 
 . Hash.lib      # Load the library of functions.
 
@@ -40,8 +41,10 @@ done
 hash_foreach colors try_colors
 hash_echo colors reset_color -en
 
-hash_set other txt "Other examples . . ." hash_echo other txt hash_get_into
-other txt text echo $text
+hash_set other txt "Other examples . . ."
+hash_echo other txt
+hash_get_into other txt text
+echo $text
 
 hash_set other my_fun try_colors
 hash_call other my_fun   purple "`hash_echo colors purple`"
@@ -51,6 +54,7 @@ echo; echo "Back to normal?"; echo
 
 exit $?
 
-# On some terminals, the "light" colors print in bold, # and end up looking
-darker than the normal ones.  # Why is this?
+#  On some terminals, the "light" colors print in bold,
+#  and end up looking darker than the normal ones.
+#  Why is this?
 

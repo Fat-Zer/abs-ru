@@ -1,11 +1,13 @@
-#!/bin/bash # array-strops.sh: String operations on arrays.
+#!/bin/bash
+# array-strops.sh: String operations on arrays.
 
-# Script by Michael Zick.  # Used in ABS Guide with permission.  # Fixups:
-05 May 08, 04 Aug 08.
+# Script by Michael Zick.
+# Used in ABS Guide with permission.
+# Fixups: 05 May 08, 04 Aug 08.
 
-# In general, any string operation using the ${name ... } notation #+ can be
-applied to all string elements in an array, #+ with the ${name[@] ... } or
-${name[*] ...} notation.
+#  In general, any string operation using the ${name ... } notation
+#+ can be applied to all string elements in an array,
+#+ with the ${name[@] ... } or ${name[*] ...} notation.
 
 
 arrayZ=( one two three four five five )
@@ -97,8 +99,8 @@ echo ${arrayZ[@]//*/$(replacement optional_arguments)}
 #                ^^ ^^^^^^^^^^^^^
 # !!! !!! !!! !!! !!! !!!
 
-# Now, if Bash would only pass the matched string #+ to the function being
-called . . .
+#  Now, if Bash would only pass the matched string
+#+ to the function being called . . .
 
 echo
 

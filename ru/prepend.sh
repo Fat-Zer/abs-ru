@@ -1,5 +1,8 @@
-#!/bin/bash # prepend.sh: Add text at beginning of file.  # # Example
-contributed by Kenny Stauffer, #+ and slightly modified by document author.
+#!/bin/bash
+# prepend.sh: Add text at beginning of file.
+#
+#  Example contributed by Kenny Stauffer,
+#+ and slightly modified by document author.
 
 
 E_NOSUCHFILE=85
@@ -11,11 +14,12 @@ then   # Bail out if no such file.
   exit $E_NOSUCHFILE
 fi
 
-read -p "Title: " title cat - $file &lt;&lt;&lt;$title &gt; $file.new
+read -p "Title: " title
+cat - $file &lt;&lt;&lt;$title &gt; $file.new
 
 echo "Modified file is $file.new"
 
-exit # Ends script execution.
+exit  # Ends script execution.
 
   from 'man bash':
   Here Strings

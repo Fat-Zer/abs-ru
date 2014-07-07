@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:6
+#, no-wrap
 msgid ""
-"declare -a colors # All subsequent commands in this script will treat #+ the "
-"variable \"colors\" as an array."
+"declare -a colors\n"
+"#  All subsequent commands in this script will treat\n"
+"#+ the variable \"colors\" as an array.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:8
-msgid "echo \"Enter your favorite colors (separated from each other by a space).\""
+#, no-wrap
+msgid ""
+"echo \"Enter your favorite colors (separated from each other by a "
+"space).\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -44,7 +50,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:14 abs-guide/ex67.sh:46 abs-guide/ex67.sh:51
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,7 +71,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:26
-msgid "index=0"
+#, no-wrap
+msgid "index=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,5 +130,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex67.sh:63
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

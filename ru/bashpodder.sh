@@ -1,34 +1,40 @@
 #!/bin/bash
 
-# bashpodder.sh: # By Linc 10/1/2004 # Find the latest script at #+
-http://linc.homeunix.org:8080/scripts/bashpodder # Last revision 12/14/2004
-- Many Contributors! # If you use this and have made improvements or have
-comments #+ drop me an email at linc dot fessenden at gmail dot com # I'd
-appreciate it!
+#  bashpodder.sh:
+#  By Linc 10/1/2004
+#  Find the latest script at
+#+ http://linc.homeunix.org:8080/scripts/bashpodder
+#  Last revision 12/14/2004 - Many Contributors!
+#  If you use this and have made improvements or have comments
+#+ drop me an email at linc dot fessenden at gmail dot com
+#  I'd appreciate it!
 
-# ==> ABS Guide extra comments.
+# ==>  ABS Guide extra comments.
 
-# ==> Author of this script has kindly granted permission # ==>+ for
-inclusion in ABS Guide.
+# ==>  Author of this script has kindly granted permission
+# ==>+ for inclusion in ABS Guide.
 
 
-# ==> ################################################################ # #
-==> What is "podcasting"?
+# ==> ################################################################
+# 
+# ==> What is "podcasting"?
 
-# ==> It's broadcasting "radio shows" over the Internet.  # ==> These shows
-can be played on iPods and other music file players.
+# ==> It's broadcasting "radio shows" over the Internet.
+# ==> These shows can be played on iPods and other music file players.
 
-# ==> This script makes it possible.  # ==> See documentation at the script
-author's site, above.
+# ==> This script makes it possible.
+# ==> See documentation at the script author's site, above.
 
 # ==> ################################################################
 
 
-# Make script crontab friendly: cd $(dirname $0)  # ==> Change to directory
-where this script lives.
+# Make script crontab friendly:
+cd $(dirname $0)
+# ==> Change to directory where this script lives.
 
-# datadir is the directory you want podcasts saved to: datadir=$(date
-+%Y-%m-%d)  # ==> Will create a date-labeled directory, named: YYYY-MM-DD
+# datadir is the directory you want podcasts saved to:
+datadir=$(date +%Y-%m-%d)
+# ==> Will create a date-labeled directory, named: YYYY-MM-DD
 
 # Check for and create datadir if necessary:
 if test ! -d $datadir
@@ -36,7 +42,8 @@ if test ! -d $datadir
         mkdir $datadir
 fi
 
-# Delete any temp file: rm -f temp.log
+# Delete any temp file:
+rm -f temp.log
 
 #  Read the bp.conf file and wget any url not already
 #+ in the podcast.log file:
@@ -54,15 +61,20 @@ sed -n 's/.*url="\([^"]*\)".*/\1/p')
                 done
     done &lt; bp.conf
 
-# Move dynamically created log file to permanent log file: cat podcast.log
->> temp.log sort temp.log | uniq > podcast.log rm temp.log # Create an m3u
-playlist: ls $datadir | grep -v m3u > $datadir/podcast.m3u
+# Move dynamically created log file to permanent log file:
+cat podcast.log >> temp.log
+sort temp.log | uniq > podcast.log
+rm temp.log
+# Create an m3u playlist:
+ls $datadir | grep -v m3u > $datadir/podcast.m3u
 
 
 exit 0
 
-################################################# For a different scripting
-approach to Podcasting, see Phil Salkie's article, "Internet Radio to
-Podcast with Shell Tools" in the September, 2005 issue of LINUX JOURNAL,
+#################################################
+For a different scripting approach to Podcasting,
+see Phil Salkie's article, 
+"Internet Radio to Podcast with Shell Tools"
+in the September, 2005 issue of LINUX JOURNAL,
 http://www.linuxjournal.com/article/8171
 #################################################

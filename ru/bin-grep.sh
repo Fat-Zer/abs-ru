@@ -1,8 +1,11 @@
-#!/bin/bash # bin-grep.sh: Locates matching strings in a binary file.
+#!/bin/bash
+# bin-grep.sh: Locates matching strings in a binary file.
 
-# A "grep" replacement for binary files.  # Similar effect to "grep -a"
+# A "grep" replacement for binary files.
+# Similar effect to "grep -a"
 
-E_BADARGS=65 E_NOFILE=66
+E_BADARGS=65
+E_NOFILE=66
 
 if [ $# -ne 2 ]
 then
@@ -30,6 +33,7 @@ done
 #    strings "$2" | grep "$1" | tr -s "$IFS" '[\n*]'
 
 
-# Try something like "./bin-grep.sh mem /bin/ls" #+ to exercise this script.
+#  Try something like  "./bin-grep.sh mem /bin/ls"
+#+ to exercise this script.
 
 exit 0

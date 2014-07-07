@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # bingo.sh # Bingo number generator # Reldate 20Aug12, License: "
-"Public Domain"
+"#!/bin/bash\n"
+"# bingo.sh\n"
+"# Bingo number generator\n"
+"# Reldate 20Aug12, License: Public Domain\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:13
+#, no-wrap
 msgid ""
-"####################################################################### # "
-"This script generates bingo numbers.  # Hitting a key generates a new "
-"number.  # Hitting 'q' terminates the script.  # In a given run of the "
-"script, there will be no duplicate numbers.  # When the script terminates, "
-"it prints a log of the numbers generated.  "
-"#######################################################################"
+"#######################################################################\n"
+"# This script generates bingo numbers.\n"
+"# Hitting a key generates a new number.\n"
+"# Hitting 'q' terminates the script.\n"
+"# In a given run of the script, there will be no duplicate numbers.\n"
+"# When the script terminates, it prints a log of the numbers generated.\n"
+"#######################################################################\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,7 +51,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:21
-msgid "declare -a Numbers Prefix=(B I N G O)"
+#, no-wrap
+msgid ""
+"declare -a Numbers\n"
+"Prefix=(B I N G O)\n"
 msgstr ""
 
 #. type: Plain text
@@ -124,7 +132,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:63
-msgid "echo \"Number Stats\""
+#, no-wrap
+msgid "echo \"Number Stats\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -166,7 +175,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:86
-msgid "done }"
+#, no-wrap
+msgid ""
+"done\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -185,7 +197,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:96
-msgid "clear echo \"Bingo Number Caller\"; echo"
+#, no-wrap
+msgid ""
+"clear\n"
+"echo \"Bingo Number Caller\"; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -224,30 +239,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:113
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:117
+#, no-wrap
 msgid ""
-"# Game over ...  print_numbers_called echo; echo \"[#0 = not called . . . #1 "
-"= called]\""
+"# Game over ...\n"
+"print_numbers_called\n"
+"echo; echo \"[#0 = not called . . . #1 = called]\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:119
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:122
-msgid "exit 0 # }"
+#, no-wrap
+msgid ""
+"exit 0\n"
+"# }\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bingo.sh:126
+#, no-wrap
 msgid ""
-"# Certainly, this script could stand some improvement.  #See also the "
-"author's Instructable: "
-"#www.instructables.com/id/Binguino-An-Arduino-based-Bingo-Number-Generato/"
+"# Certainly, this script could stand some improvement.\n"
+"#See also the author's Instructable:\n"
+"#www.instructables.com/id/Binguino-An-Arduino-based-Bingo-Number-Generato/\n"
 msgstr ""

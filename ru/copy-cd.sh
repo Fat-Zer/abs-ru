@@ -1,4 +1,5 @@
-#!/bin/bash # copy-cd.sh: copying a data CD
+#!/bin/bash
+# copy-cd.sh: copying a data CD
 
 CDROM=/dev/cdrom                           # CD ROM device
 OF=/home/bozo/projects/cdimage.iso         # output file
@@ -12,8 +13,8 @@ echo; echo "Insert source CD, but do *not* mount it."
 echo "Press ENTER when ready. "
 read ready                                 # Wait for input, $ready not used.
 
-echo; echo "Copying the source CD to $OF." echo "This may take a
-while. Please be patient."
+echo; echo "Copying the source CD to $OF."
+echo "This may take a while. Please be patient."
 
 dd if=$CDROM of=$OF bs=$BLOCKSIZE          # Raw device copy.
 
@@ -34,7 +35,7 @@ wodim -v -isosize dev=$DEVICE $OF
 
 echo; echo "Done copying $OF to CDR on device $CDROM."
 
-echo "Do you want to erase the image file (y/n)? " # Probably a huge file.
+echo "Do you want to erase the image file (y/n)? "  # Probably a huge file.
 read answer
 
 case "$answer" in
@@ -46,7 +47,7 @@ esac
 
 echo
 
-# Exercise: # Change the above "case" statement to also accept "yes" and
-"Yes" as input.
+# Exercise:
+# Change the above "case" statement to also accept "yes" and "Yes" as input.
 
 exit 0

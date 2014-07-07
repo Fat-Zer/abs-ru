@@ -1,4 +1,5 @@
-#!/bin/bash # isalpha.sh: Using a "case" structure to filter a string.
+#!/bin/bash
+# isalpha.sh: Using a "case" structure to filter a string.
 
 SUCCESS=0
 FAILURE=1   #  Was FAILURE=-1,
@@ -98,6 +99,8 @@ digit_check $i
 
 exit 0        # Script improved by S.C.
 
-# Exercise: # -------- # Write an 'isfloat ()' function that tests for
-floating point numbers.  # Hint: The function duplicates 'isdigit ()', #+
-but adds a test for a mandatory decimal point.
+# Exercise:
+# --------
+#  Write an 'isfloat ()' function that tests for floating point numbers.
+#  Hint: The function duplicates 'isdigit ()',
+#+ but adds a test for a mandatory decimal point.

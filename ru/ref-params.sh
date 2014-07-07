@@ -2,7 +2,8 @@
 # ref-params.sh: Dereferencing a parameter passed to a function.
 #                (Complex Example)
 
-ITERATIONS=3 # How many times to get input.  icount=1
+ITERATIONS=3  # How many times to get input.
+icount=1
 
 my_read () {
   #  Called with my_read varname,

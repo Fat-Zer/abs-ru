@@ -1,7 +1,9 @@
-#!/bin/bash # arith-tests.sh # Arithmetic tests.
+#!/bin/bash
+# arith-tests.sh
+# Arithmetic tests.
 
-# The (( ... )) construct evaluates and tests numerical expressions.  # Exit
-status opposite from [ ... ] construct!
+# The (( ... )) construct evaluates and tests numerical expressions.
+# Exit status opposite from [ ... ] construct!
 
 (( 0 ))
 echo "Exit status of \"(( 0 ))\" is $?."         # 1
@@ -33,14 +35,16 @@ echo "Exit status of \"(( 1 / 2 ))\" is $?."     # Rounded off to 0.
 #           ^^^^^^^^^^^
 echo "Exit status of \"(( 1 / 0 ))\" is $?."     # 1
 
-# What effect does the "2>/dev/null" have? # What would happen if it were
-removed? # Try removing it, then rerunning the script.
+# What effect does the "2>/dev/null" have?
+# What would happen if it were removed?
+# Try removing it, then rerunning the script.
 
 # ======================================= #
 
 # (( ... )) also useful in an if-then test.
 
-var1=5 var2=4
+var1=5
+var2=4
 
 if (( var1 > var2 ))
 then #^      ^      Note: Not $var1, $var2. Why?

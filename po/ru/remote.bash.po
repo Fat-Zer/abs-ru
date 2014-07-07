@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:3
-msgid "#!/bin/bash # remote.bash: Using ssh."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# remote.bash: Using ssh.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:6
-msgid "# This example by Michael Zick.  # Used with permission."
+#, no-wrap
+msgid ""
+"# This example by Michael Zick.\n"
+"# Used with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,49 +74,59 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:38
+#, no-wrap
 msgid ""
-"# The above gives you an interactive shell.  # It is possible for sshd to be "
-"set up in a 'single command' mode, #+ but that is beyond the scope of this "
-"example.  # The only thing to note is that the following will work in #+ "
-"'single command' mode."
+"#  The above gives you an interactive shell.\n"
+"#  It is possible for sshd to be set up in a 'single command' mode,\n"
+"#+ but that is beyond the scope of this example.\n"
+"#  The only thing to note is that the following will work in\n"
+"#+ 'single command' mode.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:41
-msgid "# A basic, write stdout (local) command."
+#, no-wrap
+msgid "# A basic, write stdout (local) command.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:43
-msgid "ls -l"
+#, no-wrap
+msgid "ls -l\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:48
+#, no-wrap
 msgid ""
-"# Now the same basic command on a remote machine.  # Pass a different "
-"'USERNAME' 'HOSTNAME' if desired: USER=${USERNAME:-$(whoami)} "
-"HOST=${HOSTNAME:-$(hostname)}"
+"# Now the same basic command on a remote machine.\n"
+"# Pass a different 'USERNAME' 'HOSTNAME' if desired:\n"
+"USER=${USERNAME:-$(whoami)}\n"
+"HOST=${HOSTNAME:-$(hostname)}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:51
+#, no-wrap
 msgid ""
-"# Now excute the above command-line on the remote host, #+ with all "
-"transmissions encrypted."
+"#  Now excute the above command-line on the remote host,\n"
+"#+ with all transmissions encrypted.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:53
-msgid "ssh -l ${USER} ${HOST} \" ls -l \""
+#, no-wrap
+msgid "ssh -l ${USER} ${HOST} \" ls -l \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:58
+#, no-wrap
 msgid ""
-"# The expected result is a listing of your username's home #+ directory on "
-"the remote machine.  # To see any difference, run this script from somewhere "
-"#+ other than your home directory."
+"#  The expected result is a listing of your username's home\n"
+"#+ directory on the remote machine.\n"
+"#  To see any difference, run this script from somewhere\n"
+"#+ other than your home directory.\n"
 msgstr ""
 
 #. type: Plain text
@@ -135,5 +151,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/remote.bash:69
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -1,14 +1,20 @@
-#! /bin/bash # is-spammer.sh: Identifying spam domains
+#! /bin/bash
+# is-spammer.sh: Identifying spam domains
 
-# $Id$ # Above line is RCS ID info.  # # This is a simplified version of the
-"is_spammer.bash #+ script in the Contributed Scripts appendix.
+# $Id$
+# Above line is RCS ID info.
+#
+#  This is a simplified version of the "is_spammer.bash
+#+ script in the Contributed Scripts appendix.
 
 # is-spammer &lt;domain.name&gt;
 
-# Uses an external program: 'dig' # Tested with version: 9.2.4rc5
+# Uses an external program: 'dig'
+# Tested with version: 9.2.4rc5
 
-# Uses functions.  # Uses IFS to parse strings by assignment into arrays.  #
-And even does something useful: checks e-mail blacklists.
+# Uses functions.
+# Uses IFS to parse strings by assignment into arrays.
+# And even does something useful: checks e-mail blacklists.
 
 # Use the domain.name(s) from the text body:
 # http://www.good_stuff.spammer.biz/just_ignore_everything_else
@@ -26,12 +32,15 @@ And even does something useful: checks e-mail blacklists.
 # Whitespace == :Space:Tab:Line Feed:Carriage Return:
 WSP_IFS=$'\x20'$'\x09'$'\x0A'$'\x0D'
 
-# No Whitespace == Line Feed:Carriage Return No_WSP=$'\x0A'$'\x0D'
+# No Whitespace == Line Feed:Carriage Return
+No_WSP=$'\x0A'$'\x0D'
 
-# Field separator for dotted decimal ip addresses ADR_IFS=${No_WSP}'.'
+# Field separator for dotted decimal ip addresses
+ADR_IFS=${No_WSP}'.'
 
-# Get the dns text resource record.  # get_txt &lt;error_code&gt;
-&lt;list_query&gt; get_txt() {
+# Get the dns text resource record.
+# get_txt &lt;error_code&gt; &lt;list_query&gt;
+get_txt() {
 
     # Parse $1 by assignment at the dots.
     local -a dns
@@ -64,9 +73,11 @@ chk_adr() {
     echo ${reason:-' not blacklisted.'}
 }
 
-# Need to get the IP address from the name.  echo 'Get address of: '$1
-ip_adr=$(dig +short $1)  dns_reply=${ip_adr:-' no answer '} echo ' Found
-address: '${dns_reply}
+# Need to get the IP address from the name.
+echo 'Get address of: '$1
+ip_adr=$(dig +short $1)
+dns_reply=${ip_adr:-' no answer '}
+echo ' Found address: '${dns_reply}
 
 # A valid reply is at least 4 digits plus 3 dots.
 if [ ${#ip_adr} -gt 6 ]
@@ -120,7 +131,8 @@ fi
 
 exit 0
 
-# Exercises: # --------
+# Exercises:
+# --------
 
 # 1) Check arguments to script,
 #    and exit with appropriate error message if necessary.

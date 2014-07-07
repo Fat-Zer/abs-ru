@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/break-levels.sh:3
-msgid "#!/bin/bash # break-levels.sh: Breaking out of loops."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# break-levels.sh: Breaking out of loops.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/break-levels.sh:5
-msgid "# \"break N\" breaks out of N level loops."
+#, no-wrap
+msgid "# \"break N\" breaks out of N level loops.\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,10 +72,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/break-levels.sh:27
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/break-levels.sh:28
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -1,4 +1,5 @@
-#!/bin/bash # qky.sh
+#!/bin/bash
+# qky.sh
 
 ##############################################################
 # QUACKEY: a somewhat simplified version of Perquackey [TM]. #
@@ -33,19 +34,22 @@ TIMEOUT=10    # Time for word input.
 NVLET=10      # 10 letters for non-vulnerable.
 VULET=13      # 13 letters for vulnerable (not yet implemented!).
 
-declare -a Words declare -a Status declare -a Score=( 0 0 0 0 0 0 0 0 0 0 0
-)
+declare -a Words
+declare -a Status
+declare -a Score=( 0 0 0 0 0 0 0 0 0 0 0 )
 
 
-letters=( a n s r t m l k p r b c i d s i d z e w u e t f e y e r e f e g t
-g h h i t r s c i t i d i j a t a o l a m n a n o v n w o s e l n o s p a q
-e e r a b r s a o d s t g t i t l u e u v n e o x y m r k )  # Letter
-distribution table shamelessly borrowed from "Wordy" game, #+ ca. 1992,
-written by a certain fine fellow named Mendel Cooper.
+letters=( a n s r t m l k p r b c i d s i d z e w u e t f
+e y e r e f e g t g h h i t r s c i t i d i j a t a o l a
+m n a n o v n w o s e l n o s p a q e e r a b r s a o d s
+t g t i t l u e u v n e o x y m r k )
+#  Letter distribution table shamelessly borrowed from "Wordy" game,
+#+ ca. 1992, written by a certain fine fellow named Mendel Cooper.
 
 declare -a LS
 
-numelements=${#letters[@]} randseed="$1"
+numelements=${#letters[@]}
+randseed="$1"
 
 instructions ()
 {
@@ -58,19 +62,23 @@ instructions ()
      echo -e '\E[31;47m'  # Red foreground. '\E[34;47m' for blue.
      cat &lt;&lt;INSTRUCTION1
 
-QUACKEY is a variant of Perquackey [TM].  The rules are the same, but the
-scoring is simplified and plurals of previously played words are allowed.
-"Vulnerable" play is not yet implemented, but it is otherwise
-feature-complete.
+QUACKEY is a variant of Perquackey [TM].
+The rules are the same, but the scoring is simplified
+and plurals of previously played words are allowed.
+"Vulnerable" play is not yet implemented,
+but it is otherwise feature-complete.
 
-As the game begins, the player gets 10 letters.  The object is to construct
-valid dictionary words of at least 3-letter length from the letterset.  Each
-word-length category -- 3-letter, 4-letter, 5-letter, ... -- fills up with
-the fifth word entered, and no further words in that category are accepted.
+As the game begins, the player gets 10 letters.
+The object is to construct valid dictionary words
+of at least 3-letter length from the letterset.
+Each word-length category
+-- 3-letter, 4-letter, 5-letter, ... --
+fills up with the fifth word entered,
+and no further words in that category are accepted.
 
-The penalty for too-short (two-letter), duplicate, unconstructable, and
-invalid (not in dictionary) words is -200. The same penalty applies to
-attempts to enter a word in a filled-up category.
+The penalty for too-short (two-letter), duplicate, unconstructable,
+and invalid (not in dictionary) words is -200. The same penalty applies
+to attempts to enter a word in a filled-up category.
 
 INSTRUCTION1
 
@@ -107,16 +115,19 @@ INSTRUCTION2
 
 Hitting just ENTER for a word entry ends the game.
 
-Individual word entry is timed to a maximum of 10 seconds.  *** Timing out
-on an entry ends the game. *** Aside from that, the game is untimed.
+Individual word entry is timed to a maximum of 10 seconds.
+*** Timing out on an entry ends the game. ***
+Aside from that, the game is untimed.
 
 --------------------------------------------------
 Game statistics are automatically saved to a file.
 --------------------------------------------------
 
-For competitive ("duplicate") play, a previous letterset may be duplicated
-by repeating the script's random seed, command-line parameter \$1.  For
-example, "qky 7633" specifies the letterset c a d i f r h u s k ...
+For competitive ("duplicate") play, a previous letterset
+may be duplicated by repeating the script's random seed,
+command-line parameter \$1.
+For example, "qky 7633" specifies the letterset 
+c a d i f r h u s k ...
 INSTRUCTION3
 
   echo; echo -n "Hit ENTER to begin game. "; read az1
@@ -406,7 +417,8 @@ play ()
   ### This verges on "spaghetti code" !!!
 }
 
-end_of_game ()  { # Save and display stats.
+end_of_game ()
+{ # Save and display stats.
 
   #######################Autosave##########################
   savefile=qky.save.$$
@@ -428,8 +440,13 @@ end_of_game ()  { # Save and display stats.
   echo "Words:  ${Words[@]}"
 }
 
-# ---------# instructions seed_random get_letset play end_of_game #
----------#
+# ---------#
+instructions
+seed_random
+get_letset
+play
+end_of_game
+# ---------#
 
 exit $?
 
@@ -445,4 +462,5 @@ exit $?
 # 6) Improve save-to-file capability (and maybe make it optional).
 # 7) Fix bugs!!!
 
-# For more info, reference: # http://bash.deta.in/qky.README.html
+# For more info, reference:
+# http://bash.deta.in/qky.README.html

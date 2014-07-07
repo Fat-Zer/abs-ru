@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,45 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:3
-msgid "#!/bin/bash # soundcard-on.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# soundcard-on.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:11
+#, no-wrap
 msgid ""
-"# Script author: Mkarcher # http://www.thinkwiki.org/wiki ...  # "
-"/Script_for_configuring_the_CS4239_sound_chip_in_PnP_mode # ABS Guide author "
-"made minor changes and added comments.  # Couldn't contact script author to "
-"ask for permission to use, but ...  #+ the script was released under the "
-"FDL, #+ so its use here should be both legal and ethical."
+"#  Script author: Mkarcher\n"
+"#  http://www.thinkwiki.org/wiki  ...\n"
+"#  /Script_for_configuring_the_CS4239_sound_chip_in_PnP_mode\n"
+"#  ABS Guide author made minor changes and added comments.\n"
+"#  Couldn't contact script author to ask for permission to use, but ...\n"
+"#+ the script was released under the FDL,\n"
+"#+ so its use here should be both legal and ethical.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:22
+#, no-wrap
 msgid ""
-"# Sound-via-pnp-script for Thinkpad 600E #+ and possibly other computers "
-"with onboard CS4239/CS4610 #+ that do not work with the PCI driver #+ and "
-"are not recognized by the PnP code of snd-cs4236.  # Also for some "
-"770-series Thinkpads, such as the 770x.  # Run as root user, of course.  # # "
-"These are old and very obsolete laptop computers, #+ but this particular "
-"script is very instructive, #+ as it shows how to set up and hack device "
-"files."
+"#  Sound-via-pnp-script for Thinkpad 600E\n"
+"#+ and possibly other computers with onboard CS4239/CS4610\n"
+"#+ that do not work with the PCI driver\n"
+"#+ and are not recognized by the PnP code of snd-cs4236.\n"
+"#  Also for some 770-series Thinkpads, such as the 770x.\n"
+"#  Run as root user, of course.\n"
+"#\n"
+"#  These are old and very obsolete laptop computers,\n"
+"#+ but this particular script is very instructive,\n"
+"#+ as it shows how to set up and hack device files.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:26
-msgid "# Search for sound card pnp device:"
+#, no-wrap
+msgid "#  Search for sound card pnp device:\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,19 +76,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:41
+#, no-wrap
 msgid ""
-"# Activate devices: # Thinkpad boots with devices disabled unless \"fast "
-"boot\" is turned off #+ (in BIOS)."
+"#  Activate devices:\n"
+"#  Thinkpad boots with devices disabled unless \"fast boot\" is turned off\n"
+"#+ (in BIOS).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:44
-msgid "echo activate > $WSSDEV/resources echo activate > $CTLDEV/resources"
+#, no-wrap
+msgid ""
+"echo activate > $WSSDEV/resources\n"
+"echo activate > $CTLDEV/resources\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:47
-msgid "# Parse resource settings."
+#, no-wrap
+msgid "# Parse resource settings.\n"
 msgstr ""
 
 #. type: Plain text
@@ -148,18 +165,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:101
-msgid "# Load the module:"
+#, no-wrap
+msgid "# Load the module:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:105
+#, no-wrap
 msgid ""
-"modprobe --ignore-install snd-cs4236 port=$port cport=$cport\\ "
-"fm_port=$oplport irq=$irq dma1=$dma1 dma2=$dma2 isapnp=0 index=0 # See the "
-"modprobe manpage."
+"modprobe --ignore-install snd-cs4236 port=$port cport=$cport\\\n"
+"fm_port=$oplport irq=$irq dma1=$dma1 dma2=$dma2 isapnp=0 index=0\n"
+"# See the modprobe manpage.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundcard-on.sh:106
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

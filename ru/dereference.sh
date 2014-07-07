@@ -1,5 +1,7 @@
-#!/bin/bash # dereference.sh # Dereferencing parameter passed to a
-function.  # Script by Bruce W. Clare.
+#!/bin/bash
+# dereference.sh
+# Dereferencing parameter passed to a function.
+# Script by Bruce W. Clare.
 
 dereference ()
 {

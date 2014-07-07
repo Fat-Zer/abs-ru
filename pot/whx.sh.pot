@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:6
+#, no-wrap
 msgid ""
-"#!/bin/bash # whx.sh: \"whois\" spammer lookup # Author: Walter Dnes # "
-"Slight revisions (first section) by ABS Guide author.  # Used in ABS Guide "
-"with permission."
+"#!/bin/bash\n"
+"# whx.sh: \"whois\" spammer lookup\n"
+"# Author: Walter Dnes\n"
+"# Slight revisions (first section) by ABS Guide author.\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:9
+#, no-wrap
 msgid ""
-"# Needs version 3.x or greater of Bash to run (because of =~ operator).  # "
-"Commented by script author and ABS Guide author."
+"# Needs version 3.x or greater of Bash to run (because of =~ operator).\n"
+"# Commented by script author and ABS Guide author.\n"
 msgstr ""
 
 #. type: Plain text
@@ -81,7 +85,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:42
-msgid "echo; echo \"IP Address is: \"$IPADDR\"\"; echo"
+#, no-wrap
+msgid "echo; echo \"IP Address is: \"$IPADDR\"\"; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -148,15 +153,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:85
-msgid "# ======================== Main body of script ========================"
+#, no-wrap
+msgid "# ======================== Main body of script ========================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:89
+#, no-wrap
 msgid ""
-"AFRINICquery() { # Define the function that queries AFRINIC. Echo a "
-"notification to the #+ screen, and then run the actual query, redirecting "
-"output to $OUTFILE."
+"AFRINICquery() {\n"
+"#  Define the function that queries AFRINIC. Echo a notification to the\n"
+"#+ screen, and then run the actual query, redirecting output to $OUTFILE.\n"
 msgstr ""
 
 #. type: Plain text
@@ -204,15 +211,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:127
+#, no-wrap
 msgid ""
-"# Just about every country has its own internet registrar.  # I don't "
-"normally bother consulting them, because the regional registry #+ usually "
-"supplies sufficient information.  # There are a few exceptions, where the "
-"regional registry simply #+ refers to the national registry for direct "
-"data.  # These are Japan and South Korea in APNIC, and Brasil in LACNIC.  # "
-"The following if statement checks $OUTFILE (whois.txt) for the presence #+ "
-"of \"KR\" (South Korea) or \"JP\" (Japan) in the country field.  # If either "
-"is found, the query is re-run against the appropriate #+ national registry."
+"#  Just  about  every  country has its own internet registrar.\n"
+"#  I don't normally bother consulting them, because the regional registry\n"
+"#+ usually supplies sufficient information.\n"
+"#  There are a few exceptions, where the regional registry simply\n"
+"#+ refers to the national registry for direct data.\n"
+"#  These are Japan and South Korea in APNIC, and Brasil in LACNIC.\n"
+"#  The following if statement checks $OUTFILE (whois.txt) for the presence\n"
+"#+ of \"KR\" (South Korea) or \"JP\" (Japan) in the country field.\n"
+"#  If either is found, the query is re-run against the appropriate\n"
+"#+ national registry.\n"
 msgstr ""
 
 #. type: Plain text
@@ -291,10 +301,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:178
+#, no-wrap
 msgid ""
-"# The following if statement checks $OUTFILE (whois.txt) for #+ the presence "
-"of \"BR\" (Brasil) in the country field.  # If it is found, the query is "
-"re-run against whois.registro.br."
+"#  The  following if statement checks $OUTFILE (whois.txt) for\n"
+"#+ the presence of \"BR\" (Brasil) in the country field.\n"
+"#  If it is found, the query is re-run against whois.registro.br.\n"
 msgstr ""
 
 #. type: Plain text
@@ -321,10 +332,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:195
+#, no-wrap
 msgid ""
-"# Initialize a few variables.  # * slash8 is the most significant octet # * "
-"slash16 consists of the two most significant octets # * octet2 is the second "
-"most significant octet"
+"#  Initialize a few variables.\n"
+"#  * slash8 is the most significant octet\n"
+"#  * slash16 consists of the two most significant octets\n"
+"#  * octet2 is the second most significant octet\n"
 msgstr ""
 
 #. type: Plain text
@@ -354,9 +367,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:222
+#, no-wrap
 msgid ""
-"# Check for various odds and ends of reserved space.  # There is no point in "
-"querying for those addresses."
+"#  Check for various odds and ends of reserved space.\n"
+"#  There is no point in querying for those addresses.\n"
 msgstr ""
 
 #. type: Plain text
@@ -392,10 +406,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:247
+#, no-wrap
 msgid ""
-"# If we got this far without making a decision, query ARIN.  # If a "
-"reference is found in $OUTFILE to APNIC, AFRINIC, LACNIC, or RIPE, #+ query "
-"the appropriate whois server."
+"#  If we got this far without making a decision, query ARIN.\n"
+"#  If a reference is found in $OUTFILE to APNIC, AFRINIC, LACNIC, or RIPE,\n"
+"#+ query the appropriate whois server.\n"
 msgstr ""
 
 #. type: Plain text
@@ -428,26 +443,34 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:268
+#, no-wrap
 msgid ""
-"# We've now finished the querying.  # Echo a copy of the final result to the "
-"screen."
+"#  We've  now  finished  the querying.\n"
+"#  Echo a copy of the final result to the screen.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:271
-msgid "cat $OUTFILE # Or \"less $OUTFILE\" . . ."
+#, no-wrap
+msgid ""
+"cat $OUTFILE\n"
+"# Or \"less $OUTFILE\" . . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:274
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/whx.sh:280
+#, no-wrap
 msgid ""
-"#@ ABS Guide author comments: #@ Nothing fancy here, but still a very useful "
-"tool for hunting spammers.  #@ Sure, the script can be cleaned up some, and "
-"it's still a bit buggy, #@+ (exercise for reader), but all the same, it's a "
-"nice piece of coding #@+ by Walter Dnes.  #@ Thank you!"
+"#@  ABS Guide author comments:\n"
+"#@  Nothing fancy here, but still a very useful tool for hunting spammers.\n"
+"#@  Sure, the script can be cleaned up some, and it's still a bit buggy,\n"
+"#@+ (exercise for reader), but all the same, it's a nice piece of coding\n"
+"#@+ by Walter Dnes.\n"
+"#@  Thank you!\n"
 msgstr ""

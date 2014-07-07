@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # horserace.sh: Very simple horserace simulation.  # Author: "
-"Stefano Palmeri # Used with permission."
+"#!/bin/bash\n"
+"# horserace.sh: Very simple horserace simulation.\n"
+"# Author: Stefano Palmeri\n"
+"# Used with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,7 +58,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:32
-msgid "E_RUNERR=65"
+#, no-wrap
+msgid "E_RUNERR=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -77,34 +81,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:49
+#, no-wrap
 msgid ""
-"# Set the following variable to slow down script execution.  # It will be "
-"passed as the argument for usleep (man usleep)  #+ and is expressed in "
-"microseconds (500000 = half a second).  USLEEP_ARG=0"
+"#  Set the following variable to slow down script execution.\n"
+"#  It will be passed as the argument for usleep (man usleep)  \n"
+"#+ and is expressed in microseconds (500000 = half a second).\n"
+"USLEEP_ARG=0  \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:55
+#, no-wrap
 msgid ""
-"# Clean up the temp directory, restore terminal cursor and #+ terminal "
-"colors -- if script interrupted by Ctl-C.  trap 'echo -en \"\\E[?25h\"; echo "
-"-en \"\\E[0m\"; stty echo;\\ tput cup 20 0; rm -fr $HORSE_RACE_TMP_DIR' TERM "
-"EXIT # See the chapter on debugging for an explanation of 'trap.'"
+"#  Clean up the temp directory, restore terminal cursor and \n"
+"#+ terminal colors -- if script interrupted by Ctl-C.\n"
+"trap 'echo -en \"\\E[?25h\"; echo -en \"\\E[0m\"; stty echo;\\\n"
+"tput cup 20 0; rm -fr  $HORSE_RACE_TMP_DIR'  TERM EXIT\n"
+"#  See the chapter on debugging for an explanation of 'trap.'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:59
+#, no-wrap
 msgid ""
-"# Set a unique (paranoid) name for the temp directory the script needs.  "
-"HORSE_RACE_TMP_DIR=$HOME/.horserace-`date +%s`-`head -c10 /dev/urandom \\ | "
-"md5sum | head -c30`"
+"# Set a unique (paranoid) name for the temp directory the script needs.\n"
+"HORSE_RACE_TMP_DIR=$HOME/.horserace-`date +%s`-`head -c10 /dev/urandom \\\n"
+"| md5sum | head -c30`\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:63
+#, no-wrap
 msgid ""
-"# Create the temp directory and move right in.  mkdir $HORSE_RACE_TMP_DIR cd "
-"$HORSE_RACE_TMP_DIR"
+"# Create the temp directory and move right in.\n"
+"mkdir $HORSE_RACE_TMP_DIR\n"
+"cd $HORSE_RACE_TMP_DIR\n"
 msgstr ""
 
 #. type: Plain text
@@ -147,9 +158,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:92
+#, no-wrap
 msgid ""
-"# Define current terminal dimension.  N_COLS=`tput cols` N_LINES=`tput "
-"lines`"
+"# Define current terminal dimension.\n"
+"N_COLS=`tput cols`\n"
+"N_LINES=`tput lines`\n"
 msgstr ""
 
 #. type: Plain text
@@ -166,29 +179,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:102
-msgid "# Start drawing the race field."
+#, no-wrap
+msgid "# Start drawing the race field.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:105
+#, no-wrap
 msgid ""
-"# Need a string of 80 chars. See below.  BLANK80=`seq -s \"\" 100 | head "
-"-c80`"
+"# Need a string of 80 chars. See below.\n"
+"BLANK80=`seq -s \"\" 100 | head -c80`\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:107
-msgid "clear"
+#, no-wrap
+msgid "clear\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:110 abs-guide/horserace.sh:172
-msgid "# Set foreground and background colors to white.  echo -ne '\\E[37;47m'"
+#, no-wrap
+msgid ""
+"# Set foreground and background colors to white.\n"
+"echo -ne '\\E[37;47m'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:113
-msgid "# Move the cursor on the upper left angle of the terminal.  tput cup 0 0"
+#, no-wrap
+msgid ""
+"# Move the cursor on the upper left angle of the terminal.\n"
+"tput cup 0 0 \n"
 msgstr ""
 
 #. type: Plain text
@@ -203,7 +225,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:121
-msgid "# Sets foreground color to black.  echo -ne '\\E[30m'"
+#, no-wrap
+msgid ""
+"# Sets foreground color to black. \n"
+"echo -ne '\\E[30m'\n"
 msgstr ""
 
 #. type: Plain text
@@ -224,27 +249,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:135
-msgid "# Set foreground color to red.  echo -ne '\\E[31m'"
+#, no-wrap
+msgid ""
+"# Set foreground color to red. \n"
+"echo -ne '\\E[31m'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:147
+#, no-wrap
 msgid ""
-"# Some ASCII art.  move_and_echo 1 8 \"..@@@..@@@@@...@@@@@.@...@..@@@@...\" "
-"move_and_echo 2 8 \".@...@...@.......@...@...@.@.......\" move_and_echo 3 8 "
-"\".@@@@@...@.......@...@@@@@.@@@@....\" move_and_echo 4 8 "
-"\".@...@...@.......@...@...@.@.......\" move_and_echo 5 8 "
-"\".@...@...@.......@...@...@..@@@@...\" move_and_echo 1 43 "
-"\"@@@@...@@@...@@@@..@@@@..@@@@.\" move_and_echo 2 43 "
-"\"@...@.@...@.@.....@.....@.....\" move_and_echo 3 43 "
-"\"@@@@..@@@@@.@.....@@@@...@@@..\" move_and_echo 4 43 "
-"\"@..@..@...@.@.....@.........@.\" move_and_echo 5 43 "
-"\"@...@.@...@..@@@@..@@@@.@@@@..\""
+"# Some ASCII art.\n"
+"move_and_echo 1 8 \"..@@@..@@@@@...@@@@@.@...@..@@@@...\"\n"
+"move_and_echo 2 8 \".@...@...@.......@...@...@.@.......\"\n"
+"move_and_echo 3 8 \".@@@@@...@.......@...@@@@@.@@@@....\"\n"
+"move_and_echo 4 8 \".@...@...@.......@...@...@.@.......\"\n"
+"move_and_echo 5 8 \".@...@...@.......@...@...@..@@@@...\"\n"
+"move_and_echo 1 43 \"@@@@...@@@...@@@@..@@@@..@@@@.\"\n"
+"move_and_echo 2 43 \"@...@.@...@.@.....@.....@.....\"\n"
+"move_and_echo 3 43 \"@@@@..@@@@@.@.....@@@@...@@@..\"\n"
+"move_and_echo 4 43 \"@..@..@...@.@.....@.........@.\"\n"
+"move_and_echo 5 43 \"@...@.@...@..@@@@..@@@@.@@@@..\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:151
-msgid "# Set foreground and background colors to green.  echo -ne '\\E[32;42m'"
+#, no-wrap
+msgid ""
+"# Set foreground and background colors to green.\n"
+"echo -ne '\\E[32;42m'\n"
 msgstr ""
 
 #. type: Plain text
@@ -260,21 +293,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:161
-msgid "# Set foreground color to black.  echo -ne '\\E[30m' tput cup 5 0"
+#, no-wrap
+msgid ""
+"# Set foreground color to black. \n"
+"echo -ne '\\E[30m'\n"
+"tput cup 5 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:165
+#, no-wrap
 msgid ""
-"# Draw the fences.  echo \"++++++++++++++++++++++++++++++++++++++\\ "
-"++++++++++++++++++++++++++++++++++++++++++\""
+"# Draw the fences. \n"
+"echo \"++++++++++++++++++++++++++++++++++++++\\\n"
+"++++++++++++++++++++++++++++++++++++++++++\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:169
+#, no-wrap
 msgid ""
-"tput cup 15 0 echo \"++++++++++++++++++++++++++++++++++++++\\ "
-"++++++++++++++++++++++++++++++++++++++++++\""
+"tput cup 15 0\n"
+"echo \"++++++++++++++++++++++++++++++++++++++\\\n"
+"++++++++++++++++++++++++++++++++++++++++++\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -289,7 +330,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:180 abs-guide/horserace.sh:372
-msgid "# Set foreground color to black.  echo -ne '\\E[30m'"
+#, no-wrap
+msgid ""
+"# Set foreground color to black.\n"
+"echo -ne '\\E[30m'\n"
 msgstr ""
 
 #. type: Plain text
@@ -304,7 +348,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:188
-msgid "# Set the first type of \"horse\" the script will draw.  HORSE_TYPE=2"
+#, no-wrap
+msgid ""
+"# Set the first type of \"horse\" the script will draw.\n"
+"HORSE_TYPE=2\n"
 msgstr ""
 
 #. type: Plain text
@@ -356,8 +403,9 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/horserace.sh:229 abs-guide/horserace.sh:350
-msgid "done"
+#: abs-guide/horserace.sh:229
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
@@ -390,44 +438,66 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:250
-msgid "print_odds"
+#, no-wrap
+msgid "print_odds\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:257
+#, no-wrap
 msgid ""
-"echo -ne '\\E[47m' # Wait for a enter key press to start the race.  # The "
-"escape sequence '\\E[?25l' disables the cursor.  tput cup 17 0 echo -e "
-"'\\E[?25l'Press [enter] key to start the race...  read -s"
+"echo -ne '\\E[47m'\n"
+"# Wait for a enter key press to start the race.\n"
+"# The escape sequence '\\E[?25l' disables the cursor.\n"
+"tput cup 17 0\n"
+"echo -e '\\E[?25l'Press [enter] key to start the race...\n"
+"read -s\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:262
+#, no-wrap
 msgid ""
-"# Disable normal echoing in the terminal.  # This avoids key presses that "
-"might \"contaminate\" the screen #+ during the race.  stty -echo"
+"#  Disable normal echoing in the terminal.\n"
+"#  This avoids key presses that might \"contaminate\" the screen\n"
+"#+ during the race.  \n"
+"stty -echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:265
-msgid "# -------------------------------------------------------- # Start the race."
+#, no-wrap
+msgid ""
+"# --------------------------------------------------------\n"
+"# Start the race.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:272
+#, no-wrap
 msgid ""
-"draw_horses echo -ne '\\E[37;47m' move_and_echo 18 1 $BLANK80 echo -ne "
-"'\\E[30m' move_and_echo 18 1 Starting...  sleep 1"
+"draw_horses\n"
+"echo -ne '\\E[37;47m'\n"
+"move_and_echo 18 1 $BLANK80\n"
+"echo -ne '\\E[30m'\n"
+"move_and_echo 18 1 Starting...\n"
+"sleep 1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:275
-msgid "# Set the column of the finish line.  WINNING_POS=74"
+#, no-wrap
+msgid ""
+"# Set the column of the finish line.\n"
+"WINNING_POS=74\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:278
-msgid "# Define the time the race started.  START_TIME=`date +%s`"
+#, no-wrap
+msgid ""
+"# Define the time the race started.\n"
+"START_TIME=`date +%s`\n"
 msgstr ""
 
 #. type: Plain text
@@ -440,7 +510,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:283
-msgid "while [ $COL -lt $WINNING_POS ]; do"
+#, no-wrap
+msgid "while [ $COL -lt $WINNING_POS ]; do\n"
 msgstr ""
 
 #. type: Plain text
@@ -564,65 +635,99 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#: abs-guide/horserace.sh:350
+#, no-wrap
+msgid "done  \n"
+msgstr ""
+
+#. type: Plain text
 #: abs-guide/horserace.sh:353
-msgid "# Define the time the race finished.  FINISH_TIME=`date +%s`"
+#, no-wrap
+msgid ""
+"# Define the time the race finished.\n"
+"FINISH_TIME=`date +%s`\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:357
+#, no-wrap
 msgid ""
-"# Set background color to green and enable blinking text.  echo -ne "
-"'\\E[30;42m' echo -en '\\E[5m'"
+"# Set background color to green and enable blinking text.\n"
+"echo -ne '\\E[30;42m'\n"
+"echo -en '\\E[5m'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:362
+#, no-wrap
 msgid ""
-"# Make the winning horse blink.  tput cup `expr $MOVE_HORSE + 5` \\ `cat "
-"horse_${MOVE_HORSE}_position | head -n 1` $DRAW_HORSE"
+"# Make the winning horse blink.\n"
+"tput cup `expr $MOVE_HORSE + 5` \\\n"
+"`cat  horse_${MOVE_HORSE}_position | head -n 1`\n"
+"$DRAW_HORSE\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:365
-msgid "# Disable blinking text.  echo -en '\\E[25m'"
+#, no-wrap
+msgid ""
+"# Disable blinking text.\n"
+"echo -en '\\E[25m'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:369
+#, no-wrap
 msgid ""
-"# Set foreground and background color to white.  echo -ne '\\E[37;47m' "
-"move_and_echo 18 1 $BLANK80"
+"# Set foreground and background color to white.\n"
+"echo -ne '\\E[37;47m'\n"
+"move_and_echo 18 1 $BLANK80\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:377
+#, no-wrap
 msgid ""
-"# Make winner blink.  tput cup 17 0 echo -e \"\\E[5mWINNER: "
-"$MOVE_HORSE\\E[25m\"\" Odds: `cat odds_${MOVE_HORSE}`\"\\ \" Race time: "
-"`expr $FINISH_TIME - $START_TIME` secs\""
+"# Make winner blink.\n"
+"tput cup 17 0\n"
+"echo -e \"\\E[5mWINNER: $MOVE_HORSE\\E[25m\"\"  Odds: `cat "
+"odds_${MOVE_HORSE}`\"\\\n"
+"\"  Race time: `expr $FINISH_TIME - $START_TIME` secs\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:381
-msgid "# Restore cursor and old colors.  echo -en \"\\E[?25h\" echo -en \"\\E[0m\""
+#, no-wrap
+msgid ""
+"# Restore cursor and old colors.\n"
+"echo -en \"\\E[?25h\"\n"
+"echo -en \"\\E[0m\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:384
-msgid "# Restore echoing.  stty echo"
+#, no-wrap
+msgid ""
+"# Restore echoing.\n"
+"stty echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:387
-msgid "# Remove race temp directory.  rm -rf $HORSE_RACE_TMP_DIR"
+#, no-wrap
+msgid ""
+"# Remove race temp directory.\n"
+"rm -rf $HORSE_RACE_TMP_DIR\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:389
-msgid "tput cup 19 0"
+#, no-wrap
+msgid "tput cup 19 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/horserace.sh:390
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:3
-msgid "#!/bin/bash # redir2.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# redir2.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -37,12 +40,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:14
-msgid "count=0"
+#, no-wrap
+msgid "count=0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:16
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -60,29 +65,36 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:26
-msgid "echo; echo \"$count names read\"; echo"
+#, no-wrap
+msgid "echo; echo \"$count names read\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:28
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:35
+#, no-wrap
 msgid ""
-"# Note that in some older shell scripting languages, #+ the redirected loop "
-"would run as a subshell.  # Therefore, $count would return 0, the "
-"initialized value outside the loop.  # Bash and ksh avoid starting a "
-"subshell *whenever possible*, #+ so that this script, for example, runs "
-"correctly.  # (Thanks to Heiner Steven for pointing this out.)"
+"#  Note that in some older shell scripting languages,\n"
+"#+ the redirected loop would run as a subshell.\n"
+"#  Therefore, $count would return 0, the initialized value outside the "
+"loop.\n"
+"#  Bash and ksh avoid starting a subshell *whenever possible*,\n"
+"#+ so that this script, for example, runs correctly.\n"
+"#  (Thanks to Heiner Steven for pointing this out.)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:39
+#, no-wrap
 msgid ""
-"# However . . .  # Bash *can* sometimes start a subshell in a PIPED "
-"\"while-read\" loop, #+ as distinct from a REDIRECTED \"while\" loop."
+"#  However . . .\n"
+"#  Bash *can* sometimes start a subshell in a PIPED \"while-read\" loop,\n"
+"#+ as distinct from a REDIRECTED \"while\" loop.\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,8 +111,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2.sh:49
+#, no-wrap
 msgid ""
-"# Thanks, Bruno de Oliveira Schneider, for demonstrating this #+ with the "
-"above snippet of code.  # And, thanks, Brian Onn, for correcting an "
-"annotation error."
+"#  Thanks, Bruno de Oliveira Schneider, for demonstrating this\n"
+"#+ with the above snippet of code.\n"
+"#  And, thanks, Brian Onn, for correcting an annotation error.\n"
 msgstr ""

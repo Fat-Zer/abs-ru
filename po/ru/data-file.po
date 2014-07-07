@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/data-file:4
+#, no-wrap
 msgid ""
-"# This is a data file loaded by a script.  # Files of this type may contain "
-"variables, functions, etc.  # It loads with a 'source' or '.' command from a "
-"shell script."
+"# This is a data file loaded by a script.\n"
+"# Files of this type may contain variables, functions, etc.\n"
+"# It loads with a 'source' or '.' command from a shell script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/data-file:6
-msgid "# Let's initialize some variables."
+#, no-wrap
+msgid "# Let's initialize some variables.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/data-file:11
-msgid "variable1=23 variable2=474 variable3=5 variable4=97"
+#, no-wrap
+msgid ""
+"variable1=23\n"
+"variable2=474\n"
+"variable3=5\n"
+"variable4=97\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/data-file:14
+#, no-wrap
 msgid ""
-"message1=\"Greetings from *** line $LINENO *** of the data file!\" "
-"message2=\"Enough for now. Goodbye.\""
+"message1=\"Greetings from *** line $LINENO *** of the data file!\"\n"
+"message2=\"Enough for now. Goodbye.\"\n"
 msgstr ""
 
 #. type: Plain text

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # logevents.sh # Author: Stephane Chazelas.  # Used in ABS Guide "
-"with permission."
+"#!/bin/bash\n"
+"# logevents.sh\n"
+"# Author: Stephane Chazelas.\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:8
+#, no-wrap
 msgid ""
-"# Event logging to a file.  # Must be run as root (for write access in "
-"/var/log)."
+"# Event logging to a file.\n"
+"# Must be run as root (for write access in /var/log).\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,14 +55,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:23
-msgid "FD_DEBUG1=3 FD_DEBUG2=4 FD_DEBUG3=5"
+#, no-wrap
+msgid ""
+"FD_DEBUG1=3\n"
+"FD_DEBUG2=4\n"
+"FD_DEBUG3=5\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:27
+#, no-wrap
 msgid ""
-"# === Uncomment one of the two lines below to activate script. === # "
-"LOG_EVENTS=1 # LOG_VARS=1"
+"# === Uncomment one of the two lines below to activate script. ===\n"
+"# LOG_EVENTS=1\n"
+"# LOG_VARS=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -115,7 +125,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:62
-msgid "echo \"DEBUG3: beginning\" &gt;&amp;${FD_DEBUG3}"
+#, no-wrap
+msgid "echo \"DEBUG3: beginning\" &gt;&amp;${FD_DEBUG3}\n"
 msgstr ""
 
 #. type: Plain text
@@ -134,12 +145,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:69
+#, no-wrap
 msgid ""
-"echo \"sending mail\" &gt;&amp;${FD_LOGEVENTS} # Writes \"sending mail\" to "
-"file descriptor #7."
+"echo \"sending mail\" &gt;&amp;${FD_LOGEVENTS}\n"
+"# Writes \"sending mail\" to file descriptor #7.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/logevents.sh:71
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

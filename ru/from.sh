@@ -1,7 +1,9 @@
-#!/bin/bash # from.sh
+#!/bin/bash
+# from.sh
 
-# Emulates the useful 'from' utility in Solaris, BSD, etc.  # Echoes the
-"From" header line in all messages #+ in your e-mail directory.
+#  Emulates the useful 'from' utility in Solaris, BSD, etc.
+#  Echoes the "From" header line in all messages
+#+ in your e-mail directory.
 
 
 MAILDIR=~/mail/*               #  No quoting of variable. Why?
@@ -19,5 +21,5 @@ done
 
 exit $?
 
-# You might wish to pipe the output of this script to 'more' #+ or redirect
-it to a file . . .
+#  You might wish to pipe the output of this script to 'more'
+#+ or redirect it to a file . . .

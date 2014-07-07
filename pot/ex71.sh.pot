@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,7 +53,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71.sh:16
-msgid "End-of-message"
+#, no-wrap
+msgid "End-of-message\n"
 msgstr ""
 
 #. type: Plain text
@@ -67,23 +69,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71.sh:23
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71.sh:27
+#, no-wrap
 msgid ""
-"#-------------------------------------------- # Code below disabled, due to "
-"\"exit 0\" above."
+"#--------------------------------------------\n"
+"# Code below disabled, due to \"exit 0\" above.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex71.sh:36
+#, no-wrap
 msgid ""
-"# S.C. points out that the following also works.  echo "
-"\"------------------------------------- This is line 1 of the message.  This "
-"is line 2 of the message.  This is line 3 of the message.  This is line 4 of "
-"the message.  This is the last line of the message.  "
-"-------------------------------------\" # However, text may not include "
-"double quotes unless they are escaped."
+"# S.C. points out that the following also works.\n"
+"echo \"-------------------------------------\n"
+"This is line 1 of the message.\n"
+"This is line 2 of the message.\n"
+"This is line 3 of the message.\n"
+"This is line 4 of the message.\n"
+"This is the last line of the message.\n"
+"-------------------------------------\"\n"
+"# However, text may not include double quotes unless they are escaped.\n"
 msgstr ""

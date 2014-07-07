@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # stupid-script-tricks.sh: Don't try this at home, folks.  # "
-"From \"Stupid Script Tricks,\" Volume I."
+"#!/bin/bash\n"
+"# stupid-script-tricks.sh: Don't try this at home, folks.\n"
+"# From \"Stupid Script Tricks,\" Volume I.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:6
-msgid "exit 99 ### Comment out this line if you dare."
+#, no-wrap
+msgid "exit 99  ### Comment out this line if you dare.\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,25 +41,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:13
+#, no-wrap
 msgid ""
-"echo \"string-length of \\$dangerous_variable = ${#dangerous_variable}\" # "
-"string-length of $dangerous_variable = 794151 # (Newer kernels are bigger.)  "
-"# Does not give same count as 'wc -c /boot/vmlinuz'."
+"echo \"string-length of \\$dangerous_variable = ${#dangerous_variable}\"\n"
+"# string-length of $dangerous_variable = 794151\n"
+"# (Newer kernels are bigger.)\n"
+"# Does not give same count as 'wc -c /boot/vmlinuz'.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:16
-msgid "# echo \"$dangerous_variable\" # Don't try this! It would hang the script."
+#, no-wrap
+msgid ""
+"# echo \"$dangerous_variable\"\n"
+"# Don't try this! It would hang the script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:20
+#, no-wrap
 msgid ""
-"# The document author is aware of no useful applications for #+ setting a "
-"variable to the contents of a binary file."
+"#  The document author is aware of no useful applications for\n"
+"#+ setting a variable to the contents of a binary file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stupid-script-tricks.sh:21
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

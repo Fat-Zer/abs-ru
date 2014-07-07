@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:4
-msgid "#!/bin/bash # agram2.sh # Example of nested command substitution."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# agram2.sh\n"
+"# Example of nested command substitution.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:9
+#, no-wrap
 msgid ""
-"# Uses \"anagram\" utility #+ that is part of the author's \"yawl\" word "
-"list package.  # http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz # "
-"http://bash.deta.in/yawl-0.3.2.tar.gz"
+"#  Uses \"anagram\" utility\n"
+"#+ that is part of the author's \"yawl\" word list package.\n"
+"#  http://ibiblio.org/pub/Linux/libs/yawl-0.3.2.tar.gz\n"
+"#  http://bash.deta.in/yawl-0.3.2.tar.gz\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:13
-msgid "E_NOARGS=86 E_BADARG=87 MINLEN=7"
+#, no-wrap
+msgid ""
+"E_NOARGS=86\n"
+"E_BADARG=87\n"
+"MINLEN=7\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,22 +84,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:40
-msgid "# echo \"${Anagrams[*]}\" # To list all the anagrams in a single line . . ."
+#, no-wrap
+msgid ""
+"# echo \"${Anagrams[*]}\"  # To list all the anagrams in a single line "
+". . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:43
+#, no-wrap
 msgid ""
-"# Look ahead to the Arrays chapter for enlightenment on #+ what's going on "
-"here."
+"#  Look ahead to the Arrays chapter for enlightenment on\n"
+"#+ what's going on here.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:45
-msgid "# See also the agram.sh script for an exercise in anagram finding."
+#, no-wrap
+msgid "# See also the agram.sh script for an exercise in anagram finding.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/agram2.sh:46
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

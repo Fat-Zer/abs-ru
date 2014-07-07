@@ -1,9 +1,11 @@
-#!/bin/bash # whx.sh: "whois" spammer lookup # Author: Walter Dnes # Slight
-revisions (first section) by ABS Guide author.  # Used in ABS Guide with
-permission.
+#!/bin/bash
+# whx.sh: "whois" spammer lookup
+# Author: Walter Dnes
+# Slight revisions (first section) by ABS Guide author.
+# Used in ABS Guide with permission.
 
-# Needs version 3.x or greater of Bash to run (because of =~ operator).  #
-Commented by script author and ABS Guide author.
+# Needs version 3.x or greater of Bash to run (because of =~ operator).
+# Commented by script author and ABS Guide author.
 
 
 
@@ -81,9 +83,9 @@ fi
 
 # ======================== Main body of script ========================
 
-AFRINICquery() { # Define the function that queries AFRINIC. Echo a
-notification to the #+ screen, and then run the actual query, redirecting
-output to $OUTFILE.
+AFRINICquery() {
+#  Define the function that queries AFRINIC. Echo a notification to the
+#+ screen, and then run the actual query, redirecting output to $OUTFILE.
 
   echo "Searching for $IPADDR in whois.afrinic.net"
   whois -h whois.afrinic.net "$IPADDR" > $OUTFILE
@@ -112,14 +114,16 @@ APNICquery() {
   echo "Searching for $IPADDR in whois.apnic.net"
   whois -h whois.apnic.net "$IPADDR" > $OUTFILE
 
-# Just about every country has its own internet registrar.  # I don't
-normally bother consulting them, because the regional registry #+ usually
-supplies sufficient information.  # There are a few exceptions, where the
-regional registry simply #+ refers to the national registry for direct
-data.  # These are Japan and South Korea in APNIC, and Brasil in LACNIC.  #
-The following if statement checks $OUTFILE (whois.txt) for the presence #+
-of "KR" (South Korea) or "JP" (Japan) in the country field.  # If either is
-found, the query is re-run against the appropriate #+ national registry.
+#  Just  about  every  country has its own internet registrar.
+#  I don't normally bother consulting them, because the regional registry
+#+ usually supplies sufficient information.
+#  There are a few exceptions, where the regional registry simply
+#+ refers to the national registry for direct data.
+#  These are Japan and South Korea in APNIC, and Brasil in LACNIC.
+#  The following if statement checks $OUTFILE (whois.txt) for the presence
+#+ of "KR" (South Korea) or "JP" (Japan) in the country field.
+#  If either is found, the query is re-run against the appropriate
+#+ national registry.
 
   if grep -E "^country:[ ]+KR$" "$OUTFILE"
   then
@@ -168,9 +172,9 @@ LACNICquery() {
   echo "Searching for $IPADDR in whois.lacnic.net"
   whois -h whois.lacnic.net "$IPADDR" > $OUTFILE
 
-# The following if statement checks $OUTFILE (whois.txt) for #+ the presence
-of "BR" (Brasil) in the country field.  # If it is found, the query is
-re-run against whois.registro.br.
+#  The  following if statement checks $OUTFILE (whois.txt) for
+#+ the presence of "BR" (Brasil) in the country field.
+#  If it is found, the query is re-run against whois.registro.br.
 
   if grep -E "^country:[ ]+BR$" "$OUTFILE"
   then
@@ -184,9 +188,10 @@ RIPEquery() {
   whois -h whois.ripe.net "$IPADDR" > $OUTFILE
 }
 
-# Initialize a few variables.  # * slash8 is the most significant octet # *
-slash16 consists of the two most significant octets # * octet2 is the second
-most significant octet
+#  Initialize a few variables.
+#  * slash8 is the most significant octet
+#  * slash16 consists of the two most significant octets
+#  * octet2 is the second most significant octet
 
 
 
@@ -212,8 +217,8 @@ octet2=`echo $slash16 | cut -d. -f 2`
   fi
 
 
-# Check for various odds and ends of reserved space.  # There is no point in
-querying for those addresses.
+#  Check for various odds and ends of reserved space.
+#  There is no point in querying for those addresses.
 
 if [ $slash8 == 0 ]; then
   echo $IPADDR is '"This Network"' space\; Not querying
@@ -236,9 +241,9 @@ elif [ $slash8 -ge 202 ] &amp;&amp; [ $slash8 -le 203 ]; then APNICquery "$IPADD
 elif [ $slash8 -ge 210 ] &amp;&amp; [ $slash8 -le 211 ]; then APNICquery "$IPADDR"
 elif [ $slash8 -ge 218 ] &amp;&amp; [ $slash8 -le 223 ]; then APNICquery "$IPADDR"
 
-# If we got this far without making a decision, query ARIN.  # If a
-reference is found in $OUTFILE to APNIC, AFRINIC, LACNIC, or RIPE, #+ query
-the appropriate whois server.
+#  If we got this far without making a decision, query ARIN.
+#  If a reference is found in $OUTFILE to APNIC, AFRINIC, LACNIC, or RIPE,
+#+ query the appropriate whois server.
 
 else
   ARINquery "$IPADDR"
@@ -258,15 +263,18 @@ fi
 #   wget http://logi.cc/nw/whois.php3?ACTION=doQuery&amp;DOMAIN=$IPADDR
 #@  ---------------------------------------------------------------
 
-# We've now finished the querying.  # Echo a copy of the final result to the
-screen.
+#  We've  now  finished  the querying.
+#  Echo a copy of the final result to the screen.
 
-cat $OUTFILE # Or "less $OUTFILE" . . .
+cat $OUTFILE
+# Or "less $OUTFILE" . . .
 
 
 exit 0
 
-#@ ABS Guide author comments: #@ Nothing fancy here, but still a very useful
-tool for hunting spammers.  #@ Sure, the script can be cleaned up some, and
-it's still a bit buggy, #@+ (exercise for reader), but all the same, it's a
-nice piece of coding #@+ by Walter Dnes.  #@ Thank you!
+#@  ABS Guide author comments:
+#@  Nothing fancy here, but still a very useful tool for hunting spammers.
+#@  Sure, the script can be cleaned up some, and it's still a bit buggy,
+#@+ (exercise for reader), but all the same, it's a nice piece of coding
+#@+ by Walter Dnes.
+#@  Thank you!

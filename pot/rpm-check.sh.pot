@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:3
-msgid "#!/bin/bash # rpm-check.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# rpm-check.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:9
+#, no-wrap
 msgid ""
-"# Queries an rpm file for description, listing, #+ and whether it can be "
-"installed.  # Saves output to a file.  # # This script illustrates using a "
-"code block."
+"#  Queries an rpm file for description, listing,\n"
+"#+ and whether it can be installed.\n"
+"#  Saves output to a file.\n"
+"# \n"
+"#  This script illustrates using a code block.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:12
-msgid "SUCCESS=0 E_NOARGS=65"
+#, no-wrap
+msgid ""
+"SUCCESS=0\n"
+"E_NOARGS=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,15 +79,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:38
-msgid "echo \"Results of rpm test in file $1.test\""
+#, no-wrap
+msgid "echo \"Results of rpm test in file $1.test\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:40
-msgid "# See rpm man page for explanation of options."
+#, no-wrap
+msgid "# See rpm man page for explanation of options.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rpm-check.sh:41
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

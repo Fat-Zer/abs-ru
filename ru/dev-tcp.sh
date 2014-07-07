@@ -1,17 +1,21 @@
-#!/bin/bash # dev-tcp.sh: /dev/tcp redirection to check Internet connection.
+#!/bin/bash
+# dev-tcp.sh: /dev/tcp redirection to check Internet connection.
 
-# Script by Troy Engel.  # Used with permission.
+# Script by Troy Engel.
+# Used with permission.
  
 TCP_HOST=news-15.net       # A known spam-friendly ISP.
 TCP_PORT=80                # Port 80 is http.
   
-# Try to connect. (Somewhat similar to a 'ping' . . .)  echo "HEAD /
-HTTP/1.0" >/dev/tcp/${TCP_HOST}/${TCP_PORT} MYEXIT=$?
+# Try to connect. (Somewhat similar to a 'ping' . . .) 
+echo "HEAD / HTTP/1.0" >/dev/tcp/${TCP_HOST}/${TCP_PORT}
+MYEXIT=$?
 
-: &lt;&lt;EXPLANATION If bash was compiled with --enable-net-redirections,
-it has the capability of using a special character device for both TCP and
-UDP redirections. These redirections are used identically as
-STDIN/STDOUT/STDERR. The device entries are 30,36 for /dev/tcp:
+: &lt;&lt;EXPLANATION
+If bash was compiled with --enable-net-redirections, it has the capability of
+using a special character device for both TCP and UDP redirections. These
+redirections are used identically as STDIN/STDOUT/STDERR. The device entries
+are 30,36 for /dev/tcp:
 
   mknod /dev/tcp c 30 36
 

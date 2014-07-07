@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:3
-msgid "#!/bin/bash # sd.sh: Standard Deviation"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# sd.sh: Standard Deviation\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:9
+#, no-wrap
 msgid ""
-"# The Standard Deviation indicates how consistent a set of data is.  # It "
-"shows to what extent the individual data points deviate from the #+ "
-"arithmetic mean, i.e., how much they \"bounce around\" (or cluster).  # It "
-"is essentially the average deviation-distance of the #+ data points from the "
-"mean."
+"#  The Standard Deviation indicates how consistent a set of data is.\n"
+"#  It shows to what extent the individual data points deviate from the\n"
+"#+ arithmetic mean, i.e., how much they \"bounce around\" (or cluster).\n"
+"#  It is essentially the average deviation-distance of the\n"
+"#+ data points from the mean.\n"
 msgstr ""
 
 #. type: Plain text
@@ -173,45 +177,61 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:95
+#, no-wrap
 msgid ""
-"echo echo \"Number of data points in \\\"\"$datafile\"\\\" = $count\" echo "
-"\"Arithmetic mean (average) = $mean\" echo \"Standard Deviation = $std_dev\" "
-"echo # ======================================================= #"
+"echo\n"
+"echo \"Number of data points in \\\"\"$datafile\"\\\" = $count\"\n"
+"echo \"Arithmetic mean (average) = $mean\"\n"
+"echo \"Standard Deviation = $std_dev\"\n"
+"echo\n"
+"# ======================================================= #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:97
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:100
+#, no-wrap
 msgid ""
-"# This script could stand some drastic streamlining, #+ but not at the cost "
-"of reduced legibility, please."
+"#  This script could stand some drastic streamlining,\n"
+"#+ but not at the cost of reduced legibility, please.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:104
+#, no-wrap
 msgid ""
-"# ++++++++++++++++++++++++++++++++++++++++ # # A sample data file "
-"(sample1.dat):"
+"# ++++++++++++++++++++++++++++++++++++++++ #\n"
+"# A sample data file (sample1.dat):\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:110
-msgid "# 18.35 # 19.0 # 18.88 # 18.91 # 18.64"
+#, no-wrap
+msgid ""
+"# 18.35\n"
+"# 19.0\n"
+"# 18.88\n"
+"# 18.91\n"
+"# 18.64\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:113
-msgid "# $ sh sd.sh sample1.dat"
+#, no-wrap
+msgid "# $ sh sd.sh sample1.dat\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sd.sh:117
+#, no-wrap
 msgid ""
-"# Number of data points in \"sample1.dat\" = 5 # Arithmetic mean (average) = "
-"18.756000000 # Standard Deviation = .235338054 # "
-"++++++++++++++++++++++++++++++++++++++++ #"
+"# Number of data points in \"sample1.dat\" = 5\n"
+"# Arithmetic mean (average) = 18.756000000\n"
+"# Standard Deviation = .235338054\n"
+"# ++++++++++++++++++++++++++++++++++++++++ #\n"
 msgstr ""

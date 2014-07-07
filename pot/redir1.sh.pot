@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:3
-msgid "#!/bin/bash # Redirecting stdin using 'exec'."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Redirecting stdin using 'exec'.\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,14 +48,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:18
+#, no-wrap
 msgid ""
-"echo echo \"Following lines read from file.\" echo "
-"\"-------------------------------\" echo $a1 echo $a2"
+"echo\n"
+"echo \"Following lines read from file.\"\n"
+"echo \"-------------------------------\"\n"
+"echo $a1\n"
+"echo $a2\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:20
-msgid "echo; echo; echo"
+#, no-wrap
+msgid "echo; echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,18 +76,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:32
+#, no-wrap
 msgid ""
-"echo -n \"Enter data \" read b1 # Now \"read\" functions as expected, "
-"reading from normal stdin.  echo \"Input read from stdin.\" echo "
-"\"----------------------\" echo \"b1 = $b1\""
+"echo -n \"Enter data  \"\n"
+"read b1  # Now \"read\" functions as expected, reading from normal stdin.\n"
+"echo \"Input read from stdin.\"\n"
+"echo \"----------------------\"\n"
+"echo \"b1 = $b1\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:34
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir1.sh:35
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

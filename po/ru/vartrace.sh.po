@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,54 +18,64 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:5
+#, no-wrap
 msgid ""
-"trap 'echo \"VARIABLE-TRACE> \\$variable = \\\"$variable\\\"\"' DEBUG # "
-"Echoes the value of $variable after every command."
+"trap 'echo \"VARIABLE-TRACE> \\$variable = \\\"$variable\\\"\"' DEBUG\n"
+"# Echoes the value of $variable after every command.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:7
-msgid "variable=29; line=$LINENO"
+#, no-wrap
+msgid "variable=29; line=$LINENO\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:9
-msgid "echo \" Just initialized \\$variable to $variable in line number $line.\""
+#, no-wrap
+msgid "echo \"  Just initialized \\$variable to $variable in line number $line.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:12
+#, no-wrap
 msgid ""
-"let \"variable *= 3\"; line=$LINENO echo \" Just multiplied \\$variable by 3 "
-"in line number $line.\""
+"let \"variable *= 3\"; line=$LINENO\n"
+"echo \"  Just multiplied \\$variable by 3 in line number $line.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:14
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:19
+#, no-wrap
 msgid ""
-"# The \"trap 'command1 . . . command2 . . .' DEBUG\" construct is #+ more "
-"appropriate in the context of a complex script, #+ where inserting multiple "
-"\"echo $variable\" statements might be #+ awkward and time-consuming."
+"#  The \"trap 'command1 . . . command2 . . .' DEBUG\" construct is\n"
+"#+ more appropriate in the context of a complex script,\n"
+"#+ where inserting multiple \"echo $variable\" statements might be\n"
+"#+ awkward and time-consuming.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:21
-msgid "# Thanks, Stephane Chazelas for the pointer."
+#, no-wrap
+msgid "# Thanks, Stephane Chazelas for the pointer.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/vartrace.sh:24
-msgid "Output of script:"
+#, no-wrap
+msgid "Output of script:\n"
 msgstr ""
 
 #. type: Plain text

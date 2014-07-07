@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:4
-msgid "#!/bin/bash # ex40.sh (burn-cd.sh)  # Script to automate burning a CDR."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex40.sh (burn-cd.sh)\n"
+"# Script to automate burning a CDR.\n"
 msgstr ""
 
 #. type: Plain text
@@ -37,17 +41,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:17
+#, no-wrap
 msgid ""
-"# Uses Joerg Schilling's \"cdrecord\" package: # "
-"http://www.fokus.fhg.de/usr/schilling/cdrecord.html"
+"# Uses Joerg Schilling's \"cdrecord\" package:\n"
+"# http://www.fokus.fhg.de/usr/schilling/cdrecord.html\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:21
+#, no-wrap
 msgid ""
-"# If this script invoked as an ordinary user, may need to suid cdrecord #+ "
-"chmod u+s /usr/bin/cdrecord, as root.  # Of course, this creates a security "
-"hole, though a relatively minor one."
+"#  If this script invoked as an ordinary user, may need to suid cdrecord\n"
+"#+ chmod u+s /usr/bin/cdrecord, as root.\n"
+"#  Of course, this creates a security hole, though a relatively minor one.\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,32 +71,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:36
+#, no-wrap
 msgid ""
-"# Create a \"table of contents\" file.  ls -lRF $IMAGE_DIRECTORY > "
-"$IMAGE_DIRECTORY/$CONTENTSFILE # The \"l\" option gives a \"long\" file "
-"listing.  # The \"R\" option makes the listing recursive.  # The \"F\" "
-"option marks the file types (directories get a trailing /).  echo \"Creating "
-"table of contents.\""
+"# Create a \"table of contents\" file.\n"
+"ls -lRF $IMAGE_DIRECTORY > $IMAGE_DIRECTORY/$CONTENTSFILE\n"
+"# The \"l\" option gives a \"long\" file listing.\n"
+"# The \"R\" option makes the listing recursive.\n"
+"# The \"F\" option marks the file types (directories get a trailing /).\n"
+"echo \"Creating table of contents.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:40
+#, no-wrap
 msgid ""
-"# Create an image file preparatory to burning it onto the CDR.  mkisofs -r "
-"-o $IMAGEFILE $IMAGE_DIRECTORY echo \"Creating ISO9660 file system image "
-"($IMAGEFILE).\""
+"# Create an image file preparatory to burning it onto the CDR.\n"
+"mkisofs -r -o $IMAGEFILE $IMAGE_DIRECTORY\n"
+"echo \"Creating ISO9660 file system image ($IMAGEFILE).\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:49
+#, no-wrap
 msgid ""
-"# Burn the CDR.  echo \"Burning the disk.\" echo \"Please be patient, this "
-"will take a while.\" wodim -v -isosize dev=$DEVICE $IMAGEFILE # In newer "
-"Linux distros, the \"wodim\" utility assumes the #+ functionality of "
-"\"cdrecord.\" exitcode=$? echo \"Exit code = $exitcode\""
+"# Burn the CDR.\n"
+"echo \"Burning the disk.\"\n"
+"echo \"Please be patient, this will take a while.\"\n"
+"wodim -v -isosize dev=$DEVICE $IMAGEFILE\n"
+"#  In newer Linux distros, the \"wodim\" utility assumes the\n"
+"#+ functionality of \"cdrecord.\"\n"
+"exitcode=$?\n"
+"echo \"Exit code = $exitcode\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex40.sh:50
-msgid "exit $exitcode"
+#, no-wrap
+msgid "exit $exitcode\n"
 msgstr ""

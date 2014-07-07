@@ -1,8 +1,12 @@
-#!/bin/bash # Cleanup, version 3
+#!/bin/bash
+# Cleanup, version 3
 
-# Warning: # ------- # This script uses quite a number of features that will
-be explained #+ later on.  # By the time you've finished the first half of
-the book, #+ there should be nothing mysterious about it.
+#  Warning:
+#  -------
+#  This script uses quite a number of features that will be explained
+#+ later on.
+#  By the time you've finished the first half of the book,
+#+ there should be nothing mysterious about it.
 
 
 
@@ -68,12 +72,14 @@ tail -n $lines messages > mesg.temp # Save last section of message log file.
 mv mesg.temp messages               # Rename it as system log file.
 
 
-# cat /dev/null > messages #* No longer needed, as the above method is
-safer.
+#  cat /dev/null > messages
+#* No longer needed, as the above method is safer.
 
-cat /dev/null > wtmp # ': > wtmp' and '> wtmp' have the same effect.  echo
-"Log files cleaned up." # Note that there are other log files in /var/log
-not affected #+ by this script.
+cat /dev/null > wtmp  #  ': > wtmp' and '> wtmp'  have the same effect.
+echo "Log files cleaned up."
+#  Note that there are other log files in /var/log not affected
+#+ by this script.
 
-exit 0 # A zero return value from the script upon exit indicates success #+
-to the shell.
+exit 0
+#  A zero return value from the script upon exit indicates success
+#+ to the shell.

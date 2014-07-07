@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:3
-msgid "#!/bin/bash # ifs.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ifs.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:8
-msgid "var1=\"a+b+c\" var2=\"d-e-f\" var3=\"g,h,i\""
+#, no-wrap
+msgid ""
+"var1=\"a+b+c\"\n"
+"var2=\"d-e-f\"\n"
+"var3=\"g,h,i\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,7 +46,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:16 abs-guide/ifs.sh:25 abs-guide/ifs.sh:34 abs-guide/ifs.sh:87
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,12 +88,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:43
-msgid "# ======================================================== #"
+#, no-wrap
+msgid "# ======================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:46
-msgid "# However ...  # $IFS treats whitespace differently than other characters."
+#, no-wrap
+msgid ""
+"# However ...\n"
+"# $IFS treats whitespace differently than other characters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -103,7 +115,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:57
-msgid "echo; echo \"IFS=\\\" \\\"\" echo \"-------\""
+#, no-wrap
+msgid ""
+"echo; echo \"IFS=\\\" \\\"\"\n"
+"echo \"-------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,7 +137,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:69
-msgid "echo; echo \"IFS=:\" echo \"-----\""
+#, no-wrap
+msgid ""
+"echo; echo \"IFS=:\"\n"
+"echo \"-----\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -144,12 +162,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:84
+#, no-wrap
 msgid ""
-"# Note \"empty\" brackets.  # The same thing happens with the \"FS\" field "
-"separator in awk."
+"# Note \"empty\" brackets.\n"
+"# The same thing happens with the \"FS\" field separator in awk.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ifs.sh:88
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

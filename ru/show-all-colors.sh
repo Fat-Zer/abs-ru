@@ -1,10 +1,14 @@
 #!/bin/bash
 
-# show-all-colors.sh # Displays all 256 possible background colors, using
-ANSI escape sequences.  # Author: Chetankumar Phulpagare # Used in ABS Guide
-with permission.
+# show-all-colors.sh
+# Displays all 256 possible background colors, using ANSI escape sequences.
+# Author: Chetankumar Phulpagare
+# Used in ABS Guide with permission.
 
-T1=8 T2=6 T3=36 offset=0
+T1=8
+T2=6
+T3=36
+offset=0
 
 for num1 in {0..7}
 do {

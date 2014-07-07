@@ -1,8 +1,16 @@
-#! /bin/bash # # The Towers Of Hanoi # Bash script # Copyright (C) 2000 Amit
-Singh. All Rights Reserved.  # http://hanoi.kernelthread.com # # Tested
-under Bash version 2.05b.0(13)-release.  # Also works under Bash version
-3.x.  # # Used in "Advanced Bash Scripting Guide" #+ with permission of
-script author.  # Slightly modified and commented by ABS author.
+#! /bin/bash
+#
+# The Towers Of Hanoi
+# Bash script
+# Copyright (C) 2000 Amit Singh. All Rights Reserved.
+# http://hanoi.kernelthread.com
+#
+# Tested under Bash version 2.05b.0(13)-release.
+# Also works under Bash version 3.x.
+#
+#  Used in "Advanced Bash Scripting Guide"
+#+ with permission of script author.
+#  Slightly modified and commented by ABS author.
 
 #=================================================================#
 #  The Tower of Hanoi is a mathematical puzzle attributed to

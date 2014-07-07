@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:3
-msgid "#!/bin/bash # Du.sh: DOS to UNIX text file converter."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Du.sh: DOS to UNIX text file converter.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:5
-msgid "E_WRONGARGS=85"
+#, no-wrap
+msgid "E_WRONGARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,7 +43,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:13
-msgid "NEWFILENAME=$1.unx"
+#, no-wrap
+msgid "NEWFILENAME=$1.unx\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,24 +59,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:21
-msgid "tr -d $CR &lt; $1 &gt; $NEWFILENAME # Delete CR's and write to new file."
+#, no-wrap
+msgid ""
+"tr -d $CR &lt; $1 &gt; $NEWFILENAME\n"
+"# Delete CR's and write to new file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:24
+#, no-wrap
 msgid ""
-"echo \"Original DOS text file is \\\"$1\\\".\" echo \"Converted UNIX text "
-"file is \\\"$NEWFILENAME\\\".\""
+"echo \"Original DOS text file is \\\"$1\\\".\"\n"
+"echo \"Converted UNIX text file is \\\"$NEWFILENAME\\\".\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:26
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/Du.sh:29
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Change the above script to convert from UNIX to "
-"DOS."
+"# Exercise:\n"
+"# --------\n"
+"# Change the above script to convert from UNIX to DOS.\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,59 +18,92 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:5
+#, no-wrap
 msgid ""
-"# Demonstrating some of the uses of 'expr' # "
-"======================================="
+"# Demonstrating some of the uses of 'expr'\n"
+"# =======================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:7 abs-guide/ex45.sh:103
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:10
-msgid "# Arithmetic Operators # ---------- ---------"
+#, no-wrap
+msgid ""
+"# Arithmetic Operators\n"
+"# ---------- ---------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:15
-msgid "echo \"Arithmetic Operators\" echo a=`expr 5 + 3` echo \"5 + 3 = $a\""
+#, no-wrap
+msgid ""
+"echo \"Arithmetic Operators\"\n"
+"echo\n"
+"a=`expr 5 + 3`\n"
+"echo \"5 + 3 = $a\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:20
-msgid "a=`expr $a + 1` echo echo \"a + 1 = $a\" echo \"(incrementing a variable)\""
+#, no-wrap
+msgid ""
+"a=`expr $a + 1`\n"
+"echo\n"
+"echo \"a + 1 = $a\"\n"
+"echo \"(incrementing a variable)\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:25
-msgid "a=`expr 5 % 3` # modulo echo echo \"5 mod 3 = $a\""
+#, no-wrap
+msgid ""
+"a=`expr 5 % 3`\n"
+"# modulo\n"
+"echo\n"
+"echo \"5 mod 3 = $a\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:28 abs-guide/ex45.sh:65
-msgid "echo echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:31
-msgid "# Logical Operators # ------- ---------"
+#, no-wrap
+msgid ""
+"# Logical Operators\n"
+"# ------- ---------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:34
-msgid "# Returns 1 if true, 0 if false, #+ opposite of normal Bash convention."
+#, no-wrap
+msgid ""
+"#  Returns 1 if true, 0 if false,\n"
+"#+ opposite of normal Bash convention.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:37
-msgid "echo \"Logical Operators\" echo"
+#, no-wrap
+msgid ""
+"echo \"Logical Operators\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -119,24 +152,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:70
-msgid "# String Operators # ------ ---------"
+#, no-wrap
+msgid ""
+"# String Operators\n"
+"# ------ ---------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:73
-msgid "echo \"String Operators\" echo"
+#, no-wrap
+msgid ""
+"echo \"String Operators\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:76
-msgid "a=1234zipper43231 echo \"The string being operated upon is \\\"$a\\\".\""
+#, no-wrap
+msgid ""
+"a=1234zipper43231\n"
+"echo \"The string being operated upon is \\\"$a\\\".\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:80
+#, no-wrap
 msgid ""
-"# length: length of string b=`expr length $a` echo \"Length of \\\"$a\\\" is "
-"$b.\""
+"# length: length of string\n"
+"b=`expr length $a`\n"
+"echo \"Length of \\\"$a\\\" is $b.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -152,10 +196,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:90
+#, no-wrap
 msgid ""
-"# substr: extract substring, starting position &amp; length specified "
-"b=`expr substr $a 2 6` echo \"Substring of \\\"$a\\\", starting at position "
-"2,\\ and 6 chars long is \\\"$b\\\".\""
+"# substr: extract substring, starting position &amp; length specified\n"
+"b=`expr substr $a 2 6`\n"
+"echo \"Substring of \\\"$a\\\", starting at position 2,\\\n"
+"and 6 chars long is \\\"$b\\\".\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -176,5 +222,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45.sh:104
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

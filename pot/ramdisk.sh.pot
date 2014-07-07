@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:3
-msgid "#!/bin/bash # ramdisk.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ramdisk.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,35 +102,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:48
+#, no-wrap
 msgid ""
-"echo \"\\\"$MOUNTPT\\\" now available for use.\" # The ramdisk is now "
-"accessible for storing files, even by an ordinary user."
+"echo \"\\\"$MOUNTPT\\\" now available for use.\"\n"
+"# The ramdisk is now accessible for storing files, even by an ordinary "
+"user.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:52
+#, no-wrap
 msgid ""
-"# Caution, the ramdisk is volatile, and its contents will disappear #+ on "
-"reboot or power loss.  # Copy anything you want saved to a regular "
-"directory."
+"#  Caution, the ramdisk is volatile, and its contents will disappear\n"
+"#+ on reboot or power loss.\n"
+"#  Copy anything you want saved to a regular directory.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:55
+#, no-wrap
 msgid ""
-"# After reboot, run this script to again set up ramdisk.  # Remounting "
-"/mnt/ramdisk without the other steps will not work."
+"# After reboot, run this script to again set up ramdisk.\n"
+"# Remounting /mnt/ramdisk without the other steps will not work.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:59
+#, no-wrap
 msgid ""
-"# Suitably modified, this script can by invoked in /etc/rc.d/rc.local, #+ to "
-"set up ramdisk automatically at bootup.  # That may be appropriate on, for "
-"example, a database server."
+"#  Suitably modified, this script can by invoked in /etc/rc.d/rc.local,\n"
+"#+ to set up ramdisk automatically at bootup.\n"
+"#  That may be appropriate on, for example, a database server.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ramdisk.sh:60
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

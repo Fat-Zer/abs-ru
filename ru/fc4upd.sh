@@ -1,25 +1,31 @@
-#!/bin/bash # fc4upd.sh
+#!/bin/bash
+# fc4upd.sh
 
-# Script author: Frank Wang.  # Slight stylistic modifications by ABS Guide
-author.  # Used in ABS Guide with permission.
+# Script author: Frank Wang.
+# Slight stylistic modifications by ABS Guide author.
+# Used in ABS Guide with permission.
 
 
-# Download Fedora Core 4 update from mirror site using rsync.  # Should also
-work for newer Fedora Cores -- 5, 6, . . .  # Only download latest package
-if multiple versions exist, #+ to save space.
+#  Download Fedora Core 4 update from mirror site using rsync. 
+#  Should also work for newer Fedora Cores -- 5, 6, . . .
+#  Only download latest package if multiple versions exist,
+#+ to save space.
 
-URL=rsync://distro.ibiblio.org/fedora-linux-core/updates/ #
-URL=rsync://ftp.kddilabs.jp/fedora/core/updates/ #
-URL=rsync://rsync.planetmirror.com/fedora-linux-core/updates/
+URL=rsync://distro.ibiblio.org/fedora-linux-core/updates/
+# URL=rsync://ftp.kddilabs.jp/fedora/core/updates/
+# URL=rsync://rsync.planetmirror.com/fedora-linux-core/updates/
 
-DEST=${1:-/var/www/html/fedora/updates/} LOG=/tmp/repo-update-$(/bin/date
-+%Y-%m-%d).txt PID_FILE=/var/run/${0##*/}.pid
+DEST=${1:-/var/www/html/fedora/updates/}
+LOG=/tmp/repo-update-$(/bin/date +%Y-%m-%d).txt
+PID_FILE=/var/run/${0##*/}.pid
 
 E_RETURN=85        # Something unexpected happened.
 
 
-# General rsync options # -r: recursive download # -t: reserve time # -v:
-verbose
+# General rsync options
+# -r: recursive download
+# -t: reserve time
+# -v: verbose
 
 OPTS="-rtv --delete-excluded --delete-after --partial"
 
@@ -166,7 +172,8 @@ get_list () {
     echo "done"; echo
 }
 
-# Real rsync download part.  get_file () {
+# Real rsync download part.
+get_file () {
 
     echo "Downloading..."
     /bin/nice /usr/bin/rsync \
@@ -190,7 +197,15 @@ get_list () {
     return $RET
 }
 
-# ------- # Main init check_pid set_range get_list get_file RET=$? # -------
+# -------
+# Main
+init
+check_pid
+set_range
+get_list
+get_file
+RET=$?
+# -------
 
 if [ "$RET" -eq 0 ]; then
     /usr/bin/logger -t ${0##*/} "Fedora update mirrored successfully."

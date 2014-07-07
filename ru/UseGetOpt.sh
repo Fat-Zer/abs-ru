@@ -1,4 +1,5 @@
-#!/bin/bash # UseGetOpt.sh
+#!/bin/bash
+# UseGetOpt.sh
 
 # Author: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;
 
@@ -100,20 +101,23 @@ DoSomething () {
   
 }
 
-################################### M A I N ######################## # If
-you remove "function UseGetOpt () {" and corresponding "}", #+ you can
-uncomment the "exit 0" line below, and invoke this script #+ with the
-various options from the command-line.
-#------------------------------------------------------------------- # exit
-0
+################################### M A I N ########################
+#  If you remove "function UseGetOpt () {" and corresponding "}",
+#+ you can uncomment the "exit 0" line below, and invoke this script
+#+ with the various options from the command-line.
+#-------------------------------------------------------------------
+# exit 0
 
-echo "Test 1" UseGetOpt -f myfile one "two three" four
+echo "Test 1"
+UseGetOpt -f myfile one "two three" four
 
-echo;echo "Test 2" UseGetOpt -h
+echo;echo "Test 2"
+UseGetOpt -h
 
-echo;echo "Test 3 - Short Options" UseGetOpt -adltf myfile anotherfile
+echo;echo "Test 3 - Short Options"
+UseGetOpt -adltf myfile  anotherfile
 
-echo;echo "Test 4 - Long Options" UseGetOpt --aoption --debug --log --test
---file myfile anotherfile
+echo;echo "Test 4 - Long Options"
+UseGetOpt --aoption --debug --log --test --file myfile anotherfile
 
 exit

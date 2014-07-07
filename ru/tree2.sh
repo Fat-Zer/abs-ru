@@ -1,19 +1,22 @@
-#!/bin/bash # tree2.sh
+#!/bin/bash
+# tree2.sh
 
-# Lightly modified/reformatted by ABS Guide author.  # Included in ABS Guide
-with permission of script author (thanks!).
+# Lightly modified/reformatted by ABS Guide author.
+# Included in ABS Guide with permission of script author (thanks!).
 
-## Recursive file/dirsize checking script, by Patsie ## ## This script
-builds a list of files/directories and their size (du -akx)  ## and
-processes this list to a human readable tree shape ## The 'du -akx' is only
-as good as the permissions the owner has.  ## So preferably run as root* to
-get the best results, or use only on ## directories for which you have read
-permissions. Anything you can't ## read is not in the list.
+## Recursive file/dirsize checking script, by Patsie
+##
+## This script builds a list of files/directories and their size (du -akx)
+## and processes this list to a human readable tree shape
+## The 'du -akx' is only as good as the permissions the owner has.
+## So preferably run as root* to get the best results, or use only on
+## directories for which you have read permissions. Anything you can't
+## read is not in the list.
 
 #* ABS Guide author advises caution when running scripts as root!
 
 
-########## THIS IS CONFIGURABLE ##########
+##########  THIS IS CONFIGURABLE  ##########
 
 TOP=5                   # Top 5 biggest (sub)directories.
 MAXRECURS=5             # Max 5 subdirectories/recursions deep.
@@ -21,7 +24,7 @@ E_BL=80                 # Blank line already returned.
 E_DIR=81                # Directory not specified.
 
 
-########## DON'T CHANGE ANYTHING BELOW THIS LINE ##########
+##########  DON'T CHANGE ANYTHING BELOW THIS LINE  ##########
 
 PID=$$                            # Our own process ID.
 SELF=`basename $0`                # Our own program name.

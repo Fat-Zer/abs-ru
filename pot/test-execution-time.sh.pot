@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-execution-time.sh:6
+#, no-wrap
 msgid ""
-"#!/bin/bash # test-execution-time.sh # Example by Erik Brandsberg, for "
-"testing execution time #+ of certain operations.  # Referenced in the "
-"\"Optimizations\" section of \"Miscellany\" chapter."
+"#!/bin/bash\n"
+"#  test-execution-time.sh\n"
+"#  Example by Erik Brandsberg, for testing execution time\n"
+"#+ of certain operations.\n"
+"#  Referenced in the \"Optimizations\" section of \"Miscellany\" chapter.\n"
 msgstr ""
 
 #. type: Plain text
@@ -61,7 +64,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-execution-time.sh:29
-msgid "echo echo \"Conditional testing tests\""
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Conditional testing tests\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -125,5 +131,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-execution-time.sh:69
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

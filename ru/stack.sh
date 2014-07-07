@@ -1,7 +1,8 @@
-#!/bin/bash # stack.sh: push-down stack simulation
+#!/bin/bash
+# stack.sh: push-down stack simulation
 
-# Similar to the CPU stack, a push-down stack stores data items #+
-sequentially, but releases them in reverse order, last-in first-out.
+#  Similar to the CPU stack, a push-down stack stores data items
+#+ sequentially, but releases them in reverse order, last-in first-out.
 
 
 BP=100            #  Base Pointer of stack array.
@@ -35,7 +36,8 @@ fi
 let "SP -= 1"     # Bump stack pointer.
 stack[$SP]=$1
 
-return }
+return
+}
 
 pop()                    # Pop item off stack.
 {
@@ -63,12 +65,14 @@ echo
 }
 
 
-# ======================================================= # Now, for some
-fun.
+# =======================================================
+# Now, for some fun.
 
 echo
 
-# See if you can pop anything off empty stack.  pop status_report
+# See if you can pop anything off empty stack.
+pop
+status_report
 
 echo
 
@@ -87,8 +91,8 @@ status_report
 pop               # 23
 status_report     # Last-in, first-out!
 
-# Notice how the stack pointer decrements with each push, #+ and increments
-with each pop.
+#  Notice how the stack pointer decrements with each push,
+#+ and increments with each pop.
 
 echo
 
@@ -97,7 +101,8 @@ exit 0
 # =======================================================
 
 
-# Exercises: # ---------
+# Exercises:
+# ---------
 
 # 1)  Modify the "push()" function to permit pushing
 #   + multiple element on the stack with a single function call.

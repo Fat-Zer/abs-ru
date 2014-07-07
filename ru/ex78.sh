@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Indirect variable referencing.  # This has a few of the attributes of
-references in C++.
+# Indirect variable referencing.
+# This has a few of the attributes of references in C++.
 
 
-a=letter_of_alphabet letter_of_alphabet=z
+a=letter_of_alphabet
+letter_of_alphabet=z
 
 echo "a = $a"           # Direct reference.
 
@@ -21,9 +22,10 @@ table_cell_3=387
 echo "Value of t changed to ${!t}"    # 387
 # No 'eval' necessary.
 
-# This is useful for referencing members of an array or table, #+ or for
-simulating a multi-dimensional array.  # An indexing option (analogous to
-pointer arithmetic)  #+ would have been nice. Sigh.
+#  This is useful for referencing members of an array or table,
+#+ or for simulating a multi-dimensional array.
+#  An indexing option (analogous to pointer arithmetic)
+#+ would have been nice. Sigh.
 
 exit 0
 

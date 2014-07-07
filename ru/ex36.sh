@@ -1,9 +1,11 @@
-#!/bin/bash # "Reading" variables.
+#!/bin/bash
+# "Reading" variables.
 
-echo -n "Enter the value of variable 'var1': " # The -n option to echo
-suppresses newline.
+echo -n "Enter the value of variable 'var1': "
+# The -n option to echo suppresses newline.
 
-read var1 # Note no '$' in front of var1, since it is being set.
+read var1
+# Note no '$' in front of var1, since it is being set.
 
 echo "var1 = $var1"
 

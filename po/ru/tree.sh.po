@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:3
-msgid "#!/bin/bash # tree.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# tree.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:11
+#, no-wrap
 msgid ""
-"# Written by Rick Boivie.  # Used with permission.  # This is a revised and "
-"simplified version of a script #+ by Jordi Sanfeliu (the original author), "
-"and patched by Ian Kjos.  # This script replaces the earlier version used in "
-"#+ previous releases of the Advanced Bash Scripting Guide.  # Copyright (c) "
-"2002, by Jordi Sanfeliu, Rick Boivie, and Ian Kjos."
+"#  Written by Rick Boivie.\n"
+"#  Used with permission.\n"
+"#  This is a revised and simplified version of a script\n"
+"#+ by Jordi Sanfeliu (the original author), and patched by Ian Kjos.\n"
+"#  This script replaces the earlier version used in\n"
+"#+ previous releases of the Advanced Bash Scripting Guide.\n"
+"#  Copyright (c) 2002, by Jordi Sanfeliu, Rick Boivie, and Ian Kjos.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:13
-msgid "# ==> Comments added by the author of this document."
+#, no-wrap
+msgid "# ==> Comments added by the author of this document.\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,15 +101,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:58
-msgid "echo \"Initial directory = `pwd`\" numdirs=0"
+#, no-wrap
+msgid ""
+"echo \"Initial directory = `pwd`\"\n"
+"numdirs=0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:61
-msgid "search 0 echo \"Total directories = $numdirs\""
+#, no-wrap
+msgid ""
+"search 0\n"
+"echo \"Total directories = $numdirs\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tree.sh:62
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

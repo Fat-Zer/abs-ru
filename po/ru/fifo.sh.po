@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifo.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # ==> Script by James R. Van Zandt, and used here with his "
-"permission."
+"#!/bin/bash\n"
+"# ==> Script by James R. Van Zandt, and used here with his permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fifo.sh:5
-msgid "# ==> Comments added by author of this document."
+#, no-wrap
+msgid "# ==> Comments added by author of this document.\n"
 msgstr ""
 
 #. type: Plain text

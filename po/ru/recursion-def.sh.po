@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-def.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # recursion-def.sh # A script that defines \"recursion\" in a "
-"rather graphic way."
+"#!/bin/bash\n"
+"# recursion-def.sh\n"
+"# A script that defines \"recursion\" in a rather graphic way.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-def.sh:8
-msgid "RECURSIONS=10 r_count=0 sp=\" \""
+#, no-wrap
+msgid ""
+"RECURSIONS=10\n"
+"r_count=0\n"
+"sp=\" \"\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,10 +60,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-def.sh:26
-msgid "echo echo \"Recursion: \" define_recursion echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Recursion: \"\n"
+"define_recursion\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/recursion-def.sh:27
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

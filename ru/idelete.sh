@@ -1,7 +1,8 @@
-#!/bin/bash # idelete.sh: Deleting a file by its inode number.
+#!/bin/bash
+# idelete.sh: Deleting a file by its inode number.
 
-# This is useful when a filename starts with an illegal character, #+ such
-as ? or -.
+#  This is useful when a filename starts with an illegal character,
+#+ such as ? or -.
 
 ARGCOUNT=1                      # Filename arg must be passed to script.
 E_WRONGARGS=70
@@ -20,11 +21,11 @@ then
   exit $E_FILE_NOT_EXIST
 fi  
 
-inum=`ls -i | grep "$1" | awk '{print $1}'` # inum = inode (index node)
-number of file #
------------------------------------------------------------------------ #
-Every file has an inode, a record that holds its physical address info.  #
------------------------------------------------------------------------
+inum=`ls -i | grep "$1" | awk '{print $1}'`
+# inum = inode (index node) number of file
+# -----------------------------------------------------------------------
+# Every file has an inode, a record that holds its physical address info.
+# -----------------------------------------------------------------------
 
 echo; echo -n "Are you absolutely sure you want to delete \"$1\" (y/n)? "
 # The '-v' option to 'rm' also asks this.

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,50 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:3
-msgid "#!/bin/bash # Reading lines in /etc/fstab."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Reading lines in /etc/fstab.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:5
-msgid "File=/etc/fstab"
+#, no-wrap
+msgid "File=/etc/fstab\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:10
-msgid "{ read line1 read line2 } &gt; $File"
+#, no-wrap
+msgid ""
+"{\n"
+"read line1\n"
+"read line2\n"
+"} &gt; $File\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:16
+#, no-wrap
 msgid ""
-"echo \"First line in $File is:\" echo \"$line1\" echo echo \"Second line in "
-"$File is:\" echo \"$line2\""
+"echo \"First line in $File is:\"\n"
+"echo \"$line1\"\n"
+"echo\n"
+"echo \"Second line in $File is:\"\n"
+"echo \"$line2\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:18
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex8.sh:21
+#, no-wrap
 msgid ""
-"# Now, how do you parse the separate fields of each line? # Hint: use awk, "
-"or . . .  # . . . Hans-Joerg Diers suggests using the \"set\" Bash builtin."
+"# Now, how do you parse the separate fields of each line?\n"
+"# Hint: use awk, or . . .\n"
+"# . . . Hans-Joerg Diers suggests using the \"set\" Bash builtin.\n"
 msgstr ""

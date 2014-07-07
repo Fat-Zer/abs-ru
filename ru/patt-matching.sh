@@ -1,9 +1,10 @@
-#!/bin/bash # patt-matching.sh
+#!/bin/bash
+# patt-matching.sh
 
-# Pattern matching using the # ## % %% parameter substitution operators.
+# Pattern matching  using the # ## % %% parameter substitution operators.
 
-var1=abcd12345abc6789 pattern1=a*c # * (wild card) matches everything
-between a - c.
+var1=abcd12345abc6789
+pattern1=a*c  # * (wild card) matches everything between a - c.
 
 echo
 echo "var1 = $var1"           # abcd12345abc6789

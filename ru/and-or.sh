@@ -1,6 +1,7 @@
 #!/bin/bash
 
-a=24 b=47
+a=24
+b=47
 
 if [ "$a" -eq 24 ] &amp;&amp; [ "$b" -eq 47 ]
 then
@@ -28,8 +29,9 @@ else
 fi
 
 
-# The -a and -o options provide #+ an alternative compound condition test.
-# Thanks to Patrick Callahan for pointing this out.
+#  The -a and -o options provide
+#+ an alternative compound condition test.
+#  Thanks to Patrick Callahan for pointing this out.
 
 
 if [ "$a" -eq 24 -a "$b" -eq 47 ]

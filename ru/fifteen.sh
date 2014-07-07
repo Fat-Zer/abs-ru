@@ -1,12 +1,14 @@
-#!/bin/bash # fifteen.sh
+#!/bin/bash
+# fifteen.sh
 
-# Classic "Fifteen Puzzle" # Author: Antonio Macchi # Lightly edited and
-commented by ABS Guide author.  # Used in ABS Guide with
-permission. (Thanks!)
+# Classic "Fifteen Puzzle"
+# Author: Antonio Macchi
+# Lightly edited and commented by ABS Guide author.
+# Used in ABS Guide with permission. (Thanks!)
 
-# The invention of the Fifteen Puzzle is attributed to either #+ Sam Loyd or
-Noyes Palmer Chapman.  # The puzzle was wildly popular in the late
-19th-century.
+#  The invention of the Fifteen Puzzle is attributed to either
+#+ Sam Loyd or Noyes Palmer Chapman.
+#  The puzzle was wildly popular in the late 19th-century.
 
 #  Object: Rearrange the numbers so they read in order,
 #+ from 1 - 15:   ________________
@@ -25,12 +27,16 @@ Noyes Palmer Chapman.  # The puzzle was wildly popular in the late
 #######################
 
 
-######## # Data # ########
+########
+# Data #
+########
 
 Puzzle=( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 " " )
 
 
-############# # Functions # #############
+#############
+# Functions #
+#############
 
 function swap
 {
@@ -133,7 +139,9 @@ function Solved
 }
 
 
-################### MAIN () #######################{ moves=0 Jumble
+################### MAIN () #######################{
+moves=0
+Jumble
 
 while true   # Loop continuously until puzzle solved.
 do
@@ -152,9 +160,14 @@ do
   Solved &amp;&amp; break
 done
 
-echo;echo PrintPuzzle echo; echo "BRAVO!"; echo
+echo;echo
+PrintPuzzle
+echo; echo "BRAVO!"; echo
 
-exit 0 ###################################################}
+exit 0
+###################################################}
 
-# Exercise: # -------- # Rewrite the script to display the letters A - O, #+
-rather than the numbers 1 - 15.
+#  Exercise:
+#  --------
+#  Rewrite the script to display the letters A - O,
+#+ rather than the numbers 1 - 15.

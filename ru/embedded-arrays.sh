@@ -1,7 +1,10 @@
-#!/bin/bash # embedded-arrays.sh # Embedded arrays and indirect references.
+#!/bin/bash
+# embedded-arrays.sh
+# Embedded arrays and indirect references.
 
-# This script by Dennis Leeuw.  # Used with permission.  # Modified by
-document author.
+# This script by Dennis Leeuw.
+# Used with permission.
+# Modified by document author.
 
 
 ARRAY1=(
@@ -54,7 +57,8 @@ function print () {
         echo "Array element VAR1_1: $VAR1_1 from ARRAY21"
 }
 
-print echo
+print
+echo
 
 exit 0
 

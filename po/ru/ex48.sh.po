@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:4
-msgid "# Copying a directory tree using cpio."
+#, no-wrap
+msgid "# Copying a directory tree using cpio.\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,7 +40,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:12
-msgid "ARGS=2 E_BADARGS=65"
+#, no-wrap
+msgid ""
+"ARGS=2\n"
+"E_BADARGS=65\n"
 msgstr ""
 
 #. type: Plain text
@@ -54,7 +59,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:21
-msgid "source=\"$1\" destination=\"$2\""
+#, no-wrap
+msgid ""
+"source=\"$1\"\n"
+"destination=\"$2\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -72,17 +80,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:33
-msgid "# Exercise: # --------"
+#, no-wrap
+msgid ""
+"# Exercise:\n"
+"# --------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:36
+#, no-wrap
 msgid ""
-"# Add code to check the exit status ($?) of the 'find | cpio' pipe #+ and "
-"output appropriate error messages if anything went wrong."
+"#  Add code to check the exit status ($?) of the 'find | cpio' pipe\n"
+"#+ and output appropriate error messages if anything went wrong.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex48.sh:37
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

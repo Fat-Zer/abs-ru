@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:7
+#, no-wrap
 msgid ""
-"# Adding a second hard drive to system.  # Software configuration. Assumes "
-"hardware already mounted.  # From an article by the author of the ABS "
-"Guide.  # In issue #38 of _Linux Gazette_, http://www.linuxgazette.com."
+"# Adding a second hard drive to system.\n"
+"# Software configuration. Assumes hardware already mounted.\n"
+"# From an article by the author of the ABS Guide.\n"
+"# In issue #38 of _Linux Gazette_, http://www.linuxgazette.com.\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,9 +53,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:19
+#, no-wrap
 msgid ""
-"# Use with extreme caution! # If something goes wrong, you may wipe out your "
-"current filesystem."
+"# Use with extreme caution!\n"
+"# If something goes wrong, you may wipe out your current filesystem.\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,19 +80,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:36
+#, no-wrap
 msgid ""
-"# Now, test ...  # mount -t ext2 /dev/hdb1 /mnt/newdisk # Try creating a "
-"directory.  # If it works, umount it, and proceed."
+"# Now, test ...\n"
+"# mount -t ext2 /dev/hdb1 /mnt/newdisk\n"
+"# Try creating a directory.\n"
+"# If it works, umount it, and proceed.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:40
+#, no-wrap
 msgid ""
-"# Final step: # Add the following line to /etc/fstab.  # /dev/hdb1 "
-"/mnt/newdisk ext2 defaults 1 1"
+"# Final step:\n"
+"# Add the following line to /etc/fstab.\n"
+"# /dev/hdb1  /mnt/newdisk  ext2  defaults  1 1\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/add-drive.sh:41
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

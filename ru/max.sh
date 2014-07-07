@@ -1,4 +1,5 @@
-#!/bin/bash # max.sh: Maximum of two integers.
+#!/bin/bash
+# max.sh: Maximum of two integers.
 
 E_PARAM_ERR=250    # If less than 2 params passed to function.
 EQUAL=251          # Return value if both params equal.
@@ -25,7 +26,8 @@ else
 fi
 }
 
-max2 33 34 return_val=$?
+max2 33 34
+return_val=$?
 
 if [ "$return_val" -eq $E_PARAM_ERR ]
 then
@@ -40,5 +42,7 @@ fi
   
 exit 0
 
-# Exercise (easy): # --------------- # Convert this to an interactive
-script, #+ that is, have the script ask for input (two numbers).
+#  Exercise (easy):
+#  ---------------
+#  Convert this to an interactive script,
+#+ that is, have the script ask for input (two numbers).

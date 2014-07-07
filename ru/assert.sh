@@ -1,4 +1,5 @@
-#!/bin/bash # assert.sh
+#!/bin/bash
+# assert.sh
 
 #######################################################################
 assert ()                 #  If condition false,
@@ -34,11 +35,14 @@ condition="$a -lt $b"     #  Error message and exit from script.
                           #  Try setting "condition" to something else
                           #+ and see what happens.
 
-assert "$condition" $LINENO # The remainder of the script executes only if
-the "assert" does not fail.
+assert "$condition" $LINENO
+# The remainder of the script executes only if the "assert" does not fail.
 
 
-# Some commands.  # Some more commands . . .  echo "This statement echoes
-only if the \"assert\" does not fail." # . . .  # More commands . . .
+# Some commands.
+# Some more commands . . .
+echo "This statement echoes only if the \"assert\" does not fail."
+# . . .
+# More commands . . .
 
 exit $?

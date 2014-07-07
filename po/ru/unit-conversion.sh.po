@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:4
-msgid "#!/bin/bash # unit-conversion.sh # Must have 'units' utility installed."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# unit-conversion.sh\n"
+"# Must have 'units' utility installed.\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,29 +39,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:17
-msgid "Unit1=miles Unit2=meters cfactor=`convert_units $Unit1 $Unit2` quantity=3.73"
+#, no-wrap
+msgid ""
+"Unit1=miles\n"
+"Unit2=meters\n"
+"cfactor=`convert_units $Unit1 $Unit2`\n"
+"quantity=3.73\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:19
-msgid "result=$(echo $quantity*$cfactor | bc)"
+#, no-wrap
+msgid "result=$(echo $quantity*$cfactor | bc)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:21
-msgid "echo \"There are $result $Unit2 in $quantity $Unit1.\""
+#, no-wrap
+msgid "echo \"There are $result $Unit2 in $quantity $Unit1.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:24
+#, no-wrap
 msgid ""
-"# What happens if you pass incompatible units, #+ such as \"acres\" and "
-"\"miles\" to the function?"
+"#  What happens if you pass incompatible units,\n"
+"#+ such as \"acres\" and \"miles\" to the function?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unit-conversion.sh:26
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

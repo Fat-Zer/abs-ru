@@ -1,7 +1,9 @@
-#!/bin/bash # resistor-inventory.sh # Simple database / table-lookup
-application.
+#!/bin/bash
+# resistor-inventory.sh
+# Simple database / table-lookup application.
 
-# ============================================================== # # Data
+# ============================================================== #
+# Data
 
 B1723_value=470                                   # Ohms
 B1723_powerdissip=.25                             # Watts
@@ -9,11 +11,17 @@ B1723_colorcode="yellow-violet-brown"             # Color bands
 B1723_loc=173                                     # Where they are
 B1723_inventory=78                                # How many
 
-B1724_value=1000 B1724_powerdissip=.25 B1724_colorcode="brown-black-red"
-B1724_loc=24N B1724_inventory=243
+B1724_value=1000
+B1724_powerdissip=.25
+B1724_colorcode="brown-black-red"
+B1724_loc=24N
+B1724_inventory=243
 
-B1725_value=10000 B1725_powerdissip=.125
-B1725_colorcode="brown-black-orange" B1725_loc=24N B1725_inventory=89
+B1725_value=10000
+B1725_powerdissip=.125
+B1725_colorcode="brown-black-orange"
+B1725_loc=24N
+B1725_inventory=89
 
 # ============================================================== #
 
@@ -55,9 +63,11 @@ echo; echo
 #    Which method is easier to code?
 
 
-# Notes: # ----- # Shell scripts are inappropriate for anything except the
-most simple #+ database applications, and even then it involves workarounds
-and kludges.  # Much better is to use a language with native support for
-data structures, #+ such as C++ or Java (or even Perl).
+# Notes:
+# -----
+#  Shell scripts are inappropriate for anything except the most simple
+#+ database applications, and even then it involves workarounds and kludges.
+#  Much better is to use a language with native support for data structures,
+#+ such as C++ or Java (or even Perl).
 
 exit 0

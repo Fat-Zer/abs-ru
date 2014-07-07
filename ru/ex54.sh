@@ -3,7 +3,8 @@
 exec echo "Exiting \"$0\" at line $LINENO."   # Exit from script here.
 # $LINENO is an internal Bash variable set to the line number it's on.
 
-# ---------------------------------- # The following lines never execute.
+# ----------------------------------
+# The following lines never execute.
 
 echo "This echo fails to echo."
 

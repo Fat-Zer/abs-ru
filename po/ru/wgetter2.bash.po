@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,51 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:3
-msgid "#!/bin/bash # wgetter2.bash"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# wgetter2.bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:8
+#, no-wrap
 msgid ""
-"# Author: Little Monster [monster@monstruum.co.uk] # ==> Used in ABS Guide "
-"with permission of script author.  # ==> This script still needs debugging "
-"and fixups (exercise for reader).  # ==> It could also use some additional "
-"editing in the comments."
+"# Author: Little Monster [monster@monstruum.co.uk]\n"
+"# ==> Used in ABS Guide with permission of script author.\n"
+"# ==> This script still needs debugging and fixups (exercise for reader).\n"
+"# ==> It could also use some additional editing in the comments.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:12
+#, no-wrap
 msgid ""
-"# This is wgetter2 -- #+ a Bash script to make wget a bit more friendly, and "
-"save typing."
+"#  This is wgetter2 --\n"
+"#+ a Bash script to make wget a bit more friendly, and save typing.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:22
+#, no-wrap
 msgid ""
-"# Carefully crafted by Little Monster.  # More or less complete on "
-"02/02/2005.  # If you think this script can be improved, #+ email me at: "
-"monster@monstruum.co.uk # ==> and cc: to the author of the ABS Guide, "
-"please.  # This script is licenced under the GPL.  # You are free to copy, "
-"alter and re-use it, #+ but please don't try to claim you wrote it.  # Log "
-"your changes here instead."
+"#  Carefully crafted by Little Monster.\n"
+"#  More or less complete on 02/02/2005.\n"
+"#  If you think this script can be improved,\n"
+"#+ email me at: monster@monstruum.co.uk\n"
+"# ==> and cc: to the author of the ABS Guide, please.\n"
+"#  This script is licenced under the GPL.\n"
+"#  You are free to copy, alter and re-use it,\n"
+"#+ but please don't try to claim you wrote it.\n"
+"#  Log your changes here instead.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:25
+#, no-wrap
 msgid ""
-"# ======================================================================= # "
-"changelog:"
+"# =======================================================================\n"
+"# changelog:\n"
 msgstr ""
 
 #. type: Plain text
@@ -97,20 +107,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:64
+#, no-wrap
 msgid ""
-"# Basic default wget command we want to use.  # This is the place to change "
-"it, if required.  # NB: if using a proxy, set http_proxy = yourproxy in "
-".wgetrc.  # Otherwise delete --proxy=on, below.  # "
-"==================================================================== "
-"CommandA=\"wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r\" # "
-"===================================================================="
+"#  Basic default wget command we want to use.\n"
+"#  This is the place to change it, if required.\n"
+"#  NB: if using a proxy, set http_proxy = yourproxy in .wgetrc.\n"
+"#  Otherwise delete --proxy=on, below.\n"
+"# ====================================================================\n"
+"CommandA=\"wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r\"\n"
+"# ====================================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:69
+#, no-wrap
 msgid ""
-"# -------------------------------------------------------------------- # Set "
-"some other variables and explain them."
+"# --------------------------------------------------------------------\n"
+"# Set some other variables and explain them.\n"
 msgstr ""
 
 #. type: Plain text
@@ -143,9 +156,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:95
+#, no-wrap
 msgid ""
-"# Define the options available. Easy to change letters here if needed.  # "
-"These are the optional options; you don't just wait to be asked."
+"# Define the options available. Easy to change letters here if needed.\n"
+"# These are the optional options; you don't just wait to be asked.\n"
 msgstr ""
 
 #. type: Plain text
@@ -175,9 +189,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:116
+#, no-wrap
 msgid ""
-"# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ # "
-"added added added added added added added added added added added added"
+"# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
+"# added added added added added added added added added added added added\n"
 msgstr ""
 
 #. type: Plain text
@@ -247,9 +262,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:160
+#, no-wrap
 msgid ""
-"# end added section end added section end added section end added section # "
-"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"# end added section end added section end added section end added section\n"
+"# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 msgstr ""
 
 #. type: Plain text
@@ -267,15 +283,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:179
+#, no-wrap
 msgid ""
-"wopts()  { echo \"Enter options to pass to wget.\" echo \"It is assumed you "
-"know what you're doing.\" echo echo \"You can pass their arguments here "
-"too.\" # That is to say, everything passed here is passed to wget."
+"wopts()\n"
+"{\n"
+"echo \"Enter options to pass to wget.\"\n"
+"echo \"It is assumed you know what you're doing.\"\n"
+"echo\n"
+"echo \"You can pass their arguments here too.\"\n"
+"# That is to say, everything passed here is passed to wget.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:182
-msgid "read Wopts # Read in the options to be passed to wget."
+#, no-wrap
+msgid ""
+"read Wopts\n"
+"# Read in the options to be passed to wget.\n"
 msgstr ""
 
 #. type: Plain text
@@ -290,14 +314,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:191
+#, no-wrap
 msgid ""
-"echo \"passing options ${Wopts} to wget\" # Mainly for debugging.  # Is "
-"cute."
+"echo \"passing options ${Wopts} to wget\"\n"
+"# Mainly for debugging.\n"
+"# Is cute.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:194 abs-guide/wgetter2.bash:210
-msgid "return }"
+#, no-wrap
+msgid ""
+"return\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -315,9 +344,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:207
+#, no-wrap
 msgid ""
-"Flag=S # Tell the final bit of code what to do.  # Set a flag since stuff is "
-"done in main."
+"Flag=S\n"
+"# Tell the final bit of code what to do.\n"
+"# Set a flag since stuff is done in main.\n"
 msgstr ""
 
 #. type: Plain text
@@ -503,7 +534,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:352
-msgid "exit }"
+#, no-wrap
+msgid ""
+"exit\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -550,9 +584,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:388
+#, no-wrap
 msgid ""
-"URLS=\" $@\" # Use this so that URL list can be changed if we stay in the "
-"option loop."
+"URLS=\" $@\"\n"
+"# Use this so that URL list can be changed if we stay in the option loop.\n"
 msgstr ""
 
 #. type: Plain text
@@ -708,5 +743,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wgetter2.bash:485
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

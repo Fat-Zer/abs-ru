@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # str-test.sh: Testing null strings and unquoted strings, #+ but "
-"not strings and sealing wax, not to mention cabbages and kings . . ."
+"#!/bin/bash\n"
+"#  str-test.sh: Testing null strings and unquoted strings,\n"
+"#+ but not strings and sealing wax, not to mention cabbages and kings "
+". . .\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,9 +34,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:9
+#, no-wrap
 msgid ""
-"# If a string has not been initialized, it has no defined value.  # This "
-"state is called \"null\" (not the same as zero!)."
+"# If a string has not been initialized, it has no defined value.\n"
+"# This state is called \"null\" (not the same as zero!).\n"
 msgstr ""
 
 #. type: Plain text
@@ -51,12 +55,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:19 abs-guide/str-test.sh:30 abs-guide/str-test.sh:46
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:21
-msgid "# Let's try it again."
+#, no-wrap
+msgid "# Let's try it again.\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,7 +98,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:49
-msgid "string1=initialized"
+#, no-wrap
+msgid "string1=initialized\n"
 msgstr ""
 
 #. type: Plain text
@@ -110,7 +117,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/str-test.sh:60
-msgid "string1=\"a = b\""
+#, no-wrap
+msgid "string1=\"a = b\"\n"
 msgstr ""
 
 #. type: Plain text

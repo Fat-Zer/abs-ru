@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,32 +18,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:3
-msgid "#!/bin/bash # array-strops.sh: String operations on arrays."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# array-strops.sh: String operations on arrays.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:7
+#, no-wrap
 msgid ""
-"# Script by Michael Zick.  # Used in ABS Guide with permission.  # Fixups: "
-"05 May 08, 04 Aug 08."
+"# Script by Michael Zick.\n"
+"# Used in ABS Guide with permission.\n"
+"# Fixups: 05 May 08, 04 Aug 08.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:11
+#, no-wrap
 msgid ""
-"# In general, any string operation using the ${name ... } notation #+ can be "
-"applied to all string elements in an array, #+ with the ${name[@] ... } or "
-"${name[*] ...} notation."
+"#  In general, any string operation using the ${name ... } notation\n"
+"#+ can be applied to all string elements in an array,\n"
+"#+ with the ${name[@] ... } or ${name[*] ...} notation.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:14
-msgid "arrayZ=( one two three four five five )"
+#, no-wrap
+msgid "arrayZ=( one two three four five five )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:16 abs-guide/array-strops.sh:106
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,17 +81,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:28
-msgid "echo \"---------\""
+#, no-wrap
+msgid "echo \"---------\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:31
-msgid "# Substring Removal"
+#, no-wrap
+msgid "# Substring Removal\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:33
-msgid "# Removes shortest match from front of string(s)."
+#, no-wrap
+msgid "# Removes shortest match from front of string(s).\n"
 msgstr ""
 
 #. type: Plain text
@@ -127,12 +138,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:54
-msgid "echo \"----------------------\""
+#, no-wrap
+msgid "echo \"----------------------\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:57
-msgid "# Substring Replacement"
+#, no-wrap
+msgid "# Substring Replacement\n"
 msgstr ""
 
 #. type: Plain text
@@ -191,7 +204,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:83
-msgid "echo \"-----------------------------\""
+#, no-wrap
+msgid "echo \"-----------------------------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -216,7 +230,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:96
-msgid "echo \"------------------------------------\""
+#, no-wrap
+msgid "echo \"------------------------------------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -231,14 +246,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:104
+#, no-wrap
 msgid ""
-"# Now, if Bash would only pass the matched string #+ to the function being "
-"called . . ."
+"#  Now, if Bash would only pass the matched string\n"
+"#+ to the function being called . . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/array-strops.sh:108
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

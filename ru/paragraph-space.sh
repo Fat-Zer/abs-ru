@@ -1,7 +1,9 @@
-#!/bin/bash # paragraph-space.sh # Ver. 2.1, Reldate 29Jul12 [fixup]
+#!/bin/bash
+# paragraph-space.sh
+# Ver. 2.1, Reldate 29Jul12 [fixup]
 
-# Inserts a blank line between paragraphs of a single-spaced text file.  #
-Usage: $0 &lt;FILENAME
+# Inserts a blank line between paragraphs of a single-spaced text file.
+# Usage: $0 &lt;FILENAME
 
 MINLEN=60        # Change this value? It's a judgment call.
 #  Assume lines shorter than $MINLEN characters ending in a period

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # logon.sh: A quick 'n dirty script to check whether you are "
-"on-line yet."
+"#!/bin/bash\n"
+"# logon.sh: A quick 'n dirty script to check whether you are on-line yet.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:5
-msgid "umask 177 # Make sure temp files are not world readable."
+#, no-wrap
+msgid "umask 177  # Make sure temp files are not world readable.\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,14 +54,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:26
+#, no-wrap
 msgid ""
-"trap 'rm -f $TEMPFILE; exit $USER_INTERRUPT' TERM INT # Cleans up the temp "
-"file if script interrupted by control-c."
+"trap 'rm -f $TEMPFILE; exit $USER_INTERRUPT' TERM INT\n"
+"#  Cleans up the temp file if script interrupted by control-c.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:28
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -101,9 +105,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:55
+#, no-wrap
 msgid ""
-"# Note: if you change the KEYWORD variable to \"Exit\", #+ this script can "
-"be used while on-line #+ to check for an unexpected logoff."
+"#  Note: if you change the KEYWORD variable to \"Exit\",\n"
+"#+ this script can be used while on-line\n"
+"#+ to check for an unexpected logoff.\n"
 msgstr ""
 
 #. type: Plain text
@@ -116,12 +122,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:60
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:63
-msgid "# Nick Drage suggests an alternate method:"
+#, no-wrap
+msgid "# Nick Drage suggests an alternate method:\n"
 msgstr ""
 
 #. type: Plain text
@@ -148,12 +156,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:77
-msgid "# Stephane Chazelas has yet another alternative:"
+#, no-wrap
+msgid "# Stephane Chazelas has yet another alternative:\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/online.sh:79
-msgid "CHECK_INTERVAL=1"
+#, no-wrap
+msgid "CHECK_INTERVAL=1\n"
 msgstr ""
 
 #. type: Plain text

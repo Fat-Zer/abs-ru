@@ -6,7 +6,8 @@ clear # Clear the screen.
 
 TargetDirectory=/home/bozo/projects/GreatAmericanNovel
 
-cd $TargetDirectory echo "Deleting stale files in $TargetDirectory."
+cd $TargetDirectory
+echo "Deleting stale files in $TargetDirectory."
 
 if [ "$PWD" != "$TargetDirectory" ]
 then    # Keep from wiping out wrong directory by accident.

@@ -1,5 +1,6 @@
-#!/bin/bash # t-out.sh [time-out] # Inspired by a suggestion from "syngin
-seven" (thanks).
+#!/bin/bash
+# t-out.sh [time-out]
+# Inspired by a suggestion from "syngin seven" (thanks).
 
 
 TIMELIMIT=4         # 4 seconds

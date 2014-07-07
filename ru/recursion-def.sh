@@ -1,7 +1,10 @@
-#!/bin/bash # recursion-def.sh # A script that defines "recursion" in a
-rather graphic way.
+#!/bin/bash
+# recursion-def.sh
+# A script that defines "recursion" in a rather graphic way.
 
-RECURSIONS=10 r_count=0 sp=" "
+RECURSIONS=10
+r_count=0
+sp=" "
 
 define_recursion ()
 {
@@ -16,6 +19,9 @@ define_recursion ()
   done
 }
 
-echo echo "Recursion: " define_recursion echo
+echo
+echo "Recursion: "
+define_recursion
+echo
 
 exit $?

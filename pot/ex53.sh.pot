@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:3
-msgid "#!/bin/bash # Using \"seq\""
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Using \"seq\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:5
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,12 +46,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:16 abs-guide/ex53.sh:26 abs-guide/ex53.sh:38 abs-guide/ex53.sh:52
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:19
-msgid "COUNT=80 # Yes, 'seq' also accepts a replaceable parameter."
+#, no-wrap
+msgid "COUNT=80  # Yes, 'seq' also accepts a replaceable parameter.\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,7 +68,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:29
-msgid "BEGIN=75 END=80"
+#, no-wrap
+msgid ""
+"BEGIN=75\n"
+"END=80\n"
 msgstr ""
 
 #. type: Plain text
@@ -79,7 +88,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:42
-msgid "BEGIN=45 INTERVAL=5 END=80"
+#, no-wrap
+msgid ""
+"BEGIN=45\n"
+"INTERVAL=5\n"
+"END=80\n"
 msgstr ""
 
 #. type: Plain text
@@ -97,5 +110,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex53.sh:53
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -2,8 +2,9 @@
 
 # This is an alternate form of the preceding script.
 
-# Suggested by Heiner Steven #+ as a workaround in those situations when a
-redirect loop #+ runs as a subshell, and therefore variables inside the loop
+#  Suggested by Heiner Steven
+#+ as a workaround in those situations when a redirect loop
+#+ runs as a subshell, and therefore variables inside the loop
 # +do not keep their values upon loop termination.
 
 
@@ -18,7 +19,8 @@ fi
 exec 3&lt;&amp;0                 # Save stdin to file descriptor 3.
 exec 0&lt;"$Filename"        # Redirect standard input.
 
-count=0 echo
+count=0
+echo
 
 
 while [ "$name" != Smith ]

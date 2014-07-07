@@ -1,9 +1,10 @@
-#!/bin/bash # cvt.sh: # Converts all the MacPaint image files in a directory
-to "pbm" format.
+#!/bin/bash
+#  cvt.sh:
+#  Converts all the MacPaint image files in a directory to "pbm" format.
 
-# Uses the "macptopbm" binary from the "netpbm" package, #+ which is
-maintained by Brian Henderson (bryanh@giraffe-data.com).  # Netpbm is a
-standard part of most Linux distros.
+#  Uses the "macptopbm" binary from the "netpbm" package,
+#+ which is maintained by Brian Henderson (bryanh@giraffe-data.com).
+#  Netpbm is a standard part of most Linux distros.
 
 OPERATION=macptopbm
 SUFFIX=pbm          # New filename suffix. 
@@ -15,8 +16,8 @@ else
   directory=$PWD    # Otherwise use current working directory.
 fi  
   
-# Assumes all files in the target directory are MacPaint image files, #+
-with a ".mac" filename suffix.
+#  Assumes all files in the target directory are MacPaint image files,
+#+ with a ".mac" filename suffix.
 
 for file in $directory/*    # Filename globbing.
 do
@@ -31,16 +32,19 @@ done
 
 exit 0
 
-# Exercise: # -------- # As it stands, this script converts *all* the files
-in the current #+ working directory.  # Modify it to work *only* on files
-with a ".mac" suffix.
+# Exercise:
+# --------
+#  As it stands, this script converts *all* the files in the current
+#+ working directory.
+#  Modify it to work *only* on files with a ".mac" suffix.
 
 
 
 # *** And here's another way to do it. *** #
 
-#!/bin/bash # Batch convert into different graphic formats.  # Assumes
-imagemagick installed (standard in most Linux distros).
+#!/bin/bash
+# Batch convert into different graphic formats.
+# Assumes imagemagick installed (standard in most Linux distros).
 
 INFMT=png   # Can be tif, jpg, gif, etc.
 OUTFMT=pdf  # Can be tif, jpg, gif, pdf, etc.

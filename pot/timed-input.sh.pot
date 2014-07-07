@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:3
-msgid "#!/bin/bash # timed-input.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# timed-input.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,7 +58,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:23
-msgid "}"
+#, no-wrap
+msgid "}  \n"
 msgstr ""
 
 #. type: Plain text
@@ -83,34 +87,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:41
+#, no-wrap
 msgid ""
-"trap Int14Vector $TIMER_INTERRUPT # Timer interrupt (14) subverted for our "
-"purposes."
+"trap Int14Vector $TIMER_INTERRUPT\n"
+"# Timer interrupt (14) subverted for our purposes.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:46
-msgid "echo \"What is your favorite vegetable \" TimerOn read answer PrintAnswer"
+#, no-wrap
+msgid ""
+"echo \"What is your favorite vegetable \"\n"
+"TimerOn\n"
+"read answer\n"
+"PrintAnswer\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:53
+#, no-wrap
 msgid ""
-"# Admittedly, this is a kludgy implementation of timed input.  # However, "
-"the \"-t\" option to \"read\" simplifies this task.  # See the \"t-out.sh\" "
-"script.  # However, what about timing not just single user input, #+ but an "
-"entire script?"
+"#  Admittedly, this is a kludgy implementation of timed input.\n"
+"#  However, the \"-t\" option to \"read\" simplifies this task.\n"
+"#  See the \"t-out.sh\" script.\n"
+"#  However, what about timing not just single user input,\n"
+"#+ but an entire script?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:57
+#, no-wrap
 msgid ""
-"# If you need something really elegant ...  #+ consider writing the "
-"application in C or C++, #+ using appropriate library functions, such as "
-"'alarm' and 'setitimer.'"
+"#  If you need something really elegant ...\n"
+"#+ consider writing the application in C or C++,\n"
+"#+ using appropriate library functions, such as 'alarm' and 'setitimer.'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/timed-input.sh:58
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

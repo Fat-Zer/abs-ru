@@ -1,6 +1,8 @@
-#!/bin/bash # test-execution-time.sh # Example by Erik Brandsberg, for
-testing execution time #+ of certain operations.  # Referenced in the
-"Optimizations" section of "Miscellany" chapter.
+#!/bin/bash
+#  test-execution-time.sh
+#  Example by Erik Brandsberg, for testing execution time
+#+ of certain operations.
+#  Referenced in the "Optimizations" section of "Miscellany" chapter.
 
 count=50000
 echo "Math tests"
@@ -22,7 +24,8 @@ do
   let result=$i%2
 done
 
-echo echo "Conditional testing tests"
+echo
+echo "Conditional testing tests"
 
 echo "Test via case:"
 time for (( i=0; i&lt; $count; i++))

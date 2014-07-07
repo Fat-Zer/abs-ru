@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # find-splitpara.sh # Finds split paragraphs in a text file, #+ "
-"and tags the line numbers."
+"#!/bin/bash\n"
+"# find-splitpara.sh\n"
+"#  Finds split paragraphs in a text file,\n"
+"#+ and tags the line numbers.\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,37 +97,47 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:45
-msgid "done } &lt; $file # Redirect file into function's stdin."
+#, no-wrap
+msgid ""
+"done\n"
+"} &lt; $file  # Redirect file into function's stdin.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:47
-msgid "file_read"
+#, no-wrap
+msgid "file_read\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:50
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:55
+#, no-wrap
 msgid ""
-"# ---------------------------------------------------------------- This is "
-"line one of an example paragraph, bla, bla, bla.  This is line two, and line "
-"three should follow on next line, but"
+"# ----------------------------------------------------------------\n"
+"This is line one of an example paragraph, bla, bla, bla.\n"
+"This is line two, and line three should follow on next line, but\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:58
+#, no-wrap
 msgid ""
-"there is a blank line separating the two parts of the paragraph.  # "
-"----------------------------------------------------------------"
+"there is a blank line separating the two parts of the paragraph.\n"
+"# ----------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:61
-msgid "Running this script on a file containing the above paragraph yields:"
+#, no-wrap
+msgid ""
+"Running this script on a file containing the above paragraph\n"
+"yields:\n"
 msgstr ""
 
 #. type: Plain text
@@ -135,7 +148,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/find-splitpara.sh:66
+#, no-wrap
 msgid ""
-"There will be additional output for all the other split paragraphs in the "
-"target file."
+"There will be additional output for all the other split paragraphs\n"
+"in the target file.\n"
 msgstr ""

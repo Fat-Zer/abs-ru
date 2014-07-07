@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:3
-msgid "#!/bin/bash # background-loop.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# background-loop.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,40 +53,51 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:20
-msgid "# ======================================================"
+#, no-wrap
+msgid "# ======================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:24
+#, no-wrap
 msgid ""
-"# The expected output from the script: # 1 2 3 4 5 6 7 8 9 10 # 11 12 13 14 "
-"15 16 17 18 19 20"
+"# The expected output from the script:\n"
+"# 1 2 3 4 5 6 7 8 9 10 \n"
+"# 11 12 13 14 15 16 17 18 19 20 \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:29
+#, no-wrap
 msgid ""
-"# Sometimes, though, you get: # 11 12 13 14 15 16 17 18 19 20 # 1 2 3 4 5 6 "
-"7 8 9 10 bozo $ # (The second 'echo' doesn't execute. Why?)"
+"# Sometimes, though, you get:\n"
+"# 11 12 13 14 15 16 17 18 19 20 \n"
+"# 1 2 3 4 5 6 7 8 9 10 bozo $\n"
+"# (The second 'echo' doesn't execute. Why?)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:33
+#, no-wrap
 msgid ""
-"# Occasionally also: # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # "
-"(The first 'echo' doesn't execute. Why?)"
+"# Occasionally also:\n"
+"# 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20\n"
+"# (The first 'echo' doesn't execute. Why?)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:37
+#, no-wrap
 msgid ""
-"# Very rarely something like: # 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 "
-"19 20 # The foreground loop preempts the background one."
+"# Very rarely something like:\n"
+"# 11 12 13 1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 \n"
+"# The foreground loop preempts the background one.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/background-loop.sh:39
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

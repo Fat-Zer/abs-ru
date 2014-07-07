@@ -1,5 +1,7 @@
-#! /bin/sh # Strips off the header from a mail/News message i.e. till the
-first #+ empty line.  # Author: Mark Moraes, University of Toronto
+#! /bin/sh
+#  Strips off the header from a mail/News message i.e. till the first
+#+ empty line.
+#  Author: Mark Moraes, University of Toronto
 
 # ==> These comments added by author of this document.
 
@@ -18,9 +20,10 @@ fi
 
 exit
 
-# ==> Exercise: Add error checking and other options.  # ==> # ==> Note that
-the small sed script repeats, except for the arg passed.  # ==> Does it make
-sense to embed it in a function? Why or why not?
+# ==> Exercise: Add error checking and other options.
+# ==>
+# ==> Note that the small sed script repeats, except for the arg passed.
+# ==> Does it make sense to embed it in a function? Why or why not?
 
 
 /*

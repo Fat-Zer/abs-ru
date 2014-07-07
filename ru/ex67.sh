@@ -1,7 +1,8 @@
 #!/bin/bash
 
-declare -a colors # All subsequent commands in this script will treat #+ the
-variable "colors" as an array.
+declare -a colors
+#  All subsequent commands in this script will treat
+#+ the variable "colors" as an array.
 
 echo "Enter your favorite colors (separated from each other by a space)."
 

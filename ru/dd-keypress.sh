@@ -1,5 +1,5 @@
-#!/bin/bash # dd-keypress.sh: Capture keystrokes without needing to press
-ENTER.
+#!/bin/bash
+# dd-keypress.sh: Capture keystrokes without needing to press ENTER.
 
 
 keypresses=4                      # Number of keypresses to capture.
@@ -17,4 +17,5 @@ stty "$old_tty_setting"           # Restore old terminal settings.
 
 echo "You pressed the \"$keys\" keys."
 
-# Thanks, Stephane Chazelas, for showing the way.  exit 0
+# Thanks, Stephane Chazelas, for showing the way.
+exit 0

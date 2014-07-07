@@ -1,4 +1,5 @@
-# file: UseGetOpt-2 # UseGetOpt-2.sh parameter-completion
+# file: UseGetOpt-2
+# UseGetOpt-2.sh parameter-completion
 
 _UseGetOpt-2 ()   #  By convention, the function name
 {                 #+ starts with an underscore.

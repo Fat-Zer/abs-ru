@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:5
+#, no-wrap
 msgid ""
-"# Adds up a specified column (of numbers) in the target file.  # "
-"Floating-point (decimal) numbers okay, because awk can handle them."
+"# Adds up a specified column (of numbers) in the target file.\n"
+"# Floating-point (decimal) numbers okay, because awk can handle them.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:8
-msgid "ARGS=2 E_WRONGARGS=85"
+#, no-wrap
+msgid ""
+"ARGS=2\n"
+"E_WRONGARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,7 +51,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:17
-msgid "filename=$1 column_number=$2"
+#, no-wrap
+msgid ""
+"filename=$1\n"
+"column_number=$2\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,7 +84,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:37
-msgid "# Begin awk script.  # ----------------------------- awk '"
+#, no-wrap
+msgid ""
+"# Begin awk script.\n"
+"# -----------------------------\n"
+"awk '\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,7 +104,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:47
-msgid "' \"$filename\" # ----------------------------- # End awk script."
+#, no-wrap
+msgid ""
+"' \"$filename\"\n"
+"# -----------------------------\n"
+"# End awk script.\n"
 msgstr ""
 
 #. type: Plain text
@@ -113,5 +129,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/col-totaler.sh:61
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

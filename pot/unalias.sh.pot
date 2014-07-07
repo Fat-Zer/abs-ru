@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/unalias.sh:3
-msgid "#!/bin/bash # unalias.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# unalias.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unalias.sh:5
-msgid "shopt -s expand_aliases # Enables alias expansion."
+#, no-wrap
+msgid "shopt -s expand_aliases  # Enables alias expansion.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unalias.sh:8
-msgid "alias llm='ls -al | more' llm"
+#, no-wrap
+msgid ""
+"alias llm='ls -al | more'\n"
+"llm\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/unalias.sh:10
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,5 +55,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/unalias.sh:15
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address-2.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash4 # fetch_address-2.sh # A more elaborate version of "
-"fetch_address.sh."
+"#!/bin/bash4\n"
+"# fetch_address-2.sh\n"
+"# A more elaborate version of fetch_address.sh.\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,24 +76,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address-2.sh:40
+#, no-wrap
 msgid ""
-"store_address \"Lucas Fayne\" \"414 W. 13th Ave., Baltimore, MD 21236\" "
-"store_address \"Arvid Boyce\" \"202 E. 3rd St., New York, NY 10009\" "
-"store_address \"Velma Winston\" \"1854 Vermont Ave, Los Angeles, CA 90023\" "
-"# Exercise: # Rewrite the above store_address calls to read data from a "
-"file, #+ then assign field 1 to name, field 2 to address in the array.  # "
-"Each line in the file would have a format corresponding to the above.  # Use "
-"a while-read loop to read from file, sed or awk to parse the fields."
+"store_address \"Lucas Fayne\" \"414 W. 13th Ave., Baltimore, MD 21236\"\n"
+"store_address \"Arvid Boyce\" \"202 E. 3rd St., New York, NY 10009\"\n"
+"store_address \"Velma Winston\" \"1854 Vermont Ave, Los Angeles, CA "
+"90023\"\n"
+"#  Exercise:\n"
+"#  Rewrite the above store_address calls to read data from a file,\n"
+"#+ then assign field 1 to name, field 2 to address in the array.\n"
+"#  Each line in the file would have a format corresponding to the above.\n"
+"#  Use a while-read loop to read from file, sed or awk to parse the "
+"fields.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/fetch_address-2.sh:49
+#, no-wrap
 msgid ""
-"fetch_address \"Lucas Fayne\" # Lucas Fayne's address is 414 W. 13th Ave., "
-"Baltimore, MD 21236.  fetch_address \"Velma Winston\" # Velma Winston's "
-"address is 1854 Vermont Ave, Los Angeles, CA 90023.  fetch_address \"Arvid "
-"Boyce\" # Arvid Boyce's address is 202 E. 3rd St., New York, NY 10009.  "
-"fetch_address \"Bozo Bozeman\" # Bozo Bozeman's address is not in database."
+"fetch_address \"Lucas Fayne\"\n"
+"# Lucas Fayne's address is 414 W. 13th Ave., Baltimore, MD 21236.\n"
+"fetch_address \"Velma Winston\"\n"
+"# Velma Winston's address is 1854 Vermont Ave, Los Angeles, CA 90023.\n"
+"fetch_address \"Arvid Boyce\"\n"
+"# Arvid Boyce's address is 202 E. 3rd St., New York, NY 10009.\n"
+"fetch_address \"Bozo Bozeman\"\n"
+"# Bozo Bozeman's address is not in database.\n"
 msgstr ""
 
 #. type: Plain text

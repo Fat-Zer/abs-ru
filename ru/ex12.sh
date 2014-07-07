@@ -7,8 +7,8 @@ cat /dev/null > $filename; echo "Creating / cleaning out file."
 #+ and truncates it to zero length if it does.
 #  : > filename   and   > filename also work.
 
-tail /var/log/messages > $filename # /var/log/messages must have world read
-permission for this to work.
+tail /var/log/messages > $filename  
+# /var/log/messages must have world read permission for this to work.
 
 echo "$filename contains tail end of system log."
 

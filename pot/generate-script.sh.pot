@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:4
-msgid "#!/bin/bash # generate-script.sh # Based on an idea by Albert Reiner."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# generate-script.sh\n"
+"# Based on an idea by Albert Reiner.\n"
 msgstr ""
 
 #. type: Plain text
@@ -29,50 +33,67 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:13
+#, no-wrap
 msgid ""
-"# ----------------------------------------------------------- # 'Here "
-"document containing the body of the generated script.  ( cat &lt;&lt;'EOF' "
-"#!/bin/bash"
+"# -----------------------------------------------------------\n"
+"# 'Here document containing the body of the generated script.\n"
+"(\n"
+"cat &lt;&lt;'EOF'\n"
+"#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:17
+#, no-wrap
 msgid ""
-"echo \"This is a generated shell script.\" # Note that since we are inside a "
-"subshell, #+ we can't access variables in the \"outside\" script."
+"echo \"This is a generated shell script.\"\n"
+"#  Note that since we are inside a subshell,\n"
+"#+ we can't access variables in the \"outside\" script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:22
+#, no-wrap
 msgid ""
-"echo \"Generated file will be named: $OUTFILE\" # Above line will not work "
-"as normally expected #+ because parameter expansion has been disabled.  # "
-"Instead, the result is literal output."
+"echo \"Generated file will be named: $OUTFILE\"\n"
+"#  Above line will not work as normally expected\n"
+"#+ because parameter expansion has been disabled.\n"
+"#  Instead, the result is literal output.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:25
-msgid "a=7 b=3"
+#, no-wrap
+msgid ""
+"a=7\n"
+"b=3\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:28
-msgid "let \"c = $a * $b\" echo \"c = $c\""
+#, no-wrap
+msgid ""
+"let \"c = $a * $b\"\n"
+"echo \"c = $c\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:33
+#, no-wrap
 msgid ""
-"exit 0 EOF ) > $OUTFILE # "
-"-----------------------------------------------------------"
+"exit 0\n"
+"EOF\n"
+") > $OUTFILE\n"
+"# -----------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:37
+#, no-wrap
 msgid ""
-"# Quoting the 'limit string' prevents variable expansion #+ within the body "
-"of the above 'here document.' # This permits outputting literal strings in "
-"the output file."
+"#  Quoting the 'limit string' prevents variable expansion\n"
+"#+ within the body of the above 'here document.'\n"
+"#  This permits outputting literal strings in the output file.\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,12 +111,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:49
+#, no-wrap
 msgid ""
-"# This method also works for generating #+ C programs, Perl programs, Python "
-"programs, Makefiles, #+ and the like."
+"#  This method also works for generating\n"
+"#+ C programs, Perl programs, Python programs, Makefiles,\n"
+"#+ and the like.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/generate-script.sh:50
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

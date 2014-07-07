@@ -1,11 +1,14 @@
-#!/bin/bash # bingo.sh # Bingo number generator # Reldate 20Aug12, License:
-Public Domain
+#!/bin/bash
+# bingo.sh
+# Bingo number generator
+# Reldate 20Aug12, License: Public Domain
 
-####################################################################### #
-This script generates bingo numbers.  # Hitting a key generates a new
-number.  # Hitting 'q' terminates the script.  # In a given run of the
-script, there will be no duplicate numbers.  # When the script terminates,
-it prints a log of the numbers generated.
+#######################################################################
+# This script generates bingo numbers.
+# Hitting a key generates a new number.
+# Hitting 'q' terminates the script.
+# In a given run of the script, there will be no duplicate numbers.
+# When the script terminates, it prints a log of the numbers generated.
 #######################################################################
 
 MIN=1       # Lowest allowable bingo number.
@@ -13,7 +16,8 @@ MAX=75      # Highest allowable bingo number.
 COLS=15     # Numbers in each column (B I N G O).
 SINGLE_DIGIT_MAX=9
 
-declare -a Numbers Prefix=(B I N G O)
+declare -a Numbers
+Prefix=(B I N G O)
 
 initialize_Numbers ()
 {  # Zero them out to start.
@@ -77,7 +81,8 @@ fi
     echo -n "$pre$pre2$index#$count "
   fi
 
-done }
+done
+}
 
 
 
@@ -86,7 +91,8 @@ RANDOM=$$   # Seed random number generator.
 
 initialize_Numbers   # Zero out the number tracking array.
 
-clear echo "Bingo Number Caller"; echo
+clear
+echo "Bingo Number Caller"; echo
 
 while [[ "$key" != "q" ]]   # Main loop.
 do
@@ -105,14 +111,16 @@ done
 
 echo; echo
 
-# Game over ...  print_numbers_called echo; echo "[#0 = not called . . . #1
-= called]"
+# Game over ...
+print_numbers_called
+echo; echo "[#0 = not called . . . #1 = called]"
 
 echo
 
-exit 0 # }
+exit 0
+# }
 
 
-# Certainly, this script could stand some improvement.  #See also the
-author's Instructable:
+# Certainly, this script could stand some improvement.
+#See also the author's Instructable:
 #www.instructables.com/id/Binguino-An-Arduino-based-Bingo-Number-Generato/

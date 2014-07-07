@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex49.sh:3
-msgid "#!/bin/bash # Changes a file to all uppercase."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Changes a file to all uppercase.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex49.sh:5
-msgid "E_BADARGS=85"
+#, no-wrap
+msgid "E_BADARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,7 +43,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex49.sh:13
-msgid "tr a-z A-Z &lt;\"$1\""
+#, no-wrap
+msgid "tr a-z A-Z &lt;\"$1\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,13 +67,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex49.sh:23
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex49.sh:27
+#, no-wrap
 msgid ""
-"# Exercise: # Rewrite this script to give the option of changing a file #+ "
-"to *either* upper or lowercase.  # Hint: Use either the \"case\" or "
-"\"select\" command."
+"#  Exercise:\n"
+"#  Rewrite this script to give the option of changing a file\n"
+"#+ to *either* upper or lowercase.\n"
+"#  Hint: Use either the \"case\" or \"select\" command.\n"
 msgstr ""

@@ -1,4 +1,5 @@
-#!/bin/bash -i # petals.sh
+#!/bin/bash -i
+# petals.sh
 
 #########################################################################
 # Petals Around the Rose                                                #
@@ -60,7 +61,8 @@ It will be zero or an even number.
 After your guess, you will be told the answer for the roll, but . . .
 that's ALL the information you will get.
 
-Six consecutive correct guesses admits you to the Fellowship of the Rose.
+Six consecutive correct guesses admits you to the
+Fellowship of the Rose.
 INSTRUCTIONSZZZ
 
     echo -e "\033[0m"    # Turn off blue.

@@ -1,10 +1,16 @@
-#!/bin/bash # test-suite.sh # A partial Bash compatibility test suite.  #
-Run this on your version of Bash, or some other shell.
+#!/bin/bash
+# test-suite.sh
+# A partial Bash compatibility test suite.
+# Run this on your version of Bash, or some other shell.
 
 default_option=FAIL         # Tests below will fail unless . . .
 
-echo echo -n "Testing " sleep 1; echo -n ". " sleep 1; echo -n ". " sleep 1;
-echo ". " echo
+echo
+echo -n "Testing "
+sleep 1; echo -n ". "
+sleep 1; echo -n ". "
+sleep 1; echo ". "
+echo
 
 # Double brackets
 String="Double brackets supported?"
@@ -47,8 +53,8 @@ echo "Command substitution test: $test_csub"
 
 echo
 
-# Completing this script is an exercise for the reader.  # Add to the above
-similar tests for double parentheses, #+ brace expansion, process
-substitution, etc.
+#  Completing this script is an exercise for the reader.
+#  Add to the above similar tests for double parentheses,
+#+ brace expansion, process substitution, etc.
 
 exit $?

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex4.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,7 +53,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex4.sh:19
-msgid "old_pattern=$1 new_pattern=$2"
+#, no-wrap
+msgid ""
+"old_pattern=$1\n"
+"new_pattern=$2\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,22 +74,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex4.sh:33
+#, no-wrap
 msgid ""
-"# ----------------------------------------------- # Here is where the heavy "
-"work gets done.  sed -e \"s/$old_pattern/$new_pattern/g\" $file_name # "
-"-----------------------------------------------"
+"# -----------------------------------------------\n"
+"#  Here is where the heavy work gets done.\n"
+"sed -e \"s/$old_pattern/$new_pattern/g\" $file_name\n"
+"# -----------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex4.sh:39
+#, no-wrap
 msgid ""
-"# 's' is, of course, the substitute command in sed, #+ and /pattern/ invokes "
-"address matching.  # The 'g,' or global flag causes substitution for EVERY "
-"#+ occurence of $old_pattern on each line, not just the first.  # Read the "
-"'sed' docs for an in-depth explanation."
+"#  's' is, of course, the substitute command in sed,\n"
+"#+ and /pattern/ invokes address matching.\n"
+"#  The 'g,' or global flag causes substitution for EVERY\n"
+"#+ occurence of $old_pattern on each line, not just the first.\n"
+"#  Read the 'sed' docs for an in-depth explanation.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex4.sh:40
-msgid "exit $? # Redirect the output of this script to write to a file."
+#, no-wrap
+msgid "exit $?  # Redirect the output of this script to write to a file.\n"
 msgstr ""

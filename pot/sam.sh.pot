@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,32 +18,44 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:8
+#, no-wrap
 msgid ""
-"#!/bin/bash # sam.sh, v. .01a # Still Another Morse (code training script)  "
-"# With profuse apologies to Sam (F.B.) Morse.  # Author: Mendel Cooper # "
-"License: GPL3 # Reldate: 05/25/11"
+"#!/bin/bash\n"
+"# sam.sh, v. .01a\n"
+"# Still Another Morse (code training script)\n"
+"# With profuse apologies to Sam (F.B.) Morse.\n"
+"# Author: Mendel Cooper\n"
+"# License: GPL3\n"
+"# Reldate: 05/25/11\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:12
+#, no-wrap
 msgid ""
-"# Morse code training script.  # Converts arguments to audible dots and "
-"dashes.  # Note: lowercase input only at this time."
+"# Morse code training script.\n"
+"# Converts arguments to audible dots and dashes.\n"
+"# Note: lowercase input only at this time.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:20
+#, no-wrap
 msgid ""
-"# Get the wav files from the source tarball: # "
-"http://bash.deta.in/abs-guide-latest.tar.bz2 DOT='soundfiles/dot.wav' "
-"DASH='soundfiles/dash.wav' # Maybe move soundfiles to /usr/local/sounds?"
+"# Get the wav files from the source tarball:\n"
+"# http://bash.deta.in/abs-guide-latest.tar.bz2\n"
+"DOT='soundfiles/dot.wav'\n"
+"DASH='soundfiles/dash.wav'\n"
+"# Maybe move soundfiles to /usr/local/sounds?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:24
+#, no-wrap
 msgid ""
-"LETTERSPACE=300000 # Microseconds.  WORDSPACE=980000 # Nice and slow, for "
-"beginners. Maybe 5 wpm?"
+"LETTERSPACE=300000  # Microseconds.\n"
+"WORDSPACE=980000\n"
+"# Nice and slow, for beginners. Maybe 5 wpm?\n"
 msgstr ""
 
 #. type: Plain text
@@ -145,10 +157,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:103
+#, no-wrap
 msgid ""
-"######### Play the sounds ############ dot()  { aplay \"$DOT\" "
-"2&amp;>/dev/null; } dash() { aplay \"$DASH\" 2&amp;>/dev/null; } "
-"######################################"
+"######### Play the sounds ############\n"
+"dot()  { aplay \"$DOT\" 2&amp;>/dev/null;  }\n"
+"dash() { aplay \"$DASH\" 2&amp;>/dev/null; }\n"
+"######################################\n"
 msgstr ""
 
 #. type: Plain text
@@ -180,7 +194,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:124
-msgid "# int main()  # {"
+#, no-wrap
+msgid ""
+"# int main()\n"
+"# {\n"
 msgstr ""
 
 #. type: Plain text
@@ -227,12 +244,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:149
-msgid "echo; echo; echo \"$EXIT_MSG\"; echo"
+#, no-wrap
+msgid "echo; echo; echo \"$EXIT_MSG\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/sam.sh:152
-msgid "exit 0 # }"
+#, no-wrap
+msgid ""
+"exit 0\n"
+"# }\n"
 msgstr ""
 
 #. type: Plain text

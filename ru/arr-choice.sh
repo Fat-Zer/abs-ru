@@ -1,7 +1,8 @@
-#!/bin/bash # arr-choice.sh
+#!/bin/bash
+# arr-choice.sh
 
-# Passing arguments to a function to select #+ one particular variable out
-of a group.
+#  Passing arguments to a function to select
+#+ one particular variable out of a group.
 
 arr0=( 10 11 12 13 14 15 )
 arr1=( 20 21 22 23 24 25 )

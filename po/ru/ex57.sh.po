@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # badname.sh # Delete filenames in current directory containing "
-"bad characters."
+"#!/bin/bash\n"
+"# badname.sh\n"
+"# Delete filenames in current directory containing bad characters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -43,35 +45,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:19
+#, no-wrap
 msgid ""
-"# Now, take care of files containing all manner of whitespace.  find . -name "
-"\"* *\" -exec rm -f {} \\; # The path name of the file that _find_ finds "
-"replaces the \"{}\".  # The '\\' ensures that the ';' is interpreted "
-"literally, as end of command."
+"# Now, take care of files containing all manner of whitespace.\n"
+"find . -name \"* *\" -exec rm -f {} \\;\n"
+"# The path name of the file that _find_ finds replaces the \"{}\".\n"
+"# The '\\' ensures that the ';' is interpreted literally, as end of "
+"command.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:21
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:24
+#, no-wrap
 msgid ""
-"#--------------------------------------------------------------------- # "
-"Commands below this line will not execute because of _exit_ command."
+"#---------------------------------------------------------------------\n"
+"# Commands below this line will not execute because of _exit_ command.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:30
+#, no-wrap
 msgid ""
-"# An alternative to the above script: find . -name "
-"'*[+{;\"\\\\=?~()&lt;&gt;&amp;*|$ ]*' -maxdepth 0 \\ -exec rm -f '{}' \\; # "
-"The \"-maxdepth 0\" option ensures that _find_ will not search #+ "
-"subdirectories below $PWD."
+"# An alternative to the above script:\n"
+"find . -name '*[+{;\"\\\\=?~()&lt;&gt;&amp;*|$ ]*' -maxdepth 0 \\\n"
+"-exec rm -f '{}' \\;\n"
+"#  The \"-maxdepth 0\" option ensures that _find_ will not search\n"
+"#+ subdirectories below $PWD.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex57.sh:31
-msgid "# (Thanks, S.C.)"
+#, no-wrap
+msgid "# (Thanks, S.C.)\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,37 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # kill-byname.sh: Killing processes by name.  # Compare this "
-"script with kill-process.sh."
+"#!/bin/bash\n"
+"# kill-byname.sh: Killing processes by name.\n"
+"# Compare this script with kill-process.sh.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:8
+#, no-wrap
 msgid ""
-"# For instance, #+ try \"./kill-byname.sh xterm\" -- #+ and watch all the "
-"xterms on your desktop disappear."
+"#  For instance,\n"
+"#+ try \"./kill-byname.sh xterm\" --\n"
+"#+ and watch all the xterms on your desktop disappear.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:14
+#, no-wrap
 msgid ""
-"# Warning: # ------- # This is a fairly dangerous script.  # Running it "
-"carelessly (especially as root)  #+ can cause data loss and other "
-"undesirable effects."
+"#  Warning:\n"
+"#  -------\n"
+"#  This is a fairly dangerous script.\n"
+"#  Running it carelessly (especially as root)\n"
+"#+ can cause data loss and other undesirable effects.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:16
-msgid "E_BADARGS=66"
+#, no-wrap
+msgid "E_BADARGS=66\n"
 msgstr ""
 
 #. type: Plain text
@@ -66,23 +74,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:36
+#, no-wrap
 msgid ""
-"# --------------------------------------------------------------- # Notes: # "
-"-i is the \"replace strings\" option to xargs.  # The curly brackets are the "
-"placeholder for the replacement.  # 2&amp;>/dev/null suppresses unwanted "
-"error messages.  # # Can grep \"$PROCESS_NAME\" be replaced by pidof "
-"\"$PROCESS_NAME\"? # "
-"---------------------------------------------------------------"
+"# ---------------------------------------------------------------\n"
+"# Notes:\n"
+"# -i is the \"replace strings\" option to xargs.\n"
+"# The curly brackets are the placeholder for the replacement.\n"
+"# 2&amp;>/dev/null suppresses unwanted error messages.\n"
+"#\n"
+"# Can  grep \"$PROCESS_NAME\" be replaced by pidof \"$PROCESS_NAME\"?\n"
+"# ---------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:38
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/kill-byname.sh:40
+#, no-wrap
 msgid ""
-"# The \"killall\" command has the same effect as this script, #+ but using "
-"it is not quite as educational."
+"#  The \"killall\" command has the same effect as this script,\n"
+"#+ but using it is not quite as educational.\n"
 msgstr ""

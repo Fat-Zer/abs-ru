@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-func.sh:3
-msgid "#!/bin/bash # ind-func.sh: Passing an indirect reference to a function."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ind-func.sh: Passing an indirect reference to a function.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-func.sh:8
-msgid "echo_var ()  { echo \"$1\" }"
+#, no-wrap
+msgid ""
+"echo_var ()\n"
+"{\n"
+"echo \"$1\"\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-func.sh:11
-msgid "message=Hello Hello=Goodbye"
+#, no-wrap
+msgid ""
+"message=Hello\n"
+"Hello=Goodbye\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,7 +53,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-func.sh:17
-msgid "echo \"-------------\""
+#, no-wrap
+msgid "echo \"-------------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,5 +69,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-func.sh:23
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

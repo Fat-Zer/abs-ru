@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Another version of the "column totaler" script #+ that adds up a specified
-column (of numbers) in the target file.  # This one uses indirect
-references.
+#  Another version of the "column totaler" script
+#+ that adds up a specified column (of numbers) in the target file.
+#  This one uses indirect references.
 
-ARGS=2 E_WRONGARGS=85
+ARGS=2
+E_WRONGARGS=85
 
 if [ $# -ne "$ARGS" ] # Check for proper number of command-line args.
 then
@@ -26,8 +27,9 @@ column_number=$2    # Which column to total up.
 #   "
 
 
-# Begin awk script.  # ------------------------------------------------- awk
-"
+# Begin awk script.
+# -------------------------------------------------
+awk "
 
 { total += \$${column_number} # Indirect reference
 }
@@ -40,8 +42,9 @@ END {
 # -------------------------------------------------
 # End awk script.
 
-# Indirect variable reference avoids the hassles #+ of referencing a shell
-variable within the embedded awk script.  # Thanks, Stephane Chazelas.
+#  Indirect variable reference avoids the hassles
+#+ of referencing a shell variable within the embedded awk script.
+#  Thanks, Stephane Chazelas.
 
 
 exit $?

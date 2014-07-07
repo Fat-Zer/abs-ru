@@ -11,7 +11,8 @@ declare -A array2
 declare -a array3
 declare -A array4
 
-echo "===Assignment tests===" echo
+echo "===Assignment tests==="
+echo
 
 echo "Assigning a simple variable:"
 # References $i twice to equalize lookup times.

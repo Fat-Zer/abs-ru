@@ -1,8 +1,11 @@
 #!/bin/bash
 
-TIME_LIMIT=10 INTERVAL=1
+TIME_LIMIT=10
+INTERVAL=1
 
-echo echo "Hit Control-C to exit before $TIME_LIMIT seconds." echo
+echo
+echo "Hit Control-C to exit before $TIME_LIMIT seconds."
+echo
 
 while [ "$SECONDS" -le "$TIME_LIMIT" ]
 do   #   $SECONDS is an internal shell variable.
@@ -19,6 +22,6 @@ do   #   $SECONDS is an internal shell variable.
   sleep $INTERVAL
 done
 
-echo -e "\a" # Beep!
+echo -e "\a"  # Beep!
 
 exit 0

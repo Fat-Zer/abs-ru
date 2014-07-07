@@ -1,5 +1,5 @@
-#!/bin/bash # erase.sh: Using "stty" to set an erase character when reading
-input.
+#!/bin/bash
+# erase.sh: Using "stty" to set an erase character when reading input.
 
 echo -n "What is your name? "
 read name                      #  Try to backspace
@@ -14,5 +14,5 @@ echo "Your name is $name."
 
 exit 0
 
-# Even after the script exits, the new key value remains set.  # Exercise:
-How would you reset the erase character to the default value?
+# Even after the script exits, the new key value remains set.
+# Exercise: How would you reset the erase character to the default value?

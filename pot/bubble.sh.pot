@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:3
-msgid "#!/bin/bash # bubble.sh: Bubble sort, of sorts."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# bubble.sh: Bubble sort, of sorts.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:5
-msgid "# Recall the algorithm for a bubble sort. In this particular version..."
+#, no-wrap
+msgid "# Recall the algorithm for a bubble sort. In this particular version...\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:13
+#, no-wrap
 msgid ""
-"# With each successive pass through the array to be sorted, #+ compare two "
-"adjacent elements, and swap them if out of order.  # At the end of the first "
-"pass, the \"heaviest\" element has sunk to bottom.  # At the end of the "
-"second pass, the next \"heaviest\" one has sunk next to bottom.  # And so "
-"forth.  # This means that each successive pass needs to traverse less of the "
-"array.  # You will therefore notice a speeding up in the printing of the "
-"later passes."
+"#  With each successive pass through the array to be sorted,\n"
+"#+ compare two adjacent elements, and swap them if out of order.\n"
+"#  At the end of the first pass, the \"heaviest\" element has sunk to "
+"bottom.\n"
+"#  At the end of the second pass, the next \"heaviest\" one has sunk next to "
+"bottom.\n"
+"#  And so forth.\n"
+"#  This means that each successive pass needs to traverse less of the "
+"array.\n"
+"#  You will therefore notice a speeding up in the printing of the later "
+"passes.\n"
 msgstr ""
 
 #. type: Plain text
@@ -69,25 +78,29 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:32
+#, no-wrap
 msgid ""
-"# Is it permissable to split an array variable over multiple lines #+ using "
-"an escape (\\)? # Yes."
+"#  Is it permissable to split an array variable over multiple lines\n"
+"#+ using an escape (\\)?\n"
+"#  Yes.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:37
+#, no-wrap
 msgid ""
-"Countries=(Netherlands Ukraine Zaire Turkey Russia Yemen Syria \\ Brazil "
-"Argentina Nicaragua Japan Mexico Venezuela Greece England \\ Israel Peru "
-"Canada Oman Denmark Wales France Kenya \\ Xanadu Qatar Liechtenstein "
-"Hungary)"
+"Countries=(Netherlands Ukraine Zaire Turkey Russia Yemen Syria \\\n"
+"Brazil Argentina Nicaragua Japan Mexico Venezuela Greece England \\\n"
+"Israel Peru Canada Oman Denmark Wales France Kenya \\\n"
+"Xanadu Qatar Liechtenstein Hungary)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:40
+#, no-wrap
 msgid ""
-"# \"Xanadu\" is the mythical place where, according to Coleridge, #+ Kubla "
-"Khan did a pleasure dome decree."
+"# \"Xanadu\" is the mythical place where, according to Coleridge,\n"
+"#+ Kubla Khan did a pleasure dome decree.\n"
 msgstr ""
 
 #. type: Plain text
@@ -98,19 +111,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:45
-msgid "echo \"0: ${Countries[*]}\" # List entire array at pass 0."
+#, no-wrap
+msgid "echo \"0: ${Countries[*]}\"  # List entire array at pass 0.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:48
+#, no-wrap
 msgid ""
-"number_of_elements=${#Countries[@]} let \"comparisons = $number_of_elements "
-"- 1\""
+"number_of_elements=${#Countries[@]}\n"
+"let \"comparisons = $number_of_elements - 1\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:50
-msgid "count=1 # Pass number."
+#, no-wrap
+msgid "count=1 # Pass number.\n"
 msgstr ""
 
 #. type: Plain text
@@ -200,5 +216,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bubble.sh:97
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

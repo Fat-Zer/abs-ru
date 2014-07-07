@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:6
+#, no-wrap
 msgid ""
-"#! /bin/bash # CopyArray.sh # # This script written by Michael Zick.  # Used "
-"here with permission."
+"#! /bin/bash\n"
+"# CopyArray.sh\n"
+"#\n"
+"# This script written by Michael Zick.\n"
+"# Used here with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:9
+#, no-wrap
 msgid ""
-"# How-To \"Pass by Name &amp; Return by Name\" #+ or \"Building your own "
-"assignment statement\"."
+"#  How-To \"Pass by Name &amp; Return by Name\"\n"
+"#+ or \"Building your own assignment statement\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:12
-msgid "CpArray_Mac() {"
+#, no-wrap
+msgid "CpArray_Mac() {\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:14
-msgid "# Assignment Command Statement Builder"
+#, no-wrap
+msgid "# Assignment Command Statement Builder\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,7 +60,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:24
-msgid "# That could all be a single command.  # Matter of style only.  }"
+#, no-wrap
+msgid ""
+"# That could all be a single command.\n"
+"# Matter of style only.\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -66,14 +77,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:30
-msgid "Hype()  {"
+#, no-wrap
+msgid ""
+"Hype()\n"
+"{\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:34
+#, no-wrap
 msgid ""
-"# Hype the array named $1.  # (Splice it together with array containing "
-"\"Really Rocks\".)  # Return in array named $2."
+"# Hype the array named $1.\n"
+"# (Splice it together with array containing \"Really Rocks\".)\n"
+"# Return in array named $2.\n"
 msgstr ""
 
 #. type: Plain text
@@ -96,32 +112,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:45
-msgid "declare -a before=( Advanced Bash Scripting )  declare -a after"
+#, no-wrap
+msgid ""
+"declare -a before=( Advanced Bash Scripting )\n"
+"declare -a after\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:47 abs-guide/CopyArray.sh:64
-msgid "echo \"Array Before = ${before[@]}\""
+#, no-wrap
+msgid "echo \"Array Before = ${before[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:49
-msgid "Hype before after"
+#, no-wrap
+msgid "Hype before after\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:51
-msgid "echo \"Array After = ${after[@]}\""
+#, no-wrap
+msgid "echo \"Array After = ${after[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:53
-msgid "# Too much hype?"
+#, no-wrap
+msgid "# Too much hype?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:55
-msgid "echo \"What ${after[@]:3:2}?\""
+#, no-wrap
+msgid "echo \"What ${after[@]:3:2}?\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -134,15 +158,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:60
-msgid "echo \"Array Modest = ${modest[@]}\""
+#, no-wrap
+msgid "echo \"Array Modest = ${modest[@]}\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:62
-msgid "# What happened to 'before' ?"
+#, no-wrap
+msgid "# What happened to 'before' ?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/CopyArray.sh:65
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

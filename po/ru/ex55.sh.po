@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex55.sh:2
-msgid "#!/bin/sh"
+#, no-wrap
+msgid "#!/bin/sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex55.sh:4
-msgid "# --> Comments added by the author of this document marked by \"# -->\"."
+#, no-wrap
+msgid "# --> Comments added by the author of this document marked by \"# -->\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex55.sh:7
+#, no-wrap
 msgid ""
-"# --> This is part of the 'rc' script package # --> by Miquel van "
-"Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>."
+"# --> This is part of the 'rc' script package\n"
+"# --> by Miquel van Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex55.sh:10
+#, no-wrap
 msgid ""
-"# --> This particular script seems to be Red Hat / FC specific # --> (may "
-"not be present in other distributions)."
+"# --> This particular script seems to be Red Hat / FC specific\n"
+"# --> (may not be present in other distributions).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex55.sh:13
+#, no-wrap
 msgid ""
-"# Bring down all unneeded services that are still running #+ (there "
-"shouldn't be any, so this is just a sanity check)"
+"#  Bring down all unneeded services that are still running\n"
+"#+ (there shouldn't be any, so this is just a sanity check)\n"
 msgstr ""
 
 #. type: Plain text

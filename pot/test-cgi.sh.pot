@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,79 +18,125 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:5
-msgid "#!/bin/bash # test-cgi.sh # by Michael Zick # Used with permission"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# test-cgi.sh\n"
+"# by Michael Zick\n"
+"# Used with permission\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:10
+#, no-wrap
 msgid ""
-"# May have to change the location for your site.  # (At the ISP's servers, "
-"Bash may not be in the usual place.)  # Other places: /usr/bin or "
-"/usr/local/bin # Might even try it without any path in sha-bang."
+"# May have to change the location for your site.\n"
+"# (At the ISP's servers, Bash may not be in the usual place.)\n"
+"# Other places: /usr/bin or /usr/local/bin\n"
+"# Might even try it without any path in sha-bang.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:13
-msgid "# Disable filename globbing.  set -f"
+#, no-wrap
+msgid ""
+"# Disable filename globbing.\n"
+"set -f\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:17
-msgid "# Header tells browser what to expect.  echo Content-type: text/plain echo"
+#, no-wrap
+msgid ""
+"# Header tells browser what to expect.\n"
+"echo Content-type: text/plain\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:20
-msgid "echo CGI/1.0 test script report: echo"
+#, no-wrap
+msgid ""
+"echo CGI/1.0 test script report:\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:24
-msgid "echo environment settings: set echo"
+#, no-wrap
+msgid ""
+"echo environment settings:\n"
+"set\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:28
-msgid "echo whereis bash? whereis bash echo"
+#, no-wrap
+msgid ""
+"echo whereis bash?\n"
+"whereis bash\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:33
-msgid "echo who are we? echo ${BASH_VERSINFO[*]} echo"
+#, no-wrap
+msgid ""
+"echo who are we?\n"
+"echo ${BASH_VERSINFO[*]}\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:36
-msgid "echo argc is $#. argv is \"$*\".  echo"
+#, no-wrap
+msgid ""
+"echo argc is $#. argv is \"$*\".\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:38
-msgid "# CGI/1.0 expected environment variables."
+#, no-wrap
+msgid "# CGI/1.0 expected environment variables.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:56
+#, no-wrap
 msgid ""
-"echo SERVER_SOFTWARE = $SERVER_SOFTWARE echo SERVER_NAME = $SERVER_NAME echo "
-"GATEWAY_INTERFACE = $GATEWAY_INTERFACE echo SERVER_PROTOCOL = "
-"$SERVER_PROTOCOL echo SERVER_PORT = $SERVER_PORT echo REQUEST_METHOD = "
-"$REQUEST_METHOD echo HTTP_ACCEPT = \"$HTTP_ACCEPT\" echo PATH_INFO = "
-"\"$PATH_INFO\" echo PATH_TRANSLATED = \"$PATH_TRANSLATED\" echo SCRIPT_NAME "
-"= \"$SCRIPT_NAME\" echo QUERY_STRING = \"$QUERY_STRING\" echo REMOTE_HOST = "
-"$REMOTE_HOST echo REMOTE_ADDR = $REMOTE_ADDR echo REMOTE_USER = $REMOTE_USER "
-"echo AUTH_TYPE = $AUTH_TYPE echo CONTENT_TYPE = $CONTENT_TYPE echo "
-"CONTENT_LENGTH = $CONTENT_LENGTH"
+"echo SERVER_SOFTWARE = $SERVER_SOFTWARE\n"
+"echo SERVER_NAME = $SERVER_NAME\n"
+"echo GATEWAY_INTERFACE = $GATEWAY_INTERFACE\n"
+"echo SERVER_PROTOCOL = $SERVER_PROTOCOL\n"
+"echo SERVER_PORT = $SERVER_PORT\n"
+"echo REQUEST_METHOD = $REQUEST_METHOD\n"
+"echo HTTP_ACCEPT = \"$HTTP_ACCEPT\"\n"
+"echo PATH_INFO = \"$PATH_INFO\"\n"
+"echo PATH_TRANSLATED = \"$PATH_TRANSLATED\"\n"
+"echo SCRIPT_NAME = \"$SCRIPT_NAME\"\n"
+"echo QUERY_STRING = \"$QUERY_STRING\"\n"
+"echo REMOTE_HOST = $REMOTE_HOST\n"
+"echo REMOTE_ADDR = $REMOTE_ADDR\n"
+"echo REMOTE_USER = $REMOTE_USER\n"
+"echo AUTH_TYPE = $AUTH_TYPE\n"
+"echo CONTENT_TYPE = $CONTENT_TYPE\n"
+"echo CONTENT_LENGTH = $CONTENT_LENGTH\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:58
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:61
-msgid "# Here document to give short instructions.  :&lt;&lt;-'_test_CGI_'"
+#, no-wrap
+msgid ""
+"# Here document to give short instructions.\n"
+":&lt;&lt;-'_test_CGI_'\n"
 msgstr ""
 
 #. type: Bullet: '1) '
@@ -105,5 +151,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-cgi.sh:65
-msgid "_test_CGI_"
+#, no-wrap
+msgid "_test_CGI_\n"
 msgstr ""

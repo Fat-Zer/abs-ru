@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex73.sh:3
-msgid "#!/bin/bash # Creating a swap file."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Creating a swap file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex73.sh:6
+#, no-wrap
 msgid ""
-"# A swap file provides a temporary storage cache #+ which helps speed up "
-"certain filesystem operations."
+"#  A swap file provides a temporary storage cache\n"
+"#+ which helps speed up certain filesystem operations.\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,7 +42,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex73.sh:14
-msgid "FILE=/swap BLOCKSIZE=1024 MINBLOCKS=40 SUCCESS=0"
+#, no-wrap
+msgid ""
+"FILE=/swap\n"
+"BLOCKSIZE=1024\n"
+"MINBLOCKS=40\n"
+"SUCCESS=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -110,10 +119,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex73.sh:62
-msgid "echo \"Swap file created and activated.\""
+#, no-wrap
+msgid "echo \"Swap file created and activated.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex73.sh:63
-msgid "exit $retcode"
+#, no-wrap
+msgid "exit $retcode\n"
 msgstr ""

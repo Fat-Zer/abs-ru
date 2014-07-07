@@ -1,10 +1,14 @@
-#!/bin/bash # read-novar.sh
+#!/bin/bash
+# read-novar.sh
 
 echo
 
-# -------------------------- # echo -n "Enter a value: " read var echo
-"\"var\" = "$var"" # Everything as expected here.  #
--------------------------- #
+# -------------------------- #
+echo -n "Enter a value: "
+read var
+echo "\"var\" = "$var""
+# Everything as expected here.
+# -------------------------- #
 
 echo
 
@@ -17,18 +21,20 @@ echo "\"var\" = "$var""
 # This is equivalent to the first code block.
 # ------------------------------------------------------------------- #
 
-echo echo "=========================" echo
+echo
+echo "========================="
+echo
 
 
-# This example is similar to the "reply.sh" script.  # However, this one
-shows that $REPLY is available #+ even after a 'read' to a variable in the
-conventional way.
+#  This example is similar to the "reply.sh" script.
+#  However, this one shows that $REPLY is available
+#+ even after a 'read' to a variable in the conventional way.
 
 
 # ================================================================= #
 
-# In some instances, you might wish to discard the first value read.  # In
-such cases, simply ignore the $REPLY variable.
+#  In some instances, you might wish to discard the first value read.
+#  In such cases, simply ignore the $REPLY variable.
 
 { # Code block.
 read            # Line 1, to be discarded.

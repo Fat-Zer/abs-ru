@@ -1,11 +1,17 @@
-#!/bin/bash # # # Random password generator for Bash 2.x + #+ by Antek
-Sawicki &lt;tenox@tenox.tc&gt;, #+ who generously gave usage permission to
-the ABS Guide author.  # # ==> Comments added by document author ==>
+#!/bin/bash
+#
+#
+#  Random password generator for Bash 2.x +
+#+ by Antek Sawicki &lt;tenox@tenox.tc&gt;,
+#+ who generously gave usage permission to the ABS Guide author.
+#
+# ==> Comments added by document author ==>
 
 
-MATRIX="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" #
-==> Password will consist of alphanumeric characters.  LENGTH="8" # ==> May
-change 'LENGTH' for longer password.
+MATRIX="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+# ==> Password will consist of alphanumeric characters.
+LENGTH="8"
+# ==> May change 'LENGTH' for longer password.
 
 
 while [ "${n:=1}" -le "$LENGTH" ]

@@ -1,9 +1,11 @@
-#!/bin/bash # tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less
-buggy]
+#!/bin/bash
+# tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less buggy]
 
-# Convert a text file to HTML format.  # Author: Mendel Cooper # License:
-GPL3 # Usage: sh tohtml.sh &lt; textfile > htmlfile # Script can easily be
-modified to accept source and target filenames.
+# Convert a text file to HTML format.
+# Author: Mendel Cooper
+# License: GPL3
+# Usage: sh tohtml.sh &lt; textfile > htmlfile
+# Script can easily be modified to accept source and target filenames.
 
 #    Assumptions:
 # 1) Paragraphs in (target) text file are separated by a blank line.

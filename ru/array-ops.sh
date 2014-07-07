@@ -1,4 +1,5 @@
-#!/bin/bash # array-ops.sh: More fun with arrays.
+#!/bin/bash
+# array-ops.sh: More fun with arrays.
 
 
 array=( zero one two three four five )

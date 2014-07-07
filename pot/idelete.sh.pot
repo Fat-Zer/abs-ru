@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/idelete.sh:3
-msgid "#!/bin/bash # idelete.sh: Deleting a file by its inode number."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# idelete.sh: Deleting a file by its inode number.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/idelete.sh:6
+#, no-wrap
 msgid ""
-"# This is useful when a filename starts with an illegal character, #+ such "
-"as ? or -."
+"#  This is useful when a filename starts with an illegal character,\n"
+"#+ such as ? or -.\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,12 +66,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/idelete.sh:29
+#, no-wrap
 msgid ""
-"inum=`ls -i | grep \"$1\" | awk '{print $1}'` # inum = inode (index node) "
-"number of file # "
-"----------------------------------------------------------------------- # "
-"Every file has an inode, a record that holds its physical address info.  # "
-"-----------------------------------------------------------------------"
+"inum=`ls -i | grep \"$1\" | awk '{print $1}'`\n"
+"# inum = inode (index node) number of file\n"
+"# -----------------------------------------------------------------------\n"
+"# Every file has an inode, a record that holds its physical address info.\n"
+"# -----------------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,5 +104,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/idelete.sh:46
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

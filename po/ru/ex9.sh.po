@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:3
-msgid "#!/bin/bash # ex9.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex9.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:5
-msgid "# Variables: assignment and substitution"
+#, no-wrap
+msgid "# Variables: assignment and substitution\n"
 msgstr ""
 
 #. type: Plain text
@@ -37,10 +41,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:13
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------------------- # "
-"No space permitted on either side of = sign when initializing variables.  # "
-"What happens if there is a space?"
+"#-------------------------------------------------------------------------\n"
+"# No space permitted on either side of = sign when initializing variables.\n"
+"# What happens if there is a space?\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,7 +97,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:38 abs-guide/ex9.sh:48
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -120,7 +126,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:55
-msgid "# Notice the effect of different types of quoting."
+#, no-wrap
+msgid "# Notice the effect of different types of quoting.\n"
 msgstr ""
 
 #. type: Plain text
@@ -135,15 +142,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:63 abs-guide/ex9.sh:75
-msgid "# --------------------------------------------------------------"
+#, no-wrap
+msgid "# --------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:67
+#, no-wrap
 msgid ""
-"# It is permissible to set multiple variables on the same line, #+ if "
-"separated by white space.  # Caution, this may reduce legibility, and may "
-"not be portable."
+"#  It is permissible to set multiple variables on the same line,\n"
+"#+ if separated by white space.\n"
+"#  Caution, this may reduce legibility, and may not be portable.\n"
 msgstr ""
 
 #. type: Plain text
@@ -157,12 +166,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:73
-msgid "# May cause problems with legacy versions of \"sh\" . . ."
+#, no-wrap
+msgid "# May cause problems with legacy versions of \"sh\" . . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:77 abs-guide/ex9.sh:94
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -215,5 +226,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex9.sh:109
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

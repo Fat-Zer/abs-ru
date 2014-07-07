@@ -1,4 +1,5 @@
-#!/bin/bash # How random is RANDOM?
+#!/bin/bash
+# How random is RANDOM?
 
 RANDOM=$$       # Reseed the random number generator using script process ID.
 
@@ -51,13 +52,18 @@ print_result
 
 exit $?
 
-# The scores should distribute evenly, assuming RANDOM is random.  # With
-$MAXTHROWS at 600, all should cluster around 100, #+ plus-or-minus 20 or
-so.  # # Keep in mind that RANDOM is a ***pseudorandom*** generator, #+ and
-not a spectacularly good one at that.
+#  The scores should distribute evenly, assuming RANDOM is random.
+#  With $MAXTHROWS at 600, all should cluster around 100,
+#+ plus-or-minus 20 or so.
+#
+#  Keep in mind that RANDOM is a ***pseudorandom*** generator,
+#+ and not a spectacularly good one at that.
 
-# Randomness is a deep and complex subject.  # Sufficiently long "random"
-sequences may exhibit #+ chaotic and other "non-random" behavior.
+#  Randomness is a deep and complex subject.
+#  Sufficiently long "random" sequences may exhibit
+#+ chaotic and other "non-random" behavior.
 
-# Exercise (easy): # --------------- # Rewrite this script to flip a coin
-1000 times.  # Choices are "HEADS" and "TAILS."
+# Exercise (easy):
+# ---------------
+# Rewrite this script to flip a coin 1000 times.
+# Choices are "HEADS" and "TAILS."

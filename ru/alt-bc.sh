@@ -1,5 +1,6 @@
-#!/bin/bash # Invoking 'bc' using command substitution # in combination with
-a 'here document'.
+#!/bin/bash
+# Invoking 'bc' using command substitution
+# in combination with a 'here document'.
 
 
 var1=`bc &lt;&lt; EOF
@@ -9,7 +10,11 @@ EOF
 echo $var1       # 362.56
 
 
-# $( ... ) notation also works.  v1=23.53 v2=17.881 v3=83.501 v4=171.63
+#  $( ... ) notation also works.
+v1=23.53
+v2=17.881
+v3=83.501
+v4=171.63
 
 var2=$(bc &lt;&lt; EOF
 scale = 4

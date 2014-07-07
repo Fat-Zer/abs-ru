@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pid-identifier.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # pid-identifier.sh: # Gives complete path name to process "
-"associated with pid."
+"#!/bin/bash\n"
+"# pid-identifier.sh:\n"
+"# Gives complete path name to process associated with pid.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pid-identifier.sh:11
+#, no-wrap
 msgid ""
-"ARGNO=1 # Number of arguments the script expects.  E_WRONGARGS=65 "
-"E_BADPID=66 E_NOSUCHPROCESS=67 E_NOPERMISSION=68 PROCFILE=exe"
+"ARGNO=1  # Number of arguments the script expects.\n"
+"E_WRONGARGS=65\n"
+"E_BADPID=66\n"
+"E_NOSUCHPROCESS=67\n"
+"E_NOPERMISSION=68\n"
+"PROCFILE=exe\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,7 +89,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pid-identifier.sh:40
-msgid "# To simplify the entire process, use \"pidof\"."
+#, no-wrap
+msgid "# To simplify the entire process, use \"pidof\".\n"
 msgstr ""
 
 #. type: Plain text
@@ -151,10 +159,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pid-identifier.sh:84
-msgid "# Additional commentary by Stephane Chazelas."
+#, no-wrap
+msgid "# Additional commentary by Stephane Chazelas.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pid-identifier.sh:85
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/realname.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # realname.sh # # From username, gets \"real name\" from "
-"/etc/passwd."
+"#!/bin/bash\n"
+"# realname.sh\n"
+"#\n"
+"# From username, gets \"real name\" from /etc/passwd.\n"
 msgstr ""
 
 #. type: Plain text
@@ -33,7 +36,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/realname.sh:12
-msgid "file=/etc/passwd pattern=$1"
+#, no-wrap
+msgid ""
+"file=/etc/passwd\n"
+"pattern=$1\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,7 +69,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/realname.sh:29
-msgid "file_excerpt $pattern"
+#, no-wrap
+msgid "file_excerpt $pattern\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,5 +89,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/realname.sh:38
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

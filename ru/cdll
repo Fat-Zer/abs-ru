@@ -468,11 +468,14 @@ typeset -i cd_lchar cd_rchar cd_flchar
                         #  This is the number of chars to allow for the #
 cd_flchar=${FLCHAR:=75} #+ cd_flchar is used for for the @s &amp; @h history#
 
-typeset -ax CD CDS # cd_mset="\n\tDefault mode is now set - entering cd with
-no parameters \ has the default action\n\tUse cd -d or -D for cd to go to \ 
-previous directory with no parameters\n" cd_mnset="\n\tNon-default mode is
-now set - entering cd with no \ parameters is the same as entering cd
-0\n\tUse cd -d or \ -D to change default cd action\n"
+typeset -ax CD CDS
+#
+cd_mset="\n\tDefault mode is now set - entering cd with no parameters \
+has the default action\n\tUse cd -d or -D for cd to go to \
+previous directory with no parameters\n"
+cd_mnset="\n\tNon-default mode is now set - entering cd with no \
+parameters is the same as entering cd 0\n\tUse cd -d or \
+-D to change default cd action\n"
 
 # ==================================================================== #
 
@@ -480,50 +483,50 @@ now set - entering cd with no \ parameters is the same as entering cd
 
 : &lt;&lt;DOCUMENTATION
 
-Written by Phil Braham. Realtime Software Pty Ltd.  Released under GNU
-license. Free to use. Please pass any modifications or comments to the
-author Phil Braham:
+Written by Phil Braham. Realtime Software Pty Ltd.
+Released under GNU license. Free to use. Please pass any modifications
+or comments to the author Phil Braham:
 
 realtime@mpx.com.au
 =======================================================================
 
-cdll is a replacement for cd and incorporates similar functionality to the
-bash pushd and popd commands but is independent of them.
+cdll is a replacement for cd and incorporates similar functionality to
+the bash pushd and popd commands but is independent of them.
 
-This version of cdll has been tested on Linux using Bash. It will work on
-most Linux versions but will probably not work on other shells without
+This version of cdll has been tested on Linux using Bash. It will work
+on most Linux versions but will probably not work on other shells without
 modification.
 
 Introduction
 ============
 
 cdll allows easy moving about between directories. When changing to a new
-directory the current one is automatically put onto a stack. By default 50
-entries are kept, but this is configurable. Special directories can be kept
-for easy access - by default up to 10, but this is configurable. The most
-recent stack entries and the special entries can be easily viewed.
+directory the current one is automatically put onto a stack. By default
+50 entries are kept, but this is configurable. Special directories can be
+kept for easy access - by default up to 10, but this is configurable. The
+most recent stack entries and the special entries can be easily viewed.
 
-The directory stack and special entries can be saved to, and loaded from, a
-file. This allows them to be set up on login, saved before logging out or
-changed when moving project to project.
+The directory stack and special entries can be saved to, and loaded from,
+a file. This allows them to be set up on login, saved before logging out
+or changed when moving project to project.
 
 In addition, cdll provides a flexible command prompt facility that allows,
-for example, a directory name in colour that is truncated from the left if
-it gets too long.
+for example, a directory name in colour that is truncated from the left
+if it gets too long.
 
 
 Setting up cdll
 ===============
 
-Copy cdll to either your local home directory or a central directory such as
-/usr/bin (this will require root access).
+Copy cdll to either your local home directory or a central directory
+such as /usr/bin (this will require root access).
 
-Copy the file cdfile to your home directory. It will require read and write
-access. This a default file that contains a directory stack and special
-entries.
+Copy the file cdfile to your home directory. It will require read and
+write access. This a default file that contains a directory stack and
+special entries.
 
-To replace the cd command you must add commands to your login script.  The
-login script is one or more of:
+To replace the cd command you must add commands to your login script.
+The login script is one or more of:
 
     /etc/profile
     ~/.bash_profile
@@ -570,15 +573,15 @@ Thus the script looks something like this:
 The full meaning of these commands will become clear later.
 
 There are a couple of caveats. If another program changes the directory
-without calling cdll, then the directory won't be put on the stack and also
-if the prompt facility is used then this will not be updated. Two programs
-that can do this are pushd and popd. To update the prompt and stack simply
-enter:
+without calling cdll, then the directory won't be put on the stack and
+also if the prompt facility is used then this will not be updated. Two
+programs that can do this are pushd and popd. To update the prompt and
+stack simply enter:
 
     cd .
     
-Note that if the previous entry on the stack is the current directory then
-the stack is not updated.
+Note that if the previous entry on the stack is the current directory
+then the stack is not updated.
 
 Usage
 =====  
@@ -619,9 +622,9 @@ Examples
 ========
 
 These examples assume non-default mode is set (that is, cd with no
-parameters will go to the most recent stack directory), that aliases have
-been set up for cd and @ as described above and that cd's prompt facility is
-active and the prompt length is 21 characters.
+parameters will go to the most recent stack directory), that aliases
+have been set up for cd and @ as described above and that cd's prompt
+facility is active and the prompt length is 21 characters.
 
     /home/phil$ @
     # List the entries with the @

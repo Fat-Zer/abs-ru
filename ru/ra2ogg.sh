@@ -1,4 +1,5 @@
-#!/bin/bash # ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.
+#!/bin/bash
+# ra2ogg.sh: Convert streaming audio files (*.ra) to ogg.
 
 # Uses the "mplayer" media player program:
 #      http://www.mplayerhq.hu/homepage
@@ -22,8 +23,8 @@ fi
 
 
 ##########################################################################
-mplayer "$1" -ao pcm:file=$OUTFILE oggenc "$OUTFILE" # Correct file
-extension automatically added by oggenc.
+mplayer "$1" -ao pcm:file=$OUTFILE
+oggenc "$OUTFILE"  # Correct file extension automatically added by oggenc.
 ##########################################################################
 
 rm "$OUTFILE"      # Delete intermediate *.wav file.
@@ -31,14 +32,20 @@ rm "$OUTFILE"      # Delete intermediate *.wav file.
 
 exit $?
 
-# Note: # ---- # On a Website, simply clicking on a *.ram streaming audio
-file #+ usually only downloads the URL of the actual *.ra audio file.  # You
-can then use "wget" or something similar #+ to download the *.ra file
-itself.
+#  Note:
+#  ----
+#  On a Website, simply clicking on a *.ram streaming audio file
+#+ usually only downloads the URL of the actual *.ra audio file.
+#  You can then use "wget" or something similar
+#+ to download the *.ra file itself.
 
 
-# Exercises: # --------- # As is, this script converts only *.ra filenames.
-# Add flexibility by permitting use of *.ram and other filenames.  # # If
-you're really ambitious, expand the script #+ to do automatic downloads and
-conversions of streaming audio files.  # Given a URL, batch download
-streaming audio files (using "wget")  #+ and convert them on the fly.
+#  Exercises:
+#  ---------
+#  As is, this script converts only *.ra filenames.
+#  Add flexibility by permitting use of *.ram and other filenames.
+#
+#  If you're really ambitious, expand the script
+#+ to do automatic downloads and conversions of streaming audio files.
+#  Given a URL, batch download streaming audio files (using "wget")
+#+ and convert them on the fly.

@@ -1,10 +1,13 @@
-# This is a data file loaded by a script.  # Files of this type may contain
-variables, functions, etc.  # It loads with a 'source' or '.' command from a
-shell script.
+# This is a data file loaded by a script.
+# Files of this type may contain variables, functions, etc.
+# It loads with a 'source' or '.' command from a shell script.
 
 # Let's initialize some variables.
 
-variable1=23 variable2=474 variable3=5 variable4=97
+variable1=23
+variable2=474
+variable3=5
+variable4=97
 
 message1="Greetings from *** line $LINENO *** of the data file!"
 message2="Enough for now. Goodbye."

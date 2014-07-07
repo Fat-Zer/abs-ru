@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/userlist.sh:3
-msgid "#!/bin/bash # userlist.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# userlist.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -45,18 +48,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/userlist.sh:22
-msgid "# USER #1 = root # USER #2 = bin # USER #3 = daemon # ...  # USER #33 = bozo"
+#, no-wrap
+msgid ""
+"# USER #1 = root\n"
+"# USER #2 = bin\n"
+"# USER #3 = daemon\n"
+"# ...\n"
+"# USER #33 = bozo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/userlist.sh:24
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/userlist.sh:29
+#, no-wrap
 msgid ""
-"# Discussion: # ---------- # How is it that an ordinary user, or a script "
-"run by same, #+ can read /etc/passwd? (Hint: Check the /etc/passwd file "
-"permissions.)  # Is this a security hole? Why or why not?"
+"#  Discussion:\n"
+"#  ----------\n"
+"#  How is it that an ordinary user, or a script run by same,\n"
+"#+ can read /etc/passwd? (Hint: Check the /etc/passwd file permissions.)\n"
+"#  Is this a security hole? Why or why not?\n"
 msgstr ""

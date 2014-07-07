@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # Optimized Sieve of Eratosthenes # Script by Jared Martin, with "
-"very minor changes by ABS Guide author.  # Used in ABS Guide with permission "
-"(thanks!)."
+"#!/bin/bash\n"
+"# Optimized Sieve of Eratosthenes\n"
+"# Script by Jared Martin, with very minor changes by ABS Guide author.\n"
+"# Used in ABS Guide with permission (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:8
+#, no-wrap
 msgid ""
-"# Based on script in Advanced Bash Scripting Guide.  # "
-"http://tldp.org/LDP/abs/html/arrays.html#PRIMES0 (ex68.sh)."
+"# Based on script in Advanced Bash Scripting Guide.\n"
+"# http://tldp.org/LDP/abs/html/arrays.html#PRIMES0 (ex68.sh).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:11
+#, no-wrap
 msgid ""
-"# http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf (reference)  # Check "
-"results against http://primes.utm.edu/lists/small/1000.txt"
+"# http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf (reference)\n"
+"# Check results against http://primes.utm.edu/lists/small/1000.txt\n"
 msgstr ""
 
 #. type: Plain text
@@ -49,12 +53,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:16
-msgid "UPPER_LIMIT=${1:?\"Need an upper limit of primes to search.\"}"
+#, no-wrap
+msgid "UPPER_LIMIT=${1:?\"Need an upper limit of primes to search.\"}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:18
-msgid "Primes=( '' $(seq ${UPPER_LIMIT}) )"
+#, no-wrap
+msgid "Primes=( '' $(seq ${UPPER_LIMIT}) )\n"
 msgstr ""
 
 #. type: Plain text
@@ -86,5 +92,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex68a.sh:36
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

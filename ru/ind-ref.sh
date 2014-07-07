@@ -1,5 +1,6 @@
-#!/bin/bash # ind-ref.sh: Indirect variable referencing.  # Accessing the
-contents of the contents of a variable.
+#!/bin/bash
+# ind-ref.sh: Indirect variable referencing.
+# Accessing the contents of the contents of a variable.
 
 # First, let's fool around a little.
 
@@ -57,10 +58,13 @@ echo -n "dereferenced \"t\" = "; eval echo \$$t    # dereferenced "t" = 24
 
 echo
 
-t=table_cell_3 NEW_VAL=387 table_cell_3=$NEW_VAL echo "Changing value of
-\"table_cell_3\" to $NEW_VAL." echo "\"table_cell_3\" now $table_cell_3"
-echo -n "dereferenced \"t\" now "; eval echo \$$t # "eval" takes the two
-arguments "echo" and "\$$t" (set equal to $table_cell_3)
+t=table_cell_3
+NEW_VAL=387
+table_cell_3=$NEW_VAL
+echo "Changing value of \"table_cell_3\" to $NEW_VAL."
+echo "\"table_cell_3\" now $table_cell_3"
+echo -n "dereferenced \"t\" now "; eval echo \$$t
+# "eval" takes the two arguments "echo" and "\$$t" (set equal to $table_cell_3)
 
 
 echo

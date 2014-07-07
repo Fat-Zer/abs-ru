@@ -1,5 +1,5 @@
-#!/bin/bash # ==> Script by James R. Van Zandt, and used here with his
-permission.
+#!/bin/bash
+# ==> Script by James R. Van Zandt, and used here with his permission.
 
 # ==> Comments added by author of this document.
 

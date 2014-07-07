@@ -1,4 +1,6 @@
-#!/bin/bash # fibo.sh : Fibonacci sequence (recursive)  # Author: M. Cooper
+#!/bin/bash
+# fibo.sh : Fibonacci sequence (recursive)
+# Author: M. Cooper
 # License: GPL3
 
 # ----------algorithm--------------

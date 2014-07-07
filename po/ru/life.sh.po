@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # life.sh: \"Life in the Slow Lane\" # Author: Mendel Cooper # "
-"License: GPL3"
+"#!/bin/bash\n"
+"# life.sh: \"Life in the Slow Lane\"\n"
+"# Author: Mendel Cooper\n"
+"# License: GPL3\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,14 +83,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:46
+#, no-wrap
 msgid ""
-"############################################ # Abort script if \"startfile\" "
-"not specified #+ and #+ default file \"gen0\" not present."
+"############################################\n"
+"#  Abort script if \"startfile\" not specified\n"
+"#+ and\n"
+"#+ default file \"gen0\" not present.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:48
-msgid "E_NOSTARTFILE=86"
+#, no-wrap
+msgid "E_NOSTARTFILE=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -113,11 +120,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:68
+#, no-wrap
 msgid ""
-"# -----------------------------------------------------# # This script uses "
-"a 10 x 10 grid (may be increased, #+ but a large grid will slow down "
-"execution).  ROWS=10 COLS=10 # Change above two variables to match desired "
-"grid size.  # -----------------------------------------------------#"
+"#  -----------------------------------------------------#\n"
+"#  This script uses a 10 x 10 grid (may be increased,\n"
+"#+ but a large grid will slow down execution).\n"
+"ROWS=10\n"
+"COLS=10\n"
+"#  Change above two variables to match desired grid size.\n"
+"#  -----------------------------------------------------#\n"
 msgstr ""
 
 #. type: Plain text
@@ -152,7 +163,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:85
-msgid "# ================================================================="
+#, no-wrap
+msgid "# =================================================================\n"
 msgstr ""
 
 #. type: Plain text
@@ -163,12 +175,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:91
-msgid "# Arrays containing \"cells.\" declare -a initial declare -a current"
+#, no-wrap
+msgid ""
+"# Arrays containing \"cells.\"\n"
+"declare -a initial\n"
+"declare -a current\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:94
-msgid "display ()  {"
+#, no-wrap
+msgid ""
+"display ()\n"
+"{\n"
 msgstr ""
 
 #. type: Plain text
@@ -189,17 +208,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:102
-msgid "element_count=${#arr[*]}"
+#, no-wrap
+msgid "element_count=${#arr[*]}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:105
-msgid "local i local rowcheck"
+#, no-wrap
+msgid ""
+"local i\n"
+"local rowcheck\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:108
-msgid "for ((i=0; i&lt;$element_count; i++))  do"
+#, no-wrap
+msgid ""
+"for ((i=0; i&lt;$element_count; i++))\n"
+"do\n"
 msgstr ""
 
 #. type: Plain text
@@ -242,12 +268,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:129
-msgid "return"
+#, no-wrap
+msgid "return\n"
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/life.sh:131 abs-guide/life.sh:166 abs-guide/life.sh:187 abs-guide/life.sh:264 abs-guide/life.sh:304
-msgid "}"
+#: abs-guide/life.sh:131 abs-guide/life.sh:264 abs-guide/life.sh:304
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -281,7 +309,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:147
-msgid "let \"upper_limit = $ROWS * $COLS - 1\" # Total number of cells."
+#, no-wrap
+msgid "let \"upper_limit = $ROWS * $COLS - 1\" # Total number of cells.\n"
 msgstr ""
 
 #. type: Plain text
@@ -317,6 +346,12 @@ msgstr ""
 #: abs-guide/life.sh:164
 #, no-wrap
 msgid "return $TRUE                          # Valid coordinate.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/life.sh:166 abs-guide/life.sh:187
+#, no-wrap
+msgid "}  \n"
 msgstr ""
 
 #. type: Plain text
@@ -485,7 +520,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:270
-msgid "local array local i=0"
+#, no-wrap
+msgid ""
+"local array\n"
+"local i=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -544,12 +582,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:307
-msgid "# ========================================================="
+#, no-wrap
+msgid "# =========================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:310
-msgid "# main ()  # {"
+#, no-wrap
+msgid ""
+"# main ()\n"
+"# {\n"
 msgstr ""
 
 #. type: Plain text
@@ -646,7 +688,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/life.sh:365
-msgid "echo # }"
+#, no-wrap
+msgid ""
+"echo\n"
+"# }\n"
 msgstr ""
 
 #. type: Plain text

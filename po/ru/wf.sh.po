@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # wf.sh: Crude word frequency analysis on a text file.  # This "
-"is a more efficient version of the \"wf2.sh\" script."
+"#!/bin/bash\n"
+"# wf.sh: Crude word frequency analysis on a text file.\n"
+"# This is a more efficient version of the \"wf2.sh\" script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf.sh:10
-msgid "# Check for input file on command-line.  ARGS=1 E_BADARGS=85 E_NOFILE=86"
+#, no-wrap
+msgid ""
+"# Check for input file on command-line.\n"
+"ARGS=1\n"
+"E_BADARGS=85\n"
+"E_NOFILE=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,10 +71,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf.sh:36
+#, no-wrap
 msgid ""
-"# Filter out periods and commas, and #+ change space between words to "
-"linefeed, #+ then shift characters to lowercase, and #+ finally prefix "
-"occurrence count and sort numerically."
+"#  Filter out periods and commas, and\n"
+"#+ change space between words to linefeed,\n"
+"#+ then shift characters to lowercase, and\n"
+"#+ finally prefix occurrence count and sort numerically.\n"
 msgstr ""
 
 #. type: Plain text
@@ -93,7 +102,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf.sh:54
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text

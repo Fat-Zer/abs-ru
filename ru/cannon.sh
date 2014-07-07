@@ -1,29 +1,42 @@
-#!/bin/bash # cannon.sh: Approximating PI by firing cannonballs.
+#!/bin/bash
+# cannon.sh: Approximating PI by firing cannonballs.
 
-# Author: Mendel Cooper # License: Public Domain # Version 2.2, reldate
-13oct08.
+# Author: Mendel Cooper
+# License: Public Domain
+# Version 2.2, reldate 13oct08.
 
-# This is a very simple instance of a "Monte Carlo" simulation: #+ a
-mathematical model of a real-life event, #+ using pseudorandom numbers to
-emulate random chance.
+# This is a very simple instance of a "Monte Carlo" simulation:
+#+ a mathematical model of a real-life event,
+#+ using pseudorandom numbers to emulate random chance.
 
-# Consider a perfectly square plot of land, 10000 units on a side.  # This
-land has a perfectly circular lake in its center, #+ with a diameter of
-10000 units.  # The plot is actually mostly water, except for land in the
-four corners.  # (Think of it as a square with an inscribed circle.)  # # We
-will fire iron cannonballs from an old-style cannon #+ at the square.  # All
-the shots impact somewhere on the square, #+ either in the lake or on the
-dry corners.  # Since the lake takes up most of the area, #+ most of the
-shots will SPLASH! into the water.  # Just a few shots will THUD! into solid
-ground #+ in the four corners of the square.  # # If we take enough random,
-unaimed shots at the square, #+ Then the ratio of SPLASHES to total shots
-will approximate #+ the value of PI/4.  # # The simplified explanation is
-that the cannon is actually #+ shooting only at the upper right-hand
-quadrant of the square, #+ i.e., Quadrant I of the Cartesian coordinate
-plane.  # # # Theoretically, the more shots taken, the better the fit.  #
-However, a shell script, as opposed to a compiled language #+ with
-floating-point math built in, requires some compromises.  # This decreases
-the accuracy of the simulation.
+#  Consider a perfectly square plot of land, 10000 units on a side.
+#  This land has a perfectly circular lake in its center,
+#+ with a diameter of 10000 units.
+#  The plot is actually mostly water, except for land in the four corners.
+#  (Think of it as a square with an inscribed circle.)
+#
+#  We will fire iron cannonballs from an old-style cannon
+#+ at the square.
+#  All the shots impact somewhere on the square,
+#+ either in the lake or on the dry corners.
+#  Since the lake takes up most of the area,
+#+ most of the shots will SPLASH! into the water.
+#  Just a few shots will THUD! into solid ground
+#+ in the four corners of the square.
+#
+#  If we take enough random, unaimed shots at the square,
+#+ Then the ratio of SPLASHES to total shots will approximate
+#+ the value of PI/4.
+#
+#  The simplified explanation is that the cannon is actually
+#+ shooting only at the upper right-hand quadrant of the square,
+#+ i.e., Quadrant I of the Cartesian coordinate plane.
+#
+#
+#  Theoretically, the more shots taken, the better the fit.
+#  However, a shell script, as opposed to a compiled language
+#+ with floating-point math built in, requires some compromises.
+#  This decreases the accuracy of the simulation.
 
 
 DIMENSION=10000  # Length of each side of the plot.
@@ -59,10 +72,16 @@ EOF
 }
 
 
-# ========================================================== # main() { #
-"Main" code block, mimicking a C-language main() function.
+# ==========================================================
+# main() {
+# "Main" code block, mimicking a C-language main() function.
 
-# Initialize variables.  shots=0 splashes=0 thuds=0 Pi=0 error=0
+# Initialize variables.
+shots=0
+splashes=0
+thuds=0
+Pi=0
+error=0
 
 while [ "$shots" -lt  "$MAXSHOTS" ]           # Main loop.
 do
@@ -109,8 +128,9 @@ echo -n "Deviation from mathematical value of PI =        $error"
 echo " ($pct_error% error)"
 echo
 
-# End of "main" code block.  # } #
-==========================================================
+# End of "main" code block.
+# }
+# ==========================================================
 
 exit 0
 

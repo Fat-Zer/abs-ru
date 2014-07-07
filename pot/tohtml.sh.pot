@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tohtml.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less "
-"buggy]"
+"#!/bin/bash\n"
+"# tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less buggy]\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tohtml.sh:9
+#, no-wrap
 msgid ""
-"# Convert a text file to HTML format.  # Author: Mendel Cooper # License: "
-"GPL3 # Usage: sh tohtml.sh &lt; textfile > htmlfile # Script can easily be "
-"modified to accept source and target filenames."
+"# Convert a text file to HTML format.\n"
+"# Author: Mendel Cooper\n"
+"# License: GPL3\n"
+"# Usage: sh tohtml.sh &lt; textfile > htmlfile\n"
+"# Script can easily be modified to accept source and target filenames.\n"
 msgstr ""
 
 #. type: Plain text
@@ -203,7 +207,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tohtml.sh:136
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

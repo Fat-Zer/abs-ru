@@ -1,7 +1,8 @@
-#!/bin/bash # wr-ps.bash: while-read loop with process substitution.
+#!/bin/bash
+# wr-ps.bash: while-read loop with process substitution.
 
-# This example contributed by Tomas Pospisek.  # (Heavily edited by the ABS
-Guide author.)
+# This example contributed by Tomas Pospisek.
+# (Heavily edited by the ABS Guide author.)
 
 echo
 
@@ -11,8 +12,8 @@ do
   # ... because it runs in a subshell.
 done
 
-echo "\$global (from outside the subprocess) = $global" # $global (from
-outside the subprocess) =
+echo "\$global (from outside the subprocess) = $global"
+# $global (from outside the subprocess) =
 
 echo; echo "--"; echo
 
@@ -24,8 +25,9 @@ do
 done &lt; &lt;( echo "random input" )
 #    ^ ^
 
-echo "\$global (using process substitution) = $global" # Random input #
-$global (using process substitution) = 3D: Available outside the loop.
+echo "\$global (using process substitution) = $global"
+# Random input
+# $global (using process substitution) = 3D: Available outside the loop.
 
 
 echo; echo "##########"; echo

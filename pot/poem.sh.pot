@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,39 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # poem.sh: Pretty-prints one of the ABS Guide author's favorite "
-"poems."
+"#!/bin/bash\n"
+"# poem.sh: Pretty-prints one of the ABS Guide author's favorite poems.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:11
+#, no-wrap
 msgid ""
-"# Lines of the poem (single stanza).  Line[1]=\"I do not know which to "
-"prefer,\" Line[2]=\"The beauty of inflections\" Line[3]=\"Or the beauty of "
-"innuendoes,\" Line[4]=\"The blackbird whistling\" Line[5]=\"Or just after.\" "
-"# Note that quoting permits embedding whitespace."
+"# Lines of the poem (single stanza).\n"
+"Line[1]=\"I do not know which to prefer,\"\n"
+"Line[2]=\"The beauty of inflections\"\n"
+"Line[3]=\"Or the beauty of innuendoes,\"\n"
+"Line[4]=\"The blackbird whistling\"\n"
+"Line[5]=\"Or just after.\"\n"
+"# Note that quoting permits embedding whitespace.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:16
+#, no-wrap
 msgid ""
-"# Attribution.  Attrib[1]=\" Wallace Stevens\" Attrib[2]=\"\\\"Thirteen Ways "
-"of Looking at a Blackbird\\\"\" # This poem is in the Public Domain "
-"(copyright expired)."
+"# Attribution.\n"
+"Attrib[1]=\" Wallace Stevens\"\n"
+"Attrib[2]=\"\\\"Thirteen Ways of Looking at a Blackbird\\\"\"\n"
+"# This poem is in the Public Domain (copyright expired).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:18 abs-guide/poem.sh:35
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -81,12 +89,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:37
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/poem.sh:40
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Modify this script to pretty-print a poem from a "
-"text data file."
+"# Exercise:\n"
+"# --------\n"
+"# Modify this script to pretty-print a poem from a text data file.\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cw-solver.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # cw-solver.sh # This is actually a wrapper around a one-liner "
-"(line 46)."
+"#!/bin/bash\n"
+"# cw-solver.sh\n"
+"# This is actually a wrapper around a one-liner (line 46).\n"
 msgstr ""
 
 #. type: Plain text
@@ -89,25 +91,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cw-solver.sh:56
+#, no-wrap
 msgid ""
-"# From _Stupid Grep Tricks_, vol. 1, #+ a book the ABS Guide author may yet "
-"get around #+ to writing . . . one of these days . . .  # "
-"=============================================== echo"
+"#  From _Stupid Grep Tricks_, vol. 1,\n"
+"#+ a book the ABS Guide author may yet get around\n"
+"#+ to writing . . . one of these days . . .\n"
+"# ===============================================\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cw-solver.sh:61
+#, no-wrap
 msgid ""
-"exit $? # Script terminates here.  # If there are too many words generated, "
-"#+ redirect the output to a file."
+"exit $?  # Script terminates here.\n"
+"#  If there are too many words generated,\n"
+"#+ redirect the output to a file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cw-solver.sh:63
-msgid "$ sh cw-solver.sh w...i....n"
+#, no-wrap
+msgid "$ sh cw-solver.sh w...i....n\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cw-solver.sh:66
-msgid "wellington workingman workingmen"
+#, no-wrap
+msgid ""
+"wellington\n"
+"workingman\n"
+"workingmen\n"
 msgstr ""

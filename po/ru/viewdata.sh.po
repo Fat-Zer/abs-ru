@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/viewdata.sh:4
-msgid "#!/bin/bash # viewdata.sh # Conversion of VIEWDATA.BAT to shell script."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# viewdata.sh\n"
+"# Conversion of VIEWDATA.BAT to shell script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/viewdata.sh:7
-msgid "DATAFILE=/home/bozo/datafiles/book-collection.data ARGNO=1"
+#, no-wrap
+msgid ""
+"DATAFILE=/home/bozo/datafiles/book-collection.data\n"
+"ARGNO=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,8 +59,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/viewdata.sh:21
+#, no-wrap
 msgid ""
-"# GOTOs, labels, smoke-and-mirrors, and flimflam unnecessary.  # The "
-"converted script is short, sweet, and clean, #+ which is more than can be "
-"said for the original."
+"#  GOTOs, labels, smoke-and-mirrors, and flimflam unnecessary.\n"
+"#  The converted script is short, sweet, and clean,\n"
+"#+ which is more than can be said for the original.\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:3
-msgid "#!/bin/bash # patt-matching.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# patt-matching.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:5
-msgid "# Pattern matching using the # ## % %% parameter substitution operators."
+#, no-wrap
+msgid "# Pattern matching  using the # ## % %% parameter substitution operators.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:8
+#, no-wrap
 msgid ""
-"var1=abcd12345abc6789 pattern1=a*c # * (wild card) matches everything "
-"between a - c."
+"var1=abcd12345abc6789\n"
+"pattern1=a*c  # * (wild card) matches everything between a - c.\n"
 msgstr ""
 
 #. type: Plain text
@@ -63,7 +68,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:26
-msgid "echo; echo; echo"
+#, no-wrap
+msgid "echo; echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -93,10 +99,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:43
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/patt-matching.sh:44
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

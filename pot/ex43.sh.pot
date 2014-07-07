@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:3
-msgid "#!/bin/bash # Exercising \"eval\" ..."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Exercising \"eval\" ...\n"
 msgstr ""
 
 #. type: Plain text
@@ -34,7 +37,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:10
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,30 +51,37 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:16
+#, no-wrap
 msgid ""
-"# When LF's not preserved, it may make it easier to parse output, #+ using "
-"utilities such as \"awk\"."
+"#  When LF's not preserved, it may make it easier to parse output,\n"
+"#+ using utilities such as \"awk\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:20 abs-guide/ex43.sh:29
+#, no-wrap
 msgid ""
-"echo echo \"===========================================================\" "
-"echo"
+"echo\n"
+"echo \"===========================================================\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:25
+#, no-wrap
 msgid ""
-"eval \"`seq 3 | sed -e 's/.*/echo var&amp;=ABCDEFGHIJ/'`\" # var1=ABCDEFGHIJ "
-"# var2=ABCDEFGHIJ # var3=ABCDEFGHIJ"
+"eval \"`seq 3 | sed -e 's/.*/echo var&amp;=ABCDEFGHIJ/'`\"\n"
+"# var1=ABCDEFGHIJ\n"
+"# var2=ABCDEFGHIJ\n"
+"# var3=ABCDEFGHIJ\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex43.sh:33
+#, no-wrap
 msgid ""
-"# Now, showing how to do something useful with \"eval\" . . .  # (Thank you, "
-"E. Choroba!)"
+"# Now, showing how to do something useful with \"eval\" . . .\n"
+"# (Thank you, E. Choroba!)\n"
 msgstr ""
 
 #. type: Plain text

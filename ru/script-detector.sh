@@ -1,4 +1,5 @@
-#!/bin/bash # script-detector.sh: Detects scripts within a directory.
+#!/bin/bash
+# script-detector.sh: Detects scripts within a directory.
 
 TESTCHARS=2    # Test first 2 characters.
 SHABANG='#!'   # Scripts begin with a "sha-bang."

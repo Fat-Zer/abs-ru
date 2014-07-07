@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,32 +18,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:4
-msgid "# Douglas Hofstadter's notorious \"Q-series\":"
+#, no-wrap
+msgid "# Douglas Hofstadter's notorious \"Q-series\":\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:7
-msgid "# Q(1) = Q(2) = 1 # Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2)), for n&gt;2"
+#, no-wrap
+msgid ""
+"# Q(1) = Q(2) = 1\n"
+"# Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2)), for n&gt;2\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:12
+#, no-wrap
 msgid ""
-"# This is a \"chaotic\" integer series with strange #+ and unpredictable "
-"behavior.  # The first 20 terms of the series are: # 1 1 2 3 3 4 5 5 6 6 6 8 "
-"8 8 10 9 10 11 11 12"
+"#  This is a \"chaotic\" integer series with strange\n"
+"#+ and unpredictable behavior.\n"
+"#  The first 20 terms of the series are:\n"
+"#  1 1 2 3 3 4 5 5 6 6 6 8 8 8 10 9 10 11 11 12 \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:15
+#, no-wrap
 msgid ""
-"# See Hofstadter's book, _Goedel, Escher, Bach: An Eternal Golden Braid_, #+ "
-"p. 137, ff."
+"#  See Hofstadter's book, _Goedel, Escher, Bach: An Eternal Golden Braid_,\n"
+"#+ p. 137, ff.\n"
 msgstr ""
 
 #. type: Plain text
@@ -126,24 +134,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:51
-msgid "done"
+#, no-wrap
+msgid "done\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:53
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:55
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/q-function.sh:59
+#, no-wrap
 msgid ""
-"# This is an iterative implementation of the Q-series.  # The more intuitive "
-"recursive implementation is left as an exercise.  # Warning: calculating "
-"this series recursively takes a VERY long time #+ via a script. C/C++ would "
-"be orders of magnitude faster."
+"#  This is an iterative implementation of the Q-series.\n"
+"#  The more intuitive recursive implementation is left as an exercise.\n"
+"#  Warning: calculating this series recursively takes a VERY long time\n"
+"#+ via a script. C/C++ would be orders of magnitude faster.\n"
 msgstr ""

@@ -1,7 +1,9 @@
-#!/bin/bash # random-between.sh # Random number between two specified
-values.  # Script by Bill Gradwohl, with minor modifications by the document
-author.  # Corrections in lines 187 and 189 by Anthony Le Clezio.  # Used
-with permission.
+#!/bin/bash
+# random-between.sh
+# Random number between two specified values. 
+# Script by Bill Gradwohl, with minor modifications by the document author.
+# Corrections in lines 187 and 189 by Anthony Le Clezio.
+# Used with permission.
 
 
 randomBetween() {
@@ -114,11 +116,14 @@ randomBetween() {
 
 }
 
-# Let's test the function.  min=-14 max=20 divisibleBy=3
+# Let's test the function.
+min=-14
+max=20
+divisibleBy=3
 
 
-# Generate an array of expected answers and check to make sure we get #+ at
-least one of each answer if we loop long enough.
+#  Generate an array of expected answers and check to make sure we get
+#+ at least one of each answer if we loop long enough.
 
 declare -a answer
 minimum=${min}
@@ -144,8 +149,9 @@ maximum=${max}
    fi
 
 
-# We need to generate only positive array subscripts, #+ so we need a
-displacement that that will guarantee #+ positive results.
+#  We need to generate only positive array subscripts,
+#+ so we need a displacement that that will guarantee
+#+ positive results.
 
 disp=$((0-minimum))
 for ((i=${minimum}; i&lt;=${maximum}; i+=divisibleBy)); do

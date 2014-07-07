@@ -1,21 +1,26 @@
-#!/bin/bash # commentblock.sh
+#!/bin/bash
+# commentblock.sh
 
-: &lt;&lt;COMMENTBLOCK echo "This line will not echo." This is a comment
-line missing the "#" prefix.  This is another comment line missing the "#"
-prefix.
+: &lt;&lt;COMMENTBLOCK
+echo "This line will not echo."
+This is a comment line missing the "#" prefix.
+This is another comment line missing the "#" prefix.
 
-&amp;*@!!++= The above line will cause no error message, because the Bash
-interpreter will ignore it.  COMMENTBLOCK
+&amp;*@!!++=
+The above line will cause no error message,
+because the Bash interpreter will ignore it.
+COMMENTBLOCK
 
 echo "Exit value of above \"COMMENTBLOCK\" is $?."   # 0
 # No error shown.
 echo
 
 
-# The above technique also comes in useful for commenting out #+ a block of
-working code for debugging purposes.  # This saves having to put a "#" at
-the beginning of each line, #+ then having to go back and delete each "#"
-later.  # Note that the use of of colon, above, is optional.
+#  The above technique also comes in useful for commenting out
+#+ a block of working code for debugging purposes.
+#  This saves having to put a "#" at the beginning of each line,
+#+ then having to go back and delete each "#" later.
+#  Note that the use of of colon, above, is optional.
 
 echo "Just before commented-out code block."
 #  The lines of code between the double-dashed lines will not execute.
@@ -33,9 +38,11 @@ exit 0
 
 
 
-###################################################################### #
-Note, however, that if a bracketed variable is contained within #+ the
-commented-out code block, #+ then this could cause problems.  # for example:
+######################################################################
+#  Note, however, that if a bracketed variable is contained within
+#+ the commented-out code block,
+#+ then this could cause problems.
+#  for example:
 
 
 #/!/bin/bash
@@ -49,11 +56,10 @@ commented-out code block, #+ then this could cause problems.  # for example:
 COMMENTBLOCK
 
 
-$ sh commented-bad.sh commented-bad.sh: line 3: foo_bar_bazz: parameter null
-or not set
+$ sh commented-bad.sh
+commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set
 
-# The remedy for this is to strong-quote the 'COMMENTBLOCK' in line 49,
-above.
+# The remedy for this is to strong-quote the 'COMMENTBLOCK' in line 49, above.
 
   : &lt;&lt;'COMMENTBLOCK'
 

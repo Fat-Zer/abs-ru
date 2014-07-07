@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/numbers.sh:3
-msgid "#!/bin/bash # numbers.sh: Representation of numbers in different bases."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# numbers.sh: Representation of numbers in different bases.\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,9 +65,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/numbers.sh:30
+#, no-wrap
 msgid ""
-"# Other bases: BASE#NUMBER # BASE between 2 and 64.  # NUMBER must use "
-"symbols within the BASE range, see below."
+"# Other bases: BASE#NUMBER\n"
+"# BASE between 2 and 64.\n"
+"# NUMBER must use symbols within the BASE range, see below.\n"
 msgstr ""
 
 #. type: Plain text
@@ -96,7 +101,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/numbers.sh:45
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -109,9 +115,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/numbers.sh:54
+#, no-wrap
 msgid ""
-"# Important note: # -------------- # Using a digit out of range of the "
-"specified base notation #+ gives an error message."
+"#  Important note:\n"
+"#  --------------\n"
+"#  Using a digit out of range of the specified base notation\n"
+"#+ gives an error message.\n"
 msgstr ""
 
 #. type: Plain text
@@ -132,5 +141,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/numbers.sh:62
-msgid "# Thanks, Rich Bartell and Stephane Chazelas, for clarification."
+#, no-wrap
+msgid "# Thanks, Rich Bartell and Stephane Chazelas, for clarification.\n"
 msgstr ""

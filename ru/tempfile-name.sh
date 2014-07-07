@@ -1,4 +1,5 @@
-#!/bin/bash # tempfile-name.sh: temp filename generator
+#!/bin/bash
+# tempfile-name.sh:  temp filename generator
 
 BASE_STR=`mcookie`   # 32-character magic cookie.
 POS=11               # Arbitrary position in magic cookie string.
@@ -18,9 +19,10 @@ temp_filename=$prefix.$suffix
 
 echo "Temp filename = "$temp_filename""
 
-# sh tempfile-name.sh # Temp filename = temp.e19ea
+# sh tempfile-name.sh
+# Temp filename = temp.e19ea
 
-# Compare this method of generating "unique" filenames #+ with the 'date'
-method in ex51.sh.
+#  Compare this method of generating "unique" filenames
+#+ with the 'date' method in ex51.sh.
 
 exit 0

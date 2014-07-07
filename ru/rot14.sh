@@ -1,5 +1,6 @@
-#!/bin/bash # A version of "rot13" using 'eval'.  # Compare to "rot13.sh"
-example.
+#!/bin/bash
+# A version of "rot13" using 'eval'.
+# Compare to "rot13.sh" example.
 
 setvar_rot_13()              # "rot13" scrambling
 {
@@ -15,6 +16,7 @@ setvar_rot_13 var "$var"     # Run "sbbone" through rot13.
                              # Back to original variable.
 echo $var                    # foobar
 
-# This example by Stephane Chazelas.  # Modified by document author.
+# This example by Stephane Chazelas.
+# Modified by document author.
 
 exit 0

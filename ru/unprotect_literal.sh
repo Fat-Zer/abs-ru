@@ -1,4 +1,5 @@
-#! /bin/bash # unprotect_literal.sh
+#! /bin/bash
+# unprotect_literal.sh
 
 # set -vx
 
@@ -41,8 +42,8 @@ _upls() {
     eval echo $@                    # Substitution on the glob.
 }
 
-# :&lt;&lt;-'_UnProtect_Literal_String_Test' # # # Remove the above "# " to
-disable this code. # # #
+# :&lt;&lt;-'_UnProtect_Literal_String_Test'
+# # # Remove the above "# " to disable this code. # # #
 
 
 _pls() {
@@ -50,13 +51,14 @@ _pls() {
     echo $'\x27'$@$'\x27'           # Hard quoted parameter glob
 }
 
-# Declare an array for test values.  declare -a arrayZ
+# Declare an array for test values.
+declare -a arrayZ
 
-# Assign elements with various types of quotes and escapes.  arrayZ=( zero
-"$(_pls 'Hello ${Me}')" 'Hello ${You}' "\'Pass: ${pw}\'" )
+# Assign elements with various types of quotes and escapes.
+arrayZ=( zero "$(_pls 'Hello ${Me}')" 'Hello ${You}' "\'Pass: ${pw}\'" )
 
-# Now make an assignment with that result.  declare -a array2=( ${arrayZ[@]}
-)
+# Now make an assignment with that result.
+declare -a array2=( ${arrayZ[@]} )
 
 # Which yielded:
 # - - Test Three - -
@@ -68,42 +70,54 @@ _pls() {
 
 # set -vx
 
-# Initialize 'Me' to something for the embedded ${Me} substitution.  # This
-needs to be done ONLY just prior to evaluating the #+ protected string.  #
-(This is why it was protected to begin with.)
+#  Initialize 'Me' to something for the embedded ${Me} substitution.
+#  This needs to be done ONLY just prior to evaluating the
+#+ protected string.
+#  (This is why it was protected to begin with.)
 
 Me="to the array guy."
 
-# Set a string variable destination to the result.  newVar=$(_upls
-${array2[1]})
+# Set a string variable destination to the result.
+newVar=$(_upls ${array2[1]})
 
-# Show what the contents are.  echo $newVar
+# Show what the contents are.
+echo $newVar
 
-# Do we really need a function to do this? newerVar=$(eval echo
-${array2[1]})  echo $newerVar
+# Do we really need a function to do this?
+newerVar=$(eval echo ${array2[1]})
+echo $newerVar
 
-# I guess not, but the _upls function gives us a place to hang #+ the
-documentation on.  # This helps when we forget what a # construction like:
+#  I guess not, but the _upls function gives us a place to hang
+#+ the documentation on.
+#  This helps when we forget what a # construction like:
 #+ $(eval echo ... ) means.
 
-# What if Me isn't set when the protected string is evaluated? unset Me
-newestVar=$(_upls ${array2[1]})  echo $newestVar
+# What if Me isn't set when the protected string is evaluated?
+unset Me
+newestVar=$(_upls ${array2[1]})
+echo $newestVar
 
 # Just gone, no hints, no runs, no errors.
 
-# Why in the world? # Setting the contents of a string variable containing
-character #+ sequences that have a meaning in Bash is a general problem in
-#+ script programming.  # # This problem is now solved in eight lines of
-code #+ (and four pages of description).
+#  Why in the world?
+#  Setting the contents of a string variable containing character
+#+ sequences that have a meaning in Bash is a general problem in
+#+ script programming.
+#
+#  This problem is now solved in eight lines of code
+#+ (and four pages of description).
 
-# Where is all this going? # Dynamic content Web pages as an array of Bash
-strings.  # Content set per request by a Bash 'eval' command #+ on the
-stored page template.  # Not intended to replace PHP, just an interesting
-thing to do.  ### # Don't have a webserver application? # No problem, check
-the example directory of the Bash source; #+ there is a Bash script for that
-also.
+#  Where is all this going?
+#  Dynamic content Web pages as an array of Bash strings.
+#  Content set per request by a Bash 'eval' command
+#+ on the stored page template.
+#  Not intended to replace PHP, just an interesting thing to do.
+###
+#  Don't have a webserver application?
+#  No problem, check the example directory of the Bash source;
+#+ there is a Bash script for that also.
 
-# _UnProtect_Literal_String_Test # # # Remove the above "# " to disable this
-code. # # #
+# _UnProtect_Literal_String_Test
+# # # Remove the above "# " to disable this code. # # #
 
 exit 0

@@ -13,8 +13,8 @@
 # 21-03-95 stv	fixed error occuring with 0xb as input (0.2)
 ###########################################################################
 
-# ==> Used in ABS Guide with the script author's permission.  # ==> Comments
-added by ABS Guide author.
+# ==> Used in ABS Guide with the script author's permission.
+# ==> Comments added by ABS Guide author.
 
 NOARGS=85
 PN=`basename "$0"`			       # Program name

@@ -1,4 +1,5 @@
-#!/bin/bash # echo-params.sh
+#!/bin/bash
+# echo-params.sh
 
 # Call this script with a few command-line parameters.
 # For example:
@@ -30,6 +31,9 @@ exit $?
 
 # =================================================
 
-$ sh echo-params.sh first second third fourth fifth Command-line parameter
-$1 = first Command-line parameter $2 = second Command-line parameter $3 =
-third Command-line parameter $4 = fourth Command-line parameter $5 = fifth
+$ sh echo-params.sh first second third fourth fifth
+Command-line parameter $1 = first
+Command-line parameter $2 = second
+Command-line parameter $3 = third
+Command-line parameter $4 = fourth
+Command-line parameter $5 = fifth

@@ -1,8 +1,13 @@
-#!/bin/bash # ind-func.sh: Passing an indirect reference to a function.
+#!/bin/bash
+# ind-func.sh: Passing an indirect reference to a function.
 
-echo_var ()  { echo "$1" }
+echo_var ()
+{
+echo "$1"
+}
 
-message=Hello Hello=Goodbye
+message=Hello
+Hello=Goodbye
 
 echo_var "$message"        # Hello
 # Now, let's pass an indirect reference to the function.

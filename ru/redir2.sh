@@ -1,4 +1,5 @@
-#!/bin/bash # redir2.sh
+#!/bin/bash
+# redir2.sh
 
 if [ -z "$1" ]
 then
@@ -25,14 +26,16 @@ echo; echo "$count names read"; echo
 
 exit 0
 
-# Note that in some older shell scripting languages, #+ the redirected loop
-would run as a subshell.  # Therefore, $count would return 0, the
-initialized value outside the loop.  # Bash and ksh avoid starting a
-subshell *whenever possible*, #+ so that this script, for example, runs
-correctly.  # (Thanks to Heiner Steven for pointing this out.)
+#  Note that in some older shell scripting languages,
+#+ the redirected loop would run as a subshell.
+#  Therefore, $count would return 0, the initialized value outside the loop.
+#  Bash and ksh avoid starting a subshell *whenever possible*,
+#+ so that this script, for example, runs correctly.
+#  (Thanks to Heiner Steven for pointing this out.)
 
-# However . . .  # Bash *can* sometimes start a subshell in a PIPED
-"while-read" loop, #+ as distinct from a REDIRECTED "while" loop.
+#  However . . .
+#  Bash *can* sometimes start a subshell in a PIPED "while-read" loop,
+#+ as distinct from a REDIRECTED "while" loop.
 
 abc=hi
 echo -e "1\n2\n3" | while read l
@@ -41,6 +44,6 @@ echo -e "1\n2\n3" | while read l
      done
 echo $abc
 
-# Thanks, Bruno de Oliveira Schneider, for demonstrating this #+ with the
-above snippet of code.  # And, thanks, Brian Onn, for correcting an
-annotation error.
+#  Thanks, Bruno de Oliveira Schneider, for demonstrating this
+#+ with the above snippet of code.
+#  And, thanks, Brian Onn, for correcting an annotation error.

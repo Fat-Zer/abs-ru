@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:3
-msgid "#!/bin/bash # wr-ps.bash: while-read loop with process substitution."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# wr-ps.bash: while-read loop with process substitution.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:6
+#, no-wrap
 msgid ""
-"# This example contributed by Tomas Pospisek.  # (Heavily edited by the ABS "
-"Guide author.)"
+"# This example contributed by Tomas Pospisek.\n"
+"# (Heavily edited by the ABS Guide author.)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:8
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,14 +51,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:17
+#, no-wrap
 msgid ""
-"echo \"\\$global (from outside the subprocess) = $global\" # $global (from "
-"outside the subprocess) ="
+"echo \"\\$global (from outside the subprocess) = $global\"\n"
+"# $global (from outside the subprocess) =\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:19 abs-guide/wr-ps.bash:52
-msgid "echo; echo \"--\"; echo"
+#, no-wrap
+msgid "echo; echo \"--\"; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -71,19 +78,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:31
+#, no-wrap
 msgid ""
-"echo \"\\$global (using process substitution) = $global\" # Random input # "
-"$global (using process substitution) = 3D: Available outside the loop."
+"echo \"\\$global (using process substitution) = $global\"\n"
+"# Random input\n"
+"# $global (using process substitution) = 3D: Available outside the loop.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:34
-msgid "echo; echo \"##########\"; echo"
+#, no-wrap
+msgid "echo; echo \"##########\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:38
-msgid "# And likewise . . ."
+#, no-wrap
+msgid "# And likewise . . .\n"
 msgstr ""
 
 #. type: Plain text
@@ -120,5 +131,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wr-ps.bash:65
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

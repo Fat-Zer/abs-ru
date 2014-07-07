@@ -1,5 +1,6 @@
-#!/bin/bash # self-document.sh: self-documenting script # Modification of
-"colm.sh".
+#!/bin/bash
+# self-document.sh: self-documenting script
+# Modification of "colm.sh".
 
 DOC_REQUEST=70
 
@@ -13,9 +14,9 @@ then
 : &lt;&lt;DOCUMENTATIONXX
 List the statistics of a specified directory in tabular format.
 ---------------------------------------------------------------
-The command-line parameter gives the directory to be listed.  If no
-directory specified or directory specified cannot be read, then list the
-current working directory.
+The command-line parameter gives the directory to be listed.
+If no directory specified or directory specified cannot be read,
+then list the current working directory.
 
 DOCUMENTATIONXX
 
@@ -26,8 +27,8 @@ else
   directory="$1"
 fi  
 
-echo "Listing of "$directory":"; echo (printf "PERMISSIONS LINKS OWNER GROUP
-SIZE MONTH DAY HH:MM PROG-NAME\n" \ ; ls -l "$directory" | sed 1d) | column
--t
+echo "Listing of "$directory":"; echo
+(printf "PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n" \
+; ls -l "$directory" | sed 1d) | column -t
 
 exit 0

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-suite.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # test-suite.sh # A partial Bash compatibility test suite.  # "
-"Run this on your version of Bash, or some other shell."
+"#!/bin/bash\n"
+"# test-suite.sh\n"
+"# A partial Bash compatibility test suite.\n"
+"# Run this on your version of Bash, or some other shell.\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,9 +34,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-suite.sh:14
+#, no-wrap
 msgid ""
-"echo echo -n \"Testing \" sleep 1; echo -n \". \" sleep 1; echo -n \". \" "
-"sleep 1; echo \". \" echo"
+"echo\n"
+"echo -n \"Testing \"\n"
+"sleep 1; echo -n \". \"\n"
+"sleep 1; echo -n \". \"\n"
+"sleep 1; echo \". \"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,18 +107,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-suite.sh:55
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-suite.sh:59
+#, no-wrap
 msgid ""
-"# Completing this script is an exercise for the reader.  # Add to the above "
-"similar tests for double parentheses, #+ brace expansion, process "
-"substitution, etc."
+"#  Completing this script is an exercise for the reader.\n"
+"#  Add to the above similar tests for double parentheses,\n"
+"#+ brace expansion, process substitution, etc.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/test-suite.sh:60
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

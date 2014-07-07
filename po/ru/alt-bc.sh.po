@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alt-bc.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # Invoking 'bc' using command substitution # in combination with "
-"a 'here document'."
+"#!/bin/bash\n"
+"# Invoking 'bc' using command substitution\n"
+"# in combination with a 'here document'.\n"
 msgstr ""
 
 #. type: Plain text
@@ -36,7 +38,13 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alt-bc.sh:18
-msgid "# $( ... ) notation also works.  v1=23.53 v2=17.881 v3=83.501 v4=171.63"
+#, no-wrap
+msgid ""
+"#  $( ... ) notation also works.\n"
+"v1=23.53\n"
+"v2=17.881\n"
+"v3=83.501\n"
+"v4=171.63\n"
 msgstr ""
 
 #. type: Plain text
@@ -95,5 +103,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alt-bc.sh:56
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-mailer.sh:3
-msgid "#!/bin/sh # self-mailer.sh: Self-mailing script"
+#, no-wrap
+msgid ""
+"#!/bin/sh\n"
+"# self-mailer.sh: Self-mailing script\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,27 +53,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-mailer.sh:25
+#, no-wrap
 msgid ""
-"# -------------------------------------------- # Greetings from the "
-"self-mailing script.  # A mischievous person has run this script, #+ which "
-"has caused it to mail itself to you.  # Apparently, some people have nothing "
-"better #+ to do with their time.  # "
-"--------------------------------------------"
+"# --------------------------------------------\n"
+"#  Greetings from the self-mailing script.\n"
+"#  A mischievous person has run this script,\n"
+"#+ which has caused it to mail itself to you.\n"
+"#  Apparently, some people have nothing better\n"
+"#+ to do with their time.\n"
+"# --------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-mailer.sh:27
-msgid "echo \"At `date`, script \\\"`basename $0`\\\" mailed to \"$adr\".\""
+#, no-wrap
+msgid "echo \"At `date`, script \\\"`basename $0`\\\" mailed to \"$adr\".\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-mailer.sh:29
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-mailer.sh:31
+#, no-wrap
 msgid ""
-"# Note that the \"mailx\" command (in \"send\" mode) may be substituted #+ "
-"for \"mail\" ... but with somewhat different options."
+"#  Note that the \"mailx\" command (in \"send\" mode) may be substituted\n"
+"#+ for \"mail\" ... but with somewhat different options.\n"
 msgstr ""

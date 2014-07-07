@@ -1,5 +1,7 @@
-#!/bin/bash # horserace.sh: Very simple horserace simulation.  # Author:
-Stefano Palmeri # Used with permission.
+#!/bin/bash
+# horserace.sh: Very simple horserace simulation.
+# Author: Stefano Palmeri
+# Used with permission.
 
 ################################################################
 #  Goals of the script:
@@ -40,21 +42,24 @@ if ! which md5sum &amp;> /dev/null; then
    exit $E_RUNERR
 fi
 
-# Set the following variable to slow down script execution.  # It will be
-passed as the argument for usleep (man usleep)  #+ and is expressed in
-microseconds (500000 = half a second).  USLEEP_ARG=0
+#  Set the following variable to slow down script execution.
+#  It will be passed as the argument for usleep (man usleep)  
+#+ and is expressed in microseconds (500000 = half a second).
+USLEEP_ARG=0  
 
-# Clean up the temp directory, restore terminal cursor and #+ terminal
-colors -- if script interrupted by Ctl-C.  trap 'echo -en "\E[?25h"; echo
--en "\E[0m"; stty echo;\ tput cup 20 0; rm -fr $HORSE_RACE_TMP_DIR' TERM
-EXIT # See the chapter on debugging for an explanation of 'trap.'
+#  Clean up the temp directory, restore terminal cursor and 
+#+ terminal colors -- if script interrupted by Ctl-C.
+trap 'echo -en "\E[?25h"; echo -en "\E[0m"; stty echo;\
+tput cup 20 0; rm -fr  $HORSE_RACE_TMP_DIR'  TERM EXIT
+#  See the chapter on debugging for an explanation of 'trap.'
 
 # Set a unique (paranoid) name for the temp directory the script needs.
-HORSE_RACE_TMP_DIR=$HOME/.horserace-`date +%s`-`head -c10 /dev/urandom \ |
-md5sum | head -c30`
+HORSE_RACE_TMP_DIR=$HOME/.horserace-`date +%s`-`head -c10 /dev/urandom \
+| md5sum | head -c30`
 
-# Create the temp directory and move right in.  mkdir $HORSE_RACE_TMP_DIR cd
-$HORSE_RACE_TMP_DIR
+# Create the temp directory and move right in.
+mkdir $HORSE_RACE_TMP_DIR
+cd $HORSE_RACE_TMP_DIR
 
 
 #  This function moves the cursor to line $1 column $2 and then prints $3.
@@ -81,8 +86,9 @@ draw_horse_two(){
 }   
 
 
-# Define current terminal dimension.  N_COLS=`tput cols` N_LINES=`tput
-lines`
+# Define current terminal dimension.
+N_COLS=`tput cols`
+N_LINES=`tput lines`
 
 # Need at least a 20-LINES X 80-COLUMNS terminal. Check it.
 if [ $N_COLS -lt 80 ] || [ $N_LINES -lt 20 ]; then
@@ -94,20 +100,24 @@ fi
 
 # Start drawing the race field.
 
-# Need a string of 80 chars. See below.  BLANK80=`seq -s "" 100 | head -c80`
+# Need a string of 80 chars. See below.
+BLANK80=`seq -s "" 100 | head -c80`
 
 clear
 
-# Set foreground and background colors to white.  echo -ne '\E[37;47m'
+# Set foreground and background colors to white.
+echo -ne '\E[37;47m'
 
-# Move the cursor on the upper left angle of the terminal.  tput cup 0 0
+# Move the cursor on the upper left angle of the terminal.
+tput cup 0 0 
 
 # Draw six white lines.
 for n in `seq 5`; do
       echo $BLANK80   # Use the 80 chars string to colorize the terminal.
 done
 
-# Sets foreground color to black.  echo -ne '\E[30m'
+# Sets foreground color to black. 
+echo -ne '\E[30m'
 
 move_and_echo 3 1 "START  1"            
 move_and_echo 3 75 FINISH
@@ -120,21 +130,24 @@ move_and_echo 4 80 "|"
 move_and_echo 5 5 "V  3"
 move_and_echo 5 80 "V"
 
-# Set foreground color to red.  echo -ne '\E[31m'
+# Set foreground color to red. 
+echo -ne '\E[31m'
 
-# Some ASCII art.  move_and_echo 1 8 "..@@@..@@@@@...@@@@@.@...@..@@@@..."
-move_and_echo 2 8 ".@...@...@.......@...@...@.@......." move_and_echo 3 8
-".@@@@@...@.......@...@@@@@.@@@@...." move_and_echo 4 8
-".@...@...@.......@...@...@.@......." move_and_echo 5 8
-".@...@...@.......@...@...@..@@@@..." move_and_echo 1 43
-"@@@@...@@@...@@@@..@@@@..@@@@." move_and_echo 2 43
-"@...@.@...@.@.....@.....@....." move_and_echo 3 43
-"@@@@..@@@@@.@.....@@@@...@@@.." move_and_echo 4 43
-"@..@..@...@.@.....@.........@." move_and_echo 5 43
-"@...@.@...@..@@@@..@@@@.@@@@.."
+# Some ASCII art.
+move_and_echo 1 8 "..@@@..@@@@@...@@@@@.@...@..@@@@..."
+move_and_echo 2 8 ".@...@...@.......@...@...@.@......."
+move_and_echo 3 8 ".@@@@@...@.......@...@@@@@.@@@@...."
+move_and_echo 4 8 ".@...@...@.......@...@...@.@......."
+move_and_echo 5 8 ".@...@...@.......@...@...@..@@@@..."
+move_and_echo 1 43 "@@@@...@@@...@@@@..@@@@..@@@@."
+move_and_echo 2 43 "@...@.@...@.@.....@.....@....."
+move_and_echo 3 43 "@@@@..@@@@@.@.....@@@@...@@@.."
+move_and_echo 4 43 "@..@..@...@.@.....@.........@."
+move_and_echo 5 43 "@...@.@...@..@@@@..@@@@.@@@@.."
 
 
-# Set foreground and background colors to green.  echo -ne '\E[32;42m'
+# Set foreground and background colors to green.
+echo -ne '\E[32;42m'
 
 # Draw  eleven green lines.
 tput cup 5 0
@@ -142,29 +155,36 @@ for n in `seq 11`; do
       echo $BLANK80
 done
 
-# Set foreground color to black.  echo -ne '\E[30m' tput cup 5 0
+# Set foreground color to black. 
+echo -ne '\E[30m'
+tput cup 5 0
 
-# Draw the fences.  echo "++++++++++++++++++++++++++++++++++++++\ 
+# Draw the fences. 
+echo "++++++++++++++++++++++++++++++++++++++\
 ++++++++++++++++++++++++++++++++++++++++++"
 
-tput cup 15 0 echo "++++++++++++++++++++++++++++++++++++++\ 
+tput cup 15 0
+echo "++++++++++++++++++++++++++++++++++++++\
 ++++++++++++++++++++++++++++++++++++++++++"
 
-# Set foreground and background colors to white.  echo -ne '\E[37;47m'
+# Set foreground and background colors to white.
+echo -ne '\E[37;47m'
 
 # Draw three white lines.
 for n in `seq 3`; do
       echo $BLANK80
 done
 
-# Set foreground color to black.  echo -ne '\E[30m'
+# Set foreground color to black.
+echo -ne '\E[30m'
 
 # Create 9 files to stores handicaps.
 for n in `seq 10 7 68`; do
       touch $n
 done  
 
-# Set the first type of "horse" the script will draw.  HORSE_TYPE=2
+# Set the first type of "horse" the script will draw.
+HORSE_TYPE=2
 
 #  Create position-file and odds-file for every "horse".
 #+ In these files, store the current position of the horse,
@@ -228,21 +248,33 @@ done
 
 print_odds
 
-echo -ne '\E[47m' # Wait for a enter key press to start the race.  # The
-escape sequence '\E[?25l' disables the cursor.  tput cup 17 0 echo -e
-'\E[?25l'Press [enter] key to start the race...  read -s
+echo -ne '\E[47m'
+# Wait for a enter key press to start the race.
+# The escape sequence '\E[?25l' disables the cursor.
+tput cup 17 0
+echo -e '\E[?25l'Press [enter] key to start the race...
+read -s
 
-# Disable normal echoing in the terminal.  # This avoids key presses that
-might "contaminate" the screen #+ during the race.  stty -echo
+#  Disable normal echoing in the terminal.
+#  This avoids key presses that might "contaminate" the screen
+#+ during the race.  
+stty -echo
 
-# -------------------------------------------------------- # Start the race.
+# --------------------------------------------------------
+# Start the race.
 
-draw_horses echo -ne '\E[37;47m' move_and_echo 18 1 $BLANK80 echo -ne
-'\E[30m' move_and_echo 18 1 Starting...  sleep 1
+draw_horses
+echo -ne '\E[37;47m'
+move_and_echo 18 1 $BLANK80
+echo -ne '\E[30m'
+move_and_echo 18 1 Starting...
+sleep 1
 
-# Set the column of the finish line.  WINNING_POS=74
+# Set the column of the finish line.
+WINNING_POS=74
 
-# Define the time the race started.  START_TIME=`date +%s`
+# Define the time the race started.
+START_TIME=`date +%s`
 
 # COL variable needed by following "while" construct.
 COL=0    
@@ -314,32 +346,44 @@ while [ $COL -lt $WINNING_POS ]; do
           echo -n Current leader: `grep -w $HIGHEST_POS *position | cut -c7`\
 	  "                              "
 
-done
+done  
 
-# Define the time the race finished.  FINISH_TIME=`date +%s`
+# Define the time the race finished.
+FINISH_TIME=`date +%s`
 
-# Set background color to green and enable blinking text.  echo -ne
-'\E[30;42m' echo -en '\E[5m'
+# Set background color to green and enable blinking text.
+echo -ne '\E[30;42m'
+echo -en '\E[5m'
 
-# Make the winning horse blink.  tput cup `expr $MOVE_HORSE + 5` \ `cat
-horse_${MOVE_HORSE}_position | head -n 1` $DRAW_HORSE
+# Make the winning horse blink.
+tput cup `expr $MOVE_HORSE + 5` \
+`cat  horse_${MOVE_HORSE}_position | head -n 1`
+$DRAW_HORSE
 
-# Disable blinking text.  echo -en '\E[25m'
+# Disable blinking text.
+echo -en '\E[25m'
 
-# Set foreground and background color to white.  echo -ne '\E[37;47m'
+# Set foreground and background color to white.
+echo -ne '\E[37;47m'
 move_and_echo 18 1 $BLANK80
 
-# Set foreground color to black.  echo -ne '\E[30m'
+# Set foreground color to black.
+echo -ne '\E[30m'
 
-# Make winner blink.  tput cup 17 0 echo -e "\E[5mWINNER:
-$MOVE_HORSE\E[25m"" Odds: `cat odds_${MOVE_HORSE}`"\ " Race time: `expr
-$FINISH_TIME - $START_TIME` secs"
+# Make winner blink.
+tput cup 17 0
+echo -e "\E[5mWINNER: $MOVE_HORSE\E[25m""  Odds: `cat odds_${MOVE_HORSE}`"\
+"  Race time: `expr $FINISH_TIME - $START_TIME` secs"
 
-# Restore cursor and old colors.  echo -en "\E[?25h" echo -en "\E[0m"
+# Restore cursor and old colors.
+echo -en "\E[?25h"
+echo -en "\E[0m"
 
-# Restore echoing.  stty echo
+# Restore echoing.
+stty echo
 
-# Remove race temp directory.  rm -rf $HORSE_RACE_TMP_DIR
+# Remove race temp directory.
+rm -rf $HORSE_RACE_TMP_DIR
 
 tput cup 19 0
 

@@ -1,14 +1,17 @@
-#!/bin/bash # gronsfeld.bash
+#!/bin/bash
+# gronsfeld.bash
 
-# License: GPL3 # Reldate 06/23/11
+# License: GPL3
+# Reldate 06/23/11
 
-# This is an implementation of the Gronsfeld Cipher.  # It's essentially a
-stripped-down variant of the #+ polyalphabetic Vigen&egrave;re Tableau, but
-with only 10 alphabets.  # The classic Gronsfeld has a numeric sequence as
-the key word, #+ but here we substitute a letter string, for ease of use.  #
-Allegedly, this cipher was invented by the eponymous Count Gronsfeld #+ in
-the 17th Century. It was at one time considered to be unbreakable.  # Note
-that this is ###not### a secure cipher by modern standards.
+#  This is an implementation of the Gronsfeld Cipher.
+#  It's essentially a stripped-down variant of the 
+#+ polyalphabetic Vigen&egrave;re Tableau, but with only 10 alphabets.
+#  The classic Gronsfeld has a numeric sequence as the key word,
+#+ but here we substitute a letter string, for ease of use.
+#  Allegedly, this cipher was invented by the eponymous Count Gronsfeld
+#+ in the 17th Century. It was at one time considered to be unbreakable.
+#  Note that this is ###not### a secure cipher by modern standards.
 
 #  Global Variables  #
 Enc_suffix="29379"   #  Encrypted text output with this 5-digit suffix. 
@@ -120,9 +123,9 @@ do  # Calculate shift values for encryption/decryption.
   # There are simpler ways to accomplish this.
 done
 
-args=$(echo "$*" | sed -e 's/ //g' | tr A-Z a-z | sed -e 's/[0-9]//g')  #
-Remove whitespace and digits from command-line args.  # Can modify to also
-remove punctuation characters, if desired.
+args=$(echo "$*" | sed -e 's/ //g' | tr A-Z a-z | sed -e 's/[0-9]//g')
+# Remove whitespace and digits from command-line args.
+# Can modify to also remove punctuation characters, if desired.
 
          # Debug:
          # echo "$args"; exit $DEBUG

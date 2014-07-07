@@ -1,15 +1,24 @@
-#!/bin/bash # ascii.sh # ver. 0.2, reldate 26 Aug 2008 # Patched by ABS
-Guide author.
+#!/bin/bash
+# ascii.sh
+# ver. 0.2, reldate 26 Aug 2008
+# Patched by ABS Guide author.
 
-# Original script by Sebastian Arming.  # Used with permission (thanks!).
+# Original script by Sebastian Arming.
+# Used with permission (thanks!).
 
 exec >ASCII.txt         #  Save stdout to file,
                         #+ as in the example scripts
                         #+ reassign-stdout.sh and upperconv.sh.
 
-MAXNUM=256 COLUMNS=5 OCT=8 OCTSQU=64 LITTLESPACE=-3 BIGSPACE=-5
+MAXNUM=256
+COLUMNS=5
+OCT=8
+OCTSQU=64
+LITTLESPACE=-3
+BIGSPACE=-5
 
-i=1 # Decimal counter o=1 # Octal counter
+i=1 # Decimal counter
+o=1 # Octal counter
 
 while [ "$i" -lt "$MAXNUM" ]; do  # We don't have to count past 400 octal.
         paddi="    $i"
@@ -30,7 +39,8 @@ done
 
 exit $?
 
-# Compare this script with the "pr-asc.sh" example.  # This one handles
-"unprintable" characters.
+# Compare this script with the "pr-asc.sh" example.
+# This one handles "unprintable" characters.
 
-# Exercise: # Rewrite this script to use decimal numbers, rather than octal.
+# Exercise:
+# Rewrite this script to use decimal numbers, rather than octal.

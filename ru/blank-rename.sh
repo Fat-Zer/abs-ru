@@ -1,5 +1,7 @@
-#! /bin/bash # blank-rename.sh # # Substitutes underscores for blanks in all
-the filenames in a directory.
+#! /bin/bash
+# blank-rename.sh
+#
+# Substitutes underscores for blanks in all the filenames in a directory.
 
 ONE=1                     # For getting singular/plural right (see below).
 number=0                  # Keeps track of how many files actually renamed.

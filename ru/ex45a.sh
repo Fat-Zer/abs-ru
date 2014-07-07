@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo echo "String operations using \"expr \$string : \" construct" echo
-"===================================================" echo
+echo
+echo "String operations using \"expr \$string : \" construct"
+echo "==================================================="
+echo
 
 a=1234zipper5FLIPPER43231
 
@@ -14,16 +16,14 @@ echo "The string being operated upon is \"`expr "$a" : '\(.*\)'`\"."
 #       ***************************
 
 
-# If no escaped parentheses ...  #+ then 'expr' converts the string operand
-to an integer.
+#  If no escaped parentheses ...
+#+ then 'expr' converts the string operand to an integer.
 
 echo "Length of \"$a\" is `expr "$a" : '.*'`."   # Length of string
 
-echo "Number of digits at the beginning of \"$a\" is `expr "$a" :
-'[0-9]*'`."
+echo "Number of digits at the beginning of \"$a\" is `expr "$a" : '[0-9]*'`."
 
-# -------------------------------------------------------------------------
-#
+# ------------------------------------------------------------------------- #
 
 echo
 

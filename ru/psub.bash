@@ -1,4 +1,5 @@
-#!/bin/bash # psub.bash
+#!/bin/bash
+# psub.bash
 
 # As inspired by Diego Molina (thanks!).
 

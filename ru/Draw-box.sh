@@ -1,11 +1,13 @@
-#!/bin/bash # Draw-box.sh: Drawing a box using ASCII characters.
+#!/bin/bash
+# Draw-box.sh: Drawing a box using ASCII characters.
 
-# Script by Stefano Palmeri, with minor editing by document author.  # Minor
-edits suggested by Jim Angstadt.  # Used in the ABS Guide with permission.
+# Script by Stefano Palmeri, with minor editing by document author.
+# Minor edits suggested by Jim Angstadt.
+# Used in the ABS Guide with permission.
 
 
-###################################################################### ###
-draw_box function doc ###
+######################################################################
+###  draw_box function doc  ###
 
 #  The "draw_box" function lets the user
 #+ draw a box in a terminal.       
@@ -36,14 +38,19 @@ draw_box function doc ###
 #  The clear command is not contained within the function.
 #  This allows the user to draw multiple boxes, even overlapping ones.
 
-### end of draw_box function doc ###
+###  end of draw_box function doc  ### 
 ######################################################################
 
 draw_box(){
 
-#=============# HORZ="-" VERT="|" CORNER_CHAR="+"
+#=============#
+HORZ="-"
+VERT="|"
+CORNER_CHAR="+"
 
-MINARGS=4 E_BADARGS=65 #=============#
+MINARGS=4
+E_BADARGS=65
+#=============#
 
 
 if [ $# -lt "$MINARGS" ]; then          # If args are less than 4, exit.
@@ -135,5 +142,6 @@ draw_box $R $C $H $W $col   # Draw the box.
 
 exit 0
 
-# Exercise: # -------- # Add the option of printing text within the drawn
-box.
+# Exercise:
+# --------
+# Add the option of printing text within the drawn box.

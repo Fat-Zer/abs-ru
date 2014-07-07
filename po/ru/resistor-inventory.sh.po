@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # resistor-inventory.sh # Simple database / table-lookup "
-"application."
+"#!/bin/bash\n"
+"# resistor-inventory.sh\n"
+"# Simple database / table-lookup application.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:7
-msgid "# ============================================================== # # Data"
+#, no-wrap
+msgid ""
+"# ============================================================== #\n"
+"# Data\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,31 +46,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:19
+#, no-wrap
 msgid ""
-"B1724_value=1000 B1724_powerdissip=.25 B1724_colorcode=\"brown-black-red\" "
-"B1724_loc=24N B1724_inventory=243"
+"B1724_value=1000\n"
+"B1724_powerdissip=.25\n"
+"B1724_colorcode=\"brown-black-red\"\n"
+"B1724_loc=24N\n"
+"B1724_inventory=243\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:25
+#, no-wrap
 msgid ""
-"B1725_value=10000 B1725_powerdissip=.125 "
-"B1725_colorcode=\"brown-black-orange\" B1725_loc=24N B1725_inventory=89"
+"B1725_value=10000\n"
+"B1725_powerdissip=.125\n"
+"B1725_colorcode=\"brown-black-orange\"\n"
+"B1725_loc=24N\n"
+"B1725_inventory=89\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:27
-msgid "# ============================================================== #"
+#, no-wrap
+msgid "# ============================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:30 abs-guide/resistor-inventory.sh:34
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:32
-msgid "PS3='Enter catalog number: '"
+#, no-wrap
+msgid "PS3='Enter catalog number: '\n"
 msgstr ""
 
 #. type: Plain text
@@ -105,7 +121,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:56
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -123,14 +140,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:72
+#, no-wrap
 msgid ""
-"# Notes: # ----- # Shell scripts are inappropriate for anything except the "
-"most simple #+ database applications, and even then it involves workarounds "
-"and kludges.  # Much better is to use a language with native support for "
-"data structures, #+ such as C++ or Java (or even Perl)."
+"# Notes:\n"
+"# -----\n"
+"#  Shell scripts are inappropriate for anything except the most simple\n"
+"#+ database applications, and even then it involves workarounds and "
+"kludges.\n"
+"#  Much better is to use a language with native support for data "
+"structures,\n"
+"#+ such as C++ or Java (or even Perl).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/resistor-inventory.sh:73
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

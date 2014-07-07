@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:4
-msgid "# This is an alternate form of the preceding script."
+#, no-wrap
+msgid "# This is an alternate form of the preceding script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:9
+#, no-wrap
 msgid ""
-"# Suggested by Heiner Steven #+ as a workaround in those situations when a "
-"redirect loop #+ runs as a subshell, and therefore variables inside the loop "
-"# +do not keep their values upon loop termination."
+"#  Suggested by Heiner Steven\n"
+"#+ as a workaround in those situations when a redirect loop\n"
+"#+ runs as a subshell, and therefore variables inside the loop\n"
+"# +do not keep their values upon loop termination.\n"
 msgstr ""
 
 #. type: Plain text
@@ -56,7 +60,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:24
-msgid "count=0 echo"
+#, no-wrap
+msgid ""
+"count=0\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,10 +99,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:44
-msgid "echo; echo \"$count names read\"; echo"
+#, no-wrap
+msgid "echo; echo \"$count names read\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/redir2a.sh:45
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

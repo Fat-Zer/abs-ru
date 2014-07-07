@@ -58,6 +58,8 @@ for(( i=1; i&lt;numelem; i++ )) do
 done
 
 
-echo echo "------" echo $'Result:\n'${list[@]}
+echo
+echo  "------"
+echo $'Result:\n'${list[@]}
 
 exit $?

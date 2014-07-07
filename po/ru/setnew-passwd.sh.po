@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:11
-msgid "E_NOSUCHUSER=70 SUCCESS=0"
+#, no-wrap
+msgid ""
+"E_NOSUCHUSER=70\n"
+"SUCCESS=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,7 +60,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:27
-msgid "username=bozo NEWPASSWORD=security_violation"
+#, no-wrap
+msgid ""
+"username=bozo\n"
+"NEWPASSWORD=security_violation\n"
 msgstr ""
 
 #. type: Plain text
@@ -76,22 +82,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:40
+#, no-wrap
 msgid ""
-"echo \"$NEWPASSWORD\" | passwd --stdin \"$username\" # The '--stdin' option "
-"to 'passwd' permits #+ getting a new password from stdin (or a pipe)."
+"echo \"$NEWPASSWORD\" | passwd --stdin \"$username\"\n"
+"#  The '--stdin' option to 'passwd' permits\n"
+"#+ getting a new password from stdin (or a pipe).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:42
-msgid "echo; echo \"User $username's password changed!\""
+#, no-wrap
+msgid "echo; echo \"User $username's password changed!\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:44
-msgid "# Using the 'passwd' command in a script is dangerous."
+#, no-wrap
+msgid "# Using the 'passwd' command in a script is dangerous.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/setnew-passwd.sh:45
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

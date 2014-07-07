@@ -1,8 +1,11 @@
-#!/bin/bash # zmore
+#!/bin/bash
+# zmore
 
 # View gzipped files with 'more' filter.
 
-E_NOARGS=85 E_NOTFOUND=86 E_NOTGZIP=87
+E_NOARGS=85
+E_NOTFOUND=86
+E_NOTGZIP=87
 
 if [ $# -eq 0 ] # same effect as:  if [ -z "$1" ]
 # $1 can exist, but be empty:  zmore "" arg2 arg3
@@ -30,7 +33,8 @@ fi
 
 zcat $1 | more
 
-# Uses the 'more' filter.  # May substitute 'less' if desired.
+# Uses the 'more' filter.
+# May substitute 'less' if desired.
 
 exit $?   # Script returns exit status of pipe.
 #  Actually "exit $?" is unnecessary, as the script will, in any case,

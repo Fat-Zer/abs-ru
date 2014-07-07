@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# $RANDOM returns a different random integer at each invocation.  # Nominal
-range: 0 - 32767 (signed 16-bit integer).
+# $RANDOM returns a different random integer at each invocation.
+# Nominal range: 0 - 32767 (signed 16-bit integer).
 
-MAXCOUNT=10 count=1
+MAXCOUNT=10
+count=1
 
 echo
 echo "$MAXCOUNT random numbers:"
@@ -16,8 +17,8 @@ do
 done
 echo "-----------------"
 
-# If you need a random int within a certain range, use the 'modulo'
-operator.  # This returns the remainder of a division operation.
+# If you need a random int within a certain range, use the 'modulo' operator.
+# This returns the remainder of a division operation.
 
 RANGE=500
 
@@ -32,8 +33,8 @@ echo
 
 
 
-# If you need a random integer greater than a lower bound, #+ then set up a
-test to discard all numbers below that.
+#  If you need a random integer greater than a lower bound,
+#+ then set up a test to discard all numbers below that.
 
 FLOOR=200
 
@@ -64,7 +65,9 @@ echo
 
 
 
-# Generate binary choice, that is, "true" or "false" value.  BINARY=2 T=1
+# Generate binary choice, that is, "true" or "false" value.
+BINARY=2
+T=1
 number=$RANDOM
 
 let "number %= $BINARY"
@@ -96,7 +99,9 @@ die2=0
     #+ modulo (%) or addition (+)?
 
 
-let "throw = $die1 + $die2" echo "Throw of the dice = $throw" echo
+let "throw = $die1 + $die2"
+echo "Throw of the dice = $throw"
+echo
 
 
 exit 0

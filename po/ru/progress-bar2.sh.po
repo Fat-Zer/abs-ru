@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar2.sh:5
+#, no-wrap
 msgid ""
-"#! /bin/bash # progress-bar2.sh # Author: Graham Ewart (with reformatting by "
-"ABS Guide author).  # Used in ABS Guide with permission (thanks!)."
+"#! /bin/bash\n"
+"# progress-bar2.sh\n"
+"# Author: Graham Ewart (with reformatting by ABS Guide author).\n"
+"# Used in ABS Guide with permission (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar2.sh:7
-msgid "# Invoke this script with bash. It doesn't work with sh."
+#, no-wrap
+msgid "# Invoke this script with bash. It doesn't work with sh.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar2.sh:10
-msgid "interval=1 long_interval=10"
+#, no-wrap
+msgid ""
+"interval=1\n"
+"long_interval=10\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,7 +64,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar2.sh:26
-msgid "echo -n 'Long-running process ' sleep $long_interval echo ' Finished!'"
+#, no-wrap
+msgid ""
+"echo -n 'Long-running process '\n"
+"sleep $long_interval\n"
+"echo ' Finished!'\n"
 msgstr ""
 
 #. type: Plain text
@@ -71,5 +82,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar2.sh:31
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

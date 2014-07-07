@@ -1,8 +1,11 @@
-#! /bin/bash # CopyArray.sh # # This script written by Michael Zick.  # Used
-here with permission.
+#! /bin/bash
+# CopyArray.sh
+#
+# This script written by Michael Zick.
+# Used here with permission.
 
-# How-To "Pass by Name &amp; Return by Name" #+ or "Building your own
-assignment statement".
+#  How-To "Pass by Name &amp; Return by Name"
+#+ or "Building your own assignment statement".
 
 
 CpArray_Mac() {
@@ -15,15 +18,19 @@ CpArray_Mac() {
     echo -n "$1"                    # Source name
     echo -n '[@]} )'
 
-# That could all be a single command.  # Matter of style only.  }
+# That could all be a single command.
+# Matter of style only.
+}
 
 declare -f CopyArray                # Function "Pointer"
 CopyArray=CpArray_Mac               # Statement Builder
 
-Hype()  {
+Hype()
+{
 
-# Hype the array named $1.  # (Splice it together with array containing
-"Really Rocks".)  # Return in array named $2.
+# Hype the array named $1.
+# (Splice it together with array containing "Really Rocks".)
+# Return in array named $2.
 
     local -a TMP
     local -a hype=( Really Rocks )
@@ -33,7 +40,8 @@ Hype()  {
     $($CopyArray TMP $2)
 }
 
-declare -a before=( Advanced Bash Scripting )  declare -a after
+declare -a before=( Advanced Bash Scripting )
+declare -a after
 
 echo "Array Before = ${before[@]}"
 

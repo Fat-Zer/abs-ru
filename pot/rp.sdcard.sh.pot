@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # rp.sdcard.sh # Preparing an SD card with a bootable image for "
-"the Raspberry Pi."
+"#!/bin/bash\n"
+"# rp.sdcard.sh\n"
+"# Preparing an SD card with a bootable image for the Raspberry Pi.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:8
+#, no-wrap
 msgid ""
-"# $1 = imagefile name # $2 = sdcard (device file)  # Otherwise defaults to "
-"the defaults, see below."
+"# $1 = imagefile name\n"
+"# $2 = sdcard (device file)\n"
+"# Otherwise defaults to the defaults, see below.\n"
 msgstr ""
 
 #. type: Plain text
@@ -91,27 +95,35 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:46
+#, no-wrap
 msgid ""
-"echo \"Last chance to change your mind!\"; echo read -s -n1 -p \"Hit a key "
-"to write $imagefile to $sdcard [Ctl-c to exit].\" echo; echo"
+"echo \"Last chance to change your mind!\"; echo\n"
+"read -s -n1 -p \"Hit a key to write $imagefile to $sdcard [Ctl-c to "
+"exit].\"\n"
+"echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:49
+#, no-wrap
 msgid ""
-"echo \"Writing $imagefile to $sdcard ...\" dd bs=$DEFAULTbs if=$imagefile "
-"of=$sdcard"
+"echo \"Writing $imagefile to $sdcard ...\"\n"
+"dd bs=$DEFAULTbs if=$imagefile of=$sdcard\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:51
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rp.sdcard.sh:56
+#, no-wrap
 msgid ""
-"# Exercises: # --------- # 1) Provide additional error checking.  # 2) Have "
-"script autodetect device file for SD card (difficult!).  # 3) Have script "
-"sutodetect image file (*img) in $PWD."
+"# Exercises:\n"
+"# ---------\n"
+"# 1) Provide additional error checking.\n"
+"# 2) Have script autodetect device file for SD card (difficult!).\n"
+"# 3) Have script sutodetect image file (*img) in $PWD.\n"
 msgstr ""

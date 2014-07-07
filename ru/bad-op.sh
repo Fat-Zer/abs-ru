@@ -1,9 +1,11 @@
-#!/bin/bash # bad-op.sh: Trying to use a string comparison on integers.
+#!/bin/bash
+# bad-op.sh: Trying to use a string comparison on integers.
 
-echo number=1
+echo
+number=1
 
-# The following while-loop has two errors: #+ one blatant, and the other
-subtle.
+#  The following while-loop has two errors:
+#+ one blatant, and the other subtle.
 
 while [ "$number" &lt; 5 ]    # Wrong! Should be:  while [ "$number" -lt 5 ]
 do
@@ -27,7 +29,8 @@ echo; echo "---------------------"
 
 # This can cause problems. For example:
 
-lesser=5 greater=105
+lesser=5
+greater=105
 
 if [ "$greater" \&lt; "$lesser" ]
 then

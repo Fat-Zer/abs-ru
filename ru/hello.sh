@@ -9,7 +9,8 @@
 # ./goodbye
 
 
-HELLO_CALL=65 GOODBYE_CALL=66
+HELLO_CALL=65
+GOODBYE_CALL=66
 
 if [ $0 = "./goodbye" ]
 then
@@ -18,5 +19,6 @@ then
   exit $GOODBYE_CALL
 fi
 
-echo "Hello!" # Some other hello-type commands, as appropriate.  exit
-$HELLO_CALL
+echo "Hello!"
+# Some other hello-type commands, as appropriate.
+exit $HELLO_CALL

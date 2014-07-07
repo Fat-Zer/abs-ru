@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex56py.sh:3
-msgid "#!/bin/bash # ex56py.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex56py.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex56py.sh:7
+#, no-wrap
 msgid ""
-"# Shell commands may precede the Python script.  echo \"This precedes the "
-"embedded Python script within \\\"$0.\\\"\" echo "
-"\"===============================================================\""
+"# Shell commands may precede the Python script.\n"
+"echo \"This precedes the embedded Python script within \\\"$0.\\\"\"\n"
+"echo \"===============================================================\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex56py.sh:11
+#, no-wrap
 msgid ""
-"python -c 'print \"This line prints from an embedded Python script.\\n\";' # "
-"Unlike sed and perl, Python uses the \"-c\" option.  python -c 'k = "
-"raw_input( \"Hit a key to exit to outer script. \" )'"
+"python -c 'print \"This line prints from an embedded Python script.\\n\";'\n"
+"# Unlike sed and perl, Python uses the \"-c\" option.\n"
+"python -c 'k = raw_input( \"Hit a key to exit to outer script. \" )'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex56py.sh:14
+#, no-wrap
 msgid ""
-"echo \"===============================================================\" "
-"echo \"However, the script may also contain shell and system commands.\""
+"echo \"===============================================================\"\n"
+"echo \"However, the script may also contain shell and system commands.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex56py.sh:15
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

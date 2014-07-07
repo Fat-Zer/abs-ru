@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:3
-msgid "#!/bin/bash # monthlypmt.sh: Calculates monthly payment on a mortgage."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# monthlypmt.sh: Calculates monthly payment on a mortgage.\n"
 msgstr ""
 
 #. type: Plain text
@@ -35,22 +38,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:15
+#, no-wrap
 msgid ""
-"echo echo \"Given the principal, interest rate, and term of a mortgage,\" "
-"echo \"calculate the monthly payment.\""
+"echo\n"
+"echo \"Given the principal, interest rate, and term of a mortgage,\"\n"
+"echo \"calculate the monthly payment.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:17
-msgid "bottom=1.0"
+#, no-wrap
+msgid "bottom=1.0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:25
+#, no-wrap
 msgid ""
-"echo echo -n \"Enter principal (no commas) \" read principal echo -n \"Enter "
-"interest rate (percent) \" # If 12%, enter \"12\", not \".12\".  read "
-"interest_r echo -n \"Enter term (months) \" read term"
+"echo\n"
+"echo -n \"Enter principal (no commas) \"\n"
+"read principal\n"
+"echo -n \"Enter interest rate (percent) \"  # If 12%, enter \"12\", not "
+"\".12\".\n"
+"read interest_r\n"
+"echo -n \"Enter term (months) \"\n"
+"read term\n"
 msgstr ""
 
 #. type: Plain text
@@ -101,10 +113,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:53
+#, no-wrap
 msgid ""
-"# -------------------------------------------------------------------- # "
-"Rick Boivie pointed out a more efficient implementation #+ of the above "
-"loop, which decreases computation time by 2/3."
+"# -------------------------------------------------------------------- \n"
+"#  Rick Boivie pointed out a more efficient implementation\n"
+"#+ of the above loop, which decreases computation time by 2/3.\n"
 msgstr ""
 
 #. type: Plain text
@@ -119,9 +132,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:62
+#, no-wrap
 msgid ""
-"# And then he came up with an even more efficient alternative, #+ one that "
-"cuts down the run time by about 95%!"
+"#  And then he came up with an even more efficient alternative,\n"
+"#+ one that cuts down the run time by about 95%!\n"
 msgstr ""
 
 #. type: Plain text
@@ -145,12 +159,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/monthlypmt.sh:82
+#, no-wrap
 msgid ""
-"# Because . . .  # The algorithm behind the loop #+ is actually a sum of "
-"geometric proportion series.  # The sum formula is e0(1-q^n)/(1-q), #+ where "
-"e0 is the first element and q=e(n+1)/e(n)  #+ and n is the number of "
-"elements.  # "
-"--------------------------------------------------------------------------"
+"#  Because . . .\n"
+"#  The algorithm behind the loop\n"
+"#+ is actually a sum of geometric proportion series.\n"
+"#  The sum formula is e0(1-q^n)/(1-q),\n"
+"#+ where e0 is the first element and q=e(n+1)/e(n)\n"
+"#+ and n is the number of elements.\n"
+"# "
+"--------------------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text

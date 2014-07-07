@@ -1,15 +1,19 @@
 #!/bin/bash
 
-# $Id$ # Above line is RCS info.
+# $Id$
+# Above line is RCS info.
 
-# The latest version of this script is available from
-http://www.morethan.org.  # # Spammer-identification # by Michael S. Zick #
-Used in the ABS Guide with permission.
+# The latest version of this script is available from http://www.morethan.org.
+#
+# Spammer-identification
+# by Michael S. Zick
+# Used in the ABS Guide with permission.
 
 
 
-####################################################### # Documentation #
-See also "Quickstart" at end of script.
+#######################################################
+# Documentation
+# See also "Quickstart" at end of script.
 #######################################################
 
 :&lt;&lt;-'__is_spammer_Doc_'
@@ -130,26 +134,39 @@ __is_spammer_Doc_
 # Whitespace == :Space:Tab:Line Feed:Carriage Return:
 WSP_IFS=$'\x20'$'\x09'$'\x0A'$'\x0D'
 
-# No Whitespace == Line Feed:Carriage Return NO_WSP=$'\x0A'$'\x0D'
+# No Whitespace == Line Feed:Carriage Return
+NO_WSP=$'\x0A'$'\x0D'
 
-# Field separator for dotted decimal IP addresses ADR_IFS=${NO_WSP}'.'
+# Field separator for dotted decimal IP addresses
+ADR_IFS=${NO_WSP}'.'
 
-# Array to dotted string conversions DOT_IFS='.'${WSP_IFS}
+# Array to dotted string conversions
+DOT_IFS='.'${WSP_IFS}
 
-# # # Pending operations stack machine # # # # This set of functions
-described in func_stack.bash.  # (See "Additional documentation" above.)  #
-# #
+# # # Pending operations stack machine # # #
+# This set of functions described in func_stack.bash.
+# (See "Additional documentation" above.)
+# # #
 
-# Global stack of pending operations.  declare -f -a _pending_ # Global
-sentinel for stack runners declare -i _p_ctrl_ # Global holder for currently
-executing function declare -f _pend_current_
+# Global stack of pending operations.
+declare -f -a _pending_
+# Global sentinel for stack runners
+declare -i _p_ctrl_
+# Global holder for currently executing function
+declare -f _pend_current_
 
-# # # Debug version only - remove for regular use # # # # # The function
-stored in _pend_hook_ is called # immediately before each pending function
-is # evaluated.  Stack clean, _pend_current_ set.  # # This thingy
-demonstrated in pend_hook.bash.  declare -f _pend_hook_ # # #
+# # # Debug version only - remove for regular use # # #
+#
+# The function stored in _pend_hook_ is called
+# immediately before each pending function is
+# evaluated.  Stack clean, _pend_current_ set.
+#
+# This thingy demonstrated in pend_hook.bash.
+declare -f _pend_hook_
+# # #
 
-# The do nothing function pend_dummy() { : ; }
+# The do nothing function
+pend_dummy() { : ; }
 
 # Clear and initialize the function stack.
 pend_init() {
@@ -513,67 +530,87 @@ col_print() {
 
 # # # # 'Hunt the Spammer' data flow # # # #
 
-# Application return code declare -i _hs_RC
+# Application return code
+declare -i _hs_RC
 
-# Original input, from which IP addresses are removed # After which, domain
-names to check declare -a uc_name
+# Original input, from which IP addresses are removed
+# After which, domain names to check
+declare -a uc_name
 
-# Original input IP addresses are moved here # After which, IP addresses to
-check declare -a uc_address
+# Original input IP addresses are moved here
+# After which, IP addresses to check
+declare -a uc_address
 
-# Names against which address expansion run # Ready for name detail lookup
+# Names against which address expansion run
+# Ready for name detail lookup
 declare -a chk_name
 
-# Addresses against which name expansion run # Ready for address detail
-lookup declare -a chk_address
+# Addresses against which name expansion run
+# Ready for address detail lookup
+declare -a chk_address
 
-# Recursion is depth-first-by-name.  # The expand_input_address maintains
-this list #+ to prohibit looking up addresses twice during #+ domain name
-recursion.  declare -a been_there_addr been_there_addr=( '127.0.0.1' ) #
-Whitelist localhost
+#  Recursion is depth-first-by-name.
+#  The expand_input_address maintains this list
+#+ to prohibit looking up addresses twice during
+#+ domain name recursion.
+declare -a been_there_addr
+been_there_addr=( '127.0.0.1' ) # Whitelist localhost
 
-# Names which we have checked (or given up on)  declare -a known_name
+# Names which we have checked (or given up on)
+declare -a known_name
 
-# Addresses which we have checked (or given up on)  declare -a known_address
+# Addresses which we have checked (or given up on)
+declare -a known_address
 
-# List of zero or more Blacklist servers to check.  # Each 'known_address'
-will be checked against each server, #+ with negative replies and failures
-suppressed.  declare -a list_server
+#  List of zero or more Blacklist servers to check.
+#  Each 'known_address' will be checked against each server,
+#+ with negative replies and failures suppressed.
+declare -a list_server
 
-# Indirection limit - set to zero == no limit indirect=${SPAMMER_LIMIT:=2}
+# Indirection limit - set to zero == no limit
+indirect=${SPAMMER_LIMIT:=2}
 
 # # # # 'Hunt the Spammer' information output data # # # #
 
-# Any domain name may have multiple IP addresses.  # Any IP address may have
-multiple domain names.  # Therefore, track unique address-name pairs.
-declare -a known_pair declare -a reverse_pair
+# Any domain name may have multiple IP addresses.
+# Any IP address may have multiple domain names.
+# Therefore, track unique address-name pairs.
+declare -a known_pair
+declare -a reverse_pair
 
-# In addition to the data flow variables; known_address #+ known_name and
-list_server, the following are output to the #+ external graphics interface
-file.
+#  In addition to the data flow variables; known_address
+#+ known_name and list_server, the following are output to the
+#+ external graphics interface file.
 
-# Authority chain, parent -> SOA fields.  declare -a auth_chain
+# Authority chain, parent -> SOA fields.
+declare -a auth_chain
 
-# Reference chain, parent name -> child name declare -a ref_chain
+# Reference chain, parent name -> child name
+declare -a ref_chain
 
-# DNS chain - domain name -> address declare -a name_address
+# DNS chain - domain name -> address
+declare -a name_address
 
-# Name and service pairs - domain name -> service declare -a name_srvc
+# Name and service pairs - domain name -> service
+declare -a name_srvc
 
-# Name and resource pairs - domain name -> Resource Record declare -a
-name_resource
+# Name and resource pairs - domain name -> Resource Record
+declare -a name_resource
 
-# Parent and Child pairs - parent name -> child name # This MAY NOT be the
-same as the ref_chain followed! declare -a parent_child
+# Parent and Child pairs - parent name -> child name
+# This MAY NOT be the same as the ref_chain followed!
+declare -a parent_child
 
-# Address and Blacklist hit pairs - address->server declare -a address_hits
+# Address and Blacklist hit pairs - address->server
+declare -a address_hits
 
 # Dump interface file data
 declare -f _dot_dump
 _dot_dump=pend_dummy   # Initially a no-op
 
-# Data dump is enabled by setting the environment variable SPAMMER_DATA #+
-to the name of a writable file.  declare _dot_file
+#  Data dump is enabled by setting the environment variable SPAMMER_DATA
+#+ to the name of a writable file.
+declare _dot_file
 
 # Helper function for the dump-to-dot-file function
 # dump_to_dot &lt;array_name&gt; &lt;prefix&gt;
@@ -704,9 +741,10 @@ dump_dot() {
 
 # # # # 'Hunt the Spammer' execution flow # # # #
 
-# Execution trace is enabled by setting the #+ environment variable
-SPAMMER_TRACE to the name of a writable file.  declare -a _trace_log declare
-_log_file
+#  Execution trace is enabled by setting the
+#+ environment variable SPAMMER_TRACE to the name of a writable file.
+declare -a _trace_log
+declare _log_file
 
 # Function to fill the trace log
 trace_logger() {
@@ -737,11 +775,18 @@ dump_log() {
     fi
 }
 
-# # # Utility program 'dig' wrappers # # # # # These wrappers are derived
-from the #+ examples shown in dig_wrappers.bash.  # # The major difference
-is these return #+ their results as a list in an array.  # # See
-dig_wrappers.bash for details and #+ use that script to develop any
-changes.  # # # #
+# # # Utility program 'dig' wrappers # # #
+#
+#  These wrappers are derived from the
+#+ examples shown in dig_wrappers.bash.
+#
+#  The major difference is these return
+#+ their results as a list in an array.
+#
+#  See dig_wrappers.bash for details and
+#+ use that script to develop any changes.
+#
+# # #
 
 # Short form answer: 'dig' parses answer.
 
@@ -1562,20 +1607,25 @@ usage() {
     Setting the environment variable 'SPAMMER_TRACE' to a filename
     will cause the execution engine to log a function call trace.
 
-_usage_statement_ }
+_usage_statement_
+}
 
-# The default list of Blacklist servers: # Many choices, see:
-http://www.spews.org/lists.html
+# The default list of Blacklist servers:
+# Many choices, see: http://www.spews.org/lists.html
 
-declare -a default_servers # See: http://www.spamhaus.org (Conservative,
-well maintained)  default_servers[0]='sbl-xbl.spamhaus.org' # See:
-http://ordb.org (Open mail relays)  default_servers[1]='relays.ordb.org' #
-See: http://www.spamcop.net/ (You can report spammers here)
-default_servers[2]='bl.spamcop.net' # See: http://www.spews.org (An 'early
-detect' system)  default_servers[3]='l2.spews.dnsbl.sorbs.net' # See:
-http://www.dnsbl.us.sorbs.net/using.shtml
-default_servers[4]='dnsbl.sorbs.net' # See: http://dsbl.org/usage (Various
-mail relay lists)  default_servers[5]='list.dsbl.org'
+declare -a default_servers
+# See: http://www.spamhaus.org (Conservative, well maintained)
+default_servers[0]='sbl-xbl.spamhaus.org'
+# See: http://ordb.org (Open mail relays)
+default_servers[1]='relays.ordb.org'
+# See: http://www.spamcop.net/ (You can report spammers here)
+default_servers[2]='bl.spamcop.net'
+# See: http://www.spews.org (An 'early detect' system)
+default_servers[3]='l2.spews.dnsbl.sorbs.net'
+# See: http://www.dnsbl.us.sorbs.net/using.shtml
+default_servers[4]='dnsbl.sorbs.net'
+# See: http://dsbl.org/usage (Various mail relay lists)
+default_servers[5]='list.dsbl.org'
 default_servers[6]='multihop.dsbl.org'
 default_servers[7]='unconfirmed.dsbl.org'
 
@@ -1802,8 +1852,10 @@ $_log_dump                   # Execution trace
 echo
 
 
-############################## # Example output from script #
-############################## :&lt;&lt;-'_is_spammer_outputs_'
+##############################
+# Example output from script #
+##############################
+:&lt;&lt;-'_is_spammer_outputs_'
 
 ./is_spammer.bash 0 web4.alojamentos7.com
 
@@ -1897,7 +1949,8 @@ Quickstart
 
  Quick Start
 
-In the same directory as the is_spammer.bash script; Do: ./is_spammer.bash
+In the same directory as the is_spammer.bash script; 
+Do: ./is_spammer.bash
 
  Usage Details
 
@@ -2002,18 +2055,22 @@ In the same directory as the is_spammer.bash script; Do: ./is_spammer.bash
 
 9. Where is my graph (diagram)?
 
-The script does not directly produce a graph (diagram).  It only produces a
-graphic description file. You can process the graphic descriptor file that
-was output with the 'dot' program.
+The script does not directly produce a graph (diagram). 
+It only produces a graphic description file. You can 
+process the graphic descriptor file that was output 
+with the 'dot' program.
 
-Until you edit that descriptor file, to describe the relationships you want
-shown, all that you will get is a bunch of labeled name and address nodes.
+Until you edit that descriptor file, to describe the 
+relationships you want shown, all that you will get is 
+a bunch of labeled name and address nodes.
 
-All of the script's discovered relationships are within a comment block in
-the graphic descriptor file, each with a descriptive heading.
+All of the script's discovered relationships are within 
+a comment block in the graphic descriptor file, each 
+with a descriptive heading.
 
-The editing required to draw a line between a pair of nodes from the
-information in the descriptor file may be done with a text editor.
+The editing required to draw a line between a pair of 
+nodes from the information in the descriptor file may 
+be done with a text editor. 
 
 Given these lines somewhere in the descriptor file:
 
@@ -2045,8 +2102,8 @@ PC0000 guardproof.info. third.guardproof.info.
 
  */
 
-Turn that into the following lines by substituting node identifiers into the
-relationships:
+Turn that into the following lines by substituting node 
+identifiers into the relationships:
 
 # Known domain name nodes
 
@@ -2088,25 +2145,29 @@ PC0000 guardproof.info. third.guardproof.info.
 
  */
 
-Process that with the 'dot' program, and you have your first network
-diagram.
+Process that with the 'dot' program, and you have your 
+first network diagram.
 
-In addition to the conventional graphic edges, the descriptor file includes
-similar format pair-data that describes services, zone records
-(sub-graphs?), blacklisted addresses, and other things which might be
-interesting to include in your graph. This additional information could be
-displayed as different node shapes, colors, line sizes, etc.
+In addition to the conventional graphic edges, the 
+descriptor file includes similar format pair-data that 
+describes services, zone records (sub-graphs?), 
+blacklisted addresses, and other things which might be 
+interesting to include in your graph. This additional 
+information could be displayed as different node 
+shapes, colors, line sizes, etc.
 
-The descriptor file can also be read and edited by a Bash script (of
-course). You should be able to find most of the functions required within
-the "is_spammer.bash" script.
+The descriptor file can also be read and edited by a 
+Bash script (of course). You should be able to find 
+most of the functions required within the 
+"is_spammer.bash" script.
 
 # End Quickstart.
 
 
 
-Additional Note ========== ====
+Additional Note
+========== ====
 
-Michael Zick points out that there is a "makeviz.bash" interactive Web site
-at rediris.es. Can't give the full URL, since this is not a publically
-accessible site.
+Michael Zick points out that there is a "makeviz.bash" interactive
+Web site at rediris.es. Can't give the full URL, since this is not
+a publically accessible site.

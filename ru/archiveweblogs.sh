@@ -1,23 +1,37 @@
-#!/bin/bash # archiveweblogs.sh v1.0
+#!/bin/bash
+# archiveweblogs.sh v1.0
 
-# Troy Engel &lt;tengel@fluid.com&gt; # Slightly modified by document
-author.  # Used with permission.  # # This script will preserve the normally
-rotated and #+ thrown away weblogs from a default RedHat/Apache
-installation.  # It will save the files with a date/time stamp in the
-filename, #+ bzipped, to a given directory.  # # Run this from crontab
-nightly at an off hour, #+ as bzip2 can suck up some serious CPU on huge
-logs: # 0 2 * * * /opt/sbin/archiveweblogs.sh
+# Troy Engel &lt;tengel@fluid.com&gt;
+# Slightly modified by document author.
+# Used with permission.
+#
+#  This script will preserve the normally rotated and
+#+ thrown away weblogs from a default RedHat/Apache installation.
+#  It will save the files with a date/time stamp in the filename,
+#+ bzipped, to a given directory.
+#
+#  Run this from crontab nightly at an off hour,
+#+ as bzip2 can suck up some serious CPU on huge logs:
+#  0 2 * * * /opt/sbin/archiveweblogs.sh
 
 
 PROBLEM=66
 
-# Set this to your backup dir.  BKP_DIR=/opt/backups/weblogs
+# Set this to your backup dir.
+BKP_DIR=/opt/backups/weblogs
 
-# Default Apache/RedHat stuff LOG_DAYS="4 3 2 1" LOG_DIR=/var/log/httpd
+# Default Apache/RedHat stuff
+LOG_DAYS="4 3 2 1"
+LOG_DIR=/var/log/httpd
 LOG_FILES="access_log error_log"
 
-# Default RedHat program locations LS=/bin/ls MV=/bin/mv ID=/usr/bin/id
-CUT=/bin/cut COL=/usr/bin/column BZ2=/usr/bin/bzip2
+# Default RedHat program locations
+LS=/bin/ls
+MV=/bin/mv
+ID=/usr/bin/id
+CUT=/bin/cut
+COL=/usr/bin/column
+BZ2=/usr/bin/bzip2
 
 # Are we root?
 USER=`$ID -u`

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # strip-comment.sh: Strips out the comments (/* COMMENT */) in a "
-"C program."
+"#!/bin/bash\n"
+"# strip-comment.sh: Strips out the comments (/* COMMENT */) in a C "
+"program.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:7
-msgid "E_NOARGS=0 E_ARGERROR=66 E_WRONG_FILE_TYPE=67"
+#, no-wrap
+msgid ""
+"E_NOARGS=0\n"
+"E_ARGERROR=66\n"
+"E_WRONG_FILE_TYPE=67\n"
 msgstr ""
 
 #. type: Plain text
@@ -42,11 +48,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:20
+#, no-wrap
 msgid ""
-"# Test for correct file type.  type=`file $1 | awk '{ print $2, $3, $4, $5 "
-"}'` # \"file $1\" echoes file type . . .  # Then awk removes the first "
-"field, the filename . . .  # Then the result is fed into the variable "
-"\"type.\" correct_type=\"ASCII C program text\""
+"# Test for correct file type.\n"
+"type=`file $1 | awk '{ print $2, $3, $4, $5 }'`\n"
+"# \"file $1\" echoes file type . . .\n"
+"# Then awk removes the first field, the filename . . .\n"
+"# Then the result is fed into the variable \"type.\"\n"
+"correct_type=\"ASCII C program text\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -64,42 +73,53 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:38
+#, no-wrap
 msgid ""
-"# Rather cryptic sed script: #-------- sed ' /^\\/\\*/d /.*\\*\\//d ' $1 "
-"#-------- # Easy to understand if you take several hours to learn sed "
-"fundamentals."
+"# Rather cryptic sed script:\n"
+"#--------\n"
+"sed '\n"
+"/^\\/\\*/d\n"
+"/.*\\*\\//d\n"
+"' $1\n"
+"#--------\n"
+"# Easy to understand if you take several hours to learn sed fundamentals.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:43
+#, no-wrap
 msgid ""
-"# Need to add one more line to the sed script to deal with #+ case where "
-"line of code has a comment following it on same line.  # This is left as a "
-"non-trivial exercise."
+"#  Need to add one more line to the sed script to deal with\n"
+"#+ case where line of code has a comment following it on same line.\n"
+"#  This is left as a non-trivial exercise.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:46
+#, no-wrap
 msgid ""
-"# Also, the above code deletes non-comment lines with a \"*/\" . . .  #+ not "
-"a desirable result."
+"#  Also, the above code deletes non-comment lines with a \"*/\" . . .\n"
+"#+ not a desirable result.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:48 abs-guide/strip-comments.sh:79
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:52
+#, no-wrap
 msgid ""
-"# ---------------------------------------------------------------- # Code "
-"below this line will not execute because of 'exit 0' above."
+"# ----------------------------------------------------------------\n"
+"# Code below this line will not execute because of 'exit 0' above.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:54
-msgid "# Stephane Chazelas suggests the following alternative:"
+#, no-wrap
+msgid "# Stephane Chazelas suggests the following alternative:\n"
 msgstr ""
 
 #. type: Plain text
@@ -130,9 +150,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/strip-comments.sh:78
+#, no-wrap
 msgid ""
-"# This is still fooled by things like: # printf(\"/*\"); # or # /* /* buggy "
-"embedded comment */ # # To handle all special cases (comments in strings, "
-"comments in string #+ where there is a \\\", \\\\\" ...), #+ the only way is "
-"to write a C parser (using lex or yacc perhaps?)."
+"#  This is still fooled by things like:\n"
+"#  printf(\"/*\");\n"
+"#  or\n"
+"#  /*  /* buggy embedded comment */\n"
+"#\n"
+"#  To handle all special cases (comments in strings, comments in string\n"
+"#+ where there is a \\\", \\\\\" ...),\n"
+"#+ the only way is to write a C parser (using lex or yacc perhaps?).\n"
 msgstr ""

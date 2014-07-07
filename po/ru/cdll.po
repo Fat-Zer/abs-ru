@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,13 +75,11 @@ msgstr ""
 msgid ""
 "cd_hm ()\n"
 "{\n"
-"        ${PRINTF} \"%s\" \"cd [dir] [0-9] [@[s|h] [-g [&lt;dir&gt;]] [-d] "
-"\\\n"
+"        ${PRINTF} \"%s\" \"cd [dir] [0-9] [@[s|h] [-g [&lt;dir&gt;]] [-d] \\\n"
 "[-D] [-r&lt;n&gt;] [dir|0-9] [-R&lt;n&gt;] [&lt;dir&gt;|0-9]\n"
 "   [-s&lt;n&gt;] [-S&lt;n&gt;] [-u] [-U] [-f] [-F] [-h] [-H] [-v]\n"
 "    &lt;dir&gt; Go to directory\n"
-"    0-n         Go to previous directory (0 is previous, 1 is last but 1 "
-"etc)\n"
+"    0-n         Go to previous directory (0 is previous, 1 is last but 1 etc)\n"
 "                n is up to max history (default is 50)\n"
 "    @           List history and special entries\n"
 "    @h          List history entries\n"
@@ -96,8 +94,7 @@ msgid ""
 "    -r&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
 "                              and then put it on special entry &lt;n&gt;*\n"
 "    -R&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
-"                              and put current dir on special entry "
-"&lt;n&gt;*\n"
+"                              and put current dir on special entry &lt;n&gt;*\n"
 "    -a&lt;n&gt;       Alternative suggested directory. See note below.\n"
 "    -f [&lt;file&gt;] File entries to &lt;file&gt;.\n"
 "    -u [&lt;file&gt;] Update entries from &lt;file&gt;.\n"
@@ -113,8 +110,7 @@ msgstr ""
 #: abs-guide/cdll:83
 #, no-wrap
 msgid ""
-"    *The special entries (0 - 9) are held until log off, replaced by "
-"another\n"
+"    *The special entries (0 - 9) are held until log off, replaced by another\n"
 "     entry or updated with the -u command\n"
 msgstr ""
 
@@ -198,10 +194,8 @@ msgid ""
 "                If not set then prompt is left unchanged\n"
 "            CDL_PROMPT_PRE - Set to the string to prefix the prompt.\n"
 "                Default is:\n"
-"                    non-root:  \\\"\\\\[\\\\e[01;34m\\\\]\\\"  (sets colour "
-"to blue).\n"
-"                    root:      \\\"\\\\[\\\\e[01;31m\\\\]\\\"  (sets colour "
-"to red).\n"
+"                    non-root:  \\\"\\\\[\\\\e[01;34m\\\\]\\\"  (sets colour to blue).\n"
+"                    root:      \\\"\\\\[\\\\e[01;31m\\\\]\\\"  (sets colour to red).\n"
 "            CDL_PROMPT_POST    - Set to the string to suffix the prompt.\n"
 "                Default is:\n"
 "                    non-root:  \\\"\\\\[\\\\e[00m\\\\]$\\\"\n"
@@ -224,7 +218,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:152
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -233,8 +228,7 @@ msgstr ""
 msgid ""
 "cd_version ()\n"
 "{\n"
-" printf \"Version: ${VERSION_MAJOR}.${VERSION_MINOR} Date: "
-"${VERSION_DATE}\\n\"\n"
+" printf \"Version: ${VERSION_MAJOR}.${VERSION_MINOR} Date: ${VERSION_DATE}\\n\"\n"
 "}\n"
 msgstr ""
 
@@ -293,8 +287,7 @@ msgid ""
 "    while ${TEST} ${count} -ge 0\n"
 "    do\n"
 "        cd_right_trunc \"${CD[count]}\" ${cd_lchar}\n"
-"            ${PRINTF} \"%2d %-${cd_lchar}.${cd_lchar}s \" ${count} "
-"\"${tcd}\"\n"
+"            ${PRINTF} \"%2d %-${cd_lchar}.${cd_lchar}s \" ${count} \"${tcd}\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -302,8 +295,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "        cd_right_trunc \"${CDS[count]}\" ${cd_rchar}\n"
-"            ${PRINTF} \"S%d %-${cd_rchar}.${cd_rchar}s\\n\" ${count} "
-"\"${tcd}\"\n"
+"            ${PRINTF} \"S%d %-${cd_rchar}.${cd_rchar}s\\n\" ${count} \"${tcd}\"\n"
 "        count=${count}-1\n"
 "    done\n"
 "}\n"
@@ -320,8 +312,7 @@ msgid ""
 "        local -i count=${cd_maxhistory}\n"
 "        while ${TEST} ${count} -ge 0\n"
 "        do\n"
-"          ${PRINTF} \"${count} %-${cd_flchar}.${cd_flchar}s\\n\" "
-"${CD[$count]}\n"
+"          ${PRINTF} \"${count} %-${cd_flchar}.${cd_flchar}s\\n\" ${CD[$count]}\n"
 "          count=${count}-1\n"
 "        done\n"
 "}\n"
@@ -338,8 +329,7 @@ msgid ""
 "        local -i count=${cd_maxspecial}\n"
 "        while ${TEST} ${count} -ge 0\n"
 "        do\n"
-"          ${PRINTF} \"S${count} %-${cd_flchar}.${cd_flchar}s\\n\" "
-"${CDS[$count]}\n"
+"          ${PRINTF} \"S${count} %-${cd_flchar}.${cd_flchar}s\\n\" ${CDS[$count]}\n"
 "          count=${count}-1\n"
 "        done\n"
 "}\n"
@@ -391,10 +381,8 @@ msgid ""
 "             a) cd_npwd=${cd_sugg[$nm]} ;;\n"
 "             s) cd_npwd=\"${CDS[$nm]}\" ;;\n"
 "             S) cd_npwd=\"${CDS[$nm]}\" ; CDS[$nm]=`pwd` ;;\n"
-"             r) cd_npwd=\"$2\" ; cd_specDir=$nm ; cd_doselection \"$1\" "
-"\"$2\";;\n"
-"             R) cd_npwd=\"$2\" ; CDS[$nm]=`pwd` ; cd_doselection \"$1\" "
-"\"$2\";;\n"
+"             r) cd_npwd=\"$2\" ; cd_specDir=$nm ; cd_doselection \"$1\" \"$2\";;\n"
+"             R) cd_npwd=\"$2\" ; CDS[$nm]=`pwd` ; cd_doselection \"$1\" \"$2\";;\n"
 "        esac\n"
 "    fi\n"
 msgstr ""
@@ -421,10 +409,8 @@ msgid ""
 "               -g) cd_npwd=\"$2\" ;;\n"
 "               -d) cd_chdefm 1; cd_doflag=\"FALSE\" ;;\n"
 "               -D) cd_chdefm 0; cd_doflag=\"FALSE\" ;;\n"
-"               -r) cd_npwd=\"$2\" ; cd_specDir=0 ; cd_doselection \"$1\" "
-"\"$2\";;\n"
-"               -R) cd_npwd=\"$2\" ; CDS[0]=`pwd` ; cd_doselection \"$1\" "
-"\"$2\";;\n"
+"               -r) cd_npwd=\"$2\" ; cd_specDir=0 ; cd_doselection \"$1\" \"$2\";;\n"
+"               -R) cd_npwd=\"$2\" ; CDS[0]=`pwd` ; cd_doselection \"$1\" \"$2\";;\n"
 "               -s) cd_npwd=\"${CDS[0]}\" ;;\n"
 "               -S) cd_npwd=\"${CDS[0]}\"  ; CDS[0]=`pwd` ;;\n"
 "               -v) cd_version ; cd_doflag=\"FALSE\";;\n"
@@ -608,12 +594,10 @@ msgid ""
 "if ${TEST} ${EUID} -eq 0\n"
 "then\n"
 "#   CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"$HOSTNAME@\"}\n"
-"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;31m\\\\]\"}  # Root is "
-"in red\n"
+"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;31m\\\\]\"}  # Root is in red\n"
 "    CDL_PROMPT_POST=${CDL_PROMPT_POST:=\"\\\\[\\\\e[00m\\\\]#\"}\n"
 "else\n"
-"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;34m\\\\]\"}  # Users in "
-"blue\n"
+"    CDL_PROMPT_PRE=${CDL_PROMPT_PRE:=\"\\\\[\\\\e[01;34m\\\\]\"}  # Users in blue\n"
 "    CDL_PROMPT_POST=${CDL_PROMPT_POST:=\"\\\\[\\\\e[00m\\\\]$\"}\n"
 "fi\n"
 "#########################################################################\n"
@@ -648,37 +632,42 @@ msgid ""
 "                                                                        #\n"
 "typeset -i cd_lchar cd_rchar cd_flchar\n"
 "                        #  This is the number of chars to allow for the #\n"
-"cd_flchar=${FLCHAR:=75} #+ cd_flchar is used for for the @s &amp; @h "
-"history#\n"
+"cd_flchar=${FLCHAR:=75} #+ cd_flchar is used for for the @s &amp; @h history#\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:479
+#, no-wrap
 msgid ""
-"typeset -ax CD CDS # cd_mset=\"\\n\\tDefault mode is now set - entering cd "
-"with no parameters \\ has the default action\\n\\tUse cd -d or -D for cd to "
-"go to \\ previous directory with no parameters\\n\" "
-"cd_mnset=\"\\n\\tNon-default mode is now set - entering cd with no \\ "
-"parameters is the same as entering cd 0\\n\\tUse cd -d or \\ -D to change "
-"default cd action\\n\""
+"typeset -ax CD CDS\n"
+"#\n"
+"cd_mset=\"\\n\\tDefault mode is now set - entering cd with no parameters \\\n"
+"has the default action\\n\\tUse cd -d or -D for cd to go to \\\n"
+"previous directory with no parameters\\n\"\n"
+"cd_mnset=\"\\n\\tNon-default mode is now set - entering cd with no \\\n"
+"parameters is the same as entering cd 0\\n\\tUse cd -d or \\\n"
+"-D to change default cd action\\n\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:481
-msgid "# ==================================================================== #"
+#, no-wrap
+msgid "# ==================================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:485
-msgid ": &lt;&lt;DOCUMENTATION"
+#, no-wrap
+msgid ": &lt;&lt;DOCUMENTATION\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:489
+#, no-wrap
 msgid ""
-"Written by Phil Braham. Realtime Software Pty Ltd.  Released under GNU "
-"license. Free to use. Please pass any modifications or comments to the "
-"author Phil Braham:"
+"Written by Phil Braham. Realtime Software Pty Ltd.\n"
+"Released under GNU license. Free to use. Please pass any modifications\n"
+"or comments to the author Phil Braham:\n"
 msgstr ""
 
 #. type: Plain text
@@ -691,17 +680,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:495
+#, no-wrap
 msgid ""
-"cdll is a replacement for cd and incorporates similar functionality to the "
-"bash pushd and popd commands but is independent of them."
+"cdll is a replacement for cd and incorporates similar functionality to\n"
+"the bash pushd and popd commands but is independent of them.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:499
+#, no-wrap
 msgid ""
-"This version of cdll has been tested on Linux using Bash. It will work on "
-"most Linux versions but will probably not work on other shells without "
-"modification."
+"This version of cdll has been tested on Linux using Bash. It will work\n"
+"on most Linux versions but will probably not work on other shells without\n"
+"modification.\n"
 msgstr ""
 
 #. type: Plain text
@@ -714,28 +705,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:508
+#, no-wrap
 msgid ""
-"cdll allows easy moving about between directories. When changing to a new "
-"directory the current one is automatically put onto a stack. By default 50 "
-"entries are kept, but this is configurable. Special directories can be kept "
-"for easy access - by default up to 10, but this is configurable. The most "
-"recent stack entries and the special entries can be easily viewed."
+"cdll allows easy moving about between directories. When changing to a new\n"
+"directory the current one is automatically put onto a stack. By default\n"
+"50 entries are kept, but this is configurable. Special directories can be\n"
+"kept for easy access - by default up to 10, but this is configurable. The\n"
+"most recent stack entries and the special entries can be easily viewed.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:512
+#, no-wrap
 msgid ""
-"The directory stack and special entries can be saved to, and loaded from, a "
-"file. This allows them to be set up on login, saved before logging out or "
-"changed when moving project to project."
+"The directory stack and special entries can be saved to, and loaded from,\n"
+"a file. This allows them to be set up on login, saved before logging out\n"
+"or changed when moving project to project.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:516
+#, no-wrap
 msgid ""
-"In addition, cdll provides a flexible command prompt facility that allows, "
-"for example, a directory name in colour that is truncated from the left if "
-"it gets too long."
+"In addition, cdll provides a flexible command prompt facility that allows,\n"
+"for example, a directory name in colour that is truncated from the left\n"
+"if it gets too long.\n"
 msgstr ""
 
 #. type: Plain text
@@ -748,24 +742,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:523
+#, no-wrap
 msgid ""
-"Copy cdll to either your local home directory or a central directory such as "
-"/usr/bin (this will require root access)."
+"Copy cdll to either your local home directory or a central directory\n"
+"such as /usr/bin (this will require root access).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:527
+#, no-wrap
 msgid ""
-"Copy the file cdfile to your home directory. It will require read and write "
-"access. This a default file that contains a directory stack and special "
-"entries."
+"Copy the file cdfile to your home directory. It will require read and\n"
+"write access. This a default file that contains a directory stack and\n"
+"special entries.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:530
+#, no-wrap
 msgid ""
-"To replace the cd command you must add commands to your login script.  The "
-"login script is one or more of:"
+"To replace the cd command you must add commands to your login script.\n"
+"The login script is one or more of:\n"
 msgstr ""
 
 #. type: Plain text
@@ -782,9 +779,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:540
+#, no-wrap
 msgid ""
-"To setup your login, ~/.bashrc is recommended, for global (and root) setup "
-"add the commands to /etc/bash.bashrc.local"
+"To setup your login, ~/.bashrc is recommended, for global (and root) setup\n"
+"add the commands to /etc/bash.bashrc.local\n"
 msgstr ""
 
 #. type: Plain text
@@ -823,7 +821,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:561
-msgid "Thus the script looks something like this:"
+#, no-wrap
+msgid "Thus the script looks something like this:\n"
 msgstr ""
 
 #. type: Plain text
@@ -844,17 +843,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:574
-msgid "The full meaning of these commands will become clear later."
+#, no-wrap
+msgid "The full meaning of these commands will become clear later.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:580
+#, no-wrap
 msgid ""
-"There are a couple of caveats. If another program changes the directory "
-"without calling cdll, then the directory won't be put on the stack and also "
-"if the prompt facility is used then this will not be updated. Two programs "
-"that can do this are pushd and popd. To update the prompt and stack simply "
-"enter:"
+"There are a couple of caveats. If another program changes the directory\n"
+"without calling cdll, then the directory won't be put on the stack and\n"
+"also if the prompt facility is used then this will not be updated. Two\n"
+"programs that can do this are pushd and popd. To update the prompt and\n"
+"stack simply enter:\n"
 msgstr ""
 
 #. type: Plain text
@@ -865,9 +866,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:585
+#, no-wrap
 msgid ""
-"Note that if the previous entry on the stack is the current directory then "
-"the stack is not updated."
+"Note that if the previous entry on the stack is the current directory\n"
+"then the stack is not updated.\n"
 msgstr ""
 
 #. type: Plain text
@@ -889,8 +891,7 @@ msgid ""
 "    0-n         Goto previous directory (0 is previous,\n"
 "                1 is last but 1, etc.)\n"
 "                n is up to max history (default is 50)\n"
-"    @           List history and special entries (Usually available as $ "
-"@)\n"
+"    @           List history and special entries (Usually available as $ @)\n"
 "    @h          List history entries\n"
 "    @s          List special entries\n"
 "    -g [&lt;dir&gt;]  Go to literal name (bypass special names)\n"
@@ -903,13 +904,11 @@ msgid ""
 "    -r&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
 "                              and then put it on special entry &lt;n&gt;\n"
 "    -R&lt;n&gt; [&lt;dir&gt;] Go to directory &lt;dir&gt;\n"
-"                              and put current dir on special entry "
-"&lt;n&gt;\n"
+"                              and put current dir on special entry &lt;n&gt;\n"
 "    -a&lt;n&gt;       Alternative suggested directory. See note below.\n"
 "    -f [&lt;file&gt;] File entries to &lt;file&gt;.\n"
 "    -u [&lt;file&gt;] Update entries from &lt;file&gt;.\n"
-"                If no filename supplied then default file (~/cdfile) is "
-"used\n"
+"                If no filename supplied then default file (~/cdfile) is used\n"
 "                -F and -U are silent versions\n"
 "    -v          Print version number\n"
 "    -h          Help\n"
@@ -926,11 +925,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:628
+#, no-wrap
 msgid ""
-"These examples assume non-default mode is set (that is, cd with no "
-"parameters will go to the most recent stack directory), that aliases have "
-"been set up for cd and @ as described above and that cd's prompt facility is "
-"active and the prompt length is 21 characters."
+"These examples assume non-default mode is set (that is, cd with no\n"
+"parameters will go to the most recent stack directory), that aliases\n"
+"have been set up for cd and @ as described above and that cd's prompt\n"
+"facility is active and the prompt length is 21 characters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -968,7 +968,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:653
-msgid "To go to a history entry:"
+#, no-wrap
+msgid "To go to a history entry:\n"
 msgstr ""
 
 #. type: Plain text
@@ -983,7 +984,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:660
-msgid "To go to a special entry:"
+#, no-wrap
+msgid "To go to a special entry:\n"
 msgstr ""
 
 #. type: Plain text
@@ -998,7 +1000,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:667
-msgid "To go to a directory called, for example, 1:"
+#, no-wrap
+msgid "To go to a directory called, for example, 1:\n"
 msgstr ""
 
 #. type: Plain text
@@ -1129,10 +1132,8 @@ msgstr ""
 msgid ""
 "            CDL_PROMPT_PRE - Set to the string to prefix the prompt.\n"
 "                Default is:\n"
-"                    non-root:  \"\\\\[\\\\e[01;34m\\\\]\"  (sets colour to "
-"blue).\n"
-"                    root:      \"\\\\[\\\\e[01;31m\\\\]\"  (sets colour to "
-"red).\n"
+"                    non-root:  \"\\\\[\\\\e[01;34m\\\\]\"  (sets colour to blue).\n"
+"                    root:      \"\\\\[\\\\e[01;31m\\\\]\"  (sets colour to red).\n"
 msgstr ""
 
 #. type: Plain text
@@ -1196,10 +1197,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:766
-msgid "Version: 1.2.1 Date: 24-MAY-2003"
+#, no-wrap
+msgid "Version: 1.2.1 Date: 24-MAY-2003\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/cdll:767
-msgid "DOCUMENTATION"
+#, no-wrap
+msgid "DOCUMENTATION\n"
 msgstr ""

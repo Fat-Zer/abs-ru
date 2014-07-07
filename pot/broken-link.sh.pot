@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,59 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # broken-link.sh # Written by Lee bigelow "
-"&lt;ligelowbee@yahoo.com&gt; # Used in ABS Guide with permission."
+"#!/bin/bash\n"
+"# broken-link.sh\n"
+"# Written by Lee bigelow &lt;ligelowbee@yahoo.com&gt;\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:20
+#, no-wrap
 msgid ""
-"# A pure shell script to find dead symlinks and output them quoted #+ so "
-"they can be fed to xargs and dealt with :)  #+ eg. sh broken-link.sh "
-"/somedir /someotherdir|xargs rm # # This, however, is a better method: # # "
-"find \"somedir\" -type l -print0|\\ # xargs -r0 file|\\ # grep \"broken "
-"symbolic\"| # sed -e 's/^\\|: *broken symbolic.*$/\"/g' # #+ but that "
-"wouldn't be pure Bash, now would it.  # Caution: beware the /proc file "
-"system and any circular links! "
-"################################################################"
+"#  A pure shell script to find dead symlinks and output them quoted\n"
+"#+ so they can be fed to xargs and dealt with :)\n"
+"#+ eg. sh broken-link.sh /somedir /someotherdir|xargs rm\n"
+"#\n"
+"#  This, however, is a better method:\n"
+"#\n"
+"#  find \"somedir\" -type l -print0|\\\n"
+"#  xargs -r0 file|\\\n"
+"#  grep \"broken symbolic\"|\n"
+"#  sed -e 's/^\\|: *broken symbolic.*$/\"/g'\n"
+"#\n"
+"#+ but that wouldn't be pure Bash, now would it.\n"
+"#  Caution: beware the /proc file system and any circular links!\n"
+"################################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:26
+#, no-wrap
 msgid ""
-"# If no args are passed to the script set directories-to-search #+ to "
-"current directory.  Otherwise set the directories-to-search #+ to the args "
-"passed.  ######################"
+"#  If no args are passed to the script set directories-to-search \n"
+"#+ to current directory.  Otherwise set the directories-to-search \n"
+"#+ to the args passed.\n"
+"######################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:28
-msgid "[ $# -eq 0 ] &amp;&amp; directorys=`pwd` || directorys=$@"
+#, no-wrap
+msgid "[ $# -eq 0 ] &amp;&amp; directorys=`pwd` || directorys=$@\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:35
+#, no-wrap
 msgid ""
-"# Setup the function linkchk to check the directory it is passed #+ for "
-"files that are links and don't exist, then print them quoted.  # If one of "
-"the elements in the directory is a subdirectory then #+ send that "
-"subdirectory to the linkcheck function.  ##########"
+"#  Setup the function linkchk to check the directory it is passed \n"
+"#+ for files that are links and don't exist, then print them quoted.\n"
+"#  If one of the elements in the directory is a subdirectory then \n"
+"#+ send that subdirectory to the linkcheck function.\n"
+"##########\n"
 msgstr ""
 
 #. type: Plain text
@@ -92,5 +107,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/broken-link.sh:57
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

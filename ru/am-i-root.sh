@@ -13,8 +13,8 @@ fi
 exit 0
 
 
-# ============================================================= # # Code
-below will not execute, because the script already exited.
+# ============================================================= #
+# Code below will not execute, because the script already exited.
 
 # An alternate method of getting to the root of matters:
 

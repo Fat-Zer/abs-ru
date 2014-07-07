@@ -1,8 +1,10 @@
-#!/bin/bash # rp.sdcard.sh # Preparing an SD card with a bootable image for
-the Raspberry Pi.
+#!/bin/bash
+# rp.sdcard.sh
+# Preparing an SD card with a bootable image for the Raspberry Pi.
 
-# $1 = imagefile name # $2 = sdcard (device file)  # Otherwise defaults to
-the defaults, see below.
+# $1 = imagefile name
+# $2 = sdcard (device file)
+# Otherwise defaults to the defaults, see below.
 
 DEFAULTbs=4M                                 # Block size, 4 mb default.
 DEFAULTif="2013-07-26-wheezy-raspbian.img"   # Commonly used distro.
@@ -38,14 +40,17 @@ then
   exit $E_NOIMAGE
 fi
 
-echo "Last chance to change your mind!"; echo read -s -n1 -p "Hit a key to
-write $imagefile to $sdcard [Ctl-c to exit]." echo; echo
+echo "Last chance to change your mind!"; echo
+read -s -n1 -p "Hit a key to write $imagefile to $sdcard [Ctl-c to exit]."
+echo; echo
 
-echo "Writing $imagefile to $sdcard ..." dd bs=$DEFAULTbs if=$imagefile
-of=$sdcard
+echo "Writing $imagefile to $sdcard ..."
+dd bs=$DEFAULTbs if=$imagefile of=$sdcard
 
 exit $?
 
-# Exercises: # --------- # 1) Provide additional error checking.  # 2) Have
-script autodetect device file for SD card (difficult!).  # 3) Have script
-sutodetect image file (*img) in $PWD.
+# Exercises:
+# ---------
+# 1) Provide additional error checking.
+# 2) Have script autodetect device file for SD card (difficult!).
+# 3) Have script sutodetect image file (*img) in $PWD.

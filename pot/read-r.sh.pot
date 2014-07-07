@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/read-r.sh:4 abs-guide/read-r.sh:30
-msgid "echo"
+#: abs-guide/read-r.sh:4
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:7
+#, no-wrap
 msgid ""
-"echo \"Enter a string terminated by a \\\\, then press &lt;ENTER&gt;.\" echo "
-"\"Then, enter a second string (no \\\\ this time), and again press "
-"&lt;ENTER&gt;.\""
+"echo \"Enter a string terminated by a \\\\, then press &lt;ENTER&gt;.\"\n"
+"echo \"Then, enter a second string (no \\\\ this time), and again press "
+"&lt;ENTER&gt;.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -53,14 +56,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:17
+#, no-wrap
 msgid ""
-"# For each line terminated by a \"\\\" #+ you get a prompt on the next line "
-"to continue feeding characters into var1."
+"#  For each line terminated by a \"\\\"\n"
+"#+ you get a prompt on the next line to continue feeding characters into "
+"var1.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:19
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -83,10 +89,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:28
-msgid "# Data entry terminates with the first &lt;ENTER&gt;."
+#, no-wrap
+msgid "# Data entry terminates with the first &lt;ENTER&gt;.\n"
+msgstr ""
+
+#. type: Plain text
+#: abs-guide/read-r.sh:30
+#, no-wrap
+msgid "echo \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/read-r.sh:31
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

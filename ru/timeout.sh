@@ -1,6 +1,8 @@
-#!/bin/bash # timeout.sh
+#!/bin/bash
+# timeout.sh
 
-# Written by Stephane Chazelas, #+ and modified by the document author.
+#  Written by Stephane Chazelas,
+#+ and modified by the document author.
 
 INTERVAL=5                # timeout interval
 
@@ -14,10 +16,12 @@ timedout_read() {
   # See man page for "stty."
 }
 
-echo; echo -n "What's your name? Quick! " timedout_read $INTERVAL your_name
+echo; echo -n "What's your name? Quick! "
+timedout_read $INTERVAL your_name
 
-# This may not work on every terminal type.  # The maximum timeout depends
-on the terminal.  #+ (it is often 25.5 seconds).
+#  This may not work on every terminal type.
+#  The maximum timeout depends on the terminal.
+#+ (it is often 25.5 seconds).
 
 echo
 
@@ -30,7 +34,7 @@ fi
 
 echo
 
-# The behavior of this script differs somewhat from "timed-input.sh." # At
-each keystroke, the counter resets.
+# The behavior of this script differs somewhat from "timed-input.sh."
+# At each keystroke, the counter resets.
 
 exit 0

@@ -1,4 +1,5 @@
-#!/bin/bash # m4.sh: Using the m4 macro processor
+#!/bin/bash
+# m4.sh: Using the m4 macro processor
 
 # Strings
 string=abcdA01

@@ -1,9 +1,10 @@
-#!/bin/bash # primes.sh: Generate prime numbers, without using arrays.  #
-Script contributed by Stephane Chazelas.
+#!/bin/bash
+# primes.sh: Generate prime numbers, without using arrays.
+# Script contributed by Stephane Chazelas.
 
-# This does *not* use the classic "Sieve of Eratosthenes" algorithm, #+ but
-instead the more intuitive method of testing each candidate number #+ for
-factors (divisors), using the "%" modulo operator.
+#  This does *not* use the classic "Sieve of Eratosthenes" algorithm,
+#+ but instead the more intuitive method of testing each candidate number
+#+ for factors (divisors), using the "%" modulo operator.
 
 
 LIMIT=1000                    # Primes, 2 ... 1000.
@@ -39,10 +40,10 @@ exit $?
 
 # Pipe output of the script to 'fmt' for prettier printing.
 
-# Uncomment lines 16 and 24 to help figure out what is going on.
+#  Uncomment lines 16 and 24 to help figure out what is going on.
 
-# Compare the speed of this algorithm for generating primes #+ with the
-Sieve of Eratosthenes (ex68.sh).
+#  Compare the speed of this algorithm for generating primes
+#+ with the Sieve of Eratosthenes (ex68.sh).
 
 
-# Exercise: Rewrite this script without recursion.
+#  Exercise: Rewrite this script without recursion.

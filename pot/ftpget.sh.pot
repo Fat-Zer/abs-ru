@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,59 +18,78 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:30
+#, no-wrap
 msgid ""
-"#! /bin/sh # $Id$ # Script to perform batch anonymous ftp. Essentially "
-"converts a list of # of command-line arguments into input to ftp.  # ==> "
-"This script is nothing but a shell wrapper around \"ftp\" . . .  # Simple, "
-"and quick - written as a companion to ftplist # -h specifies the remote host "
-"(default prep.ai.mit.edu)  # -d specifies the remote directory to cd to - "
-"you can provide a sequence # of -d options - they will be cd'ed to in "
-"turn. If the paths are relative, # make sure you get the sequence right. Be "
-"careful with relative paths - # there are far too many symlinks nowadays.  # "
-"(default is the ftp login directory)  # -v turns on the verbose option of "
-"ftp, and shows all responses from the # ftp server.  # -f "
-"remotefile[:localfile] gets the remote file into localfile # -m pattern does "
-"an mget with the specified pattern. Remember to quote # shell characters.  # "
-"-c does a local cd to the specified directory # For example, # \tftpget -h "
-"expo.lcs.mit.edu -d contrib -f xplaces.shar:xplaces.sh \\ #\t\t-d "
-"../pub/R3/fixes -c ~/fixes -m 'fix*' # will get xplaces.shar from "
-"~ftp/contrib on expo.lcs.mit.edu, and put it # in xplaces.sh in the current "
-"working directory, and get all fixes from # ~ftp/pub/R3/fixes and put them "
-"in the ~/fixes directory.  # Obviously, the sequence of the options is "
-"important, since the equivalent # commands are executed by ftp in "
-"corresponding order # # Mark Moraes &lt;moraes@csri.toronto.edu&gt;, Feb 1, "
-"1989 #"
+"#! /bin/sh \n"
+"# $Id$ \n"
+"# Script to perform batch anonymous ftp. Essentially converts a list of\n"
+"# of command-line arguments into input to ftp.\n"
+"# ==> This script is nothing but a shell wrapper around \"ftp\" . . .\n"
+"# Simple, and quick - written as a companion to ftplist \n"
+"# -h specifies the remote host (default prep.ai.mit.edu) \n"
+"# -d specifies the remote directory to cd to - you can provide a sequence \n"
+"# of -d options - they will be cd'ed to in turn. If the paths are relative, "
+"\n"
+"# make sure you get the sequence right. Be careful with relative paths - \n"
+"# there are far too many symlinks nowadays.  \n"
+"# (default is the ftp login directory)\n"
+"# -v turns on the verbose option of ftp, and shows all responses from the \n"
+"# ftp server.  \n"
+"# -f remotefile[:localfile] gets the remote file into localfile \n"
+"# -m pattern does an mget with the specified pattern. Remember to quote \n"
+"# shell characters.  \n"
+"# -c does a local cd to the specified directory\n"
+"# For example, \n"
+"# \tftpget -h expo.lcs.mit.edu -d contrib -f xplaces.shar:xplaces.sh \\\n"
+"#\t\t-d ../pub/R3/fixes -c ~/fixes -m 'fix*' \n"
+"# will get xplaces.shar from ~ftp/contrib on expo.lcs.mit.edu, and put it\n"
+"# in xplaces.sh in the current working directory, and get all fixes from\n"
+"# ~ftp/pub/R3/fixes and put them in the ~/fixes directory. \n"
+"# Obviously, the sequence of the options is important, since the "
+"equivalent\n"
+"# commands are executed by ftp in corresponding order\n"
+"#\n"
+"# Mark Moraes &lt;moraes@csri.toronto.edu&gt;, Feb 1, 1989 \n"
+"#\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:33
-msgid "# ==> These comments added by author of this document."
+#, no-wrap
+msgid "# ==> These comments added by author of this document.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:37
+#, no-wrap
 msgid ""
-"# PATH=/local/bin:/usr/ucb:/usr/bin:/bin # export PATH # ==> Above 2 lines "
-"from original script probably superfluous."
+"# PATH=/local/bin:/usr/ucb:/usr/bin:/bin\n"
+"# export PATH\n"
+"# ==> Above 2 lines from original script probably superfluous.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:39
-msgid "E_BADARGS=65"
+#, no-wrap
+msgid "E_BADARGS=65\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:43
+#, no-wrap
 msgid ""
-"TMPFILE=/tmp/ftp.$$ # ==> Creates temp file, using process id of script ($$)  "
-"# ==> to construct filename."
+"TMPFILE=/tmp/ftp.$$\n"
+"# ==> Creates temp file, using process id of script ($$)\n"
+"# ==> to construct filename.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:47
+#, no-wrap
 msgid ""
-"SITE=`domainname`.toronto.edu # ==> 'domainname' similar to 'hostname' # ==> "
-"May rewrite this to parameterize this for general use."
+"SITE=`domainname`.toronto.edu\n"
+"# ==> 'domainname' similar to 'hostname'\n"
+"# ==> May rewrite this to parameterize this for general use.\n"
 msgstr ""
 
 #. type: Plain text
@@ -131,28 +150,34 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:100
+#, no-wrap
 msgid ""
-"ftp ${ftpflags} ${remhost} &lt; ${TMPFILE} # ==> Now, tempfile batch "
-"processed by ftp."
+"ftp ${ftpflags} ${remhost} &lt; ${TMPFILE}\n"
+"# ==> Now, tempfile batch processed by ftp.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:103
+#, no-wrap
 msgid ""
-"rm -f ${TMPFILE} # ==> Finally, tempfile deleted (you may wish to copy it to "
-"a logfile)."
+"rm -f ${TMPFILE}\n"
+"# ==> Finally, tempfile deleted (you may wish to copy it to a logfile).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:109
+#, no-wrap
 msgid ""
-"# ==> Exercises: # ==> --------- # ==> 1) Add error checking.  # ==> 2) Add "
-"bells &amp; whistles."
+"# ==> Exercises:\n"
+"# ==> ---------\n"
+"# ==> 1) Add error checking.\n"
+"# ==> 2) Add bells &amp; whistles.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ftpget.sh:111
+#, no-wrap
 msgid ""
-"# See the included file \"Moraes-COPYRIGHT\" for copyright info.  #+ on this "
-"script."
+"#  See the included file \"Moraes-COPYRIGHT\" for copyright info.\n"
+"#+ on this script.\n"
 msgstr ""

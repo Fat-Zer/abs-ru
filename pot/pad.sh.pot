@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:3
-msgid "#!/bin/bash # pad.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# pad.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,16 +55,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:36
+#, no-wrap
 msgid ""
-"# ===== PAD file headers ===== HDR1=\"&lt;?xml version=\\\"1.0\\\" "
-"encoding=\\\"Windows-1252\\\" ?&gt;\" HDR2=\"&lt;XML_DIZ_INFO&gt;\" "
-"HDR3=\"&lt;MASTER_PAD_VERSION_INFO&gt;\" "
-"HDR4=\"\\t&lt;MASTER_PAD_VERSION&gt;1.15&lt;/MASTER_PAD_VERSION&gt;\" "
-"HDR5=\"\\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD "
-"for short, is a data set that is used by shareware authors to disseminate "
-"information to anyone interested in their software products.  To find out "
-"more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;\" "
-"HDR6=\"&lt;/MASTER_PAD_VERSION_INFO&gt;\" # ============================"
+"# ===== PAD file headers =====\n"
+"HDR1=\"&lt;?xml version=\\\"1.0\\\" encoding=\\\"Windows-1252\\\" ?&gt;\"\n"
+"HDR2=\"&lt;XML_DIZ_INFO&gt;\"\n"
+"HDR3=\"&lt;MASTER_PAD_VERSION_INFO&gt;\"\n"
+"HDR4=\"\\t&lt;MASTER_PAD_VERSION&gt;1.15&lt;/MASTER_PAD_VERSION&gt;\"\n"
+"HDR5=\"\\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD\n"
+"for short, is a data set that is used by shareware authors to\n"
+"disseminate information to anyone interested in their software products.\n"
+"To find out more go to "
+"http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;\"\n"
+"HDR6=\"&lt;/MASTER_PAD_VERSION_INFO&gt;\"\n"
+"# ============================\n"
 msgstr ""
 
 #. type: Plain text
@@ -128,36 +135,54 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:82
+#, no-wrap
 msgid ""
-"# Write File Headers to file.  echo $HDR1 >$savefile echo $HDR2 >>$savefile "
-"echo $HDR3 >>$savefile echo -e $HDR4 >>$savefile echo -e $HDR5 >>$savefile "
-"echo $HDR6 >>$savefile"
+"# Write File Headers to file.\n"
+"echo $HDR1 >$savefile\n"
+"echo $HDR2 >>$savefile\n"
+"echo $HDR3 >>$savefile\n"
+"echo -e $HDR4 >>$savefile\n"
+"echo -e $HDR5 >>$savefile\n"
+"echo $HDR6 >>$savefile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:88
+#, no-wrap
 msgid ""
-"# Company_Info echo \"COMPANY INFO\" CO_HDR=\"Company_Info\" echo "
-"\"&lt;$CO_HDR>\" >>$savefile"
+"# Company_Info\n"
+"echo \"COMPANY INFO\"\n"
+"CO_HDR=\"Company_Info\"\n"
+"echo \"&lt;$CO_HDR>\" >>$savefile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:96
+#, no-wrap
 msgid ""
-"fill_in Company_Name fill_in Address_1 fill_in Address_2 fill_in City_Town "
-"fill_in State_Province fill_in Zip_Postal_Code fill_in Country"
+"fill_in Company_Name\n"
+"fill_in Address_1\n"
+"fill_in Address_2\n"
+"fill_in City_Town \n"
+"fill_in State_Province\n"
+"fill_in Zip_Postal_Code\n"
+"fill_in Country\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:101
+#, no-wrap
 msgid ""
-"# If applicable: # fill_in ASP_Member \"[Y/N]\" # fill_in ASP_Member_Number "
-"# fill_in ESC_Member \"[Y/N]\""
+"# If applicable:\n"
+"# fill_in ASP_Member \"[Y/N]\"\n"
+"# fill_in ASP_Member_Number\n"
+"# fill_in ESC_Member \"[Y/N]\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:103
-msgid "fill_in Company_WebSite_URL"
+#, no-wrap
+msgid "fill_in Company_WebSite_URL\n"
 msgstr ""
 
 #. type: Plain text
@@ -186,7 +211,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:120 abs-guide/pad.sh:139 abs-guide/pad.sh:174 abs-guide/pad.sh:190 abs-guide/pad.sh:205
-msgid "clear"
+#, no-wrap
+msgid "clear\n"
 msgstr ""
 
 #. type: Plain text
@@ -210,26 +236,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:137
-msgid "echo \"&lt;/$CO_HDR>\" >>$savefile # END Company_Info"
+#, no-wrap
+msgid ""
+"echo \"&lt;/$CO_HDR>\" >>$savefile\n"
+"# END Company_Info\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:156
+#, no-wrap
 msgid ""
-"# Program_Info echo \"PROGRAM INFO\" PROGRAM_HDR=\"Program_Info\" echo "
-"\"&lt;$PROGRAM_HDR>\" >>$savefile fill_in Program_Name fill_in "
-"Program_Version fill_in Program_Release_Month fill_in Program_Release_Day "
-"fill_in Program_Release_Year fill_in Program_Cost_Dollars fill_in "
-"Program_Cost_Other fill_in Program_Type \"[Shareware/Freeware/GPL]\" fill_in "
-"Program_Release_Status \"[Beta, Major Upgrade, etc.]\" fill_in "
-"Program_Install_Support fill_in Program_OS_Support "
-"\"[Win9x/Win2k/Linux/etc.]\" fill_in Program_Language "
-"\"[English/Spanish/etc.]\""
+"# Program_Info \n"
+"echo \"PROGRAM INFO\"\n"
+"PROGRAM_HDR=\"Program_Info\"\n"
+"echo \"&lt;$PROGRAM_HDR>\" >>$savefile\n"
+"fill_in Program_Name\n"
+"fill_in Program_Version\n"
+"fill_in Program_Release_Month\n"
+"fill_in Program_Release_Day\n"
+"fill_in Program_Release_Year\n"
+"fill_in Program_Cost_Dollars\n"
+"fill_in Program_Cost_Other\n"
+"fill_in Program_Type \"[Shareware/Freeware/GPL]\"\n"
+"fill_in Program_Release_Status \"[Beta, Major Upgrade, etc.]\"\n"
+"fill_in Program_Install_Support\n"
+"fill_in Program_OS_Support \"[Win9x/Win2k/Linux/etc.]\"\n"
+"fill_in Program_Language \"[English/Spanish/etc.]\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:158
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -287,20 +325,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:203
-msgid "echo \"&lt;/$PROGRAM_HDR>\" >>$savefile # END Program_Info"
+#, no-wrap
+msgid ""
+"echo \"&lt;/$PROGRAM_HDR>\" >>$savefile\n"
+"# END Program_Info \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:210
+#, no-wrap
 msgid ""
-"# Program Description echo \"PROGRAM DESCRIPTIONS\" "
-"PROGDESC_HDR=\"Program_Descriptions\" echo \"&lt;$PROGDESC_HDR>\" "
-">>$savefile"
+"# Program Description\n"
+"echo \"PROGRAM DESCRIPTIONS\"\n"
+"PROGDESC_HDR=\"Program_Descriptions\"\n"
+"echo \"&lt;$PROGDESC_HDR>\" >>$savefile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:213
-msgid "LANG=\"English\" echo \"&lt;$LANG>\" >>$savefile"
+#, no-wrap
+msgid ""
+"LANG=\"English\"\n"
+"echo \"&lt;$LANG>\" >>$savefile\n"
 msgstr ""
 
 #. type: Plain text
@@ -325,29 +371,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:231
-msgid "fill_in Char_Desc_250 check_field_length 250 \"$?\""
+#, no-wrap
+msgid ""
+"fill_in Char_Desc_250\n"
+"check_field_length 250 \"$?\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:234
-msgid "fill_in Char_Desc_450 fill_in Char_Desc_2000"
+#, no-wrap
+msgid ""
+"fill_in Char_Desc_450\n"
+"fill_in Char_Desc_2000\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:238
+#, no-wrap
 msgid ""
-"echo \"&lt;/$LANG>\" >>$savefile echo \"&lt;/$PROGDESC_HDR>\" >>$savefile # "
-"END Program Description"
+"echo \"&lt;/$LANG>\" >>$savefile\n"
+"echo \"&lt;/$PROGDESC_HDR>\" >>$savefile\n"
+"# END Program Description\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:242
+#, no-wrap
 msgid ""
-"clear echo \"Done.\"; echo; echo echo \"Save file is: "
-"\\\"\"$savefile\"\\\"\""
+"clear\n"
+"echo \"Done.\"; echo; echo\n"
+"echo \"Save file is:  \\\"\"$savefile\"\\\"\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pad.sh:243
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

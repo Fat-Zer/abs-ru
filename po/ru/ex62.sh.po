@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex62.sh:3
-msgid "#!/bin/bash # ex62.sh: Global and local variables inside a function."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex62.sh: Global and local variables inside a function.\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,12 +41,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex62.sh:15
-msgid "func"
+#, no-wrap
+msgid "func\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex62.sh:17
-msgid "# Now, to see if local variable \"loc_var\" exists outside the function."
+#, no-wrap
+msgid "# Now, to see if local variable \"loc_var\" exists outside the function.\n"
 msgstr ""
 
 #. type: Plain text
@@ -62,7 +67,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex62.sh:29
+#, no-wrap
 msgid ""
-"exit 0 # In contrast to C, a Bash variable declared inside a function #+ is "
-"local ONLY if declared as such."
+"exit 0\n"
+"#  In contrast to C, a Bash variable declared inside a function\n"
+"#+ is local ONLY if declared as such.\n"
 msgstr ""

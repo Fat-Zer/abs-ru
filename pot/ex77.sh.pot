@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex77.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex77.sh:5
-msgid "# String expansion.  # Introduced with version 2 of Bash."
+#, no-wrap
+msgid ""
+"# String expansion.\n"
+"# Introduced with version 2 of Bash.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex77.sh:8
+#, no-wrap
 msgid ""
-"# Strings of the form $'xxx' #+ have the standard escaped characters "
-"interpreted."
+"#  Strings of the form $'xxx'\n"
+"#+ have the standard escaped characters interpreted. \n"
 msgstr ""
 
 #. type: Plain text
@@ -50,5 +55,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex77.sh:19
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:3
-msgid "#! /bin/bash # protect_literal.sh"
+#, no-wrap
+msgid ""
+"#! /bin/bash\n"
+"# protect_literal.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:5
-msgid "# set -vx"
+#, no-wrap
+msgid "# set -vx\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:7
-msgid ":&lt;&lt;-'_Protect_Literal_String_Doc'"
+#, no-wrap
+msgid ":&lt;&lt;-'_Protect_Literal_String_Doc'\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,17 +104,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:41
-msgid "_Protect_Literal_String_Doc"
+#, no-wrap
+msgid "_Protect_Literal_String_Doc\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:43
-msgid "# The 'for illustration' function form"
+#, no-wrap
+msgid "# The 'for illustration' function form\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:45
-msgid "_protect_literal_str() {"
+#, no-wrap
+msgid "_protect_literal_str() {\n"
 msgstr ""
 
 #. type: Plain text
@@ -152,44 +160,59 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:66
+#, no-wrap
 msgid ""
-"# :&lt;&lt;-'_Protect_Literal_String_Test' # # # Remove the above \"# \" to "
-"disable this code. # # #"
+"# :&lt;&lt;-'_Protect_Literal_String_Test'\n"
+"# # # Remove the above \"# \" to disable this code. # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:73
+#, no-wrap
 msgid ""
-"# See how that looks when printed.  echo echo \"- - Test One - -\" "
-"_protect_literal_str 'Hello $user' _protect_literal_str 'Hello "
-"\"${username}\"' echo"
+"# See how that looks when printed.\n"
+"echo\n"
+"echo \"- - Test One - -\"\n"
+"_protect_literal_str 'Hello $user'\n"
+"_protect_literal_str 'Hello \"${username}\"'\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:78
+#, no-wrap
 msgid ""
-"# Which yields: # - - Test One - - # 'Hello $user' is 13 long.  # 'Hello "
-"\"${username}\"' is 21 long."
+"# Which yields:\n"
+"# - - Test One - -\n"
+"# 'Hello $user' is 13 long.\n"
+"# 'Hello \"${username}\"' is 21 long.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:83
+#, no-wrap
 msgid ""
-"# Looks as expected, but why all of the trouble? # The difference is hidden "
-"inside the Bash internal order #+ of operations.  # Which shows when you use "
-"it on the RHS of an assignment."
+"#  Looks as expected, but why all of the trouble?\n"
+"#  The difference is hidden inside the Bash internal order\n"
+"#+ of operations.\n"
+"#  Which shows when you use it on the RHS of an assignment.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:86
-msgid "# Declare an array for test values.  declare -a arrayZ"
+#, no-wrap
+msgid ""
+"# Declare an array for test values.\n"
+"declare -a arrayZ\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:89
+#, no-wrap
 msgid ""
-"# Assign elements with various types of quotes and escapes.  arrayZ=( zero "
-"\"$(_pls 'Hello ${Me}')\" 'Hello ${You}' \"\\'Pass: ${pw}\\'\" )"
+"# Assign elements with various types of quotes and escapes.\n"
+"arrayZ=( zero \"$(_pls 'Hello ${Me}')\" 'Hello ${You}' \"\\'Pass: ${pw}\\'\" "
+")\n"
 msgstr ""
 
 #. type: Plain text
@@ -219,9 +242,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:107
+#, no-wrap
 msgid ""
-"# Now make an assignment with that result.  declare -a array2=( ${arrayZ[@]} "
-")"
+"# Now make an assignment with that result.\n"
+"declare -a array2=( ${arrayZ[@]} )\n"
 msgstr ""
 
 #. type: Plain text
@@ -252,42 +276,50 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:128
+#, no-wrap
 msgid ""
-"# Our Element 1 has had its leading and trailing hard quotes stripped.  # "
-"Although not shown, leading and trailing whitespace is also stripped.  # Now "
-"that the string contents are set, Bash will always, internally, #+ hard "
-"quote the contents as required during its operations."
+"#  Our Element 1 has had its leading and trailing hard quotes stripped.\n"
+"#  Although not shown, leading and trailing whitespace is also stripped.\n"
+"#  Now that the string contents are set, Bash will always, internally,\n"
+"#+ hard quote the contents as required during its operations.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:140
+#, no-wrap
 msgid ""
-"# Why? # Considering our \"$(_pls 'Hello ${Me}')\" construction: # \" ... \" "
-"-> Expansion required, strip the quotes.  # $( ... ) -> Replace with the "
-"result of..., strip this.  # _pls ' ... ' -> called with literal arguments, "
-"strip the quotes.  # The result returned includes hard quotes; BUT the above "
-"processing #+ has already been done, so they become part of the value "
-"assigned.  # # Similarly, during further usage of the string variable, the "
-"${Me} #+ is part of the contents (result) and survives any operations # "
-"(Until explicitly told to evaluate the string)."
+"#  Why?\n"
+"#  Considering our \"$(_pls 'Hello ${Me}')\" construction:\n"
+"#  \" ... \" -> Expansion required, strip the quotes.\n"
+"#  $( ... ) -> Replace with the result of..., strip this.\n"
+"#  _pls ' ... ' -> called with literal arguments, strip the quotes.\n"
+"#  The result returned includes hard quotes; BUT the above processing\n"
+"#+ has already been done, so they become part of the value assigned.\n"
+"#\n"
+"#  Similarly, during further usage of the string variable, the ${Me}\n"
+"#+ is part of the contents (result) and survives any operations\n"
+"#  (Until explicitly told to evaluate the string).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:144
+#, no-wrap
 msgid ""
-"# Hint: See what happens when the hard quotes ($'\\x27') are replaced #+ "
-"with soft quotes ($'\\x22') in the above procedures.  # Interesting also is "
-"to remove the addition of any quoting."
+"#  Hint: See what happens when the hard quotes ($'\\x27') are replaced\n"
+"#+ with soft quotes ($'\\x22') in the above procedures.\n"
+"#  Interesting also is to remove the addition of any quoting.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:147
+#, no-wrap
 msgid ""
-"# _Protect_Literal_String_Test # # # Remove the above \"# \" to disable this "
-"code. # # #"
+"# _Protect_Literal_String_Test\n"
+"# # # Remove the above \"# \" to disable this code. # # #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/protect_literal.sh:148
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

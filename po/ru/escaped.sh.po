@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,45 +18,64 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:3
-msgid "#!/bin/bash # escaped.sh: escaped characters"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# escaped.sh: escaped characters\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:7
+#, no-wrap
 msgid ""
-"############################################################# ### First, "
-"let's show some basic escaped-character usage. ### "
-"#############################################################"
+"#############################################################\n"
+"### First, let's show some basic escaped-character usage. ###\n"
+"#############################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:10
-msgid "# Escaping a newline.  # ------------------"
+#, no-wrap
+msgid ""
+"# Escaping a newline.\n"
+"# ------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:12
-msgid "echo \"\""
+#, no-wrap
+msgid "echo \"\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:17
-msgid "echo \"This will print as two lines.\" # This will print # as two lines."
+#, no-wrap
+msgid ""
+"echo \"This will print\n"
+"as two lines.\"\n"
+"# This will print\n"
+"# as two lines.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:21
-msgid "echo \"This will print \\ as one line.\" # This will print as one line."
+#, no-wrap
+msgid ""
+"echo \"This will print \\\n"
+"as one line.\"\n"
+"# This will print as one line.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:23
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:25
-msgid "echo \"=============\""
+#, no-wrap
+msgid "echo \"=============\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,7 +101,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:41
-msgid "# The $'\\X' construct makes the -e option unnecessary."
+#, no-wrap
+msgid "# The $'\\X' construct makes the -e option unnecessary.\n"
 msgstr ""
 
 #. type: Plain text
@@ -97,22 +117,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:48
-msgid "# We have seen $'\\nnn\" string expansion, and now . . ."
+#, no-wrap
+msgid "# We have seen $'\\nnn\" string expansion, and now . . .\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:52
+#, no-wrap
 msgid ""
-"# =================================================================== # # "
-"Version 2 of Bash introduced the $'\\nnn' string expansion construct.  # "
-"=================================================================== #"
+"# =================================================================== #\n"
+"# Version 2 of Bash introduced the $'\\nnn' string expansion construct.\n"
+"# =================================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:55
+#, no-wrap
 msgid ""
-"echo \"Introducing the \\$\\' ... \\' string-expansion construct . . . \" "
-"echo \". . . featuring more quotation marks.\""
+"echo \"Introducing the \\$\\' ... \\' string-expansion construct . . . \"\n"
+"echo \". . . featuring more quotation marks.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -125,15 +148,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:63
+#, no-wrap
 msgid ""
-"# It also works with hexadecimal values, in an $'\\xhhh' construct.  echo "
-"$'\\t \\x22 \\t' # Quote (\") framed by tabs.  # Thank you, Greg Keraunen, "
-"for pointing this out.  # Earlier Bash versions allowed '\\x022'."
+"# It also works with hexadecimal values, in an $'\\xhhh' construct.\n"
+"echo $'\\t \\x22 \\t'  # Quote (\") framed by tabs.\n"
+"# Thank you, Greg Keraunen, for pointing this out.\n"
+"# Earlier Bash versions allowed '\\x022'.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:65 abs-guide/escaped.sh:73 abs-guide/escaped.sh:79 abs-guide/escaped.sh:84 abs-guide/escaped.sh:90
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -148,10 +174,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:77
+#, no-wrap
 msgid ""
-"# Concatenating ASCII chars in a variable.  "
-"triple_underline=$'\\137\\137\\137' # 137 is octal ASCII code for '_'.  echo "
-"\"$triple_underline UNDERLINE $triple_underline\""
+"# Concatenating ASCII chars in a variable.\n"
+"triple_underline=$'\\137\\137\\137'  # 137 is octal ASCII code for '_'.\n"
+"echo \"$triple_underline UNDERLINE $triple_underline\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -173,5 +200,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/escaped.sh:91
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

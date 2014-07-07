@@ -1,7 +1,8 @@
-#!/bin/bash # copydir.sh
+#!/bin/bash
+# copydir.sh
 
-# Copy (verbose) all files in current directory ($PWD)  #+ to directory
-specified on command-line.
+#  Copy (verbose) all files in current directory ($PWD)
+#+ to directory specified on command-line.
 
 E_NOARGS=85
 

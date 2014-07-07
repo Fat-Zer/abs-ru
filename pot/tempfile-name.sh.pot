@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tempfile-name.sh:3
-msgid "#!/bin/bash # tempfile-name.sh: temp filename generator"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# tempfile-name.sh:  temp filename generator\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,22 +62,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/tempfile-name.sh:21
-msgid "echo \"Temp filename = \"$temp_filename\"\""
+#, no-wrap
+msgid "echo \"Temp filename = \"$temp_filename\"\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tempfile-name.sh:24
-msgid "# sh tempfile-name.sh # Temp filename = temp.e19ea"
+#, no-wrap
+msgid ""
+"# sh tempfile-name.sh\n"
+"# Temp filename = temp.e19ea\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tempfile-name.sh:27
+#, no-wrap
 msgid ""
-"# Compare this method of generating \"unique\" filenames #+ with the 'date' "
-"method in ex51.sh."
+"#  Compare this method of generating \"unique\" filenames\n"
+"#+ with the 'date' method in ex51.sh.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/tempfile-name.sh:28
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,49 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:8
+#, no-wrap
 msgid ""
-"#!/bin/bash # nightly-backup.sh # "
-"http://www.richardneill.org/source.php#nightly-backup-rsync # Copyright (c) "
-"2005 Richard Neill &lt;backup@richardneill.org&gt;.  # This is Free Software "
-"licensed under the GNU GPL.  # ==> Included in ABS Guide with script "
-"author's kind permission.  # ==> (Thanks!)"
+"#!/bin/bash\n"
+"# nightly-backup.sh\n"
+"# http://www.richardneill.org/source.php#nightly-backup-rsync\n"
+"# Copyright (c) 2005 Richard Neill &lt;backup@richardneill.org&gt;.\n"
+"# This is Free Software licensed under the GNU GPL.\n"
+"# ==> Included in ABS Guide with script author's kind permission.\n"
+"# ==> (Thanks!)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:19
+#, no-wrap
 msgid ""
-"# This does a backup from the host computer to a locally connected #+ "
-"firewire HDD using rsync and ssh.  # (Script should work with USB-connected "
-"device (see lines 40-43).  # It then rotates the backups.  # Run it via cron "
-"every night at 5am.  # This only backs up the home directory.  # If "
-"ownerships (other than the user's) should be preserved, #+ then run the "
-"rsync process as root (and re-instate the -o).  # We save every day for 7 "
-"days, then every week for 4 weeks, #+ then every month for 3 months."
+"#  This does a backup from the host computer to a locally connected\n"
+"#+ firewire HDD using rsync and ssh.\n"
+"#  (Script should work with USB-connected device (see lines 40-43).\n"
+"#  It then rotates the backups.\n"
+"#  Run it via cron every night at 5am.\n"
+"#  This only backs up the home directory.\n"
+"#  If ownerships (other than the user's) should be preserved,\n"
+"#+ then run the rsync process as root (and re-instate the -o).\n"
+"#  We save every day for 7 days, then every week for 4 weeks,\n"
+"#+ then every month for 3 months.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:23
+#, no-wrap
 msgid ""
-"# See: http://www.mikerubel.org/computers/rsync_snapshots/ #+ for more "
-"explanation of the theory.  # Save as: "
-"$HOME/bin/nightly-backup_firewire-hdd.sh"
+"#  See: http://www.mikerubel.org/computers/rsync_snapshots/\n"
+"#+ for more explanation of the theory.\n"
+"#  Save as: $HOME/bin/nightly-backup_firewire-hdd.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:27
+#, no-wrap
 msgid ""
-"# Known bugs: # ---------- # i)  Ideally, we want to exclude ~/.tmp and the "
-"browser caches."
+"#  Known bugs:\n"
+"#  ----------\n"
+"#  i)  Ideally, we want to exclude ~/.tmp and the browser caches.\n"
 msgstr ""
 
 #. type: Plain text
@@ -94,10 +104,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:62
+#, no-wrap
 msgid ""
-"### Exit Codes ### E_VARS_NOT_SET=64 E_COMMANDLINE=65 E_MOUNT_FAIL=70 "
-"E_NOSOURCEDIR=71 E_UNMOUNTED=72 E_BACKUP=73 ##### END CONFIGURATION SECTION "
-"##############################################"
+"### Exit Codes ###\n"
+"E_VARS_NOT_SET=64\n"
+"E_COMMANDLINE=65\n"
+"E_MOUNT_FAIL=70\n"
+"E_NOSOURCEDIR=71\n"
+"E_UNMOUNTED=72\n"
+"E_BACKUP=73\n"
+"##### END CONFIGURATION SECTION "
+"##############################################\n"
 msgstr ""
 
 #. type: Plain text
@@ -163,7 +180,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:102
-msgid "# Parse the options.  # =================="
+#, no-wrap
+msgid ""
+"# Parse the options.\n"
+"# ==================\n"
 msgstr ""
 
 #. type: Plain text
@@ -277,10 +297,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:180
+#, no-wrap
 msgid ""
-"# Check that the backup directory structure is as it should be.  # If not, "
-"create it.  # Create the subdirectories.  # Note that backup.0 will be "
-"created as needed by rsync."
+"# Check that the backup directory structure is as it should be.\n"
+"# If not, create it.\n"
+"# Create the subdirectories.\n"
+"# Note that backup.0 will be created as needed by rsync.\n"
 msgstr ""
 
 #. type: Plain text
@@ -354,26 +376,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:230
+#, no-wrap
 msgid ""
-"# Now, do the rsync.  echo \"Now doing backup with rsync...\" echo \"Source "
-"dir: $SOURCE_DIR\" echo -e \"Backup destination dir: $BACKUP_DEST_DIR\\n\""
+"# Now, do the rsync.\n"
+"echo \"Now doing backup with rsync...\"\n"
+"echo \"Source dir: $SOURCE_DIR\"\n"
+"echo -e \"Backup destination dir: $BACKUP_DEST_DIR\\n\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:234
+#, no-wrap
 msgid ""
-"/usr/bin/rsync $DRY_RUN $VERBOSE -a -S --delete --modify-window=60 \\ "
-"--link-dest=../backup.1 $SOURCE_DIR $BACKUP_DEST_DIR/backup.0/"
+"/usr/bin/rsync $DRY_RUN $VERBOSE -a -S --delete --modify-window=60 \\\n"
+"--link-dest=../backup.1 $SOURCE_DIR $BACKUP_DEST_DIR/backup.0/\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:241
+#, no-wrap
 msgid ""
-"# Only warn, rather than exit if the rsync failed, #+ since it may only be a "
-"minor problem.  # E.g., if one file is not readable, rsync will fail.  # "
-"This shouldn't prevent the rotation.  # Not using, e.g., `date +%a` since "
-"these directories #+ are just full of links and don't consume *that much* "
-"space."
+"#  Only warn, rather than exit if the rsync failed,\n"
+"#+ since it may only be a minor problem.\n"
+"#  E.g., if one file is not readable, rsync will fail.\n"
+"#  This shouldn't prevent the rotation.\n"
+"#  Not using, e.g., `date +%a`  since these directories\n"
+"#+ are just full of links and don't consume *that much* space.\n"
 msgstr ""
 
 #. type: Plain text
@@ -393,19 +421,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:257
+#, no-wrap
 msgid ""
-"# Save a readme in the backup parent directory.  # Save another one in the "
-"recent subdirectory.  echo \"Backup of $SOURCE_DIR on `hostname` was last "
-"run on \\ `date`\" > $BACKUP_DEST_DIR/README.txt echo \"This backup of "
-"$SOURCE_DIR on `hostname` was created on \\ `date`\" > "
-"$BACKUP_DEST_DIR/backup.0/README.txt"
+"# Save a readme in the backup parent directory.\n"
+"# Save another one in the recent subdirectory.\n"
+"echo \"Backup of $SOURCE_DIR on `hostname` was last run on \\\n"
+"`date`\" > $BACKUP_DEST_DIR/README.txt\n"
+"echo \"This backup of $SOURCE_DIR on `hostname` was created on \\\n"
+"`date`\" > $BACKUP_DEST_DIR/backup.0/README.txt\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:260
+#, no-wrap
 msgid ""
-"# If we are not in a dry run, rotate the backups.  [ -z \"$DRY_RUN\" ] "
-"&amp;&amp;"
+"# If we are not in a dry run, rotate the backups.\n"
+"[ -z \"$DRY_RUN\" ] &amp;&amp;\n"
 msgstr ""
 
 #. type: Plain text
@@ -582,7 +613,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/nightly-backup.sh:364
+#, no-wrap
 msgid ""
-"# Should have already exited if backup worked.  echo 'BACKUP FAILED! Is this "
-"just a dry run? Is the disk full?) ' exit $E_BACKUP"
+"# Should have already exited if backup worked.\n"
+"echo 'BACKUP FAILED! Is this just a dry run? Is the disk full?) '\n"
+"exit $E_BACKUP\n"
 msgstr ""

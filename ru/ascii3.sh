@@ -1,5 +1,7 @@
-#!/bin/bash # ASCII table script, using awk.  # Author: Joseph Steinhauser #
-Used in ABS Guide with permission.
+#!/bin/bash
+# ASCII table script, using awk.
+# Author: Joseph Steinhauser
+# Used in ABS Guide with permission.
 
 
 #-------------------------------------------------------------------------

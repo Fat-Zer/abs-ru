@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,33 +18,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:3
-msgid "#!/bin/bash # alias.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# alias.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:6
+#, no-wrap
 msgid ""
-"shopt -s expand_aliases # Must set this option, else script will not expand "
-"aliases."
+"shopt -s expand_aliases\n"
+"# Must set this option, else script will not expand aliases.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:11
+#, no-wrap
 msgid ""
-"# First, some fun.  alias Jesse_James='echo \"\\\"Alias Jesse James\\\" was "
-"a 1959 comedy starring Bob Hope.\"' Jesse_James"
+"# First, some fun.\n"
+"alias Jesse_James='echo \"\\\"Alias Jesse James\\\" was a 1959 comedy "
+"starring Bob Hope.\"'\n"
+"Jesse_James\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:13
-msgid "echo; echo; echo;"
+#, no-wrap
+msgid "echo; echo; echo;\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:16
+#, no-wrap
 msgid ""
-"alias ll=\"ls -l\" # May use either single (') or double (\") quotes to "
-"define an alias."
+"alias ll=\"ls -l\"\n"
+"# May use either single (') or double (\") quotes to define an alias.\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,20 +66,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:21 abs-guide/alias.sh:39 abs-guide/alias.sh:51
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:26
+#, no-wrap
 msgid ""
-"directory=/usr/X11R6/bin/ prefix=mk* # See if wild card causes problems.  "
-"echo \"Variables \\\"directory\\\" + \\\"prefix\\\" = $directory$prefix\" "
-"echo"
+"directory=/usr/X11R6/bin/\n"
+"prefix=mk*  # See if wild card causes problems.\n"
+"echo \"Variables \\\"directory\\\" + \\\"prefix\\\" = $directory$prefix\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:28
-msgid "alias lll=\"ls -l $directory$prefix\""
+#, no-wrap
+msgid "alias lll=\"ls -l $directory$prefix\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -85,7 +98,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:37
-msgid "TRUE=1"
+#, no-wrap
+msgid "TRUE=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -120,7 +134,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:63
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -139,5 +154,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/alias.sh:73
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

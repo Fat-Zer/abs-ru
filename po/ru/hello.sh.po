@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hello.sh:14
-msgid "HELLO_CALL=65 GOODBYE_CALL=66"
+#, no-wrap
+msgid ""
+"HELLO_CALL=65\n"
+"GOODBYE_CALL=66\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,7 +58,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hello.sh:24
+#, no-wrap
 msgid ""
-"echo \"Hello!\" # Some other hello-type commands, as appropriate.  exit "
-"$HELLO_CALL"
+"echo \"Hello!\"\n"
+"# Some other hello-type commands, as appropriate.\n"
+"exit $HELLO_CALL\n"
 msgstr ""

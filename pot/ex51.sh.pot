@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,50 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:3
-msgid "#!/bin/bash # Exercising the 'date' command"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Exercising the 'date' command\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:7
+#, no-wrap
 msgid ""
-"echo \"The number of days since the year's beginning is `date +%j`.\" # "
-"Needs a leading '+' to invoke formatting.  # %j gives day of year."
+"echo \"The number of days since the year's beginning is `date +%j`.\"\n"
+"# Needs a leading '+' to invoke formatting.\n"
+"# %j gives day of year.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:11
+#, no-wrap
 msgid ""
-"echo \"The number of seconds elapsed since 01/01/1970 is `date +%s`.\" # %s "
-"yields number of seconds since \"UNIX epoch\" began, #+ but how is this "
-"useful?"
+"echo \"The number of seconds elapsed since 01/01/1970 is `date +%s`.\"\n"
+"#  %s yields number of seconds since \"UNIX epoch\" began,\n"
+"#+ but how is this useful?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:18
+#, no-wrap
 msgid ""
-"prefix=temp suffix=$(date +%s)  # The \"+%s\" option to 'date' is "
-"GNU-specific.  filename=$prefix.$suffix echo \"Temporary filename = "
-"$filename\" # It's great for creating \"unique and random\" temp filenames, "
-"#+ even better than using $$."
+"prefix=temp\n"
+"suffix=$(date +%s)  # The \"+%s\" option to 'date' is GNU-specific.\n"
+"filename=$prefix.$suffix\n"
+"echo \"Temporary filename = $filename\"\n"
+"#  It's great for creating \"unique and random\" temp filenames,\n"
+"#+ even better than using $$.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:20
-msgid "# Read the 'date' man page for more formatting options."
+#, no-wrap
+msgid "# Read the 'date' man page for more formatting options.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex51.sh:21
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

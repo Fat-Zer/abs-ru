@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-copy.sh:3
-msgid "#!/bin/bash # self-copy.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# self-copy.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-copy.sh:5
-msgid "# This script copies itself."
+#, no-wrap
+msgid "# This script copies itself.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-copy.sh:7
-msgid "file_subscript=copy"
+#, no-wrap
+msgid "file_subscript=copy\n"
 msgstr ""
 
 #. type: Plain text
@@ -41,12 +46,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-copy.sh:12
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/self-copy.sh:15
+#, no-wrap
 msgid ""
-"# A program whose only output is its own source code #+ is called a "
-"\"quine\" per Willard Quine.  # Does this script qualify as a quine?"
+"#  A program whose only output is its own source code\n"
+"#+ is called a \"quine\" per Willard Quine.\n"
+"#  Does this script qualify as a quine?\n"
 msgstr ""

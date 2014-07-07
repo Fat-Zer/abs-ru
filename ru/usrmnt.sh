@@ -1,13 +1,14 @@
-#!/bin/bash # usrmnt.sh, written by Anthony Richardson # Used in ABS Guide
-with permission.
+#!/bin/bash
+# usrmnt.sh, written by Anthony Richardson
+# Used in ABS Guide with permission.
 
 # usage:       usrmnt.sh
 # description: mount device, invoking user must be listed in the
 #              MNTUSERS group in the /etc/sudoers file.
 
-# ---------------------------------------------------------- # This is a
-usermount script that reruns itself using sudo.  # A user with the proper
-permissions only has to type
+# ----------------------------------------------------------
+#  This is a usermount script that reruns itself using sudo.
+#  A user with the proper permissions only has to type
 
 #   usermount /dev/fd0 /mnt/floppy
 
@@ -15,11 +16,12 @@ permissions only has to type
 
 #   sudo usermount /dev/fd0 /mnt/floppy
 
-# I use this same technique for all of my #+ sudo scripts, because I find it
-convenient.  # ----------------------------------------------------------
+#  I use this same technique for all of my
+#+ sudo scripts, because I find it convenient.
+# ----------------------------------------------------------
 
-# If SUDO_COMMAND variable is not set we are not being run through #+ sudo,
-so rerun ourselves. Pass the user's real and group id . . .
+#  If SUDO_COMMAND variable is not set we are not being run through
+#+ sudo, so rerun ourselves. Pass the user's real and group id . . .
 
 if [ -z "$SUDO_COMMAND" ]
 then
@@ -27,13 +29,13 @@ then
    exit 0
 fi
 
-# We will only get here if we are being run by sudo.  /bin/mount $* -o
-uid=$mntusr,gid=$grpusr
+# We will only get here if we are being run by sudo.
+/bin/mount $* -o uid=$mntusr,gid=$grpusr
 
 exit 0
 
-# Additional notes (from the author of this script): #
--------------------------------------------------
+# Additional notes (from the author of this script): 
+# -------------------------------------------------
 
 # 1) Linux allows the "users" option in the /etc/fstab
 #    file so that any user can mount removable media.

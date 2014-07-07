@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:3
-msgid "#!/bin/bash # twodim.sh: Simulating a two-dimensional array."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# twodim.sh: Simulating a two-dimensional array.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:6
+#, no-wrap
 msgid ""
-"# A one-dimensional array consists of a single row.  # A two-dimensional "
-"array stores rows sequentially."
+"# A one-dimensional array consists of a single row.\n"
+"# A two-dimensional array stores rows sequentially.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:10
-msgid "Rows=5 Columns=5 # 5 X 5 Array."
+#, no-wrap
+msgid ""
+"Rows=5\n"
+"Columns=5\n"
+"# 5 X 5 Array.\n"
 msgstr ""
 
 #. type: Plain text
@@ -43,7 +51,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:18
-msgid "load_alpha ()  { local rc=0 local index"
+#, no-wrap
+msgid ""
+"load_alpha ()\n"
+"{\n"
+"local rc=0\n"
+"local index\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,12 +87,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:38
-msgid "print_alpha ()  { local row=0 local index"
+#, no-wrap
+msgid ""
+"print_alpha ()\n"
+"{\n"
+"local row=0\n"
+"local index\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:40
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -121,8 +140,9 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/twodim.sh:59 abs-guide/twodim.sh:112
-msgid "done"
+#: abs-guide/twodim.sh:59
+#, no-wrap
+msgid "done  \n"
 msgstr ""
 
 #. type: Plain text
@@ -135,7 +155,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:65
-msgid "echo }"
+#, no-wrap
+msgid ""
+"echo\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -170,7 +193,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:81 abs-guide/twodim.sh:120
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -229,12 +253,20 @@ msgid "  echo; echo\n"
 msgstr ""
 
 #. type: Plain text
+#: abs-guide/twodim.sh:112
+#, no-wrap
+msgid "done \n"
+msgstr ""
+
+#. type: Plain text
 #: abs-guide/twodim.sh:118
+#, no-wrap
 msgid ""
-"# Array rotation inspired by examples (pp. 143-146) in #+ \"Advanced C "
-"Programming on the IBM PC,\" by Herbert Mayer #+ (see bibliography).  # This "
-"just goes to show that much of what can be done in C #+ can also be done in "
-"shell scripting."
+"#  Array rotation inspired by examples (pp. 143-146) in\n"
+"#+ \"Advanced C Programming on the IBM PC,\" by Herbert Mayer\n"
+"#+ (see bibliography).\n"
+"#  This just goes to show that much of what can be done in C\n"
+"#+ can also be done in shell scripting.\n"
 msgstr ""
 
 #. type: Plain text
@@ -250,12 +282,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:129
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/twodim.sh:131
-msgid "# This is a rather contrived, not to mention inelegant simulation."
+#, no-wrap
+msgid "# This is a rather contrived, not to mention inelegant simulation.\n"
 msgstr ""
 
 #. type: Plain text

@@ -1,4 +1,5 @@
-#!/bin/bash # ex62.sh: Global and local variables inside a function.
+#!/bin/bash
+# ex62.sh: Global and local variables inside a function.
 
 func ()
 {
@@ -23,5 +24,6 @@ echo "\"global_var\" outside function = $global_var"
                                       # $global_var is visible globally.
 echo				      
 
-exit 0 # In contrast to C, a Bash variable declared inside a function #+ is
-local ONLY if declared as such.
+exit 0
+#  In contrast to C, a Bash variable declared inside a function
+#+ is local ONLY if declared as such.

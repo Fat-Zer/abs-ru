@@ -1,4 +1,5 @@
-#!/bin/bash # Faxing (must have 'efax' package installed).
+#!/bin/bash
+# Faxing (must have 'efax' package installed).
 
 EXPECTED_ARGS=2
 E_BADARGS=85

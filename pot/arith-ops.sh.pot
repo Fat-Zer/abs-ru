@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:3
-msgid "#!/bin/bash # Counting to 11 in 10 different ways."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Counting to 11 in 10 different ways.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:5
-msgid "n=1; echo -n \"$n \""
+#, no-wrap
+msgid "n=1; echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
@@ -36,44 +40,60 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:14
+#, no-wrap
 msgid ""
-": $((n = $n + 1))  # \":\" necessary because otherwise Bash attempts #+ to "
-"interpret \"$((n = $n + 1))\" as a command.  echo -n \"$n \""
+": $((n = $n + 1))\n"
+"#  \":\" necessary because otherwise Bash attempts\n"
+"#+ to interpret \"$((n = $n + 1))\" as a command.\n"
+"echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:19
+#, no-wrap
 msgid ""
-"(( n = n + 1 ))  # A simpler alternative to the method above.  # Thanks, "
-"David Lombard, for pointing this out.  echo -n \"$n \""
+"(( n = n + 1 ))\n"
+"#  A simpler alternative to the method above.\n"
+"#  Thanks, David Lombard, for pointing this out.\n"
+"echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:22
-msgid "n=$(($n + 1))  echo -n \"$n \""
+#, no-wrap
+msgid ""
+"n=$(($n + 1))\n"
+"echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:28
+#, no-wrap
 msgid ""
-": $[ n = $n + 1 ] # \":\" necessary because otherwise Bash attempts #+ to "
-"interpret \"$[ n = $n + 1 ]\" as a command.  # Works even if \"n\" was "
-"initialized as a string.  echo -n \"$n \""
+": $[ n = $n + 1 ]\n"
+"#  \":\" necessary because otherwise Bash attempts\n"
+"#+ to interpret \"$[ n = $n + 1 ]\" as a command.\n"
+"#  Works even if \"n\" was initialized as a string.\n"
+"echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:34
+#, no-wrap
 msgid ""
-"n=$[ $n + 1 ] # Works even if \"n\" was initialized as a string.  #* Avoid "
-"this type of construct, since it is obsolete and nonportable.  # Thanks, "
-"Stephane Chazelas.  echo -n \"$n \""
+"n=$[ $n + 1 ]\n"
+"#  Works even if \"n\" was initialized as a string.\n"
+"#* Avoid this type of construct, since it is obsolete and nonportable.\n"
+"#  Thanks, Stephane Chazelas.\n"
+"echo -n \"$n \"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:37
+#, no-wrap
 msgid ""
-"# Now for C-style increment operators.  # Thanks, Frank Wang, for pointing "
-"this out."
+"# Now for C-style increment operators.\n"
+"# Thanks, Frank Wang, for pointing this out.\n"
 msgstr ""
 
 #. type: Plain text
@@ -110,10 +130,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:51
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arith-ops.sh:52
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

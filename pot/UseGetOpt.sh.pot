@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:3
-msgid "#!/bin/bash # UseGetOpt.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# UseGetOpt.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:5
-msgid "# Author: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;"
+#, no-wrap
+msgid "# Author: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;\n"
 msgstr ""
 
 #. type: Plain text
@@ -214,43 +218,56 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:103
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:110
+#, no-wrap
 msgid ""
-"################################### M A I N ######################## # If "
-"you remove \"function UseGetOpt () {\" and corresponding \"}\", #+ you can "
-"uncomment the \"exit 0\" line below, and invoke this script #+ with the "
-"various options from the command-line.  "
-"#------------------------------------------------------------------- # exit "
-"0"
+"################################### M A I N ########################\n"
+"#  If you remove \"function UseGetOpt () {\" and corresponding \"}\",\n"
+"#+ you can uncomment the \"exit 0\" line below, and invoke this script\n"
+"#+ with the various options from the command-line.\n"
+"#-------------------------------------------------------------------\n"
+"# exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:113
-msgid "echo \"Test 1\" UseGetOpt -f myfile one \"two three\" four"
+#, no-wrap
+msgid ""
+"echo \"Test 1\"\n"
+"UseGetOpt -f myfile one \"two three\" four\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:116
-msgid "echo;echo \"Test 2\" UseGetOpt -h"
+#, no-wrap
+msgid ""
+"echo;echo \"Test 2\"\n"
+"UseGetOpt -h\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:119
-msgid "echo;echo \"Test 3 - Short Options\" UseGetOpt -adltf myfile anotherfile"
+#, no-wrap
+msgid ""
+"echo;echo \"Test 3 - Short Options\"\n"
+"UseGetOpt -adltf myfile  anotherfile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:122
+#, no-wrap
 msgid ""
-"echo;echo \"Test 4 - Long Options\" UseGetOpt --aoption --debug --log --test "
-"--file myfile anotherfile"
+"echo;echo \"Test 4 - Long Options\"\n"
+"UseGetOpt --aoption --debug --log --test --file myfile anotherfile\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/UseGetOpt.sh:123
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

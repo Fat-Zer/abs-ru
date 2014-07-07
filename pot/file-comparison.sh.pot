@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-comparison.sh:3
-msgid "#!/bin/bash # file-comparison.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# file-comparison.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-comparison.sh:7
-msgid "ARGS=2 # Two args to script expected.  E_BADARGS=85 E_UNREADABLE=86"
+#, no-wrap
+msgid ""
+"ARGS=2  # Two args to script expected.\n"
+"E_BADARGS=85\n"
+"E_UNREADABLE=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -75,5 +82,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/file-comparison.sh:35
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

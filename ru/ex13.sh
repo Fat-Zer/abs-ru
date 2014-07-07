@@ -1,13 +1,15 @@
 #!/bin/bash
 
-a=4 b=5
+a=4
+b=5
 
-# Here "a" and "b" can be treated either as integers or strings.  # There is
-some blurring between the arithmetic and string comparisons, #+ since Bash
-variables are not strongly typed.
+#  Here "a" and "b" can be treated either as integers or strings.
+#  There is some blurring between the arithmetic and string comparisons,
+#+ since Bash variables are not strongly typed.
 
-# Bash permits integer operations and comparisons on variables #+ whose
-value consists of all-integer characters.  # Caution advised, however.
+#  Bash permits integer operations and comparisons on variables
+#+ whose value consists of all-integer characters.
+#  Caution advised, however.
 
 echo
 

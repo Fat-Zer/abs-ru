@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex19.sh:3
+#, no-wrap
 msgid ""
-"#!/bin/bash # shft.sh: Using 'shift' to step through all the positional "
-"parameters."
+"#!/bin/bash\n"
+"# shft.sh: Using 'shift' to step through all the positional parameters.\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,20 +53,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex19.sh:23
+#, no-wrap
 msgid ""
-"# But, what happens to the \"used-up\" parameters? echo \"$2\" # Nothing "
-"echoes! # When $2 shifts into $1 (and there is no $3 to shift into $2)  #+ "
-"then $2 remains empty.  # So, it is not a parameter *copy*, but a *move*."
+"# But, what happens to the \"used-up\" parameters?\n"
+"echo \"$2\"\n"
+"#  Nothing echoes!\n"
+"#  When $2 shifts into $1 (and there is no $3 to shift into $2)\n"
+"#+ then $2 remains empty.\n"
+"#  So, it is not a parameter *copy*, but a *move*.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex19.sh:25
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex19.sh:27
+#, no-wrap
 msgid ""
-"# See also the echo-params.sh script for a \"shiftless\" #+ alternative "
-"method of stepping through the positional params."
+"#  See also the echo-params.sh script for a \"shiftless\"\n"
+"#+ alternative method of stepping through the positional params.\n"
 msgstr ""

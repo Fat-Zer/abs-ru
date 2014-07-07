@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:3
-msgid "#!/bin/bash # wf2.sh: Crude word frequency analysis on a text file."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# wf2.sh: Crude word frequency analysis on a text file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:6
+#, no-wrap
 msgid ""
-"# Uses 'xargs' to decompose lines of text into single words.  # Compare this "
-"example to the \"wf.sh\" script later on."
+"# Uses 'xargs' to decompose lines of text into single words.\n"
+"# Compare this example to the \"wf.sh\" script later on.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:12
-msgid "# Check for input file on command-line.  ARGS=1 E_BADARGS=85 E_NOFILE=86"
+#, no-wrap
+msgid ""
+"# Check for input file on command-line.\n"
+"ARGS=1\n"
+"E_BADARGS=85\n"
+"E_NOFILE=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -58,23 +67,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:41
+#, no-wrap
 msgid ""
-"##################################################### cat \"$1\" | xargs -n1 "
-"| \\ # List the file, one word per line.  tr A-Z a-z | \\ # Shift characters "
-"to lowercase.  sed -e 's/\\.//g' -e 's/\\,//g' -e 's/ /\\ /g' | \\ # Filter "
-"out periods and commas, and #+ change space between words to linefeed, sort "
-"| uniq -c | sort -nr # Finally remove duplicates, prefix occurrence count #+ "
-"and sort numerically.  #####################################################"
+"#####################################################\n"
+"cat \"$1\" | xargs -n1 | \\\n"
+"#  List the file, one word per line. \n"
+"tr A-Z a-z | \\\n"
+"#  Shift characters to lowercase.\n"
+"sed -e 's/\\.//g'  -e 's/\\,//g' -e 's/ /\\\n"
+"/g' | \\\n"
+"#  Filter out periods and commas, and\n"
+"#+ change space between words to linefeed,\n"
+"sort | uniq -c | sort -nr\n"
+"#  Finally remove duplicates, prefix occurrence count\n"
+"#+ and sort numerically.\n"
+"#####################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:44
+#, no-wrap
 msgid ""
-"# This does the same job as the \"wf.sh\" example, #+ but a bit more "
-"ponderously, and it runs more slowly (why?)."
+"#  This does the same job as the \"wf.sh\" example,\n"
+"#+ but a bit more ponderously, and it runs more slowly (why?).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/wf2.sh:45
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

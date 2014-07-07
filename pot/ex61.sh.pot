@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:6
+#, no-wrap
 msgid ""
-"# Arabic number to Roman numeral conversion # Range: 0 - 200 # It's crude, "
-"but it works."
+"# Arabic number to Roman numeral conversion\n"
+"# Range: 0 - 200\n"
+"# It's crude, but it works.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:8
+#, no-wrap
 msgid ""
 "# Extending the range and otherwise improving the script is left as an "
-"exercise."
+"exercise.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:10
-msgid "# Usage: roman number-to-convert"
+#, no-wrap
+msgid "# Usage: roman number-to-convert\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:14
-msgid "LIMIT=200 E_ARG_ERR=65 E_OUT_OF_RANGE=66"
+#, no-wrap
+msgid ""
+"LIMIT=200\n"
+"E_ARG_ERR=65\n"
+"E_OUT_OF_RANGE=66\n"
 msgstr ""
 
 #. type: Plain text
@@ -102,20 +111,37 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:70
+#, no-wrap
 msgid ""
-"to_roman $num 100 C num=$? to_roman $num 90 LXXXX num=$? to_roman $num 50 L "
-"num=$? to_roman $num 40 XL num=$? to_roman $num 10 X num=$? to_roman $num 9 "
-"IX num=$? to_roman $num 5 V num=$? to_roman $num 4 IV num=$? to_roman $num 1 "
-"I # Successive calls to conversion function! # Is this really necessary??? "
-"Can it be simplified?"
+"to_roman $num 100 C\n"
+"num=$?\n"
+"to_roman $num 90 LXXXX\n"
+"num=$?\n"
+"to_roman $num 50 L\n"
+"num=$?\n"
+"to_roman $num 40 XL\n"
+"num=$?\n"
+"to_roman $num 10 X\n"
+"num=$?\n"
+"to_roman $num 9 IX\n"
+"num=$?\n"
+"to_roman $num 5 V\n"
+"num=$?\n"
+"to_roman $num 4 IV\n"
+"num=$?\n"
+"to_roman $num 1 I\n"
+"# Successive calls to conversion function!\n"
+"# Is this really necessary??? Can it be simplified?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:72
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex61.sh:73
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

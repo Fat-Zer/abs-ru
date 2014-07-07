@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:7
+#, no-wrap
 msgid ""
-"#!/bin/bash # random-between.sh # Random number between two specified "
-"values.  # Script by Bill Gradwohl, with minor modifications by the document "
-"author.  # Corrections in lines 187 and 189 by Anthony Le Clezio.  # Used "
-"with permission."
+"#!/bin/bash\n"
+"# random-between.sh\n"
+"# Random number between two specified values. \n"
+"# Script by Bill Gradwohl, with minor modifications by the document "
+"author.\n"
+"# Corrections in lines 187 and 189 by Anthony Le Clezio.\n"
+"# Used with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -217,19 +221,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:118
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:123
-msgid "# Let's test the function.  min=-14 max=20 divisibleBy=3"
+#, no-wrap
+msgid ""
+"# Let's test the function.\n"
+"min=-14\n"
+"max=20\n"
+"divisibleBy=3\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:127
+#, no-wrap
 msgid ""
-"# Generate an array of expected answers and check to make sure we get #+ at "
-"least one of each answer if we loop long enough."
+"#  Generate an array of expected answers and check to make sure we get\n"
+"#+ at least one of each answer if we loop long enough.\n"
 msgstr ""
 
 #. type: Plain text
@@ -271,9 +282,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:155
+#, no-wrap
 msgid ""
-"# We need to generate only positive array subscripts, #+ so we need a "
-"displacement that that will guarantee #+ positive results."
+"#  We need to generate only positive array subscripts,\n"
+"#+ so we need a displacement that that will guarantee\n"
+"#+ positive results.\n"
 msgstr ""
 
 #. type: Plain text
@@ -297,7 +310,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:167
-msgid "for ((i=0; i&lt;${loopIt}; ++i)); do"
+#, no-wrap
+msgid "for ((i=0; i&lt;${loopIt}; ++i)); do\n"
 msgstr ""
 
 #. type: Plain text
@@ -338,7 +352,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:186
-msgid "# Let's check the results"
+#, no-wrap
+msgid "# Let's check the results\n"
 msgstr ""
 
 #. type: Plain text
@@ -354,5 +369,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/random-between.sh:194
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -16,6 +16,9 @@ done
 
 exit
 
-# Exercise: # -------- # Fix this script to accept user input not specified
-in #+ the "select" statement.  # For example, if the user inputs "peas," #+
-the script would respond "Sorry. That is not on the menu."
+# Exercise:
+# --------
+#  Fix this script to accept user input not specified in
+#+ the "select" statement.
+#  For example, if the user inputs "peas,"
+#+ the script would respond "Sorry. That is not on the menu."

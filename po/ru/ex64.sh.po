@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex64.sh:3
-msgid "#!/bin/bash # and list"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# and list\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,5 +68,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex64.sh:37
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

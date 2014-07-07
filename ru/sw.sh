@@ -1,4 +1,6 @@
-#!/bin/sh # sw.sh # A command-line Stopwatch
+#!/bin/sh
+# sw.sh
+# A command-line Stopwatch
 
 # Author: P&aacute;draig Brady
 #    http://www.pixelbeat.org/scripts/sw
@@ -101,8 +103,7 @@ lap() {
     fi
 }
 
-echo -n "Space for lap | ? for split | Ctrl-C to stop | Space to
-start...">&amp;2
+echo -n "Space for lap | ? for split | Ctrl-C to stop | Space to start...">&amp;2
 
 while true; do
     trap true INT QUIT  # Set signal handlers.

@@ -1,5 +1,7 @@
-# Hash: # Hash function library # Author: Mariusz Gniazdowski
-&lt;mariusz.gn-at-gmail.com&gt; # Date: 2005-04-07
+# Hash:
+# Hash function library
+# Author: Mariusz Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;
+# Date: 2005-04-07
 
 # Functions making emulating hashes in Bash a little less painful.
 
@@ -56,10 +58,17 @@ function hash_echo {
 }
 
 
-# Emulates: hash1[key1]=hash2[key2] # # Params: # 1 - hash1 # 2 - key1 # 3 -
-hash2 # 4 - key2 function hash_copy { eval
-"${Hash_config_varname_prefix}${1}_${2}\ 
-=\"\$${Hash_config_varname_prefix}${3}_${4}\"" }
+# Emulates:  hash1[key1]=hash2[key2]
+#
+# Params:
+# 1 - hash1
+# 2 - key1
+# 3 - hash2
+# 4 - key2
+function hash_copy {
+eval "${Hash_config_varname_prefix}${1}_${2}\
+=\"\$${Hash_config_varname_prefix}${3}_${4}\""
+}
 
 
 # Emulates:  hash[keyN-1]=hash[key2]=...hash[key1]
@@ -169,5 +178,5 @@ function hash_foreach {
 IFS="$oldIFS"
 }
 
-# NOTE: In lines 103 and 116, ampersand changed.  # But, it doesn't matter,
-because these are comment lines anyhow.
+#  NOTE: In lines 103 and 116, ampersand changed.
+#  But, it doesn't matter, because these are comment lines anyhow.

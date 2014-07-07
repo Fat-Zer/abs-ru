@@ -1,4 +1,5 @@
-#!/bin/bash # here-function.sh
+#!/bin/bash
+# here-function.sh
 
 GetPersonalData ()
 {
@@ -11,11 +12,21 @@ GetPersonalData ()
 } # This certainly appears to be an interactive function, but . . .
 
 
-# Supply input to the above function.  GetPersonalData &lt;&lt;RECORD001
-Bozo Bozeman 2726 Nondescript Dr.  Bozeman MT 21226 RECORD001
+# Supply input to the above function.
+GetPersonalData &lt;&lt;RECORD001
+Bozo
+Bozeman
+2726 Nondescript Dr.
+Bozeman
+MT
+21226
+RECORD001
 
 
-echo echo "$firstname $lastname" echo "$address" echo "$city, $state
-$zipcode" echo
+echo
+echo "$firstname $lastname"
+echo "$address"
+echo "$city, $state $zipcode"
+echo
 
 exit 0

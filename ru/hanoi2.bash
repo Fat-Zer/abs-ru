@@ -1,12 +1,16 @@
-#! /bin/bash # The Towers Of Hanoi # Original script (hanoi.bash) copyright
-(C) 2000 Amit Singh.  # All Rights Reserved.  #
-http://hanoi.kernelthread.com
+#! /bin/bash
+# The Towers Of Hanoi
+# Original script (hanoi.bash) copyright (C) 2000 Amit Singh.
+# All Rights Reserved.
+# http://hanoi.kernelthread.com
 
-# hanoi2.bash # Version 2.00: modded for ASCII-graphic display.  # Version
-2.01: fixed no command-line param bug.  # Uses code contributed by Antonio
-Macchi, #+ with heavy editing by ABS Guide author.  # This variant falls
-under the original copyright, see above.  # Used in ABS Guide with Amit
-Singh's permission (thanks!).
+#  hanoi2.bash
+#  Version 2.00: modded for ASCII-graphic display.
+#  Version 2.01: fixed no command-line param bug.
+#  Uses code contributed by Antonio Macchi,
+#+ with heavy editing by ABS Guide author.
+#  This variant falls under the original copyright, see above.
+#  Used in ABS Guide with Amit Singh's permission (thanks!).
 
 
 ###   Variables &amp;&amp; sanity check   ###
@@ -172,7 +176,8 @@ setup_arrays ()
 
 ###   Main   ###
 
-setup_arrays $DISKS echo; echo "+ Start Position"
+setup_arrays $DISKS
+echo; echo "+  Start Position"
 
 case $# in
     1) case $(($1>0)) in     # Must have at least one disk.
@@ -199,5 +204,5 @@ esac
 
 exit $E_NOEXIT   # Shouldn't exit here.
 
-# Note: # Redirect script output to a file, otherwise it scrolls off
-display.
+# Note:
+# Redirect script output to a file, otherwise it scrolls off display.

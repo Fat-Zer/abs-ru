@@ -1,4 +1,5 @@
-#!/bin/bash # Using getopt
+#!/bin/bash
+# Using getopt
 
 # Try the following when invoking this script:
 #   sh ex33a.sh -a
@@ -21,8 +22,9 @@ then   # Script needs at least one command-line argument.
   exit $E_OPTERR
 fi  
 
-set -- `getopt "abcd:" "$@"` # Sets positional parameters to command-line
-arguments.  # What happens if you use "$*" instead of "$@"?
+set -- `getopt "abcd:" "$@"`
+# Sets positional parameters to command-line arguments.
+# What happens if you use "$*" instead of "$@"?
 
 while [ ! -z "$1" ]
 do
@@ -37,7 +39,7 @@ do
   shift
 done
 
-# It is usually better to use the 'getopts' builtin in a script.  # See
-"ex33.sh."
+#  It is usually better to use the 'getopts' builtin in a script.
+#  See "ex33.sh."
 
 exit 0

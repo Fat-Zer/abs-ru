@@ -2,9 +2,11 @@
 # file-integrity.sh: Checking whether files in a given directory
 #                    have been tampered with.
 
-E_DIR_NOMATCH=80 E_BAD_DBFILE=81
+E_DIR_NOMATCH=80
+E_BAD_DBFILE=81
 
-dbfile=File_record.md5 # Filename for storing records (database file).
+dbfile=File_record.md5
+# Filename for storing records (database file).
 
 
 set_up_database ()
@@ -75,9 +77,10 @@ check_database ()
     let "n+=1"
   done &lt;"$dbfile"       # Read from checksum database file. 
 
-}
+}  
 
-# =================================================== # # main ()
+# =================================================== #
+# main ()
 
 if [ -z  "$1" ]
 then
@@ -100,12 +103,13 @@ echo
 
 check_database          # Do the actual work.
 
-echo
+echo 
 
-# You may wish to redirect the stdout of this script to a file, #+
-especially if the directory checked has many files in it.
+#  You may wish to redirect the stdout of this script to a file,
+#+ especially if the directory checked has many files in it.
 
 exit 0
 
-# For a much more thorough file integrity check, #+ consider the "Tripwire"
-package, #+ http://sourceforge.net/projects/tripwire/.
+#  For a much more thorough file integrity check,
+#+ consider the "Tripwire" package,
+#+ http://sourceforge.net/projects/tripwire/.

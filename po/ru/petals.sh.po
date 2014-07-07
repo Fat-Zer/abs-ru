@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:3
-msgid "#!/bin/bash -i # petals.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash -i\n"
+"# petals.sh\n"
 msgstr ""
 
 #. type: Plain text
@@ -80,12 +83,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:46
-msgid "# Functions"
+#, no-wrap
+msgid "# Functions\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:48
-msgid "instructions () {"
+#, no-wrap
+msgid "instructions () {\n"
 msgstr ""
 
 #. type: Plain text
@@ -115,9 +120,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:67
+#, no-wrap
 msgid ""
-"Six consecutive correct guesses admits you to the Fellowship of the Rose.  "
-"INSTRUCTIONSZZZ"
+"Six consecutive correct guesses admits you to the\n"
+"Fellowship of the Rose.\n"
+"INSTRUCTIONSZZZ\n"
 msgstr ""
 
 #. type: Plain text
@@ -131,7 +138,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:73
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -226,12 +234,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:139
-msgid "# ============================================================== #"
+#, no-wrap
+msgid "# ============================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:141
-msgid "instructions"
+#, no-wrap
+msgid "instructions\n"
 msgstr ""
 
 #. type: Plain text
@@ -318,12 +328,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:186
-msgid "###"
+#, no-wrap
+msgid "###\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/petals.sh:188
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

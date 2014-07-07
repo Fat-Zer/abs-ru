@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex74.sh:3
-msgid "#!/bin/bash # ex74.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# ex74.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex74.sh:6
-msgid "# This is a buggy script.  # Where, oh where is the error?"
+#, no-wrap
+msgid ""
+"# This is a buggy script.\n"
+"# Where, oh where is the error?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex74.sh:8
-msgid "a=37"
+#, no-wrap
+msgid "a=37\n"
 msgstr ""
 
 #. type: Plain text

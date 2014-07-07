@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:3
-msgid "#!/bin/bash # blot-out.sh: Erase \"all\" traces of a file."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# blot-out.sh: Erase \"all\" traces of a file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:8
+#, no-wrap
 msgid ""
-"# This script overwrites a target file alternately #+ with random bytes, "
-"then zeros before finally deleting it.  # After that, even examining the raw "
-"disk sectors by conventional methods #+ will not reveal the original file "
-"data."
+"#  This script overwrites a target file alternately\n"
+"#+ with random bytes, then zeros before finally deleting it.\n"
+"#  After that, even examining the raw disk sectors by conventional methods\n"
+"#+ will not reveal the original file data.\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,7 +61,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:25
-msgid "file=$1"
+#, no-wrap
+msgid "file=$1\n"
 msgstr ""
 
 #. type: Plain text
@@ -88,9 +93,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:44
+#, no-wrap
 msgid ""
-"flength=$(ls -l \"$file\" | awk '{print $5}')  # Field 5 is file length.  "
-"pass_count=1"
+"flength=$(ls -l \"$file\" | awk '{print $5}')  # Field 5 is file length.\n"
+"pass_count=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -101,7 +107,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:48
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -133,35 +140,42 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:68
-msgid "echo \"File \\\"$file\\\" blotted out and deleted.\"; echo"
+#, no-wrap
+msgid "echo \"File \\\"$file\\\" blotted out and deleted.\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:71
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:76
+#, no-wrap
 msgid ""
-"# This is a fairly secure, if inefficient and slow method #+ of thoroughly "
-"\"shredding\" a file.  # The \"shred\" command, part of the GNU "
-"\"fileutils\" package, #+ does the same thing, although more efficiently."
+"#  This is a fairly secure, if inefficient and slow method\n"
+"#+ of thoroughly \"shredding\" a file.\n"
+"#  The \"shred\" command, part of the GNU \"fileutils\" package,\n"
+"#+ does the same thing, although more efficiently.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:81
+#, no-wrap
 msgid ""
-"# The file cannot not be \"undeleted\" or retrieved by normal methods.  # "
-"However . . .  #+ this simple method would *not* likely withstand #+ "
-"sophisticated forensic analysis."
+"#  The file cannot not be \"undeleted\" or retrieved by normal methods.\n"
+"#  However . . .\n"
+"#+ this simple method would *not* likely withstand\n"
+"#+ sophisticated forensic analysis.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/blot-out.sh:84
+#, no-wrap
 msgid ""
-"# This script may not play well with a journaled file system.  # Exercise "
-"(difficult): Fix it so it does."
+"#  This script may not play well with a journaled file system.\n"
+"#  Exercise (difficult): Fix it so it does.\n"
 msgstr ""
 
 #. type: Plain text

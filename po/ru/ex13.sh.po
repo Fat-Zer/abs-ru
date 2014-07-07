@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,32 +18,40 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:5
-msgid "a=4 b=5"
+#, no-wrap
+msgid ""
+"a=4\n"
+"b=5\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:9
+#, no-wrap
 msgid ""
-"# Here \"a\" and \"b\" can be treated either as integers or strings.  # "
-"There is some blurring between the arithmetic and string comparisons, #+ "
-"since Bash variables are not strongly typed."
+"#  Here \"a\" and \"b\" can be treated either as integers or strings.\n"
+"#  There is some blurring between the arithmetic and string comparisons,\n"
+"#+ since Bash variables are not strongly typed.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:13
+#, no-wrap
 msgid ""
-"# Bash permits integer operations and comparisons on variables #+ whose "
-"value consists of all-integer characters.  # Caution advised, however."
+"#  Bash permits integer operations and comparisons on variables\n"
+"#+ whose value consists of all-integer characters.\n"
+"#  Caution advised, however.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:15 abs-guide/ex13.sh:23 abs-guide/ex13.sh:35
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -72,10 +80,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:33
-msgid "# In this particular instance, both \"-ne\" and \"!=\" work."
+#, no-wrap
+msgid "# In this particular instance, both \"-ne\" and \"!=\" work.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex13.sh:36
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

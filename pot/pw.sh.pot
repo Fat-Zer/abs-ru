@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pw.sh:9
+#, no-wrap
 msgid ""
-"#!/bin/bash # # # Random password generator for Bash 2.x + #+ by Antek "
-"Sawicki &lt;tenox@tenox.tc&gt;, #+ who generously gave usage permission to "
-"the ABS Guide author.  # # ==> Comments added by document author ==>"
+"#!/bin/bash\n"
+"#\n"
+"#\n"
+"#  Random password generator for Bash 2.x +\n"
+"#+ by Antek Sawicki &lt;tenox@tenox.tc&gt;,\n"
+"#+ who generously gave usage permission to the ABS Guide author.\n"
+"#\n"
+"# ==> Comments added by document author ==>\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/pw.sh:15
+#, no-wrap
 msgid ""
-"MATRIX=\"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\" # "
-"==> Password will consist of alphanumeric characters.  LENGTH=\"8\" # ==> "
-"May change 'LENGTH' for longer password."
+"MATRIX=\"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\"\n"
+"# ==> Password will consist of alphanumeric characters.\n"
+"LENGTH=\"8\"\n"
+"# ==> May change 'LENGTH' for longer password.\n"
 msgstr ""
 
 #. type: Plain text
@@ -105,5 +113,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/pw.sh:48
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

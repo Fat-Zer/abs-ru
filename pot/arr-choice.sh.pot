@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/arr-choice.sh:3
-msgid "#!/bin/bash # arr-choice.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# arr-choice.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/arr-choice.sh:6
+#, no-wrap
 msgid ""
-"# Passing arguments to a function to select #+ one particular variable out "
-"of a group."
+"#  Passing arguments to a function to select\n"
+"#+ one particular variable out of a group.\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,5 +91,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/arr-choice.sh:35
-msgid "# Thank you, Antonio Macchi, for pointing this out."
+#, no-wrap
+msgid "# Thank you, Antonio Macchi, for pointing this out.\n"
 msgstr ""

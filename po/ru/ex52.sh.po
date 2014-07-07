@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex52.sh:3
-msgid "#!/bin/bash # Uudecodes all uuencoded files in current working directory."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Uudecodes all uuencoded files in current working directory.\n"
 msgstr ""
 
 #. type: Plain text
@@ -50,19 +53,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex52.sh:25
+#, no-wrap
 msgid ""
-"# Note that running this script upon itself fools it #+ into thinking it is "
-"a uuencoded file, #+ because it contains both \"begin\" and \"end\"."
+"#  Note that running this script upon itself fools it\n"
+"#+ into thinking it is a uuencoded file,\n"
+"#+ because it contains both \"begin\" and \"end\".\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex52.sh:30
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Modify this script to check each file for a "
-"newsgroup header, #+ and skip to next if not found."
+"#  Exercise:\n"
+"#  --------\n"
+"#  Modify this script to check each file for a newsgroup header,\n"
+"#+ and skip to next if not found.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex52.sh:31
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

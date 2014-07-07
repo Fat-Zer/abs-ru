@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,49 +18,67 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:7
+#, no-wrap
 msgid ""
-"# =============================================================== # # # "
-"PERSONAL $HOME/.bashrc FILE for bash-3.0 (or later)  # By Emmanuel Rouat "
-"[no-email] # # Last modified: Tue Nov 20 22:04:47 CET 2012"
+"# =============================================================== #\n"
+"#\n"
+"# PERSONAL $HOME/.bashrc FILE for bash-3.0 (or later)\n"
+"# By Emmanuel Rouat [no-email]\n"
+"#\n"
+"# Last modified: Tue Nov 20 22:04:47 CET 2012\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:32
+#, no-wrap
 msgid ""
-"# This file is normally read by interactive shells only.  #+ Here is the "
-"place to define your aliases, functions and #+ other interactive features "
-"like your prompt.  # # The majority of the code here assumes you are on a "
-"GNU #+ system (most likely a Linux box) and is often based on code #+ found "
-"on Usenet or Internet.  # # See for instance: # "
-"http://tldp.org/LDP/abs/html/index.html # http://www.caliban.org/bash # "
-"http://www.shelldorado.com/scripts/categories.html # http://www.dotfiles.org "
-"# # The choice of colors was done for a shell with a dark background #+ "
-"(white on black), and this is usually also suited for pure text-mode #+ "
-"consoles (no X server available). If you use a white background, #+ you'll "
-"have to do some other choices for readability.  # # This bashrc file is a "
-"bit overcrowded.  # Remember, it is just just an example.  # Tailor it to "
-"your needs.  # # "
-"=============================================================== #"
+"#  This file is normally read by interactive shells only.\n"
+"#+ Here is the place to define your aliases, functions and\n"
+"#+ other interactive features like your prompt.\n"
+"#\n"
+"#  The majority of the code here assumes you are on a GNU\n"
+"#+ system (most likely a Linux box) and is often based on code\n"
+"#+ found on Usenet or Internet.\n"
+"#\n"
+"#  See for instance:\n"
+"#  http://tldp.org/LDP/abs/html/index.html\n"
+"#  http://www.caliban.org/bash\n"
+"#  http://www.shelldorado.com/scripts/categories.html\n"
+"#  http://www.dotfiles.org\n"
+"#\n"
+"#  The choice of colors was done for a shell with a dark background\n"
+"#+ (white on black), and this is usually also suited for pure text-mode\n"
+"#+ consoles (no X server available). If you use a white background,\n"
+"#+ you'll have to do some other choices for readability.\n"
+"#\n"
+"#  This bashrc file is a bit overcrowded.\n"
+"#  Remember, it is just just an example.\n"
+"#  Tailor it to your needs.\n"
+"#\n"
+"# =============================================================== #\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:34
-msgid "# --> Comments added by HOWTO author."
+#, no-wrap
+msgid "# --> Comments added by HOWTO author.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:37
+#, no-wrap
 msgid ""
-"# If not running interactively, don't do anything [ -z \"$PS1\" ] &amp;&amp; "
-"return"
+"# If not running interactively, don't do anything\n"
+"[ -z \"$PS1\" ] &amp;&amp; return\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:42
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Source "
-"global definitions (if any)  "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Source global definitions (if any)\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,13 +92,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:57
+#, no-wrap
 msgid ""
-"#-------------------------------------------------------------- # Automatic "
-"setting of $DISPLAY (if not set already).  # This works for me - your "
-"mileage may vary. . . .  # The problem is that different types of terminals "
-"give #+ different answers to 'who am i' (rxvt in particular can be #+ "
-"troublesome) - however this code seems to work in a majority #+ of cases.  "
-"#--------------------------------------------------------------"
+"#--------------------------------------------------------------\n"
+"#  Automatic setting of $DISPLAY (if not set already).\n"
+"#  This works for me - your mileage may vary. . . .\n"
+"#  The problem is that different types of terminals give\n"
+"#+ different answers to 'who am i' (rxvt in particular can be\n"
+"#+ troublesome) - however this code seems to work in a majority\n"
+"#+ of cases.\n"
+"#--------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -122,14 +143,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:86
-msgid "export DISPLAY"
+#, no-wrap
+msgid "export DISPLAY\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:90
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Some "
-"settings #-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Some settings\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -178,19 +202,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:120
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Greeting, "
-"motd etc. ...  "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Greeting, motd etc. ...\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:125
+#, no-wrap
 msgid ""
-"# Color definitions (taken from Color Bash Prompt HowTo).  # Some colors "
-"might look different of some terminals.  # For example, I see 'Bold Red' as "
-"'orange' on my screen, # hence the 'Green' 'BRed' 'Red' sequence I often use "
-"in my prompt."
+"# Color definitions (taken from Color Bash Prompt HowTo).\n"
+"# Some colors might look different of some terminals.\n"
+"# For example, I see 'Bold Red' as 'orange' on my screen,\n"
+"# hence the 'Green' 'BRed' 'Red' sequence I often use in my prompt.\n"
 msgstr ""
 
 #. type: Plain text
@@ -246,7 +272,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:161
-msgid "ALERT=${BWhite}${On_Red} # Bold White on red background"
+#, no-wrap
+msgid "ALERT=${BWhite}${On_Red} # Bold White on red background\n"
 msgstr ""
 
 #. type: Plain text
@@ -427,7 +454,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:294 abs-guide/bashrc:417
-msgid "# Adds some text in the terminal frame (if applicable)."
+#, no-wrap
+msgid "# Adds some text in the terminal frame (if applicable).\n"
 msgstr ""
 
 #. type: Plain text
@@ -442,8 +470,7 @@ msgid ""
 "        # Time of day (with load info):\n"
 "        PS1=\"\\[\\$(load_color)\\][\\A\\[${NC}\\] \"\n"
 "        # User@Host (with connection type info):\n"
-"        PS1=${PS1}\"\\[${SU}\\]\\u\\[${NC}\\]@\\[${CNX}\\]\\h\\[${NC}\\] "
-"\"\n"
+"        PS1=${PS1}\"\\[${SU}\\]\\u\\[${NC}\\]@\\[${CNX}\\]\\h\\[${NC}\\] \"\n"
 "        # PWD (with 'disk space' info):\n"
 "        PS1=${PS1}\"\\[\\$(disk_color)\\]\\W]\\[${NC}\\] \"\n"
 "        # Prompt (with 'job' info):\n"
@@ -464,44 +491,63 @@ msgstr ""
 msgid ""
 "export TIMEFORMAT=$'\\nreal %3R\\tuser %3U\\tsys %3S\\tpcpu %P\\n'\n"
 "export HISTIGNORE=\"&amp;:bg:fg:ll:h\"\n"
-"export HISTTIMEFORMAT=\"$(echo -e ${BCyan})[%d/%m %H:%M:%S]$(echo -e ${NC}) "
-"\"\n"
+"export HISTTIMEFORMAT=\"$(echo -e ${BCyan})[%d/%m %H:%M:%S]$(echo -e ${NC}) \"\n"
 "export HISTCONTROL=ignoredups\n"
 "export HOSTFILE=$HOME/.hosts    # Put a list of remote hosts in ~/.hosts\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:336
+#, no-wrap
 msgid ""
-"#============================================================ # # ALIASES "
-"AND FUNCTIONS # # Arguably, some functions defined here are quite big.  # If "
-"you want to make this file smaller, these functions can #+ be converted into "
-"scripts and removed from here.  # "
-"#============================================================"
+"#============================================================\n"
+"#\n"
+"#  ALIASES AND FUNCTIONS\n"
+"#\n"
+"#  Arguably, some functions defined here are quite big.\n"
+"#  If you want to make this file smaller, these functions can\n"
+"#+ be converted into scripts and removed from here.\n"
+"#\n"
+"#============================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:340
-msgid "#------------------- # Personnal Aliases #-------------------"
+#, no-wrap
+msgid ""
+"#-------------------\n"
+"# Personnal Aliases\n"
+"#-------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:346
+#, no-wrap
 msgid ""
-"alias rm='rm -i' alias cp='cp -i' alias mv='mv -i' # -> Prevents "
-"accidentally clobbering files.  alias mkdir='mkdir -p'"
+"alias rm='rm -i'\n"
+"alias cp='cp -i'\n"
+"alias mv='mv -i'\n"
+"# -> Prevents accidentally clobbering files.\n"
+"alias mkdir='mkdir -p'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:351
-msgid "alias h='history' alias j='jobs -l' alias which='type -a' alias ..='cd ..'"
+#, no-wrap
+msgid ""
+"alias h='history'\n"
+"alias j='jobs -l'\n"
+"alias which='type -a'\n"
+"alias ..='cd ..'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:355
+#, no-wrap
 msgid ""
-"# Pretty-print of some PATH variables: alias path='echo -e ${PATH//:/\\\\n}' "
-"alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\\\n}'"
+"# Pretty-print of some PATH variables:\n"
+"alias path='echo -e ${PATH//:/\\\\n}'\n"
+"alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\\\n}'\n"
 msgstr ""
 
 #. type: Plain text
@@ -542,9 +588,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:382
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Tailoring "
-"'less' #-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Tailoring 'less'\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -562,34 +610,45 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:399
+#, no-wrap
 msgid ""
-"# LESS man page colors (makes Man pages more readable).  export "
-"LESS_TERMCAP_mb=$'\\E[01;31m' export LESS_TERMCAP_md=$'\\E[01;31m' export "
-"LESS_TERMCAP_me=$'\\E[0m' export LESS_TERMCAP_se=$'\\E[0m' export "
-"LESS_TERMCAP_so=$'\\E[01;44;33m' export LESS_TERMCAP_ue=$'\\E[0m' export "
-"LESS_TERMCAP_us=$'\\E[01;32m'"
+"# LESS man page colors (makes Man pages more readable).\n"
+"export LESS_TERMCAP_mb=$'\\E[01;31m'\n"
+"export LESS_TERMCAP_md=$'\\E[01;31m'\n"
+"export LESS_TERMCAP_me=$'\\E[0m'\n"
+"export LESS_TERMCAP_se=$'\\E[0m'\n"
+"export LESS_TERMCAP_so=$'\\E[01;44;33m'\n"
+"export LESS_TERMCAP_ue=$'\\E[0m'\n"
+"export LESS_TERMCAP_us=$'\\E[01;32m'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:404
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Spelling "
-"typos - highly personnal and keyboard-dependent :-)  "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Spelling typos - highly personnal and keyboard-dependent :-)\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:410
+#, no-wrap
 msgid ""
-"alias xs='cd' alias vf='cd' alias moer='more' alias moew='more' alias "
-"kk='ll'"
+"alias xs='cd'\n"
+"alias vf='cd'\n"
+"alias moer='more'\n"
+"alias moew='more'\n"
+"alias kk='ll'\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:415
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # A few fun "
-"ones #-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# A few fun ones\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -608,9 +667,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:431
+#, no-wrap
 msgid ""
-"# Aliases that use xtitle alias top='xtitle Processes on $HOST &amp;&amp; "
-"top' alias make='xtitle Making $(basename $PWD) ; make'"
+"# Aliases that use xtitle\n"
+"alias top='xtitle Processes on $HOST &amp;&amp; top'\n"
+"alias make='xtitle Making $(basename $PWD) ; make'\n"
 msgstr ""
 
 #. type: Plain text
@@ -629,10 +690,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:445
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Make the "
-"following commands run in background automatically: "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Make the following commands run in background automatically:\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -651,31 +713,37 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:458
+#, no-wrap
 msgid ""
-"function soffice() { command soffice \"$@\" &amp; } function firefox() { "
-"command firefox \"$@\" &amp; } function xpdf() { command xpdf \"$@\" &amp; }"
+"function soffice() { command soffice \"$@\" &amp; }\n"
+"function firefox() { command firefox \"$@\" &amp; }\n"
+"function xpdf() { command xpdf \"$@\" &amp; }\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:463
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # File &amp; "
-"strings related functions: "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# File &amp; strings related functions:\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:467
+#, no-wrap
 msgid ""
-"# Find a file with a pattern in name: function ff() { find . -type f -iname "
-"'*'\"$*\"'*' -ls ; }"
+"# Find a file with a pattern in name:\n"
+"function ff() { find . -type f -iname '*'\"$*\"'*' -ls ; }\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:471
+#, no-wrap
 msgid ""
-"# Find a file with pattern $1 in name and Execute $2 on it: function fe() { "
-"find . -type f -iname '*'\"${1:-}\"'*' \\ -exec ${2:-file} {} \\; ; }"
+"# Find a file with pattern $1 in name and Execute $2 on it:\n"
+"function fe() { find . -type f -iname '*'\"${1:-}\"'*' \\\n"
+"-exec ${2:-file} {} \\;  ; }\n"
 msgstr ""
 
 #. type: Plain text
@@ -708,7 +776,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:496 abs-guide/bashrc:828 abs-guide/bashrc:893
-msgid "}"
+#, no-wrap
+msgid "}\n"
 msgstr ""
 
 #. type: Plain text
@@ -724,12 +793,9 @@ msgstr ""
 #: abs-guide/bashrc:505
 #, no-wrap
 msgid ""
-"    [ $# -ne 2 ] &amp;&amp; echo \"swap: 2 arguments needed\" &amp;&amp; "
-"return 1\n"
-"    [ ! -e $1 ] &amp;&amp; echo \"swap: $1 does not exist\" &amp;&amp; "
-"return 1\n"
-"    [ ! -e $2 ] &amp;&amp; echo \"swap: $2 does not exist\" &amp;&amp; "
-"return 1\n"
+"    [ $# -ne 2 ] &amp;&amp; echo \"swap: 2 arguments needed\" &amp;&amp; return 1\n"
+"    [ ! -e $1 ] &amp;&amp; echo \"swap: $1 does not exist\" &amp;&amp; return 1\n"
+"    [ ! -e $2 ] &amp;&amp; echo \"swap: $2 does not exist\" &amp;&amp; return 1\n"
 msgstr ""
 
 #. type: Plain text
@@ -761,8 +827,7 @@ msgid ""
 "            *.zip)       unzip $1        ;;\n"
 "            *.Z)         uncompress $1   ;;\n"
 "            *.7z)        7z x $1         ;;\n"
-"            *)           echo \"'$1' cannot be extracted via >extract&lt;\" "
-";;\n"
+"            *)           echo \"'$1' cannot be extracted via >extract&lt;\" ;;\n"
 "        esac\n"
 "    else\n"
 "        echo \"'$1' is not a valid file!\"\n"
@@ -772,39 +837,43 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:536
+#, no-wrap
 msgid ""
-"# Creates an archive (*.tar.gz) from given directory.  function maketar() { "
-"tar cvzf \"${1%%/}.tar.gz\" \"${1%%/}/\"; }"
+"# Creates an archive (*.tar.gz) from given directory.\n"
+"function maketar() { tar cvzf \"${1%%/}.tar.gz\"  \"${1%%/}/\"; }\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:539
+#, no-wrap
 msgid ""
-"# Create a ZIP archive of a file or folder.  function makezip() { zip -r "
-"\"${1%%/}.zip\" \"$1\" ; }"
+"# Create a ZIP archive of a file or folder.\n"
+"function makezip() { zip -r \"${1%%/}.zip\" \"$1\" ; }\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:542
+#, no-wrap
 msgid ""
-"# Make your directories and files access rights sane.  function sanitize() { "
-"chmod -R u=rwX,g=rX,o= \"$@\" ;}"
+"# Make your directories and files access rights sane.\n"
+"function sanitize() { chmod -R u=rwX,g=rX,o= \"$@\" ;}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:546
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # "
-"Process/system related functions: "
-"#-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Process/system related functions:\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:550
+#, no-wrap
 msgid ""
-"function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; } "
-"function pp() { my_ps f | awk '!/awk/ &amp;&amp; $0~var' var=${1:-\".*\"} ; "
-"}"
+"function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; }\n"
+"function pp() { my_ps f | awk '!/awk/ &amp;&amp; $0~var' var=${1:-\".*\"} ; }\n"
 msgstr ""
 
 #. type: Plain text
@@ -819,8 +888,7 @@ msgid ""
 "        return;\n"
 "    fi\n"
 "    if [ $# = 2 ]; then sig=$1 ; fi\n"
-"    for pid in $(my_ps| awk '!/awk/ &amp;&amp; $0~pat { print $1 }' "
-"pat=${!#} )\n"
+"    for pid in $(my_ps| awk '!/awk/ &amp;&amp; $0~pat { print $1 }' pat=${!#} )\n"
 "    do\n"
 "        pname=$(my_ps | awk '$1~var { print $5 }' var=$pid )\n"
 "        if ask \"Kill process $pid &lt;$pname> with signal $sig?\"\n"
@@ -904,9 +972,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:620
+#, no-wrap
 msgid ""
-"#------------------------------------------------------------- # Misc "
-"utilities: #-------------------------------------------------------------"
+"#-------------------------------------------------------------\n"
+"# Misc utilities:\n"
+"#-------------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -951,15 +1021,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:660
+#, no-wrap
 msgid ""
-"#========================================================================= # "
-"# PROGRAMMABLE COMPLETION SECTION # Most are taken from the bash 2.05 "
-"documentation and from Ian McDonald's # 'Bash completion' package "
-"(http://www.caliban.org/bash/#completion)  # You will in fact need bash more "
-"recent then 3.0 for some features.  # # Note that most linux distributions "
-"now provide many completions # 'out of the box' - however, you might need to "
-"make your own one day, # so I kept those here as examples.  "
-"#========================================================================="
+"#=========================================================================\n"
+"#\n"
+"#  PROGRAMMABLE COMPLETION SECTION\n"
+"#  Most are taken from the bash 2.05 documentation and from Ian McDonald's\n"
+"# 'Bash completion' package (http://www.caliban.org/bash/#completion)\n"
+"#  You will in fact need bash more recent then 3.0 for some features.\n"
+"#\n"
+"#  Note that most linux distributions now provide many completions\n"
+"# 'out of the box' - however, you might need to make your own one day,\n"
+"#  so I kept those here as examples.\n"
+"#=========================================================================\n"
 msgstr ""
 
 #. type: Plain text
@@ -1028,56 +1102,68 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:710
+#, no-wrap
 msgid ""
-"# Documents - Postscript,pdf,dvi.....  complete -f -o default -X "
-"'!*.+(ps|PS)' gs ghostview ps2pdf ps2ascii complete -f -o default -X \\ "
-"'!*.+(dvi|DVI)' dvips dvipdf xdvi dviselect dvitype complete -f -o default "
-"-X '!*.+(pdf|PDF)' acroread pdf2ps complete -f -o default -X "
-"'!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?\\ (.gz|.GZ|.bz2|.BZ2|.Z))' gv ggv complete "
-"-f -o default -X '!*.texi*' makeinfo texi2dvi texi2html texi2pdf complete -f "
-"-o default -X '!*.tex' tex latex slitex complete -f -o default -X '!*.lyx' "
-"lyx complete -f -o default -X '!*.+(htm*|HTM*)' lynx html2ps complete -f -o "
-"default -X \\ "
-"'!*.+(doc|DOC|xls|XLS|ppt|PPT|sx?|SX?|csv|CSV|od?|OD?|ott|OTT)' soffice"
+"# Documents - Postscript,pdf,dvi.....\n"
+"complete -f -o default -X '!*.+(ps|PS)'  gs ghostview ps2pdf ps2ascii\n"
+"complete -f -o default -X \\\n"
+"'!*.+(dvi|DVI)' dvips dvipdf xdvi dviselect dvitype\n"
+"complete -f -o default -X '!*.+(pdf|PDF)' acroread pdf2ps\n"
+"complete -f -o default -X '!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?\\\n"
+"(.gz|.GZ|.bz2|.BZ2|.Z))' gv ggv\n"
+"complete -f -o default -X '!*.texi*' makeinfo texi2dvi texi2html texi2pdf\n"
+"complete -f -o default -X '!*.tex' tex latex slitex\n"
+"complete -f -o default -X '!*.lyx' lyx\n"
+"complete -f -o default -X '!*.+(htm*|HTM*)' lynx html2ps\n"
+"complete -f -o default -X \\\n"
+"'!*.+(doc|DOC|xls|XLS|ppt|PPT|sx?|SX?|csv|CSV|od?|OD?|ott|OTT)' soffice\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:722
+#, no-wrap
 msgid ""
-"# Multimedia complete -f -o default -X \\ "
-"'!*.+(gif|GIF|jp*g|JP*G|bmp|BMP|xpm|XPM|png|PNG)' xv gimp ee gqview complete "
-"-f -o default -X '!*.+(mp3|MP3)' mpg123 mpg321 complete -f -o default -X "
-"'!*.+(ogg|OGG)' ogg123 complete -f -o default -X \\ "
-"'!*.@(mp[23]|MP[23]|ogg|OGG|wav|WAV|pls|\\ "
-"m3u|xm|mod|s[3t]m|it|mtm|ult|flac)' xmms complete -f -o default -X "
-"'!*.@(mp?(e)g|MP?(E)G|wma|avi|AVI|\\ "
-"asf|vob|VOB|bin|dat|vcd|ps|pes|fli|viv|rm|ram|yuv|mov|MOV|qt|\\ "
-"QT|wmv|mp3|MP3|ogg|OGG|ogm|OGM|mp4|MP4|wav|WAV|asx|ASX)' xine"
+"# Multimedia\n"
+"complete -f -o default -X \\\n"
+"'!*.+(gif|GIF|jp*g|JP*G|bmp|BMP|xpm|XPM|png|PNG)' xv gimp ee gqview\n"
+"complete -f -o default -X '!*.+(mp3|MP3)' mpg123 mpg321\n"
+"complete -f -o default -X '!*.+(ogg|OGG)' ogg123\n"
+"complete -f -o default -X \\\n"
+"'!*.@(mp[23]|MP[23]|ogg|OGG|wav|WAV|pls|\\\n"
+"m3u|xm|mod|s[3t]m|it|mtm|ult|flac)' xmms\n"
+"complete -f -o default -X '!*.@(mp?(e)g|MP?(E)G|wma|avi|AVI|\\\n"
+"asf|vob|VOB|bin|dat|vcd|ps|pes|fli|viv|rm|ram|yuv|mov|MOV|qt|\\\n"
+"QT|wmv|mp3|MP3|ogg|OGG|ogm|OGM|mp4|MP4|wav|WAV|asx|ASX)' xine\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:726
-msgid "complete -f -o default -X '!*.pl' perl perl5"
+#, no-wrap
+msgid "complete -f -o default -X '!*.pl'  perl perl5\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:732
+#, no-wrap
 msgid ""
-"# This is a 'universal' completion function - it works when commands have #+ "
-"a so-called 'long options' mode , ie: 'ls --all' instead of 'ls -a' # Needs "
-"the '-o' option of grep #+ (try the commented-out version if not available)."
+"#  This is a 'universal' completion function - it works when commands have\n"
+"#+ a so-called 'long options' mode , ie: 'ls --all' instead of 'ls -a'\n"
+"#  Needs the '-o' option of grep\n"
+"#+ (try the commented-out version if not available).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:735
+#, no-wrap
 msgid ""
-"# First, remove '=' from completion word separators #+ (this will allow "
-"completions like 'ls --color=auto' to work correctly)."
+"#  First, remove '=' from completion word separators\n"
+"#+ (this will allow completions like 'ls --color=auto' to work correctly).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:737
-msgid "COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}"
+#, no-wrap
+msgid "COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}\n"
 msgstr ""
 
 #. type: Plain text
@@ -1086,8 +1172,7 @@ msgstr ""
 msgid ""
 "_get_longopts()\n"
 "{\n"
-"  #$1 --help | sed  -e '/--/!d' -e 's/.*--\\([^[:space:].,]*\\).*/--\\1/'| "
-"\\\n"
+"  #$1 --help | sed  -e '/--/!d' -e 's/.*--\\([^[:space:].,]*\\).*/--\\1/'| \\\n"
 "  #grep ^\"$2\" |sort -u ;\n"
 "    $1 --help | grep -o -e \"--[^[:space:].,]*\" | grep -e \"$2\" |sort -u\n"
 "}\n"
@@ -1243,7 +1328,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:830
-msgid "complete -F _tar -o default tar"
+#, no-wrap
+msgid "complete -F _tar -o default tar\n"
 msgstr ""
 
 #. type: Plain text
@@ -1337,7 +1423,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:895
-msgid "complete -F _make -X '+($*|*.[cho])' make gmake pmake"
+#, no-wrap
+msgid "complete -F _make -X '+($*|*.[cho])' make gmake pmake\n"
 msgstr ""
 
 #. type: Plain text
@@ -1374,10 +1461,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:917
-msgid "complete -F _killall killall killps"
+#, no-wrap
+msgid "complete -F _killall killall killps\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashrc:923
-msgid "# Local Variables: # mode:shell-script # sh-shell:bash # End:"
+#, no-wrap
+msgid ""
+"# Local Variables:\n"
+"# mode:shell-script\n"
+"# sh-shell:bash\n"
+"# End:\n"
 msgstr ""

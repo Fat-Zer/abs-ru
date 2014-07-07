@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # usrmnt.sh, written by Anthony Richardson # Used in ABS Guide "
-"with permission."
+"#!/bin/bash\n"
+"# usrmnt.sh, written by Anthony Richardson\n"
+"# Used in ABS Guide with permission.\n"
 msgstr ""
 
 #. type: Plain text
@@ -34,10 +36,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:12
+#, no-wrap
 msgid ""
-"# ---------------------------------------------------------- # This is a "
-"usermount script that reruns itself using sudo.  # A user with the proper "
-"permissions only has to type"
+"# ----------------------------------------------------------\n"
+"#  This is a usermount script that reruns itself using sudo.\n"
+"#  A user with the proper permissions only has to type\n"
 msgstr ""
 
 #. type: Plain text
@@ -48,7 +51,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:16
-msgid "# instead of"
+#, no-wrap
+msgid "# instead of\n"
 msgstr ""
 
 #. type: Plain text
@@ -59,16 +63,19 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:22
+#, no-wrap
 msgid ""
-"# I use this same technique for all of my #+ sudo scripts, because I find it "
-"convenient.  # ----------------------------------------------------------"
+"#  I use this same technique for all of my\n"
+"#+ sudo scripts, because I find it convenient.\n"
+"# ----------------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:25
+#, no-wrap
 msgid ""
-"# If SUDO_COMMAND variable is not set we are not being run through #+ sudo, "
-"so rerun ourselves. Pass the user's real and group id . . ."
+"#  If SUDO_COMMAND variable is not set we are not being run through\n"
+"#+ sudo, so rerun ourselves. Pass the user's real and group id . . .\n"
 msgstr ""
 
 #. type: Plain text
@@ -84,21 +91,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:34
+#, no-wrap
 msgid ""
-"# We will only get here if we are being run by sudo.  /bin/mount $* -o "
-"uid=$mntusr,gid=$grpusr"
+"# We will only get here if we are being run by sudo.\n"
+"/bin/mount $* -o uid=$mntusr,gid=$grpusr\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:36
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/usrmnt.sh:39
+#, no-wrap
 msgid ""
-"# Additional notes (from the author of this script): # "
-"-------------------------------------------------"
+"# Additional notes (from the author of this script): \n"
+"# -------------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text

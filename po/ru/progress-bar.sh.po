@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar.sh:3
-msgid "#!/bin/bash # progress-bar.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# progress-bar.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar.sh:6
+#, no-wrap
 msgid ""
-"# Author: Dotan Barak (very minor revisions by ABS Guide author).  # Used in "
-"ABS Guide with permission (thanks!)."
+"# Author: Dotan Barak (very minor revisions by ABS Guide author).\n"
+"# Used in ABS Guide with permission (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar.sh:15
+#, no-wrap
 msgid ""
-"BAR_WIDTH=50 BAR_CHAR_START=\"[\" BAR_CHAR_END=\"]\" BAR_CHAR_EMPTY=\".\" "
-"BAR_CHAR_FULL=\"=\" BRACKET_CHARS=2 LIMIT=100"
+"BAR_WIDTH=50\n"
+"BAR_CHAR_START=\"[\"\n"
+"BAR_CHAR_END=\"]\"\n"
+"BAR_CHAR_EMPTY=\".\"\n"
+"BAR_CHAR_FULL=\"=\"\n"
+"BRACKET_CHARS=2\n"
+"LIMIT=100\n"
 msgstr ""
 
 #. type: Plain text
@@ -105,10 +115,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar.sh:51
-msgid "echo \"\""
+#, no-wrap
+msgid "echo \"\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/progress-bar.sh:52
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

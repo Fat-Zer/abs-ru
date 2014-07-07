@@ -1,9 +1,11 @@
-#! /bin/bash # directory-info.sh # Parses and lists directory information.
+#! /bin/bash
+# directory-info.sh
+# Parses and lists directory information.
 
 # NOTE: Change lines 273 and 353 per "README" file.
 
-# Michael Zick is the author of this script.  # Used here with his
-permission.
+# Michael Zick is the author of this script.
+# Used here with his permission.
 
 # Controls
 # If overridden by command arguments, they must be in the order:
@@ -30,10 +32,15 @@ declare -a \
   EXCLUDE_FILES=${3:-${EXCLUDE_FILES:-'(core "Name with Spaces")'}}
 
 
-# Here document used as a comment block.  : &lt;&lt;LSfieldsDoc # # # # #
-List Filesystem Directory Information # # # # # # #	ListDirectory "FileGlob"
-"Field-Array-Name" # or #	ListDirectory -of "FileGlob"
-"Field-Array-Filename" #	'-of' meaning 'output to filename' # # # # #
+# Here document used as a comment block.
+: &lt;&lt;LSfieldsDoc
+# # # # # List Filesystem Directory Information # # # # #
+#
+#	ListDirectory "FileGlob" "Field-Array-Name"
+# or
+#	ListDirectory -of "FileGlob" "Field-Array-Filename"
+#	'-of' meaning 'output to filename'
+# # # # #
 
 String format description based on: ls (GNU fileutils) version 4.0.36
 
@@ -48,37 +55,57 @@ Unless it is formatted:
 inode permissions hard-links owner group ...
 266705 crw-rw----    1    root  uucp
 
-major minor day month date hh:mm:ss year path 4, 68 Sun Apr 20 09:27:33 2003
-/dev/ttyS4 NOTE: that pesky comma after the major number
+major minor day month date hh:mm:ss year path
+4,  68 Sun Apr 20 09:27:33 2003 /dev/ttyS4
+NOTE: that pesky comma after the major number
 
-NOTE: the 'path' may be multiple fields: /home/mszick/core /proc/982/fd/0 ->
-/dev/null /proc/982/fd/1 -> /home/mszick/.xsession-errors /proc/982/fd/13 ->
-/tmp/tmpfZVVOCs (deleted)  /proc/982/fd/7 -> /tmp/kde-mszick/ksycoca
-/proc/982/fd/8 -> socket:[11586] /proc/982/fd/9 -> pipe:[11588]
+NOTE: the 'path' may be multiple fields:
+/home/mszick/core
+/proc/982/fd/0 -> /dev/null
+/proc/982/fd/1 -> /home/mszick/.xsession-errors
+/proc/982/fd/13 -> /tmp/tmpfZVVOCs (deleted)
+/proc/982/fd/7 -> /tmp/kde-mszick/ksycoca
+/proc/982/fd/8 -> socket:[11586]
+/proc/982/fd/9 -> pipe:[11588]
 
-If that isn't enough to keep your parser guessing, either or both of the
-path components may be relative: ../Built-Shared -> Built-Static
+If that isn't enough to keep your parser guessing,
+either or both of the path components may be relative:
+../Built-Shared -> Built-Static
 ../linux-2.4.20.tar.bz2 -> ../../../SRCS/linux-2.4.20.tar.bz2
 
-The first character of the 11 (10?) character permissions field: 's' Socket
-'d' Directory 'b' Block device 'c' Character device 'l' Symbolic link NOTE:
-Hard links not marked - test for identical inode numbers on identical
-filesystems.  All information about hard linked files are shared, except for
-the names and the name's location in the directory system.  NOTE: A "Hard
-link" is known as a "File Alias" on some systems.  '-' An undistingushed
-file
+The first character of the 11 (10?) character permissions field:
+'s' Socket
+'d' Directory
+'b' Block device
+'c' Character device
+'l' Symbolic link
+NOTE: Hard links not marked - test for identical inode numbers
+on identical filesystems.
+All information about hard linked files are shared, except
+for the names and the name's location in the directory system.
+NOTE: A "Hard link" is known as a "File Alias" on some systems.
+'-' An undistingushed file
 
-Followed by three groups of letters for: User, Group, Others Character 1:
-'-' Not readable; 'r' Readable Character 2: '-' Not writable; 'w' Writable
-Character 3, User and Group: Combined execute and special '-' Not
-Executable, Not Special 'x' Executable, Not Special 's' Executable, Special
-'S' Not Executable, Special Character 3, Others: Combined execute and sticky
-(tacky?)  '-' Not Executable, Not Tacky 'x' Executable, Not Tacky 't'
-Executable, Tacky 'T' Not Executable, Tacky
+Followed by three groups of letters for: User, Group, Others
+Character 1: '-' Not readable; 'r' Readable
+Character 2: '-' Not writable; 'w' Writable
+Character 3, User and Group: Combined execute and special
+'-' Not Executable, Not Special
+'x' Executable, Not Special
+'s' Executable, Special
+'S' Not Executable, Special
+Character 3, Others: Combined execute and sticky (tacky?)
+'-' Not Executable, Not Tacky
+'x' Executable, Not Tacky
+'t' Executable, Tacky
+'T' Not Executable, Tacky
 
-Followed by an access indicator Haven't tested this one, it may be the
-eleventh character or it may generate another field ' ' No alternate access
-'+' Alternate access LSfieldsDoc
+Followed by an access indicator
+Haven't tested this one, it may be the eleventh character
+or it may generate another field
+' ' No alternate access
+'+' Alternate access
+LSfieldsDoc
 
 
 ListDirectory()
@@ -110,8 +137,10 @@ ListDirectory()
 	return 0
    }
 
-# # # # # Is that string a legal number? # # # # # # #	IsNumber "Var" # # #
-# # There has to be a better way, sigh...
+# # # # # Is that string a legal number? # # # # #
+#
+#	IsNumber "Var"
+# # # # # There has to be a better way, sigh...
 
 IsNumber()
 {
@@ -125,31 +154,36 @@ IsNumber()
 	fi
 }
 
-# # # # # Index Filesystem Directory Information # # # # # # #	IndexList
-"Field-Array-Name" "Index-Array-Name" # or #	IndexList -if
-Field-Array-Filename Index-Array-Name #	IndexList -of Field-Array-Name
-Index-Array-Filename #	IndexList -if -of Field-Array-Filename
-Index-Array-Filename # # # # #
+# # # # # Index Filesystem Directory Information # # # # #
+#
+#	IndexList "Field-Array-Name" "Index-Array-Name"
+# or
+#	IndexList -if Field-Array-Filename Index-Array-Name
+#	IndexList -of Field-Array-Name Index-Array-Filename
+#	IndexList -if -of Field-Array-Filename Index-Array-Filename
+# # # # #
 
-: &lt;&lt;IndexListDoc Walk an array of directory fields produced by
-ListDirectory
+: &lt;&lt;IndexListDoc
+Walk an array of directory fields produced by ListDirectory
 
-Having suppressed the line breaks in an otherwise line oriented report,
-build an index to the array element which starts each line.
+Having suppressed the line breaks in an otherwise line oriented
+report, build an index to the array element which starts each line.
 
-Each line gets two index entries, the first element of each line (inode) and
-the element that holds the pathname of the file.
+Each line gets two index entries, the first element of each line
+(inode) and the element that holds the pathname of the file.
 
 The first index entry pair (Line-Number==0) are informational:
-Index-Array-Name[0] : Number of "Lines" indexed Index-Array-Name[1] :
-"Current Line" pointer into Index-Array-Name
+Index-Array-Name[0] : Number of "Lines" indexed
+Index-Array-Name[1] : "Current Line" pointer into Index-Array-Name
 
-The following index pairs (if any) hold element indexes into the
-Field-Array-Name per: Index-Array-Name[Line-Number * 2] : The "inode" field
-element.  NOTE: This distance may be either +11 or +12 elements.
-Index-Array-Name[(Line-Number * 2) + 1] : The "pathname" element.  NOTE:
-This distance may be a variable number of elements.  Next line index pair
-for Line-Number+1.  IndexListDoc
+The following index pairs (if any) hold element indexes into
+the Field-Array-Name per:
+Index-Array-Name[Line-Number * 2] : The "inode" field element.
+NOTE: This distance may be either +11 or +12 elements.
+Index-Array-Name[(Line-Number * 2) + 1] : The "pathname" element.
+NOTE: This distance may be a variable number of elements.
+Next line index pair for Line-Number+1.
+IndexListDoc
 
 
 
@@ -228,22 +262,27 @@ IndexList()
 	return 0				# What could go wrong?
 }
 
-# # # # # Content Identify File # # # # # # #	DigestFile Input-Array-Name
-Digest-Array-Name # or #	DigestFile -if Input-FileName Digest-Array-Name # #
-# # #
+# # # # # Content Identify File # # # # #
+#
+#	DigestFile Input-Array-Name Digest-Array-Name
+# or
+#	DigestFile -if Input-FileName Digest-Array-Name
+# # # # #
 
-# Here document used as a comment block.  : &lt;&lt;DigestFilesDoc
+# Here document used as a comment block.
+: &lt;&lt;DigestFilesDoc
 
-The key (no pun intended) to a Unified Content File System (UCFS)  is to
-distinguish the files in the system based on their content.  Distinguishing
-files by their name is just so 20th Century.
+The key (no pun intended) to a Unified Content File System (UCFS)
+is to distinguish the files in the system based on their content.
+Distinguishing files by their name is just so 20th Century.
 
-The content is distinguished by computing a checksum of that content.  This
-version uses the md5sum program to generate a 128 bit checksum
-representative of the file's contents.  There is a chance that two files
-having different content might generate the same checksum using md5sum (or
-any checksum).  Should that become a problem, then the use of md5sum can be
-replace by a cyrptographic signature.  But until then...
+The content is distinguished by computing a checksum of that content.
+This version uses the md5sum program to generate a 128 bit checksum
+representative of the file's contents.
+There is a chance that two files having different content might
+generate the same checksum using md5sum (or any checksum).  Should
+that become a problem, then the use of md5sum can be replace by a
+cyrptographic signature.  But until then...
 
 The md5sum program is documented as outputting three fields (and it
 does), but when read it appears as two fields (array elements).  This
@@ -301,9 +340,12 @@ DigestFile()
 	eval $2=\( \"\$\{T2\[@\]\}\" \)
 }
 
-# # # # # Locate File # # # # # # #	LocateFile [-l] FileName
-Location-Array-Name # or #	LocateFile [-l] -of FileName
-Location-Array-FileName # # # # #
+# # # # # Locate File # # # # #
+#
+#	LocateFile [-l] FileName Location-Array-Name
+# or
+#	LocateFile [-l] -of FileName Location-Array-FileName
+# # # # #
 
 # A file location is Filesystem-id and inode-number
 
@@ -396,8 +438,8 @@ Location-Array-FileName # # # # #
 StatFieldsDoc
 
 
-#	LocateFile [-l] FileName Location-Array-Name #	LocateFile [-l] -of
-FileName Location-Array-FileName
+#	LocateFile [-l] FileName Location-Array-Name
+#	LocateFile [-l] -of FileName Location-Array-FileName
 
 LocateFile()
 {
@@ -473,25 +515,34 @@ ListArray() # ListArray Name
 	return 0
 }
 
-declare -a CUR_DIR # For small arrays ListDirectory "${PWD}" CUR_DIR
+declare -a CUR_DIR
+# For small arrays
+ListDirectory "${PWD}" CUR_DIR
 ListArray CUR_DIR
 
-declare -a DIR_DIG DigestFile CUR_DIR DIR_DIG echo "The new \"name\"
-(checksum) for ${CUR_DIR[9]} is ${DIR_DIG[0]}"
+declare -a DIR_DIG
+DigestFile CUR_DIR DIR_DIG
+echo "The new \"name\" (checksum) for ${CUR_DIR[9]} is ${DIR_DIG[0]}"
 
-declare -a DIR_ENT # BIG_DIR # For really big arrays - use a temporary file
-in ramdisk # BIG-DIR # ListDirectory -of "${CUR_DIR[11]}/*" "/tmpfs/junk2"
+declare -a DIR_ENT
+# BIG_DIR # For really big arrays - use a temporary file in ramdisk
+# BIG-DIR # ListDirectory -of "${CUR_DIR[11]}/*" "/tmpfs/junk2"
 ListDirectory "${CUR_DIR[11]}/*" DIR_ENT
 
-declare -a DIR_IDX # BIG-DIR # IndexList -if "/tmpfs/junk2" DIR_IDX
+declare -a DIR_IDX
+# BIG-DIR # IndexList -if "/tmpfs/junk2" DIR_IDX
 IndexList DIR_ENT DIR_IDX
 
-declare -a IDX_DIG # BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )  # BIG-DIR #
-DigestFile -if /tmpfs/junk2 IDX_DIG DigestFile DIR_ENT IDX_DIG # Small
-(should) be able to parallize IndexList &amp; DigestFile # Large (should) be
-able to parallize IndexList &amp; DigestFile &amp; the assignment echo "The
-\"name\" (checksum) for the contents of ${PWD} is ${IDX_DIG[0]}"
+declare -a IDX_DIG
+# BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )
+# BIG-DIR # DigestFile -if /tmpfs/junk2 IDX_DIG
+DigestFile DIR_ENT IDX_DIG
+# Small (should) be able to parallize IndexList &amp; DigestFile
+# Large (should) be able to parallize IndexList &amp; DigestFile &amp; the assignment
+echo "The \"name\" (checksum) for the contents of ${PWD} is ${IDX_DIG[0]}"
 
-declare -a FILE_LOC LocateFile ${PWD} FILE_LOC ListArray FILE_LOC
+declare -a FILE_LOC
+LocateFile ${PWD} FILE_LOC
+ListArray FILE_LOC
 
 exit 0

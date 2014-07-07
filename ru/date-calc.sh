@@ -1,5 +1,7 @@
-#!/bin/bash # date-calc.sh # Author: Nathan Coulter # Used in ABS Guide with
-permission (thanks!).
+#!/bin/bash
+# date-calc.sh
+# Author: Nathan Coulter
+# Used in ABS Guide with permission (thanks!).
 
 MPHR=60    # Minutes per hour.
 HPD=24     # Hours per day.
@@ -11,9 +13,9 @@ diff () {
 }
 
 
-CURRENT=$(date -u -d '2007-09-01 17:30:24' '+%F %T.%N %Z')  TARGET=$(date -u
--d'2007-12-25 12:30:00' '+%F %T.%N %Z')  # %F = full date, %T = %H:%M:%S, %N
-= nanoseconds, %Z = time zone.
+CURRENT=$(date -u -d '2007-09-01 17:30:24' '+%F %T.%N %Z')
+TARGET=$(date -u -d'2007-12-25 12:30:00' '+%F %T.%N %Z')
+# %F = full date, %T = %H:%M:%S, %N = nanoseconds, %Z = time zone.
 
 printf '\nIn 2007, %s ' \
        "$(date -d"$CURRENT +
@@ -34,5 +36,7 @@ printf '%s days, %s hours, ' "$DAYS" "$HOURS"
 printf '%s minutes, and %s seconds ' "$MINUTES" "$(diff)"
 printf 'until Christmas Dinner!\n\n'
 
-# Exercise: # -------- # Rewrite the diff () function to accept passed
-parameters, #+ rather than using global variables.
+#  Exercise:
+#  --------
+#  Rewrite the diff () function to accept passed parameters,
+#+ rather than using global variables.

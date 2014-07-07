@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:5
+#, no-wrap
 msgid ""
-"#!/bin/bash # ascii.sh # ver. 0.2, reldate 26 Aug 2008 # Patched by ABS "
-"Guide author."
+"#!/bin/bash\n"
+"# ascii.sh\n"
+"# ver. 0.2, reldate 26 Aug 2008\n"
+"# Patched by ABS Guide author.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:8
-msgid "# Original script by Sebastian Arming.  # Used with permission (thanks!)."
+#, no-wrap
+msgid ""
+"# Original script by Sebastian Arming.\n"
+"# Used with permission (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,12 +45,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:19
-msgid "MAXNUM=256 COLUMNS=5 OCT=8 OCTSQU=64 LITTLESPACE=-3 BIGSPACE=-5"
+#, no-wrap
+msgid ""
+"MAXNUM=256\n"
+"COLUMNS=5\n"
+"OCT=8\n"
+"OCTSQU=64\n"
+"LITTLESPACE=-3\n"
+"BIGSPACE=-5\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:22
-msgid "i=1 # Decimal counter o=1 # Octal counter"
+#, no-wrap
+msgid ""
+"i=1 # Decimal counter\n"
+"o=1 # Octal counter\n"
 msgstr ""
 
 #. type: Plain text
@@ -72,17 +88,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:41
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:44
+#, no-wrap
 msgid ""
-"# Compare this script with the \"pr-asc.sh\" example.  # This one handles "
-"\"unprintable\" characters."
+"# Compare this script with the \"pr-asc.sh\" example.\n"
+"# This one handles \"unprintable\" characters.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ascii.sh:46
-msgid "# Exercise: # Rewrite this script to use decimal numbers, rather than octal."
+#, no-wrap
+msgid ""
+"# Exercise:\n"
+"# Rewrite this script to use decimal numbers, rather than octal.\n"
 msgstr ""

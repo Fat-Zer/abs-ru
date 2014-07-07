@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:3
-msgid "#!/bin/bash # copy-cd.sh: copying a data CD"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# copy-cd.sh: copying a data CD\n"
 msgstr ""
 
 #. type: Plain text
@@ -46,9 +49,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:18
+#, no-wrap
 msgid ""
-"echo; echo \"Copying the source CD to $OF.\" echo \"This may take a "
-"while. Please be patient.\""
+"echo; echo \"Copying the source CD to $OF.\"\n"
+"echo \"This may take a while. Please be patient.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -70,7 +74,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:28
-msgid "echo \"Copying $OF to CDR.\""
+#, no-wrap
+msgid "echo \"Copying $OF to CDR.\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -86,14 +91,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:37
-msgid "echo; echo \"Done copying $OF to CDR on device $CDROM.\""
+#, no-wrap
+msgid "echo; echo \"Done copying $OF to CDR on device $CDROM.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:40
+#, no-wrap
 msgid ""
-"echo \"Do you want to erase the image file (y/n)? \" # Probably a huge "
-"file.  read answer"
+"echo \"Do you want to erase the image file (y/n)? \"  # Probably a huge "
+"file.\n"
+"read answer\n"
 msgstr ""
 
 #. type: Plain text
@@ -110,17 +118,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:49
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:52
+#, no-wrap
 msgid ""
-"# Exercise: # Change the above \"case\" statement to also accept \"yes\" and "
-"\"Yes\" as input."
+"# Exercise:\n"
+"# Change the above \"case\" statement to also accept \"yes\" and \"Yes\" as "
+"input.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/copy-cd.sh:53
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

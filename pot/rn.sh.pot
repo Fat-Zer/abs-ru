@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rn.sh:3
-msgid "#! /bin/bash # rn.sh"
+#, no-wrap
+msgid ""
+"#! /bin/bash\n"
+"# rn.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rn.sh:8
+#, no-wrap
 msgid ""
 "# Very simpleminded filename \"rename\" utility (based on "
-"\"lowercase.sh\").  # # The \"ren\" utility, by Vladimir Lanin "
-"(lanin@csd2.nyu.edu), #+ does a much better job of this."
+"\"lowercase.sh\").\n"
+"#\n"
+"#  The \"ren\" utility, by Vladimir Lanin (lanin@csd2.nyu.edu),\n"
+"#+ does a much better job of this.\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,12 +96,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/rn.sh:43
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/rn.sh:48
+#, no-wrap
 msgid ""
-"# Exercises: # --------- # What types of files will this not work on? # How "
-"can this be fixed?"
+"# Exercises:\n"
+"# ---------\n"
+"# What types of files will this not work on?\n"
+"# How can this be fixed?\n"
 msgstr ""

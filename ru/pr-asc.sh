@@ -1,4 +1,5 @@
-#!/bin/bash # pr-ascii.sh: Prints a table of ASCII characters.
+#!/bin/bash
+# pr-ascii.sh: Prints a table of ASCII characters.
 
 START=33   # Range of printable ASCII characters (decimal).
 END=127    # Will not work for unprintable characters (> 127).
@@ -31,5 +32,5 @@ exit 0
 #   125       7d         }
 
 
-# Redirect the output of this script to a file #+ or pipe it to "more": sh
-pr-asc.sh | more
+#  Redirect the output of this script to a file
+#+ or pipe it to "more":  sh pr-asc.sh | more

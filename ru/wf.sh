@@ -1,8 +1,12 @@
-#!/bin/bash # wf.sh: Crude word frequency analysis on a text file.  # This
-is a more efficient version of the "wf2.sh" script.
+#!/bin/bash
+# wf.sh: Crude word frequency analysis on a text file.
+# This is a more efficient version of the "wf2.sh" script.
 
 
-# Check for input file on command-line.  ARGS=1 E_BADARGS=85 E_NOFILE=86
+# Check for input file on command-line.
+ARGS=1
+E_BADARGS=85
+E_NOFILE=86
 
 if [ $# -ne "$ARGS" ]  # Correct number of arguments passed to script?
 then
@@ -25,9 +29,10 @@ sed -e 's/\.//g'  -e 's/\,//g' -e 's/ /\
 #                           =========================
 #                            Frequency of occurrence
 
-# Filter out periods and commas, and #+ change space between words to
-linefeed, #+ then shift characters to lowercase, and #+ finally prefix
-occurrence count and sort numerically.
+#  Filter out periods and commas, and
+#+ change space between words to linefeed,
+#+ then shift characters to lowercase, and
+#+ finally prefix occurrence count and sort numerically.
 
 #  Arun Giridhar suggests modifying the above to:
 #  . . . | sort | uniq -c | sort +1 [-f] | sort +0 -nr

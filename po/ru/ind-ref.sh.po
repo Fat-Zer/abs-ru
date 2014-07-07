@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # ind-ref.sh: Indirect variable referencing.  # Accessing the "
-"contents of the contents of a variable."
+"#!/bin/bash\n"
+"# ind-ref.sh: Indirect variable referencing.\n"
+"# Accessing the contents of the contents of a variable.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:6
-msgid "# First, let's fool around a little."
+#, no-wrap
+msgid "# First, let's fool around a little.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:8
-msgid "var=23"
+#, no-wrap
+msgid "var=23\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,12 +69,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:25
-msgid "# Now, let's start over and do it the right way."
+#, no-wrap
+msgid "# Now, let's start over and do it the right way.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:27
-msgid "# ============================================== #"
+#, no-wrap
+msgid "# ============================================== #\n"
 msgstr ""
 
 #. type: Plain text
@@ -84,7 +90,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:33 abs-guide/ind-ref.sh:48 abs-guide/ind-ref.sh:60 abs-guide/ind-ref.sh:71
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -113,7 +120,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:51
-msgid "# Now, let's try changing the second-order reference."
+#, no-wrap
+msgid "# Now, let's try changing the second-order reference.\n"
 msgstr ""
 
 #. type: Plain text
@@ -132,17 +140,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:68
+#, no-wrap
 msgid ""
-"t=table_cell_3 NEW_VAL=387 table_cell_3=$NEW_VAL echo \"Changing value of "
-"\\\"table_cell_3\\\" to $NEW_VAL.\" echo \"\\\"table_cell_3\\\" now "
-"$table_cell_3\" echo -n \"dereferenced \\\"t\\\" now \"; eval echo \\$$t # "
-"\"eval\" takes the two arguments \"echo\" and \"\\$$t\" (set equal to "
-"$table_cell_3)"
+"t=table_cell_3\n"
+"NEW_VAL=387\n"
+"table_cell_3=$NEW_VAL\n"
+"echo \"Changing value of \\\"table_cell_3\\\" to $NEW_VAL.\"\n"
+"echo \"\\\"table_cell_3\\\" now $table_cell_3\"\n"
+"echo -n \"dereferenced \\\"t\\\" now \"; eval echo \\$$t\n"
+"# \"eval\" takes the two arguments \"echo\" and \"\\$$t\" (set equal to "
+"$table_cell_3)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:73
-msgid "# (Thanks, Stephane Chazelas, for clearing up the above behavior.)"
+#, no-wrap
+msgid "# (Thanks, Stephane Chazelas, for clearing up the above behavior.)\n"
 msgstr ""
 
 #. type: Plain text
@@ -156,5 +169,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ind-ref.sh:79
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

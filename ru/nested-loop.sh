@@ -1,4 +1,5 @@
-#!/bin/bash # nested-loop.sh: Nested "for" loops.
+#!/bin/bash
+# nested-loop.sh: Nested "for" loops.
 
 outer=1             # Set outer loop counter.
 

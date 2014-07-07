@@ -1,4 +1,5 @@
-#!/bin/bash # Du.sh: DOS to UNIX text file converter.
+#!/bin/bash
+# Du.sh: DOS to UNIX text file converter.
 
 E_WRONGARGS=85
 
@@ -15,12 +16,14 @@ CR='\015'  # Carriage return.
            # Lines in a DOS text file end in CR-LF.
            # Lines in a UNIX text file end in LF only.
 
-tr -d $CR &lt; $1 &gt; $NEWFILENAME # Delete CR's and write to new file.
+tr -d $CR &lt; $1 &gt; $NEWFILENAME
+# Delete CR's and write to new file.
 
-echo "Original DOS text file is \"$1\"." echo "Converted UNIX text file is
-\"$NEWFILENAME\"."
+echo "Original DOS text file is \"$1\"."
+echo "Converted UNIX text file is \"$NEWFILENAME\"."
 
 exit 0
 
-# Exercise: # -------- # Change the above script to convert from UNIX to
-DOS.
+# Exercise:
+# --------
+# Change the above script to convert from UNIX to DOS.

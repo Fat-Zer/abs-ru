@@ -16,10 +16,13 @@ match_string ()
   *   ) return $E_NOMATCH;;
   esac
 
-}
+}  
 
 
-a=one b=two c=three d=two
+a=one
+b=two
+c=three
+d=two
 
 
 match_string $a     # wrong number of parameters

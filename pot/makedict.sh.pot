@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,29 +18,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/makedict.sh:3
-msgid "#!/bin/bash # makedict.sh [make dictionary]"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# makedict.sh  [make dictionary]\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/makedict.sh:10
+#, no-wrap
 msgid ""
-"# Modification of /usr/sbin/mkdict (/usr/sbin/cracklib-forman) script.  # "
-"Original script copyright 1993, by Alec Muffett.  # # This modified script "
-"included in this document in a manner #+ consistent with the \"LICENSE\" "
-"document of the \"Crack\" package #+ that the original script is a part of."
+"# Modification of /usr/sbin/mkdict (/usr/sbin/cracklib-forman) script.\n"
+"# Original script copyright 1993, by Alec Muffett.\n"
+"#\n"
+"#  This modified script included in this document in a manner\n"
+"#+ consistent with the \"LICENSE\" document of the \"Crack\" package\n"
+"#+ that the original script is a part of.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/makedict.sh:15
+#, no-wrap
 msgid ""
-"# This script processes text files to produce a sorted list #+ of words "
-"found in the files.  # This may be useful for compiling dictionaries #+ and "
-"for other lexicographic purposes."
+"#  This script processes text files to produce a sorted list\n"
+"#+ of words found in the files.\n"
+"#  This may be useful for compiling dictionaries\n"
+"#+ and for other lexicographic purposes.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/makedict.sh:18
-msgid "E_BADARGS=85"
+#, no-wrap
+msgid "E_BADARGS=85\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,5 +91,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/makedict.sh:42
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

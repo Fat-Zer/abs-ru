@@ -1,4 +1,5 @@
-#!/bin/bash # soundex.sh: Calculate "soundex" code for names
+#!/bin/bash
+# soundex.sh: Calculate "soundex" code for names
 
 # =======================================================
 #        Soundex script
@@ -36,31 +37,40 @@ assign_value ()                #  Assigns numerical value
   val5=mn
   val6=r
 
-# Exceptionally clever use of 'tr' follows.  # Try to figure out what is
-going on here.
+# Exceptionally clever use of 'tr' follows.
+# Try to figure out what is going on here.
 
-value=$( echo "$1" \ | tr -d wh \ | tr $val1 1 | tr $val2 2 | tr $val3 3 \ |
-tr $val4 4 | tr $val5 5 | tr $val6 6 \ | tr -s 123456 \ | tr -d aeiouy )
+value=$( echo "$1" \
+| tr -d wh \
+| tr $val1 1 | tr $val2 2 | tr $val3 3 \
+| tr $val4 4 | tr $val5 5 | tr $val6 6 \
+| tr -s 123456 \
+| tr -d aeiouy )
 
-# Assign letter values.  # Remove duplicate numbers, except when separated
-by vowels.  # Ignore vowels, except as separators, so delete them last.  #
-Ignore 'w' and 'h', even as separators, so delete them first.  # # The above
-command substitution lays more pipe than a plumber &lt;g&gt;.
+# Assign letter values.
+# Remove duplicate numbers, except when separated by vowels.
+# Ignore vowels, except as separators, so delete them last.
+# Ignore 'w' and 'h', even as separators, so delete them first.
+#
+# The above command substitution lays more pipe than a plumber &lt;g&gt;.
 
-}
-
-
-input_name="$1" echo echo "Name = $input_name"
-
-
-# Change all characters of name input to lowercase.  #
------------------------------------------------- name=$( echo $input_name |
-tr A-Z a-z )  # ------------------------------------------------ # Just in
-case argument to script is mixed case.
+}  
 
 
-# Prefix of soundex code: first letter of name.  #
---------------------------------------------
+input_name="$1"
+echo
+echo "Name = $input_name"
+
+
+# Change all characters of name input to lowercase.
+# ------------------------------------------------
+name=$( echo $input_name | tr A-Z a-z )
+# ------------------------------------------------
+# Just in case argument to script is mixed case.
+
+
+# Prefix of soundex code: first letter of name.
+# --------------------------------------------
 
 
 char_pos=0                     # Initialize character position. 
@@ -73,12 +83,12 @@ name1=${name:$char_pos}
 
 
 # ++++++++++++++++++++++++++ Exception Patch ++++++++++++++++++++++++++++++
-# Now, we run both the input name and the name shifted one char #+ to the
-right through the value-assigning function.  # If we get the same value out,
-that means that the first two characters #+ of the name have the same value
-assigned, and that one should cancel.  # However, we also need to test
-whether the first letter of the name #+ is a vowel or 'w' or 'h', because
-otherwise this would bollix things up.
+#  Now, we run both the input name and the name shifted one char
+#+ to the right through the value-assigning function.
+#  If we get the same value out, that means that the first two characters
+#+ of the name have the same value assigned, and that one should cancel.
+#  However, we also need to test whether the first letter of the name
+#+ is a vowel or 'w' or 'h', because otherwise this would bollix things up.
 
 char1=`echo $prefix | tr A-Z a-z`    # First letter of name, lowercased.
 
@@ -116,11 +126,11 @@ echo "Soundex = $soundex"
 
 echo
 
-# The soundex code is a method of indexing and classifying names #+ by
-grouping together the ones that sound alike.  # The soundex code for a given
-name is the first letter of the name, #+ followed by a calculated
-three-number code.  # Similar sounding names should have almost the same
-soundex codes.
+#  The soundex code is a method of indexing and classifying names
+#+ by grouping together the ones that sound alike.
+#  The soundex code for a given name is the first letter of the name,
+#+ followed by a calculated three-number code.
+#  Similar sounding names should have almost the same soundex codes.
 
 #   Examples:
 #   Smith and Smythe both have a "S-530" soundex.
@@ -128,15 +138,20 @@ soundex codes.
 #   Hargison = H-622
 #   Harriman = H-655
 
-# This works out fairly well in practice, but there are numerous anomalies.
-# # # The U.S. Census and certain other governmental agencies use soundex, #
-as do genealogical researchers.  # # For more information, #+ see the
-"National Archives and Records Administration home page", #+
-http://www.nara.gov/genealogy/soundex/soundex.html
+#  This works out fairly well in practice, but there are numerous anomalies.
+#
+#
+#  The U.S. Census and certain other governmental agencies use soundex,
+#  as do genealogical researchers.
+#
+#  For more information,
+#+ see the "National Archives and Records Administration home page",
+#+ http://www.nara.gov/genealogy/soundex/soundex.html
 
 
 
-# Exercise: # -------- # Simplify the "Exception Patch" section of this
-script.
+# Exercise:
+# --------
+# Simplify the "Exception Patch" section of this script.
 
 exit 0

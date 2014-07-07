@@ -1,10 +1,17 @@
-#!/bin/bash # color-echo.sh: Echoing text messages in color.
+#!/bin/bash
+# color-echo.sh: Echoing text messages in color.
 
-# Modify this script for your own purposes.  # It's easier than hand-coding
-color.
+# Modify this script for your own purposes.
+# It's easier than hand-coding color.
 
-black='\E[30;47m' red='\E[31;47m' green='\E[32;47m' yellow='\E[33;47m'
-blue='\E[34;47m' magenta='\E[35;47m' cyan='\E[36;47m' white='\E[37;47m'
+black='\E[30;47m'
+red='\E[31;47m'
+green='\E[32;47m'
+yellow='\E[33;47m'
+blue='\E[34;47m'
+magenta='\E[35;47m'
+cyan='\E[36;47m'
+white='\E[37;47m'
 
 
 alias Reset="tput sgr0"      #  Reset text attributes to normal
@@ -50,5 +57,7 @@ echo
 
 exit 0
 
-# Exercises: # --------- # 1) Add the "bold" attribute to the 'cecho ()'
-function.  # 2) Add options for colored backgrounds.
+# Exercises:
+# ---------
+# 1) Add the "bold" attribute to the 'cecho ()' function.
+# 2) Add options for colored backgrounds.

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex63.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,14 +32,20 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex63.sh:10
+#, no-wrap
 msgid ""
-"# Does bash permit recursion? # Well, yes, but...  # It's so slow that you "
-"gotta have rocks in your head to try it."
+"# Does bash permit recursion?\n"
+"# Well, yes, but...\n"
+"# It's so slow that you gotta have rocks in your head to try it.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex63.sh:15
-msgid "MAX_ARG=5 E_WRONG_ARGS=85 E_RANGE_ERR=86"
+#, no-wrap
+msgid ""
+"MAX_ARG=5\n"
+"E_WRONG_ARGS=85\n"
+"E_RANGE_ERR=86\n"
 msgstr ""
 
 #. type: Plain text
@@ -95,10 +102,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex63.sh:51
-msgid "fact $1 echo \"Factorial of $1 is $?.\""
+#, no-wrap
+msgid ""
+"fact $1\n"
+"echo \"Factorial of $1 is $?.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex63.sh:52
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

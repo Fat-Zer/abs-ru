@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:3
-msgid "#!/bin/bash # stack.sh: push-down stack simulation"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# stack.sh: push-down stack simulation\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:6
+#, no-wrap
 msgid ""
-"# Similar to the CPU stack, a push-down stack stores data items #+ "
-"sequentially, but releases them in reverse order, last-in first-out."
+"#  Similar to the CPU stack, a push-down stack stores data items\n"
+"#+ sequentially, but releases them in reverse order, last-in first-out.\n"
 msgstr ""
 
 #. type: Plain text
@@ -66,7 +70,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:27
-msgid "declare -a stack"
+#, no-wrap
+msgid "declare -a stack\n"
 msgstr ""
 
 #. type: Plain text
@@ -91,7 +96,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:41
-msgid "return }"
+#, no-wrap
+msgid ""
+"return\n"
+"}\n"
 msgstr ""
 
 #. type: Plain text
@@ -141,19 +149,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:70
+#, no-wrap
 msgid ""
-"# ======================================================= # Now, for some "
-"fun."
+"# =======================================================\n"
+"# Now, for some fun.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:72 abs-guide/stack.sh:78 abs-guide/stack.sh:98
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:76
-msgid "# See if you can pop anything off empty stack.  pop status_report"
+#, no-wrap
+msgid ""
+"# See if you can pop anything off empty stack.\n"
+"pop\n"
+"status_report\n"
 msgstr ""
 
 #. type: Plain text
@@ -188,24 +202,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:96
+#, no-wrap
 msgid ""
-"# Notice how the stack pointer decrements with each push, #+ and increments "
-"with each pop."
+"#  Notice how the stack pointer decrements with each push,\n"
+"#+ and increments with each pop.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:100
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:102
-msgid "# ======================================================="
+#, no-wrap
+msgid "# =======================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/stack.sh:106
-msgid "# Exercises: # ---------"
+#, no-wrap
+msgid ""
+"# Exercises:\n"
+"# ---------\n"
 msgstr ""
 
 #. type: Plain text

@@ -1,4 +1,6 @@
-#!/bin/sh # readpipe.sh # This example contributed by Bjon Eriksson.
+#!/bin/sh
+# readpipe.sh
+# This example contributed by Bjon Eriksson.
 
 ### shopt -s lastpipe
 
@@ -22,13 +24,20 @@ exit 0  # End of code.
 
 #############################################
 
-./readpipe.sh
+./readpipe.sh 
 
-{#!/bin/sh} {last="(null)"} {cat $0 |} {while read line} {do} {echo
-"{$line}"} {last=$line} {done} {printf "nAll done, last: $lastn"}
+{#!/bin/sh}
+{last="(null)"}
+{cat $0 |}
+{while read line}
+{do}
+{echo "{$line}"}
+{last=$line}
+{done}
+{printf "nAll done, last: $lastn"}
 
 
 All done, last: (null)
 
-The variable (last) is set within the loop/subshell but its value does not
-persist outside the loop.
+The variable (last) is set within the loop/subshell
+but its value does not persist outside the loop.

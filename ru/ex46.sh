@@ -25,8 +25,8 @@ echo "270 modulo 8 = $a  (270 / 8 = 33, remainder $a)"
                     # 6
 
 
-# Does "let" permit C-style operators? # Yes, just as the (( ... ))
-double-parentheses construct does.
+# Does "let" permit C-style operators?
+# Yes, just as the (( ... )) double-parentheses construct does.
 
 let a++             # C-style (post) increment.
 echo "6++ = $a"     # 6++ = 7

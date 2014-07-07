@@ -14,7 +14,8 @@ then
   exit $E_BADARGS
 fi
 
-old_pattern=$1 new_pattern=$2
+old_pattern=$1
+new_pattern=$2
 
 if [ -f "$3" ]
 then
@@ -25,13 +26,15 @@ else
 fi
 
 
-# ----------------------------------------------- # Here is where the heavy
-work gets done.  sed -e "s/$old_pattern/$new_pattern/g" $file_name #
------------------------------------------------
+# -----------------------------------------------
+#  Here is where the heavy work gets done.
+sed -e "s/$old_pattern/$new_pattern/g" $file_name
+# -----------------------------------------------
 
-# 's' is, of course, the substitute command in sed, #+ and /pattern/ invokes
-address matching.  # The 'g,' or global flag causes substitution for EVERY
-#+ occurence of $old_pattern on each line, not just the first.  # Read the
-'sed' docs for an in-depth explanation.
+#  's' is, of course, the substitute command in sed,
+#+ and /pattern/ invokes address matching.
+#  The 'g,' or global flag causes substitution for EVERY
+#+ occurence of $old_pattern on each line, not just the first.
+#  Read the 'sed' docs for an in-depth explanation.
 
-exit $? # Redirect the output of this script to write to a file.
+exit $?  # Redirect the output of this script to write to a file.

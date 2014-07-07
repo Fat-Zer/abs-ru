@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex44.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # Killing ppp to force a log-off.  # For dialup connection, of "
-"course."
+"#!/bin/bash\n"
+"# Killing ppp to force a log-off.\n"
+"# For dialup connection, of course.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex44.sh:6
-msgid "# Script should be run as root user."
+#, no-wrap
+msgid "# Script should be run as root user.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex44.sh:11
+#, no-wrap
 msgid ""
-"SERPORT=ttyS3 # Depending on the hardware and even the kernel version, #+ "
-"the modem port on your machine may be different -- #+ /dev/ttyS1 or "
-"/dev/ttyS2."
+"SERPORT=ttyS3\n"
+"#  Depending on the hardware and even the kernel version,\n"
+"#+ the modem port on your machine may be different --\n"
+"#+ /dev/ttyS1 or /dev/ttyS2.\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,7 +57,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex44.sh:20
-msgid "# The following operations must be done as root user."
+#, no-wrap
+msgid "# The following operations must be done as root user.\n"
 msgstr ""
 
 #. type: Plain text
@@ -73,7 +79,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex44.sh:28
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text

@@ -1,4 +1,6 @@
-#!/bin/bash # msquare.sh # Magic Square generator (odd-order squares only!)
+#!/bin/bash
+# msquare.sh
+# Magic Square generator (odd-order squares only!)
 
 # Author: mendel cooper
 # reldate: 19 Jan. 2009
@@ -92,7 +94,8 @@ fi
 calculate $1
 print_square   # echo "${square[@]}"   # DEBUG
 
-exit $? #################################################
+exit $?
+#################################################
 
 
 # Exercises:

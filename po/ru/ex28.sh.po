@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:4
-msgid "LIMIT=19 # Upper limit"
+#, no-wrap
+msgid "LIMIT=19  # Upper limit\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:7
-msgid "echo echo \"Printing Numbers 1 through 20 (but not 3 and 11).\""
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Printing Numbers 1 through 20 (but not 3 and 11).\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:9 abs-guide/ex28.sh:34
-msgid "a=0"
+#, no-wrap
+msgid "a=0\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,27 +71,34 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:24
-msgid "# Exercise: # Why does the loop print up to 20?"
+#, no-wrap
+msgid ""
+"# Exercise:\n"
+"# Why does the loop print up to 20?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:26
-msgid "echo; echo"
+#, no-wrap
+msgid "echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:28
-msgid "echo Printing Numbers 1 through 20, but something happens after 2."
+#, no-wrap
+msgid "echo Printing Numbers 1 through 20, but something happens after 2.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:30
-msgid "##################################################################"
+#, no-wrap
+msgid "##################################################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:32
-msgid "# Same loop, but substituting 'break' for 'continue'."
+#, no-wrap
+msgid "# Same loop, but substituting 'break' for 'continue'.\n"
 msgstr ""
 
 #. type: Plain text
@@ -117,10 +130,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:48
-msgid "echo; echo; echo"
+#, no-wrap
+msgid "echo; echo; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex28.sh:49
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:3
-msgid "#!/bin/bash # subshell.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# subshell.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:5 abs-guide/subshell.sh:47
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -38,23 +42,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:15
+#, no-wrap
 msgid ""
-"outer_variable=Outer global_variable= # Define global variable for "
-"\"storage\" of #+ value of subshell variable."
+"outer_variable=Outer\n"
+"global_variable=\n"
+"#  Define global variable for \"storage\" of\n"
+"#+ value of subshell variable.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:20
+#, no-wrap
 msgid ""
-"( echo \"We are inside the subshell.\" echo \"Subshell level INSIDE subshell "
-"= $BASH_SUBSHELL\" inner_variable=Inner"
+"(\n"
+"echo \"We are inside the subshell.\"\n"
+"echo \"Subshell level INSIDE subshell = $BASH_SUBSHELL\"\n"
+"inner_variable=Inner\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:23
+#, no-wrap
 msgid ""
-"echo \"From inside subshell, \\\"inner_variable\\\" = $inner_variable\" echo "
-"\"From inside subshell, \\\"outer\\\" = $outer_variable\""
+"echo \"From inside subshell, \\\"inner_variable\\\" = $inner_variable\"\n"
+"echo \"From inside subshell, \\\"outer\\\" = $outer_variable\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,9 +79,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:32
+#, no-wrap
 msgid ""
-"echo; echo echo \"We are outside the subshell.\" echo \"Subshell level "
-"OUTSIDE subshell = $BASH_SUBSHELL\" echo"
+"echo; echo\n"
+"echo \"We are outside the subshell.\"\n"
+"echo \"Subshell level OUTSIDE subshell = $BASH_SUBSHELL\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,27 +101,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:45
+#, no-wrap
 msgid ""
-"echo \"From main body of shell, \\\"inner_variable\\\" = $inner_variable\" # "
-"$inner_variable will show as blank (uninitialized)  #+ because variables "
-"defined in a subshell are \"local variables\".  # Is there a remedy for "
-"this? echo \"global_variable = \"$global_variable\"\" # Why doesn't this "
-"work?"
+"echo \"From main body of shell, \\\"inner_variable\\\" = $inner_variable\"\n"
+"#  $inner_variable will show as blank (uninitialized)\n"
+"#+ because variables defined in a subshell are \"local variables\".\n"
+"#  Is there a remedy for this?\n"
+"echo \"global_variable = \"$global_variable\"\"  # Why doesn't this work?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:49
-msgid "# ======================================================================="
+#, no-wrap
+msgid "# =======================================================================\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:51
-msgid "# Additionally ..."
+#, no-wrap
+msgid "# Additionally ...\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:53
-msgid "echo \"-----------------\"; echo"
+#, no-wrap
+msgid "echo \"-----------------\"; echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -118,7 +136,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:57
-msgid "( let \"var+=1\"; echo \"\\$var INSIDE subshell = $var\" )  # 42"
+#, no-wrap
+msgid "( let \"var+=1\"; echo \"\\$var INSIDE subshell = $var\" )  # 42\n"
 msgstr ""
 
 #. type: Plain text
@@ -132,13 +151,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:64
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/subshell.sh:69
+#, no-wrap
 msgid ""
-"# Question: # -------- # Once having exited a subshell, #+ is there any way "
-"to reenter that very same subshell #+ to modify or access the subshell "
-"variables?"
+"#  Question:\n"
+"#  --------\n"
+"#  Once having exited a subshell,\n"
+"#+ is there any way to reenter that very same subshell\n"
+"#+ to modify or access the subshell variables?\n"
 msgstr ""

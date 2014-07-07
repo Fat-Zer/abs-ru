@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # c-vars.sh # Manipulating a variable, C-style, using the (( "
-"... )) construct."
+"#!/bin/bash\n"
+"# c-vars.sh\n"
+"# Manipulating a variable, C-style, using the (( ... )) construct.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:7 abs-guide/c-vars.sh:26 abs-guide/c-vars.sh:38 abs-guide/c-vars.sh:45
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -71,23 +74,27 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:30
+#, no-wrap
 msgid ""
-"######################################################## # Note that, as in "
-"C, pre- and post-decrement operators #+ have different side-effects."
+"########################################################\n"
+"#  Note that, as in C, pre- and post-decrement operators\n"
+"#+ have different side-effects.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:33
+#, no-wrap
 msgid ""
-"n=1; let --n &amp;&amp; echo \"True\" || echo \"False\" # False n=1; let n-- "
-"&amp;&amp; echo \"True\" || echo \"False\" # True"
+"n=1; let --n &amp;&amp; echo \"True\" || echo \"False\"  # False\n"
+"n=1; let n-- &amp;&amp; echo \"True\" || echo \"False\"  # True\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:36
+#, no-wrap
 msgid ""
-"# Thanks, Jeroen Domburg.  "
-"########################################################"
+"#  Thanks, Jeroen Domburg.\n"
+"########################################################\n"
 msgstr ""
 
 #. type: Plain text
@@ -102,25 +109,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:55
+#, no-wrap
 msgid ""
-"# ----------------- # Easter Egg alert! # ----------------- # Chet Ramey "
-"seems to have snuck a bunch of undocumented C-style #+ constructs into Bash "
-"(actually adapted from ksh, pretty much).  # In the Bash docs, Ramey calls "
-"(( ... )) shell arithmetic, #+ but it goes far beyond that.  # Sorry, Chet, "
-"the secret is out."
+"# -----------------\n"
+"# Easter Egg alert!\n"
+"# -----------------\n"
+"#  Chet Ramey seems to have snuck a bunch of undocumented C-style\n"
+"#+ constructs into Bash (actually adapted from ksh, pretty much).\n"
+"#  In the Bash docs, Ramey calls (( ... )) shell arithmetic,\n"
+"#+ but it goes far beyond that.\n"
+"#  Sorry, Chet, the secret is out.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:57
-msgid "# See also \"for\" and \"while\" loops using the (( ... )) construct."
+#, no-wrap
+msgid "# See also \"for\" and \"while\" loops using the (( ... )) construct.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:59
-msgid "# These work only with version 2.04 or later of Bash."
+#, no-wrap
+msgid "# These work only with version 2.04 or later of Bash.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/c-vars.sh:60
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""

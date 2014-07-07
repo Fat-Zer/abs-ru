@@ -1,4 +1,5 @@
-#!/bin/bash # grp.sh: Rudimentary reimplementation of grep.
+#!/bin/bash
+# grp.sh: Rudimentary reimplementation of grep.
 
 E_BADARGS=85
 
@@ -27,5 +28,7 @@ echo
 
 exit 0
 
-# Exercises: # --------- # 1) Add newlines to output, if more than one match
-in any given file.  # 2) Add features.
+# Exercises:
+# ---------
+# 1) Add newlines to output, if more than one match in any given file.
+# 2) Add features.

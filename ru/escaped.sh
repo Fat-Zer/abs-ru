@@ -1,16 +1,23 @@
-#!/bin/bash # escaped.sh: escaped characters
+#!/bin/bash
+# escaped.sh: escaped characters
 
-############################################################# ### First,
-let's show some basic escaped-character usage. ###
+#############################################################
+### First, let's show some basic escaped-character usage. ###
 #############################################################
 
-# Escaping a newline.  # ------------------
+# Escaping a newline.
+# ------------------
 
 echo ""
 
-echo "This will print as two lines." # This will print # as two lines.
+echo "This will print
+as two lines."
+# This will print
+# as two lines.
 
-echo "This will print \ as one line." # This will print as one line.
+echo "This will print \
+as one line."
+# This will print as one line.
 
 echo; echo
 
@@ -39,19 +46,20 @@ echo $'\a'           # Alert (beep).
 
 # We have seen $'\nnn" string expansion, and now . . .
 
-# =================================================================== # #
-Version 2 of Bash introduced the $'\nnn' string expansion construct.  #
-=================================================================== #
+# =================================================================== #
+# Version 2 of Bash introduced the $'\nnn' string expansion construct.
+# =================================================================== #
 
-echo "Introducing the \$\' ... \' string-expansion construct . . . " echo
-". . . featuring more quotation marks."
+echo "Introducing the \$\' ... \' string-expansion construct . . . "
+echo ". . . featuring more quotation marks."
 
 echo $'\t \042 \t'   # Quote (") framed by tabs.
 # Note that  '\nnn' is an octal value.
 
-# It also works with hexadecimal values, in an $'\xhhh' construct.  echo
-$'\t \x22 \t' # Quote (") framed by tabs.  # Thank you, Greg Keraunen, for
-pointing this out.  # Earlier Bash versions allowed '\x022'.
+# It also works with hexadecimal values, in an $'\xhhh' construct.
+echo $'\t \x22 \t'  # Quote (") framed by tabs.
+# Thank you, Greg Keraunen, for pointing this out.
+# Earlier Bash versions allowed '\x022'.
 
 echo
 
@@ -63,9 +71,9 @@ echo "$quote Quoted string $quote and this lies outside the quotes."
 
 echo
 
-# Concatenating ASCII chars in a variable.  triple_underline=$'\137\137\137'
-# 137 is octal ASCII code for '_'.  echo "$triple_underline UNDERLINE
-$triple_underline"
+# Concatenating ASCII chars in a variable.
+triple_underline=$'\137\137\137'  # 137 is octal ASCII code for '_'.
+echo "$triple_underline UNDERLINE $triple_underline"
 
 echo
 

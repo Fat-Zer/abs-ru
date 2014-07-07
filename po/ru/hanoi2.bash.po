@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,26 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:6
+#, no-wrap
 msgid ""
-"#! /bin/bash # The Towers Of Hanoi # Original script (hanoi.bash) copyright "
-"(C) 2000 Amit Singh.  # All Rights Reserved.  # "
-"http://hanoi.kernelthread.com"
+"#! /bin/bash\n"
+"# The Towers Of Hanoi\n"
+"# Original script (hanoi.bash) copyright (C) 2000 Amit Singh.\n"
+"# All Rights Reserved.\n"
+"# http://hanoi.kernelthread.com\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:14
+#, no-wrap
 msgid ""
-"# hanoi2.bash # Version 2.00: modded for ASCII-graphic display.  # Version "
-"2.01: fixed no command-line param bug.  # Uses code contributed by Antonio "
-"Macchi, #+ with heavy editing by ABS Guide author.  # This variant falls "
-"under the original copyright, see above.  # Used in ABS Guide with Amit "
-"Singh's permission (thanks!)."
+"#  hanoi2.bash\n"
+"#  Version 2.00: modded for ASCII-graphic display.\n"
+"#  Version 2.01: fixed no command-line param bug.\n"
+"#  Uses code contributed by Antonio Macchi,\n"
+"#+ with heavy editing by ABS Guide author.\n"
+"#  This variant falls under the original copyright, see above.\n"
+"#  Used in ABS Guide with Amit Singh's permission (thanks!).\n"
 msgstr ""
 
 #. type: Plain text
@@ -89,7 +95,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:41
-msgid "declare -a Rod1 Rod2 Rod3"
+#, no-wrap
+msgid "declare -a Rod1 Rod2 Rod3\n"
 msgstr ""
 
 #. type: Plain text
@@ -262,7 +269,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:139
-msgid "# From here down, almost the same as original (hanoi.bash) script."
+#, no-wrap
+msgid "# From here down, almost the same as original (hanoi.bash) script.\n"
 msgstr ""
 
 #. type: Plain text
@@ -328,7 +336,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:181
-msgid "setup_arrays $DISKS echo; echo \"+ Start Position\""
+#, no-wrap
+msgid ""
+"setup_arrays $DISKS\n"
+"echo; echo \"+  Start Position\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -367,7 +378,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hanoi2.bash:208
+#, no-wrap
 msgid ""
-"# Note: # Redirect script output to a file, otherwise it scrolls off "
-"display."
+"# Note:\n"
+"# Redirect script output to a file, otherwise it scrolls off display.\n"
 msgstr ""

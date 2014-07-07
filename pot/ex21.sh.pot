@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:5
+#, no-wrap
 msgid ""
-"# $RANDOM returns a different random integer at each invocation.  # Nominal "
-"range: 0 - 32767 (signed 16-bit integer)."
+"# $RANDOM returns a different random integer at each invocation.\n"
+"# Nominal range: 0 - 32767 (signed 16-bit integer).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:8
-msgid "MAXCOUNT=10 count=1"
+#, no-wrap
+msgid ""
+"MAXCOUNT=10\n"
+"count=1\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,19 +57,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:22
+#, no-wrap
 msgid ""
 "# If you need a random int within a certain range, use the 'modulo' "
-"operator.  # This returns the remainder of a division operation."
+"operator.\n"
+"# This returns the remainder of a division operation.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:24
-msgid "RANGE=500"
+#, no-wrap
+msgid "RANGE=500\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:26 abs-guide/ex21.sh:33 abs-guide/ex21.sh:84
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -79,14 +88,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:38
+#, no-wrap
 msgid ""
-"# If you need a random integer greater than a lower bound, #+ then set up a "
-"test to discard all numbers below that."
+"#  If you need a random integer greater than a lower bound,\n"
+"#+ then set up a test to discard all numbers below that.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:40
-msgid "FLOOR=200"
+#, no-wrap
+msgid "FLOOR=200\n"
 msgstr ""
 
 #. type: Plain text
@@ -130,9 +141,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:72
+#, no-wrap
 msgid ""
-"# Generate binary choice, that is, \"true\" or \"false\" value.  BINARY=2 "
-"T=1 number=$RANDOM"
+"# Generate binary choice, that is, \"true\" or \"false\" value.\n"
+"BINARY=2\n"
+"T=1\n"
+"number=$RANDOM\n"
 msgstr ""
 
 #. type: Plain text
@@ -166,7 +180,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:95
-msgid "# Tosses each die separately, and so gives correct odds."
+#, no-wrap
+msgid "# Tosses each die separately, and so gives correct odds.\n"
 msgstr ""
 
 #. type: Plain text
@@ -181,10 +196,15 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:105
-msgid "let \"throw = $die1 + $die2\" echo \"Throw of the dice = $throw\" echo"
+#, no-wrap
+msgid ""
+"let \"throw = $die1 + $die2\"\n"
+"echo \"Throw of the dice = $throw\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex21.sh:107
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

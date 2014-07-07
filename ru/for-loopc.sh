@@ -1,4 +1,5 @@
-#!/bin/bash # Multiple ways to count up to 10.
+#!/bin/bash
+# Multiple ways to count up to 10.
 
 echo
 
@@ -44,11 +45,9 @@ done                           # A construct borrowed from ksh93.
 
 echo; echo
 
-#
-+=========================================================================+
+# +=========================================================================+
 
-# Let's use the C "comma operator" to increment two variables
-simultaneously.
+# Let's use the C "comma operator" to increment two variables simultaneously.
 
 for ((a=1, b=1; a &lt;= LIMIT ; a++, b++))
 do  # The comma concatenates operations.

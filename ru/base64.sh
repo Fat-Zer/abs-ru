@@ -25,11 +25,13 @@
 base64_charset=( {A..Z} {a..z} {0..9} + / = )
                 # Nice illustration of brace expansion.
 
-# Uncomment the ### line below to use base64url encoding instead of #+
-original base64.  ### base64_charset=( {A..Z} {a..z} {0..9} - _ = )
+#  Uncomment the ### line below to use base64url encoding instead of
+#+ original base64.
+### base64_charset=( {A..Z} {a..z} {0..9} - _ = )
 
-# Output text width when encoding #+ (64 characters, just like openssl
-output).  text_width=64
+#  Output text width when encoding
+#+ (64 characters, just like openssl output).
+text_width=64
 
 function display_base64_char {
 #  Convert a 6-bit number (between 0 and 63) into its corresponding values

@@ -1,4 +1,5 @@
-#!/bin/bash # spawn.sh
+#!/bin/bash
+# spawn.sh
 
 
 PIDS=$(pidof sh $0)  # Process IDs of the various instances of this script.
@@ -16,11 +17,15 @@ sh $0                # Play it again, Sam.
 exit 0               # Not necessary; script will never get to here.
                      # Why not?
 
-# After exiting with a Ctl-C, #+ do all the spawned instances of the script
-die? # If so, why?
+#  After exiting with a Ctl-C,
+#+ do all the spawned instances of the script die?
+#  If so, why?
 
-# Note: # ---- # Be careful not to run this script too long.  # It will
-eventually eat up too many system resources.
+# Note:
+# ----
+# Be careful not to run this script too long.
+# It will eventually eat up too many system resources.
 
-# Is having a script spawn multiple instances of itself #+ an advisable
-scripting technique.  # Why or why not?
+#  Is having a script spawn multiple instances of itself
+#+ an advisable scripting technique.
+#  Why or why not?

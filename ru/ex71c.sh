@@ -1,11 +1,13 @@
-#!/bin/bash # A 'cat' here-document, but with parameter substitution
-disabled.
+#!/bin/bash
+#  A 'cat' here-document, but with parameter substitution disabled.
 
-NAME="John Doe" RESPONDENT="the author of this fine script"
+NAME="John Doe"
+RESPONDENT="the author of this fine script"  
 
 cat &lt;&lt;'Endofmessage'
 
-Hello, there, $NAME.  Greetings to you, $NAME, from $RESPONDENT.
+Hello, there, $NAME.
+Greetings to you, $NAME, from $RESPONDENT.
 
 Endofmessage
 
@@ -21,12 +23,17 @@ Endofmessage
 
 cat &lt;&lt;"SpecialCharTest"
 
-Directory listing would follow if limit string were not quoted.  `ls -l`
+Directory listing would follow
+if limit string were not quoted.
+`ls -l`
 
-Arithmetic expansion would take place if limit string were not quoted.  $((5
-+ 3))
+Arithmetic expansion would take place
+if limit string were not quoted.
+$((5 + 3))
 
-A a single backslash would echo if limit string were not quoted.  \\
+A a single backslash would echo
+if limit string were not quoted.
+\\
 
 SpecialCharTest
 

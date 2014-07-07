@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,22 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # obj-oriented.sh: Object-oriented programming in a shell "
-"script.  # Script by Stephane Chazelas."
+"#!/bin/bash\n"
+"# obj-oriented.sh: Object-oriented programming in a shell script.\n"
+"# Script by Stephane Chazelas.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:10
+#, no-wrap
 msgid ""
-"# Important Note: # --------- ---- # If running this script under version 3 "
-"or later of Bash, #+ replace all periods in function names with a \"legal\" "
-"character, #+ for example, an underscore."
+"#  Important Note:\n"
+"#  --------- ----\n"
+"#  If running this script under version 3 or later of Bash,\n"
+"#+ replace all periods in function names with a \"legal\" character,\n"
+"#+ for example, an underscore.\n"
 msgstr ""
 
 #. type: Plain text
@@ -91,14 +96,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:46 abs-guide/obj-oriented.sh:57
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:49
+#, no-wrap
 msgid ""
-"person.new self Bozeman Bozo 101272413 # Create an instance of "
-"\"person.new\" (actually passing args to the function)."
+"person.new self Bozeman Bozo 101272413\n"
+"# Create an instance of \"person.new\" (actually passing args to the "
+"function).\n"
 msgstr ""
 
 #. type: Plain text
@@ -114,12 +122,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:60
+#, no-wrap
 msgid ""
-"# typeset -f #+ to see the created functions (careful, it scrolls off the "
-"page)."
+"#  typeset -f\n"
+"#+ to see the created functions (careful, it scrolls off the page).\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/obj-oriented.sh:61
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

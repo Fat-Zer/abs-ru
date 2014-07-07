@@ -1,5 +1,6 @@
-#!/bin/bash # arglist.sh # Invoke this script with several arguments, such
-as "one two three" ...
+#!/bin/bash
+# arglist.sh
+# Invoke this script with several arguments, such as "one two three" ...
 
 E_BADARGS=85
 

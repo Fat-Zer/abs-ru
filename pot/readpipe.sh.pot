@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:4
-msgid "#!/bin/sh # readpipe.sh # This example contributed by Bjon Eriksson."
+#, no-wrap
+msgid ""
+"#!/bin/sh\n"
+"# readpipe.sh\n"
+"# This example contributed by Bjon Eriksson.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:6
-msgid "### shopt -s lastpipe"
+#, no-wrap
+msgid "### shopt -s lastpipe\n"
 msgstr ""
 
 #. type: Plain text
@@ -61,29 +66,41 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:26
-msgid "#############################################"
+#, no-wrap
+msgid "#############################################\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:28
-msgid "./readpipe.sh"
+#, no-wrap
+msgid "./readpipe.sh \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:38
+#, no-wrap
 msgid ""
-"{#!/bin/sh} {last=\"(null)\"} {cat $0 |} {while read line} {do} {echo "
-"\"{$line}\"} {last=$line} {done} {printf \"nAll done, last: $lastn\"}"
+"{#!/bin/sh}\n"
+"{last=\"(null)\"}\n"
+"{cat $0 |}\n"
+"{while read line}\n"
+"{do}\n"
+"{echo \"{$line}\"}\n"
+"{last=$line}\n"
+"{done}\n"
+"{printf \"nAll done, last: $lastn\"}\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:41
-msgid "All done, last: (null)"
+#, no-wrap
+msgid "All done, last: (null)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/readpipe.sh:43
+#, no-wrap
 msgid ""
-"The variable (last) is set within the loop/subshell but its value does not "
-"persist outside the loop."
+"The variable (last) is set within the loop/subshell\n"
+"but its value does not persist outside the loop.\n"
 msgstr ""

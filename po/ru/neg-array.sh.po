@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:4
-msgid "#!/bin/bash # neg-array.sh # Requires Bash, version -ge 4.2."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# neg-array.sh\n"
+"# Requires Bash, version -ge 4.2.\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,27 +56,33 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:21
-msgid "# So, what is this new feature good for?"
+#, no-wrap
+msgid "# So, what is this new feature good for?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:26
+#, no-wrap
 msgid ""
-"echo \"The last element in the array is \"${array[-1]}\"\" # Which is quite "
-"a bit more straightforward than: echo \"The last element in the array is "
-"\"${array[${#array[*]}-1]}\"\" echo"
+"echo \"The last element in the array is \"${array[-1]}\"\"\n"
+"# Which is quite a bit more straightforward than:\n"
+"echo \"The last element in the array is \"${array[${#array[*]}-1]}\"\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:28
-msgid "# And ..."
+#, no-wrap
+msgid "# And ...\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:32
+#, no-wrap
 msgid ""
-"index=0 let \"neg_element_count = 0 - ${#array[*]}\" # Number of elements, "
-"converted to a negative number."
+"index=0\n"
+"let \"neg_element_count = 0 - ${#array[*]}\"\n"
+"# Number of elements, converted to a negative number.\n"
 msgstr ""
 
 #. type: Plain text
@@ -87,10 +97,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:39
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/neg-array.sh:40
-msgid "# See also neg-offset.sh."
+#, no-wrap
+msgid "# See also neg-offset.sh.\n"
 msgstr ""

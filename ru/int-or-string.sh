@@ -1,4 +1,5 @@
-#!/bin/bash # int-or-string.sh
+#!/bin/bash
+# int-or-string.sh
 
 a=2334                   # Integer.
 let "a += 1"
@@ -50,12 +51,13 @@ let "f /= 0"
 # Expected behavior.
 
 
-# Bash (usually) sets the "integer value" of null to zero #+ when performing
-an arithmetic operation.  # But, don't try this at home, folks! # It's
-undocumented and probably non-portable behavior.
+#  Bash (usually) sets the "integer value" of null to zero
+#+ when performing an arithmetic operation.
+#  But, don't try this at home, folks!
+#  It's undocumented and probably non-portable behavior.
 
 
-# Conclusion: Variables in Bash are untyped, #+ with all attendant
-consequences.
+# Conclusion: Variables in Bash are untyped,
+#+ with all attendant consequences.
 
 exit $?

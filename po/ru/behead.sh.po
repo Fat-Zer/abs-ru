@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:37+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/behead.sh:5
+#, no-wrap
 msgid ""
-"#! /bin/sh # Strips off the header from a mail/News message i.e. till the "
-"first #+ empty line.  # Author: Mark Moraes, University of Toronto"
+"#! /bin/sh\n"
+"#  Strips off the header from a mail/News message i.e. till the first\n"
+"#+ empty line.\n"
+"#  Author: Mark Moraes, University of Toronto\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/behead.sh:7
-msgid "# ==> These comments added by author of this document."
+#, no-wrap
+msgid "# ==> These comments added by author of this document.\n"
 msgstr ""
 
 #. type: Plain text
@@ -49,15 +53,18 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/behead.sh:22
-msgid "exit"
+#, no-wrap
+msgid "exit\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/behead.sh:27
+#, no-wrap
 msgid ""
-"# ==> Exercise: Add error checking and other options.  # ==> # ==> Note that "
-"the small sed script repeats, except for the arg passed.  # ==> Does it make "
-"sense to embed it in a function? Why or why not?"
+"# ==> Exercise: Add error checking and other options.\n"
+"# ==>\n"
+"# ==> Note that the small sed script repeats, except for the arg passed.\n"
+"# ==> Does it make sense to embed it in a function? Why or why not?\n"
 msgstr ""
 
 #. type: Plain text

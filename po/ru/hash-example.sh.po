@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,11 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:4
+#, no-wrap
 msgid ""
-"#!/bin/bash # hash-example.sh: Colorizing text.  # Author: Mariusz "
-"Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;"
+"#!/bin/bash\n"
+"# hash-example.sh: Colorizing text.\n"
+"# Author: Mariusz Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;\n"
 msgstr ""
 
 #. type: Plain text
@@ -74,7 +76,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:37
-msgid "echo -e '\\nLet us delete them and try colors once more . . .\\n'"
+#, no-wrap
+msgid "echo -e '\\nLet us delete them and try colors once more . . .\\n'\n"
 msgstr ""
 
 #. type: Plain text
@@ -90,9 +93,12 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:48
+#, no-wrap
 msgid ""
-"hash_set other txt \"Other examples . . .\" hash_echo other txt "
-"hash_get_into other txt text echo $text"
+"hash_set other txt \"Other examples . . .\"\n"
+"hash_echo other txt\n"
+"hash_get_into other txt text\n"
+"echo $text\n"
 msgstr ""
 
 #. type: Plain text
@@ -106,17 +112,21 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:54
-msgid "echo; echo \"Back to normal?\"; echo"
+#, no-wrap
+msgid "echo; echo \"Back to normal?\"; echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:56
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/hash-example.sh:60
+#, no-wrap
 msgid ""
-"# On some terminals, the \"light\" colors print in bold, # and end up "
-"looking darker than the normal ones.  # Why is this?"
+"#  On some terminals, the \"light\" colors print in bold,\n"
+"#  and end up looking darker than the normal ones.\n"
+"#  Why is this?\n"
 msgstr ""

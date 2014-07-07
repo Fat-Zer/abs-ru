@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/VIEWDATA.BAT:2
-msgid "REM VIEWDATA"
+#, no-wrap
+msgid "REM VIEWDATA\n"
 msgstr ""
 
 #. type: Plain text
@@ -31,25 +32,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/VIEWDATA.BAT:8
-msgid "@ECHO OFF"
+#, no-wrap
+msgid "@ECHO OFF\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/VIEWDATA.BAT:14
+#, no-wrap
 msgid ""
-"IF !%1==! GOTO VIEWDATA REM IF NO COMMAND-LINE ARG...  FIND \"%1\" "
-"C:\\BOZO\\BOOKLIST.TXT GOTO EXIT0 REM PRINT LINE WITH STRING MATCH, THEN "
-"EXIT."
+"IF !%1==! GOTO VIEWDATA\n"
+"REM  IF NO COMMAND-LINE ARG...\n"
+"FIND \"%1\" C:\\BOZO\\BOOKLIST.TXT\n"
+"GOTO EXIT0\n"
+"REM  PRINT LINE WITH STRING MATCH, THEN EXIT.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/VIEWDATA.BAT:18
+#, no-wrap
 msgid ""
-":VIEWDATA TYPE C:\\BOZO\\BOOKLIST.TXT | MORE REM SHOW ENTIRE FILE, 1 PAGE AT "
-"A TIME."
+":VIEWDATA\n"
+"TYPE C:\\BOZO\\BOOKLIST.TXT | MORE\n"
+"REM  SHOW ENTIRE FILE, 1 PAGE AT A TIME.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/VIEWDATA.BAT:19
-msgid ":EXIT0"
+#, no-wrap
+msgid ":EXIT0\n"
 msgstr ""

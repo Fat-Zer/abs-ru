@@ -1,4 +1,6 @@
-#!/bin/bash # recursion-demo.sh # Demonstration of recursion.
+#!/bin/bash
+# recursion-demo.sh
+# Demonstration of recursion.
 
 RECURSIONS=9   # How many times to recurse.
 r_count=0      # Must be global. Why?

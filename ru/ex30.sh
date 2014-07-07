@@ -16,7 +16,8 @@ echo
 
 read person
 
-case "$person" in # Note variable is quoted.
+case "$person" in
+# Note variable is quoted.
 
   "E" | "e" )
   # Accept upper or lowercase input.
@@ -56,7 +57,9 @@ esac
 
 echo
 
-# Exercise: # -------- # Change the script so it accepts multiple inputs, #+
-instead of terminating after displaying just one address.
+#  Exercise:
+#  --------
+#  Change the script so it accepts multiple inputs,
+#+ instead of terminating after displaying just one address.
 
 exit 0

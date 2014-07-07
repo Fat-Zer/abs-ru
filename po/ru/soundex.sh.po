@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:3
-msgid "#!/bin/bash # soundex.sh: Calculate \"soundex\" code for names"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# soundex.sh: Calculate \"soundex\" code for names\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,52 +85,68 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:42
+#, no-wrap
 msgid ""
-"# Exceptionally clever use of 'tr' follows.  # Try to figure out what is "
-"going on here."
+"# Exceptionally clever use of 'tr' follows.\n"
+"# Try to figure out what is going on here.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:49
+#, no-wrap
 msgid ""
-"value=$( echo \"$1\" \\ | tr -d wh \\ | tr $val1 1 | tr $val2 2 | tr $val3 3 "
-"\\ | tr $val4 4 | tr $val5 5 | tr $val6 6 \\ | tr -s 123456 \\ | tr -d "
-"aeiouy )"
+"value=$( echo \"$1\" \\\n"
+"| tr -d wh \\\n"
+"| tr $val1 1 | tr $val2 2 | tr $val3 3 \\\n"
+"| tr $val4 4 | tr $val5 5 | tr $val6 6 \\\n"
+"| tr -s 123456 \\\n"
+"| tr -d aeiouy )\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:56
+#, no-wrap
 msgid ""
-"# Assign letter values.  # Remove duplicate numbers, except when separated "
-"by vowels.  # Ignore vowels, except as separators, so delete them last.  # "
-"Ignore 'w' and 'h', even as separators, so delete them first.  # # The above "
-"command substitution lays more pipe than a plumber &lt;g&gt;."
+"# Assign letter values.\n"
+"# Remove duplicate numbers, except when separated by vowels.\n"
+"# Ignore vowels, except as separators, so delete them last.\n"
+"# Ignore 'w' and 'h', even as separators, so delete them first.\n"
+"#\n"
+"# The above command substitution lays more pipe than a plumber &lt;g&gt;.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:58
-msgid "}"
+#, no-wrap
+msgid "}  \n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:63
-msgid "input_name=\"$1\" echo echo \"Name = $input_name\""
+#, no-wrap
+msgid ""
+"input_name=\"$1\"\n"
+"echo\n"
+"echo \"Name = $input_name\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:70
+#, no-wrap
 msgid ""
-"# Change all characters of name input to lowercase.  # "
-"------------------------------------------------ name=$( echo $input_name | "
-"tr A-Z a-z )  # ------------------------------------------------ # Just in "
-"case argument to script is mixed case."
+"# Change all characters of name input to lowercase.\n"
+"# ------------------------------------------------\n"
+"name=$( echo $input_name | tr A-Z a-z )\n"
+"# ------------------------------------------------\n"
+"# Just in case argument to script is mixed case.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:74
+#, no-wrap
 msgid ""
-"# Prefix of soundex code: first letter of name.  # "
-"--------------------------------------------"
+"# Prefix of soundex code: first letter of name.\n"
+"# --------------------------------------------\n"
 msgstr ""
 
 #. type: Plain text
@@ -151,14 +170,17 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:92
+#, no-wrap
 msgid ""
-"# ++++++++++++++++++++++++++ Exception Patch ++++++++++++++++++++++++++++++ "
-"# Now, we run both the input name and the name shifted one char #+ to the "
-"right through the value-assigning function.  # If we get the same value out, "
-"that means that the first two characters #+ of the name have the same value "
-"assigned, and that one should cancel.  # However, we also need to test "
-"whether the first letter of the name #+ is a vowel or 'w' or 'h', because "
-"otherwise this would bollix things up."
+"# ++++++++++++++++++++++++++ Exception Patch "
+"++++++++++++++++++++++++++++++\n"
+"#  Now, we run both the input name and the name shifted one char\n"
+"#+ to the right through the value-assigning function.\n"
+"#  If we get the same value out, that means that the first two characters\n"
+"#+ of the name have the same value assigned, and that one should cancel.\n"
+"#  However, we also need to test whether the first letter of the name\n"
+"#+ is a vowel or 'w' or 'h', because otherwise this would bollix things "
+"up.\n"
 msgstr ""
 
 #. type: Plain text
@@ -221,22 +243,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:126
-msgid "echo \"Soundex = $soundex\""
+#, no-wrap
+msgid "echo \"Soundex = $soundex\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:128
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:134
+#, no-wrap
 msgid ""
-"# The soundex code is a method of indexing and classifying names #+ by "
-"grouping together the ones that sound alike.  # The soundex code for a given "
-"name is the first letter of the name, #+ followed by a calculated "
-"three-number code.  # Similar sounding names should have almost the same "
-"soundex codes."
+"#  The soundex code is a method of indexing and classifying names\n"
+"#+ by grouping together the ones that sound alike.\n"
+"#  The soundex code for a given name is the first letter of the name,\n"
+"#+ followed by a calculated three-number code.\n"
+"#  Similar sounding names should have almost the same soundex codes.\n"
 msgstr ""
 
 #. type: Plain text
@@ -252,22 +277,31 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:150
+#, no-wrap
 msgid ""
-"# This works out fairly well in practice, but there are numerous anomalies.  "
-"# # # The U.S. Census and certain other governmental agencies use soundex, # "
-"as do genealogical researchers.  # # For more information, #+ see the "
-"\"National Archives and Records Administration home page\", #+ "
-"http://www.nara.gov/genealogy/soundex/soundex.html"
+"#  This works out fairly well in practice, but there are numerous "
+"anomalies.\n"
+"#\n"
+"#\n"
+"#  The U.S. Census and certain other governmental agencies use soundex,\n"
+"#  as do genealogical researchers.\n"
+"#\n"
+"#  For more information,\n"
+"#+ see the \"National Archives and Records Administration home page\",\n"
+"#+ http://www.nara.gov/genealogy/soundex/soundex.html\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:156
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # Simplify the \"Exception Patch\" section of this "
-"script."
+"# Exercise:\n"
+"# --------\n"
+"# Simplify the \"Exception Patch\" section of this script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/soundex.sh:157
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""

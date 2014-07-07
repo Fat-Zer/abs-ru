@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:30+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:3
-msgid "#!/bin/bash # lookup: Does a dictionary lookup on each word in a data file."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# lookup: Does a dictionary lookup on each word in a data file.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:5
-msgid "file=words.data # Data file from which to read words to test."
+#, no-wrap
+msgid "file=words.data  # Data file from which to read words to test.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:9
-msgid "echo echo \"Testing file $file\" echo"
+#, no-wrap
+msgid ""
+"echo\n"
+"echo \"Testing file $file\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -67,24 +75,28 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:28
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:30 abs-guide/lookup.sh:44
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:33
+#, no-wrap
 msgid ""
-"# ---------------------------------------------------------------- # Code "
-"below line will not execute because of \"exit\" command above."
+"# ----------------------------------------------------------------\n"
+"# Code below line will not execute because of \"exit\" command above.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/lookup.sh:36
-msgid "# Stephane Chazelas proposes the following, more concise alternative:"
+#, no-wrap
+msgid "# Stephane Chazelas proposes the following, more concise alternative:\n"
 msgstr ""
 
 #. type: Plain text

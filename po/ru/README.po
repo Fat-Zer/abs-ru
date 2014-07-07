@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,13 +24,14 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:10
+#, no-wrap
 msgid ""
-"Note that the source code for certain of the example shell scripts have the "
-"\"&lt;\" and \"&gt;\" in place of angle brackets (< and >), or &amp; in "
-"place of the ampersand (&). This is necessary for the Docbook SGML "
-"conversion. If you plan to run these scripts from the enclosed source files, "
-"then it will, of course, be necessary to restore the angle brackets or "
-"ampersand."
+"Note that the source code for certain of the example shell scripts\n"
+"have the \"&lt;\" and \"&gt;\" in place of angle brackets (< and >), or &amp; in\n"
+"place of the ampersand (&). This is necessary for the Docbook SGML\n"
+"conversion. If you plan to run these scripts from the enclosed source\n"
+"files, then it will, of course, be necessary to restore the angle\n"
+"brackets or ampersand.\n"
 msgstr ""
 
 #. type: Plain text
@@ -47,14 +48,16 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:20
+#, no-wrap
 msgid ""
-"In some of the below cases, only the comments are affected, and these "
-"scripts require no fixups to execute as expected."
+"In some of the below cases, only the comments are affected, and these scripts\n"
+"require no fixups to execute as expected.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:23
-msgid "The following sed scriptlet will accomplish the fixup:"
+#, no-wrap
+msgid "The following sed scriptlet will accomplish the fixup:\n"
 msgstr ""
 
 #. type: Plain text
@@ -65,7 +68,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:27
-msgid "A followup double-check is advisable, of course."
+#, no-wrap
+msgid "A followup double-check is advisable, of course.\n"
 msgstr ""
 
 #. type: Plain text
@@ -134,8 +138,7 @@ msgid ""
 "           line 83\n"
 "           lines 100-101\n"
 "In-line code block at beginning of \"I/O Redirection\" chapter, line 41.\n"
-"In-line code block at \"mkfifo\" entro in \"Miscellaneous Commands\" section "
-"of\n"
+"In-line code block at \"mkfifo\" entro in \"Miscellaneous Commands\" section of\n"
 "\"External Filters, Programs and Commands\" chapter.\n"
 msgstr ""
 
@@ -233,24 +236,30 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:129
-msgid "UseGetOpt.sh: line 4 (comment)  UseGetOpt-2.sh: line 11 (comment)"
+#, no-wrap
+msgid ""
+"UseGetOpt.sh: line 4 (comment)\n"
+"UseGetOpt-2.sh: line 11 (comment)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:131
-msgid "bash64.sh: line 4 (comment)"
+#, no-wrap
+msgid "bash64.sh: line 4 (comment)\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:133
-msgid "speech.sh: line 14"
+#, no-wrap
+msgid "speech.sh: line 14\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/README:137
+#, no-wrap
 msgid ""
-"Convertion Docbook/SGML V3 -> Docbook/XML V4.5 also required lots more "
-"renaming due to more strict xml syntax check:"
+"Convertion Docbook/SGML V3 -> Docbook/XML V4.5 also required lots more\n"
+"renaming due to more strict xml syntax check:\n"
 msgstr ""
 
 #. type: Plain text
@@ -265,12 +274,10 @@ msgid ""
 "array-append.bash      (lines 102, 28, 52, 67, 80)\n"
 "ascii2.sh              (lines 18, 37, 38, 19, 35)\n"
 "ascii.sh               (lines 36, 37)\n"
-"assoc-arr-test.sh      (lines 19, 26, 33, 40, 47, 54, 61, 68, 75, 89, 25, "
-"33)\n"
+"assoc-arr-test.sh      (lines 19, 26, 33, 40, 47, 54, 61, 68, 75, 89, 25, 33)\n"
 "background-loop.sh     (lines 7)\n"
 "bad-op.sh              (lines 10, 17, 22, 35)\n"
-"base64.sh              (lines 13, 15, 40, 56, 60, 61, 62, 80, 92, 96, 97, "
-"98, 99)\n"
+"base64.sh              (lines 13, 15, 40, 56, 60, 61, 62, 80, 92, 96, 97, 98, 99)\n"
 "base.sh                (lines 32, 38, 71)\n"
 "bashpodder.sh          (lines 62)\n"
 "bashrc                 (lots of replaces)\n"

@@ -1,18 +1,26 @@
-#!/bin/bash # sam.sh, v. .01a # Still Another Morse (code training script)
-# With profuse apologies to Sam (F.B.) Morse.  # Author: Mendel Cooper #
-License: GPL3 # Reldate: 05/25/11
+#!/bin/bash
+# sam.sh, v. .01a
+# Still Another Morse (code training script)
+# With profuse apologies to Sam (F.B.) Morse.
+# Author: Mendel Cooper
+# License: GPL3
+# Reldate: 05/25/11
 
-# Morse code training script.  # Converts arguments to audible dots and
-dashes.  # Note: lowercase input only at this time.
+# Morse code training script.
+# Converts arguments to audible dots and dashes.
+# Note: lowercase input only at this time.
 
 
 
-# Get the wav files from the source tarball: #
-http://bash.deta.in/abs-guide-latest.tar.bz2 DOT='soundfiles/dot.wav'
-DASH='soundfiles/dash.wav' # Maybe move soundfiles to /usr/local/sounds?
+# Get the wav files from the source tarball:
+# http://bash.deta.in/abs-guide-latest.tar.bz2
+DOT='soundfiles/dot.wav'
+DASH='soundfiles/dash.wav'
+# Maybe move soundfiles to /usr/local/sounds?
 
-LETTERSPACE=300000 # Microseconds.  WORDSPACE=980000 # Nice and slow, for
-beginners. Maybe 5 wpm?
+LETTERSPACE=300000  # Microseconds.
+WORDSPACE=980000
+# Nice and slow, for beginners. Maybe 5 wpm?
 
 EXIT_MSG="May the Morse be with you!"
 E_NOARGS=75         # No command-line args?
@@ -88,8 +96,9 @@ extract_letters ()
   done
 }
 
-######### Play the sounds ############ dot()  { aplay "$DOT"
-2&amp;>/dev/null; } dash() { aplay "$DASH" 2&amp;>/dev/null; }
+######### Play the sounds ############
+dot()  { aplay "$DOT" 2&amp;>/dev/null;  }
+dash() { aplay "$DASH" 2&amp;>/dev/null; }
 ######################################
 
 no_args ()
@@ -110,7 +119,8 @@ no_args ()
 }
 
 
-# int main()  # {
+# int main()
+# {
 
 clear                 # Clear the terminal screen.
 echo "            SAM"
@@ -137,7 +147,8 @@ done
 
 echo; echo; echo "$EXIT_MSG"; echo
 
-exit 0 # }
+exit 0
+# }
 
 #  Exercises:
 #  ---------

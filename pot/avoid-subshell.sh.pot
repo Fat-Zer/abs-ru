@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,23 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:4
-msgid "#!/bin/bash # avoid-subshell.sh # Suggested by Matthew Walker."
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# avoid-subshell.sh\n"
+"# Suggested by Matthew Walker.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:6
-msgid "Lines=0"
+#, no-wrap
+msgid "Lines=0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:8 abs-guide/avoid-subshell.sh:38
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -55,7 +61,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:22
-msgid "echo \"------------------------\""
+#, no-wrap
+msgid "echo \"------------------------\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -82,20 +89,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:40
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:42
-msgid "# Lines below not seen by script."
+#, no-wrap
+msgid "# Lines below not seen by script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:44
-msgid "$ cat myfile.txt"
+#, no-wrap
+msgid "$ cat myfile.txt\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/avoid-subshell.sh:52
-msgid "Line 1.  Line 2.  Line 3.  Line 4.  Line 5.  Line 6.  Line 7.  Line 8."
+#, no-wrap
+msgid ""
+"Line 1.\n"
+"Line 2.\n"
+"Line 3.\n"
+"Line 4.\n"
+"Line 5.\n"
+"Line 6.\n"
+"Line 7.\n"
+"Line 8.\n"
 msgstr ""

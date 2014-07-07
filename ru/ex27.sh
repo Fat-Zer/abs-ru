@@ -14,10 +14,11 @@ done
 
 #                     ---                        #
 
-# As with "for" and "while" loops, #+ an "until" loop permits C-like test
-constructs.
+#  As with "for" and "while" loops,
+#+ an "until" loop permits C-like test constructs.
 
-LIMIT=10 var=0
+LIMIT=10
+var=0
 
 until (( var > LIMIT ))
 do  # ^^ ^     ^     ^^   No brackets, no $ prefixing variables.

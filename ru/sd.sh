@@ -1,10 +1,11 @@
-#!/bin/bash # sd.sh: Standard Deviation
+#!/bin/bash
+# sd.sh: Standard Deviation
 
-# The Standard Deviation indicates how consistent a set of data is.  # It
-shows to what extent the individual data points deviate from the #+
-arithmetic mean, i.e., how much they "bounce around" (or cluster).  # It is
-essentially the average deviation-distance of the #+ data points from the
-mean.
+#  The Standard Deviation indicates how consistent a set of data is.
+#  It shows to what extent the individual data points deviate from the
+#+ arithmetic mean, i.e., how much they "bounce around" (or cluster).
+#  It is essentially the average deviation-distance of the
+#+ data points from the mean.
 
 # =========================================================== #
 #    To calculate the Standard Deviation:
@@ -85,24 +86,32 @@ sd ()
 mean=$(arith_mean); count=$?   # Two returns from function!
 std_dev=$(sd $mean $count)
 
-echo echo "Number of data points in \""$datafile"\" = $count" echo
-"Arithmetic mean (average) = $mean" echo "Standard Deviation = $std_dev"
-echo # ======================================================= #
+echo
+echo "Number of data points in \""$datafile"\" = $count"
+echo "Arithmetic mean (average) = $mean"
+echo "Standard Deviation = $std_dev"
+echo
+# ======================================================= #
 
 exit
 
-# This script could stand some drastic streamlining, #+ but not at the cost
-of reduced legibility, please.
+#  This script could stand some drastic streamlining,
+#+ but not at the cost of reduced legibility, please.
 
 
-# ++++++++++++++++++++++++++++++++++++++++ # # A sample data file
-(sample1.dat):
+# ++++++++++++++++++++++++++++++++++++++++ #
+# A sample data file (sample1.dat):
 
-# 18.35 # 19.0 # 18.88 # 18.91 # 18.64
+# 18.35
+# 19.0
+# 18.88
+# 18.91
+# 18.64
 
 
 # $ sh sd.sh sample1.dat
 
-# Number of data points in "sample1.dat" = 5 # Arithmetic mean (average) =
-18.756000000 # Standard Deviation = .235338054 #
-++++++++++++++++++++++++++++++++++++++++ #
+# Number of data points in "sample1.dat" = 5
+# Arithmetic mean (average) = 18.756000000
+# Standard Deviation = .235338054
+# ++++++++++++++++++++++++++++++++++++++++ #

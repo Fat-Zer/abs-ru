@@ -1,5 +1,6 @@
-#!/bin/bash # var-match.sh: # Demo of pattern replacement at prefix / suffix
-of string.
+#!/bin/bash
+# var-match.sh:
+# Demo of pattern replacement at prefix / suffix of string.
 
 v0=abc1234zip1234abc    # Original variable.
 echo "v0 = $v0"         # abc1234zip1234abc

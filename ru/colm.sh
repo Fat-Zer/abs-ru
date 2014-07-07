@@ -1,5 +1,6 @@
-#!/bin/bash # colms.sh # A minor modification of the example file in the
-"column" man page.
+#!/bin/bash
+# colms.sh
+# A minor modification of the example file in the "column" man page.
 
 
 (printf "PERMISSIONS LINKS OWNER GROUP SIZE MONTH DAY HH:MM PROG-NAME\n" \

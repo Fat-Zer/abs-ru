@@ -1,8 +1,10 @@
-#!/bin/bash # unalias.sh
+#!/bin/bash
+# unalias.sh
 
-shopt -s expand_aliases # Enables alias expansion.
+shopt -s expand_aliases  # Enables alias expansion.
 
-alias llm='ls -al | more' llm
+alias llm='ls -al | more'
+llm
 
 echo
 

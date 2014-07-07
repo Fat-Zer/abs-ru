@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -169,7 +169,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:91
-msgid "}"
+#, no-wrap
+msgid "}  \n"
 msgstr ""
 
 #. type: Plain text
@@ -227,27 +228,38 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:125
-msgid "let \"date1 = `day_index $day $month $year`\""
+#, no-wrap
+msgid "let \"date1 = `day_index $day $month $year`\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:129
-msgid "Parse_Date $2 check_date $day $month $year"
+#, no-wrap
+msgid ""
+"Parse_Date $2\n"
+"check_date $day $month $year\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:134
-msgid "strip_leading_zero $day day=$? strip_leading_zero $month month=$?"
+#, no-wrap
+msgid ""
+"strip_leading_zero $day\n"
+"day=$?\n"
+"strip_leading_zero $month\n"
+"month=$?\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:136
-msgid "date2=$(day_index $day $month $year) # Command substitution."
+#, no-wrap
+msgid "date2=$(day_index $day $month $year) # Command substitution.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:139
-msgid "calculate_difference $date1 $date2"
+#, no-wrap
+msgid "calculate_difference $date1 $date2\n"
 msgstr ""
 
 #. type: Plain text
@@ -260,19 +272,24 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:144
-msgid "echo $diff"
+#, no-wrap
+msgid "echo $diff\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:146
-msgid "exit 0"
+#, no-wrap
+msgid "exit 0\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/days-between.sh:151
+#, no-wrap
 msgid ""
-"# Exercise: # -------- # If given only one command-line parameter, have the "
-"script #+ use today's date as the second."
+"#  Exercise:\n"
+"#  --------\n"
+"#  If given only one command-line parameter, have the script\n"
+"#+ use today's date as the second.\n"
 msgstr ""
 
 #. type: Plain text

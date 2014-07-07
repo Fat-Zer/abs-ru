@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex5.sh:2
-msgid "#!/bin/bash"
+#, no-wrap
+msgid "#!/bin/bash\n"
 msgstr ""
 
 #. type: Plain text
@@ -39,7 +40,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex5.sh:10
-msgid "echo"
+#, no-wrap
+msgid "echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -52,8 +54,9 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex5.sh:16
+#, no-wrap
 msgid ""
-"# By convention, an 'exit 0' indicates success, #+ while a non-zero exit "
-"value means an error or anomalous condition.  # See the \"Exit Codes With "
-"Special Meanings\" appendix."
+"#  By convention, an 'exit 0' indicates success,\n"
+"#+ while a non-zero exit value means an error or anomalous condition.\n"
+"#  See the \"Exit Codes With Special Meanings\" appendix.\n"
 msgstr ""

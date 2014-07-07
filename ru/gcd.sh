@@ -2,8 +2,8 @@
 # gcd.sh: greatest common divisor
 #         Uses Euclid's algorithm
 
-# The "greatest common divisor" (gcd) of two integers #+ is the largest
-integer that will divide both, leaving no remainder.
+#  The "greatest common divisor" (gcd) of two integers
+#+ is the largest integer that will divide both, leaving no remainder.
 
 #  Euclid's algorithm uses successive division.
 #    In each pass,
@@ -16,8 +16,10 @@ integer that will divide both, leaving no remainder.
 #+ Jim Loy's site, http://www.jimloy.com/number/euclids.htm.
 
 
-# ------------------------------------------------------ # Argument check
-ARGS=2 E_BADARGS=85
+# ------------------------------------------------------
+# Argument check
+ARGS=2
+E_BADARGS=85
 
 if [ $# -ne "$ARGS" ]
 then
@@ -27,7 +29,8 @@ fi
 # ------------------------------------------------------
 
 
-gcd ()  {
+gcd ()
+{
 
   dividend=$1             #  Arbitrary assignment.
   divisor=$2              #! It doesn't matter which of the two is larger.

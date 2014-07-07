@@ -1,7 +1,10 @@
-#!/bin/bash # ifs.sh
+#!/bin/bash
+# ifs.sh
 
 
-var1="a+b+c" var2="d-e-f" var3="g,h,i"
+var1="a+b+c"
+var2="d-e-f"
+var3="g,h,i"
 
 IFS=+
 # The plus sign will be interpreted as a separator.
@@ -38,7 +41,8 @@ echo $var3     # g,h,i
 
 # ======================================================== #
 
-# However ...  # $IFS treats whitespace differently than other characters.
+# However ...
+# $IFS treats whitespace differently than other characters.
 
 output_args_one_per_line()
 {
@@ -48,7 +52,8 @@ output_args_one_per_line()
   done #  ^    ^   Embed within brackets, for your viewing pleasure.
 }
 
-echo; echo "IFS=\" \"" echo "-------"
+echo; echo "IFS=\" \""
+echo "-------"
 
 IFS=" "
 var=" a  b c   "
@@ -59,7 +64,8 @@ output_args_one_per_line $var  # output_args_one_per_line `echo " a  b c   "`
 # [c]
 
 
-echo; echo "IFS=:" echo "-----"
+echo; echo "IFS=:"
+echo "-----"
 
 IFS=:
 var=":a::b:c:::"               # Same pattern as above,
@@ -73,8 +79,8 @@ output_args_one_per_line $var
 # []
 # []
 
-# Note "empty" brackets.  # The same thing happens with the "FS" field
-separator in awk.
+# Note "empty" brackets.
+# The same thing happens with the "FS" field separator in awk.
 
 
 echo

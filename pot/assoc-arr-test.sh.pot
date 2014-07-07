@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,10 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/assoc-arr-test.sh:16
-msgid "echo \"===Assignment tests===\" echo"
+#, no-wrap
+msgid ""
+"echo \"===Assignment tests===\"\n"
+"echo\n"
 msgstr ""
 
 #. type: Plain text
@@ -57,7 +60,8 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/assoc-arr-test.sh:24 abs-guide/assoc-arr-test.sh:31 abs-guide/assoc-arr-test.sh:38 abs-guide/assoc-arr-test.sh:45 abs-guide/assoc-arr-test.sh:52 abs-guide/assoc-arr-test.sh:59 abs-guide/assoc-arr-test.sh:66 abs-guide/assoc-arr-test.sh:73 abs-guide/assoc-arr-test.sh:80 abs-guide/assoc-arr-test.sh:87 abs-guide/assoc-arr-test.sh:94
-msgid "echo \"---\""
+#, no-wrap
+msgid "echo \"---\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -174,5 +178,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/assoc-arr-test.sh:100
-msgid "exit $?"
+#, no-wrap
+msgid "exit $?\n"
 msgstr ""

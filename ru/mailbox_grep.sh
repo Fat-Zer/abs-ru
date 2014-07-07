@@ -1,6 +1,7 @@
-#!/bin/bash # Script by Francisco Lobo, #+ and slightly modified and
-commented by ABS Guide author.  # Used in ABS Guide with permission. (Thank
-you!)
+#!/bin/bash
+#  Script by Francisco Lobo,
+#+ and slightly modified and commented by ABS Guide author.
+#  Used in ABS Guide with permission. (Thank you!)
 
 # This script will not run under Bash versions -lt 3.0.
 
@@ -67,7 +68,7 @@ mbox_grep()  # Parse mailbox file.
 }
 
 
-mbox_grep "$1" # Send mailbox file to function.
+mbox_grep "$1"  # Send mailbox file to function.
 
 exit $?
 

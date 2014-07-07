@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"POT-Creation-Date: 2014-07-07 18:29+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,32 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashandperl.sh:3
-msgid "#!/bin/bash # bashandperl.sh"
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# bashandperl.sh\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashandperl.sh:6
+#, no-wrap
 msgid ""
-"echo \"Greetings from the Bash part of the script, $0.\" # More Bash "
-"commands may follow here."
+"echo \"Greetings from the Bash part of the script, $0.\"\n"
+"# More Bash commands may follow here.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashandperl.sh:9
-msgid "exit # End of Bash part of the script."
+#, no-wrap
+msgid ""
+"exit\n"
+"# End of Bash part of the script.\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashandperl.sh:11
-msgid "# ======================================================="
+#, no-wrap
+msgid "# =======================================================\n"
 msgstr ""
 
 #. type: Plain text
@@ -58,5 +66,6 @@ msgstr ""
 
 #. type: Plain text
 #: abs-guide/bashandperl.sh:20
-msgid "# End of Perl part of the script."
+#, no-wrap
+msgid "# End of Perl part of the script.\n"
 msgstr ""

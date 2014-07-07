@@ -1,4 +1,5 @@
-#!/bin/bash # basics-reviewed.bash
+#!/bin/bash
+# basics-reviewed.bash
 
 # File extension == *.bash == specific to Bash
 
@@ -11,12 +12,13 @@
 #   Fixes and updates (04/08) by Cliff Bamford.
 
 
-# This script tested under Bash versions 2.04, 2.05a and 2.05b.  # It may
-not work with earlier versions.  # This demonstration script generates one
---intentional-- #+ "command not found" error message. See line 436.
+#  This script tested under Bash versions 2.04, 2.05a and 2.05b.
+#  It may not work with earlier versions.
+#  This demonstration script generates one --intentional--
+#+ "command not found" error message. See line 436.
 
-# The current Bash maintainer, Chet Ramey, has fixed the items noted #+ for
-later versions of Bash.
+#  The current Bash maintainer, Chet Ramey, has fixed the items noted
+#+ for later versions of Bash.
 
 
 
@@ -37,38 +39,43 @@ later versions of Bash.
 
 # Variables are not typed unless otherwise specified.
 
-# Variables are named. Names must contain a non-digit.  # File descriptor
-names (as in, for example: 2>&amp;1)  #+ contain ONLY digits.
+#  Variables are named. Names must contain a non-digit.
+#  File descriptor names (as in, for example: 2>&amp;1)
+#+ contain ONLY digits.
 
-# Parameters and Bash array elements are numbered.  # (Parameters are very
-similar to Bash arrays.)
+# Parameters and Bash array elements are numbered.
+# (Parameters are very similar to Bash arrays.)
 
-# A variable name may be undefined (null reference).  unset VarNull
+# A variable name may be undefined (null reference).
+unset VarNull
 
 # A variable name may be defined but empty (null contents).
 VarEmpty=''                         # Two, adjacent, single quotes.
 
-# A variable name may be defined and non-empty.  VarSomething='Literal'
+# A variable name may be defined and non-empty.
+VarSomething='Literal'
 
 # A variable may contain:
 #   * A whole number as a signed 32-bit (or larger) integer
 #   * A string
 # A variable may also be an array.
 
-# A string may contain embedded blanks and may be treated #+ as if it where
-a function name with optional arguments.
+#  A string may contain embedded blanks and may be treated
+#+ as if it where a function name with optional arguments.
 
-# The names of variables and the names of functions #+ are in different
-namespaces.
-
-
-# A variable may be defined as a Bash array either explicitly or #+
-implicitly by the syntax of the assignment statement.  # Explicit: declare
--a ArrayVar
+#  The names of variables and the names of functions
+#+ are in different namespaces.
 
 
+#  A variable may be defined as a Bash array either explicitly or
+#+ implicitly by the syntax of the assignment statement.
+#  Explicit:
+declare -a ArrayVar
 
-# The echo command is a builtin.  echo $VarSomething
+
+
+# The echo command is a builtin.
+echo $VarSomething
 
 # The printf command is a builtin.
 # Translate %s as: String-Format
@@ -78,30 +85,32 @@ echo                            # Default, only linebreak output.
 
 
 
-# The Bash parser word breaks on whitespace.  # Whitespace, or the lack of
-it is significant.  # (This holds true in general; there are, of course,
-exceptions.)
+# The Bash parser word breaks on whitespace.
+# Whitespace, or the lack of it is significant.
+# (This holds true in general; there are, of course, exceptions.)
 
 
 
 
 # Translate the DOLLAR_SIGN character as: Content-Of.
 
-# Extended-Syntax way of writing Content-Of: echo ${VarSomething}
+# Extended-Syntax way of writing Content-Of:
+echo ${VarSomething}
 
-# The ${ ... } Extended-Syntax allows more than just the variable #+ name to
-be specified.  # In general, $VarSomething can always be written as:
-${VarSomething}.
+#  The ${ ... } Extended-Syntax allows more than just the variable
+#+ name to be specified.
+#  In general, $VarSomething can always be written as: ${VarSomething}.
 
 # Call this script with arguments to see the following in action.
 
 
 
-# Outside of double-quotes, the special characters @ and * #+ specify
-identical behavior.  # May be pronounced as: All-Elements-Of.
+#  Outside of double-quotes, the special characters @ and *
+#+ specify identical behavior.
+#  May be pronounced as: All-Elements-Of.
 
-# Without specification of a name, they refer to the #+ pre-defined
-parameter Bash-Array.
+#  Without specification of a name, they refer to the
+#+ pre-defined parameter Bash-Array.
 
 
 
@@ -109,8 +118,8 @@ parameter Bash-Array.
 echo $*                         # All parameters to script or function
 echo ${*}                       # Same
 
-# Bash disables filename expansion for Glob-Patterns.  # Only character
-matching is active.
+# Bash disables filename expansion for Glob-Patterns.
+# Only character matching is active.
 
 
 # All-Elements-Of references
@@ -120,34 +129,35 @@ echo ${@}                       # Same as above
 
 
 
-# Within double-quotes, the behavior of Glob-Pattern references #+ depends
-on the setting of IFS (Input Field Separator).  # Within double-quotes,
-All-Elements-Of references behave the same.
+#  Within double-quotes, the behavior of Glob-Pattern references
+#+ depends on the setting of IFS (Input Field Separator).
+#  Within double-quotes, All-Elements-Of references behave the same.
 
 
-# Specifying only the name of a variable holding a string refers #+ to all
-elements (characters) of a string.
+#  Specifying only the name of a variable holding a string refers
+#+ to all elements (characters) of a string.
 
 
-# To specify an element (character) of a string, #+ the Extended-Syntax
-reference notation (see below) MAY be used.
+#  To specify an element (character) of a string,
+#+ the Extended-Syntax reference notation (see below) MAY be used.
 
 
 
 
-# Specifying only the name of a Bash array references #+ the subscript zero
-element, #+ NOT the FIRST DEFINED nor the FIRST WITH CONTENTS element.
+#  Specifying only the name of a Bash array references
+#+ the subscript zero element,
+#+ NOT the FIRST DEFINED nor the FIRST WITH CONTENTS element.
 
-# Additional qualification is needed to reference other elements, #+ which
-means that the reference MUST be written in Extended-Syntax.  # The general
-form is: ${name[subscript]}.
+#  Additional qualification is needed to reference other elements,
+#+ which means that the reference MUST be written in Extended-Syntax.
+#  The general form is: ${name[subscript]}.
 
-# The string forms may also be used: ${name:subscript} #+ for Bash-Arrays
-when referencing the subscript zero element.
+#  The string forms may also be used: ${name:subscript}
+#+ for Bash-Arrays when referencing the subscript zero element.
 
 
-# Bash-Arrays are implemented internally as linked lists, #+ not as a fixed
-area of storage as in some programming languages.
+# Bash-Arrays are implemented internally as linked lists,
+#+ not as a fixed area of storage as in some programming languages.
 
 
 #   Characteristics of Bash arrays (Bash-Arrays):
@@ -249,17 +259,33 @@ echo  "${ArrayVar[@]}"
 echo 'Here is: echo "{${ArrayVar[@]}"'
 echo "${ArrayVar[@]}"
 
-echo echo '---Case2: Within double-quotes - IFS is q' IFS='q' echo 'Here is:
-printf %q "{${ArrayVar[*]}"' printf %q "${ArrayVar[*]}" echo echo 'Here is:
-printf %q "{${ArrayVar[@]}"' printf %q "${ArrayVar[@]}" echo echo 'Here is:
-echo "${ArrayVar[*]}"' echo "${ArrayVar[@]}" echo 'Here is: echo
-"{${ArrayVar[@]}"' echo "${ArrayVar[@]}"
+echo
+echo '---Case2: Within double-quotes - IFS is q'
+IFS='q'
+echo 'Here is: printf %q "{${ArrayVar[*]}"'
+printf %q "${ArrayVar[*]}"
+echo
+echo 'Here is: printf %q "{${ArrayVar[@]}"'
+printf %q "${ArrayVar[@]}"
+echo
+echo 'Here is: echo "${ArrayVar[*]}"'
+echo  "${ArrayVar[@]}"
+echo 'Here is: echo "{${ArrayVar[@]}"'
+echo "${ArrayVar[@]}"
 
-echo echo '---Case3: Within double-quotes - IFS is ^' IFS='^' echo 'Here is:
-printf %q "{${ArrayVar[*]}"' printf %q "${ArrayVar[*]}" echo echo 'Here is:
-printf %q "{${ArrayVar[@]}"' printf %q "${ArrayVar[@]}" echo echo 'Here is:
-echo "${ArrayVar[*]}"' echo "${ArrayVar[@]}" echo 'Here is: echo
-"{${ArrayVar[@]}"' echo "${ArrayVar[@]}"
+echo
+echo '---Case3: Within double-quotes - IFS is ^'
+IFS='^'
+echo 'Here is: printf %q "{${ArrayVar[*]}"'
+printf %q "${ArrayVar[*]}"
+echo
+echo 'Here is: printf %q "{${ArrayVar[@]}"'
+printf %q "${ArrayVar[@]}"
+echo
+echo 'Here is: echo "${ArrayVar[*]}"'
+echo  "${ArrayVar[@]}"
+echo 'Here is: echo "{${ArrayVar[@]}"'
+echo "${ArrayVar[@]}"
 
 echo
 echo '---Case4: Within double-quotes - IFS is ^ followed by  
@@ -276,20 +302,37 @@ echo  "${ArrayVar[@]}"
 echo 'Here is: echo "{${ArrayVar[@]}"'
 echo "${ArrayVar[@]}"
 
-echo echo '---Case6: Within double-quotes - IFS set and empty ' IFS='' echo
-'Here is: printf %q "{${ArrayVar[*]}"' printf %q "${ArrayVar[*]}" echo echo
-'Here is: printf %q "{${ArrayVar[@]}"' printf %q "${ArrayVar[@]}" echo echo
-'Here is: echo "${ArrayVar[*]}"' echo "${ArrayVar[@]}" echo 'Here is: echo
-"{${ArrayVar[@]}"' echo "${ArrayVar[@]}"
+echo
+echo '---Case6: Within double-quotes - IFS set and empty '
+IFS=''
+echo 'Here is: printf %q "{${ArrayVar[*]}"'
+printf %q "${ArrayVar[*]}"
+echo
+echo 'Here is: printf %q "{${ArrayVar[@]}"'
+printf %q "${ArrayVar[@]}"
+echo
+echo 'Here is: echo "${ArrayVar[*]}"'
+echo  "${ArrayVar[@]}"
+echo 'Here is: echo "{${ArrayVar[@]}"'
+echo "${ArrayVar[@]}"
 
-echo echo '---Case7: Within double-quotes - IFS is unset' unset IFS echo
-'Here is: printf %q "{${ArrayVar[*]}"' printf %q "${ArrayVar[*]}" echo echo
-'Here is: printf %q "{${ArrayVar[@]}"' printf %q "${ArrayVar[@]}" echo echo
-'Here is: echo "${ArrayVar[*]}"' echo "${ArrayVar[@]}" echo 'Here is: echo
-"{${ArrayVar[@]}"' echo "${ArrayVar[@]}"
+echo
+echo '---Case7: Within double-quotes - IFS is unset'
+unset IFS
+echo 'Here is: printf %q "{${ArrayVar[*]}"'
+printf %q "${ArrayVar[*]}"
+echo
+echo 'Here is: printf %q "{${ArrayVar[@]}"'
+printf %q "${ArrayVar[@]}"
+echo
+echo 'Here is: echo "${ArrayVar[*]}"'
+echo  "${ArrayVar[@]}"
+echo 'Here is: echo "{${ArrayVar[@]}"'
+echo "${ArrayVar[@]}"
 
-echo echo '---End of Cases---' echo
-"========================================================="; echo
+echo
+echo '---End of Cases---'
+echo "========================================================="; echo
 
 
 
@@ -320,33 +363,41 @@ IFS=$'\x20'$'\x09'$'\x0A'           # In exactly this order.
 
 
 
-# The length of a string, measured in non-null elements (characters): echo
-echo '- - Non-quoted references - -' echo 'Non-Null character count:
-'${#VarSomething}' characters.'
+# The length of a string, measured in non-null elements (characters):
+echo
+echo '- - Non-quoted references - -'
+echo 'Non-Null character count: '${#VarSomething}' characters.'
 
 # test='Lit'$'\x00''eral'           # $'\x00' is a null character.
 # echo ${#test}                     # See that?
 
 
 
-# The length of an array, measured in defined elements, #+ including null
-content elements.  echo echo 'Defined content count: '${#ArrayVar[@]}'
-elements.' # That is NOT the maximum subscript (4).  # That is NOT the range
-of the subscripts (1 . . 4 inclusive).  # It IS the length of the linked
-list.  ### # Both the maximum subscript and the range of the subscripts may
+#  The length of an array, measured in defined elements,
+#+ including null content elements.
+echo
+echo 'Defined content count: '${#ArrayVar[@]}' elements.'
+# That is NOT the maximum subscript (4).
+# That is NOT the range of the subscripts (1 . . 4 inclusive).
+# It IS the length of the linked list.
+###
+#  Both the maximum subscript and the range of the subscripts may
 #+ be found with additional script programming.
 
-# The length of a string, measured in non-null elements (characters): echo
-echo '- - Quoted, Glob-Pattern references - -' echo 'Non-Null character
-count: '"${#VarSomething}"' characters.'
+# The length of a string, measured in non-null elements (characters):
+echo
+echo '- - Quoted, Glob-Pattern references - -'
+echo 'Non-Null character count: '"${#VarSomething}"' characters.'
 
-# The length of an array, measured in defined elements, #+ including
-null-content elements.  echo echo 'Defined element count:
-'"${#ArrayVar[*]}"' elements.'
+#  The length of an array, measured in defined elements,
+#+ including null-content elements.
+echo
+echo 'Defined element count: '"${#ArrayVar[*]}"' elements.'
 
-# Interpretation: Substitution does not effect the ${# ... } operation.  #
-Suggestion: # Always use the All-Elements-Of character #+ if that is what is
-intended (independence from IFS).
+#  Interpretation: Substitution does not effect the ${# ... } operation.
+#  Suggestion:
+#  Always use the All-Elements-Of character
+#+ if that is what is intended (independence from IFS).
 
 
 
@@ -363,8 +414,8 @@ _simple() {
 }                                   #+ result returned in any case.
 
 
-# The ( ... ) notation invokes a command or function.  # The $( ... )
-notation is pronounced: Result-Of.
+# The ( ... ) notation invokes a command or function.
+# The $( ... ) notation is pronounced: Result-Of.
 
 
 # Invoke the function _simple
@@ -386,7 +437,8 @@ $(_simple)                          # Gives an error message:
 #                          line 436: SimpleFunc: command not found
 #                          ---------------------------------------
 
-echo ###
+echo
+###
 
 #  The first word of the result of function _simple
 #+ is neither a valid Bash command nor the name of a defined function.
@@ -417,11 +469,13 @@ echo
 
 
 
-# Function variables # ------------------
+# Function variables
+# ------------------
 
-echo echo '- - Function variables - -' # A variable may represent a signed
-integer, a string or an array.  # A string may be used like a function name
-with optional arguments.
+echo
+echo '- - Function variables - -'
+# A variable may represent a signed integer, a string or an array.
+# A string may be used like a function name with optional arguments.
 
 # set -vx                           #  Enable if desired
 declare -f funcVar                  #+ in namespace of functions
@@ -443,15 +497,16 @@ funcVar="$(_print $VarSomething)"   #  $VarSomething replaced HERE.
 $funcVar                            #  The expansion is part of the
 echo                                #+ variable contents.
 
-# The difference between the unquoted and the double-quoted versions #+
-above can be seen in the "protect_literal.sh" example.  # The first case
-above is processed as two, unquoted, Bash-Words.  # The second case above is
-processed as one, quoted, Bash-Word.
+#  The difference between the unquoted and the double-quoted versions
+#+ above can be seen in the "protect_literal.sh" example.
+#  The first case above is processed as two, unquoted, Bash-Words.
+#  The second case above is processed as one, quoted, Bash-Word.
 
 
 
 
-# Delayed replacement # -------------------
+# Delayed replacement
+# -------------------
 
 echo
 echo '- - Delayed replacement - -'
@@ -463,31 +518,46 @@ VarSomething='NewThing'
 eval $funcVar                       # $VarSomething replaced HERE.
 echo
 
-# Restore the original setting trashed above.  VarSomething=Literal
+# Restore the original setting trashed above.
+VarSomething=Literal
 
-# There are a pair of functions demonstrated in the #+ "protect_literal.sh"
-and "unprotect_literal.sh" examples.  # These are general purpose functions
-for delayed replacement literals #+ containing variables.
+#  There are a pair of functions demonstrated in the
+#+ "protect_literal.sh" and "unprotect_literal.sh" examples.
+#  These are general purpose functions for delayed replacement literals
+#+ containing variables.
 
 
 
 
 
-# REVIEW: # ------
+# REVIEW:
+# ------
 
-# A string can be considered a Classic-Array of elements (characters).  # A
-string operation applies to all elements (characters) of the string #+ (in
-concept, anyway).  ### # The notation: ${array_name[@]} represents all
-elements of the #+ Bash-Array: array_name.  ### # The Extended-Syntax string
-operations can be applied to all #+ elements of an array.  ### # This may be
-thought of as a For-Each operation on a vector of strings.  ### # Parameters
-are similar to an array.  # The initialization of a parameter array for a
-script #+ and a parameter array for a function only differ #+ in the
-initialization of ${0}, which never changes its setting.  ### # Subscript
-zero of the script's parameter array contains #+ the name of the script.
-### # Subscript zero of a function's parameter array DOES NOT contain #+ the
-name of the function.  # The name of the current function is accessed by the
-$FUNCNAME variable.  ### # A quick, review list follows (quick, not short).
+#  A string can be considered a Classic-Array of elements (characters).
+#  A string operation applies to all elements (characters) of the string
+#+ (in concept, anyway).
+###
+#  The notation: ${array_name[@]} represents all elements of the
+#+ Bash-Array: array_name.
+###
+#  The Extended-Syntax string operations can be applied to all
+#+ elements of an array.
+###
+#  This may be thought of as a For-Each operation on a vector of strings.
+###
+#  Parameters are similar to an array.
+#  The initialization of a parameter array for a script
+#+ and a parameter array for a function only differ
+#+ in the initialization of ${0}, which never changes its setting.
+###
+#  Subscript zero of the script's parameter array contains
+#+ the name of the script.
+###
+#  Subscript zero of a function's parameter array DOES NOT contain
+#+ the name of the function.
+#  The name of the current function is accessed by the $FUNCNAME variable.
+###
+#  A quick, review list follows (quick, not short).
 
 echo
 echo '- - Test (but not change) - -'
@@ -507,7 +577,8 @@ echo '- contents -'
 echo ${VarSomething-'Content'}          # Literal
 echo ${VarSomething:-'Content'}         # Literal
 
-echo '- Sparse Array -' echo ${ArrayVar[@]-'not set'}
+echo '- Sparse Array -'
+echo ${ArrayVar[@]-'not set'}
 
 # ASCII-Art time
 # State     Y==yes, N==no
@@ -541,7 +612,10 @@ t=${#VarSomething}                      # non-zero length
 ${VarSomething- _decT }                 # Function _simple executed.
 echo $t                                 # Note the Append-To action.
 
-# Exercise: clean up that example.  unset t unset _decT VarSomething=Literal
+# Exercise: clean up that example.
+unset t
+unset _decT
+VarSomething=Literal
 
 echo
 echo '- - Test and Change - -'
@@ -570,23 +644,35 @@ echo ${VarSomething='Content'}          # Literal
 echo ${VarSomething:='Content'}         # Literal
 
 
-# "Subscript sparse" Bash-Arrays ### # Bash-Arrays are subscript packed,
-beginning with #+ subscript zero unless otherwise specified.  ### # The
-initialization of ArrayVar was one way #+ to "otherwise specify".  Here is
-the other way: ### echo declare -a ArraySparse ArraySparse=( [1]=one [2]=''
-[4]='four' )  # [0]=null reference, [2]=null content, [3]=null reference
+# "Subscript sparse" Bash-Arrays
+###
+#  Bash-Arrays are subscript packed, beginning with
+#+ subscript zero unless otherwise specified.
+###
+#  The initialization of ArrayVar was one way
+#+ to "otherwise specify".  Here is the other way:
+###
+echo
+declare -a ArraySparse
+ArraySparse=( [1]=one [2]='' [4]='four' )
+# [0]=null reference, [2]=null content, [3]=null reference
 
-echo '- - Array-Sparse List - -' # Within double-quotes, default IFS,
-Glob-Pattern
+echo '- - Array-Sparse List - -'
+# Within double-quotes, default IFS, Glob-Pattern
 
-IFS=$'\x20'$'\x09'$'\x0A' printf %q "${ArraySparse[*]}" echo
+IFS=$'\x20'$'\x09'$'\x0A'
+printf %q "${ArraySparse[*]}"
+echo
 
-# Note that the output does not distinguish between "null content" #+ and
-"null reference".  # Both print as escaped whitespace.  ### # Note also that
-the output does NOT contain escaped whitespace #+ for the "null
-reference(s)" prior to the first defined element.  ### # This behavior of
-2.04, 2.05a and 2.05b has been reported #+ and may change in a future
-version of Bash.
+#  Note that the output does not distinguish between "null content"
+#+ and "null reference".
+#  Both print as escaped whitespace.
+###
+#  Note also that the output does NOT contain escaped whitespace
+#+ for the "null reference(s)" prior to the first defined element.
+###
+# This behavior of 2.04, 2.05a and 2.05b has been reported
+#+ and may change in a future version of Bash.
 
 #  To output a sparse array and maintain the [subscript]=value
 #+ relationship without change requires a bit of programming.
@@ -603,23 +689,34 @@ version of Bash.
     done
 )
 
-# The reader coming upon the above code fragment cold #+ might want to
-review "command lists" and "multiple commands on a line" #+ in the text of
-the foregoing "Advanced Bash Scripting Guide." ### # Note: # The "read -a
-array_name" version of the "read" command #+ begins filling array_name at
-subscript zero.  # ArraySparse does not define a value at subscript zero.
-### # The user needing to read/write a sparse array to either #+ external
-storage or a communications socket must invent #+ a read/write code pair
-suitable for their purpose.  ### # Exercise: clean it up.
+# The reader coming upon the above code fragment cold
+#+ might want to review "command lists" and "multiple commands on a line"
+#+ in the text of the foregoing "Advanced Bash Scripting Guide."
+###
+#  Note:
+#  The "read -a array_name" version of the "read" command
+#+ begins filling array_name at subscript zero.
+#  ArraySparse does not define a value at subscript zero.
+###
+#  The user needing to read/write a sparse array to either
+#+ external storage or a communications socket must invent
+#+ a read/write code pair suitable for their purpose.
+###
+# Exercise: clean it up.
 
 unset ArraySparse
 
-echo echo '- - Conditional alternate (But not change)- -' echo '- No
-alternate if null reference -' echo -n ${VarNull+'NotSet'}' ' echo
-${VarNull} unset VarNull
+echo
+echo '- - Conditional alternate (But not change)- -'
+echo '- No alternate if null reference -'
+echo -n ${VarNull+'NotSet'}' '
+echo ${VarNull}
+unset VarNull
 
-echo '- No alternate if null reference -' echo -n ${VarNull:+'NotSet'}' '
-echo ${VarNull} unset VarNull
+echo '- No alternate if null reference -'
+echo -n ${VarNull:+'NotSet'}' '
+echo ${VarNull}
+unset VarNull
 
 echo '- Alternate if null contents -'
 echo -n ${VarEmpty+'Empty'}' '              # Empty
@@ -653,8 +750,9 @@ _incT() {
     t=$t+1
 }
 
-# Note: # This is the same test used in the sparse array #+ listing code
-fragment.
+#  Note:
+#  This is the same test used in the sparse array
+#+ listing code fragment.
 
 # Null reference, set: t == -1
 t=${#VarNull}-1                     # Results in minus-one.
@@ -671,24 +769,31 @@ t=${#VarSomething}-1                # non-null length minus-one
 ${VarSomething+ _incT }             # Executes.
 echo $t'  Contents'
 
-# Exercise: clean up that example.  unset t unset _incT
+# Exercise: clean up that example.
+unset t
+unset _incT
 
-# ${name?err_msg} ${name:?err_msg} # These follow the same rules but always
-exit afterwards #+ if an action is specified following the question mark.  #
-The action following the question mark may be a literal #+ or a function
-result.  ### # ${name?} ${name:?} are test-only, the return can be tested.
+# ${name?err_msg} ${name:?err_msg}
+#  These follow the same rules but always exit afterwards
+#+ if an action is specified following the question mark.
+#  The action following the question mark may be a literal
+#+ or a function result.
+###
+#  ${name?} ${name:?} are test-only, the return can be tested.
 
 
 
 
-# Element operations # ------------------
+# Element operations
+# ------------------
 
-echo echo '- - Trailing sub-element selection - -'
+echo
+echo '- - Trailing sub-element selection - -'
 
-# Strings, Arrays and Positional parameters
+#  Strings, Arrays and Positional parameters
 
-# Call this script with multiple arguments #+ to see the parameter
-selections.
+#  Call this script with multiple arguments
+#+ to see the parameter selections.
 
 echo '- All -'
 echo ${VarSomething:0}              # all non-null characters
@@ -718,27 +823,33 @@ echo ${ArrayVar[@]:1:2}     #  four - The only element with content.
 #  Executed as if Bash considers ONLY array elements with CONTENT
 #  printf %q "${ArrayVar[@]:0:3}"    # Try this one
 
-# In versions 2.04, 2.05a and 2.05b, #+ Bash does not handle sparse arrays
-as expected using this notation.  # # The current Bash maintainer, Chet
-Ramey, has corrected this.
+#  In versions 2.04, 2.05a and 2.05b,
+#+ Bash does not handle sparse arrays as expected using this notation.
+#
+#  The current Bash maintainer, Chet Ramey, has corrected this.
 
 
 echo '- Non-sparse array -'
 echo ${@:2:2}               # Two parameters following parameter[1]
 
-# New victims for string vector examples: stringZ=abcABC123ABCabc arrayZ=(
-abcabc ABCABC 123123 ABCABC abcabc )  sparseZ=( [1]='abcabc' [3]='ABCABC'
-[4]='' [5]='123123' )
+# New victims for string vector examples:
+stringZ=abcABC123ABCabc
+arrayZ=( abcabc ABCABC 123123 ABCABC abcabc )
+sparseZ=( [1]='abcabc' [3]='ABCABC' [4]='' [5]='123123' )
 
-echo echo ' - - Victim string - -'$stringZ'- - ' echo ' - - Victim array -
--'${arrayZ[@]}'- - ' echo ' - - Sparse array - -'${sparseZ[@]}'- - ' echo '
-- [0]==null ref, [2]==null ref, [4]==null content - ' echo ' - [1]=abcabc
-[3]=ABCABC [5]=123123 - ' echo ' - non-null-reference count:
-'${#sparseZ[@]}' elements'
+echo
+echo ' - - Victim string - -'$stringZ'- - '
+echo ' - - Victim array - -'${arrayZ[@]}'- - '
+echo ' - - Sparse array - -'${sparseZ[@]}'- - '
+echo ' - [0]==null ref, [2]==null ref, [4]==null content - '
+echo ' - [1]=abcabc [3]=ABCABC [5]=123123 - '
+echo ' - non-null-reference count: '${#sparseZ[@]}' elements'
 
-echo echo '- - Prefix sub-element removal - -' echo '- - Glob-Pattern match
-must include the first character. - -' echo '- - Glob-Pattern may be a
-literal or a function result. - -' echo
+echo
+echo '- - Prefix sub-element removal - -'
+echo '- - Glob-Pattern match must include the first character. - -'
+echo '- - Glob-Pattern may be a literal or a function result. - -'
+echo
 
 
 # Function returning a simple, Literal, Glob-Pattern
@@ -814,8 +925,12 @@ echo ${stringZ/ABC/xyz}             # xyzABC123ABCabc
 echo ${arrayZ[@]/ABC/xyz}           # Applied to each element.
 echo ${sparseZ[@]/ABC/xyz}          # Works as expected.
 
-echo echo '- Delete first occurrence -' echo ${stringZ/$(_123)/} echo
-${stringZ/ABC/} echo ${arrayZ[@]/ABC/} echo ${sparseZ[@]/ABC/}
+echo
+echo '- Delete first occurrence -'
+echo ${stringZ/$(_123)/}
+echo ${stringZ/ABC/}
+echo ${arrayZ[@]/ABC/}
+echo ${sparseZ[@]/ABC/}
 
 #  The replacement need not be a literal,
 #+ since the result of a function invocation is allowed.
@@ -833,11 +948,17 @@ echo ${stringZ//abc/xyz}            # xyzABC123ABCxyz
 echo ${arrayZ[@]//abc/xyz}          # Applied to each element.
 echo ${sparseZ[@]//abc/xyz}         # Works as expected.
 
-echo echo '- Delete all occurrences -' echo ${stringZ//[b2]/} echo
-${stringZ//abc/} echo ${arrayZ[@]//abc/} echo ${sparseZ[@]//abc/}
+echo
+echo '- Delete all occurrences -'
+echo ${stringZ//[b2]/}
+echo ${stringZ//abc/}
+echo ${arrayZ[@]//abc/}
+echo ${sparseZ[@]//abc/}
 
-echo echo '- - Prefix sub-element replacement - -' echo '- - Match must
-include the first character. - -' echo
+echo
+echo '- - Prefix sub-element replacement - -'
+echo '- - Match must include the first character. - -'
+echo
 
 echo '- Replace prefix occurrences -'
 echo ${stringZ/#[b2]/X}             # Unchanged (neither is a prefix).
@@ -845,11 +966,17 @@ echo ${stringZ/#$(_abc)/XYZ}        # XYZABC123ABCabc
 echo ${arrayZ[@]/#abc/XYZ}          # Applied to each element.
 echo ${sparseZ[@]/#abc/XYZ}         # Works as expected.
 
-echo echo '- Delete prefix occurrences -' echo ${stringZ/#[b2]/} echo
-${stringZ/#$(_abc)/} echo ${arrayZ[@]/#abc/} echo ${sparseZ[@]/#abc/}
+echo
+echo '- Delete prefix occurrences -'
+echo ${stringZ/#[b2]/}
+echo ${stringZ/#$(_abc)/}
+echo ${arrayZ[@]/#abc/}
+echo ${sparseZ[@]/#abc/}
 
-echo echo '- - Suffix sub-element replacement - -' echo '- - Match must
-include the last character. - -' echo
+echo
+echo '- - Suffix sub-element replacement - -'
+echo '- - Match must include the last character. - -'
+echo
 
 echo '- Replace suffix occurrences -'
 echo ${stringZ/%[b2]/X}             # Unchanged (neither is a suffix).
@@ -857,10 +984,16 @@ echo ${stringZ/%$(_abc)/XYZ}        # abcABC123ABCXYZ
 echo ${arrayZ[@]/%abc/XYZ}          # Applied to each element.
 echo ${sparseZ[@]/%abc/XYZ}         # Works as expected.
 
-echo echo '- Delete suffix occurrences -' echo ${stringZ/%[b2]/} echo
-${stringZ/%$(_abc)/} echo ${arrayZ[@]/%abc/} echo ${sparseZ[@]/%abc/}
+echo
+echo '- Delete suffix occurrences -'
+echo ${stringZ/%[b2]/}
+echo ${stringZ/%$(_abc)/}
+echo ${arrayZ[@]/%abc/}
+echo ${sparseZ[@]/%abc/}
 
-echo echo '- - Special cases of null Glob-Pattern - -' echo
+echo
+echo '- - Special cases of null Glob-Pattern - -'
+echo
 
 echo '- Prefix all -'
 # null substring pattern means 'prefix'
@@ -877,17 +1010,20 @@ echo ${arrayZ[@]/%/NEW}             # Applied to each element.
 echo ${sparseZ[@]/%/NEW}            # Applied to null-content also.
                                     # That seems reasonable.
 
-echo echo '- - Special case For-Each Glob-Pattern - -' echo '- - - - This is
-a nice-to-have dream - - - -' echo
+echo
+echo '- - Special case For-Each Glob-Pattern - -'
+echo '- - - - This is a nice-to-have dream - - - -'
+echo
 
 _GenFunc() {
     echo -n ${0}                    # Illustration only.
     # Actually, that would be an arbitrary computation.
 }
 
-# All occurrences, matching the AnyThing pattern.  # Currently //*/ does not
-match null-content nor null-reference.  # /#/ and /%/ does match
-null-content but not null-reference.  echo ${sparseZ[@]//*/$(_GenFunc)}
+# All occurrences, matching the AnyThing pattern.
+# Currently //*/ does not match null-content nor null-reference.
+# /#/ and /%/ does match null-content but not null-reference.
+echo ${sparseZ[@]//*/$(_GenFunc)}
 
 
 #  A possible syntax would be to make

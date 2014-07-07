@@ -1,4 +1,5 @@
-#!/bin/bash # ex9.sh
+#!/bin/bash
+# ex9.sh
 
 # Variables: assignment and substitution
 
@@ -6,9 +7,9 @@ a=375
 hello=$a
 #   ^ ^
 
-#------------------------------------------------------------------------- #
-No space permitted on either side of = sign when initializing variables.  #
-What happens if there is a space?
+#-------------------------------------------------------------------------
+# No space permitted on either side of = sign when initializing variables.
+# What happens if there is a space?
 
 #  "VARIABLE =value"
 #           ^
@@ -60,9 +61,9 @@ echo "\$hello (null value) = $hello"      # $hello (null value) =
 
 # --------------------------------------------------------------
 
-# It is permissible to set multiple variables on the same line, #+ if
-separated by white space.  # Caution, this may reduce legibility, and may
-not be portable.
+#  It is permissible to set multiple variables on the same line,
+#+ if separated by white space.
+#  Caution, this may reduce legibility, and may not be portable.
 
 var1=21  var2=22  var3=$V3
 echo
