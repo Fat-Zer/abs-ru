@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the abs-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Alexander Golubev <fatzer2@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: abs-guide 10\n"
 "Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
 "POT-Creation-Date: 2014-07-07 23:03+0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-07-08 02:36+0400\n"
+"Last-Translator: Alexander Golubev <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. type: Content of: <book><bookinfo><title>
 #: abs-guide/abs-guide.xml:409
@@ -75,7 +76,7 @@ msgstr "'Вольфрамниковый' выпуск"
 #. type: Content of: <book><bookinfo><revhistory><revision><revnumber>
 #: abs-guide/abs-guide.xml:439
 msgid "6.6"
-msgstr ""
+msgstr "6.6"
 
 #. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
 #: abs-guide/abs-guide.xml:440 abs-guide/abs-guide.xml:39932
@@ -110,6 +111,16 @@ msgid ""
 "<userinput>the only way to really learn scripting is to write scripts</"
 "userinput>."
 msgstr ""
+"Это руководство не предполагает наличия у читателя каких-либо знаний в "
+"области написания сценариев или программирования, хотя и быстро переходит к "
+"среднему/продвинутому уровню изложения <emphasis>. . . И в то же время, "
+"пробираясь во все укромные закоулки заний о мира <trademark "
+"class=\"registered\">UNIX</trademark></emphasis>. Оно может служить как "
+"учебником, пособием для самостоятельного изучения, так и справочником и "
+"сборником приёмов написания shell-сценариев. Упражнения и обильно "
+"прокомментированные примеры располагают к активному участию читателя в "
+"процессе, ибо <userinput>единственный путь научиться писать сценарии — это "
+"писать их</userinput>."
 
 #. type: Content of: <book><bookinfo><abstract><para>
 #: abs-guide/abs-guide.xml:468
@@ -117,38 +128,43 @@ msgid ""
 "This book is suitable for classroom use as a general introduction to "
 "programming concepts."
 msgstr ""
+"Эта книга подходит для использования в учебном процессе для общего введения "
+"в основы программирования."
 
 #. type: Content of: <book><bookinfo><abstract><para>
 #: abs-guide/abs-guide.xml:471
+#, fuzzy
 msgid ""
 "This document is herewith granted to the Public Domain.  <userinput>No "
 "copyright!</userinput>"
 msgstr ""
+"Настоящим, этот документ передаётся в Общественное Достояние. <userinput>Ни "
+"каких притязаний на авторские права!</userinput>"
 
 #. type: Content of: <book><dedication><para>
 #: abs-guide/abs-guide.xml:478
 msgid "For Anita, the source of all the magic"
-msgstr ""
+msgstr "Аните, источнику вдохновение"
 
 #. type: Content of: <book><part><title>
 #: abs-guide/abs-guide.xml:484
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #. type: Content of: <book><part><partintro><epigraph><para>
 #: abs-guide/abs-guide.xml:489
 msgid "Script: <emphasis>A writing; a written document. [Obs.]</emphasis>"
-msgstr ""
+msgstr "Script: <emphasis>Рукопись; рукописный документ. [Устар.]</emphasis>"
 
 #. type: Content of: <book><part><partintro><epigraph><para>
 #: abs-guide/abs-guide.xml:491
 msgid "--<emphasis>Webster's Dictionary</emphasis>, 1913 ed."
-msgstr ""
+msgstr "--<emphasis>Словарь Уэбстера</emphasis>, 1913 г."
 
 #. type: Content of: <book><part><partintro><para>
 #: abs-guide/abs-guide.xml:494
 msgid "<anchor id=\"whatsascript\"/>"
-msgstr ""
+msgstr "<anchor id=\"whatsascript\"/>"
 
 #. type: Content of: <book><part><partintro><para>
 #: abs-guide/abs-guide.xml:496
@@ -166,11 +182,23 @@ msgid ""
 "tasks not requiring the bells and whistles of a full-blown tightly "
 "structured programming language."
 msgstr ""
+"Shell — это командный интерпретатор. Он представляет собой нечто большее, "
+"нежели изолирующий уровень между ядром операционной системы и пользователем, "
+"— это довольно мощный язык программирования. Shell-программа называется "
+"<firstterm>скрипт</firstterm>, простой в использовании инструмент, чтобы "
+"создать приложение, <quote>слепив вместе</quote>  различные системные "
+"вызовы, команды, утилиты и скомпилированные бинарные программы. Практически "
+"весь набок команд, утилит и программ UNIX доступен для вызова из сценариев. "
+"И если этого не достаточно, то встроенные shell-команды, такие как "
+"конструкции ветвлений и циклов, придают сценариям дополнительную мощь и "
+"гибкость. Shell-сценарии особенно хорошо подходят для задач системного "
+"администрирования и других рутинных повторяющихся задач, не требующих всех "
+"излишеств раздутого жёстко-структурированного языка программирования."
 
 #. type: Content of: <book><part><chapter><title>
 #: abs-guide/abs-guide.xml:514
 msgid "Shell Programming!"
-msgstr ""
+msgstr "Программирование на Shell!"
 
 #. type: Content of: <book><part><chapter><epigraph><para>
 #: abs-guide/abs-guide.xml:517
@@ -179,11 +207,15 @@ msgid ""
 "language; there are only languages well suited or perhaps poorly suited for "
 "particular purposes."
 msgstr ""
+"Ни один язык программирования не совершенен. Нет даже какого-либо лучшего "
+"языка — есть только языки хорошо или, возможно, плохо подходящие для "
+"конкретных задач."
 
 #. type: Content of: <book><part><chapter><epigraph><para>
 #: abs-guide/abs-guide.xml:520
+#, fuzzy
 msgid "--Herbert Mayer"
-msgstr ""
+msgstr "--Herbert Mayer"
 
 #. type: Content of: <book><part><chapter><para>
 #: abs-guide/abs-guide.xml:524
@@ -196,6 +228,14 @@ msgid ""
 "set up services. A detailed understanding of these startup scripts is "
 "important for analyzing the behavior of a system, and possibly modifying it."
 msgstr ""
+"Владение навыками shell-программирования важны любому, кто хочет стать "
+"знатоком в системном администрировании, даже если он не ожидает, что ему "
+"когда-либо действительно  придётся писать сценарий. Обдумайте это: во время "
+"загрузки Linux-машина исполняет сценарии из <filename "
+"class=\"directory\">/etc/rc.d</filename>, которые восстанавливают конфигурацию "
+"системы и запускают необходимые для работы службы. Детальное понимание этих "
+"сценариев запуска важно для анализа поведения системы и, возможно, "
+"модификации оного."
 
 #. type: Content of: <book><part><chapter><para><footnote><para>
 #: abs-guide/abs-guide.xml:537

@@ -448,18 +448,19 @@
 
     <abstract>
 
-      <para>This tutorial assumes no previous knowledge of scripting or programming, yet
-progresses rapidly toward an intermediate/advanced level of instruction
-<emphasis>. . . all the while sneaking in little nuggets of <trademark
-class="registered">UNIX</trademark> wisdom and lore</emphasis>. It serves as
-a textbook, a manual for self-study, and as a reference and source of
-knowledge on shell scripting techniques. The exercises and heavily-commented
-examples invite active reader participation, under the premise that
-<userinput>the only way to really learn scripting is to write
-scripts</userinput>.</para>
+      <para>Это руководство не предполагает наличия у читателя каких-либо знаний в
+области написания сценариев или программирования, хотя и быстро переходит к
+среднему/продвинутому уровню изложения <emphasis>. . . И в то же время,
+пробираясь во все укромные закоулки заний о мира <trademark
+class="registered">UNIX</trademark></emphasis>. Оно может служить как
+учебником, пособием для самостоятельного изучения, так и справочником и
+сборником приёмов написания shell-сценариев. Упражнения и обильно
+прокомментированные примеры располагают к активному участию читателя в
+процессе, ибо <userinput>единственный путь научиться писать сценарии — это
+писать их</userinput>.</para>
 
-      <para>This book is suitable for classroom use as a general introduction to
-programming concepts.</para>
+      <para>Эта книга подходит для использования в учебном процессе для общего введения
+в основы программирования.</para>
 
       <para>This document is herewith granted to the Public Domain.  <userinput>No
 copyright!</userinput></para>
@@ -468,56 +469,57 @@ copyright!</userinput></para>
   </bookinfo>
 
   <dedication>
-    <para>For Anita, the source of all the magic</para>
+    <para>Аните, источнику вдохновение</para>
   </dedication>
 
 
 
   <part label="Part 1" id="part1">
-    <title>Introduction</title>
+    <title>Введение</title>
 
   <partintro>  
 
     <epigraph>
-      <para>Script: <emphasis>A writing; a written document. [Obs.]</emphasis></para>
-      <para>--<emphasis>Webster's Dictionary</emphasis>, 1913 ed.</para>
+      <para>Script: <emphasis>Рукопись; рукописный документ. [Устар.]</emphasis></para>
+      <para>--<emphasis>Словарь Уэбстера</emphasis>, 1913 г.</para>
     </epigraph>
 
 	<para><anchor id="whatsascript"/></para>
 
-    <para>The shell is a command interpreter. More than just the insulating layer
-between the operating system kernel and the user, it's also a fairly
-powerful programming language. A shell program, called a
-<firstterm>script</firstterm>, is an easy-to-use tool for building
-applications by <quote>gluing together</quote> system calls, tools,
-utilities, and compiled binaries.  Virtually the entire repertoire of UNIX
-commands, utilities, and tools is available for invocation by a shell
-script. If that were not enough, internal shell commands, such as testing
-and loop constructs, lend additional power and flexibility to scripts.
-Shell scripts are especially well suited for administrative system tasks and
-other routine repetitive tasks not requiring the bells and whistles of a
-full-blown tightly structured programming language.</para>
+    <para>Shell — это командный интерпретатор. Он представляет собой нечто большее,
+нежели изолирующий уровень между ядром операционной системы и пользователем,
+— это довольно мощный язык программирования. Shell-программа называется
+<firstterm>скрипт</firstterm>, простой в использовании инструмент, чтобы
+создать приложение, <quote>слепив вместе</quote>  различные системные
+вызовы, команды, утилиты и скомпилированные бинарные программы. Практически
+весь набок команд, утилит и программ UNIX доступен для вызова из
+сценариев. И если этого не достаточно, то встроенные shell-команды, такие
+как конструкции ветвлений и циклов, придают сценариям дополнительную мощь и
+гибкость. Shell-сценарии особенно хорошо подходят для задач системного
+администрирования и других рутинных повторяющихся задач, не требующих всех
+излишеств раздутого жёстко-структурированного языка программирования.</para>
 
   </partintro>  
 
   <chapter id="why-shell">
-    <title>Shell Programming!</title>
+    <title>Программирование на Shell!</title>
 
     <epigraph>
-      <para>No programming language is perfect. There is not even a single best
-language; there are only languages well suited or perhaps poorly suited for
-particular purposes.</para>
+      <para>Ни один язык программирования не совершенен. Нет даже какого-либо лучшего
+языка — есть только языки хорошо или, возможно, плохо подходящие для
+конкретных задач.</para>
       <para>--Herbert Mayer</para>
     </epigraph>
     
     
-    <para>A working knowledge of shell scripting is essential to anyone wishing to
-become reasonably proficient at system administration, even if they do not
-anticipate ever having to actually write a script. Consider that as a Linux
-machine boots up, it executes the shell scripts in <filename
-class="directory">/etc/rc.d</filename> to restore the system configuration
-and set up services. A detailed understanding of these startup scripts is
-important for analyzing the behavior of a system, and possibly modifying it.</para>
+    <para>Владение навыками shell-программирования важны любому, кто хочет стать
+знатоком в системном администрировании, даже если он не ожидает, что ему
+когда-либо действительно  придётся писать сценарий. Обдумайте это: во время
+загрузки Linux-машина исполняет сценарии из <filename
+class="directory">/etc/rc.d</filename>, которые восстанавливают конфигурацию
+системы и запускают необходимые для работы службы. Детальное понимание этих
+сценариев запуска важно для анализа поведения системы и, возможно,
+модификации оного.</para>
 
     <para>The craft of scripting is not hard to master, since scripts can be built in
 bite-sized sections and there is only a fairly small set of shell-specific
