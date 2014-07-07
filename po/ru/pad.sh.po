@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,8 +66,7 @@ msgid ""
 "HDR5=\"\\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD\n"
 "for short, is a data set that is used by shareware authors to\n"
 "disseminate information to anyone interested in their software products.\n"
-"To find out more go to "
-"http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;\"\n"
+"To find out more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;\"\n"
 "HDR6=\"&lt;/MASTER_PAD_VERSION_INFO&gt;\"\n"
 "# ============================\n"
 msgstr ""
@@ -210,7 +210,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/pad.sh:120 abs-guide/pad.sh:139 abs-guide/pad.sh:174 abs-guide/pad.sh:190 abs-guide/pad.sh:205
+#: abs-guide/pad.sh:120 abs-guide/pad.sh:139 abs-guide/pad.sh:174
+#: abs-guide/pad.sh:190 abs-guide/pad.sh:205
 #, no-wrap
 msgid "clear\n"
 msgstr ""

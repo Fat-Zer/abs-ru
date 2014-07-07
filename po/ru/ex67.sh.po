@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,9 +35,7 @@ msgstr ""
 #. type: Plain text
 #: abs-guide/ex67.sh:8
 #, no-wrap
-msgid ""
-"echo \"Enter your favorite colors (separated from each other by a "
-"space).\"\n"
+msgid "echo \"Enter your favorite colors (separated from each other by a space).\"\n"
 msgstr ""
 
 #. type: Plain text
@@ -102,8 +101,7 @@ msgstr ""
 #: abs-guide/ex67.sh:49
 #, no-wrap
 msgid ""
-"# Again, list all the elements in the array, but using a more elegant "
-"method.\n"
+"# Again, list all the elements in the array, but using a more elegant method.\n"
 "  echo ${colors[@]}          # echo ${colors[*]} also works.\n"
 msgstr ""
 

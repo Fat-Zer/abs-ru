@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-06 22:38+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,12 +29,25 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:7
 msgid ""
-"Note that <emphasis>commands</emphasis> are indexed in <link "
-"linkend=\"part4A\">Part 4</link>."
+"Note that <emphasis>commands</emphasis> are indexed in <link linkend=\"part4A"
+"\">Part 4</link>."
 msgstr ""
 
 #. type: Content of: <para>
-#: abs-guide/INDEX00.xml:10 abs-guide/INDEX00.xml:724 abs-guide/INDEX00.xml:934 abs-guide/INDEX00.xml:1086 abs-guide/INDEX00.xml:1237 abs-guide/INDEX00.xml:1366 abs-guide/INDEX00.xml:1522 abs-guide/INDEX00.xml:1649 abs-guide/INDEX00.xml:1745 abs-guide/INDEX00.xml:1839 abs-guide/INDEX00.xml:1903 abs-guide/INDEX00.xml:1916 abs-guide/INDEX00.xml:1938 abs-guide/INDEX00.xml:2101 abs-guide/INDEX00.xml:2136 abs-guide/INDEX00.xml:2169 abs-guide/INDEX00.xml:2211 abs-guide/INDEX00.xml:2600 abs-guide/INDEX00.xml:2640 abs-guide/INDEX00.xml:2876 abs-guide/INDEX00.xml:3164 abs-guide/INDEX00.xml:3472 abs-guide/INDEX00.xml:3497 abs-guide/INDEX00.xml:3604 abs-guide/INDEX00.xml:3694 abs-guide/INDEX00.xml:3711 abs-guide/INDEX00.xml:3719
+#: abs-guide/INDEX00.xml:10 abs-guide/INDEX00.xml:724
+#: abs-guide/INDEX00.xml:934 abs-guide/INDEX00.xml:1086
+#: abs-guide/INDEX00.xml:1237 abs-guide/INDEX00.xml:1366
+#: abs-guide/INDEX00.xml:1522 abs-guide/INDEX00.xml:1649
+#: abs-guide/INDEX00.xml:1745 abs-guide/INDEX00.xml:1839
+#: abs-guide/INDEX00.xml:1903 abs-guide/INDEX00.xml:1916
+#: abs-guide/INDEX00.xml:1938 abs-guide/INDEX00.xml:2101
+#: abs-guide/INDEX00.xml:2136 abs-guide/INDEX00.xml:2169
+#: abs-guide/INDEX00.xml:2211 abs-guide/INDEX00.xml:2600
+#: abs-guide/INDEX00.xml:2640 abs-guide/INDEX00.xml:2876
+#: abs-guide/INDEX00.xml:3164 abs-guide/INDEX00.xml:3472
+#: abs-guide/INDEX00.xml:3497 abs-guide/INDEX00.xml:3604
+#: abs-guide/INDEX00.xml:3694 abs-guide/INDEX00.xml:3711
+#: abs-guide/INDEX00.xml:3719
 msgid "* * *"
 msgstr ""
 
@@ -45,8 +59,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:17
 msgid ""
-"<link linkend=\"beglineref\">Beginning-of-line</link>, in a <link "
-"linkend=\"regexref\">Regular Expression</link>"
+"<link linkend=\"beglineref\">Beginning-of-line</link>, in a <link linkend="
+"\"regexref\">Regular Expression</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -88,17 +102,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:51
 msgid ""
-"<command>~+ </command> <link "
-"linkend=\"workingdirref\"><emphasis>Current</emphasis> working "
-"directory</link>"
+"<command>~+ </command> <link linkend=\"workingdirref\"><emphasis>Current</"
+"emphasis> working directory</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:57
 msgid ""
-"<command>~- </command> <link "
-"linkend=\"prevworkingdir\"><emphasis>Previous</emphasis> working "
-"directory</link>"
+"<command>~- </command> <link linkend=\"prevworkingdir\"><emphasis>Previous</"
+"emphasis> working directory</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -116,15 +128,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:76
 msgid ""
-"<command>= </command> <link linkend=\"scomparison1\">String "
-"comparison</link> operator"
+"<command>= </command> <link linkend=\"scomparison1\">String comparison</"
+"link> operator"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:80
 msgid ""
-"<command>== </command> <link linkend=\"scomparison2\">String "
-"comparison</link> operator"
+"<command>== </command> <link linkend=\"scomparison2\">String comparison</"
+"link> operator"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -136,7 +148,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:90
-msgid "<link linkend=\"findsplit0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"findsplit0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -157,20 +170,21 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:107
 msgid ""
-"<link linkend=\"intlt\">Integer comparison</link> within <link "
-"linkend=\"dblparens\">double parentheses</link>"
+"<link linkend=\"intlt\">Integer comparison</link> within <link linkend="
+"\"dblparens\">double parentheses</link>"
 msgstr ""
 
 #. type: Content of: <para>
-#: abs-guide/INDEX00.xml:112 abs-guide/INDEX00.xml:147 abs-guide/INDEX00.xml:2739
+#: abs-guide/INDEX00.xml:112 abs-guide/INDEX00.xml:147
+#: abs-guide/INDEX00.xml:2739
 msgid "Redirection"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:115
 msgid ""
-"<command>&lt; </command> <link "
-"linkend=\"ioredirectionref2\"><filename>stdin</filename></link>"
+"<command>&lt; </command> <link linkend="
+"\"ioredirectionref2\"><filename>stdin</filename></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -183,8 +197,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:123
 msgid ""
-"<command>&lt;&lt;&lt; </command> <link "
-"linkend=\"herestringref\"><firstterm>Here string</firstterm></link>"
+"<command>&lt;&lt;&lt; </command> <link linkend=\"herestringref"
+"\"><firstterm>Here string</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -227,8 +241,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:154
 msgid ""
 "<command>&gt;&gt; </command> <link linkend=\"ioredirectionref\">Redirect "
-"<filename>stdout</filename></link> to a file, but "
-"<firstterm>append</firstterm>"
+"<filename>stdout</filename></link> to a file, but <firstterm>append</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -251,8 +265,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:173 abs-guide/INDEX00.xml:602
 msgid ""
 "<command>&gt;&amp;2 </command> <link linkend=\"redirouterror2\">Redirect "
-"<filename>stdout</filename></link> of a command to "
-"<filename>stderr</filename>"
+"<filename>stdout</filename></link> of a command to <filename>stderr</"
+"filename>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -266,15 +280,15 @@ msgstr ""
 #: abs-guide/INDEX00.xml:183 abs-guide/INDEX00.xml:589
 msgid ""
 "<command>&amp;&gt; </command> <link linkend=\"redirouterror\">Redirect "
-"<emphasis>both</emphasis> <filename>stdout</filename> and "
-"<filename>stderr</filename></link> of a command to a file"
+"<emphasis>both</emphasis> <filename>stdout</filename> and <filename>stderr</"
+"filename></link> of a command to a file"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:189
 msgid ""
-"<command>:&gt; <filename>file</filename></command> <link "
-"linkend=\"ioredirectionref\">Truncate file</link> to zero length"
+"<command>:&gt; <filename>file</filename></command> <link linkend="
+"\"ioredirectionref\">Truncate file</link> to zero length"
 msgstr ""
 
 #. type: Content of: <para>
@@ -287,8 +301,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:203
 msgid ""
-"<command>|| </command> <link linkend=\"orref\">Logical OR test "
-"operator</link>"
+"<command>|| </command> <link linkend=\"orref\">Logical OR test operator</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -299,24 +313,21 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:212
 msgid ""
-"<link linkend=\"defparam1\">Prefix to <firstterm>default "
-"parameter</firstterm></link>, in <firstterm>parameter "
-"substitution</firstterm>"
+"<link linkend=\"defparam1\">Prefix to <firstterm>default parameter</"
+"firstterm></link>, in <firstterm>parameter substitution</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:216
 msgid ""
-"<link linkend=\"dashref\">Prefix to <firstterm>option "
-"flag</firstterm></link>"
+"<link linkend=\"dashref\">Prefix to <firstterm>option flag</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:220
 msgid ""
-"<link linkend=\"dashref2\">Indicating "
-"<firstterm>redirection</firstterm></link> from <filename>stdin</filename> or "
-"<filename>stdout</filename>"
+"<link linkend=\"dashref2\">Indicating <firstterm>redirection</firstterm></"
+"link> from <filename>stdin</filename> or <filename>stdout</filename>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -335,8 +346,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:230
 msgid ""
 "<link linkend=\"plusplusref\"><firstterm>C-style</firstterm> variable "
-"decrement</link> within <link linkend=\"dblparensref\">double "
-"parentheses</link>"
+"decrement</link> within <link linkend=\"dblparensref\">double parentheses</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -352,17 +363,16 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:244
 msgid ""
-"<command>\\; </command> <link "
-"linkend=\"findref0\"><firstterm>Escaped</firstterm> semicolon</link>, "
-"terminates a <link linkend=\"findref\">find</link> command"
+"<command>\\; </command> <link linkend=\"findref0\"><firstterm>Escaped</"
+"firstterm> semicolon</link>, terminates a <link linkend=\"findref\">find</"
+"link> command"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:248
 msgid ""
-"<command>;; </command> <link "
-"linkend=\"doublesemicolon\">Double-semicolon</link>, terminator in a <link "
-"linkend=\"caseesac1\">case</link> option"
+"<command>;; </command> <link linkend=\"doublesemicolon\">Double-semicolon</"
+"link>, terminator in a <link linkend=\"caseesac1\">case</link> option"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -380,16 +390,16 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:256
 msgid ""
-"<link linkend=\"omitsemicolon\"> terminating "
-"<firstterm>curly-bracketed</firstterm> code block</link>"
+"<link linkend=\"omitsemicolon\"> terminating <firstterm>curly-bracketed</"
+"firstterm> code block</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:261
 msgid ""
-"<command>;;&amp;</command> <command>;&amp;</command> <link "
-"linkend=\"ncterm\">Terminators</link> in a <firstterm>case</firstterm> "
-"option (<link linkend=\"bash4ref\">version 4+</link> of Bash)."
+"<command>;;&amp;</command> <command>;&amp;</command> <link linkend=\"ncterm"
+"\">Terminators</link> in a <firstterm>case</firstterm> option (<link linkend="
+"\"bash4ref\">version 4+</link> of Bash)."
 msgstr ""
 
 #. type: Content of: <para>
@@ -400,8 +410,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:273
 msgid ""
-"<command>:&gt; <filename>filename</filename></command> <link "
-"linkend=\"ioredirectionref\">Truncate file</link> to zero length"
+"<command>:&gt; <filename>filename</filename></command> <link linkend="
+"\"ioredirectionref\">Truncate file</link> to zero length"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -413,12 +423,14 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:283
-msgid "Used in an <link linkend=\"anonheredoc0\">anonymous here document</link>"
+msgid ""
+"Used in an <link linkend=\"anonheredoc0\">anonymous here document</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:286
-msgid "Used in an <link linkend=\"coloninfunction\">otherwise empty function</link>"
+msgid ""
+"Used in an <link linkend=\"coloninfunction\">otherwise empty function</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -455,8 +467,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:313 abs-guide/INDEX00.xml:2610
 msgid ""
-"<link linkend=\"quexwc\">Single-character <firstterm>wild "
-"card</firstterm></link>, in <link linkend=\"globbingref\">globbing</link>"
+"<link linkend=\"quexwc\">Single-character <firstterm>wild card</firstterm></"
+"link>, in <link linkend=\"globbingref\">globbing</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -488,8 +500,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:342
 msgid ""
-"<command>. </command> <link linkend=\"regexdot\">Match single "
-"character</link>, in a <link linkend=\"regexref\">Regular Expression</link>"
+"<command>. </command> <link linkend=\"regexdot\">Match single character</"
+"link>, in a <link linkend=\"regexref\">Regular Expression</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -509,26 +521,27 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:359
 msgid ""
-"<command>.. </command> <link "
-"linkend=\"dotdirectory\"><firstterm>Parent</firstterm> directory</link>"
+"<command>.. </command> <link linkend=\"dotdirectory\"><firstterm>Parent</"
+"firstterm> directory</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:369
 msgid ""
-"<command>' ... '</command> (single quotes)  <link "
-"linkend=\"snglquo\"><firstterm>strong</firstterm> quoting</link>"
+"<command>' ... '</command> (single quotes)  <link linkend=\"snglquo"
+"\"><firstterm>strong</firstterm> quoting</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:374
 msgid ""
-"<command>\" ... \" </command> (double quotes)  <link "
-"linkend=\"dblquo\"><firstterm>weak</firstterm> quoting</link>"
+"<command>\" ... \" </command> (double quotes)  <link linkend=\"dblquo"
+"\"><firstterm>weak</firstterm> quoting</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
-#: abs-guide/INDEX00.xml:379 abs-guide/INDEX00.xml:1356 abs-guide/INDEX00.xml:2368
+#: abs-guide/INDEX00.xml:379 abs-guide/INDEX00.xml:1356
+#: abs-guide/INDEX00.xml:2368
 msgid ""
 "<link linkend=\"quotingbsl\"><firstterm>Double-quoting</firstterm> the "
 "<firstterm>backslash</firstterm> (<command>\\</command>)  character</link>"
@@ -564,8 +577,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:406
 msgid ""
-"<command>( ... ) </command> <link linkend=\"parensref\">Command "
-"group</link>; starts a <link linkend=\"subshellsref\">subshell</link>"
+"<command>( ... ) </command> <link linkend=\"parensref\">Command group</"
+"link>; starts a <link linkend=\"subshellsref\">subshell</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -590,8 +603,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:420
 msgid ""
-"<command> ... ) </command> <link linkend=\"caseparen\">Terminates "
-"test-condition</link> in <firstterm>case</firstterm> construct"
+"<command> ... ) </command> <link linkend=\"caseparen\">Terminates test-"
+"condition</link> in <firstterm>case</firstterm> construct"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -615,7 +628,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:434 abs-guide/INDEX00.xml:1045
-msgid "<link linkend=\"brackarray\"><firstterm>Array</firstterm> element</link>"
+msgid ""
+"<link linkend=\"brackarray\"><firstterm>Array</firstterm> element</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -627,29 +641,29 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:439 abs-guide/INDEX00.xml:1050
-msgid "<link linkend=\"bracktest\"><firstterm>Test</firstterm> construct</link>"
+msgid ""
+"<link linkend=\"bracktest\"><firstterm>Test</firstterm> construct</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:444
 msgid ""
-"<command>[[ ... ]]</command> <link linkend=\"dblbrackets\">Double "
-"brackets</link>, extended <firstterm>test</firstterm> construct"
+"<command>[[ ... ]]</command> <link linkend=\"dblbrackets\">Double brackets</"
+"link>, extended <firstterm>test</firstterm> construct"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:448
 msgid ""
-"<command>$ </command> <link "
-"linkend=\"dollarsignref\"><firstterm>Anchor</firstterm></link>, in a <link "
-"linkend=\"regexref\">Regular Expression</link>"
+"<command>$ </command> <link linkend=\"dollarsignref\"><firstterm>Anchor</"
+"firstterm></link>, in a <link linkend=\"regexref\">Regular Expression</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:451
 msgid ""
-"<command>$ </command> <link linkend=\"varsubn\">Prefix to a variable "
-"name</link>"
+"<command>$ </command> <link linkend=\"varsubn\">Prefix to a variable name</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -683,15 +697,14 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:471
 msgid ""
-"<command>${var}</command> <link linkend=\"pssub1\">Value of a "
-"variable</link>"
+"<command>${var}</command> <link linkend=\"pssub1\">Value of a variable</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:474
 msgid ""
-"<command>${#var}</command> <link linkend=\"psorex1\">Length of a "
-"variable</link>"
+"<command>${#var}</command> <link linkend=\"psorex1\">Length of a variable</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -709,8 +722,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:485
 msgid ""
-"<command>${parameter?err_msg}</command> <link "
-"linkend=\"qerrmsg\">Parameter-unset message</link>"
+"<command>${parameter?err_msg}</command> <link linkend=\"qerrmsg\">Parameter-"
+"unset message</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -770,9 +783,9 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:512
 msgid ""
-"<link linkend=\"lastargref\">Final <firstterm>positional "
-"parameter</firstterm></link>.  (This is an <firstterm>indirect "
-"reference</firstterm> to <link linkend=\"clacountref\">$#</link>.)"
+"<link linkend=\"lastargref\">Final <firstterm>positional parameter</"
+"firstterm></link>.  (This is an <firstterm>indirect reference</firstterm> to "
+"<link linkend=\"clacountref\">$#</link>.)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -800,8 +813,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:528
 msgid ""
-"<command>${string:position:length}</command> <link "
-"linkend=\"substrextr01\">Substring extraction</link>"
+"<command>${string:position:length}</command> <link linkend="
+"\"substrextr01\">Substring extraction</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -846,8 +859,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:548
 msgid ""
-"<command>${string/%substring/replacement}</command> <link "
-"linkend=\"substrrepl00\">Substring replacement</link>"
+"<command>${string/%substring/replacement}</command> <link linkend="
+"\"substrrepl00\">Substring replacement</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -883,9 +896,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:572
 msgid ""
-"<command>\\; </command> <link "
-"linkend=\"findref0\"><firstterm>Semicolon</firstterm></link>, "
-"<firstterm>escaped</firstterm>, terminates a <link "
+"<command>\\; </command> <link linkend=\"findref0\"><firstterm>Semicolon</"
+"firstterm></link>, <firstterm>escaped</firstterm>, terminates a <link "
 "linkend=\"findref\">find</link> command"
 msgstr ""
 
@@ -899,8 +911,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:579
 msgid ""
-"<link linkend=\"escnewline\">Escaping a "
-"<firstterm>newline</firstterm></link>, to write a multi-line command"
+"<link linkend=\"escnewline\">Escaping a <firstterm>newline</firstterm></"
+"link>, to write a multi-line command"
 msgstr ""
 
 #. type: Content of: <para>
@@ -926,14 +938,15 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:620
-msgid "<link linkend=\"cfd\">Closing <firstterm>file descriptors</firstterm></link>"
+msgid ""
+"<link linkend=\"cfd\">Closing <firstterm>file descriptors</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:623 abs-guide/INDEX00.xml:1544
 msgid ""
-"<command>n&lt;&amp;-</command> Close input file descriptor "
-"<firstterm>n</firstterm>"
+"<command>n&lt;&amp;-</command> Close input file descriptor <firstterm>n</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -946,8 +959,8 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:629 abs-guide/INDEX00.xml:1550
 msgid ""
-"<command>n&gt;&amp;-</command> Close output file descriptor "
-"<firstterm>n</firstterm>"
+"<command>n&gt;&amp;-</command> Close output file descriptor <firstterm>n</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -1007,8 +1020,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:678
 msgid ""
-"<command> ** </command> <link "
-"linkend=\"exponentiationref\">Exponentiation</link>, arithmetic operator"
+"<command> ** </command> <link linkend=\"exponentiationref\">Exponentiation</"
+"link>, arithmetic operator"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1052,18 +1065,16 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:714
 msgid ""
-"<link linkend=\"paramaltv\">Prefix to <firstterm>alternate "
-"parameter</firstterm></link>, in <firstterm>parameter "
-"substitution</firstterm>"
+"<link linkend=\"paramaltv\">Prefix to <firstterm>alternate parameter</"
+"firstterm></link>, in <firstterm>parameter substitution</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:717
 msgid ""
-"<command> ++ </command> <link "
-"linkend=\"plusplusref\"><firstterm>C-style</firstterm> variable "
-"increment</link>, within <link linkend=\"dblparensref\">double "
-"parentheses</link>"
+"<command> ++ </command> <link linkend=\"plusplusref\"><firstterm>C-style</"
+"firstterm> variable increment</link>, within <link linkend=\"dblparensref"
+"\">double parentheses</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1081,22 +1092,22 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:731
 msgid ""
-"<command>$- </command> <link linkend=\"flpref\">Flags passed to "
-"script</link>, using <link linkend=\"setref\">set</link>"
+"<command>$- </command> <link linkend=\"flpref\">Flags passed to script</"
+"link>, using <link linkend=\"setref\">set</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:734
 msgid ""
-"<command>$! </command> <link linkend=\"pidvarref\"><firstterm>Process "
-"ID</firstterm> of last background job</link>"
+"<command>$! </command> <link linkend=\"pidvarref\"><firstterm>Process ID</"
+"firstterm> of last background job</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:737
 msgid ""
-"<command>$? </command> <link linkend=\"exsref\"><firstterm>Exit "
-"status</firstterm> of a command</link>"
+"<command>$? </command> <link linkend=\"exsref\"><firstterm>Exit status</"
+"firstterm> of a command</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1109,9 +1120,9 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:744
 msgid ""
-"<command> $* </command> All the <firstterm>positional "
-"parameters</firstterm>, <link linkend=\"appref\">as a "
-"<emphasis>single</emphasis> word</link>"
+"<command> $* </command> All the <firstterm>positional parameters</"
+"firstterm>, <link linkend=\"appref\">as a <emphasis>single</emphasis> word</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1177,8 +1188,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:774
 msgid ""
-"<firstterm>Advanced Bash Scripting Guide</firstterm>, <link "
-"linkend=\"where_tarball\">where to download</link>"
+"<firstterm>Advanced Bash Scripting Guide</firstterm>, <link linkend="
+"\"where_tarball\">where to download</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1189,8 +1200,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:779
 msgid ""
-"<link linkend=\"unaliasref\">Removing an "
-"<firstterm>alias</firstterm></link>, using <firstterm>unalias</firstterm>"
+"<link linkend=\"unaliasref\">Removing an <firstterm>alias</firstterm></"
+"link>, using <firstterm>unalias</firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1205,7 +1216,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:789
-msgid "<link linkend=\"anddefault\">To supply default command-line argument</link>"
+msgid ""
+"<link linkend=\"anddefault\">To supply default command-line argument</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1218,16 +1230,16 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:796
 msgid ""
-"<link linkend=\"anglebrac\">Angle brackets</link>, "
-"<firstterm>escaped</firstterm>, <command>\\&lt; . . . \\&gt; </command> word "
-"boundary in a <link linkend=\"regexref\">Regular Expression</link>"
+"<link linkend=\"anglebrac\">Angle brackets</link>, <firstterm>escaped</"
+"firstterm>, <command>\\&lt; . . . \\&gt; </command> word boundary in a <link "
+"linkend=\"regexref\">Regular Expression</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:801
 msgid ""
-"<link linkend=\"anonheredoc0\">Anonymous <firstterm>here "
-"document</firstterm></link>, using <command>:</command>"
+"<link linkend=\"anonheredoc0\">Anonymous <firstterm>here document</"
+"firstterm></link>, using <command>:</command>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1268,8 +1280,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:823
 msgid ""
-"<link linkend=\"arithopscomb\"> combination operators</link>, "
-"<firstterm>C</firstterm>-style"
+"<link linkend=\"arithopscomb\"> combination operators</link>, <firstterm>C</"
+"firstterm>-style"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1282,9 +1294,9 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><note><para>
 #: abs-guide/INDEX00.xml:832
 msgid ""
-"<link linkend=\"pluseqstr\">In certain contexts</link>, "
-"<command>+=</command> can also function as a <firstterm>string "
-"concatenation</firstterm> operator."
+"<link linkend=\"pluseqstr\">In certain contexts</link>, <command>+=</"
+"command> can also function as a <firstterm>string concatenation</firstterm> "
+"operator."
 msgstr ""
 
 #. type: Content of: <para>
@@ -1299,7 +1311,8 @@ msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:844
-msgid "<link linkend=\"assocarrtst\">more efficient</link> than conventional arrays"
+msgid ""
+"<link linkend=\"assocarrtst\">more efficient</link> than conventional arrays"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -1358,7 +1371,8 @@ msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:869
-msgid "<link linkend=\"arrayassign0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"arrayassign0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -1407,7 +1421,8 @@ msgid "<link linkend=\"arraysyntax\">Operations</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
-#: abs-guide/INDEX00.xml:890 abs-guide/INDEX00.xml:1614 abs-guide/INDEX00.xml:3366
+#: abs-guide/INDEX00.xml:890 abs-guide/INDEX00.xml:1614
+#: abs-guide/INDEX00.xml:3366
 msgid ""
 "<link linkend=\"passarray\">Passing an <firstterm>array</firstterm></link> "
 "to a function"
@@ -1423,13 +1438,13 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:897
 msgid ""
-"Special properties, <link linkend=\"arrayspecialprops\">example "
-"script</link>"
+"Special properties, <link linkend=\"arrayspecialprops\">example script</link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:900
-msgid "String operations, <link linkend=\"arraystringops\">example script</link>"
+msgid ""
+"String operations, <link linkend=\"arraystringops\">example script</link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -1461,7 +1476,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:920
-msgid "<link linkend=\"awk\">awk</link> field-oriented text processing language"
+msgid ""
+"<link linkend=\"awk\">awk</link> field-oriented text processing language"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1491,15 +1507,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:938
 msgid ""
-"<link linkend=\"backticksref\">Backquotes</link>, used in <link "
-"linkend=\"backquotesref\">command substitution</link>"
+"<link linkend=\"backticksref\">Backquotes</link>, used in <link linkend="
+"\"backquotesref\">command substitution</link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:941
 msgid ""
-"<link linkend=\"base0\">Base conversion</link>, <firstterm>example "
-"script</firstterm>"
+"<link linkend=\"base0\">Base conversion</link>, <firstterm>example script</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1532,8 +1548,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:958
 msgid ""
-"<link linkend=\"bashcompat\">Features that classic "
-"<firstterm>Bourne</firstterm> shell lacks</link>"
+"<link linkend=\"bashcompat\">Features that classic <firstterm>Bourne</"
+"firstterm> shell lacks</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1573,7 +1589,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:979
-msgid "<link linkend=\"bashsubshellref\"><varname>$BASH_SUBSHELL</varname></link>"
+msgid ""
+"<link linkend=\"bashsubshellref\"><varname>$BASH_SUBSHELL</varname></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1583,7 +1600,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:982
-msgid "<link linkend=\"dosbatch1\">Batch files</link>, <firstterm>DOS</firstterm>"
+msgid ""
+"<link linkend=\"dosbatch1\">Batch files</link>, <firstterm>DOS</firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1598,7 +1616,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:989
-msgid "<link linkend=\"bcheredoc\">In a <firstterm>here document</firstterm></link>"
+msgid ""
+"<link linkend=\"bcheredoc\">In a <firstterm>here document</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1656,8 +1675,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1020
 msgid ""
-"<firstterm>Script example</firstterm>: <link "
-"linkend=\"blockio2\">Redirecting output of a a code block</link>"
+"<firstterm>Script example</firstterm>: <link linkend="
+"\"blockio2\">Redirecting output of a a code block</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1673,8 +1692,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1030
 msgid ""
-"<link linkend=\"braceexpref33\">Extended</link>, "
-"<replaceable>{a..z}</replaceable>"
+"<link linkend=\"braceexpref33\">Extended</link>, <replaceable>{a..z}</"
+"replaceable>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1712,15 +1731,15 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1062
 msgid ""
-"<link linkend=\"escpcb\"><firstterm>Extended Regular "
-"Expressions</firstterm></link>"
+"<link linkend=\"escpcb\"><firstterm>Extended Regular Expressions</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1064
 msgid ""
-"<link linkend=\"bracketnotation\"><firstterm>Positional "
-"parameters</firstterm></link>"
+"<link linkend=\"bracketnotation\"><firstterm>Positional parameters</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -1742,7 +1761,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1079
-msgid "<link linkend=\"builtinref\">Builtins</link> in <firstterm>Bash</firstterm>"
+msgid ""
+"<link linkend=\"builtinref\">Builtins</link> in <firstterm>Bash</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1752,7 +1772,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1088
-msgid "<link linkend=\"caseesac1\"><firstterm>case</firstterm> construct</link>"
+msgid ""
+"<link linkend=\"caseesac1\"><firstterm>case</firstterm> construct</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1779,7 +1800,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1101 abs-guide/INDEX00.xml:1778
-msgid "<link linkend=\"catscriptref\"><firstterm>cat</firstterm> scripts</link>"
+msgid ""
+"<link linkend=\"catscriptref\"><firstterm>cat</firstterm> scripts</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1870,8 +1892,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:1141
 msgid ""
 "<link linkend=\"cnfh\">command_not_found_handle ()</link> "
-"<firstterm>builtin</firstterm> error-handling function (<link "
-"linkend=\"bash4ref\">version 4+</link> of Bash)"
+"<firstterm>builtin</firstterm> error-handling function (<link linkend="
+"\"bash4ref\">version 4+</link> of Bash)"
 msgstr ""
 
 #. type: Content of: <para>
@@ -1888,7 +1910,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1152
-msgid "<link linkend=\"backquotesref\"><firstterm>Backquotes</firstterm></link>"
+msgid ""
+"<link linkend=\"backquotesref\"><firstterm>Backquotes</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1900,7 +1923,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1156
-msgid "<link linkend=\"cssubsh\">Invokes a <firstterm>subshell</firstterm></link>"
+msgid ""
+"<link linkend=\"cssubsh\">Invokes a <firstterm>subshell</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -1994,7 +2018,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1201
-msgid "<link linkend=\"ctlcref\">Control-C</link>, <firstterm>break</firstterm>"
+msgid ""
+"<link linkend=\"ctlcref\">Control-C</link>, <firstterm>break</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2011,12 +2036,14 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1208
-msgid "<link linkend=\"ctlhref\">Control-H</link>, <firstterm>rubout</firstterm>"
+msgid ""
+"<link linkend=\"ctlhref\">Control-H</link>, <firstterm>rubout</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1210
-msgid "<link linkend=\"ctljref\">Control-J</link>, <firstterm>newline</firstterm>"
+msgid ""
+"<link linkend=\"ctljref\">Control-J</link>, <firstterm>newline</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2032,8 +2059,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1218
 msgid ""
-"<link linkend=\"cronref\">cron</link>, scheduling "
-"<firstterm>daemon</firstterm>"
+"<link linkend=\"cronref\">cron</link>, scheduling <firstterm>daemon</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2061,15 +2088,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1228
 msgid ""
-"<link linkend=\"curlybracketsref\">in <firstterm>find</firstterm> "
-"command</link>"
+"<link linkend=\"curlybracketsref\">in <firstterm>find</firstterm> command</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1230
 msgid ""
-"<link linkend=\"escpcb\">in an <firstterm>Extended Regular "
-"Expression</firstterm></link>"
+"<link linkend=\"escpcb\">in an <firstterm>Extended Regular Expression</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2111,7 +2138,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1252
-msgid "<link linkend=\"ddfdel\">File deletion</link>, <firstterm>secure</firstterm>"
+msgid ""
+"<link linkend=\"ddfdel\">File deletion</link>, <firstterm>secure</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2144,8 +2172,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1268
 msgid ""
-"<link linkend=\"ddlink\">Thread on "
-"<firstterm>www.linuxquestions.org</firstterm></link>"
+"<link linkend=\"ddlink\">Thread on <firstterm>www.linuxquestions.org</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2160,12 +2188,14 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1277
-msgid "<link linkend=\"debugtrap\"><firstterm>Trapping</firstterm> at exit</link>"
+msgid ""
+"<link linkend=\"debugtrap\"><firstterm>Trapping</firstterm> at exit</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1280
-msgid "<link linkend=\"trapref1\"><firstterm>Trapping</firstterm> signals</link>"
+msgid ""
+"<link linkend=\"trapref1\"><firstterm>Trapping</firstterm> signals</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2200,29 +2230,29 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1300
 msgid ""
-"<link linkend=\"devprocref\"><filename "
-"class=\"directory\">/dev</filename></link> directory"
+"<link linkend=\"devprocref\"><filename class=\"directory\">/dev</filename></"
+"link> directory"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1304
 msgid ""
-"<link linkend=\"devnullref\"><filename>/dev/null</filename></link> "
-"pseudo-device file"
+"<link linkend=\"devnullref\"><filename>/dev/null</filename></link> pseudo-"
+"device file"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1308
 msgid ""
-"<link linkend=\"urandomref\"><filename>/dev/urandom</filename></link> "
-"pseudo-device file, generating pseudorandom numbers with"
+"<link linkend=\"urandomref\"><filename>/dev/urandom</filename></link> pseudo-"
+"device file, generating pseudorandom numbers with"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1313
 msgid ""
-"<link linkend=\"zerosref1\"><filename>/dev/zero</filename></link>, "
-"pseudo-device file"
+"<link linkend=\"zerosref1\"><filename>/dev/zero</filename></link>, pseudo-"
+"device file"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2287,15 +2317,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1341
 msgid ""
-"<link linkend=\"dblbrackets\">Double brackets</link> <command>[[ "
-"... ]]</command> <link linkend=\"ifthen\">test</link> construct"
+"<link linkend=\"dblbrackets\">Double brackets</link> <command>[[ ... ]]</"
+"command> <link linkend=\"ifthen\">test</link> construct"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1345
 msgid ""
-"and <link linkend=\"dblbraev\">evaluation of "
-"<firstterm>octal/hex</firstterm> constants</link>"
+"and <link linkend=\"dblbraev\">evaluation of <firstterm>octal/hex</"
+"firstterm> constants</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2332,15 +2362,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1373
 msgid ""
-"<link linkend=\"echogrepref\">Feeding commands down a "
-"<firstterm>pipe</firstterm></link>"
+"<link linkend=\"echogrepref\">Feeding commands down a <firstterm>pipe</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1375
 msgid ""
-"<link linkend=\"echocs\">Setting a variable</link> using <link "
-"linkend=\"commandsubref\">command substitution</link>"
+"<link linkend=\"echocs\">Setting a variable</link> using <link linkend="
+"\"commandsubref\">command substitution</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2353,8 +2383,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1383
 msgid ""
-"<link linkend=\"elifref1\">elif</link>, Contraction of "
-"<firstterm>else</firstterm> and <link linkend=\"ifthen\">if</link>"
+"<link linkend=\"elifref1\">elif</link>, Contraction of <firstterm>else</"
+"firstterm> and <link linkend=\"ifthen\">if</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2377,8 +2407,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1391
 msgid ""
-"<link linkend=\"envref\"><firstterm>Environmental</firstterm> "
-"variables</link>"
+"<link linkend=\"envref\"><firstterm>Environmental</firstterm> variables</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2436,22 +2466,22 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1418
 msgid ""
-"<link linkend=\"evalref\">eval</link>, Combine and "
-"<firstterm>evaluate</firstterm> expression(s), with variable expansion"
+"<link linkend=\"evalref\">eval</link>, Combine and <firstterm>evaluate</"
+"firstterm> expression(s), with variable expansion"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1422
 msgid ""
-"<link linkend=\"evaleff\">Effects of</link>, <firstterm>Example "
-"script</firstterm>"
+"<link linkend=\"evaleff\">Effects of</link>, <firstterm>Example script</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1424
 msgid ""
-"<link linkend=\"evalforced\">Forces "
-"<firstterm>reevaluation</firstterm></link> of arguments"
+"<link linkend=\"evalforced\">Forces <firstterm>reevaluation</firstterm></"
+"link> of arguments"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2488,8 +2518,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1443
 msgid ""
-"<link linkend=\"usingexecref\">exec</link> command, using in <link "
-"linkend=\"ioredirref\">redirection</link>"
+"<link linkend=\"usingexecref\">exec</link> command, using in <link linkend="
+"\"ioredirref\">redirection</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2510,8 +2540,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1455
 msgid ""
-"<link linkend=\"exitstatusref\">Exit status</link> (<firstterm>exit "
-"code</firstterm>, <firstterm>return</firstterm> status of a command)"
+"<link linkend=\"exitstatusref\">Exit status</link> (<firstterm>exit code</"
+"firstterm>, <firstterm>return</firstterm> status of a command)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2539,8 +2569,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1467
 msgid ""
-"<link linkend=\"exitreturn1\"> Specified by a <firstterm>function "
-"return</firstterm></link>"
+"<link linkend=\"exitreturn1\"> Specified by a <firstterm>function return</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2553,9 +2583,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1473
 msgid ""
-"<link "
-"linkend=\"sysexitsref\"><filename>/usr/include/sysexits.h</filename></link>, "
-"system file listing C/C++ standard exit codes"
+"<link linkend=\"sysexitsref\"><filename>/usr/include/sysexits.h</filename></"
+"link>, system file listing C/C++ standard exit codes"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2599,8 +2628,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1504
 msgid ""
-"<link linkend=\"extregex\">Extended <firstterm>Regular "
-"Expressions</firstterm></link>"
+"<link linkend=\"extregex\">Extended <firstterm>Regular Expressions</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -2628,8 +2657,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1517 abs-guide/INDEX00.xml:2851
 msgid ""
-"<command>+ </command> <link linkend=\"plusref\"><firstterm>Character "
-"match</firstterm></link>"
+"<command>+ </command> <link linkend=\"plusref\"><firstterm>Character match</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2647,9 +2676,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1531
 msgid ""
-"<link linkend=\"falseref\">false</link>, returns "
-"<firstterm>unsuccessful</firstterm> (1) <link linkend=\"exitstatusref\">exit "
-"status</link>"
+"<link linkend=\"falseref\">false</link>, returns <firstterm>unsuccessful</"
+"firstterm> (1) <link linkend=\"exitstatusref\">exit status</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2694,15 +2722,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1568
 msgid ""
-"<command>{} </command> <link linkend=\"curlybracketsref\">Curly "
-"brackets</link>"
+"<command>{} </command> <link linkend=\"curlybracketsref\">Curly brackets</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1571
 msgid ""
-"<command>\\; </command> <link "
-"linkend=\"findref0\"><firstterm>Escaped</firstterm> semicolon</link>"
+"<command>\\; </command> <link linkend=\"findref0\"><firstterm>Escaped</"
+"firstterm> semicolon</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -2755,7 +2783,8 @@ msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1596
-msgid "<link linkend=\"passedargs\">Arguments passed</link> referred to by position"
+msgid ""
+"<link linkend=\"passedargs\">Arguments passed</link> referred to by position"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -2812,8 +2841,8 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1624
 msgid ""
-"<link linkend=\"redstdinfunc1\">Redirecting "
-"<filename>stdin</filename></link> of a function"
+"<link linkend=\"redstdinfunc1\">Redirecting <filename>stdin</filename></"
+"link> of a function"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -2824,8 +2853,8 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1631
 msgid ""
-"Multiple <firstterm>return values</firstterm> from a function, <link "
-"linkend=\"stddev\">example script</link>"
+"Multiple <firstterm>return values</firstterm> from a function, <link linkend="
+"\"stddev\">example script</link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -2845,8 +2874,8 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1641
 msgid ""
-"<link linkend=\"fshiftref\"><firstterm>Shift</firstterm> arguments "
-"passed</link> to a function"
+"<link linkend=\"fshiftref\"><firstterm>Shift</firstterm> arguments passed</"
+"link> to a function"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
@@ -2979,16 +3008,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1706
 msgid ""
-"<link linkend=\"getoptsx\">getopts</link>, Bash "
-"<firstterm>builtin</firstterm> for parsing script "
-"<firstterm>command-line</firstterm> arguments"
+"<link linkend=\"getoptsx\">getopts</link>, Bash <firstterm>builtin</"
+"firstterm> for parsing script <firstterm>command-line</firstterm> arguments"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1710
 msgid ""
-"<link linkend=\"getoptsopt\"><varname>$OPTIND</varname> / "
-"<varname>$OPTARG</varname></link>"
+"<link linkend=\"getoptsopt\"><varname>$OPTIND</varname> / <varname>$OPTARG</"
+"varname></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3014,23 +3042,22 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1725 abs-guide/INDEX00.xml:3679
 msgid ""
-"<link linkend=\"wdotfilewc\">Will not match <filename>dot "
-"files</filename></link>"
+"<link linkend=\"wdotfilewc\">Will not match <filename>dot files</filename></"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1729
 msgid ""
-"<link linkend=\"goldenratio\">Golden Ratio</link> "
-"(<firstterm>Phi</firstterm>)"
+"<link linkend=\"goldenratio\">Golden Ratio</link> (<firstterm>Phi</"
+"firstterm>)"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1732
 msgid ""
-"<link linkend=\"ge0ref\"> -ge </link>, <firstterm>greater-than or "
-"equal</firstterm> <link linkend=\"icomparison1\">integer comparison</link> "
-"test"
+"<link linkend=\"ge0ref\"> -ge </link>, <firstterm>greater-than or equal</"
+"firstterm> <link linkend=\"icomparison1\">integer comparison</link> test"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3066,12 +3093,14 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1747
-msgid "<link linkend=\"hashref\">Hashing</link>, creating lookup keys in a table"
+msgid ""
+"<link linkend=\"hashref\">Hashing</link>, creating lookup keys in a table"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1750
-msgid "<link linkend=\"hashex2_0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"hashex2_0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3090,7 +3119,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1761
-msgid "<link linkend=\"heredocref\"><firstterm>Here</firstterm> documents</link>"
+msgid ""
+"<link linkend=\"heredocref\"><firstterm>Here</firstterm> documents</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3136,7 +3166,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1789
-msgid "<link linkend=\"herestringsref\"><firstterm>Here</firstterm> strings</link>"
+msgid ""
+"<link linkend=\"herestringsref\"><firstterm>Here</firstterm> strings</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3163,21 +3194,22 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1801
-msgid "<link linkend=\"limitstringref\"><firstterm>Limit</firstterm> string</link>"
+msgid ""
+"<link linkend=\"limitstringref\"><firstterm>Limit</firstterm> string</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1804
 msgid ""
-"<link linkend=\"exclls\"><token>!</token> as a <firstterm>limit "
-"string</firstterm></link>"
+"<link linkend=\"exclls\"><token>!</token> as a <firstterm>limit string</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1806
 msgid ""
-"<link linkend=\"indentedls\">Closing <firstterm>limit "
-"string</firstterm></link> may not be indented"
+"<link linkend=\"indentedls\">Closing <firstterm>limit string</firstterm></"
+"link> may not be indented"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3219,8 +3251,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1826
 msgid ""
-"<link linkend=\"vihere\">Using <firstterm>vi</firstterm> "
-"non-interactively</link>"
+"<link linkend=\"vihere\">Using <firstterm>vi</firstterm> non-interactively</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3257,8 +3289,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1846
 msgid ""
-"<link linkend=\"ifthen\">if [ condition ]; then ...</link> "
-"<firstterm>test</firstterm> construct"
+"<link linkend=\"ifthen\">if [ condition ]; then ...</link> <firstterm>test</"
+"firstterm> construct"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3284,7 +3316,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1864
-msgid "<link linkend=\"ifsws\">Defaults to <firstterm>whitespace</firstterm></link>"
+msgid ""
+"<link linkend=\"ifsws\">Defaults to <firstterm>whitespace</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3302,8 +3335,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1874
 msgid ""
-"<link linkend=\"inittabref\">Initialization table</link>, "
-"<filename>/etc/inittab</filename>"
+"<link linkend=\"inittabref\">Initialization table</link>, <filename>/etc/"
+"inittab</filename>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3329,9 +3362,9 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1884
 msgid ""
-"<link linkend=\"ivr2\">New notation</link>, introduced in <link "
-"linkend=\"bash2ref\">version 2</link> of Bash (<link linkend=\"varrefnew\"> "
-"example script</link>)"
+"<link linkend=\"ivr2\">New notation</link>, introduced in <link linkend="
+"\"bash2ref\">version 2</link> of Bash (<link linkend=\"varrefnew\"> example "
+"script</link>)"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3391,15 +3424,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1924
 msgid ""
-"<link linkend=\"killref\">kill</link>, terminate a process by <link "
-"linkend=\"processiddef\">process ID</link>"
+"<link linkend=\"killref\">kill</link>, terminate a process by <link linkend="
+"\"processiddef\">process ID</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:1927
 msgid ""
-"<link linkend=\"zombieref\">Options</link> (<option>-l</option>, "
-"<option>-9</option>)"
+"<link linkend=\"zombieref\">Options</link> (<option>-l</option>, <option>-9</"
+"option>)"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3424,9 +3457,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1943
 msgid ""
-"<link linkend=\"le0ref\"> -le </link>, <firstterm>less-than or "
-"equal</firstterm> <link linkend=\"icomparison1\">integer comparison</link> "
-"test"
+"<link linkend=\"le0ref\"> -le </link>, <firstterm>less-than or equal</"
+"firstterm> <link linkend=\"icomparison1\">integer comparison</link> test"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3446,8 +3478,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1955
 msgid ""
-"<link linkend=\"limitstringref\">Limit string</link>, in a <link "
-"linkend=\"heredocref\">here document</link>"
+"<link linkend=\"limitstringref\">Limit string</link>, in a <link linkend="
+"\"heredocref\">here document</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3497,15 +3529,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1989
 msgid ""
-"<link linkend=\"logops1\">Logical operators</link> "
-"(<varname>&amp;&amp;</varname>, <varname>||</varname>, etc.)"
+"<link linkend=\"logops1\">Logical operators</link> (<varname>&amp;&amp;</"
+"varname>, <varname>||</varname>, etc.)"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:1992
 msgid ""
-"<link linkend=\"logoutfileref1\">Logout file</link>, the "
-"<filename>~/.bash_logout</filename> file"
+"<link linkend=\"logoutfileref1\">Logout file</link>, the <filename>~/."
+"bash_logout</filename> file"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3528,8 +3560,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2008
 msgid ""
-"<firstterm>C</firstterm>-style loop within <link "
-"linkend=\"dblparensref\">double parentheses</link>"
+"<firstterm>C</firstterm>-style loop within <link linkend=\"dblparensref"
+"\">double parentheses</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3557,9 +3589,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2025
 msgid ""
-"<replaceable>for</replaceable> <varname>arg</varname> "
-"<replaceable>in</replaceable> <varname>[list]</varname>; "
-"<replaceable>do</replaceable>"
+"<replaceable>for</replaceable> <varname>arg</varname> <replaceable>in</"
+"replaceable> <varname>[list]</varname>; <replaceable>do</replaceable>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3572,15 +3603,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2032
 msgid ""
-"<link linkend=\"liglob\">Filename expansion in "
-"<varname>[list]</varname></link>"
+"<link linkend=\"liglob\">Filename expansion in <varname>[list]</varname></"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2034
 msgid ""
-"<link linkend=\"multparaml\">Multiple parameters in each "
-"<varname>[list]</varname> element</link>"
+"<link linkend=\"multparaml\">Multiple parameters in each <varname>[list]</"
+"varname> element</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3592,7 +3623,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2039
-msgid "<link linkend=\"paramli\">Parameterizing <varname>[list]</varname></link>"
+msgid ""
+"<link linkend=\"paramli\">Parameterizing <varname>[list]</varname></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3615,13 +3647,14 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2050
 msgid ""
-"<link linkend=\"bgloop0\">Running a loop <emphasis>in the "
-"background</emphasis></link>, <firstterm>script example</firstterm>"
+"<link linkend=\"bgloop0\">Running a loop <emphasis>in the background</"
+"emphasis></link>, <firstterm>script example</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2055
-msgid "Semicolon required, when <firstterm>do</firstterm> is on first line of loop"
+msgid ""
+"Semicolon required, when <firstterm>do</firstterm> is on first line of loop"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3631,7 +3664,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2059
-msgid "<link linkend=\"whileneedsemi\"><firstterm>while</firstterm> loop</link>"
+msgid ""
+"<link linkend=\"whileneedsemi\"><firstterm>while</firstterm> loop</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3667,8 +3701,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2074
 msgid ""
-"<link linkend=\"whilenobrackets\">Omitting <firstterm>test "
-"brackets</firstterm></link>"
+"<link linkend=\"whilenobrackets\">Omitting <firstterm>test brackets</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3677,7 +3711,8 @@ msgid "<link linkend=\"whredir\">Redirection</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
-#: abs-guide/INDEX00.xml:2078 abs-guide/INDEX00.xml:2714 abs-guide/INDEX00.xml:3631
+#: abs-guide/INDEX00.xml:2078 abs-guide/INDEX00.xml:2714
+#: abs-guide/INDEX00.xml:3631
 msgid ""
 "<link linkend=\"whilereadref2\"> <firstterm>while read</firstterm></link> "
 "construct"
@@ -3696,8 +3731,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2090
 msgid ""
-"<link linkend=\"loopbackref\">In <filename "
-"class=\"directory\">/dev</filename> directory</link>"
+"<link linkend=\"loopbackref\">In <filename class=\"directory\">/dev</"
+"filename> directory</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3735,8 +3770,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:2108
 msgid ""
 "<link linkend=\"makefileref\"><filename>Makefile</filename></link>, file "
-"containing the list of dependencies used by <link "
-"linkend=\"makeref\">make</link> command"
+"containing the list of dependencies used by <link linkend=\"makeref\">make</"
+"link> command"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3778,8 +3813,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2127
 msgid ""
-"<link linkend=\"moduloref\">Modulo</link>, arithmetic "
-"<firstterm>remainder</firstterm> operator"
+"<link linkend=\"moduloref\">Modulo</link>, arithmetic <firstterm>remainder</"
+"firstterm> operator"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3803,7 +3838,8 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2141
-msgid "<link linkend=\"namedpiperef\">Named pipe</link>, a temporary FIFO buffer"
+msgid ""
+"<link linkend=\"namedpiperef\">Named pipe</link>, a temporary FIFO buffer"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -3857,15 +3893,15 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2164
 msgid ""
-"<link linkend=\"logops1\"><firstterm>NOT</firstterm> logical "
-"operator</link>, <command>!</command>"
+"<link linkend=\"logops1\"><firstterm>NOT</firstterm> logical operator</"
+"link>, <command>!</command>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2166 abs-guide/INDEX00.xml:3364
 msgid ""
-"<link linkend=\"nullvar\"><firstterm>null</firstterm> variable "
-"assignment</link>, avoiding"
+"<link linkend=\"nullvar\"><firstterm>null</firstterm> variable assignment</"
+"link>, avoiding"
 msgstr ""
 
 #. type: Content of: <para>
@@ -3989,8 +4025,7 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2235
 msgid ""
-"<link linkend=\"varprefixm\">Parameter <emphasis>name</emphasis> "
-"match</link>"
+"<link linkend=\"varprefixm\">Parameter <emphasis>name</emphasis> match</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4010,15 +4045,15 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2244
-msgid "<link linkend=\"pssub1\">Value of <firstterm>parameter</firstterm></link>"
+msgid ""
+"<link linkend=\"pssub1\">Value of <firstterm>parameter</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2248
 msgid ""
-"<link linkend=\"casemodparamsub\"> <firstterm>Case "
-"modification</firstterm></link> (<link linkend=\"bash4ref\">version "
-"4+</link> of Bash)."
+"<link linkend=\"casemodparamsub\"> <firstterm>Case modification</firstterm></"
+"link> (<link linkend=\"bash4ref\">version 4+</link> of Bash)."
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4037,9 +4072,9 @@ msgstr ""
 #: abs-guide/INDEX00.xml:2262
 msgid ""
 "<link linkend=\"parchildprobref\">Parent / child process problem</link>, a "
-"<firstterm>child</firstterm> process cannot <link "
-"linkend=\"exportref\">export</link> variables to a <link "
-"linkend=\"forkref\">parent process</link>"
+"<firstterm>child</firstterm> process cannot <link linkend=\"exportref"
+"\">export</link> variables to a <link linkend=\"forkref\">parent process</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4076,23 +4111,23 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2284
 msgid ""
-"Appending directories to <varname>$PATH</varname> <link "
-"linkend=\"pathappend\">using the <varname>+=</varname> operator</link>."
+"Appending directories to <varname>$PATH</varname> <link linkend=\"pathappend"
+"\">using the <varname>+=</varname> operator</link>."
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2289
 msgid ""
-"<link linkend=\"pathnameref\">Pathname</link>, a "
-"<filename>filename</filename> that incorporates the complete "
-"<firstterm>path</firstterm> of a given file."
+"<link linkend=\"pathnameref\">Pathname</link>, a <filename>filename</"
+"filename> that incorporates the complete <firstterm>path</firstterm> of a "
+"given file."
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2293
 msgid ""
-"<link linkend=\"pathmanagement\">Parsing "
-"<firstterm>pathnames</firstterm></link>"
+"<link linkend=\"pathmanagement\">Parsing <firstterm>pathnames</firstterm></"
+"link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4117,20 +4152,21 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2305
 msgid ""
-"<link linkend=\"qky\"><emphasis>Perquackey</emphasis>-type anagramming "
-"game</link> (<emphasis>Quackey</emphasis> script)"
+"<link linkend=\"qky\"><emphasis>Perquackey</emphasis>-type anagramming game</"
+"link> (<emphasis>Quackey</emphasis> script)"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2308
-msgid "<link linkend=\"petals\"><emphasis>Petals Around the Rose</emphasis></link>"
+msgid ""
+"<link linkend=\"petals\"><emphasis>Petals Around the Rose</emphasis></link>"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2311
 msgid ""
-"<link linkend=\"processiddef\">PID</link>, <firstterm>Process "
-"ID</firstterm>, an identification number assigned to a running process."
+"<link linkend=\"processiddef\">PID</link>, <firstterm>Process ID</"
+"firstterm>, an identification number assigned to a running process."
 msgstr ""
 
 #. type: Content of: <para>
@@ -4162,9 +4198,9 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2329
 msgid ""
-"<link linkend=\"pipefailref\">Pipefail</link>, <firstterm>set -o "
-"pipefail</firstterm> option to indicate <link linkend=\"exitstatusref\">exit "
-"status</link> within a <firstterm>pipe</firstterm>"
+"<link linkend=\"pipefailref\">Pipefail</link>, <firstterm>set -o pipefail</"
+"firstterm> option to indicate <link linkend=\"exitstatusref\">exit status</"
+"link> within a <firstterm>pipe</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4183,8 +4219,8 @@ msgstr ""
 #: abs-guide/INDEX00.xml:2339
 msgid ""
 "<link linkend=\"catlesseff\">Redirecting <filename>stdin</filename></link>, "
-"rather than using <link linkend=\"catref\">cat</link> in a "
-"<firstterm>pipe</firstterm>"
+"rather than using <link linkend=\"catref\">cat</link> in a <firstterm>pipe</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4195,8 +4231,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2349
 msgid ""
-"<link linkend=\"dashnredr\"><command>-</command> (dash) is "
-"<emphasis>not</emphasis> redirection operator</link>"
+"<link linkend=\"dashnredr\"><command>-</command> (dash) is <emphasis>not</"
+"emphasis> redirection operator</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4229,15 +4265,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2363
 msgid ""
-"Closing <firstterm>limit string</firstterm> in a <firstterm>here "
-"document</firstterm>, <link linkend=\"indentedls\">indenting</link>"
+"Closing <firstterm>limit string</firstterm> in a <firstterm>here document</"
+"firstterm>, <link linkend=\"indentedls\">indenting</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2366
 msgid ""
-"<link linkend=\"dosnewlines\">DOS-type newlines "
-"(<token>\\r\\n</token>)</link> crash a script"
+"<link linkend=\"dosnewlines\">DOS-type newlines (<token>\\r\\n</token>)</"
+"link> crash a script"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4255,31 +4291,31 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2378
 msgid ""
-"<firstterm>Exit status</firstterm>, <link "
-"linkend=\"gotchaexitvalanamalies\">anomalous</link>"
+"<firstterm>Exit status</firstterm>, <link linkend=\"gotchaexitvalanamalies"
+"\">anomalous</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2383
 msgid ""
 "<firstterm>Exit status</firstterm> <link linkend=\"arxs1\">of arithmetic "
-"expression <emphasis>not</emphasis> equivalent to an <firstterm>error "
-"code</firstterm></link>"
+"expression <emphasis>not</emphasis> equivalent to an <firstterm>error code</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2388
 msgid ""
-"<link linkend=\"parchildprobref\"><firstterm>Export</firstterm> "
-"problem</link>, <firstterm>child</firstterm> process to "
-"<firstterm>parent</firstterm> process"
+"<link linkend=\"parchildprobref\"><firstterm>Export</firstterm> problem</"
+"link>, <firstterm>child</firstterm> process to <firstterm>parent</firstterm> "
+"process"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2392
 msgid ""
-"<link linkend=\"lateverf\">Extended <firstterm>Bash</firstterm> "
-"features</link> not available"
+"<link linkend=\"lateverf\">Extended <firstterm>Bash</firstterm> features</"
+"link> not available"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4313,31 +4349,30 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2406
 msgid ""
-"<link linkend=\"nullvar\"><firstterm>null</firstterm> variable "
-"assignment</link>"
+"<link linkend=\"nullvar\"><firstterm>null</firstterm> variable assignment</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2409
 msgid ""
-"<link linkend=\"numstrcompne\">Numerical and string comparison "
-"operators</link> <emphasis>not</emphasis> equivalent"
+"<link linkend=\"numstrcompne\">Numerical and string comparison operators</"
+"link> <emphasis>not</emphasis> equivalent"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2412
 msgid ""
-"<link linkend=\"eqdif\"><command>=</command> and "
-"<command>-eq</command></link> <emphasis>not</emphasis> interchangeable"
+"<link linkend=\"eqdif\"><command>=</command> and <command>-eq</command></"
+"link> <emphasis>not</emphasis> interchangeable"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2416
 msgid ""
-"<link linkend=\"omitsemicolon\">Omitting terminal "
-"<firstterm>semicolon</firstterm></link>, in a "
-"<firstterm>curly-bracketed</firstterm> <link linkend=\"codeblockref\">code "
-"block</link>"
+"<link linkend=\"omitsemicolon\">Omitting terminal <firstterm>semicolon</"
+"firstterm></link>, in a <firstterm>curly-bracketed</firstterm> <link linkend="
+"\"codeblockref\">code block</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4353,9 +4388,9 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2424
 msgid ""
-"<link linkend=\"badread0\"><firstterm>echo</firstterm> to "
-"<firstterm>read</firstterm></link> (however, this problem <link "
-"linkend=\"goodread0\">can be circumvented</link>)"
+"<link linkend=\"badread0\"><firstterm>echo</firstterm> to <firstterm>read</"
+"firstterm></link> (however, this problem <link linkend=\"goodread0\">can be "
+"circumvented</link>)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4382,15 +4417,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2436
 msgid ""
-"<link linkend=\"undocf\">Undocumented <firstterm>Bash</firstterm> "
-"features</link>, danger of"
+"<link linkend=\"undocf\">Undocumented <firstterm>Bash</firstterm> features</"
+"link>, danger of"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2439
 msgid ""
-"Updates to <firstterm>Bash</firstterm> <link "
-"linkend=\"updatebreaks\">breaking older scripts</link>"
+"Updates to <firstterm>Bash</firstterm> <link linkend=\"updatebreaks"
+"\">breaking older scripts</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4406,8 +4441,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2446
 msgid ""
-"<link linkend=\"varsubsh\">Variables in a "
-"<firstterm>subshell</firstterm></link>, <firstterm>scope</firstterm> limited"
+"<link linkend=\"varsubsh\">Variables in a <firstterm>subshell</firstterm></"
+"link>, <firstterm>scope</firstterm> limited"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4440,13 +4475,14 @@ msgstr ""
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2464
 msgid ""
-"<link linkend=\"irrref\">and <firstterm>indirect "
-"references</firstterm></link>"
+"<link linkend=\"irrref\">and <firstterm>indirect references</firstterm></"
+"link>"
 msgstr ""
 
 #. type: Content of: <itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2466
-msgid "<link linkend=\"pointerref\">and <firstterm>variables</firstterm></link>"
+msgid ""
+"<link linkend=\"pointerref\">and <firstterm>variables</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4466,8 +4502,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2478
 msgid ""
-"<link linkend=\"testsuite0\">A <firstterm>test suite</firstterm> "
-"script</link> (Bash versus classic Bourne shell)"
+"<link linkend=\"testsuite0\">A <firstterm>test suite</firstterm> script</"
+"link> (Bash versus classic Bourne shell)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4548,15 +4584,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2529
 msgid ""
-"Generating primes <link linkend=\"primes2\">using the "
-"<firstterm>factor</firstterm> command</link>"
+"Generating primes <link linkend=\"primes2\">using the <firstterm>factor</"
+"firstterm> command</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2532
 msgid ""
-"Generating primes <link linkend=\"primes1\">using the "
-"<firstterm>modulo</firstterm> operator</link>"
+"Generating primes <link linkend=\"primes1\">using the <firstterm>modulo</"
+"firstterm> operator</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4567,27 +4603,28 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2539
 msgid ""
-"<link linkend=\"printfref\">printf</link>, <firstterm>formatted "
-"print</firstterm> command"
+"<link linkend=\"printfref\">printf</link>, <firstterm>formatted print</"
+"firstterm> command"
 msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2541
 msgid ""
-"<link linkend=\"procref2\"><filename "
-"class=\"directory\">/proc</filename></link> directory"
+"<link linkend=\"procref2\"><filename class=\"directory\">/proc</filename></"
+"link> directory"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2544
-msgid "<link linkend=\"procrunning\">Running processes</link>, files describing"
+msgid ""
+"<link linkend=\"procrunning\">Running processes</link>, files describing"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2546
 msgid ""
-"<link linkend=\"procwarning\">Writing to files in <filename "
-"class=\"directory\">/proc</filename></link>, <emphasis>warning</emphasis>"
+"<link linkend=\"procwarning\">Writing to files in <filename class=\"directory"
+"\">/proc</filename></link>, <emphasis>warning</emphasis>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4642,8 +4679,7 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2579
 msgid ""
-"<link linkend=\"tabexpansion\">Programmable completion</link> (tab "
-"expansion)"
+"<link linkend=\"tabexpansion\">Programmable completion</link> (tab expansion)"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4668,8 +4704,7 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2595
 msgid ""
-"<link linkend=\"pseudocoderef\">Pseudo-code</link>, as problem-solving "
-"method"
+"<link linkend=\"pseudocoderef\">Pseudo-code</link>, as problem-solving method"
 msgstr ""
 
 #. type: Content of: <para>
@@ -4723,8 +4758,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2628 abs-guide/INDEX00.xml:3572
 msgid ""
-"<link linkend=\"failquote\">within <firstterm>test</firstterm> "
-"brackets</link>"
+"<link linkend=\"failquote\">within <firstterm>test</firstterm> brackets</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4784,7 +4819,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2677
-msgid "<link linkend=\"rpsdcard01\">Script for preparing a bootable SD card</link>"
+msgid ""
+"<link linkend=\"rpsdcard01\">Script for preparing a bootable SD card</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4802,8 +4838,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2695
 msgid ""
-"<link linkend=\"readarrow\">Detecting <firstterm>arrow</firstterm> "
-"keys</link>"
+"<link linkend=\"readarrow\">Detecting <firstterm>arrow</firstterm> keys</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4814,8 +4850,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2699
 msgid ""
-"<link linkend=\"readpiperef\">Piping output of "
-"<firstterm>cat</firstterm></link> to <firstterm>read</firstterm>"
+"<link linkend=\"readpiperef\">Piping output of <firstterm>cat</firstterm></"
+"link> to <firstterm>read</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4826,8 +4862,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2704
 msgid ""
-"<link linkend=\"badread0\"> Problems piping "
-"<firstterm>echo</firstterm></link> to <firstterm>read</firstterm>"
+"<link linkend=\"badread0\"> Problems piping <firstterm>echo</firstterm></"
+"link> to <firstterm>read</firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4881,7 +4917,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2731
-msgid "<link linkend=\"scriptrecursion\">Script calling itself recursively</link>"
+msgid ""
+"<link linkend=\"scriptrecursion\">Script calling itself recursively</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4897,8 +4934,7 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2744
 msgid ""
-"<link linkend=\"usingexecref\">exec "
-"&lt;<filename>filename</filename></link>,"
+"<link linkend=\"usingexecref\">exec &lt;<filename>filename</filename></link>,"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4916,8 +4952,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2751
 msgid ""
-"<link linkend=\"ioredirectionref2\"> Open a file</link> for "
-"<emphasis>both</emphasis> reading and writing"
+"<link linkend=\"ioredirectionref2\"> Open a file</link> for <emphasis>both</"
+"emphasis> reading and writing"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4928,8 +4964,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2756
 msgid ""
-"<link linkend=\"readredir0\"><firstterm>read</firstterm> input "
-"redirected</link> from a file"
+"<link linkend=\"readredir0\"><firstterm>read</firstterm> input redirected</"
+"link> from a file"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4947,8 +4983,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2765
 msgid ""
-"<link linkend=\"coxex\"><filename>stdin</filename> / "
-"<filename>stdout</filename></link>, using <command> - </command>"
+"<link linkend=\"coxex\"><filename>stdin</filename> / <filename>stdout</"
+"filename></link>, using <command> - </command>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4961,8 +4997,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2771
 msgid ""
-"<link linkend=\"ioredirectionref\"> <filename>stdout</filename> to a "
-"file</link>"
+"<link linkend=\"ioredirectionref\"> <filename>stdout</filename> to a file</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -4997,8 +5033,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2790
 msgid ""
-"<link linkend=\"redirouterror2\"><filename>stdout</filename> of a "
-"command</link> to <filename>stderr</filename>"
+"<link linkend=\"redirouterror2\"><filename>stdout</filename> of a command</"
+"link> to <filename>stderr</filename>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5009,9 +5045,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2794
 msgid ""
-"<link linkend=\"redirouterror\"><filename>stdout</filename> "
-"<emphasis>and</emphasis> <filename>stderr</filename> of a command</link> to "
-"a file"
+"<link linkend=\"redirouterror\"><filename>stdout</filename> <emphasis>and</"
+"emphasis> <filename>stderr</filename> of a command</link> to a file"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5068,21 +5103,22 @@ msgstr ""
 
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2824
-msgid "<link linkend=\"regexref\"><firstterm>Regular Expressions</firstterm></link>"
+msgid ""
+"<link linkend=\"regexref\"><firstterm>Regular Expressions</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2827
 msgid ""
-"<command>^ </command> (caret)  <link "
-"linkend=\"beglineref\">Beginning-of-line</link>"
+"<command>^ </command> (caret)  <link linkend=\"beglineref\">Beginning-of-"
+"line</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2830
 msgid ""
-"<command>$ </command> (dollar sign)  <link "
-"linkend=\"dollarsignref\"><firstterm>Anchor</firstterm></link>"
+"<command>$ </command> (dollar sign)  <link linkend=\"dollarsignref"
+"\"><firstterm>Anchor</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5116,9 +5152,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2845
 msgid ""
-"<command>\\&lt; ... \\&gt; </command> (angle brackets, "
-"<firstterm>escaped</firstterm>)  <link linkend=\"anglebrac\">Word "
-"boundary</link>"
+"<command>\\&lt; ... \\&gt; </command> (angle brackets, <firstterm>escaped</"
+"firstterm>)  <link linkend=\"anglebrac\">Word boundary</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5129,8 +5164,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2854
 msgid ""
-"<command>\\{ \\} </command> <link linkend=\"escpcb\">Escaped "
-"<quote>curly</quote> brackets</link>"
+"<command>\\{ \\} </command> <link linkend=\"escpcb\">Escaped <quote>curly</"
+"quote> brackets</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5195,8 +5230,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2885
 msgid ""
-"<link linkend=\"secpromptref\">Secondary prompt</link>, "
-"<command><varname>$PS2</varname></command>"
+"<link linkend=\"secpromptref\">Secondary prompt</link>, <command><varname>"
+"$PS2</varname></command>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5207,8 +5242,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2890
 msgid ""
-"<link linkend=\"nmapref\">nmap</link>, <firstterm>network mapper</firstterm> "
-"/ port scanner"
+"<link linkend=\"nmapref\">nmap</link>, <firstterm>network mapper</"
+"firstterm> / port scanner"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5255,8 +5290,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2918
 msgid ""
-"<link linkend=\"inlistomit\"><userinput>in "
-"<replaceable>list</replaceable></userinput> omitted</link>"
+"<link linkend=\"inlistomit\"><userinput>in <replaceable>list</replaceable></"
+"userinput> omitted</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5275,8 +5310,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2930
 msgid ""
-"<link linkend=\"omitsemicolon\">When terminating "
-"<firstterm>curly-bracketed</firstterm> code block</link>"
+"<link linkend=\"omitsemicolon\">When terminating <firstterm>curly-bracketed</"
+"firstterm> code block</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5330,8 +5365,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:2957
 msgid ""
-"<link linkend=\"shoptref\">shopt</link>, change <firstterm>shell "
-"options</firstterm>"
+"<link linkend=\"shoptref\">shopt</link>, change <firstterm>shell options</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5366,7 +5401,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:2973
-msgid "<link linkend=\"cannonref\">PI</link>, approximating by firing cannonballs"
+msgid ""
+"<link linkend=\"cannonref\">PI</link>, approximating by firing cannonballs"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5422,17 +5458,20 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3002
-msgid "<link linkend=\"spamlookup_0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"spamlookup_0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3004
-msgid "<link linkend=\"isspammer_0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"isspammer_0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3006
-msgid "<link linkend=\"isspammer2_0\"><firstterm>Example script</firstterm></link>"
+msgid ""
+"<link linkend=\"isspammer2_0\"><firstterm>Example script</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5458,8 +5497,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3018
 msgid ""
-"Emulating a <firstterm>push-down stack</firstterm>, <link "
-"linkend=\"stackex0\">example script</link>"
+"Emulating a <firstterm>push-down stack</firstterm>, <link linkend="
+"\"stackex0\">example script</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5519,8 +5558,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3046
 msgid ""
-"<link linkend=\"awkstringmanip2\">Manipulation</link>, using <link "
-"linkend=\"awkref\">awk</link>"
+"<link linkend=\"awkstringmanip2\">Manipulation</link>, using <link linkend="
+"\"awkref\">awk</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5547,15 +5586,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3062
 msgid ""
-"<firstterm>strchr()</firstterm>, <link "
-"linkend=\"substringindex2\">equivalent of</link>"
+"<firstterm>strchr()</firstterm>, <link linkend="
+"\"substringindex2\">equivalent of</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3067
 msgid ""
-"<firstterm>strlen()</firstterm>, <link linkend=\"strlen\">equivalent "
-"of</link>"
+"<firstterm>strlen()</firstterm>, <link linkend=\"strlen\">equivalent of</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5588,21 +5627,21 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3085
 msgid ""
-"<link linkend=\"substringindex2\">Substring "
-"<firstterm>index</firstterm></link> (numerical position in string)"
+"<link linkend=\"substringindex2\">Substring <firstterm>index</firstterm></"
+"link> (numerical position in string)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3088
 msgid ""
-"<link linkend=\"exprparen\">Substring "
-"<firstterm>matching</firstterm></link>, using <link "
-"linkend=\"exprref\">expr</link>"
+"<link linkend=\"exprparen\">Substring <firstterm>matching</firstterm></"
+"link>, using <link linkend=\"exprref\">expr</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3093
-msgid "<link linkend=\"psorex1\">Substring <firstterm>removal</firstterm></link>"
+msgid ""
+"<link linkend=\"psorex1\">Substring <firstterm>removal</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5652,15 +5691,15 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3109
-msgid "<link linkend=\"daysbetween0\"><firstterm>Script example</firstterm></link>"
+msgid ""
+"<link linkend=\"daysbetween0\"><firstterm>Script example</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3113
 msgid ""
 "<link linkend=\"stringopstab\"><command>Table</command></link> of "
-"<firstterm>string/substring</firstterm> manipulation and extraction "
-"operators"
+"<firstterm>string/substring</firstterm> manipulation and extraction operators"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5682,14 +5721,15 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3130
-msgid "<link linkend=\"subshellparens1\">Command list within parentheses</link>"
+msgid ""
+"<link linkend=\"subshellparens1\">Command list within parentheses</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3132
 msgid ""
-"<link linkend=\"subshnlevref\">Variables</link>, "
-"<varname>$BASH_SUBSHELL</varname> and <varname>$SHLVL</varname>"
+"<link linkend=\"subshnlevref\">Variables</link>, <varname>$BASH_SUBSHELL</"
+"varname> and <varname>$SHLVL</varname>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5700,13 +5740,14 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3139
 msgid ""
-"<link linkend=\"varsubsh\"><firstterm>scope</firstterm> limited</link>, but "
-"..."
+"<link linkend=\"varsubsh\"><firstterm>scope</firstterm> limited</link>, "
+"but ..."
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3142
-msgid "... <link linkend=\"subshtmp\">can be accessed outside the subshell?</link>"
+msgid ""
+"... <link linkend=\"subshtmp\">can be accessed outside the subshell?</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5805,9 +5846,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3192
 msgid ""
-"<link linkend=\"usrbintest\">external command</link>, "
-"<filename>/usr/bin/test</filename> (equivalent to "
-"<filename>/usr/bin/[</filename>)"
+"<link linkend=\"usrbintest\">external command</link>, <filename>/usr/bin/"
+"test</filename> (equivalent to <filename>/usr/bin/[</filename>)"
 msgstr ""
 
 #. type: Content of: <para>
@@ -5844,8 +5884,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3214
 msgid ""
-"<command>-ge </command> <link linkend=\"ge0ref\">greater-than or "
-"equal</link> (integer comparison)"
+"<command>-ge </command> <link linkend=\"ge0ref\">greater-than or equal</"
+"link> (integer comparison)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5872,8 +5912,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3226
 msgid ""
-"<command>-n </command> <link "
-"linkend=\"stringnotnull\">not-zero-length</link> (string comparison)"
+"<command>-n </command> <link linkend=\"stringnotnull\">not-zero-length</"
+"link> (string comparison)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5956,9 +5996,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3268
 msgid ""
-"<command>&gt;= </command> <link "
-"linkend=\"gteq\">greater-than-or-equal</link>, (integer comparison, within "
-"<firstterm>double parentheses</firstterm>)"
+"<command>&gt;= </command> <link linkend=\"gteq\">greater-than-or-equal</"
+"link>, (integer comparison, within <firstterm>double parentheses</firstterm>)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -5969,8 +6008,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3275
 msgid ""
-"<command>&amp;&amp; </command> <link linkend=\"logicaland\">Logical "
-"AND</link>"
+"<command>&amp;&amp; </command> <link linkend=\"logicaland\">Logical AND</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6073,15 +6112,15 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3335
 msgid ""
-"Using <link linkend=\"cblock1\"><firstterm>anonymous here "
-"documents</firstterm></link>"
+"Using <link linkend=\"cblock1\"><firstterm>anonymous here documents</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3337
 msgid ""
-"Using <link linkend=\"comoutbl\"> <firstterm>if-then</firstterm> "
-"constructs</link>"
+"Using <link linkend=\"comoutbl\"> <firstterm>if-then</firstterm> constructs</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6098,7 +6137,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3350
-msgid "Filenames prefixed with a dash, <link linkend=\"dashrem\">removing</link>"
+msgid ""
+"Filenames prefixed with a dash, <link linkend=\"dashrem\">removing</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6117,7 +6157,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3359
-msgid "<link linkend=\"ifgrepfix\"><firstterm>if-grep</firstterm> test fixup</link>"
+msgid ""
+"<link linkend=\"ifgrepfix\"><firstterm>if-grep</firstterm> test fixup</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6223,8 +6264,7 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:3427
 msgid ""
-"<link linkend=\"tmoutref\"><varname>$TMOUT</varname></link>, Timeout "
-"interval"
+"<link linkend=\"tmoutref\"><varname>$TMOUT</varname></link>, Timeout interval"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6257,8 +6297,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3441
 msgid ""
-"<link linkend=\"soundex0\">Soundex</link>, <firstterm>example "
-"script</firstterm>"
+"<link linkend=\"soundex0\">Soundex</link>, <firstterm>example script</"
+"firstterm>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6276,8 +6316,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:3452
 msgid ""
-"<firstterm>Trinary (ternary)</firstterm> operator, "
-"<firstterm>C</firstterm>-style, <userinput>var>10?88:99</userinput>"
+"<firstterm>Trinary (ternary)</firstterm> operator, <firstterm>C</firstterm>-"
+"style, <userinput>var>10?88:99</userinput>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6295,9 +6335,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:3463
 msgid ""
-"<link linkend=\"trueref\">true</link>, returns "
-"<firstterm>successful</firstterm> (0) <link linkend=\"exitstatusref\">exit "
-"status</link>"
+"<link linkend=\"trueref\">true</link>, returns <firstterm>successful</"
+"firstterm> (0) <link linkend=\"exitstatusref\">exit status</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6313,8 +6352,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:3476
 msgid ""
-"<link linkend=\"unaliasref\">unalias</link>, to remove an <link "
-"linkend=\"aliasref\">alias</link>"
+"<link linkend=\"unaliasref\">unalias</link>, to remove an <link linkend="
+"\"aliasref\">alias</link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6380,7 +6419,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3514
-msgid "<link linkend=\"varunsetting\"><firstterm>Script example</firstterm></link>"
+msgid ""
+"<link linkend=\"varunsetting\"><firstterm>Script example</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6400,8 +6440,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3527
 msgid ""
-"<firstterm>C-style</firstterm> <link linkend=\"plusplusref\"> "
-"increment/decrement/trinary operations</link>"
+"<firstterm>C-style</firstterm> <link linkend=\"plusplusref\"> increment/"
+"decrement/trinary operations</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6433,8 +6473,7 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3539
 msgid ""
-"<link linkend=\"exprepl1\">Expansion / Substring replacement</link> "
-"operators"
+"<link linkend=\"exprepl1\">Expansion / Substring replacement</link> operators"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6464,7 +6503,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3553
-msgid "<link linkend=\"bvuntyped\">Integer / string</link> (variables are untyped)"
+msgid ""
+"<link linkend=\"bvuntyped\">Integer / string</link> (variables are untyped)"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6492,8 +6532,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3568
 msgid ""
-"<link linkend=\"nullvar\"><firstterm>Null</firstterm> variable "
-"assignment</link>, avoiding"
+"<link linkend=\"nullvar\"><firstterm>Null</firstterm> variable assignment</"
+"link>, avoiding"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6503,7 +6543,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3575
-msgid "<link linkend=\"wsquo\">to preserve <firstterm>whitespace</firstterm></link>"
+msgid ""
+"<link linkend=\"wsquo\">to preserve <firstterm>whitespace</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6514,8 +6555,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3580
 msgid ""
-"<link linkend=\"varunsetting\">Setting to <firstterm>null</firstterm> "
-"value</link>"
+"<link linkend=\"varunsetting\">Setting to <firstterm>null</firstterm> value</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6528,8 +6569,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3586
 msgid ""
-"Testing a variable <link linkend=\"intparam\"> if it contains only "
-"digits</link>"
+"Testing a variable <link linkend=\"intparam\"> if it contains only digits</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6579,8 +6620,8 @@ msgstr ""
 #. type: Content of: <para>
 #: abs-guide/INDEX00.xml:3614
 msgid ""
-"<link linkend=\"dblquo\"><firstterm>Weak</firstterm> quoting</link> "
-"<command>\" ... \"</command>"
+"<link linkend=\"dblquo\"><firstterm>Weak</firstterm> quoting</link> <command>"
+"\" ... \"</command>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6610,8 +6651,7 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3635
 msgid ""
-"<link linkend=\"goodread0\">Avoiding a "
-"<firstterm>subshell</firstterm></link>"
+"<link linkend=\"goodread0\">Avoiding a <firstterm>subshell</firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6634,8 +6674,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3647
 msgid ""
-"<link linkend=\"indentedls\">Preceding closing <firstterm>limit "
-"string</firstterm></link> in a <firstterm>here document</firstterm>, error"
+"<link linkend=\"indentedls\">Preceding closing <firstterm>limit string</"
+"firstterm></link> in a <firstterm>here document</firstterm>, error"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6695,8 +6735,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3674
 msgid ""
-"In <link linkend=\"liglob\"> <replaceable>[list]</replaceable> "
-"constructs</link>"
+"In <link linkend=\"liglob\"> <replaceable>[list]</replaceable> constructs</"
+"link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6717,8 +6757,8 @@ msgstr ""
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3687
 msgid ""
-"<link linkend=\"csws\">Resulting from <firstterm>command "
-"substitution</firstterm></link>"
+"<link linkend=\"csws\">Resulting from <firstterm>command substitution</"
+"firstterm></link>"
 msgstr ""
 
 #. type: Content of: <para>
@@ -6748,7 +6788,8 @@ msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
 #: abs-guide/INDEX00.xml:3705
-msgid "Processes arguments <link linkend=\"xargsoneatatime\">one at a time</link>"
+msgid ""
+"Processes arguments <link linkend=\"xargsoneatatime\">one at a time</link>"
 msgstr ""
 
 #. type: Content of: <para><itemizedlist><listitem><para>
@@ -6777,7 +6818,6 @@ msgstr ""
 #: abs-guide/INDEX00.xml:3724
 msgid ""
 "<link linkend=\"zombieref\"><firstterm>Zombie</firstterm></link>, a process "
-"that has terminated, but not yet been <link "
-"linkend=\"killref\">killed</link> by its <link "
-"linkend=\"parentref\">parent</link>"
+"that has terminated, but not yet been <link linkend=\"killref\">killed</"
+"link> by its <link linkend=\"parentref\">parent</link>"
 msgstr ""

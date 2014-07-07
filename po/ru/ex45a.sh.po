@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:29+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:01+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,8 +43,7 @@ msgstr ""
 #: abs-guide/ex45a.sh:12
 #, no-wrap
 msgid ""
-"echo \"The string being operated upon is \\\"`expr \"$a\" : "
-"'\\(.*\\)'`\\\".\"\n"
+"echo \"The string being operated upon is \\\"`expr \"$a\" : '\\(.*\\)'`\\\".\"\n"
 "#     Escaped parentheses grouping operator.            ==  ==\n"
 msgstr ""
 
@@ -68,25 +68,19 @@ msgstr ""
 #. type: Plain text
 #: abs-guide/ex45a.sh:23
 #, no-wrap
-msgid ""
-"echo \"Length of \\\"$a\\\" is `expr \"$a\" : '.*'`.\"   # Length of "
-"string\n"
+msgid "echo \"Length of \\\"$a\\\" is `expr \"$a\" : '.*'`.\"   # Length of string\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45a.sh:25
 #, no-wrap
-msgid ""
-"echo \"Number of digits at the beginning of \\\"$a\\\" is `expr \"$a\" : "
-"'[0-9]*'`.\"\n"
+msgid "echo \"Number of digits at the beginning of \\\"$a\\\" is `expr \"$a\" : '[0-9]*'`.\"\n"
 msgstr ""
 
 #. type: Plain text
 #: abs-guide/ex45a.sh:27
 #, no-wrap
-msgid ""
-"# ------------------------------------------------------------------------- "
-"#\n"
+msgid "# ------------------------------------------------------------------------- #\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,16 +93,13 @@ msgstr ""
 #: abs-guide/ex45a.sh:40
 #, no-wrap
 msgid ""
-"echo \"The digits at the beginning of \\\"$a\\\" are `expr \"$a\" : "
-"'\\([0-9]*\\)'`.\"\n"
+"echo \"The digits at the beginning of \\\"$a\\\" are `expr \"$a\" : '\\([0-9]*\\)'`.\"\n"
 "#                                                             ==      ==\n"
-"echo \"The first 7 characters of \\\"$a\\\" are `expr \"$a\" : "
-"'\\(.......\\)'`.\"\n"
+"echo \"The first 7 characters of \\\"$a\\\" are `expr \"$a\" : '\\(.......\\)'`.\"\n"
 "#         =====                                          ==       ==\n"
 "# Again, escaped parentheses force a substring match.\n"
 "#\n"
-"echo \"The last 7 characters of \\\"$a\\\" are `expr \"$a\" : "
-"'.*\\(.......\\)'`.\"\n"
+"echo \"The last 7 characters of \\\"$a\\\" are `expr \"$a\" : '.*\\(.......\\)'`.\"\n"
 "#         ====                  end of string operator  ^^\n"
 "#  (In fact, means skip over one or more of any characters until specified\n"
 "#+  substring found.)\n"

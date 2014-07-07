@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:29+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +46,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: abs-guide/ex53.sh:16 abs-guide/ex53.sh:26 abs-guide/ex53.sh:38 abs-guide/ex53.sh:52
+#: abs-guide/ex53.sh:16 abs-guide/ex53.sh:26 abs-guide/ex53.sh:38
+#: abs-guide/ex53.sh:52
 #, no-wrap
 msgid "echo; echo\n"
 msgstr ""

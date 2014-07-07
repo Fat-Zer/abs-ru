@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,12 +44,9 @@ msgstr ""
 #: abs-guide/self-mailer.sh:17
 #, no-wrap
 msgid ""
-"# "
-"============================================================================\n"
-"  cat $0 | mail -s \"Script \\\"`basename $0`\\\" has mailed itself to "
-"you.\" \"$adr\"\n"
-"# "
-"============================================================================\n"
+"# ============================================================================\n"
+"  cat $0 | mail -s \"Script \\\"`basename $0`\\\" has mailed itself to you.\" \"$adr\"\n"
+"# ============================================================================\n"
 msgstr ""
 
 #. type: Plain text

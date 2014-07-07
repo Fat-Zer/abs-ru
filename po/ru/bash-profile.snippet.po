@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:29+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:01+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,8 +47,7 @@ msgstr ""
 #: abs-guide/bash-profile.snippet:16
 #, no-wrap
 msgid ""
-"PCT=\"\\`if [[ \\$EUID -eq 0 ]]; then T='$LIGHTRED' ; else T='$LIGHTBLUE'; "
-"fi; \n"
+"PCT=\"\\`if [[ \\$EUID -eq 0 ]]; then T='$LIGHTRED' ; else T='$LIGHTBLUE'; fi; \n"
 "echo \\$T \\`\"\n"
 msgstr ""
 
@@ -67,8 +67,7 @@ msgstr ""
 #: abs-guide/bash-profile.snippet:27
 #, no-wrap
 msgid ""
-"PS1=\"\\n$GREEN[\\w] "
-"\\n$DARKGRAY($PCT\\t$DARKGRAY)-($PCT\\u$DARKGRAY)-($PCT\\!\n"
+"PS1=\"\\n$GREEN[\\w] \\n$DARKGRAY($PCT\\t$DARKGRAY)-($PCT\\u$DARKGRAY)-($PCT\\!\n"
 "$DARKGRAY)$YELLOW-> $NC\"\n"
 msgstr ""
 
@@ -97,8 +96,7 @@ msgstr ""
 #: abs-guide/bash-profile.snippet:42
 #, no-wrap
 msgid ""
-"#  When a variable's value contains a semicolon it should be strong "
-"quoted:\n"
+"#  When a variable's value contains a semicolon it should be strong quoted:\n"
 "#        T='$LIGHTRED',\n"
 "#  Otherwise, the semicolon will be interpreted as a command separator.\n"
 msgstr ""

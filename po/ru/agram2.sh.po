@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:29+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:01+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,9 +86,7 @@ msgstr ""
 #. type: Plain text
 #: abs-guide/agram2.sh:40
 #, no-wrap
-msgid ""
-"# echo \"${Anagrams[*]}\"  # To list all the anagrams in a single line "
-". . .\n"
+msgid "# echo \"${Anagrams[*]}\"  # To list all the anagrams in a single line . . .\n"
 msgstr ""
 
 #. type: Plain text

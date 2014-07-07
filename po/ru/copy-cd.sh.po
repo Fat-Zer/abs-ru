@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:29+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:01+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,8 +44,7 @@ msgstr ""
 msgid ""
 "echo; echo \"Insert source CD, but do *not* mount it.\"\n"
 "echo \"Press ENTER when ready. \"\n"
-"read ready                                 # Wait for input, $ready not "
-"used.\n"
+"read ready                                 # Wait for input, $ready not used.\n"
 msgstr ""
 
 #. type: Plain text
@@ -68,8 +68,7 @@ msgid ""
 "echo; echo \"Remove data CD.\"\n"
 "echo \"Insert blank CDR.\"\n"
 "echo \"Press ENTER when ready. \"\n"
-"read ready                                 # Wait for input, $ready not "
-"used.\n"
+"read ready                                 # Wait for input, $ready not used.\n"
 msgstr ""
 
 #. type: Plain text
@@ -99,8 +98,7 @@ msgstr ""
 #: abs-guide/copy-cd.sh:40
 #, no-wrap
 msgid ""
-"echo \"Do you want to erase the image file (y/n)? \"  # Probably a huge "
-"file.\n"
+"echo \"Do you want to erase the image file (y/n)? \"  # Probably a huge file.\n"
 "read answer\n"
 msgstr ""
 
@@ -127,8 +125,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "# Exercise:\n"
-"# Change the above \"case\" statement to also accept \"yes\" and \"Yes\" as "
-"input.\n"
+"# Change the above \"case\" statement to also accept \"yes\" and \"Yes\" as input.\n"
 msgstr ""
 
 #. type: Plain text

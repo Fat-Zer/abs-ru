@@ -1,6 +1,12 @@
-PO4A_GETTEXTIZE = po4a-gettextize
+PACKAGE_NAME        = abs-guide
+PACKAGE_VERSION     = 10
+TRANSLATION_BUG_URI = https://github.com/Fat-Zer/abs-ru/issues
+PO4A_COMMON_ARGS= --package-name "$(PACKAGE_NAME)" --package-version "$(PACKAGE_VERSION)" \
+	--msgid-bugs-address "$(TRANSLATION_BUG_URI)"
+
+PO4A_GETTEXTIZE = po4a-gettextize $(PO4A_COMMON_ARGS)
+PO4A_UPDATEPO   = po4a-updatepo $(PO4A_COMMON_ARGS)
 PO4A_TRANSLATE  = po4a-translate -k 0
-PO4A_UPDATEPO   = po4a-updatepo
 
 PO4A_DOCBOOK_OPTS = -f docbook
 PO4A_SCRIPT_OPTS = -f text -o wrap=no

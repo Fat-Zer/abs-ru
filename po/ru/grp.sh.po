@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,13 +61,11 @@ msgstr ""
 #: abs-guide/grp.sh:23
 #, no-wrap
 msgid ""
-"  if [ ! -z \"$output\" ]           # What happens if \"$output\" is not "
-"quoted?\n"
+"  if [ ! -z \"$output\" ]           # What happens if \"$output\" is not quoted?\n"
 "  then\n"
 "    echo -n \"$file: \"\n"
 "    echo \"$output\"\n"
-"  fi              #  sed -ne \"/$1/s|^|${file}: |p\"  is equivalent to "
-"above.\n"
+"  fi              #  sed -ne \"/$1/s|^|${file}: |p\"  is equivalent to above.\n"
 msgstr ""
 
 #. type: Plain text

@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,8 +47,7 @@ msgid ""
 "while [ \"$word\" != end ]  # Last word in data file.\n"
 "do               # ^^^\n"
 "  read word      # From data file, because of redirection at end of loop.\n"
-"  look $word > /dev/null  # Don't want to display lines in dictionary "
-"file.\n"
+"  look $word > /dev/null  # Don't want to display lines in dictionary file.\n"
 "  #  Searches for words in the file /usr/share/dict/words\n"
 "  #+ (usually a link to linux.words).\n"
 "  lookup=$?      # Exit status of 'look' command.\n"
@@ -68,9 +68,7 @@ msgstr ""
 #. type: Plain text
 #: abs-guide/lookup.sh:26
 #, no-wrap
-msgid ""
-"done &lt;\"$file\"    # Redirects stdin to $file, so \"reads\" come from "
-"there.\n"
+msgid "done &lt;\"$file\"    # Redirects stdin to $file, so \"reads\" come from there.\n"
 msgstr ""
 
 #. type: Plain text

@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,9 +44,7 @@ msgstr ""
 #. type: Plain text
 #: abs-guide/UseGetOpt-2.sh:12
 #, no-wrap
-msgid ""
-"#  Author of original script: Peggy Russell "
-"&lt;prusselltechgroup@gmail.com&gt;\n"
+msgid "#  Author of original script: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;\n"
 msgstr ""
 
 #. type: Plain text

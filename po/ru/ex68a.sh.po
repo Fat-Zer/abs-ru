@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-07 18:30+0400\n"
+"Report-Msgid-Bugs-To: https://github.com/Fat-Zer/abs-ru/issues\n"
+"POT-Creation-Date: 2014-07-07 23:03+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,8 +48,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "# Necessary but not sufficient would be, e.g.,\n"
-"#     (($(sieve 7919 | wc -w) == 1000)) &amp;&amp; echo \"7919 is the 1000th "
-"prime\"\n"
+"#     (($(sieve 7919 | wc -w) == 1000)) &amp;&amp; echo \"7919 is the 1000th prime\"\n"
 msgstr ""
 
 #. type: Plain text
