@@ -1,7 +1,24 @@
 PO4A_GETTEXTIZE = po4a-gettextize
 PO4A_TRANSLATE  = po4a-translate -k 0
 PO4A_UPDATEPO   = po4a-updatepo
+
+PO4A_DOCBOOK_OPTS = -f docbook
+PO4A_SCRIPT_OPTS = -f text -o wrap=no
+# we need that till po4a BUG #314748 resolved
+export PERLLIB := $(PWD)/tools/po4a-lib
+
+
+# we need that till po4a BUG #314748 resolved
+export PERLLIB := $(PWD)/tools/po4a-lib
+
+# we need that till po4a BUG #314748 resolved
+export PERLLIB := $(PWD)/tools/po4a-lib
+
+# we need that till po4a BUG #314748 resolved
+export PERLLIB := $(PWD)/tools/po4a-lib
+
 XSLTPROC        = xsltproc --nonet
+
 DOCBOOK_HTML_XSL = http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl
 DOCBOOK_HTML_CHUNK_XSL = http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl
 
@@ -90,7 +107,7 @@ TRANSLATIONS = $(foreach lang, $(LANGS), $(TRANSLATIONS_$(lang)))
 all: update-po translate update-pot
 
 # toplevel PHONY targets
-.PHONY: update-pot update-po translate html
+.PHONY: all update-pot update-po translate html
 
 # html targets
 html: $(foreach lang, $(LANGS), build-html-$(lang))
@@ -126,10 +143,10 @@ translate-$(1) : ${TRANSLATIONS_${1}}
 .PHONY: translate-$(1)
 
 $(1)/%.xml : $(SOURCEDIR)/%.xml $(PODIR)/$(1)/%.xml.po
-	$(PO4A_TRANSLATE) -f docbook -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.xml.po
+	$(PO4A_TRANSLATE) $(PO4A_DOCBOOK_OPTS) -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.xml.po
 
 $(1)/% : $(SOURCEDIR)/% $(PODIR)/$(1)/%.po
-	$(PO4A_TRANSLATE) -f text -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.po
+	$(PO4A_TRANSLATE) $(PO4A_SCRIPT_OPTS) -l $$@ -m $$< -p $(PODIR)/$(1)/$$*.po
 
 $(addprefix $(1)/, $(SOURCES)) : | $(1)
 
@@ -145,10 +162,10 @@ update-po: $(POS)
 
 define rule_po_lang =
 $(PODIR)/$(1)/%.xml.po : $(SOURCEDIR)/%.xml
-	$(PO4A_UPDATEPO) -f docbook -p $$@ -m $$<
+	$(PO4A_UPDATEPO) $(PO4A_DOCBOOK_OPTS) -p $$@ -m $$<
 
 $(PODIR)/$(1)/%.po : $(SOURCEDIR)/%
-	$(PO4A_UPDATEPO) -f text -p $$@ -m $$<
+	$(PO4A_UPDATEPO) $(PO4A_SCRIPT_OPTS) -p $$@ -m $$<
 
 $(addprefix $(PODIR)/$(1)/, $(GENERAL_POS))) : | $(PODIR)/$(1)
 $(PODIR)/$(1) :
@@ -161,10 +178,10 @@ $(foreach lang,$(LANGS),$(eval $(call rule_po_lang,$(lang))))
 update-pot: $(POTS)
 
 $(POTDIR)/%.xml.pot : $(SOURCEDIR)/%.xml
-	$(PO4A_GETTEXTIZE) -f docbook -p $@ -m $<
+	$(PO4A_GETTEXTIZE) $(PO4A_DOCBOOK_OPTS) -p $@ -m $<
 
 $(POTDIR)/%.pot : $(SOURCEDIR)/%
-	$(PO4A_GETTEXTIZE) -f text -p $@ -m $<
+	$(PO4A_GETTEXTIZE) $(PO4A_SCRIPT_OPTS) -p $@ -m $<
 
 $(POTS): | $(POTDIR)
 
