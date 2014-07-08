@@ -1,0 +1,950 @@
+ABS Guide
+absolute path
+A character set
+acronym
+address range
+Advanced Bash Scripting Guide
+alert
+algorithms
+alias
+All
+alternate parameter
+&amp;&amp;
+An anchor
+anchor
+Anchor
+AND-equal
+and
+And
+and list
+anonymous
+Anonymous
+anonymous function
+anonymous here documents
+append
+appends
+approximate grep
+arc.exe
+archive
+arglist
+arguments
+Arithmetic evaluation
+arithmetic
+arj.exe
+array
+Array
+arrow
+a single dot
+assert
+assignment
+associative array
+associative
+Associative
+asynchronous
+aterm
+atoi
+autoload
+awk
+Awk
+{a..z}
+background
+Backlight
+backquotes
+Backquotes
+backslash
+backticks
+backup
+Badname
+bang
+banner
+base64.sh
+basename
+bash-2-doc
+bashdiff
+bash
+Bash
+batch processing
+bc
+beep
+behead
+bibliography
+binary executable
+binary
+Binary
+#!/bin/bash
+#!/bin/sh
+binutils
+black hole
+blank line
+blank lines
+blank-rename
+block device
+block
+blocks
+bold
+boot
+boundary conditions
+Bourne
+brace expansion
+Bracket notation
+break
+broadcast
+broken pipe
+buffer
+buffer overrun
+Buffon's Needle
+built in
+builtin
+bzipped2-ed
+caller
+canonical
+capitalize
+case
+case-modification
+Case modification
+cat
+cat scripts
+cd
+certificates
+C
+C++
+CGI
+character device
+character
+Character match
+chars
+checksum
+checksums
+child
+child processes
+child process
+chrooted
+cleanup
+clipboard
+cmp
+code obfuscation
+collisions
+colon
+Colon
+column
+comma
+command history
+command line
+command-line
+command-line parameters
+command substitution
+Command substitution
+comma operator
+comma-separated values
+comment
+Comments
+complete
+completion script
+compound
+compressed
+Compress
+concordance
+const
+context
+continue N
+copy-cd
+copy/update
+cpio
+craps
+cross-reference
+C-shell
+C Shell
+C-style
+curly-bracketed
+curly bracket
+curly
+current directory
+current shell
+Current user's
+cut
+Cuts
+daemon
+data duplicator
+data
+date
+Date
+days-between
+dc
+dd
+debug
+declared
+declare
+default
+default parameter
+dependencies
+determinant
+device files
+dgatwood
+DHCP
+dialog
+dictionary
+diff3
+diff
+dig
+digrams
+directory
+directory stack
+dirname
+disabled
+disable
+ditto
+do
+DOS
+dot files
+dotfiles
+Dotfiles
+dot
+dot single-character
+double-dash
+double parentheses
+double-parentheses
+double quotes
+Double-quoting
+du
+dummyfile
+echo
+Echoing
+efax
+Effective user ID
+elf
+else
+else if
+enable
+encryptedpw
+end
+end of options
+end-of-options
+Environmental
+environmental variables
+environment
+-eq
+equal
+Equals
+erase
+err_msg
+error code
+escaped
+Escaped
+escaped parentheses -- \( ... \) --
+escape
+escapes
+Escaping
+Et cetera
+eval
+evaluate
+example script
+Example script
+exclusive
+exec
+exec's
+Executable and Linking Format
+execute
+ex
+exit 127
+exit 1
+exit 3809
+exit code
+Exit codes
+exit
+exit status
+Exit status
+expect
+export
+Export
+Expression
+expr
+ex scripts
+ext2/ext3
+ext2
+ext3
+extended grep
+Extended Regular Expression
+Extended Regular Expressions
+extended test command
+external
+factor
+fast grep
+FAT
+fd 0
+fd 1
+fd 2
+Fedora Core
+fgrep
+field
+fields
+fifo
+file descriptor
+file descriptors
+File
+file handle
+filename expansion
+Filename expansion
+filename
+filenames
+files
+fileutils
+filter
+filters out
+find
+first-in-first-out buffer
+=
+!
+$(...)
+force
+Force
+for-each
+foreground
+for
+fork bomb
+forked
+forking
+forking off
+for loop
+for-loop
+for loops
+formatted print
+FORTRAN
+frequency of occurrence
+From
+full quoting
+function
+Function
+function return
+functions
+Game of Life
+gdbm
+gdialog
+gendiff
+generate
+getopt
+getopts
+Ghostscript
+global
+global - regular expression - print
+globbing
+GNU
+greater-than
+greater-than or equal
+greenbar
+grep
+groff
+group
+group ID
+Group id
+Groups
+Gtk
+GTK+
+Gtk-Perl
+gzip
+gzipped
+halt
+hard links
+hardware socket
+hashing
+Hashing
+hash table
+help
+Help
+here document
+Here document
+here documents
+Here documents
+Here
+here string
+Here string
+here strings
+hexadecimal
+history buffer
+history
+history mechanism
+hostid
+host name
+identd
+if
+if-grep
+i
+if-then
+if/then
+imports
+Increment/decrement
+index
+exit status
+return status
+sha-bang
+indirect reference
+indirect references
+info
+info page
+initscripts / rc-scripts
+inline group
+inode
+integer
+interact
+interactive
+interface configuration
+Internal field separator
+inverts
+I/O redirection
+IP
+iproute2
+iptables
+is-equal-to
+Island
+ISO9660
+iterates
+Iteration
+itoa
+Java
+JFIF
+j
+job
+job identifier
+job number
+jobs
+jpeg
+kdialog
+keys
+key square
+keyword
+keywords
+kill -9
+killall
+killall script
+kill
+kmail
+Korn Shell
+ksh88
+ksh93
+ksh
+label
+last-in-first-out
+ld
+left-shift-equal
+left-to-right
+length
+less
+less-than
+less-than or equal
+let
+library calls
+lid
+Limit
+limit string
+line number
+line printers
+linked list
+List
+literal
+literal meaning
+literal strings
+ln
+ln -s 
+load average
+load
+local
+local variable
+lock file
+logical not
+login
+Log out
+long
+loopback
+loop control condition
+loop
+loop unrolling
+lowercase
+ls
+lsof
+lucky number
+lucky numbers
+lvalue
+lzma
+m4
+Machine type
+macro
+magic number
+mailformat
+mail statistics
+mail user agents
+Main prompt
+make
+man
+man page
+Man page
+man pages
+manual page
+manview
+mask
+matches
+match
+matching
+matching numbers
+matrix
+metacharacters
+meta-meaning
+metaphor
+micro-
+Microsleep
+minors
+minus-equal
+mod-equal
+Modifiers
+modify
+modulo
+more
+mount
+Mount
+move
+mplayer
+mu
+named pipe
+name
+Name
+names.data
+name server lookup
+nested loop
+nest
+nesting
+netcat
+network mapper
+newgrp
+newline
+Newton's Method
+n
+nist.gov
+nl
+Noclobber
+noninteractively
+non-root
+not-and
+not-equal
+not-equal-to
+NOT
+null
+null.
+Null
+null variable assignment
+octal dump
+octal
+octal/hex
+ogg
+openssl
+operation
+operator
+optimization
+option
+option flag
+Option-Name
+options
+option string
+OR-equal
+or
+Or
+original International Movie Database (IMDB) reader polling scripts
+or list
+or lists
+orphan
+osimpa
+output
+Output
+owner
+pad
+${parameter:+alt_value}
+${parameter+alt_value}
+${parameter=default}
+${parameter-default}
+${parameter:=default}
+${parameter:-default}
+${parameter?err_msg}
+${parameter}
+parameter
+parameters
+parameter substitution
+parent
+Parent
+parent process
+partial quoting
+password
+paste
+Pastes
+patch
+path
+path name
+pathname
+pathnames
+pattern
+Pauses
+pax
+pci
+pdf
+Perl
+PerlTk
+pgp
+Phi
+philtre
+physical devices
+PID
+pidof
+pine
+ping
+pipe
+Pipe
+pkzip.exe
+plaintext
+plus-equal
+podcasting
+pointer
+pointers
+popped
+portability
+Portable Operating System Interface / UNIX
+port
+positional parameter
+positional parameters
+Positional parameters
+position
+POSIX
+precedence
+Precedence
+prefix
+prepend
+Prepending
+printf
+print
+printout
+print queue
+priority
+processes
+process
+process ID
+Process ID
+process ID number
+process ID (PID)
+process substitution
+Process substitution
+program
+programmable completion
+progress bar
+prompt
+pseudo-code
+pseudorandom
+public key
+pushdown
+push-down stack
+pushed
+PyQt
+Python
+Qt
+quadratic
+Quiet
+quote
+quotes
+quoting/escaping the limit string
+quoting
+Quoting
+rar.exe
+RatFor
+rcs
+read
+readline
+read -N chars
+readonly
+read -t
+receptacle
+recode
+record
+Recursion
+Recursive
+recursive function
+Red Hat 7.1
+Red Hat Package Manager
+redirection
+redundancy
+reevaluation
+reference
+RE
+regex
+regular expression
+Regular Expression
+Regular Expressions
+regular
+regular user
+remainder
+removal
+replacement string
+replace strings
+reseed
+reserved
+Reserved
+restricted
+restricted mode
+restricted shells
+retrieve
+return
+Return
+return value
+return values
+reusable
+Reverse Polish Notation
+right-shift-equal
+rm
+rn
+root directory
+root
+root user
+rot13
+rotate
+row
+rpm
+rubout
+Ruby
+rvalue
+rxvt
+save-text-mode
+scope
+script example
+Script example
+script
+secret password
+secure
+Secure Sockets Layer
+sed
+Sed
+seed
+select
+self-reference
+semaphore
+semicolon
+Semicolon
+separate
+seq
+service
+set
+set -o pipefail
+set user id
+s
+sgid
+sha1pass
+sha256sum
+sha512
+sha-bang
+Shar archives
+shar
+sharp
+sh-bang
+she-bang
+Shell archiving
+shell
+shell level
+shell options
+shell script
+shell variables
+Shell Variables
+shell wrapper
+sh
+shift
+Shift
+shift left
+shift right
+sh-utils
+side effects
+Side effects
+Sieve of Eratosthenes
+signal
+simulate
+single
+size
+slash-equal
+socket
+sourced
+source
+Sourcing
+sox
+spaces
+Spam
+spawns
+special character
+special characters
+special
+splitting
+ssh
+stack
+stack register
+sticky bit,
+strchr()
+string concatenation
+string-expansion
+string
+string functions
+strings
+string/substring
+strlen()
+strong
+Strong
+stty
+subshell
+subshells
+substitute
+Substitute
+Substitute user
+Substring extraction
+successful
+Successful
+suffix
+suid
+Sunsite
+superuser
+sure kill
+symbolic
+symbolic link
+symbolic links
+system calls
+tab completion
+tab
+tabs
+tail
+tar
+target
+tautology
+Tcl
+tcsh
+tee,
+telnet
+temporary file
+terminal
+terminate
+terminfo
+ternary
+test24
+test brackets
+test
+Test
+test suite
+Tex
+TeX
+texinfo
+text stream
+t
+The Fibonacci Sequence
+then
+The Towers of Hanoi, alternate graphic version
+The Towers of Hanoi
+The Towers of Hanoi, graphic version
+threads
+tic-tac-toe
+Tilde
+times-equal
+Tk
+tksh
+token
+top
+Topological sort
+toupper
+tput
+trap
+Trap
+Trapping
+tree2
+tree
+tr
+triggered
+trinary
+Trinary
+Trinary (ternary)
+trojan
+true
+tsort
+two dots
+typed
+typeset
+typing
+u
+umask
+unalias
+unary
+undeclared
+undvd
+unicode
+Unicode
+units of measure
+UNIX to UNIX copy
+UNIX to UNIX execute
+unmounted
+Unprotecting
+unquoted
+unset
+unsets
+unsuccessful
+until [ condition-is-true ]; do
+until
+until loop
+until loops
+upper limit
+UseGetOpt.sh
+User Datagram Packet
+user's home directory
+uuencoded
+value
+Variable
+variables
+Variables
+variable substitution
+${!varprefix@}
+${!varprefix*}
+Verbose
+Version
+viewdata.sh
+vi
+vim
+virus
+wait loop
+wc
+weak
+Weak
+wget
+whatis
+wh
+while [ condition ]; do
+while
+while loop
+while loops
+while read
+while-read
+while-read loop
+whitespace
+Whitespace
+whois
+widtools
+Wikipedia
+wild card
+Wild card
+wild cards
+Wild cards
+wish
+word lists
+worm
+wrapper
+write
+www.linuxquestions.org
+xargs
+Xdialog
+XForms4Perl
+XForms
+Xmenu
+xmodem
+XOR-equal
+Xscript
+xterm
+yes
+zero-index
+Zero-padding
+zmodem
+Zmodem
+zmore
+zombie
+Zombie
