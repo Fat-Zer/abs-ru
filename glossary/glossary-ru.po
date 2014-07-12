@@ -1,0 +1,5135 @@
+# Alexander Golubev <fatzer2@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: abs-guide 10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-11 02:24+0400\n"
+"PO-Revision-Date: 2014-07-12 04:20+0400\n"
+"Last-Translator: Alexander Golubev <fatzer2@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+# (poterminology) pot/is_spammer.bash.pot (40)
+#
+# (poterminology) pot/insertion-sort.bash.pot (1)
+#
+# (poterminology) pot/ex34.sh.pot (3)
+#
+# (poterminology) pot/hanoi.bash.pot (6)
+#
+# (poterminology) pot/ex4.sh.pot (4)
+#
+# (poterminology) pot/blot-out.sh.pot (4)
+#
+# (poterminology) pot/ex19.sh.pot (2)
+#
+# (poterminology) pot/avoid-subshell.sh.pot (1)
+#
+# (poterminology) pot/paragraph-space.sh.pot (2)
+#
+# (poterminology) pot/hello.sh.pot (3)
+#
+# (poterminology) pot/fifo.sh.pot (2)
+#
+# (poterminology) pot/max2.sh.pot (1)
+#
+# (poterminology) pot/what.sh.pot (1)
+#
+# (poterminology) pot/ascii3.sh.pot (2)
+#
+# (poterminology) pot/array-strops.sh.pot (1)
+#
+# (poterminology) pot/am-i-root.sh.pot (1)
+#
+# (poterminology) pot/ra2ogg.sh.pot (3)
+#
+# (poterminology) pot/recurse.sh.pot (4)
+#
+# (poterminology) pot/pid-identifier.sh.pot (3)
+#
+# (poterminology) pot/ind-ref.sh.pot (1)
+#
+# (poterminology) pot/arrow-detect.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (972)
+#
+# (poterminology) pot/behead.sh.pot (1)
+#
+# (poterminology) pot/gcd.sh.pot (1)
+#
+# (poterminology) pot/ex56.sh.pot (3)
+#
+# (poterminology) pot/realname.sh.pot (1)
+#
+# (poterminology) pot/ex17.sh.pot (4)
+#
+# (poterminology) pot/ex67.sh.pot (1)
+#
+# (poterminology) pot/continue-nlevel.sh.pot (1)
+#
+# (poterminology) pot/func-cmdlinearg.sh.pot (1)
+#
+# (poterminology) pot/stack.sh.pot (1)
+#
+# (poterminology) pot/stupid-script-tricks.sh.pot (2)
+#
+# (poterminology) pot/ex20.sh.pot (2)
+#
+# (poterminology) pot/wr-ps.bash.pot (1)
+#
+# (poterminology) pot/rot13a.sh.pot (3)
+#
+# (poterminology) pot/ex73.sh.pot (3)
+#
+# (poterminology) pot/archiveweblogs.sh.pot (2)
+#
+# (poterminology) pot/agram2.sh.pot (2)
+#
+# (poterminology) pot/rand-string.sh.pot (1)
+#
+# (poterminology) pot/TABEXP.xml.pot (8)
+#
+# (poterminology) pot/file-comparison.sh.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/ex71a.sh.pot (1)
+#
+# (poterminology) pot/ex5.sh.pot (1)
+#
+# (poterminology) pot/continue-n.example.pot (1)
+#
+# (poterminology) pot/ex49.sh.pot (1)
+#
+# (poterminology) pot/spawn.sh.pot (6)
+#
+# (poterminology) pot/alias.sh.pot (2)
+#
+# (poterminology) pot/and-list2.sh.pot (4)
+#
+# (poterminology) pot/tree.sh.pot (2)
+#
+# (poterminology) pot/seeding-random.sh.pot (1)
+#
+# (poterminology) pot/homework.sh.pot (3)
+#
+# (poterminology) pot/self-mailer.sh.pot (7)
+#
+# (poterminology) pot/col-totaler2.sh.pot (6)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/userlist.sh.pot (1)
+#
+# (poterminology) pot/exercising-dd.sh.pot (3)
+#
+# (poterminology) pot/ex39.sh.pot (3)
+#
+# (poterminology) pot/dict-lookup.sh.pot (7)
+#
+# (poterminology) pot/poem.sh.pot (1)
+#
+# (poterminology) pot/random-between.sh.pot (2)
+#
+# (poterminology) pot/self-copy.sh.pot (2)
+#
+# (poterminology) pot/bashpodder.sh.pot (6)
+#
+# (poterminology) pot/revposparams.sh.pot (2)
+#
+# (poterminology) pot/strip-comments.sh.pot (3)
+#
+# (poterminology) pot/ex30.sh.pot (1)
+#
+# (poterminology) pot/ascii.c.pot (1)
+#
+# (poterminology) pot/Du.sh.pot (1)
+#
+# (poterminology) pot/speech.sh.pot (2)
+#
+# (poterminology) pot/self-source.sh.pot (7)
+#
+# (poterminology) pot/cw-solver.sh.pot (2)
+#
+# (poterminology) pot/readpipe.sh.pot (1)
+#
+# (poterminology) pot/ifs-empty.sh.pot (1)
+#
+# (poterminology) pot/twodim.sh.pot (1)
+#
+# (poterminology) pot/progress-bar2.sh.pot (1)
+#
+# (poterminology) pot/add-drive.sh.pot (2)
+#
+# (poterminology) pot/ramdisk.sh.pot (4)
+#
+# (poterminology) pot/wstrings.sh.pot (2)
+#
+# (poterminology) pot/cvt.sh.pot (2)
+#
+# (poterminology) pot/ex6.sh.pot (4)
+#
+# (poterminology) pot/primes.sh.pot (3)
+#
+# (poterminology) pot/ex44.sh.pot (3)
+#
+# (poterminology) pot/soundex.sh.pot (4)
+#
+# (poterminology) pot/ex74.sh.pot (1)
+#
+# (poterminology) pot/ex9.sh.pot (2)
+#
+# (poterminology) pot/rpm-check.sh.pot (1)
+#
+# (poterminology) pot/life.sh.pot (12)
+#
+# (poterminology) pot/dialog.sh.pot (5)
+#
+# (poterminology) pot/hanoi2.bash.pot (4)
+#
+# (poterminology) pot/grp.sh.pot (1)
+#
+# (poterminology) pot/viewdata.sh.pot (2)
+#
+# (poterminology) pot/ex76.sh.pot (3)
+#
+# (poterminology) pot/petals.sh.pot (1)
+#
+# (poterminology) pot/usrmnt.sh.pot (4)
+#
+# (poterminology) pot/assert.sh.pot (5)
+#
+# (poterminology) pot/horserace.sh.pot (9)
+#
+# (poterminology) pot/UseGetOpt.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (1)
+#
+# (poterminology) pot/msquare.sh.pot (1)
+#
+# (poterminology) pot/ex29.sh.pot (2)
+#
+# (poterminology) pot/unprotect_literal.sh.pot (3)
+#
+# (poterminology) pot/q-function.sh.pot (1)
+#
+# (poterminology) pot/assoc-arr-test.sh.pot (1)
+#
+# (poterminology) pot/ex18.sh.pot (2)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (3)
+#
+# (poterminology) pot/color-echo.sh.pot (1)
+#
+# (poterminology) pot/rnd.sh.pot (3)
+#
+# (poterminology) pot/redir2.sh.pot (1)
+#
+# (poterminology) pot/seconds.sh.pot (2)
+#
+# (poterminology) pot/timed-input.sh.pot (3)
+#
+# (poterminology) pot/incompat.sh.pot (3)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/ex75.sh.pot (1)
+#
+# (poterminology) pot/vartrace.sh.pot (2)
+#
+# (poterminology) pot/allprofs.sh.pot (3)
+#
+# (poterminology) pot/findstring.sh.pot (1)
+#
+# (poterminology) pot/find-splitpara.sh.pot (1)
+#
+# (poterminology) pot/ex79.sh.pot (2)
+#
+# (poterminology) pot/nightly-backup.sh.pot (2)
+#
+# (poterminology) pot/manview.sh.pot (2)
+#
+# (poterminology) pot/ex40.sh.pot (2)
+#
+# (poterminology) pot/kill-byname.sh.pot (3)
+#
+# (poterminology) pot/dereference.sh.pot (1)
+#
+# (poterminology) pot/ascii.sh.pot (4)
+#
+# (poterminology) pot/wgetter2.bash.pot (14)
+#
+# (poterminology) pot/prepend.sh.pot (1)
+#
+# (poterminology) pot/wf.sh.pot (3)
+#
+# (poterminology) pot/ascii2.sh.pot (2)
+#
+# (poterminology) pot/ex61.sh.pot (1)
+#
+# (poterminology) pot/bingo.sh.pot (5)
+#
+# (poterminology) pot/ex23.sh.pot (1)
+#
+# (poterminology) pot/cdll.pot (4)
+#
+# (poterminology) pot/is-spammer.sh.pot (7)
+#
+# (poterminology) pot/ip.sh.pot (1)
+#
+# (poterminology) pot/Draw-box.sh.pot (1)
+#
+# (poterminology) pot/ex70.sh.pot (1)
+#
+# (poterminology) pot/ex71b.sh.pot (1)
+#
+# (poterminology) pot/cannon.sh.pot (4)
+#
+# (poterminology) pot/usb.sh.pot (3)
+#
+# (poterminology) pot/sam.sh.pot (4)
+#
+# (poterminology) pot/erase.sh.pot (1)
+#
+# (poterminology) pot/letter-count2.sh.pot (7)
+#
+# (poterminology) pot/online.sh.pot (5)
+#
+# (poterminology) pot/whx.sh.pot (4)
+#
+# (poterminology) pot/getopt-simple.sh.pot (1)
+#
+# (poterminology) pot/de-rpm.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/ex71c.sh.pot (1)
+#
+# (poterminology) pot/redir2a.sh.pot (2)
+#
+# (poterminology) pot/qky.sh.pot (3)
+#
+# (poterminology) pot/sd.sh.pot (1)
+#
+# (poterminology) pot/unit-conversion.sh.pot (1)
+#
+# (poterminology) pot/array-assign.bash.pot (2)
+#
+# (poterminology) pot/hypotenuse.sh.pot (3)
+#
+# (poterminology) pot/usage-message.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (11)
+#
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/array-append.bash.pot (1)
+#
+# (poterminology) glossary.pot (5)
+#
+# (poterminology) pot/timeout.sh.pot (1)
+#
+# (poterminology) pot/read-novar.sh.pot (3)
+#
+# (poterminology) pot/letter-count.sh.pot (2)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/ex41.sh.pot (2)
+#
+# (poterminology) pot/iscan.sh.pot (4)
+#
+# (poterminology) pot/days-between.sh.pot (4)
+#
+# (poterminology) pot/arglist.sh.pot (1)
+#
+# (poterminology) pot/embedded-arrays.sh.pot (2)
+#
+# (poterminology) pot/ha.sh.pot (2)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (113)
+#
+# (poterminology) pot/data-file.pot (2)
+#
+# (poterminology) pot/generate-script.sh.pot (3)
+#
+# (poterminology) pot/arith-tests.sh.pot (1)
+#
+# (poterminology) pot/self-destruct.sh.pot (2)
+#
+# (poterminology) pot/base.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt-2.sh.pot (2)
+#
+# (poterminology) pot/read-N.sh.pot (2)
+#
+# (poterminology) pot/self-exec.sh.pot (4)
+#
+# (poterminology) pot/ex37.sh.pot (1)
+#
+# (poterminology) pot/tohtml.sh.pot (5)
+#
+# (poterminology) pot/ex57.sh.pot (1)
+#
+# (poterminology) pot/monthlypmt.sh.pot (1)
+#
+# (poterminology) pot/ex33a.sh.pot (3)
+#
+# (poterminology) pot/README.pot (5)
+#
+# (poterminology) pot/tree2.sh.pot (4)
+#
+# (poterminology) pot/CopyArray.sh.pot (1)
+#
+# (poterminology) pot/ktour.sh.pot (3)
+#
+# (poterminology) pot/ex3.sh.pot (2)
+#
+# (poterminology) pot/gen0.pot (1)
+#
+# (poterminology) pot/test-suite.sh.pot (1)
+#
+# (poterminology) pot/eval.example.pot (1)
+#
+# (poterminology) pot/nim.sh.pot (2)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/logevents.sh.pot (2)
+#
+# (poterminology) pot/ex72.sh.pot (1)
+#
+# (poterminology) pot/spam-lookup.sh.pot (2)
+#
+# (poterminology) pot/from.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (1)
+#
+# (poterminology) pot/col-totaler.sh.pot (7)
+#
+# (poterminology) pot/ex55.sh.pot (3)
+#
+# (poterminology) pot/recursion-def.sh.pot (1)
+#
+# (poterminology) pot/rp.sdcard.sh.pot (4)
+#
+# (poterminology) pot/kill-process.sh.pot (3)
+#
+# (poterminology) pot/ex64.sh.pot (4)
+#
+# (poterminology) pot/broken-link.sh.pot (3)
+#
+# (poterminology) pot/bashandperl.sh.pot (5)
+#
+# (poterminology) pot/sedappend.sh.pot (2)
+#
+# (poterminology) pot/setnew-passwd.sh.pot (5)
+#
+# (poterminology) pot/gronsfeld.bash.pot (3)
+#
+# (poterminology) pot/ex2.sh.pot (4)
+#
+# (poterminology) pot/random-test.sh.pot (2)
+#
+# (poterminology) pot/pb.sh.pot (4)
+#
+# (poterminology) pot/lastpipe-option.sh.pot (1)
+#
+# (poterminology) pot/hanoi2a.bash.pot (4)
+#
+# (poterminology) pot/string.sh.pot (2)
+#
+# (poterminology) pot/line-number.sh.pot (1)
+#
+# (poterminology) pot/brownian.sh.pot (5)
+#
+# (poterminology) pot/ex1a.sh.pot (2)
+#
+# (poterminology) pot/splitcopy.sh.pot (2)
+#
+# (poterminology) pot/ex52.sh.pot (2)
+#
+# (poterminology) pot/ex33.sh.pot (4)
+#
+# (poterminology) pot/file-integrity.sh.pot (3)
+#
+# (poterminology) pot/wf2.sh.pot (2)
+#
+# (poterminology) pot/mail-format.sh.pot (4)
+#
+# (poterminology) pot/ex56py.sh.pot (4)
+#
+# (poterminology) pot/protect_literal.sh.pot (1)
+#
+# (poterminology) pot/ex31.sh.pot (2)
+#
+# (poterminology) pot/script-detector.sh.pot (8)
+#
+# (poterminology) pot/length.sh.pot (4)
+#
+# (poterminology) pot/soundcard-on.sh.pot (4)
+#
+# (poterminology) pot/return-test.sh.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (8)
+#
+# (poterminology) pot/bin-grep.sh.pot (1)
+#
+# (poterminology) pot/cards.sh.pot (2)
+#
+# (poterminology) pot/ex68a.sh.pot (3)
+#
+# (poterminology) pot/restricted.sh.pot (2)
+#
+# (poterminology) pot/obj-oriented.sh.pot (3)
+#
+# (poterminology) pot/self-document.sh.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (3)
+#
+# (poterminology) pot/missing-keyword.sh.pot (2)
+#
+# (poterminology) pot/Moraes-COPYRIGHT.pot (1)
+#
+# (poterminology) pot/col-totaler3.sh.pot (6)
+#
+# (poterminology) pot/makedict.sh.pot (7)
+#
+# (poterminology) pot/sw.sh.pot (3)
+#
+# (poterminology) pot/connect-stat.sh.pot (6)
+#
+# (poterminology) pot/maned.sh.pot (4)
+#
+# (poterminology) pot/isalpha.sh.pot (1)
+#
+# (poterminology) pot/crypto-quote.sh.pot (2)
+#
+# (poterminology) pot/ftpget.sh.pot (6)
+#
+# (poterminology) pot/echo-params.sh.pot (1)
+#
+# (poterminology) pot/fibo.sh.pot (1)
+#
+# (poterminology) pot/remote.bash.pot (1)
+#
+# (poterminology) pot/max.sh.pot (2)
+#
+# (poterminology) pot/ex16.sh.pot (1)
+#
+# (poterminology) pot/ex54.sh.pot (3)
+#
+# (poterminology) pot/agram.sh.pot (2)
+#
+# (poterminology) pot/idelete.sh.pot (1)
+#
+# (poterminology) pot/ip-addresses.sh.pot (5)
+#
+# (poterminology) pot/script-array.sh.pot (4)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/ex14.sh.pot (3)
+#
+# (poterminology) pot/quote-fetch.sh.pot (2)
+#
+#. type: Content of: <book><part><chapter><sect1><para><command><indexterm><primary>
+#: abs-guide/incompat.sh abs-guide/rp.sdcard.sh
+#: %28poterminology%29+262+more+locations
+msgid "script"
+msgstr "сценарий"
+
+# (poterminology) pot/bad-op.sh.pot (1)
+#
+# (poterminology) pot/is_spammer.bash.pot (41)
+#
+# (poterminology) pot/realname.sh.pot (2)
+#
+# (poterminology) pot/ex4.sh.pot (3)
+#
+# (poterminology) pot/blot-out.sh.pot (23)
+#
+# (poterminology) pot/usrmnt.sh.pot (2)
+#
+# (poterminology) pot/paragraph-space.sh.pot (3)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/what.sh.pot (2)
+#
+# (poterminology) pot/ascii3.sh.pot (1)
+#
+# (poterminology) pot/ra2ogg.sh.pot (9)
+#
+# (poterminology) pot/encryptedpw.sh.pot (4)
+#
+# (poterminology) pot/pid-identifier.sh.pot (2)
+#
+# (poterminology) pot/wf.sh.pot (4)
+#
+# (poterminology) pot/abs-guide.xml.pot (1012)
+#
+# (poterminology) pot/behead.sh.pot (2)
+#
+# (poterminology) pot/commentblock.sh.pot (2)
+#
+# (poterminology) pot/TABEXP.xml.pot (3)
+#
+# (poterminology) pot/bashrc.pot (25)
+#
+# (poterminology) pot/stupid-script-tricks.sh.pot (1)
+#
+# (poterminology) pot/UseGetOpt-2.pot (2)
+#
+# (poterminology) pot/ex73.sh.pot (8)
+#
+# (poterminology) pot/archiveweblogs.sh.pot (2)
+#
+# (poterminology) pot/rfe.sh.pot (3)
+#
+# (poterminology) pot/redir4.sh.pot (2)
+#
+# (poterminology) pot/file-comparison.sh.pot (5)
+#
+# (poterminology) pot/blank-rename.sh.pot (4)
+#
+# (poterminology) pot/continue-n.example.pot (2)
+#
+# (poterminology) pot/ex49.sh.pot (2)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+# (poterminology) pot/alias.sh.pot (1)
+#
+# (poterminology) pot/ex71.sh.pot (1)
+#
+# (poterminology) pot/ex50.sh.pot (1)
+#
+# (poterminology) pot/read-redir.sh.pot (3)
+#
+# (poterminology) pot/col-totaler2.sh.pot (2)
+#
+# (poterminology) pot/redir2.sh.pot (1)
+#
+# (poterminology) pot/exercising-dd.sh.pot (1)
+#
+# (poterminology) pot/redir4a.sh.pot (3)
+#
+# (poterminology) pot/ex39.sh.pot (1)
+#
+# (poterminology) pot/dict-lookup.sh.pot (3)
+#
+# (poterminology) pot/poem.sh.pot (1)
+#
+# (poterminology) pot/bashpodder.sh.pot (7)
+#
+# (poterminology) pot/col.sh.pot (2)
+#
+# (poterminology) pot/strip-comments.sh.pot (5)
+#
+# (poterminology) glossary.pot (6)
+#
+# (poterminology) pot/Du.sh.pot (6)
+#
+# (poterminology) pot/cw-solver.sh.pot (1)
+#
+# (poterminology) pot/ex12.sh.pot (2)
+#
+# (poterminology) pot/file-info.sh.pot (10)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (3)
+#
+# (poterminology) pot/ramdisk.sh.pot (1)
+#
+# (poterminology) pot/wstrings.sh.pot (5)
+#
+# (poterminology) pot/cvt.sh.pot (9)
+#
+# (poterminology) pot/rp.sdcard.sh.pot (4)
+#
+# (poterminology) pot/ex44.sh.pot (1)
+#
+# (poterminology) pot/qky.sh.pot (2)
+#
+# (poterminology) pot/rpm-check.sh.pot (5)
+#
+# (poterminology) pot/life.sh.pot (9)
+#
+# (poterminology) pot/dialog.sh.pot (5)
+#
+# (poterminology) pot/hanoi2.bash.pot (1)
+#
+# (poterminology) pot/grp.sh.pot (5)
+#
+# (poterminology) pot/colm.sh.pot (2)
+#
+# (poterminology) pot/assert.sh.pot (2)
+#
+# (poterminology) pot/horserace.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt.sh.pot (2)
+#
+# (poterminology) pot/symlinks.sh.pot (7)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (1)
+#
+# (poterminology) pot/wipedir.sh.pot (4)
+#
+# (poterminology) pot/upperconv.sh.pot (9)
+#
+# (poterminology) pot/wgetter2.bash.pot (39)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/pad.sh.pot (7)
+#
+# (poterminology) pot/allprofs.sh.pot (1)
+#
+# (poterminology) pot/findstring.sh.pot (3)
+#
+# (poterminology) pot/find-splitpara.sh.pot (6)
+#
+# (poterminology) pot/online.sh.pot (7)
+#
+# (poterminology) pot/nightly-backup.sh.pot (4)
+#
+# (poterminology) pot/ex40.sh.pot (5)
+#
+# (poterminology) pot/redir3.sh.pot (1)
+#
+# (poterminology) pot/ascii.sh.pot (1)
+#
+# (poterminology) pot/prepend.sh.pot (10)
+#
+# (poterminology) pot/names.data.pot (1)
+#
+# (poterminology) pot/ascii2.sh.pot (1)
+#
+# (poterminology) pot/rot13a.sh.pot (6)
+#
+# (poterminology) pot/cdll.pot (18)
+#
+# (poterminology) pot/ex52.sh.pot (10)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (3)
+#
+# (poterminology) pot/sam.sh.pot (3)
+#
+# (poterminology) pot/reassign-stdout.sh.pot (4)
+#
+# (poterminology) pot/letter-count2.sh.pot (4)
+#
+# (poterminology) pot/tree2.sh.pot (2)
+#
+# (poterminology) pot/whx.sh.pot (2)
+#
+# (poterminology) pot/de-rpm.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (9)
+#
+# (poterminology) pot/ex42.sh.pot (2)
+#
+# (poterminology) pot/sd.sh.pot (7)
+#
+# (poterminology) pot/array-assign.bash.pot (1)
+#
+# (poterminology) pot/ex69.sh.pot (4)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (3)
+#
+# (poterminology) pot/array-append.bash.pot (1)
+#
+# (poterminology) pot/ex58.sh.pot (4)
+#
+# (poterminology) pot/letter-count.sh.pot (4)
+#
+# (poterminology) pot/rnd.sh.pot (1)
+#
+# (poterminology) pot/ex41.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (81)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+# (poterminology) pot/data-file.pot (3)
+#
+# (poterminology) pot/generate-script.sh.pot (5)
+#
+# (poterminology) pot/userlist.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt-2.sh.pot (2)
+#
+# (poterminology) pot/tohtml.sh.pot (3)
+#
+# (poterminology) pot/ex57.sh.pot (3)
+#
+# (poterminology) pot/script-detector.sh.pot (7)
+#
+# (poterminology) pot/README.pot (1)
+#
+# (poterminology) pot/copy-cd.sh.pot (3)
+#
+# (poterminology) pot/ex1.sh.pot (1)
+#
+# (poterminology) pot/ex3.sh.pot (2)
+#
+# (poterminology) pot/gen0.pot (3)
+#
+# (poterminology) pot/lowercase.sh.pot (3)
+#
+# (poterminology) pot/logevents.sh.pot (4)
+#
+# (poterminology) pot/ex72.sh.pot (5)
+#
+# (poterminology) pot/col-totaler.sh.pot (1)
+#
+# (poterminology) pot/redir5.sh.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (3)
+#
+# (poterminology) pot/symlinks2.sh.pot (4)
+#
+# (poterminology) pot/redir2a.sh.pot (2)
+#
+# (poterminology) pot/broken-link.sh.pot (2)
+#
+# (poterminology) pot/wf2.sh.pot (5)
+#
+# (poterminology) pot/ex2.sh.pot (5)
+#
+# (poterminology) pot/ex24.sh.pot (9)
+#
+# (poterminology) pot/pb.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (11)
+#
+# (poterminology) pot/string.sh.pot (1)
+#
+# (poterminology) pot/splitcopy.sh.pot (2)
+#
+# (poterminology) pot/redir1.sh.pot (5)
+#
+# (poterminology) pot/dd-keypress.sh.pot (1)
+#
+# (poterminology) pot/file-integrity.sh.pot (16)
+#
+# (poterminology) pot/ex8.sh.pot (3)
+#
+# (poterminology) pot/rn.sh.pot (6)
+#
+# (poterminology) pot/mail-format.sh.pot (2)
+#
+# (poterminology) pot/ex65.sh.pot (11)
+#
+# (poterminology) pot/tempfile-name.sh.pot (1)
+#
+# (poterminology) pot/soundcard-on.sh.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) pot/bin-grep.sh.pot (4)
+#
+# (poterminology) pot/ex38.sh.pot (3)
+#
+# (poterminology) pot/restricted.sh.pot (1)
+#
+# (poterminology) pot/rot13.sh.pot (1)
+#
+# (poterminology) pot/quote-fetch.sh.pot (1)
+#
+# (poterminology) pot/col-totaler3.sh.pot (1)
+#
+# (poterminology) pot/makedict.sh.pot (4)
+#
+# (poterminology) pot/connect-stat.sh.pot (1)
+#
+# (poterminology) pot/maned.sh.pot (2)
+#
+# (poterminology) pot/crypto-quote.sh.pot (1)
+#
+# (poterminology) pot/ex48.sh.pot (1)
+#
+# (poterminology) pot/ftpget.sh.pot (3)
+#
+# (poterminology) pot/from.sh.pot (4)
+#
+# (poterminology) pot/sedappend.sh.pot (11)
+#
+# (poterminology) pot/idelete.sh.pot (6)
+#
+# (poterminology) pot/ip-addresses.sh.pot (1)
+#
+# (poterminology) pot/file-info01.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (24)
+#
+# (poterminology) pot/ex14.sh.pot (4)
+#
+# (poterminology) pot/list-glob.sh.pot (9)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/rp.sdcard.sh abs-guide/ascii2.sh
+#: %28poterminology%29+163+more+locations
+msgid "file"
+msgstr "файл"
+
+# (poterminology) pot/is_spammer.bash.pot (17)
+#
+# (poterminology) pot/ex34.sh.pot (1)
+#
+# (poterminology) pot/ex4.sh.pot (1)
+#
+# (poterminology) pot/paragraph-space.sh.pot (1)
+#
+# (poterminology) pot/what.sh.pot (1)
+#
+# (poterminology) pot/array-strops.sh.pot (1)
+#
+# (poterminology) pot/ex71b.sh.pot (2)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/q-function.sh.pot (2)
+#
+# (poterminology) pot/file-comparison.sh.pot (1)
+#
+# (poterminology) pot/ex71a.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (205)
+#
+# (poterminology) pot/ex71.sh.pot (1)
+#
+# (poterminology) pot/seeding-random.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/exercising-dd.sh.pot (1)
+#
+# (poterminology) pot/dict-lookup.sh.pot (2)
+#
+# (poterminology) pot/self-copy.sh.pot (1)
+#
+# (poterminology) pot/col.sh.pot (1)
+#
+# (poterminology) pot/upperconv.sh.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/cw-solver.sh.pot (1)
+#
+# (poterminology) pot/readpipe.sh.pot (2)
+#
+# (poterminology) pot/nested-loop.sh.pot (1)
+#
+# (poterminology) pot/add-drive.sh.pot (1)
+#
+# (poterminology) pot/wstrings.sh.pot (4)
+#
+# (poterminology) pot/primes.sh.pot (1)
+#
+# (poterminology) pot/rpm-check.sh.pot (2)
+#
+# (poterminology) pot/primes2.sh.pot (1)
+#
+# (poterminology) pot/dialog.sh.pot (1)
+#
+# (poterminology) pot/hanoi2.bash.pot (1)
+#
+# (poterminology) pot/grp.sh.pot (4)
+#
+# (poterminology) pot/colm.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (1)
+#
+# (poterminology) pot/csubloop.sh.pot (1)
+#
+# (poterminology) pot/msquare.sh.pot (1)
+#
+# (poterminology) pot/hexconvert.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/vartrace.sh.pot (1)
+#
+# (poterminology) pot/find-splitpara.sh.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (1)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+# (poterminology) pot/base64.sh.pot (2)
+#
+# (poterminology) pot/rot13a.sh.pot (3)
+#
+# (poterminology) pot/cdll.pot (1)
+#
+# (poterminology) pot/ref-params.sh.pot (1)
+#
+# (poterminology) pot/reassign-stdout.sh.pot (3)
+#
+# (poterminology) pot/whx.sh.pot (3)
+#
+# (poterminology) pot/de-rpm.sh.pot (1)
+#
+# (poterminology) pot/ex42.sh.pot (3)
+#
+# (poterminology) pot/collatz.sh.pot (2)
+#
+# (poterminology) pot/array-assign.bash.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (15)
+#
+# (poterminology) pot/array-append.bash.pot (2)
+#
+# (poterminology) pot/iscan.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (16)
+#
+# (poterminology) pot/array-function.sh.pot (1)
+#
+# (poterminology) pot/ha.sh.pot (1)
+#
+# (poterminology) pot/generate-script.sh.pot (2)
+#
+# (poterminology) pot/read-N.sh.pot (1)
+#
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) pot/script-detector.sh.pot (1)
+#
+# (poterminology) pot/copy-cd.sh.pot (1)
+#
+# (poterminology) pot/rnd.sh.pot (5)
+#
+# (poterminology) pot/ex3.sh.pot (1)
+#
+# (poterminology) pot/logevents.sh.pot (2)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/symlinks2.sh.pot (1)
+#
+# (poterminology) pot/broken-link.sh.pot (1)
+#
+# (poterminology) pot/gronsfeld.bash.pot (4)
+#
+# (poterminology) pot/numbers.sh.pot (1)
+#
+# (poterminology) pot/ex53.sh.pot (1)
+#
+# (poterminology) pot/sum-product.sh.pot (1)
+#
+# (poterminology) pot/brownian.sh.pot (2)
+#
+# (poterminology) pot/from.sh.pot (1)
+#
+# (poterminology) pot/protect_literal.sh.pot (1)
+#
+# (poterminology) pot/ex43.sh.pot (1)
+#
+# (poterminology) pot/bin-grep.sh.pot (1)
+#
+# (poterminology) pot/escaped.sh.pot (1)
+#
+# (poterminology) pot/restricted.sh.pot (1)
+#
+# (poterminology) pot/quote-fetch.sh.pot (1)
+#
+# (poterminology) pot/param-sub.sh.pot (1)
+#
+# (poterminology) pot/crypto-quote.sh.pot (1)
+#
+# (poterminology) pot/ex48.sh.pot (1)
+#
+# (poterminology) pot/idelete.sh.pot (1)
+#
+# (poterminology) pot/ip-addresses.sh.pot (2)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+#: abs-guide/ha.sh abs-guide/quote-fetch.sh
+#: %28poterminology%29+86+more+locations
+msgid "output"
+msgstr "вывод"
+
+# (poterminology) pot/is_spammer.bash.pot (88)
+#
+# (poterminology) pot/ex21.sh.pot (2)
+#
+# (poterminology) pot/ex64.sh.pot (2)
+#
+# (poterminology) pot/ex79.sh.pot (3)
+#
+# (poterminology) pot/random-between.sh.pot (5)
+#
+# (poterminology) pot/qky.sh.pot (10)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (1)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/ex6.sh.pot (1)
+#
+# (poterminology) pot/primes.sh.pot (2)
+#
+# (poterminology) pot/sd.sh.pot (4)
+#
+# (poterminology) pot/maned.sh.pot (1)
+#
+# (poterminology) pot/hanoi2a.bash.pot (2)
+#
+# (poterminology) pot/hanoi2.bash.pot (2)
+#
+# (poterminology) pot/string.sh.pot (13)
+#
+# (poterminology) pot/hypotenuse.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (2)
+#
+# (poterminology) pot/return-test.sh.pot (10)
+#
+# (poterminology) pot/ex1a.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (15)
+#
+# (poterminology) pot/case-cmd.sh.pot (1)
+#
+# (poterminology) pot/redir2.sh.pot (1)
+#
+# (poterminology) pot/petals.sh.pot (2)
+#
+# (poterminology) pot/assert.sh.pot (2)
+#
+# (poterminology) pot/fc4upd.sh.pot (3)
+#
+# (poterminology) pot/life.sh.pot (9)
+#
+# (poterminology) pot/max2.sh.pot (4)
+#
+# (poterminology) pot/random2.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (26)
+#
+# (poterminology) pot/ex29.sh.pot (1)
+#
+# (poterminology) pot/primes2.sh.pot (2)
+#
+# (poterminology) pot/days-between.sh.pot (3)
+#
+# (poterminology) pot/stack.sh.pot (6)
+#
+# (poterminology) pot/array-function.sh.pot (1)
+#
+# (poterminology) pot/ha.sh.pot (4)
+#
+# (poterminology) pot/self-destruct.sh.pot (1)
+#
+# (poterminology) pot/color-echo.sh.pot (1)
+#
+# (poterminology) pot/hexconvert.sh.pot (3)
+#
+# (poterminology) pot/data-file.pot (2)
+#
+# (poterminology) pot/cards.sh.pot (3)
+#
+# (poterminology) pot/tree2.sh.pot (3)
+#
+# (poterminology) pot/wgetter2.bash.pot (7)
+#
+# (poterminology) pot/ex7.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (9)
+#
+# (poterminology) pot/alt-bc.sh.pot (2)
+#
+# (poterminology) pot/pad.sh.pot (3)
+#
+# (poterminology) pot/blank-rename.sh.pot (1)
+#
+# (poterminology) pot/ex5.sh.pot (1)
+#
+# (poterminology) pot/kill-process.sh.pot (1)
+#
+# (poterminology) pot/ex60.sh.pot (1)
+#
+# (poterminology) pot/ex63.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (145)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (4)
+#
+# (poterminology) pot/isalpha.sh.pot (10)
+#
+# (poterminology) pot/bubble.sh.pot (1)
+#
+# (poterminology) pot/Hash.lib.pot (3)
+#
+# (poterminology) pot/CopyArray.sh.pot (2)
+#
+# (poterminology) pot/ktour.sh.pot (24)
+#
+# (poterminology) pot/match-string.sh.pot (3)
+#
+# (poterminology) pot/ex61.sh.pot (1)
+#
+# (poterminology) pot/max.sh.pot (6)
+#
+# (poterminology) pot/lowercase.sh.pot (1)
+#
+# (poterminology) pot/nim.sh.pot (1)
+#
+# (poterminology) pot/bingo.sh.pot (1)
+#
+# (poterminology) pot/sum-product.sh.pot (1)
+#
+# (poterminology) pot/ex45.sh.pot (1)
+#
+# (poterminology) pot/cdll.pot (1)
+#
+# (poterminology) pot/is-spammer.sh.pot (2)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/directory-info.sh.pot (31)
+#
+# (poterminology) pot/pw.sh.pot (3)
+#
+# (poterminology) pot/ex14.sh.pot (3)
+#
+# (poterminology) pot/ascii.c.pot (1)
+#
+# (poterminology) pot/Du.sh.pot (1)
+#
+# (poterminology) pot/UseGetOpt-2.pot (1)
+#
+#. type: Plain text
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/case-cmd.sh abs-guide/fifo.sh
+#: %28poterminology%29+74+more+locations
+#, fuzzy
+msgid "return"
+msgstr "возврат"
+
+# (poterminology) pot/bad-op.sh.pot (1)
+#
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) pot/symlinks2.sh.pot (5)
+#
+# (poterminology) pot/symlinks.sh.pot (13)
+#
+# (poterminology) pot/broken-link.sh.pot (10)
+#
+# (poterminology) pot/add-drive.sh.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (7)
+#
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (3)
+#
+# (poterminology) pot/ex42.sh.pot (4)
+#
+# (poterminology) pot/cvt.sh.pot (6)
+#
+# (poterminology) pot/ex71c.sh.pot (1)
+#
+# (poterminology) pot/ex6.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/encryptedpw.sh.pot (2)
+#
+# (poterminology) pot/ex75.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (3)
+#
+# (poterminology) pot/ex52.sh.pot (1)
+#
+# (poterminology) pot/alias.sh.pot (1)
+#
+# (poterminology) pot/iscan.sh.pot (1)
+#
+# (poterminology) pot/horserace.sh.pot (4)
+#
+# (poterminology) pot/bashrc.pot (6)
+#
+# (poterminology) pot/ex41.sh.pot (1)
+#
+# (poterminology) pot/ex17.sh.pot (1)
+#
+# (poterminology) pot/ex72.sh.pot (2)
+#
+# (poterminology) pot/unprotect_literal.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (14)
+#
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) pot/wipedir.sh.pot (2)
+#
+# (poterminology) pot/ex38.sh.pot (1)
+#
+# (poterminology) pot/pb.sh.pot (1)
+#
+# (poterminology) pot/archiveweblogs.sh.pot (1)
+#
+# (poterminology) pot/restricted.sh.pot (2)
+#
+# (poterminology) pot/self-document.sh.pot (7)
+#
+# (poterminology) pot/rfe.sh.pot (1)
+#
+# (poterminology) pot/allprofs.sh.pot (2)
+#
+# (poterminology) pot/findstring.sh.pot (3)
+#
+# (poterminology) pot/blank-rename.sh.pot (2)
+#
+# (poterminology) pot/tohtml.sh.pot (1)
+#
+# (poterminology) pot/ex57.sh.pot (1)
+#
+# (poterminology) pot/continue-n.example.pot (2)
+#
+# (poterminology) pot/ex40.sh.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (229)
+#
+# (poterminology) pot/script-detector.sh.pot (4)
+#
+# (poterminology) pot/tree.sh.pot (10)
+#
+# (poterminology) pot/tree2.sh.pot (8)
+#
+# (poterminology) pot/hello.sh.pot (1)
+#
+# (poterminology) pot/ex48.sh.pot (2)
+#
+# (poterminology) pot/ftpget.sh.pot (5)
+#
+# (poterminology) pot/ramdisk.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/remote.bash.pot (2)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (2)
+#
+# (poterminology) pot/ex58.sh.pot (2)
+#
+# (poterminology) pot/sedappend.sh.pot (2)
+#
+# (poterminology) pot/cdll.pot (42)
+#
+# (poterminology) pot/bashpodder.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (9)
+#
+# (poterminology) pot/from.sh.pot (1)
+#
+# (poterminology) pot/file-integrity.sh.pot (10)
+#
+# (poterminology) pot/ex37.sh.pot (9)
+#
+# (poterminology) pot/list-glob.sh.pot (1)
+#
+# (poterminology) pot/rn.sh.pot (2)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/symlinks2.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+62+more+locations
+#, fuzzy
+msgid "directory"
+msgstr "директория"
+
+# (poterminology) pot/is_spammer.bash.pot (16)
+#
+# (poterminology) pot/TABEXP.xml.pot (2)
+#
+# (poterminology) pot/redir2a.sh.pot (5)
+#
+# (poterminology) pot/ex12.sh.pot (5)
+#
+# (poterminology) pot/ex4.sh.pot (1)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/redir4.sh.pot (6)
+#
+# (poterminology) pot/wstrings.sh.pot (1)
+#
+# (poterminology) pot/ex42.sh.pot (1)
+#
+# (poterminology) pot/cvt.sh.pot (5)
+#
+# (poterminology) pot/sd.sh.pot (1)
+#
+# (poterminology) pot/maned.sh.pot (3)
+#
+# (poterminology) pot/manview.sh.pot (1)
+#
+# (poterminology) pot/ra2ogg.sh.pot (4)
+#
+# (poterminology) pot/encryptedpw.sh.pot (2)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) pot/ex75.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (9)
+#
+# (poterminology) pot/ex58.sh.pot (3)
+#
+# (poterminology) pot/wf.sh.pot (1)
+#
+# (poterminology) pot/file-integrity.sh.pot (4)
+#
+# (poterminology) pot/rn.sh.pot (5)
+#
+# (poterminology) pot/mail-format.sh.pot (1)
+#
+# (poterminology) pot/substring-extraction.sh.pot (1)
+#
+# (poterminology) pot/list-glob.sh.pot (3)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/ex65.sh.pot (3)
+#
+# (poterminology) pot/redir3.sh.pot (4)
+#
+# (poterminology) pot/days-between.sh.pot (1)
+#
+# (poterminology) pot/tempfile-name.sh.pot (6)
+#
+# (poterminology) pot/ex69.sh.pot (1)
+#
+# (poterminology) pot/bin-grep.sh.pot (1)
+#
+# (poterminology) pot/wipedir.sh.pot (2)
+#
+# (poterminology) pot/wf2.sh.pot (1)
+#
+# (poterminology) pot/archiveweblogs.sh.pot (1)
+#
+# (poterminology) pot/rot13.sh.pot (2)
+#
+# (poterminology) pot/rfe.sh.pot (3)
+#
+# (poterminology) pot/pad.sh.pot (1)
+#
+# (poterminology) pot/ex51.sh.pot (3)
+#
+# (poterminology) pot/idelete.sh.pot (3)
+#
+# (poterminology) pot/ftpget.sh.pot (1)
+#
+# (poterminology) pot/blank-rename.sh.pot (5)
+#
+# (poterminology) pot/find-splitpara.sh.pot (1)
+#
+# (poterminology) pot/ex57.sh.pot (4)
+#
+# (poterminology) pot/blot-out.sh.pot (2)
+#
+# (poterminology) pot/ex49.sh.pot (1)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (209)
+#
+# (poterminology) pot/crypto-quote.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (6)
+#
+# (poterminology) pot/ex24.sh.pot (1)
+#
+# (poterminology) pot/col-totaler2.sh.pot (2)
+#
+# (poterminology) pot/ex3.sh.pot (2)
+#
+# (poterminology) pot/redir4a.sh.pot (5)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (10)
+#
+# (poterminology) pot/redir2.sh.pot (4)
+#
+# (poterminology) pot/sedappend.sh.pot (1)
+#
+# (poterminology) pot/rot13a.sh.pot (2)
+#
+# (poterminology) pot/cdll.pot (7)
+#
+# (poterminology) pot/file-info01.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (4)
+#
+# (poterminology) pot/strip-comments.sh.pot (1)
+#
+# (poterminology) pot/ex14.sh.pot (5)
+#
+# (poterminology) pot/col-totaler.sh.pot (3)
+#
+# (poterminology) pot/col-totaler3.sh.pot (2)
+#
+# (poterminology) pot/redir5.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt-2.pot (1)
+#
+# (poterminology) pot/tohtml.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/idelete.sh abs-guide/rot13a.sh
+#: %28poterminology%29+68+more+locations
+msgid "filename"
+msgstr "имя файла"
+
+# (poterminology) pot/is_spammer.bash.pot (10)
+#
+# (poterminology) pot/insertion-sort.bash.pot (2)
+#
+# (poterminology) pot/neg-array.sh.pot (11)
+#
+# (poterminology) pot/random-between.sh.pot (2)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (1)
+#
+# (poterminology) pot/gronsfeld.bash.pot (3)
+#
+# (poterminology) pot/array-ops.sh.pot (12)
+#
+# (poterminology) pot/gen0.pot (1)
+#
+# (poterminology) pot/spawn.sh.pot (1)
+#
+# (poterminology) pot/primes.sh.pot (1)
+#
+# (poterminology) pot/array-strops.sh.pot (11)
+#
+# (poterminology) pot/array-assign.bash.pot (10)
+#
+# (poterminology) pot/life.sh.pot (13)
+#
+# (poterminology) pot/ex66.sh.pot (13)
+#
+# (poterminology) pot/brownian.sh.pot (3)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (34)
+#
+# (poterminology) pot/array-append.bash.pot (14)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (1)
+#
+# (poterminology) pot/ex22a.sh.pot (1)
+#
+# (poterminology) pot/ex78.sh.pot (2)
+#
+# (poterminology) pot/protect_literal.sh.pot (2)
+#
+# (poterminology) pot/msquare.sh.pot (5)
+#
+# (poterminology) pot/ex67.sh.pot (12)
+#
+# (poterminology) pot/stack.sh.pot (1)
+#
+# (poterminology) pot/assoc-arr-test.sh.pot (12)
+#
+# (poterminology) pot/ha.sh.pot (1)
+#
+# (poterminology) pot/empty-array.sh.pot (8)
+#
+# (poterminology) pot/embedded-arrays.sh.pot (5)
+#
+# (poterminology) pot/INDEX00.xml.pot (16)
+#
+# (poterminology) pot/twodim.sh.pot (17)
+#
+# (poterminology) pot/primes2.sh.pot (2)
+#
+# (poterminology) pot/cards.sh.pot (3)
+#
+# (poterminology) pot/test-suite.sh.pot (3)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/arr-choice.sh.pot (5)
+#
+# (poterminology) pot/agram2.sh.pot (2)
+#
+# (poterminology) pot/unprotect_literal.sh.pot (3)
+#
+# (poterminology) pot/q-function.sh.pot (1)
+#
+# (poterminology) pot/ex37.sh.pot (1)
+#
+# (poterminology) pot/sam.sh.pot (1)
+#
+# (poterminology) pot/ex79.sh.pot (3)
+#
+# (poterminology) pot/array-function.sh.pot (20)
+#
+# (poterminology) pot/pick-card.sh.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (159)
+#
+# (poterminology) pot/bubble.sh.pot (8)
+#
+# (poterminology) pot/psub.bash.pot (1)
+#
+# (poterminology) pot/ex68.sh.pot (4)
+#
+# (poterminology) pot/CopyArray.sh.pot (6)
+#
+# (poterminology) pot/ktour.sh.pot (5)
+#
+# (poterminology) pot/fetch_address.sh.pot (2)
+#
+# (poterminology) pot/base64.sh.pot (2)
+#
+# (poterminology) pot/bingo.sh.pot (3)
+#
+# (poterminology) pot/is-spammer.sh.pot (1)
+#
+# (poterminology) pot/script-array.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (16)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt-2.pot (2)
+#
+# (poterminology) pot/nim.sh.pot (2)
+#
+#: abs-guide/protect_literal.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+58+more+locations
+msgid "array"
+msgstr "массив"
+
+# (poterminology) pot/wr-ps.bash.pot (4)
+#
+# (poterminology) pot/symlinks2.sh.pot (1)
+#
+# (poterminology) pot/readpipe.sh.pot (1)
+#
+# (poterminology) pot/ex28.sh.pot (4)
+#
+# (poterminology) pot/tree2.sh.pot (1)
+#
+# (poterminology) pot/nested-loop.sh.pot (12)
+#
+# (poterminology) pot/random-between.sh.pot (2)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (1)
+#
+# (poterminology) pot/avoid-subshell.sh.pot (2)
+#
+# (poterminology) pot/wstrings.sh.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (1)
+#
+# (poterminology) pot/redir2a.sh.pot (5)
+#
+# (poterminology) pot/primes.sh.pot (2)
+#
+# (poterminology) pot/collatz.sh.pot (1)
+#
+# (poterminology) pot/ex53.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (1)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+# (poterminology) pot/break-levels.sh.pot (3)
+#
+# (poterminology) pot/brownian.sh.pot (2)
+#
+# (poterminology) pot/csubloop.sh.pot (2)
+#
+# (poterminology) glossary.pot (7)
+#
+# (poterminology) pot/wgetter2.bash.pot (5)
+#
+# (poterminology) pot/random2.sh.pot (2)
+#
+# (poterminology) pot/ex15.sh.pot (2)
+#
+# (poterminology) pot/alias.sh.pot (1)
+#
+# (poterminology) pot/wh-loopc.sh.pot (1)
+#
+# (poterminology) pot/ex21.sh.pot (1)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (5)
+#
+# (poterminology) pot/ex26a.sh.pot (1)
+#
+# (poterminology) pot/ex27.sh.pot (3)
+#
+# (poterminology) pot/ex29.sh.pot (1)
+#
+# (poterminology) pot/redir3.sh.pot (2)
+#
+# (poterminology) pot/ex67.sh.pot (1)
+#
+# (poterminology) pot/continue-nlevel.sh.pot (6)
+#
+# (poterminology) pot/revposparams.sh.pot (2)
+#
+# (poterminology) pot/recurse.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (30)
+#
+# (poterminology) pot/twodim.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (2)
+#
+# (poterminology) pot/q-function.sh.pot (1)
+#
+# (poterminology) pot/insertion-sort.bash.pot (1)
+#
+# (poterminology) pot/redir4.sh.pot (2)
+#
+# (poterminology) pot/c-vars.sh.pot (1)
+#
+# (poterminology) pot/online.sh.pot (1)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/connect-stat.sh.pot (1)
+#
+# (poterminology) pot/ex26.sh.pot (1)
+#
+# (poterminology) pot/monthlypmt.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (174)
+#
+# (poterminology) pot/redir5.sh.pot (1)
+#
+# (poterminology) pot/self-source.sh.pot (1)
+#
+# (poterminology) pot/bubble.sh.pot (4)
+#
+# (poterminology) pot/read-redir.sh.pot (2)
+#
+# (poterminology) pot/ktour.sh.pot (1)
+#
+# (poterminology) pot/redir2.sh.pot (4)
+#
+# (poterminology) pot/nim.sh.pot (2)
+#
+# (poterminology) pot/bingo.sh.pot (3)
+#
+# (poterminology) pot/ex23.sh.pot (1)
+#
+# (poterminology) pot/ip-addresses.sh.pot (1)
+#
+# (poterminology) pot/petals.sh.pot (2)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (1)
+#
+# (poterminology) pot/cannon.sh.pot (1)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/redir2.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+66+more+locations
+msgid "loop"
+msgstr "цикл"
+
+# (poterminology) pot/twodim.sh.pot (1)
+#
+# (poterminology) pot/broken-link.sh.pot (1)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (1)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/soundex.sh.pot (1)
+#
+# (poterminology) glossary.pot (5)
+#
+# (poterminology) pot/hypotenuse.sh.pot (1)
+#
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/viewdata.sh.pot (1)
+#
+# (poterminology) pot/redir2.sh.pot (1)
+#
+# (poterminology) pot/ex56.sh.pot (2)
+#
+# (poterminology) pot/ftpget.sh.pot (2)
+#
+# (poterminology) pot/ex56py.sh.pot (2)
+#
+# (poterminology) pot/bashrc.pot (9)
+#
+# (poterminology) pot/INDEX00.xml.pot (24)
+#
+# (poterminology) pot/self-destruct.sh.pot (1)
+#
+# (poterminology) pot/data-file.pot (1)
+#
+# (poterminology) pot/generate-script.sh.pot (1)
+#
+# (poterminology) pot/test-suite.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (1)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/restricted.sh.pot (1)
+#
+# (poterminology) pot/seconds.sh.pot (1)
+#
+# (poterminology) pot/subshell.sh.pot (3)
+#
+# (poterminology) pot/col-totaler.sh.pot (2)
+#
+# (poterminology) pot/c-vars.sh.pot (1)
+#
+# (poterminology) pot/ex5.sh.pot (1)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (362)
+#
+# (poterminology) pot/README.pot (1)
+#
+# (poterminology) pot/homework.sh.pot (1)
+#
+# (poterminology) pot/col-totaler2.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/remote.bash.pot (2)
+#
+# (poterminology) pot/cdll.pot (1)
+#
+# (poterminology) pot/bashpodder.sh.pot (1)
+#
+# (poterminology) pot/obj-oriented.sh.pot (1)
+#
+# (poterminology) pot/cannon.sh.pot (2)
+#
+# (poterminology) pot/ascii.c.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#: abs-guide/redir2.sh abs-guide/fifo.sh %28poterminology%29+40+more+locations
+#, fuzzy
+msgid "shell"
+msgstr "shell"
+
+# (poterminology) pot/is_spammer.bash.pot (29)
+#
+# (poterminology) pot/twodim.sh.pot (2)
+#
+# (poterminology) pot/random-between.sh.pot (1)
+#
+# (poterminology) pot/int-or-string.sh.pot (1)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (3)
+#
+# (poterminology) pot/gronsfeld.bash.pot (1)
+#
+# (poterminology) pot/ex68.sh.pot (1)
+#
+# (poterminology) pot/hanoi2a.bash.pot (1)
+#
+# (poterminology) pot/array-assign.bash.pot (4)
+#
+# (poterminology) pot/life.sh.pot (3)
+#
+# (poterminology) pot/brownian.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (5)
+#
+# (poterminology) pot/array-append.bash.pot (5)
+#
+# (poterminology) pot/hanoi2.bash.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) pot/ex47.sh.pot (2)
+#
+# (poterminology) pot/UseGetOpt.sh.pot (5)
+#
+# (poterminology) pot/protect_literal.sh.pot (3)
+#
+# (poterminology) pot/msquare.sh.pot (1)
+#
+# (poterminology) pot/ex67.sh.pot (1)
+#
+# (poterminology) pot/stack.sh.pot (1)
+#
+# (poterminology) pot/assoc-arr-test.sh.pot (5)
+#
+# (poterminology) pot/ex20.sh.pot (4)
+#
+# (poterminology) pot/days-between.sh.pot (3)
+#
+# (poterminology) pot/wr-ps.bash.pot (2)
+#
+# (poterminology) pot/cards.sh.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/UseGetOpt-2.sh.pot (5)
+#
+# (poterminology) pot/unprotect_literal.sh.pot (3)
+#
+# (poterminology) pot/sam.sh.pot (2)
+#
+# (poterminology) pot/ex79.sh.pot (3)
+#
+# (poterminology) pot/qky.sh.pot (4)
+#
+# (poterminology) pot/abs-guide.xml.pot (41)
+#
+# (poterminology) pot/bubble.sh.pot (2)
+#
+# (poterminology) pot/psub.bash.pot (1)
+#
+# (poterminology) pot/homework.sh.pot (2)
+#
+# (poterminology) pot/CopyArray.sh.pot (4)
+#
+# (poterminology) pot/ktour.sh.pot (4)
+#
+# (poterminology) pot/ex61.sh.pot (1)
+#
+# (poterminology) pot/base64.sh.pot (2)
+#
+# (poterminology) pot/bingo.sh.pot (1)
+#
+# (poterminology) pot/is-spammer.sh.pot (2)
+#
+# (poterminology) pot/directory-info.sh.pot (9)
+#
+# (poterminology) pot/cannon.sh.pot (2)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (2)
+#
+# (poterminology) pot/fetch_address.sh.pot (2)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/protect_literal.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+44+more+locations
+msgid "declare"
+msgstr "объявлять"
+
+# (poterminology) pot/is_spammer.bash.pot (2)
+#
+# (poterminology) pot/cw-solver.sh.pot (1)
+#
+# (poterminology) pot/insertion-sort.bash.pot (2)
+#
+# (poterminology) pot/broken-link.sh.pot (1)
+#
+# (poterminology) pot/progress-bar2.sh.pot (2)
+#
+# (poterminology) pot/add-drive.sh.pot (1)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/usrmnt.sh.pot (1)
+#
+# (poterminology) pot/progress-bar.sh.pot (2)
+#
+# (poterminology) pot/show-all-colors.sh.pot (1)
+#
+# (poterminology) pot/whx.sh.pot (5)
+#
+# (poterminology) pot/ascii3.sh.pot (1)
+#
+# (poterminology) pot/BashExtraKeys.sh.pot (1)
+#
+# (poterminology) pot/hanoi2a.bash.pot (2)
+#
+# (poterminology) pot/array-strops.sh.pot (1)
+#
+# (poterminology) pot/hanoi2.bash.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex68a.sh.pot (2)
+#
+# (poterminology) pot/bashpodder.sh.pot (2)
+#
+# (poterminology) pot/petals.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (15)
+#
+# (poterminology) pot/letter-count.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (2)
+#
+# (poterminology) pot/iscan.sh.pot (2)
+#
+# (poterminology) pot/letter-count2.sh.pot (2)
+#
+# (poterminology) pot/ha.sh.pot (1)
+#
+# (poterminology) pot/getopt-simple.sh.pot (1)
+#
+# (poterminology) pot/wr-ps.bash.pot (1)
+#
+# (poterminology) pot/pb.sh.pot (1)
+#
+# (poterminology) pot/soundcard-on.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (2)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/date-calc.sh.pot (1)
+#
+# (poterminology) pot/usb.sh.pot (1)
+#
+# (poterminology) pot/tree2.sh.pot (3)
+#
+# (poterminology) pot/nightly-backup.sh.pot (1)
+#
+# (poterminology) pot/monthlypmt.sh.pot (1)
+#
+# (poterminology) pot/factr.sh.pot (1)
+#
+# (poterminology) pot/ascii.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (3)
+#
+# (poterminology) pot/ascii2.sh.pot (2)
+#
+# (poterminology) pot/exercising-dd.sh.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (1)
+#
+# (poterminology) pot/poem.sh.pot (1)
+#
+# (poterminology) pot/logevents.sh.pot (1)
+#
+# (poterminology) pot/Draw-box.sh.pot (1)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (2)
+#
+# (poterminology) pot/Moraes-COPYRIGHT.pot (1)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (2)
+#
+#: abs-guide/abs-guide.xml abs-guide/ascii2.sh
+#: %28poterminology%29+48+more+locations
+msgid "ABS guide"
+msgstr ""
+
+# (poterminology) pot/is_spammer.bash.pot (12)
+#
+# (poterminology) pot/data-file.pot (2)
+#
+# (poterminology) pot/nightly-backup.sh.pot (1)
+#
+# (poterminology) pot/whx.sh.pot (2)
+#
+# (poterminology) pot/sd.sh.pot (21)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex66.sh.pot (1)
+#
+# (poterminology) pot/redir1.sh.pot (1)
+#
+# (poterminology) pot/continue-n.example.pot (1)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (5)
+#
+# (poterminology) pot/stack.sh.pot (7)
+#
+# (poterminology) pot/ex38.sh.pot (2)
+#
+# (poterminology) pot/pb.sh.pot (2)
+#
+# (poterminology) pot/read-r.sh.pot (1)
+#
+# (poterminology) pot/pad.sh.pot (1)
+#
+# (poterminology) pot/usb.sh.pot (2)
+#
+# (poterminology) pot/blot-out.sh.pot (2)
+#
+# (poterminology) pot/ex40.sh.pot (1)
+#
+# (poterminology) pot/kill-byname.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (80)
+#
+# (poterminology) pot/copy-cd.sh.pot (2)
+#
+# (poterminology) pot/names.data.pot (1)
+#
+# (poterminology) pot/ramdisk.sh.pot (2)
+#
+# (poterminology) pot/base64.sh.pot (1)
+#
+# (poterminology) pot/poem.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (4)
+#
+# (poterminology) pot/fifteen.sh.pot (1)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/resistor-inventory.sh
+#: %28poterminology%29+27+more+locations
+msgid "data"
+msgstr "данные"
+
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) pot/ex28.sh.pot (1)
+#
+# (poterminology) pot/ex57.sh.pot (1)
+#
+# (poterminology) pot/ex68.sh.pot (2)
+#
+# (poterminology) pot/am-i-root.sh.pot (1)
+#
+# (poterminology) pot/recurse.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (5)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex76.sh.pot (1)
+#
+# (poterminology) pot/assert.sh.pot (1)
+#
+# (poterminology) pot/commentblock.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (3)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/ex65.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/ex20.sh.pot (1)
+#
+# (poterminology) pot/ex73.sh.pot (1)
+#
+# (poterminology) pot/ex5.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (75)
+#
+# (poterminology) pot/and-list2.sh.pot (2)
+#
+# (poterminology) pot/README.pot (1)
+#
+# (poterminology) pot/case4.sh.pot (1)
+#
+# (poterminology) pot/rnd.sh.pot (1)
+#
+# (poterminology) pot/ktour.sh.pot (1)
+#
+# (poterminology) pot/remote.bash.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (1)
+#
+# (poterminology) pot/ex54.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (1)
+#
+# (poterminology) pot/letter-count.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) pot/strip-comments.sh.pot (1)
+#
+# (poterminology) pot/and-or.sh.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/ktour.sh
+#: %28poterminology%29+30+more+locations
+msgid "execute"
+msgstr "выполнить"
+
+# (poterminology) pot/is_spammer.bash.pot (3)
+#
+# (poterminology) pot/reassign-stdout.sh.pot (1)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (6)
+#
+# (poterminology) pot/nightly-backup.sh.pot (3)
+#
+# (poterminology) pot/fifo.sh.pot (2)
+#
+# (poterminology) pot/BashExtraKeys.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/sw.sh.pot (5)
+#
+# (poterminology) pot/ex58.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/ex41.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (4)
+#
+# (poterminology) pot/tempfile-name.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) pot/qky.sh.pot (1)
+#
+# (poterminology) pot/days-between.sh.pot (8)
+#
+# (poterminology) pot/seeding-random.sh.pot (1)
+#
+# (poterminology) pot/cards.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (1)
+#
+# (poterminology) pot/date-calc.sh.pot (8)
+#
+# (poterminology) pot/ex51.sh.pot (5)
+#
+# (poterminology) pot/ex79.sh.pot (1)
+#
+# (poterminology) pot/continue-n.example.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (37)
+#
+# (poterminology) pot/Hash.lib.pot (1)
+#
+# (poterminology) pot/self-mailer.sh.pot (1)
+#
+# (poterminology) pot/cdll.pot (2)
+#
+# (poterminology) pot/logevents.sh.pot (4)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) pot/obj-oriented.sh.pot (2)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#. type: Content of: <book><appendix><table><tgroup><thead><row><entry>
+#: abs-guide/fifo.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+30+more+locations
+msgid "date"
+msgstr "дата"
+
+# (poterminology) pot/is_spammer.bash.pot (2)
+#
+# (poterminology) pot/whx.sh.pot (3)
+#
+# (poterminology) pot/qky.sh.pot (1)
+#
+# (poterminology) pot/ind-func.sh.pot (2)
+#
+# (poterminology) pot/ex9.sh.pot (3)
+#
+# (poterminology) pot/array-assign.bash.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (23)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/ind-ref.sh.pot (4)
+#
+# (poterminology) pot/ex33.sh.pot (1)
+#
+# (poterminology) pot/ex78.sh.pot (3)
+#
+# (poterminology) pot/days-between.sh.pot (1)
+#
+# (poterminology) pot/soundcard-on.sh.pot (1)
+#
+# (poterminology) pot/embedded-arrays.sh.pot (5)
+#
+# (poterminology) pot/INDEX00.xml.pot (5)
+#
+# (poterminology) pot/ex38.sh.pot (1)
+#
+# (poterminology) pot/ex68a.sh.pot (1)
+#
+# (poterminology) pot/hanoi.bash.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/assoc-arr-test.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (60)
+#
+# (poterminology) pot/Hash.lib.pot (2)
+#
+# (poterminology) pot/col-totaler2.sh.pot (3)
+#
+# (poterminology) pot/echo-params.sh.pot (1)
+#
+# (poterminology) pot/base64.sh.pot (1)
+#
+# (poterminology) pot/Moraes-COPYRIGHT.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/basics-reviewed.bash
+#: %28poterminology%29+24+more+locations
+#, fuzzy
+msgid "reference"
+msgstr "ссылка"
+
+# (poterminology) pot/letter-count2.sh.pot (1)
+#
+# (poterminology) pot/setnew-passwd.sh.pot (1)
+#
+# (poterminology) pot/fifo.sh.pot (16)
+#
+# (poterminology) pot/primes.sh.pot (1)
+#
+# (poterminology) pot/soundex.sh.pot (1)
+#
+# (poterminology) glossary.pot (3)
+#
+# (poterminology) pot/hypotenuse.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/array-append.bash.pot (1)
+#
+# (poterminology) pot/colm.sh.pot (1)
+#
+# (poterminology) pot/from.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (2)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (11)
+#
+# (poterminology) pot/lastpipe-option.sh.pot (1)
+#
+# (poterminology) pot/tree2.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (101)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+# (poterminology) pot/ex48.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) pot/col.sh.pot (1)
+#
+# (poterminology) pot/ex14.sh.pot (1)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#: abs-guide/fifo.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+21+more+locations
+msgid "pipe"
+msgstr "канал"
+
+# (poterminology) pot/cw-solver.sh.pot (3)
+#
+# (poterminology) pot/realname.sh.pot (2)
+#
+# (poterminology) pot/ex4.sh.pot (2)
+#
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) pot/case4.sh.pot (2)
+#
+# (poterminology) pot/collatz.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/string.sh.pot (1)
+#
+# (poterminology) pot/brownian.sh.pot (1)
+#
+# (poterminology) pot/basics-reviewed.bash.pot (3)
+#
+# (poterminology) pot/grp.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (3)
+#
+# (poterminology) pot/list-glob.sh.pot (1)
+#
+# (poterminology) pot/ifs.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/empty-array.sh.pot (3)
+#
+# (poterminology) pot/var-match.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (2)
+#
+# (poterminology) pot/patt-matching.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (6)
+#
+# (poterminology) pot/find-splitpara.sh.pot (1)
+#
+# (poterminology) pot/continue-n.example.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (54)
+#
+# (poterminology) pot/ftpget.sh.pot (2)
+#
+# (poterminology) pot/sedappend.sh.pot (1)
+#
+#: abs-guide/grp.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+23+more+locations
+msgid "pattern"
+msgstr "шаблон"
+
+# (poterminology) pot/dialog.sh.pot (1)
+#
+# (poterminology) pot/ex48.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/arith-tests.sh.pot (10)
+#
+# (poterminology) pot/usage-message.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (1)
+#
+# (poterminology) pot/ex26a.sh.pot (1)
+#
+# (poterminology) pot/file-comparison.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/ex6.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (15)
+#
+# (poterminology) pot/ex5.sh.pot (2)
+#
+# (poterminology) pot/ex14.sh.pot (3)
+#
+# (poterminology) pot/lastpipe-option.sh.pot (1)
+#
+# (poterminology) pot/ex1a.sh.pot (1)
+#
+# (poterminology) pot/self-destruct.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (80)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#: abs-guide/ex14.sh abs-guide/lookup.sh %28poterminology%29+16+more+locations
+#, fuzzy
+msgid "exit status"
+msgstr "статус выхода"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/test-suite.sh.pot (2)
+#
+# (poterminology) pot/grp.sh.pot (1)
+#
+# (poterminology) pot/case-cmd.sh.pot (1)
+#
+# (poterminology) pot/lowercase.sh.pot (1)
+#
+# (poterminology) pot/bash-profile.snippet.pot (1)
+#
+# (poterminology) pot/agram2.sh.pot (1)
+#
+# (poterminology) pot/alt-bc.sh.pot (1)
+#
+# (poterminology) pot/logevents.sh.pot (1)
+#
+# (poterminology) pot/csubloop.sh.pot (1)
+#
+# (poterminology) pot/for-loopcmd.sh.pot (1)
+#
+# (poterminology) pot/max2.sh.pot (1)
+#
+# (poterminology) pot/days-between.sh.pot (1)
+#
+# (poterminology) pot/ex16.sh.pot (2)
+#
+# (poterminology) pot/soundex.sh.pot (1)
+#
+# (poterminology) pot/array-strops.sh.pot (2)
+#
+# (poterminology) pot/monthlypmt.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (48)
+#
+# (poterminology) pot/isalpha.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (9)
+#
+#. type: Content of: <book><part><chapter><title>
+#: abs-guide/logevents.sh abs-guide/case-cmd.sh
+#: %28poterminology%29+18+more+locations
+msgid "command substitution"
+msgstr "подстановка команд"
+
+# (poterminology) pot/basics-reviewed.bash.pot (6)
+#
+# (poterminology) pot/homework.sh.pot (2)
+#
+# (poterminology) pot/array-append.bash.pot (2)
+#
+# (poterminology) pot/empty-array.sh.pot (1)
+#
+# (poterminology) pot/ex15.sh.pot (4)
+#
+# (poterminology) pot/opprec-table.xml.pot (2)
+#
+# (poterminology) pot/agram2.sh.pot (1)
+#
+# (poterminology) pot/gcd.sh.pot (1)
+#
+# (poterminology) pot/CopyArray.sh.pot (2)
+#
+# (poterminology) pot/unprotect_literal.sh.pot (2)
+#
+# (poterminology) pot/is-spammer.sh.pot (3)
+#
+# (poterminology) pot/protect_literal.sh.pot (6)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/ex67.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/array-strops.sh.pot (2)
+#
+# (poterminology) pot/array-assign.bash.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (35)
+#
+# (poterminology) pot/ex9.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (7)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/opprec-table.xml abs-guide/INDEX00.xml
+#: %28poterminology%29+18+more+locations
+msgid "assignment"
+msgstr "присваивание"
+
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/twodim.sh.pot (4)
+#
+# (poterminology) pot/pid-identifier.sh.pot (1)
+#
+# (poterminology) pot/petals.sh.pot (1)
+#
+# (poterminology) pot/wf2.sh.pot (1)
+#
+# (poterminology) pot/agram.sh.pot (2)
+#
+# (poterminology) pot/fc4upd.sh.pot (3)
+#
+# (poterminology) pot/wstrings.sh.pot (1)
+#
+# (poterminology) pot/ip-addresses.sh.pot (1)
+#
+# (poterminology) pot/wf.sh.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (11)
+#
+# (poterminology) pot/ex14.sh.pot (2)
+#
+# (poterminology) pot/connect-stat.sh.pot (1)
+#
+# (poterminology) pot/monthlypmt.sh.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (48)
+#
+# (poterminology) pot/isalpha.sh.pot (1)
+#
+# (poterminology) pot/README.pot (1)
+#
+#: abs-guide/ex14.sh abs-guide/isalpha.sh
+#: %28poterminology%29+16+more+locations
+msgid "filter"
+msgstr "фильтр"
+
+# (poterminology) pot/unprotect_literal.sh.pot (1)
+#
+# (poterminology) pot/escaped.sh.pot (3)
+#
+# (poterminology) pot/echo-params.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/horserace.sh.pot (2)
+#
+# (poterminology) pot/bash-profile.snippet.pot (2)
+#
+# (poterminology) pot/protect_literal.sh.pot (1)
+#
+# (poterminology) pot/ex17.sh.pot (1)
+#
+# (poterminology) pot/ex65.sh.pot (1)
+#
+# (poterminology) pot/show-all-colors.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/BashExtraKeys.sh.pot (3)
+#
+# (poterminology) pot/ex9.sh.pot (1)
+#
+# (poterminology) pot/ex69.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (50)
+#
+# (poterminology) pot/bubble.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><indexterm><primary>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+15+more+locations
+#, fuzzy
+msgid "escape"
+msgstr "эскейп"
+
+# (poterminology) pot/basics-reviewed.bash.pot (2)
+#
+# (poterminology) pot/ex62.sh.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+# (poterminology) pot/ex8.sh.pot (1)
+#
+# (poterminology) pot/cdll.pot (1)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/ex11.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (10)
+#
+# (poterminology) pot/TABEXP.xml.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (81)
+#
+# (poterminology) pot/ex33a.sh.pot (1)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/bashrc abs-guide/INDEX00.xml
+#: %28poterminology%29+11+more+locations
+msgid "builtin"
+msgstr "встроенный"
+
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) pot/ftpget.sh.pot (2)
+#
+# (poterminology) pot/wgetter2.bash.pot (4)
+#
+# (poterminology) pot/pid-identifier.sh.pot (3)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (2)
+#
+# (poterminology) pot/cdll.pot (3)
+#
+# (poterminology) pot/rn.sh.pot (1)
+#
+# (poterminology) pot/ex17.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (6)
+#
+# (poterminology) pot/usb.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) pot/ex57.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (41)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/ex57.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+13+more+locations
+msgid "path"
+msgstr "путь"
+
+# (poterminology) pot/arith-tests.sh.pot (1)
+#
+# (poterminology) pot/whx.sh.pot (1)
+#
+# (poterminology) pot/ex7.sh.pot (1)
+#
+# (poterminology) pot/q-function.sh.pot (2)
+#
+# (poterminology) pot/ex45.sh.pot (1)
+#
+# (poterminology) pot/list-glob.sh.pot (1)
+#
+# (poterminology) pot/findstring.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (20)
+#
+# (poterminology) glossary.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (95)
+#
+#. type: Content of: <book><appendix><table><tgroup><thead><row><entry>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+8+more+locations
+msgid "expression"
+msgstr "выражение"
+
+# (poterminology) pot/rnd.sh.pot (1)
+#
+# (poterminology) pot/wf2.sh.pot (1)
+#
+# (poterminology) pot/timed-input.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (60)
+#
+# (poterminology) pot/blot-out.sh.pot (1)
+#
+# (poterminology) pot/rn.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (9)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) pot/continue-n.example.pot (11)
+#
+# (poterminology) pot/ascii.c.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml
+#: %28poterminology%29+11+more+locations
+msgid "job"
+msgstr "задача"
+
+# (poterminology) pot/timed-input.sh.pot (2)
+#
+# (poterminology) pot/progress-bar2.sh.pot (1)
+#
+# (poterminology) pot/horserace.sh.pot (6)
+#
+# (poterminology) pot/background-loop.sh.pot (2)
+#
+# (poterminology) pot/ex30a.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (7)
+#
+# (poterminology) pot/show-all-colors.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (5)
+#
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (40)
+#
+# (poterminology) pot/color-echo.sh.pot (1)
+#
+# (poterminology) pot/tohtml.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><table><tgroup><thead><row><entry>
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/progress-bar2.sh abs-guide/bashrc
+#: %28poterminology%29+11+more+locations
+msgid "background"
+msgstr "задний план, если речь о графике, фон, если речь о процессах"
+
+# (poterminology) pot/data-file.pot (1)
+#
+# (poterminology) pot/generate-script.sh.pot (1)
+#
+# (poterminology) pot/viewdata.sh.pot (1)
+#
+# (poterminology) pot/broken-link.sh.pot (1)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/cannon.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/obj-oriented.sh.pot (1)
+#
+# (poterminology) pot/ascii.c.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (64)
+#
+#: abs-guide/broken-link.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+9+more+locations
+msgid "shell script"
+msgstr "shell-скрипт"
+
+# (poterminology) pot/self-destruct.sh.pot (2)
+#
+# (poterminology) pot/timed-input.sh.pot (3)
+#
+# (poterminology) pot/pid-identifier.sh.pot (1)
+#
+# (poterminology) pot/progress-bar2.sh.pot (2)
+#
+# (poterminology) pot/kill-process.sh.pot (6)
+#
+# (poterminology) pot/iscan.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/ex44.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (2)
+#
+# (poterminology) pot/kill-byname.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (37)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/progress-bar2.sh abs-guide/bashrc
+#: %28poterminology%29+11+more+locations
+msgid "kill"
+msgstr "убить"
+
+# (poterminology) pot/is_spammer.bash.pot (3)
+#
+# (poterminology) pot/ftpget.sh.pot (1)
+#
+# (poterminology) pot/eval.example.pot (2)
+#
+# (poterminology) pot/cdll.pot (3)
+#
+# (poterminology) pot/bashrc.pot (19)
+#
+# (poterminology) pot/col-totaler3.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (4)
+#
+# (poterminology) pot/subshell-pitfalls.sh.pot (2)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/ascii3.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (28)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#: abs-guide/bashrc abs-guide/INDEX00.xml
+#: %28poterminology%29+10+more+locations
+msgid "export"
+msgstr "экспорт"
+
+# (poterminology) pot/self-mailer.sh.pot (1)
+#
+# (poterminology) pot/insertion-sort.bash.pot (1)
+#
+# (poterminology) pot/redir2.sh.pot (1)
+#
+# (poterminology) pot/ex71b.sh.pot (1)
+#
+# (poterminology) pot/patt-matching.sh.pot (1)
+#
+# (poterminology) pot/ex71c.sh.pot (2)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (8)
+#
+# (poterminology) pot/ex60.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (25)
+#
+#. type: Content of: <book><part><chapter><sect1><title>
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/redir2.sh abs-guide/self-mailer.sh
+#: %28poterminology%29+9+more+locations
+#, fuzzy
+msgid "parameter substitution"
+msgstr "подстановка параметров"
+
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/timeout.sh.pot (1)
+#
+# (poterminology) pot/colm.sh.pot (1)
+#
+# (poterminology) pot/rpm-check.sh.pot (1)
+#
+# (poterminology) pot/ex51.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/col.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/maned.sh.pot (8)
+#
+# (poterminology) pot/manview.sh.pot (4)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml
+#: %28poterminology%29+10+more+locations
+#, fuzzy
+msgid "man page"
+msgstr "страница man"
+
+# (poterminology) pot/ftpget.sh.pot (1)
+#
+# (poterminology) pot/pid-identifier.sh.pot (2)
+#
+# (poterminology) pot/ex76.sh.pot (2)
+#
+# (poterminology) pot/music.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) pot/sw.sh.pot (4)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (2)
+#
+# (poterminology) pot/self-destruct.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (20)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+9+more+locations
+msgid "signal"
+msgstr "сигнал"
+
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (14)
+#
+# (poterminology) pot/unalias.sh.pot (3)
+#
+# (poterminology) pot/cdll.pot (7)
+#
+# (poterminology) pot/bashrc.pot (34)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/alias.sh.pot (13)
+#
+# (poterminology) pot/color-echo.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><indexterm><primary>
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+8+more+locations
+msgid "alias"
+msgstr "псевдоним"
+
+# (poterminology) pot/copy-cd.sh.pot (1)
+#
+# (poterminology) pot/usrmnt.sh.pot (3)
+#
+# (poterminology) pot/add-drive.sh.pot (2)
+#
+# (poterminology) pot/ramdisk.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) pot/usb.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (11)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (36)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/ramdisk.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+8+more+locations
+msgid "mount"
+msgstr "монтировать"
+
+# (poterminology) pot/seeding-random.sh.pot (10)
+#
+# (poterminology) pot/cards.sh.pot (2)
+#
+# (poterminology) pot/petals.sh.pot (1)
+#
+# (poterminology) pot/bingo.sh.pot (1)
+#
+# (poterminology) pot/random2.sh.pot (1)
+#
+# (poterminology) pot/ex79.sh.pot (2)
+#
+# (poterminology) pot/qky.sh.pot (7)
+#
+# (poterminology) pot/collatz.sh.pot (5)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+# (poterminology) pot/brownian.sh.pot (1)
+#
+#: abs-guide/ex79.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+10+more+locations
+#, fuzzy
+msgid "seed"
+msgstr "зерно"
+
+# (poterminology) pot/CopyArray.sh.pot (1)
+#
+# (poterminology) pot/ex33.sh.pot (1)
+#
+# (poterminology) pot/ex78.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/vartrace.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/stack.sh.pot (9)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (11)
+#
+# (poterminology) pot/UseGetOpt-2.pot (1)
+#
+#: abs-guide/UseGetOpt-2 abs-guide/INDEX00.xml
+#: %28poterminology%29+9+more+locations
+msgid "pointer"
+msgstr "указатель"
+
+# (poterminology) pot/read-redir.sh.pot (2)
+#
+# (poterminology) pot/lookup.sh.pot (1)
+#
+# (poterminology) pot/file-comparison.sh.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (10)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (46)
+#
+# (poterminology) pot/README.pot (1)
+#
+#. type: Content of: <para>
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+6+more+locations
+msgid "redirection"
+msgstr "перенаправление"
+
+# (poterminology) pot/unset.sh.pot (1)
+#
+# (poterminology) pot/from.sh.pot (1)
+#
+# (poterminology) pot/rfe.sh.pot (1)
+#
+# (poterminology) pot/vartrace.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (47)
+#
+# (poterminology) pot/pr-asc.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+6+more+locations
+msgid "context"
+msgstr "контекст"
+
+# (poterminology) pot/is_spammer.bash.pot (5)
+#
+# (poterminology) pot/TABEXP.xml.pot (2)
+#
+# (poterminology) pot/ktour.sh.pot (2)
+#
+# (poterminology) pot/insertion-sort.bash.pot (1)
+#
+# (poterminology) pot/UseGetOpt-2.sh.pot (2)
+#
+# (poterminology) pot/assert.sh.pot (1)
+#
+# (poterminology) pot/gronsfeld.bash.pot (1)
+#
+# (poterminology) pot/UseGetOpt.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/UseGetOpt-2.pot (1)
+#
+#: abs-guide/UseGetOpt-2 abs-guide/abs-guide.xml
+#: %28poterminology%29+9+more+locations
+msgid "debug"
+msgstr "отладка"
+
+# (poterminology) pot/wipedir.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/random-between.sh.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/blank-rename.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/online.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (1)
+#
+# (poterminology) pot/stack.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (12)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+9+more+locations
+msgid "successful"
+msgstr "успешный"
+
+# (poterminology) pot/ex48.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/dict-lookup.sh.pot (1)
+#
+# (poterminology) pot/cdll.pot (2)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+# (poterminology) pot/ex11.sh.pot (1)
+#
+# (poterminology) pot/ex72.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (7)
+#
+# (poterminology) pot/encryptedpw.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><listitem><formalpara><title>
+#: abs-guide/encryptedpw.sh abs-guide/bashrc
+#: %28poterminology%29+9+more+locations
+msgid "pathname"
+msgstr "полное имя"
+
+# (poterminology) pot/max.sh.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (1)
+#
+# (poterminology) pot/max2.sh.pot (1)
+#
+# (poterminology) pot/blank-rename.sh.pot (1)
+#
+# (poterminology) pot/days-between.sh.pot (1)
+#
+# (poterminology) pot/array-function.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (22)
+#
+# (poterminology) pot/isalpha.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (5)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#: abs-guide/isalpha.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+8+more+locations
+msgid "return value"
+msgstr "возвращаемое значение"
+
+# (poterminology) pot/archiveweblogs.sh.pot (2)
+#
+# (poterminology) pot/ex58.sh.pot (1)
+#
+# (poterminology) pot/redir4a.sh.pot (1)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (25)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (14)
+#
+#: abs-guide/fifo.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+6+more+locations
+msgid "backup"
+msgstr "резервное копирование"
+
+# (poterminology) pot/cards.sh.pot (1)
+#
+# (poterminology) pot/tohtml.sh.pot (2)
+#
+# (poterminology) pot/dict-lookup.sh.pot (1)
+#
+# (poterminology) pot/paragraph-space.sh.pot (3)
+#
+# (poterminology) pot/find-splitpara.sh.pot (5)
+#
+# (poterminology) pot/tree2.sh.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (10)
+#
+# (poterminology) pot/brownian.sh.pot (1)
+#
+#: abs-guide/tree2.sh abs-guide/tohtml.sh %28poterminology%29+7+more+locations
+msgid "blank line"
+msgstr "пустая строка"
+
+# (poterminology) pot/basics-reviewed.bash.pot (2)
+#
+# (poterminology) pot/is_spammer.bash.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex68a.sh.pot (1)
+#
+# (poterminology) pot/hanoi.bash.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/array-assign.bash.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/words.data.pot (1)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+8+more+locations
+msgid "advanced bash scripting guide"
+msgstr ""
+
+# (poterminology) pot/is_spammer.bash.pot (3)
+#
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/cw-solver.sh.pot (1)
+#
+# (poterminology) pot/ftpget.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (15)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+7+more+locations
+msgid "wrapper"
+msgstr "обёртка"
+
+# (poterminology) pot/rnd.sh.pot (1)
+#
+# (poterminology) pot/resistor-inventory.sh.pot (1)
+#
+# (poterminology) pot/arr-choice.sh.pot (1)
+#
+# (poterminology) pot/ex31.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/ex32.sh.pot (2)
+#
+# (poterminology) pot/ex49.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (16)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/ex32.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+7+more+locations
+msgid "select"
+msgstr "выбор"
+
+# (poterminology) pot/TABEXP.xml.pot (2)
+#
+# (poterminology) pot/UseGetOpt-2.sh.pot (2)
+#
+# (poterminology) pot/ex33.sh.pot (1)
+#
+# (poterminology) pot/ex22a.sh.pot (1)
+#
+# (poterminology) pot/UseGetOpt.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (4)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (10)
+#
+# (poterminology) pot/sam.sh.pot (58)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+7+more+locations
+#, fuzzy
+msgid "dash"
+msgstr "чёрточка"
+
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) pot/remote.bash.pot (1)
+#
+# (poterminology) pot/max.sh.pot (1)
+#
+# (poterminology) pot/here-function.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (28)
+#
+#. type: Content of: <book><part><chapter><table><tgroup><tbody><row><entry>
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+6+more+locations
+msgid "interactive"
+msgstr "интерактивный"
+
+# (poterminology) pot/is_spammer.bash.pot (4)
+#
+# (poterminology) pot/spawn.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (8)
+#
+# (poterminology) pot/tree2.sh.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (28)
+#
+#: abs-guide/tree2.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+5+more+locations
+msgid "parent"
+msgstr "родитель"
+
+# (poterminology) pot/de-rpm.sh.pot (7)
+#
+# (poterminology) pot/ex58.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (37)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/soundex.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/rpm-check.sh.pot (2)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/bashrc abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "archive"
+msgstr "архив"
+
+# (poterminology) pot/is_spammer.bash.pot (8)
+#
+# (poterminology) pot/test-cgi.sh.pot (2)
+#
+# (poterminology) pot/cdll.pot (7)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) pot/col-totaler3.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (22)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/abs-guide.xml abs-guide/directory-info.sh
+#: %28poterminology%29+5+more+locations
+msgid "environment"
+msgstr "среда"
+
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) pot/reassign-stdout.sh.pot (2)
+#
+# (poterminology) pot/redir2a.sh.pot (1)
+#
+# (poterminology) pot/redir1.sh.pot (1)
+#
+# (poterminology) pot/logevents.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (11)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (21)
+#
+#: abs-guide/logevents.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+6+more+locations
+msgid "file descriptor"
+msgstr "файловый дескриптор или дескриптор файла"
+
+# (poterminology) pot/is_spammer.bash.pot (3)
+#
+# (poterminology) pot/spawn.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (7)
+#
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (25)
+#
+# (poterminology) pot/recurse.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "child"
+msgstr "потомок (если прилагательное, то «дочерний»)"
+
+# (poterminology) pot/ex73.sh.pot (1)
+#
+# (poterminology) pot/wgetter2.bash.pot (1)
+#
+# (poterminology) pot/is-spammer.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/ex14.sh.pot (1)
+#
+# (poterminology) pot/stack.sh.pot (1)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+#: abs-guide/ex14.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+7+more+locations
+msgid "error code"
+msgstr "код ошибки"
+
+# (poterminology) pot/ex16.sh.pot (2)
+#
+# (poterminology) pot/cdll.pot (32)
+#
+# (poterminology) pot/bashrc.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (25)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+4+more+locations
+msgid "history"
+msgstr "история"
+
+# (poterminology) pot/abs-guide.xml.pot (13)
+#
+# (poterminology) pot/ex46.sh.pot (1)
+#
+# (poterminology) pot/bash-profile.snippet.pot (1)
+#
+# (poterminology) pot/ex41.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/alias.sh.pot (1)
+#
+# (poterminology) pot/ex71.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+6+more+locations
+msgid "double quotes"
+msgstr "двойные кавычки"
+
+# (poterminology) pot/col-totaler2.sh.pot (1)
+#
+# (poterminology) pot/ind-ref.sh.pot (2)
+#
+# (poterminology) pot/ex78.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/embedded-arrays.sh.pot (3)
+#
+# (poterminology) pot/ind-func.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (7)
+#
+#: abs-guide/col-totaler2.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+6+more+locations
+msgid "indirect reference"
+msgstr "непрямая ссылка"
+
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) pot/cdll.pot (4)
+#
+# (poterminology) pot/missing-keyword.sh.pot (1)
+#
+# (poterminology) pot/bashrc.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (13)
+#
+#: abs-guide/bashrc abs-guide/INDEX00.xml %28poterminology%29+5+more+locations
+msgid "command line"
+msgstr "командная строка"
+
+# (poterminology) pot/escaped.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (2)
+#
+# (poterminology) pot/base64.sh.pot (3)
+#
+# (poterminology) pot/numbers.sh.pot (2)
+#
+# (poterminology) pot/hexconvert.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (16)
+#
+#. type: Content of: <book><part><chapter><sect1><itemizedlist><listitem><indexterm><secondary>
+#: abs-guide/abs-guide.xml abs-guide/hexconvert.sh
+#: %28poterminology%29+5+more+locations
+msgid "hexadecimal"
+msgstr "шестнадцатеричный"
+
+# (poterminology) pot/rot13a.sh.pot (1)
+#
+# (poterminology) pot/gronsfeld.bash.pot (2)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/blot-out.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (15)
+#
+#: abs-guide/rot13a.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "secure"
+msgstr "безопасный"
+
+# (poterminology) pot/test-suite.sh.pot (1)
+#
+# (poterminology) pot/for-loopc.sh.pot (1)
+#
+# (poterminology) pot/wh-loopc.sh.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (12)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (14)
+#
+#: abs-guide/wh-loopc.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+4+more+locations
+msgid "double parentheses"
+msgstr "двойные скобки"
+
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) pot/incompat.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (25)
+#
+# (poterminology) pot/cannon.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (9)
+#
+#: abs-guide/incompat.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+4+more+locations
+msgid "example script"
+msgstr "пример сценария"
+
+# (poterminology) pot/abs-guide.xml.pot (11)
+#
+# (poterminology) pot/iscan.sh.pot (2)
+#
+# (poterminology) pot/userlist.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/connect-stat.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "daemon"
+msgstr "демон"
+
+# (poterminology) pot/ex10.sh.pot (1)
+#
+# (poterminology) pot/arith-tests.sh.pot (1)
+#
+# (poterminology) pot/protect_literal.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (28)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+msgid "evaluate"
+msgstr "вычислять"
+
+# (poterminology) pot/list-glob.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (9)
+#
+# (poterminology) pot/ex24.sh.pot (1)
+#
+# (poterminology) pot/patt-matching.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/alias.sh.pot (2)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><listitem><formalpara><title>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "wild card"
+msgstr "джокер"
+
+# (poterminology) pot/fetch_address.sh.pot (1)
+#
+# (poterminology) pot/sam.sh.pot (1)
+#
+# (poterminology) pot/assoc-arr-test.sh.pot (5)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+5+more+locations
+msgid "associative array"
+msgstr "ассоциативный массив"
+
+# (poterminology) pot/generate-script.sh.pot (1)
+#
+# (poterminology) pot/ex71c.sh.pot (4)
+#
+# (poterminology) pot/INDEX00.xml.pot (7)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (13)
+#
+# (poterminology) pot/here-commsub.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+#, fuzzy
+msgid "limit string"
+msgstr "ограничительная строка"
+
+# (poterminology) pot/self-exec.sh.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) pot/ex40.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+#: abs-guide/ex40.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+5+more+locations
+#, fuzzy
+msgid "exit code"
+msgstr "код выхода"
+
+# (poterminology) pot/gcd.sh.pot (1)
+#
+# (poterminology) pot/str-test.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (6)
+#
+# (poterminology) pot/nightly-backup.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (11)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+#, fuzzy
+msgid "test brackets"
+msgstr "проверочные скобки"
+
+# (poterminology) pot/test-suite.sh.pot (1)
+#
+# (poterminology) pot/for-loopc.sh.pot (1)
+#
+# (poterminology) pot/base64.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (17)
+#
+#. type: Content of: <book><part><chapter><table><tgroup><tbody><row><entry>
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><listitem><formalpara><title>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+#, fuzzy
+msgid "brace expansion"
+msgstr "раскрытие скобок"
+
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (13)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+msgid "socket"
+msgstr "сокет"
+
+# (poterminology) pot/is_spammer.bash.pot (7)
+#
+# (poterminology) pot/whx.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (12)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/abs-guide.xml abs-guide/is_spammer.bash
+#: %28poterminology%29+4+more+locations
+msgid "service"
+msgstr "сервис"
+
+# (poterminology) pot/logging-wrapper.sh.pot (1)
+#
+# (poterminology) pot/ftpget.sh.pot (1)
+#
+# (poterminology) pot/backlight.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (10)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+#, fuzzy
+msgid "shell wrapper"
+msgstr "обёртка shell"
+
+# (poterminology) pot/broken-link.sh.pot (1)
+#
+# (poterminology) pot/pid-identifier.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (9)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+#: abs-guide/broken-link.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+msgid "symbolic link"
+msgstr "символическая ссылка"
+
+# (poterminology) pot/horserace.sh.pot (8)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (12)
+#
+# (poterminology) pot/qky.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#. type: Content of: <book><part><chapter><sect1><table><tgroup><thead><row><entry>
+#: abs-guide/qky.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+3+more+locations
+msgid "foreground"
+msgstr "передний план"
+
+# (poterminology) glossary.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (28)
+#
+# (poterminology) pot/INDEX00.xml.pot (12)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "regular expression"
+msgstr "регулярное выражение"
+
+# (poterminology) pot/unprotect_literal.sh.pot (1)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/protect_literal.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (10)
+#
+# (poterminology) pot/script-detector.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><para><firstterm><indexterm><primary>
+#: abs-guide/protect_literal.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+4+more+locations
+msgid "sha-bang"
+msgstr "sha-bang"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/file-integrity.sh.pot (7)
+#
+# (poterminology) pot/directory-info.sh.pot (7)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/file-integrity.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+3+more+locations
+msgid "checksum"
+msgstr "контрольная сумма"
+
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) pot/list-glob.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (10)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+#: <stdin> abs-guide/INDEX00.xml %28poterminology%29+3+more+locations
+#, fuzzy
+msgid "filename expansion"
+msgstr "раскрытие имён файлов"
+
+# (poterminology) pot/read-redir.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (9)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/README.pot (1)
+#
+#. type: Content of: <book><part><chapter><title>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+3+more+locations
+msgid "i/o redirection"
+msgstr "перенаправление ввода/вывода"
+
+# (poterminology) pot/array-function.sh.pot (1)
+#
+# (poterminology) pot/ex62.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (8)
+#
+# (poterminology) pot/color-echo.sh.pot (1)
+#
+#: abs-guide/color-echo.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+3+more+locations
+msgid "local variable"
+msgstr "локальные переменные"
+
+# (poterminology) pot/multiple-processes.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (16)
+#
+# (poterminology) pot/INDEX00.xml.pot (5)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "child process"
+msgstr "дочерний процесс"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (4)
+#
+# (poterminology) pot/viewdata.sh.pot (1)
+#
+# (poterminology) pot/soundcard-on.sh.pot (2)
+#
+#. type: Content of: <book><appendix><table><tgroup><tbody><row><entry>
+#: abs-guide/soundcard-on.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+3+more+locations
+msgid "label"
+msgstr "метка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/idelete.sh.pot (3)
+#
+# (poterminology) pot/directory-info.sh.pot (15)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+#: abs-guide/idelete.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+#, fuzzy
+msgid "inode"
+msgstr "инод"
+
+# (poterminology) pot/lowercase.sh.pot (1)
+#
+# (poterminology) pot/eval.example.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/ex14.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><primary>
+#. type: Content of: <book><part><chapter><sect1><title>
+#: abs-guide/ex14.sh abs-guide/eval.example
+#: %28poterminology%29+3+more+locations
+#, fuzzy
+msgid "variable substitution"
+msgstr "подстановка переменных"
+
+# (poterminology) pot/arrow-detect.sh.pot (1)
+#
+# (poterminology) pot/BashExtraKeys.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+#: <stdin> abs-guide/INDEX00.xml %28poterminology%29+3+more+locations
+msgid "arrow keys"
+msgstr "клавиши-стрелки"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/ex6.sh.pot (2)
+#
+# (poterminology) pot/abs-guide.xml.pot (13)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/ex6.sh abs-guide/INDEX00.xml %28poterminology%29+2+more+locations
+msgid "environmental variables"
+msgstr "переменные среды"
+
+# (poterminology) pot/read-redir.sh.pot (1)
+#
+# (poterminology) pot/revposparams.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><listitem><para>
+#: <stdin> abs-guide/INDEX00.xml %28poterminology%29+3+more+locations
+#, fuzzy
+msgid "internal field separator"
+msgstr "внутренний разделитель полей"
+
+# (poterminology) pot/string.sh.pot (10)
+#
+# (poterminology) pot/TABEXP.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (7)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><primary>
+#: abs-guide/string.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "autoload"
+msgstr "автозагрузка"
+
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (17)
+#
+# (poterminology) pot/soundcard-on.sh.pot (2)
+#
+#: abs-guide/soundcard-on.sh abs-guide/fifo.sh
+#: %28poterminology%29+2+more+locations
+msgid "boot"
+msgstr "загрузка"
+
+# (poterminology) pot/soundex.sh.pot (3)
+#
+# (poterminology) pot/ktour.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (12)
+#
+# (poterminology) glossary.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/abs-guide.xml abs-guide/ktour.sh
+#: %28poterminology%29+2+more+locations
+msgid "patch"
+msgstr "патч"
+
+# (poterminology) pot/ex71c.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (7)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+#, fuzzy
+msgid "backslash"
+msgstr "обратный слеш"
+
+# (poterminology) pot/ex55.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (11)
+#
+# (poterminology) pot/ex44.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><secondary>
+#: <stdin> abs-guide/abs-guide.xml %28poterminology%29+2+more+locations
+#, fuzzy
+msgid "lock file"
+msgstr "lock-файл"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (7)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+# (poterminology) pot/whx.sh.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+#, fuzzy
+msgid "loopback"
+msgstr "loopback"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "block device"
+msgstr "блочное устройство"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+#: abs-guide/directory-info.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "character device"
+msgstr "символьное устройство"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (14)
+#
+# (poterminology) pot/INDEX00.xml.pot (4)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "parent process"
+msgstr "родительский процесс"
+
+# (poterminology) pot/col-totaler.sh.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (3)
+#
+#: abs-guide/col-totaler.sh abs-guide/INDEX00.xml
+#: %28poterminology%29+2+more+locations
+#, fuzzy
+msgid "shell variables"
+msgstr "переменные shell"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/dev-tcp.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><indexterm><primary>
+#: abs-guide/directory-info.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "special character"
+msgstr "специальный символ"
+
+# (poterminology) pot/fifo.sh.pot (4)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/fifo.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "named pipe"
+msgstr "именованный канал"
+
+# (poterminology) pot/m4.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "macro"
+msgstr "макрос"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/backlight.sh.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "backlight"
+msgstr "подсветка"
+
+# (poterminology) pot/is_spammer.bash.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "host name"
+msgstr "имя узла"
+
+# (poterminology) pot/BashExtraKeys.sh.pot (1)
+#
+# (poterminology) pot/escaped.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) glossary.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/escaped.sh
+#: %28poterminology%29+2+more+locations
+msgid "string-expansion"
+msgstr "раскрытие строк"
+
+# (poterminology) pot/ex42.sh.pot (1)
+#
+# (poterminology) pot/kill-byname.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+#: abs-guide/kill-byname.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+2+more+locations
+msgid "replace strings"
+msgstr "заменить строки"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (11)
+#
+# (poterminology) pot/INDEX00.xml.pot (4)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "unicode"
+msgstr "юникод"
+
+# (poterminology) pot/restricted.sh.pot (5)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+#: abs-guide/abs-guide.xml <stdin> %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "restricted mode"
+msgstr "ограниченный режим"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/soundcard-on.sh.pot (1)
+#
+#: abs-guide/soundcard-on.sh abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "device files"
+msgstr "файлы устройств"
+
+# файлы, начинающиеся с точки
+# (poterminology) pot/wipedir.sh.pot (1)
+# (poterminology) glossary.pot (1)
+# (poterminology) pot/abs-guide.xml.pot (6)
+#: abs-guide/abs-guide.xml <stdin> %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "dotfiles"
+msgstr "скрытые файлы"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (5)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "hashing"
+msgstr "хеширование"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (4)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "extended regular expression"
+msgstr "расширенные регулярные выражения"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml abs-guide/directory-info.sh
+#: %28poterminology%29+1+more+locations
+msgid "hard links"
+msgstr "жёсткие ссылки"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "double-dash"
+msgstr "двойная чёрточка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (2)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "portability"
+msgstr "переносимость"
+
+# (poterminology) pot/TABEXP.xml.pot (3)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/TABEXP.xml abs-guide/INDEX00.xml
+#: %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "tab completion"
+msgstr "tab-дополнение"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "zombie"
+msgstr "зомби"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (2)
+#
+#: abs-guide/abs-guide.xml abs-guide/fc4upd.sh
+#: %28poterminology%29+1+more+locations
+msgid "absolute path"
+msgstr "абсолютный путь"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "batch processing"
+msgstr "пакетная обработка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#. type: Content of: <book><part><chapter><para><indexterm><primary>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "magic number"
+msgstr "магическое число"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+#. type: Content of: <book><part><chapter><sect1><example><title>
+#: abs-guide/abs-guide.xml abs-guide/tree.sh
+#: %28poterminology%29+1+more+locations
+msgid "nested loop"
+msgstr "вложенный цикл"
+
+# (poterminology) pot/ex39.sh.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml abs-guide/ex39.sh
+#: %28poterminology%29+1+more+locations
+msgid "orphan"
+msgstr "сирота"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#. type: Content of: <book><part><chapter><title>
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "restricted shells"
+msgstr "ограниченная оболочка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (4)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "semaphore"
+msgstr "семафор"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/life.sh
+#: %28poterminology%29+1+more+locations
+msgid "game of life"
+msgstr "игра «Жизнь»"
+
+# (poterminology) pot/basics-reviewed.bash.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin> %28poterminology%29+1+more+locations
+msgid "linked list"
+msgstr "связанный список"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "lvalue"
+msgstr "l-знаяение"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+msgid "octal dump"
+msgstr "восьмеричный дамп"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/life.sh
+#: %28poterminology%29+1+more+locations
+msgid "redundancy"
+msgstr "избыточность"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+#: abs-guide/abs-guide.xml abs-guide/fc4upd.sh
+#: %28poterminology%29+1+more+locations
+msgid "temporary file"
+msgstr "временный файл"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
+#: %28poterminology%29+1+more+locations
+#, fuzzy
+msgid "rvalue"
+msgstr "r-знаяение"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (13)
+#
+#: abs-guide/INDEX00.xml <stdin>
+#, fuzzy
+msgid "script example"
+msgstr "пример сценария"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (6)
+#
+#: abs-guide/abs-guide.xml <stdin>
+#, fuzzy
+msgid "info page"
+msgstr "страница info"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (4)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "binary executable"
+msgstr "бинарный исполняемый файл"
+
+# (poterminology) pot/TABEXP.xml.pot (4)
+#
+# (poterminology) glossary.pot (1)
+#
+#: abs-guide/TABEXP.xml <stdin>
+#, fuzzy
+msgid "completion script"
+msgstr "сценарий автодополнения"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "physical devices"
+msgstr "физическое устройство"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+#, fuzzy
+msgid "arithmetic evaluation"
+msgstr "арифметическое вычисление"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "bang"
+msgstr "восклицательный знак"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "Buffon's needle"
+msgstr "задача Буффона"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+#, fuzzy
+msgid "cross-reference"
+msgstr "перекрёстная ссылка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "Newton's method"
+msgstr "метод Ньютона"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "plaintext"
+msgstr "открытый текст"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+#: abs-guide/abs-guide.xml <stdin>
+#, fuzzy
+msgid "root directory"
+msgstr "корневая директория"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "system calls"
+msgstr "системные вызовы"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#. type: Content of: <book><part><chapter><sect1><variablelist><varlistentry><indexterm><secondary>
+#: abs-guide/abs-guide.xml <stdin>
+msgid "topological sort"
+msgstr "топологическая сортировка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "anonymous function"
+msgstr "анонимная функция"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "boundary conditions"
+msgstr "граничные условия"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+#, fuzzy
+msgid "broken pipe"
+msgstr "сломанный канал"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "buffer overrun"
+msgstr "переполнение буфера"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "certificates"
+msgstr "сертификаты"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "clipboard"
+msgstr "буфер обмена"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "command history"
+msgstr "история команд"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "curly bracket"
+msgstr "фигурная скобка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "dummyfile"
+msgstr "макет файла"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "fifo"
+msgstr "fifo"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "fork bomb"
+msgstr "fork-бомба"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "hash table"
+msgstr "хеш-таблица"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "library calls"
+msgstr "библиотечные вызовы"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "loop unrolling"
+msgstr "развёртка циклов"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "reverse polish notation"
+msgstr "обратная польская запись"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "superuser"
+msgstr "суперпользователь"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "text stream"
+msgstr "текстовый поток"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "wait loop"
+msgstr "цикл ожидания"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "Zero-padding"
+msgstr "дополнение нулями"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (2)
+#
+#: abs-guide/abs-guide.xml <stdin>
+msgid "zmodem"
+msgstr "протокол zmodem"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#: %28poterminology%29+15+more+locations
+msgid "while loop"
+msgstr "цикл while"
+
+# (poterminology) pot/generate-script.sh.pot (2)
+#
+# (poterminology) pot/base.sh.pot (1)
+#
+# (poterminology) pot/test-cgi.sh.pot (1)
+#
+# (poterminology) pot/ex71b.sh.pot (1)
+#
+# (poterminology) pot/alt-bc.sh.pot (1)
+#
+# (poterminology) pot/ex71c.sh.pot (1)
+#
+# (poterminology) pot/directory-info.sh.pot (3)
+#
+# (poterminology) pot/ex71a.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (9)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (34)
+#
+# (poterminology) pot/ex71.sh.pot (1)
+#
+# (poterminology) pot/ex69.sh.pot (2)
+#
+#: %28poterminology%29+13+more+locations
+#, fuzzy
+msgid "here document"
+msgstr "встроенный документ"
+
+# (poterminology) pot/wr-ps.bash.pot (4)
+#
+# (poterminology) pot/symlinks2.sh.pot (1)
+#
+# (poterminology) pot/readpipe.sh.pot (1)
+#
+# (poterminology) pot/ex28.sh.pot (4)
+#
+# (poterminology) pot/tree2.sh.pot (1)
+#
+# (poterminology) pot/nested-loop.sh.pot (12)
+#
+# (poterminology) pot/random-between.sh.pot (2)
+#
+# (poterminology) pot/mailbox_grep.sh.pot (1)
+#
+# (poterminology) pot/avoid-subshell.sh.pot (2)
+#
+# (poterminology) pot/wstrings.sh.pot (1)
+#
+# (poterminology) pot/ex2.sh.pot (1)
+#
+# (poterminology) pot/redir2a.sh.pot (5)
+#
+# (poterminology) pot/primes.sh.pot (2)
+#
+# (poterminology) pot/collatz.sh.pot (1)
+#
+# (poterminology) pot/ex53.sh.pot (1)
+#
+# (poterminology) pot/lookup.sh.pot (1)
+#
+# (poterminology) pot/life.sh.pot (1)
+#
+# (poterminology) pot/break-levels.sh.pot (3)
+#
+# (poterminology) pot/brownian.sh.pot (2)
+#
+# (poterminology) pot/csubloop.sh.pot (2)
+#
+# (poterminology) glossary.pot (7)
+#
+# (poterminology) pot/wgetter2.bash.pot (5)
+#
+# (poterminology) pot/random2.sh.pot (2)
+#
+# (poterminology) pot/ex15.sh.pot (2)
+#
+# (poterminology) pot/alias.sh.pot (1)
+#
+# (poterminology) pot/wh-loopc.sh.pot (1)
+#
+# (poterminology) pot/ex21.sh.pot (1)
+#
+# (poterminology) pot/tree.sh.pot (1)
+#
+# (poterminology) pot/fc4upd.sh.pot (1)
+#
+# (poterminology) pot/background-loop.sh.pot (5)
+#
+# (poterminology) pot/ex26a.sh.pot (1)
+#
+# (poterminology) pot/ex27.sh.pot (3)
+#
+# (poterminology) pot/ex29.sh.pot (1)
+#
+# (poterminology) pot/redir3.sh.pot (2)
+#
+# (poterminology) pot/ex67.sh.pot (1)
+#
+# (poterminology) pot/continue-nlevel.sh.pot (6)
+#
+# (poterminology) pot/revposparams.sh.pot (2)
+#
+# (poterminology) pot/recurse.sh.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (30)
+#
+# (poterminology) pot/twodim.sh.pot (1)
+#
+# (poterminology) pot/base.sh.pot (2)
+#
+# (poterminology) pot/q-function.sh.pot (1)
+#
+# (poterminology) pot/insertion-sort.bash.pot (1)
+#
+# (poterminology) pot/redir4.sh.pot (2)
+#
+# (poterminology) pot/c-vars.sh.pot (1)
+#
+# (poterminology) pot/online.sh.pot (1)
+#
+# (poterminology) pot/sw.sh.pot (1)
+#
+# (poterminology) pot/connect-stat.sh.pot (1)
+#
+# (poterminology) pot/ex26.sh.pot (1)
+#
+# (poterminology) pot/monthlypmt.sh.pot (3)
+#
+# (poterminology) pot/abs-guide.xml.pot (174)
+#
+# (poterminology) pot/redir5.sh.pot (1)
+#
+# (poterminology) pot/self-source.sh.pot (1)
+#
+# (poterminology) pot/bubble.sh.pot (4)
+#
+# (poterminology) pot/read-redir.sh.pot (2)
+#
+# (poterminology) pot/ktour.sh.pot (1)
+#
+# (poterminology) pot/redir2.sh.pot (4)
+#
+# (poterminology) pot/nim.sh.pot (2)
+#
+# (poterminology) pot/bingo.sh.pot (3)
+#
+# (poterminology) pot/ex23.sh.pot (1)
+#
+# (poterminology) pot/ip-addresses.sh.pot (1)
+#
+# (poterminology) pot/petals.sh.pot (2)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/pw.sh.pot (1)
+#
+# (poterminology) pot/fifteen.sh.pot (1)
+#
+# (poterminology) pot/cannon.sh.pot (1)
+#
+# (poterminology) pot/fetch_address-2.sh.pot (1)
+#
+# (poterminology) pot/ex55.sh.pot (1)
+#
+#: %28poterminology%29+8+more+locations
+msgid "for loop"
+msgstr "цикл for"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/multiple-processes.sh.pot (2)
+#
+# (poterminology) pot/directory-info.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (3)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#: %28poterminology%29+5+more+locations
+msgid "thread"
+msgstr "поток"
+
+# (poterminology) pot/ex42.sh.pot (1)
+#
+# (poterminology) pot/kill-byname.sh.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) glossary.pot (1)
+#
+#: %28poterminology%29+4+more+locations
+#, fuzzy
+msgid "here string"
+msgstr "встроенная строка"
+
+# (poterminology) pot/archiveweblogs.sh.pot (2)
+#
+# (poterminology) pot/ex58.sh.pot (1)
+#
+# (poterminology) pot/redir4a.sh.pot (1)
+#
+# (poterminology) pot/fifo.sh.pot (1)
+#
+# (poterminology) pot/symlinks.sh.pot (1)
+#
+# (poterminology) pot/nightly-backup.sh.pot (25)
+#
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (14)
+#
+#: %28poterminology%29+3+more+locations
+msgid "backquote"
+msgstr "обратная кавычка"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+# (poterminology) pot/INDEX00.xml.pot (1)
+#
+#, fuzzy
+#~ msgid "main prompt"
+#~ msgstr "главное приглашение"
+
+# (poterminology) glossary.pot (1)
+#
+# (poterminology) pot/abs-guide.xml.pot (1)
+#
+#~ msgid "arglist"
+#~ msgstr "список аргументов"

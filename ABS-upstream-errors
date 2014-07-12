@@ -1,0 +1,19 @@
+Code table:
+E   Error
+A   Need attention
+Q   QA-issue
+S   Spell issue
+
+T   Tag
+O   Obsolete
+
+CODE| Description
+!T--: In <firstterm> associative — associative array: tag mash.
+!T--: case-modification — Case modification: mash in terminology
+!T--: C-shell — C shell: mash in terminology
+!T--: dot files — dotfiles: mash in terminology
+!T--: double{-, }parentheses: mash in terminology
+!T--: double-quotes — double-quoting: mash in terminology
+!T--: end-?of-?options: mash in terminology
+!T--: path[ -]?name: mash in terminology
+!T--: replace(ment)? string: mash in terminology
