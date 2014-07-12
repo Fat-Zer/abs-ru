@@ -150,28 +150,13 @@ A comma-separated list of tags to be translated can be provided.
 
 my %control = ();
 
-=item B<wrap>[B<=>=I<mode>]
+=item B<nowrap>
 
-Handle if po4a will do smart line wraping. 
-A comma-separated list of tags to be translated can be provided.
+Prevent po4a from wrapping lines.
 
-=over
-
-=item B<auto>
-
-Automatically wrap lines (the default).
-
-=item B<no>
-
-Do not wrap only in general files. 
-
-=item B<force_no>
-
-Do not wrap lines. Keep all linebreaks as they were in the source file.
-=back
 =cut
 
-my $wrap_behave = 'auto';
+my $nowrap = 0;
 
 my $parse_func = \&parse_fallback;
 
@@ -195,7 +180,7 @@ sub initialize {
     $self->{options}{'nobullets'} = 1;
     $self->{options}{'tabs'} = 1;
     $self->{options}{'verbose'} = 1;
-    $self->{options}{'wrap'} = 1;
+    $self->{options}{'nowrap'} = 1;
 
     foreach my $opt (keys %options) {
         die wrap_mod("po4a::text",
@@ -216,8 +201,8 @@ sub initialize {
         $breaks = $options{'breaks'};
     }
 
-    if (defined $options{'wrap'}) {
-        $wrap_behave = $options{'wrap'};
+    if (defined $options{'nowrap'}) {
+        $nowrap = 1;
     }
 
     if (defined $options{'debianchangelog'}) {
@@ -260,14 +245,14 @@ sub parse_fallback {
         # Break paragraphs on lines containing only spaces
         do_paragraph($self,$paragraph,$wrapped_mode);
         $paragraph="";
-        $wrapped_mode = ($wrap_behave ne 'no') unless defined($self->{verbatim});
+        $wrapped_mode = 1 unless defined($self->{verbatim});
         $self->pushline($line."\n");
         undef $self->{controlkey};
     } elsif ($line =~ /^-- $/) {
         # Break paragraphs on email signature hint
         do_paragraph($self,$paragraph,$wrapped_mode);
         $paragraph="";
-        $wrapped_mode = ($wrap_behave ne 'no');
+        $wrapped_mode = 1;
         $self->pushline($line."\n");
     } elsif (   $line =~ /^=+$/
              or $line =~ /^_+$/
@@ -276,7 +261,7 @@ sub parse_fallback {
         $paragraph .= $line."\n";
         do_paragraph($self,$paragraph,$wrapped_mode);
         $paragraph="";
-        $wrapped_mode = ($wrap_behave ne 'no');
+        $wrapped_mode = 1;
     } elsif ($tabs eq "split" and $line =~ m/\t/ and $paragraph !~ m/\t/s) {
         $wrapped_mode = 0;
         do_paragraph($self,$paragraph,$wrapped_mode);
@@ -809,7 +794,7 @@ sub parse {
     my $self = shift;
     my ($line,$ref);
     my $paragraph="";
-    my $wrapped_mode = ($wrap_behave ne 'no');
+    my $wrapped_mode = 1;
     my $expect_header = 1;
     my $end_of_paragraph = 0;
     ($line,$ref)=$self->shiftline();
@@ -821,7 +806,7 @@ sub parse {
             $file = $1;
             do_paragraph($self,$paragraph,$wrapped_mode);
             $paragraph="";
-            $wrapped_mode = ($wrap_behave ne 'no');
+            $wrapped_mode = 1;
             $expect_header = 1;
         }
 
@@ -851,7 +836,7 @@ sub parse {
         if ($end_of_paragraph) {
             do_paragraph($self,$paragraph,$wrapped_mode);
             $paragraph="";
-            $wrapped_mode = ($wrap_behave ne 'no');
+            $wrapped_mode = 1;
             $end_of_paragraph = 0;
         }
         ($line,$ref)=$self->shiftline();
@@ -865,7 +850,9 @@ sub do_paragraph {
     my ($self, $paragraph, $wrap) = (shift, shift, shift);
     my $type = shift || $self->{type} || "Plain text";
     return if ($paragraph eq "");
-	$wrap = 0 if ($wrap_behave eq 'force_no');
+
+	$wrap = 0 if $nowrap;
+
 # DEBUG
 #    my $b;
 #    if (defined $self->{bullet}) {

@@ -9,7 +9,7 @@ PO4A_UPDATEPO   = po4a-updatepo $(PO4A_COMMON_ARGS)
 PO4A_TRANSLATE  = po4a-translate -k 0
 
 PO4A_DOCBOOK_OPTS = -f docbook
-PO4A_SCRIPT_OPTS = -f text -o wrap=no
+PO4A_SCRIPT_OPTS = -f text -o nowrap
 # we need that till po4a BUG #314748 resolved
 export PERLLIB := $(PWD)/tools/po4a-lib
 
