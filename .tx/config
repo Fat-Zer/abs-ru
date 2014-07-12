@@ -2461,3 +2461,9 @@ source_lang = en
 trans.ru = po/ru/wstrings.sh.po
 type = PO
 
+[abs-guide.glossary]
+source_file = glossary/glossary.pot
+source_lang = en
+trans.ru = glossary/glossary-ru.po
+type = PO
+
