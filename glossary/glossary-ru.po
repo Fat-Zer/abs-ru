@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: abs-guide 10\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-11 02:24+0400\n"
-"PO-Revision-Date: 2014-07-12 04:20+0400\n"
+"PO-Revision-Date: 2014-07-13 07:29+0400\n"
 "Last-Translator: Alexander Golubev <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -1357,9 +1357,8 @@ msgstr "возврат"
 #. type: Content of: <book><part><chapter><variablelist><varlistentry><indexterm><primary>
 #: abs-guide/symlinks2.sh abs-guide/abs-guide.xml
 #: %28poterminology%29+62+more+locations
-#, fuzzy
 msgid "directory"
-msgstr "директория"
+msgstr "каталог"
 
 # (poterminology) pot/is_spammer.bash.pot (16)
 #
@@ -2833,7 +2832,7 @@ msgstr "задний план, если речь о графике, фон, ес
 #: abs-guide/broken-link.sh abs-guide/INDEX00.xml
 #: %28poterminology%29+9+more+locations
 msgid "shell script"
-msgstr "shell-скрипт"
+msgstr "сценарий shell"
 
 # (poterminology) pot/self-destruct.sh.pot (2)
 #
@@ -4156,7 +4155,6 @@ msgstr "патч"
 #
 #: abs-guide/INDEX00.xml abs-guide/abs-guide.xml
 #: %28poterminology%29+2+more+locations
-#, fuzzy
 msgid "backslash"
 msgstr "обратный слеш"
 
@@ -4709,9 +4707,8 @@ msgstr "открытый текст"
 # (poterminology) pot/abs-guide.xml.pot (3)
 #
 #: abs-guide/abs-guide.xml <stdin>
-#, fuzzy
 msgid "root directory"
-msgstr "корневая директория"
+msgstr "корневой каталог"
 
 # (poterminology) glossary.pot (1)
 #
